@@ -114,6 +114,12 @@ function CardEditor({ card, subjects, onSave, onCancel }) {
       : p)
   }));
 
+  const updateSub = (pid, sid, key, val) => setForm(f => ({
+    ...f, points: f.points.map(p => p.id === pid
+      ? { ...p, subs: p.subs.map(s => s.id === sid ? { ...s, [key]: val } : s) }
+      : p)
+  }));
+
   return (
     <div className="editor-wrap">
       <div className="editor-fields">
