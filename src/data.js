@@ -50,16 +50,71 @@ function migrateLegacy() {
   return { subjects, cards };
 }
 
+// ── Spaced repetition (Leitner) ──────────────────────────────
+// box 0 = neu; "Sicher" moves a card up one box, "Unsicher" down one, "Nochmal" back to box 1 (due again today).
+export const INTERVALS = [0, 1, 3, 7, 14, 30]; // days until next review, per box
+const DAY = 86400000;
+const pad = n => String(n).padStart(2, "0");
+export const today = () => { const d = new Date(); return `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`; };
+const parse = s => { const [y, m, d] = s.split("-").map(Number); return new Date(y, m - 1, d); };
+export const addDays = (s, n) => { const d = parse(s); d.setDate(d.getDate() + n); return `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`; };
+export const daysBetween = (a, b) => Math.round((parse(b) - parse(a)) / DAY);
+export const isDue = c => !c.due || c.due <= today();
+export const formatDate = s => parse(s).toLocaleDateString("de-DE", { day: "numeric", month: "short" });
+
+// Before an exam, never schedule further out than half the remaining time,
+// so reviews get denser as the date approaches and nothing lands after it.
+export function schedule(card, kind, examDate) {
+  const box = kind === "sicher" ? Math.min(INTERVALS.length - 1, (card.box || 0) + 1)
+    : kind === "unsicher" ? Math.max(1, (card.box || 0) - 1) : 1;
+  let days = kind === "nochmal" ? 0 : INTERVALS[box];
+  const t = today();
+  if (examDate && examDate > t) days = Math.min(days, Math.max(1, Math.floor(daysBetween(t, examDate) / 2)));
+  return { ...card, box, due: addDays(t, days), status: kind === "sicher" ? "sicher" : "unsicher" };
+}
+
+function normalize(d) {
+  const box0 = { neu: 0, unsicher: 1, sicher: 2 };
+  return {
+    subjects: d.subjects || [],
+    cards: (d.cards || []).map(c => ({ ...c, status: c.status || "neu", box: c.box ?? box0[c.status || "neu"], due: c.due || null })),
+    examDate: d.examDate || null,
+    pointByPoint: d.pointByPoint ?? true,
+    lastBackup: d.lastBackup || null,
+  };
+}
+
 export function load() {
   let d = null;
   try { d = JSON.parse(localStorage.getItem(KEY)); } catch (e) {}
   if (!d || !d.cards) { try { d = migrateLegacy(); } catch (e) { d = null; } }
   if (!d || !d.cards) d = seed();
-  return d;
+  return normalize(d);
 }
 
 export function persist(d) {
-  try { localStorage.setItem(KEY, JSON.stringify({ subjects: d.subjects, cards: d.cards })); } catch (e) {}
+  try { localStorage.setItem(KEY, JSON.stringify(d)); } catch (e) {}
+}
+
+// ── Backup ───────────────────────────────────────────────────
+export function exportBackup(d) {
+  const blob = new Blob([JSON.stringify({ app: "lernkarten", version: 1, exportedAt: new Date().toISOString(), ...d }, null, 2)], { type: "application/json" });
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = `lernkarten-${today()}.json`;
+  a.click();
+  setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+}
+
+// Returns normalized data or throws with a German message.
+export function parseBackup(text) {
+  let d;
+  try { d = JSON.parse(text); } catch (e) { throw new Error("Die Datei ist kein gültiges JSON."); }
+  if (!d || !Array.isArray(d.cards) || !Array.isArray(d.subjects)) throw new Error("Das sieht nicht nach einer Lernkarten-Sicherung aus.");
+  const ok = d.cards.every(c => c && typeof c.title === "string" && typeof c.subject === "string" && Array.isArray(c.lines));
+  if (!ok) throw new Error("Einige Karten in der Datei sind beschädigt.");
+  for (const c of d.cards) if (!d.subjects.includes(c.subject)) d.subjects.push(c.subject);
+  return normalize(d);
 }
 
 // Turns card lines into render rows; `reveal` hides everything after the n-th Hauptpunkt.
