@@ -73,10 +73,56 @@ export function schedule(card, kind, examDate) {
   return { ...card, box, due: addDays(t, days), status: kind === "sicher" ? "sicher" : "unsicher" };
 }
 
+// Each deck keeps its own colour, so deleting or renaming one never recolours the others.
+// Decks without a stored colour get the one they had by position before this existed.
+function withAccents(subjects, accents = {}) {
+  const out = {};
+  subjects.forEach((s, i) => { out[s] = accents[s] || ACC[i % ACC.length]; });
+  return out;
+}
+
+// Least-used colour first, so a new deck looks different from the ones already there.
+export function nextAccent(accents) {
+  const used = Object.values(accents);
+  return ACC.reduce((best, c) => (used.filter(u => u === c).length < used.filter(u => u === best).length ? c : best), ACC[0]);
+}
+
+export function renameSubject(d, from, to) {
+  const accents = { ...d.accents, [to]: d.accents[from] };
+  delete accents[from];
+  return {
+    ...d,
+    subjects: d.subjects.map(s => (s === from ? to : s)),
+    cards: d.cards.map(c => (c.subject === from ? { ...c, subject: to } : c)),
+    accents,
+  };
+}
+
+export function deleteSubject(d, name) {
+  const accents = { ...d.accents };
+  delete accents[name];
+  return { ...d, subjects: d.subjects.filter(s => s !== name), cards: d.cards.filter(c => c.subject !== name), accents };
+}
+
+// Case- and accent-insensitive: "anasth" finds "Anästhesiologie".
+export const fold = s => s.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/ß/g, "ss");
+
+export function searchCards(cards, query) {
+  const q = fold(query.trim());
+  if (!q) return [];
+  return cards.filter(c => fold(c.title).includes(q) || c.lines.some(l => fold(l.text).includes(q)))
+    .map(c => {
+      const hit = fold(c.title).includes(q) ? null : c.lines.find(l => fold(l.text).includes(q));
+      return { card: c, snippet: hit ? hit.text : c.lines.filter(l => l.level === 0).map(l => l.text).join(" · ") };
+    });
+}
+
 function normalize(d) {
   const box0 = { neu: 0, unsicher: 1, sicher: 2 };
+  const subjects = d.subjects || [];
   return {
-    subjects: d.subjects || [],
+    subjects,
+    accents: withAccents(subjects, d.accents),
     cards: (d.cards || []).map(c => ({ ...c, status: c.status || "neu", box: c.box ?? box0[c.status || "neu"], due: c.due || null })),
     examDate: d.examDate || null,
     pointByPoint: d.pointByPoint ?? true,
