@@ -1,10 +1,9 @@
 import { useState, useEffect, useRef } from "react";
-import { ACC, STATUS, LEVELS, mid, L, plural, load, persist, mapLines } from "./data.js";
+import { ACC, STATUS, LEVELS, mid, L, plural, load, persist, mapLines, schedule, isDue, today, daysBetween, formatDate, exportBackup, parseBackup } from "./data.js";
 import "./styles.css";
 
 // ── Settings (were design-tool toggles in the prototype) ─────
 const STUDY_ONLY = false;          // hides all editing UI
-const POINT_BY_POINT = false;      // reveal back side one Hauptpunkt at a time
 const SHUFFLE = true;              // shuffle study queue
 const TITLE_TURQUOISE = false;     // true = every title bar turquoise, false = subject colour
 
@@ -20,7 +19,11 @@ function Lines({ lines }) {
 
 export default function App() {
   const [data, setData] = useState(load);
-  const { subjects, cards } = data;
+  const { subjects, cards, examDate } = data;
+  const POINT_BY_POINT = data.pointByPoint; // reveal back side one Hauptpunkt at a time
+  const [studyScope, setStudyScope] = useState(null); // deck name, or null = all due cards
+  const [editingExam, setEditingExam] = useState(false);
+  const fileInput = useRef(null);
   const [view, setView] = useState("home"); // home | deck | card | study | done | edit
   const [deck, setDeck] = useState(null);
   const [cardIdx, setCardIdx] = useState(0);
@@ -43,6 +46,7 @@ export default function App() {
   const handlers = useRef({});
 
   useEffect(() => { persist(data); }, [data]);
+  useEffect(() => { try { navigator.storage?.persist?.(); } catch (e) {} }, []);
 
   useEffect(() => {
     if (pendingFocus.current == null) return;
@@ -63,8 +67,9 @@ export default function App() {
   const canRate = flipped && (!POINT_BY_POINT || reveal >= groups(studyCard));
 
   // ── Study ──
-  const startStudy = (ids) => {
+  const startStudy = (ids, scope = deck) => {
     if (!ids.length) return;
+    setStudyScope(scope);
     if (SHUFFLE) ids = [...ids].sort(() => Math.random() - 0.5);
     setQueue(ids); setQPos(0); setFlipped(false); setReveal(0);
     setTally({ sicher: 0, unsicher: 0, nochmal: 0 });
@@ -76,7 +81,7 @@ export default function App() {
   };
   const rate = (kind) => {
     const card = studyCard;
-    setData(d => ({ ...d, cards: d.cards.map(c => c.id === card.id ? { ...c, status: kind === "sicher" ? "sicher" : "unsicher" } : c) }));
+    setData(d => ({ ...d, cards: d.cards.map(c => c.id === card.id ? schedule(c, kind, d.examDate) : c) }));
     const q = kind === "nochmal" ? [...queue, card.id] : queue;
     const next = qPos + 1;
     setQueue(q); setQPos(next);
@@ -186,7 +191,22 @@ export default function App() {
   const goBack = () => {
     if (view === "deck") return setView("home");
     if (view === "edit") { setDraft(null); return setView(returnTo); }
+    if ((view === "study" || view === "done") && !studyScope) return setView("home");
     setView("deck");
+  };
+
+  // ── Backup ──
+  const doExport = () => { exportBackup(data); setData(d => ({ ...d, lastBackup: today() })); };
+  const doImport = async (e) => {
+    const file = e.target.files?.[0];
+    e.target.value = "";
+    if (!file) return;
+    try {
+      const next = parseBackup(await file.text());
+      if (!window.confirm(`${plural(next.cards.length, "Karte", "Karten")} aus der Sicherung laden? Deine aktuellen Karten werden dabei ersetzt.`)) return;
+      setData({ ...next, lastBackup: today() });
+      setView("home");
+    } catch (err) { window.alert(err.message); }
   };
 
   // ── Header ──
@@ -198,7 +218,7 @@ export default function App() {
         {view !== "home" && (
           <button className="back-btn" onClick={goBack}>
             <span className="back-arrow">‹</span>
-            <span className="back-label">{view === "deck" ? "Mappen" : deck || "Zurück"}</span>
+            <span className="back-label">{view === "deck" ? "Mappen" : (view === "study" || view === "done") ? (studyScope || "Start") : deck || "Zurück"}</span>
           </button>
         )}
         {view === "home" && (
@@ -216,7 +236,7 @@ export default function App() {
   );
 
   const learnWeakBtn = (cls) => weak.length > 0 && (
-    <button className={cls} onClick={() => startStudy(weak.map(c => c.id))}>Nur unsichere &amp; neue ({weak.length})</button>
+    <button className={cls} onClick={() => startStudy(weak.map(c => c.id), deck)}>Nur unsichere &amp; neue ({weak.length})</button>
   );
 
   // ── Screens ──
@@ -224,16 +244,52 @@ export default function App() {
 
   if (view === "home") {
     const total = cards.length, unsure = cards.filter(c => c.status === "unsicher").length;
+    const due = cards.filter(isDue);
+    const daysLeft = examDate ? daysBetween(today(), examDate) : null;
+    const backupAge = data.lastBackup ? daysBetween(data.lastBackup, today()) : null;
+    const nudgeBackup = total > 0 && (backupAge == null || backupAge >= 7);
     screen = (
       <div className="screen home">
         <div className="home-head">
           <h1>Welches Fach lernst du heute?</h1>
           <p className="muted">{total ? `${plural(total, "Karte", "Karten")} · ${unsure} noch unsicher` : "Leg eine Mappe an und schreib deine erste Karte."}</p>
         </div>
+        {total > 0 && (
+          <div className="today">
+            <div className="today-row">
+              <div className="today-info">
+                <span className="today-label">Heute fällig</span>
+                <span className="today-count">{due.length ? plural(due.length, "Karte", "Karten") : "Alles erledigt"}</span>
+              </div>
+              {due.length > 0
+                ? <button className="btn-primary today-btn" onClick={() => startStudy(due.map(c => c.id), null)}>Jetzt lernen</button>
+                : <span className="today-done">✓</span>}
+            </div>
+            <div className="exam-row">
+              {editingExam ? (
+                <>
+                  <input type="date" className="exam-input" min={today()} defaultValue={examDate || ""} autoFocus
+                    onChange={e => { if (e.target.value) setData(d => ({ ...d, examDate: e.target.value })); }}
+                    onBlur={() => setEditingExam(false)} />
+                  {examDate && <button className="link-btn danger" onMouseDown={e => { e.preventDefault(); setData(d => ({ ...d, examDate: null })); setEditingExam(false); }}>Entfernen</button>}
+                  <button className="link-btn" onMouseDown={e => { e.preventDefault(); setEditingExam(false); }}>Fertig</button>
+                </>
+              ) : examDate && daysLeft >= 0 ? (
+                <>
+                  <span className="exam-text">Prüfung am <b>{formatDate(examDate)}</b> · {daysLeft === 0 ? "heute – viel Erfolg!" : daysLeft === 1 ? "morgen" : `noch ${daysLeft} Tage`}</span>
+                  <button className="link-btn" onClick={() => setEditingExam(true)}>Ändern</button>
+                </>
+              ) : (
+                <button className="link-btn" onClick={() => setEditingExam(true)}>{examDate ? "Prüfung vorbei – neuen Termin festlegen" : "+ Prüfungstermin festlegen"}</button>
+              )}
+            </div>
+          </div>
+        )}
         <div className="deck-list">
           {subjects.map((name, i) => {
             const cs = cards.filter(c => c.subject === name), n = cs.length;
             const sure = cs.filter(c => c.status === "sicher").length, uns = cs.filter(c => c.status === "unsicher").length;
+            const dueIds = cs.filter(isDue).map(c => c.id);
             return (
               <div key={name} className="deck-row">
                 <button className="deck-open" onClick={() => { setDeck(name); setView("deck"); }}>
@@ -243,7 +299,7 @@ export default function App() {
                   </div>
                   <div className="deck-info">
                     <span className="deck-name">{name}</span>
-                    <span className="deck-meta">{n ? `${plural(n, "Karte", "Karten")} · ${sure} sicher` : "Noch leer"}</span>
+                    <span className="deck-meta">{n ? `${plural(n, "Karte", "Karten")} · ${dueIds.length ? `${dueIds.length} fällig` : "nichts fällig"}` : "Noch leer"}</span>
                     {n > 0 && (
                       <div className="deck-bar">
                         <div style={{ background: "#5a7a4a", width: (sure / n * 100) + "%" }} />
@@ -252,9 +308,9 @@ export default function App() {
                     )}
                   </div>
                 </button>
-                {n > 0 && (
+                {dueIds.length > 0 && (
                   <div className="deck-learn-wrap">
-                    <button className="btn-primary deck-learn" onClick={() => { setDeck(name); startStudy(cs.map(c => c.id)); }}>Lernen</button>
+                    <button className="btn-primary deck-learn" onClick={() => { setDeck(name); startStudy(dueIds, name); }}>Lernen</button>
                   </div>
                 )}
               </div>
@@ -271,12 +327,23 @@ export default function App() {
           </div>
         )}
         {!addingSubject && !STUDY_ONLY && <button className="new-deck" onClick={() => setAddingSubject(true)}>+ Neue Mappe</button>}
+        <div className="backup">
+          {nudgeBackup && <p className="backup-nudge">{backupAge == null ? "Du hast noch keine Sicherung gemacht." : `Letzte Sicherung vor ${backupAge} Tagen.`} Deine Karten liegen nur in diesem Browser.</p>}
+          <div className="backup-row">
+            <button className="link-btn" onClick={doExport}>Sicherung speichern</button>
+            <span className="backup-sep">·</span>
+            <button className="link-btn" onClick={() => fileInput.current?.click()}>Sicherung laden</button>
+          </div>
+          <input ref={fileInput} type="file" accept="application/json,.json" hidden onChange={doImport} />
+        </div>
       </div>
     );
   }
 
   if (view === "deck") {
     const sure = dCards.filter(c => c.status === "sicher").length;
+    const dueCards = dCards.filter(isDue);
+    const t = today();
     screen = (
       <div className="screen deck">
         <div className="deck-head">
@@ -287,13 +354,20 @@ export default function App() {
         {dCards.length > 0 ? (
           <>
             <div className="stack10">
-              <button className="btn-primary h56 learn-all" onClick={() => startStudy(dCards.map(c => c.id))}>Alle lernen · {plural(dCards.length, "Karte", "Karten")}</button>
-              {learnWeakBtn("btn-secondary h48")}
+              {dueCards.length > 0
+                ? <button className="btn-primary h56 learn-all" onClick={() => startStudy(dueCards.map(c => c.id), deck)}>Fällige lernen · {plural(dueCards.length, "Karte", "Karten")}</button>
+                : <p className="all-done">Für heute alles wiederholt. Stark.</p>}
+              <div className="bottom-row">
+                <button className="btn-secondary h48 spacer" onClick={() => startStudy(dCards.map(c => c.id), deck)}>Alle üben ({dCards.length})</button>
+                {weak.length > 0 && <button className="btn-secondary h48 spacer" onClick={() => startStudy(weak.map(c => c.id), deck)}>Unsichere ({weak.length})</button>}
+              </div>
             </div>
             <div className="stack10">
               <span className="section-label">Karten</span>
               {dCards.map((c, i) => {
-                const [label, color] = STATUS[c.status || "neu"];
+                const [statusLabel, color] = STATUS[c.status || "neu"];
+                const inDays = c.due && c.due > t ? daysBetween(t, c.due) : 0;
+                const label = c.status === "neu" ? statusLabel : inDays === 1 ? "morgen" : inDays ? `in ${inDays} T.` : "fällig";
                 return (
                   <button key={c.id} className="card-row" onClick={() => { setCardIdx(i); setView("card"); }}>
                     <div className="card-row-accent" style={{ background: titleColor(c.subject) }} />
@@ -327,10 +401,10 @@ export default function App() {
         </div>
         <div className="spacer" />
         <div className="bottom-bar bottom-row">
-          <button className="btn-secondary nav-arrow" disabled={cIdx === 0} onClick={() => setCardIdx(Math.max(0, cIdx - 1))}>‹</button>
+          <button className="btn-secondary nav-arrow" aria-label="Vorherige Karte" disabled={cIdx === 0} onClick={() => setCardIdx(Math.max(0, cIdx - 1))}>‹</button>
           {!STUDY_ONLY && <button className="btn-secondary h52 spacer" onClick={() => openEditor(c, "card")}>Bearbeiten</button>}
-          {STUDY_ONLY && <button className="btn-primary h52 spacer" onClick={() => startStudy(dCards.map(x => x.id))}>Mappe lernen</button>}
-          <button className="btn-secondary nav-arrow" disabled={cIdx === dCards.length - 1} onClick={() => setCardIdx(Math.min(dCards.length - 1, cIdx + 1))}>›</button>
+          {STUDY_ONLY && <button className="btn-primary h52 spacer" onClick={() => startStudy(dCards.map(x => x.id), deck)}>Mappe lernen</button>}
+          <button className="btn-secondary nav-arrow" aria-label="Nächste Karte" disabled={cIdx === dCards.length - 1} onClick={() => setCardIdx(Math.min(dCards.length - 1, cIdx + 1))}>›</button>
         </div>
       </div>
     );
@@ -340,6 +414,10 @@ export default function App() {
     const c = studyCard, g = groups(c), acc = titleColor(c.subject);
     screen = (
       <div className="screen study">
+        <div className="mode-toggle" role="group" aria-label="Aufdecken">
+          <button className={!POINT_BY_POINT ? "on" : ""} aria-pressed={!POINT_BY_POINT} onClick={() => setData(d => ({ ...d, pointByPoint: false }))}>Ganze Karte</button>
+          <button className={POINT_BY_POINT ? "on" : ""} aria-pressed={POINT_BY_POINT} onClick={() => setData(d => ({ ...d, pointByPoint: true }))}>Punkt für Punkt</button>
+        </div>
         <div className="flip-wrap" onPointerDown={pDown} onPointerMove={pMove} onPointerUp={pUp} onPointerCancel={pCancel}
           style={{ transition: dragging ? "none" : "transform .25s ease", transform: `translateX(${dx}px) rotate(${dx / 22}deg)` }}>
           <div className="stamp stamp-sure" style={{ opacity: Math.max(0, Math.min(1, dx / 110)) }}>SICHER</div>
@@ -349,7 +427,7 @@ export default function App() {
               <div className="face-strip" style={{ background: acc }} />
               <div className="face-subject">{c.subject}</div>
               <div className="face-title">{c.title}</div>
-              <div className="face-hint">{plural(g, "Hauptpunkt", "Hauptpunkte")} — was weißt du dazu? Tippen zum Umdrehen.</div>
+              <div className="face-hint">{plural(g, "Hauptpunkt", "Hauptpunkte")} — {POINT_BY_POINT ? "erinnere dich an jeden einzeln." : "was weißt du dazu?"} Tippen zum Umdrehen.</div>
             </div>
             <div className="face face-back">
               <div className="paper-title" style={{ background: acc }}>{c.title}</div>
@@ -381,15 +459,15 @@ export default function App() {
     screen = (
       <div className="screen done">
         <h1>Geschafft!</h1>
-        <p>{plural(n, "Karte", "Karten")} aus {deck} durchgearbeitet.</p>
+        <p>{plural(n, "Karte", "Karten")} {studyScope ? `aus ${studyScope}` : "aus allen Mappen"} durchgearbeitet.</p>
         <div className="tally">
           <div><b style={{ color: "#5a7a4a" }}>{tally.sicher}</b><span>sicher</span></div>
           <div><b style={{ color: "#a8741e" }}>{tally.unsicher}</b><span>unsicher</span></div>
           <div><b style={{ color: "#a4482e" }}>{tally.nochmal}</b><span>wiederholt</span></div>
         </div>
         <div className="stack10" style={{ width: "100%" }}>
-          {learnWeakBtn("btn-primary h56")}
-          <button className="btn-secondary h52" onClick={() => setView("deck")}>Zurück zur Mappe</button>
+          {studyScope && learnWeakBtn("btn-primary h56")}
+          <button className="btn-secondary h52" onClick={() => setView(studyScope ? "deck" : "home")}>{studyScope ? "Zurück zur Mappe" : "Zur Übersicht"}</button>
         </div>
       </div>
     );

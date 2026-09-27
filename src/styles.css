@@ -183,3 +183,31 @@ input::placeholder { color: #b8aa8a; }
 .tool:disabled { opacity: .4; }
 .tool-level { flex: 1; text-align: center; font-size: 13px; color: #7a6a4a; white-space: nowrap; }
 .cancel { padding: 0 18px; }
+
+/* ── Today / exam ── */
+.today { background: #fff; border: 1px solid #ddd5c2; border-radius: 14px; box-shadow: 0 1px 0 #e6dfcf, 0 6px 16px -10px rgba(74,62,40,.25); overflow: hidden; }
+.today-row { display: flex; align-items: center; gap: 12px; padding: 16px; }
+.today-info { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+.today-label { font-size: 13px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: #7a6a4a; }
+.today-count { font-family: Kalam, cursive; font-weight: 700; font-size: 26px; line-height: 1.2; color: #2a2218; }
+.today-btn { height: 48px; padding: 0 18px; border-radius: 999px; font-size: 16px; flex-shrink: 0; }
+.today-done { width: 44px; height: 44px; border-radius: 50%; background: #e4eddc; color: #5a7a4a; font-size: 22px; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.exam-row { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; min-height: 48px; padding: 6px 16px; border-top: 1px solid #ece6d8; background: #fcfaf5; }
+.exam-text { flex: 1; min-width: 0; font-size: 14px; color: #4a3e28; }
+.exam-input { height: 36px; padding: 0 10px; border: 1px solid #c8bfa8; border-radius: 10px; background: #fff; font-family: inherit; font-size: 15px; color: #2a2218; outline: none; }
+.exam-input:focus { border-color: #5a7a4a; box-shadow: 0 0 0 3px rgba(90,122,74,.15); }
+.link-btn { height: 36px; padding: 0 4px; border: none; background: none; color: #5a7a4a; font-size: 14px; font-weight: 600; }
+.link-btn:hover { color: #3f5a32; text-decoration: underline; }
+.link-btn.danger { color: #a4482e; }
+.all-done { margin: 0; padding: 16px; border-radius: 14px; background: #e4eddc; color: #3f5a32; font-size: 15px; font-weight: 600; text-align: center; }
+
+/* ── Backup ── */
+.backup { display: flex; flex-direction: column; align-items: center; gap: 4px; padding-top: 8px; text-align: center; }
+.backup-nudge { margin: 0; font-size: 13px; line-height: 1.45; color: #8a5a20; max-width: 320px; }
+.backup-row { display: flex; align-items: center; gap: 6px; }
+.backup-sep { color: #b8aa8a; }
+
+/* ── Reveal toggle ── */
+.mode-toggle { align-self: center; display: flex; padding: 3px; border-radius: 999px; background: #e8e0cc; }
+.mode-toggle button { height: 34px; padding: 0 14px; border: none; border-radius: 999px; background: none; color: #7a6a4a; font-size: 14px; font-weight: 600; }
+.mode-toggle button.on { background: #fff; color: #2a2218; box-shadow: 0 1px 3px rgba(74,62,40,.2); }
