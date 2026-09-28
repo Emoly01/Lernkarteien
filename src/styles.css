@@ -284,3 +284,7 @@ input::placeholder { color: var(--faint); }
   .flip-btn:hover { background: #fff; }
   .chip.sel { background: var(--ink); border-color: var(--ink); color: var(--bg); }
 }
+
+/* ── Save confirmation in editor ── */
+.flash { margin: 0; align-self: flex-start; padding: 8px 12px; border-radius: 10px; background: var(--green-soft); color: var(--green-ink); font-size: 14px; font-weight: 600; animation: flash-in .2s ease; }
+@keyframes flash-in { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: none; } }

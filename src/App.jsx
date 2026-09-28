@@ -44,6 +44,9 @@ export default function App() {
   const [query, setQuery] = useState("");
   const [deckMenu, setDeckMenu] = useState(false);
   const [renameVal, setRenameVal] = useState("");
+  const [flash, setFlash] = useState("");
+  const flashTimer = useRef(null);
+  const focusTitle = useRef(false);
 
   const drag = useRef(null);
   const pendingFocus = useRef(null);
@@ -53,13 +56,14 @@ export default function App() {
   useEffect(() => { try { navigator.storage?.persist?.(); } catch (e) {} }, []);
 
   useEffect(() => {
+    if (focusTitle.current) { focusTitle.current = false; document.querySelector(".e-title")?.focus(); }
     if (pendingFocus.current == null) return;
     const el = document.querySelector(`[data-line-idx="${pendingFocus.current}"]`);
     pendingFocus.current = null;
     if (el) { el.focus(); const n = el.value.length; try { el.setSelectionRange(n, n); } catch (e) {} }
   });
 
-  useEffect(() => { window.scrollTo(0, 0); setDeckMenu(false); }, [view]);
+  useEffect(() => { window.scrollTo(0, 0); setDeckMenu(false); setFlash(""); }, [view]);
 
   // ── Helpers ──
   const accent = (subject) => data.accents[subject] || ACC[0];
@@ -168,14 +172,38 @@ export default function App() {
     else if (e.key === "ArrowUp" && i > 0) { e.preventDefault(); pendingFocus.current = i - 1; setFocusIdx(i - 1); }
     else if (e.key === "ArrowDown" && i < ls.length - 1) { e.preventDefault(); pendingFocus.current = i + 1; setFocusIdx(i + 1); }
   };
-  const saveDraft = () => {
+  const storeDraft = () => {
     const clean = { ...draft, title: draft.title.trim(), lines: draft.lines.filter(l => l.text.trim()) };
     const exists = cards.some(c => c.id === draft.id);
     const next = exists ? cards.map(c => c.id === draft.id ? clean : c) : [...cards, clean];
     setData(d => ({ ...d, cards: next }));
+    return { clean, next };
+  };
+  const saveDraft = () => {
+    const { clean, next } = storeDraft();
     setDeck(clean.subject);
     setCardIdx(Math.max(0, next.filter(c => c.subject === clean.subject).findIndex(c => c.id === clean.id)));
     setDraft(null); setView("card");
+  };
+  // Save the current card (if it has anything worth keeping) and start a blank one in the same deck.
+  const saveAndNew = () => {
+    const hasText = draft.lines.some(l => l.text.trim());
+    const subject = draft.subject || deck || subjects[0];
+    if (draft.title.trim()) {
+      const { clean } = storeDraft();
+      setDeck(clean.subject);
+      setFlash(`„${clean.title}“ gespeichert`);
+      clearTimeout(flashTimer.current);
+      flashTimer.current = setTimeout(() => setFlash(""), 2500);
+    } else if (hasText) {
+      if (!window.confirm("Diese Karte hat noch keinen Titel und kann nicht gespeichert werden. Verwerfen und neue Karte anfangen?")) return;
+    } else if (!cards.some(c => c.id === draft.id)) {
+      focusTitle.current = true; setFocusIdx(0); return; // already a blank new card
+    }
+    setDraft({ id: mid(), subject, title: "", status: "neu", lines: [L(0, "")] });
+    setReturnTo("deck"); setFocusIdx(0);
+    focusTitle.current = true;
+    window.scrollTo(0, 0);
   };
   const deleteCard = () => {
     if (!window.confirm("Diese Karte löschen?")) return;
@@ -247,7 +275,9 @@ export default function App() {
           </div>
         )}
         <div className="spacer" />
-        {view === "deck" && !STUDY_ONLY && <button className="pill-btn" onClick={newCard}>+ Karte</button>}
+        {(view === "deck" || view === "card") && !STUDY_ONLY && <button className="pill-btn" onClick={newCard}>+ Karte</button>}
+        {view === "edit" && draft && <button className="pill-btn" onClick={saveAndNew}
+          title={draft.title.trim() ? "Aktuelle Karte speichern und eine neue anfangen" : "Neue Karte anfangen"}>+ Neue Karte</button>}
         {(view === "study" || view === "card") && <span className="counter" aria-label={`Karte ${counterText.replace(" / ", " von ")}`}>{counterText}</span>}
       </div>
       {view === "study" && <div className="progress"><div style={{ width: (qPos / queue.length * 100) + "%" }} /></div>}
@@ -581,6 +611,7 @@ export default function App() {
             ))}
           </div>
         </div>
+        {flash && <p className="flash" role="status">✓ {flash}</p>}
         <p className="e-help">Enter = neue Zeile · Tab / ⇧Tab = ein- und ausrücken · Leere Zeile + ⌫ = löschen</p>
         {cards.some(c => c.id === draft.id) && <button className="e-delete" onClick={deleteCard}>Karte löschen</button>}
         <div className="spacer" />
