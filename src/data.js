@@ -1,6 +1,8 @@
 export const ACC = ["#6ecece", "#90d490", "#f0c080", "#d090c8", "#90b8e0", "#e09090", "#a8c870", "#c8a870"];
 export const STATUS = { neu: ["neu", "#c8bfa8"], unsicher: ["unsicher", "#e0a94a"], sicher: ["sicher", "#5a7a4a"] };
-export const LEVELS = ["Hauptpunkt", "Unterpunkt", "Detail"];
+export const LEVELS = ["Hauptpunkt", "Unterpunkt", "Detail", "Unterdetail", "Stichpunkt"];
+export const MARKS = ["•", "×", "—", "◦", "·"];
+export const MAX_LEVEL = LEVELS.length - 1;
 
 const KEY = "lernkarten-redesign-v1";
 const LEGACY_CARDS = "studycards-v1";
@@ -170,7 +172,7 @@ export function mapLines(lines, reveal) {
     if (l.level === 0) g++;
     const shown = reveal == null || g < reveal;
     let label = "", rest = l.text;
-    if (l.level === 2) { const i = l.text.indexOf(":"); if (i > 0) { label = l.text.slice(0, i + 1) + " "; rest = l.text.slice(i + 1).trim(); } }
-    return { key: l.id, level: l.level, text: l.text, label, rest, hidden: !shown, pad: l.level * 26 + 4, ghostW: [46, 58, 64][l.level] };
+    if (l.level >= 2) { const i = l.text.indexOf(":"); if (i > 0) { label = l.text.slice(0, i + 1) + " "; rest = l.text.slice(i + 1).trim(); } }
+    return { key: l.id, level: l.level, text: l.text, label, rest, hidden: !shown, pad: l.level * 26 + 4, ghostW: [46, 58, 64, 60, 56][l.level] ?? 56 };
   });
 }

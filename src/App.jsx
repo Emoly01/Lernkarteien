@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { ACC, STATUS, LEVELS, mid, L, plural, load, persist, mapLines, schedule, isDue, today, daysBetween, formatDate, exportBackup, parseBackup, nextAccent, renameSubject, deleteSubject, searchCards } from "./data.js";
+import { ACC, STATUS, LEVELS, MARKS, MAX_LEVEL, mid, L, plural, load, persist, mapLines, schedule, isDue, today, daysBetween, formatDate, exportBackup, parseBackup, nextAccent, renameSubject, deleteSubject, searchCards } from "./data.js";
 import "./styles.css";
 
 // ── Settings (were design-tool toggles in the prototype) ─────
@@ -13,7 +13,8 @@ function Lines({ lines }) {
     if (ln.hidden) return <div key={ln.key} className="ln-ghost" style={{ paddingLeft: ln.pad }}><div style={{ width: ln.ghostW + "%" }} /></div>;
     if (ln.level === 0) return <div key={ln.key} className="ln"><span className="ln-bullet">•</span><span className="ln-0-text">{ln.text}</span></div>;
     if (ln.level === 1) return <div key={ln.key} className="ln ln-1"><span className="ln-1-mark">×</span><span className="ln-1-text">{ln.text}</span></div>;
-    return <div key={ln.key} className="ln ln-2"><span className="ln-2-mark">—</span><span className="ln-2-text"><b>{ln.label}</b>{ln.rest}</span></div>;
+    // Detail and deeper: "Begriff: Rest" gets a bold label; each level indents a bit further.
+    return <div key={ln.key} className={`ln ln-deep ln-${ln.level}`} style={{ paddingLeft: ln.level * 26 }}><span className="ln-2-mark">{MARKS[ln.level]}</span><span className="ln-2-text"><b>{ln.label}</b>{ln.rest}</span></div>;
   });
 }
 
@@ -146,7 +147,7 @@ export default function App() {
     if (focus != null) { pendingFocus.current = focus; setFocusIdx(focus); }
     setDraft({ ...draft, lines });
   };
-  const maxLevel = (lines, i) => (i === 0 ? 0 : Math.min(2, lines[i - 1].level + 1));
+  const maxLevel = (lines, i) => (i === 0 ? 0 : Math.min(MAX_LEVEL, lines[i - 1].level + 1));
   const shift = (i, delta) => setLines(ls => {
     const lvl = Math.max(0, Math.min(maxLevel(ls, i), ls[i].level + delta));
     ls[i] = { ...ls[i], level: lvl };
@@ -544,8 +545,7 @@ export default function App() {
 
   if (view === "edit" && draft) {
     const ls = draft.lines, fi = Math.min(focusIdx, ls.length - 1), fl = ls[fi];
-    const placeholders = ["Hauptpunkt", "Unterpunkt", "Begriff: Detail; Detail"];
-    const marks = ["•", "×", "—"];
+    const placeholders = ["Hauptpunkt", "Unterpunkt", "Begriff: Detail; Detail", "Unterdetail", "Stichpunkt"];
     const addLineAfter = () => setLines(x => { x.splice(fi + 1, 0, L(fl ? fl.level : 0, "")); return x; }, fi + 1);
     screen = (
       <div className="screen editor">
@@ -560,12 +560,19 @@ export default function App() {
           <div className="e-title-bar" style={{ background: titleColor(draft.subject) }}>
             <input className="e-title" value={draft.title} placeholder="Titel der Karte" aria-label="Titel der Karte"
               onChange={e => setDraft({ ...draft, title: e.target.value })}
-              onKeyDown={e => { if (e.key === "Enter") { e.preventDefault(); pendingFocus.current = 0; setFocusIdx(0); } }} />
+              onKeyDown={e => {
+                if (e.key !== "Enter") return;
+                e.preventDefault();
+                // Focus directly: if focusIdx is already 0 there is no re-render to trigger the focus effect.
+                const el = document.querySelector('[data-line-idx="0"]');
+                if (el) { el.focus(); const n = el.value.length; try { el.setSelectionRange(n, n); } catch (_) {} }
+                setFocusIdx(0);
+              }} />
           </div>
           <div className="e-body">
             {ls.map((l, i) => (
-              <div key={l.id} className={`e-ln e-ln-${l.level}`}>
-                <span className="e-mark" aria-hidden="true">{marks[l.level]}</span>
+              <div key={l.id} className={`e-ln e-ln-${l.level}${l.level >= 2 ? " e-ln-deep" : ""}`} style={{ paddingLeft: 6 + l.level * 26 }}>
+                <span className="e-mark" aria-hidden="true">{MARKS[l.level]}</span>
                 <input data-line-idx={i} value={l.text} placeholder={placeholders[l.level]} aria-label={`Zeile ${i + 1}, ${LEVELS[l.level]}`}
                   onChange={e => { const t = e.target.value; setLines(x => { x[i] = { ...x[i], text: t }; return x; }); }}
                   onKeyDown={e => lineKey(i, e)}
