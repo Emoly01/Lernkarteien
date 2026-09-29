@@ -307,3 +307,4 @@ input::placeholder { color: var(--faint); }
 .sync-input { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; text-transform: uppercase; letter-spacing: .04em; font-size: 15px; }
 .sync .bottom-row { flex-wrap: wrap; }
 .sync .bottom-row > button { min-width: 140px; }
+.sync-account { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; align-self: center; }

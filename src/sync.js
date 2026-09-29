@@ -1,4 +1,4 @@
-// Sync between devices. Pure functions only, shared by the browser and /api/sync.
+// Sync between devices. Pure functions only (no Firebase here), so they can be unit-tested.
 //
 // Every change carries a timestamp so two devices can be merged without losing work:
 //   card.tAt / lAt / sAt – when the title / the lines / the deck last changed
@@ -10,19 +10,6 @@
 //   settingsAt     – when examDate / pointByPoint last changed
 // Title, lines, deck and progress merge separately: fix a card's title on the laptop while
 // editing its text or rating it on the phone, and every change survives.
-
-// No 0/O/1/I so codes survive being read aloud or typed from a screenshot.
-const ALPHABET = "23456789ABCDEFGHJKLMNPQRSTUVWXYZ";
-const CODE_LEN = 20; // 20 × 5 bits = 100 bits, not guessable
-
-export function newCode() {
-  const bytes = new Uint8Array(CODE_LEN);
-  crypto.getRandomValues(bytes);
-  return Array.from(bytes, b => ALPHABET[b % 32]).join("");
-}
-export const normalizeCode = s => String(s || "").toUpperCase().replace(/[^0-9A-Z]/g, "");
-export const isValidCode = s => s.length === CODE_LEN && [...s].every(ch => ALPHABET.includes(ch));
-export const formatCode = s => s.replace(/(.{4})(?=.)/g, "$1-");
 
 const contentKey = c => JSON.stringify([c.subject, c.title, c.lines]);
 const srsKey = c => JSON.stringify([c.status, c.box, c.due]);
@@ -167,4 +154,38 @@ const sortKeys = v => (Array.isArray(v) ? v.map(sortKeys)
 export function fingerprint(s) {
   if (!s) return "";
   return JSON.stringify(sortKeys({ ...s, cards: [...s.cards].sort((x, y) => (x.id < y.id ? -1 : x.id > y.id ? 1 : 0)) }));
+}
+
+// ── Mapping to Firestore documents ─────────────────────────────
+const META_KEYS = ["subjects", "subjectMeta", "subjectsAt", "accents", "examDate", "pointByPoint", "settingsAt"];
+const cardFP = c => fingerprint({ cards: [c] });
+const metaOf = s => Object.fromEntries(META_KEYS.map(k => [k, s[k]]));
+const metaFP = m => (m ? JSON.stringify(sortKeys(metaOf(m))) : "");
+
+// Card documents (deleted ones are { id, deleted: true, at }) + meta document → sync state.
+export function fromDocs(cardDocs, meta) {
+  const tombstones = {}, cards = [];
+  for (const d of cardDocs) {
+    if (!d || typeof d.id !== "string") continue;
+    if (d.deleted) tombstones[d.id] = Math.max(tombstones[d.id] || 0, d.at || 0);
+    else cards.push(d);
+  }
+  return sanitizeState({ v: 1, subjects: [], ...(meta || {}), cards, tombstones });
+}
+
+// What has to be written so the server matches the (already merged) local state.
+export function diffForServer(local, remoteDocs, remoteMeta) {
+  const byId = new Map(remoteDocs.map(d => [d.id, d]));
+  const cards = [];
+  for (const c of local.cards) {
+    const r = byId.get(c.id);
+    if (!r || r.deleted || cardFP(r) !== cardFP(c)) cards.push(c);
+  }
+  for (const [id, at] of Object.entries(local.tombstones)) {
+    const r = byId.get(id);
+    // Also for cards the server never saw, so every device ends with the same deletion list.
+    if (!r || !(r.deleted && r.at >= at)) cards.push({ id, deleted: true, at });
+  }
+  const meta = metaFP(local) !== metaFP(remoteMeta) ? metaOf(local) : null;
+  return { cards, meta };
 }

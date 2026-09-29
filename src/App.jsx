@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef, useCallback } from "react";
 import { ACC, STATUS, LEVELS, MARKS, MAX_LEVEL, mid, L, plural, load, persist, mapLines, schedule, isDue, today, daysBetween, formatDate, exportBackup, parseBackup, nextAccent, renameSubject, deleteSubject, searchCards } from "./data.js";
-import { stamp, formatCode } from "./sync.js";
-import { useSync } from "./useSync.js";
+import { stamp } from "./sync.js";
+import { useCloudSync } from "./useCloudSync.js";
 import "./styles.css";
 
 // ── Settings (were design-tool toggles in the prototype) ─────
@@ -28,13 +28,7 @@ export default function App() {
     const next = typeof fn === "function" ? fn(prev) : fn;
     return next === prev ? prev : stamp(prev, next);
   }), []);
-  const sync = useSync(data, setData);
-  const [syncStep, setSyncStep] = useState(null); // null | "enter" | { code, remote }
-  const [syncInput, setSyncInput] = useState("");
-  const [syncMsg, setSyncMsg] = useState("");
-  const [syncBusy, setSyncBusy] = useState(false);
-  const [showCode, setShowCode] = useState(false);
-  const [copied, setCopied] = useState(false);
+  const sync = useCloudSync(data, setData);
   const { subjects, cards, examDate } = data;
   const POINT_BY_POINT = data.pointByPoint; // reveal back side one Hauptpunkt at a time
   const [studyScope, setStudyScope] = useState(null); // deck name, or null = all due cards
@@ -272,7 +266,7 @@ export default function App() {
     if (!file) return;
     try {
       const next = parseBackup(await file.text());
-      const also = sync.code ? " Durch den Sync gilt das auch für deine anderen Geräte." : "";
+      const also = sync.user ? " Durch den Sync gilt das auch für deine anderen Geräte." : "";
       if (!window.confirm(`${plural(next.cards.length, "Karte", "Karten")} aus der Sicherung laden? Deine aktuellen Karten werden dabei ersetzt.${also}`)) return;
       update({ ...next, lastBackup: today() });
       setView("home");
@@ -280,30 +274,12 @@ export default function App() {
   };
 
   // ── Sync ──
-  const startSync = async () => {
-    setSyncBusy(true); setSyncMsg("");
-    try { await sync.create(); setShowCode(true); } catch (e) { setSyncMsg(e.message); }
-    setSyncBusy(false);
-  };
-  const checkCode = async () => {
-    setSyncBusy(true); setSyncMsg("");
-    try { setSyncStep(await sync.peek(syncInput)); } catch (e) { setSyncMsg(e.message); }
-    setSyncBusy(false);
-  };
-  const finishJoin = async (mode) => {
-    setSyncBusy(true);
-    await sync.join(syncStep.code, syncStep.remote, mode);
-    setSyncStep(null); setSyncInput(""); setSyncBusy(false);
-  };
   const leaveSync = () => {
-    if (!window.confirm("Sync auf diesem Gerät beenden? Deine Karten bleiben hier, werden aber nicht mehr mit deinen anderen Geräten abgeglichen.")) return;
-    sync.leave(); setShowCode(false);
-  };
-  const copyCode = async () => {
-    try { await navigator.clipboard.writeText(formatCode(sync.code)); setCopied(true); setTimeout(() => setCopied(false), 2000); }
-    catch (e) { window.prompt("Code kopieren:", formatCode(sync.code)); }
+    if (!window.confirm("Auf diesem Gerät abmelden? Deine Karten bleiben hier, werden aber nicht mehr mit deinen anderen Geräten abgeglichen.")) return;
+    sync.signOut();
   };
   const syncText = {
+    connecting: "Verbinde …",
     syncing: "Wird synchronisiert …",
     ok: sync.lastSync ? `Synchronisiert · ${new Date(sync.lastSync).toLocaleTimeString("de-DE", { hour: "2-digit", minute: "2-digit" })} Uhr` : "Synchronisiert",
     offline: sync.error,
@@ -350,7 +326,7 @@ export default function App() {
     const due = cards.filter(isDue);
     const daysLeft = examDate ? daysBetween(today(), examDate) : null;
     const backupAge = data.lastBackup ? daysBetween(data.lastBackup, today()) : null;
-    const nudgeBackup = total > 0 && !sync.code && (backupAge == null || backupAge >= 7);
+    const nudgeBackup = total > 0 && !sync.user && (backupAge == null || backupAge >= 7);
     const results = searchCards(cards, query);
     screen = (
       <div className="screen home">
@@ -461,60 +437,38 @@ export default function App() {
         {!addingSubject && !STUDY_ONLY && <button className="new-deck" onClick={() => setAddingSubject(true)}>+ Neue Mappe</button>}
         </>)}
         <div className="sync" aria-live="polite">
-          {sync.code ? (
+          {sync.choice ? (
+            <>
+              <span className="sync-title">Deine Karten in der Cloud</span>
+              <p className="sync-hint">In deinem Konto: <b>{plural(sync.choice.remoteCards, "Karte", "Karten")}</b> · auf diesem Gerät: <b>{plural(cards.length, "Karte", "Karten")}</b></p>
+              <div className="stack10">
+                <button className="btn-primary h48" onClick={() => sync.resolveChoice("merge")}>Zusammenführen – beide behalten</button>
+                <button className="btn-secondary h48" onClick={() => sync.resolveChoice("replace")}>Nur die Karten aus meinem Konto</button>
+              </div>
+              <p className="sync-hint">Sind hier nur die Beispielkarten? Dann nimm „Nur die Karten aus meinem Konto“.</p>
+            </>
+          ) : sync.user ? (
             <>
               <div className="sync-row">
                 <span className={`sync-dot ${sync.status}`} aria-hidden="true" />
                 <span className="sync-text">{syncText}</span>
-                {(sync.status === "error" || sync.status === "offline") && <button className="link-btn" onClick={sync.sync}>Erneut</button>}
               </div>
-              {showCode && (
-                <div className="sync-code-box">
-                  <span className="sync-code">{formatCode(sync.code)}</span>
-                  <button className="link-btn" onClick={copyCode}>{copied ? "Kopiert ✓" : "Kopieren"}</button>
-                </div>
-              )}
-              {showCode && <p className="sync-hint">Gib diesen Code auf deinem anderen Gerät unter „Ich habe schon einen Code“ ein. Behalte ihn für dich: Wer ihn hat, sieht deine Karten.</p>}
               <div className="sync-actions">
-                <button className="link-btn" onClick={() => setShowCode(v => !v)}>{showCode ? "Code verbergen" : "Code für ein anderes Gerät"}</button>
-                <button className="link-btn danger" onClick={leaveSync}>Sync beenden</button>
+                <span className="sync-hint sync-account">{sync.user.email || sync.user.displayName}</span>
+                <button className="link-btn danger" onClick={leaveSync}>Abmelden</button>
               </div>
-            </>
-          ) : syncStep === "enter" ? (
-            <>
-              <span className="sync-title">Code vom anderen Gerät</span>
-              <div className="add-row">
-                <input className="add-input sync-input" value={syncInput} autoFocus placeholder="ABCD-EFGH-JKLM-NPQR-STUV" aria-label="Sync-Code"
-                  autoCapitalize="characters" autoComplete="off" spellCheck={false}
-                  onChange={e => setSyncInput(e.target.value)}
-                  onKeyDown={e => { if (e.key === "Enter") checkCode(); if (e.key === "Escape") setSyncStep(null); }} />
-                <button className="btn-primary add-ok" disabled={syncBusy} onClick={checkCode}>Verbinden</button>
-              </div>
-              {syncMsg && <p className="form-error" role="alert">{syncMsg}</p>}
-              <button className="link-btn" onClick={() => { setSyncStep(null); setSyncMsg(""); }}>Abbrechen</button>
-            </>
-          ) : syncStep ? (
-            <>
-              <span className="sync-title">Code gefunden</span>
-              <p className="sync-hint">Im Sync: <b>{plural(syncStep.remote.cards.length, "Karte", "Karten")}</b> · auf diesem Gerät: <b>{plural(cards.length, "Karte", "Karten")}</b></p>
-              <div className="stack10">
-                <button className="btn-primary h48" disabled={syncBusy} onClick={() => finishJoin("merge")}>Zusammenführen – beide behalten</button>
-                <button className="btn-secondary h48" disabled={syncBusy} onClick={() => finishJoin("replace")}>Nur die Karten aus dem Sync</button>
-              </div>
-              <p className="sync-hint">Sind hier nur die Beispielkarten? Dann nimm „Nur die Karten aus dem Sync“.</p>
-              <button className="link-btn" onClick={() => setSyncStep(null)}>Abbrechen</button>
             </>
           ) : (
             <>
               <span className="sync-title">Auf allen Geräten lernen</span>
-              <p className="sync-hint">Deine Karten landen automatisch auf Handy, Tablet und Laptop – ohne Konto, mit einem geheimen Code.</p>
-              <div className="bottom-row">
-                <button className="btn-primary h48 spacer" disabled={syncBusy} onClick={startSync}>{syncBusy ? "Einen Moment …" : "Sync einrichten"}</button>
-                <button className="btn-secondary h48 spacer" onClick={() => { setSyncStep("enter"); setSyncMsg(""); }}>Ich habe schon einen Code</button>
-              </div>
-              {syncMsg && <p className="form-error" role="alert">{syncMsg}</p>}
+              <p className="sync-hint">Melde dich mit Google an – wie bei Goldhort – und deine Karten sind automatisch auf Handy, Tablet und Laptop.</p>
+              <button className="btn-primary h48" disabled={sync.status === "connecting"} onClick={sync.signIn}>
+                {sync.status === "connecting" ? "Einen Moment …" : "Mit Google anmelden"}
+              </button>
+              {sync.error && <p className="form-error" role="alert">{sync.error}</p>}
             </>
           )}
+          {sync.user && sync.status === "error" && <p className="form-error" role="alert">{sync.error}</p>}
         </div>
         <div className="backup">
           {nudgeBackup && <p className="backup-nudge">{backupAge == null ? "Du hast noch keine Sicherung gemacht." : `Letzte Sicherung vor ${backupAge} Tagen.`} Deine Karten liegen nur in diesem Browser.</p>}
