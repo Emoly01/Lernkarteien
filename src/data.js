@@ -129,7 +129,17 @@ function normalize(d) {
     examDate: d.examDate || null,
     pointByPoint: d.pointByPoint ?? true,
     lastBackup: d.lastBackup || null,
+    // Sync bookkeeping (see sync.js); older saves simply start at 0.
+    tombstones: d.tombstones || {},
+    subjectMeta: d.subjectMeta || {},
+    subjectsAt: d.subjectsAt || 0,
+    settingsAt: d.settingsAt || 0,
   };
+}
+
+// Takes a merged state from the sync server and keeps this device's local-only fields.
+export function applySyncState(local, synced) {
+  return normalize({ ...synced, lastBackup: local.lastBackup });
 }
 
 export function load() {

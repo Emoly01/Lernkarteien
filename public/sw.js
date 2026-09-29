@@ -1,5 +1,5 @@
 // Offline support: app shell is network-first (so updates arrive), hashed assets are cache-first.
-const CACHE = "lernkarten-v1";
+const CACHE = "lernkarten-v2";
 const SHELL = ["/", "/manifest.webmanifest", "/icon.svg", "/icon-192.png", "/icon-180.png"];
 
 self.addEventListener("install", e => {
@@ -21,7 +21,9 @@ self.addEventListener("message", e => {
 
 self.addEventListener("fetch", e => {
   const req = e.request;
-  if (req.method !== "GET" || new URL(req.url).origin !== self.location.origin) return;
+  const url = new URL(req.url);
+  // Never cache the sync API: it must always hit the network.
+  if (req.method !== "GET" || url.origin !== self.location.origin || url.pathname.startsWith("/api/")) return;
 
   if (req.mode === "navigate") {
     e.respondWith(fetch(req)
