@@ -14,11 +14,17 @@ import {
 // Shared project with Goldhort, Sturmauge, Command-Center and the Witchlight chronicle.
 // The web config is public by design; access is controlled by Firestore security rules.
 const PROD_HOST = "lernkarteien.vercel.app";
+const ios = /iPhone|iPad|iPod/i.test(navigator.userAgent) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+const standalone = window.matchMedia?.("(display-mode: standalone)").matches || navigator.standalone === true;
+
 const firebaseConfig = {
   apiKey: "AIzaSyDNgGC-3qksHbOWsKcEh50_5ZE6wH3n8aQ",
-  // On the production domain, login runs through our own domain (Vercel rewrites /__/auth
-  // to Firebase). That keeps Google login working in the iPhone home-screen app.
-  authDomain: location.hostname === PROD_HOST ? PROD_HOST : "dnd-tools-1dd87.firebaseapp.com",
+  // Everywhere: the normal Firebase login page, like Goldhort (no extra setup needed).
+  // iPhone/iPad only: login runs through our own domain (vercel.json rewrites /__/auth to
+  // Firebase), because Safari's storage isolation breaks the cross-domain redirect there.
+  // That path additionally needs https://lernkarteien.vercel.app/__/auth/handler as an
+  // authorized redirect URI of the OAuth client in the Google Cloud console.
+  authDomain: ios && location.hostname === PROD_HOST ? PROD_HOST : "dnd-tools-1dd87.firebaseapp.com",
   projectId: "dnd-tools-1dd87",
   storageBucket: "dnd-tools-1dd87.appspot.com",
   messagingSenderId: "866582352851",
@@ -34,14 +40,12 @@ const db = initializeFirestore(app, {
   localCache: persistentLocalCache({ tabManager: persistentMultipleTabManager() }),
 });
 
-// Popups break in home-screen apps and are often blocked on phones; use a full-page redirect there.
-const standalone = window.matchMedia?.("(display-mode: standalone)").matches || navigator.standalone === true;
-const mobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+// Popup like Goldhort; only the iPhone home-screen app can't return from a popup, so it redirects.
 
 export async function signIn() {
   const provider = new GoogleAuthProvider();
   provider.setCustomParameters({ prompt: "select_account" });
-  if (standalone || mobile) return signInWithRedirect(auth, provider);
+  if (ios && standalone) return signInWithRedirect(auth, provider);
   try {
     await signInWithPopup(auth, provider);
   } catch (e) {
