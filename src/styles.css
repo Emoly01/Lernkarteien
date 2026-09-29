@@ -284,3 +284,27 @@ input::placeholder { color: var(--faint); }
   .flip-btn:hover { background: #fff; }
   .chip.sel { background: var(--ink); border-color: var(--ink); color: var(--bg); }
 }
+
+/* ── Save confirmation in editor ── */
+.flash { margin: 0; align-self: flex-start; padding: 8px 12px; border-radius: 10px; background: var(--green-soft); color: var(--green-ink); font-size: 14px; font-weight: 600; animation: flash-in .2s ease; }
+@keyframes flash-in { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: none; } }
+
+/* ── Sync ── */
+.sync { display: flex; flex-direction: column; gap: 10px; padding: 14px 16px; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); }
+.sync-title { font-size: 15px; font-weight: 600; color: var(--ink); }
+.sync-hint { margin: 0; font-size: 13px; line-height: 1.45; color: var(--muted); }
+.sync-row { display: flex; align-items: center; gap: 8px; min-height: 28px; }
+.sync-text { flex: 1; min-width: 0; font-size: 14px; color: var(--ink-2); }
+.sync-dot { width: 9px; height: 9px; border-radius: 50%; background: var(--faint); flex-shrink: 0; }
+.sync-dot.ok { background: var(--green); }
+.sync-dot.syncing { background: var(--amber); animation: pulse 1s ease-in-out infinite alternate; }
+.sync-dot.offline { background: var(--faint); }
+.sync-dot.error { background: var(--red); }
+@keyframes pulse { from { opacity: .35; } to { opacity: 1; } }
+.sync-code-box { display: flex; align-items: center; gap: 10px; padding: 10px 12px; border-radius: 10px; background: var(--surface-2); border: 1px dashed var(--line-strong); }
+.sync-code { flex: 1; min-width: 0; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 15px; font-weight: 600; letter-spacing: .04em; color: var(--ink); overflow-wrap: anywhere; }
+.sync-actions { display: flex; justify-content: space-between; gap: 8px; flex-wrap: wrap; }
+.sync-input { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; text-transform: uppercase; letter-spacing: .04em; font-size: 15px; }
+.sync .bottom-row { flex-wrap: wrap; }
+.sync .bottom-row > button { min-width: 140px; }
+.sync-account { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; align-self: center; }

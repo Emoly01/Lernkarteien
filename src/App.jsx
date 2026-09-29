@@ -1,5 +1,7 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import { ACC, STATUS, LEVELS, MARKS, MAX_LEVEL, mid, L, plural, load, persist, mapLines, schedule, isDue, today, daysBetween, formatDate, exportBackup, parseBackup, nextAccent, renameSubject, deleteSubject, searchCards } from "./data.js";
+import { stamp } from "./sync.js";
+import { useCloudSync } from "./useCloudSync.js";
 import "./styles.css";
 
 // ── Settings (were design-tool toggles in the prototype) ─────
@@ -20,6 +22,13 @@ function Lines({ lines }) {
 
 export default function App() {
   const [data, setData] = useState(load);
+  // Local edits go through `update`, which timestamps what changed so other devices can merge it.
+  // Changes that arrive from the sync server use setData directly.
+  const update = useCallback(fn => setData(prev => {
+    const next = typeof fn === "function" ? fn(prev) : fn;
+    return next === prev ? prev : stamp(prev, next);
+  }), []);
+  const sync = useCloudSync(data, setData);
   const { subjects, cards, examDate } = data;
   const POINT_BY_POINT = data.pointByPoint; // reveal back side one Hauptpunkt at a time
   const [studyScope, setStudyScope] = useState(null); // deck name, or null = all due cards
@@ -44,6 +53,9 @@ export default function App() {
   const [query, setQuery] = useState("");
   const [deckMenu, setDeckMenu] = useState(false);
   const [renameVal, setRenameVal] = useState("");
+  const [flash, setFlash] = useState("");
+  const flashTimer = useRef(null);
+  const focusTitle = useRef(false);
 
   const drag = useRef(null);
   const pendingFocus = useRef(null);
@@ -53,13 +65,14 @@ export default function App() {
   useEffect(() => { try { navigator.storage?.persist?.(); } catch (e) {} }, []);
 
   useEffect(() => {
+    if (focusTitle.current) { focusTitle.current = false; document.querySelector(".e-title")?.focus(); }
     if (pendingFocus.current == null) return;
     const el = document.querySelector(`[data-line-idx="${pendingFocus.current}"]`);
     pendingFocus.current = null;
     if (el) { el.focus(); const n = el.value.length; try { el.setSelectionRange(n, n); } catch (e) {} }
   });
 
-  useEffect(() => { window.scrollTo(0, 0); setDeckMenu(false); }, [view]);
+  useEffect(() => { window.scrollTo(0, 0); setDeckMenu(false); setFlash(""); }, [view]);
 
   // ── Helpers ──
   const accent = (subject) => data.accents[subject] || ACC[0];
@@ -85,7 +98,8 @@ export default function App() {
   };
   const rate = (kind) => {
     const card = studyCard;
-    setData(d => ({ ...d, cards: d.cards.map(c => c.id === card.id ? schedule(c, kind, d.examDate) : c) }));
+    if (!card) return;
+    update(d => ({ ...d, cards: d.cards.map(c => c.id === card.id ? schedule(c, kind, d.examDate) : c) }));
     const q = kind === "nochmal" ? [...queue, card.id] : queue;
     const next = qPos + 1;
     setQueue(q); setQPos(next);
@@ -95,6 +109,12 @@ export default function App() {
     setTimeout(() => setNoAnim(false), 40);
   };
   handlers.current = { view, tap, rate, canRate };
+
+  // A card in the study queue can disappear if another device deletes it; just skip it.
+  useEffect(() => {
+    if (view !== "study" || studyCard || !queue.length) return;
+    if (qPos + 1 < queue.length) setQPos(qPos + 1); else setView("done");
+  }, [view, studyCard, qPos, queue.length]);
 
   useEffect(() => {
     const onKey = (e) => {
@@ -168,18 +188,42 @@ export default function App() {
     else if (e.key === "ArrowUp" && i > 0) { e.preventDefault(); pendingFocus.current = i - 1; setFocusIdx(i - 1); }
     else if (e.key === "ArrowDown" && i < ls.length - 1) { e.preventDefault(); pendingFocus.current = i + 1; setFocusIdx(i + 1); }
   };
-  const saveDraft = () => {
+  const storeDraft = () => {
     const clean = { ...draft, title: draft.title.trim(), lines: draft.lines.filter(l => l.text.trim()) };
     const exists = cards.some(c => c.id === draft.id);
     const next = exists ? cards.map(c => c.id === draft.id ? clean : c) : [...cards, clean];
-    setData(d => ({ ...d, cards: next }));
+    update(d => ({ ...d, cards: next }));
+    return { clean, next };
+  };
+  const saveDraft = () => {
+    const { clean, next } = storeDraft();
     setDeck(clean.subject);
     setCardIdx(Math.max(0, next.filter(c => c.subject === clean.subject).findIndex(c => c.id === clean.id)));
     setDraft(null); setView("card");
   };
+  // Save the current card (if it has anything worth keeping) and start a blank one in the same deck.
+  const saveAndNew = () => {
+    const hasText = draft.lines.some(l => l.text.trim());
+    const subject = draft.subject || deck || subjects[0];
+    if (draft.title.trim()) {
+      const { clean } = storeDraft();
+      setDeck(clean.subject);
+      setFlash(`„${clean.title}“ gespeichert`);
+      clearTimeout(flashTimer.current);
+      flashTimer.current = setTimeout(() => setFlash(""), 2500);
+    } else if (hasText) {
+      if (!window.confirm("Diese Karte hat noch keinen Titel und kann nicht gespeichert werden. Verwerfen und neue Karte anfangen?")) return;
+    } else if (!cards.some(c => c.id === draft.id)) {
+      focusTitle.current = true; setFocusIdx(0); return; // already a blank new card
+    }
+    setDraft({ id: mid(), subject, title: "", status: "neu", lines: [L(0, "")] });
+    setReturnTo("deck"); setFocusIdx(0);
+    focusTitle.current = true;
+    window.scrollTo(0, 0);
+  };
   const deleteCard = () => {
     if (!window.confirm("Diese Karte löschen?")) return;
-    setData(d => ({ ...d, cards: d.cards.filter(c => c.id !== draft.id) }));
+    update(d => ({ ...d, cards: d.cards.filter(c => c.id !== draft.id) }));
     setDraft(null); setCardIdx(0); setView("deck");
   };
 
@@ -187,7 +231,7 @@ export default function App() {
   const addSubject = () => {
     const n = newSubject.trim();
     if (!n || subjects.includes(n)) return;
-    setData(d => ({ ...d, subjects: [...d.subjects, n], accents: { ...d.accents, [n]: nextAccent(d.accents) } }));
+    update(d => ({ ...d, subjects: [...d.subjects, n], accents: { ...d.accents, [n]: nextAccent(d.accents) } }));
     setNewSubject(""); setAddingSubject(false);
   };
   const cancelSubject = () => { setAddingSubject(false); setNewSubject(""); };
@@ -196,14 +240,14 @@ export default function App() {
     : renameTrim !== deck && subjects.includes(renameTrim) ? "Eine Mappe mit diesem Namen gibt es schon." : "";
   const doRename = () => {
     if (renameError) return;
-    if (renameTrim !== deck) { setData(d => renameSubject(d, deck, renameTrim)); setDeck(renameTrim); }
+    if (renameTrim !== deck) { update(d => renameSubject(d, deck, renameTrim)); setDeck(renameTrim); }
     setDeckMenu(false);
   };
   const doDeleteDeck = () => {
     const n = dCards.length;
     const msg = n ? `Mappe „${deck}“ mit ${plural(n, "Karte", "Karten")} löschen? Das lässt sich nicht rückgängig machen.` : `Leere Mappe „${deck}“ löschen?`;
     if (!window.confirm(msg)) return;
-    setData(d => deleteSubject(d, deck));
+    update(d => deleteSubject(d, deck));
     setDeck(null); setView("home");
   };
 
@@ -215,18 +259,32 @@ export default function App() {
   };
 
   // ── Backup ──
-  const doExport = () => { exportBackup(data); setData(d => ({ ...d, lastBackup: today() })); };
+  const doExport = () => { exportBackup(data); update(d => ({ ...d, lastBackup: today() })); };
   const doImport = async (e) => {
     const file = e.target.files?.[0];
     e.target.value = "";
     if (!file) return;
     try {
       const next = parseBackup(await file.text());
-      if (!window.confirm(`${plural(next.cards.length, "Karte", "Karten")} aus der Sicherung laden? Deine aktuellen Karten werden dabei ersetzt.`)) return;
-      setData({ ...next, lastBackup: today() });
+      const also = sync.user ? " Durch den Sync gilt das auch für deine anderen Geräte." : "";
+      if (!window.confirm(`${plural(next.cards.length, "Karte", "Karten")} aus der Sicherung laden? Deine aktuellen Karten werden dabei ersetzt.${also}`)) return;
+      update({ ...next, lastBackup: today() });
       setView("home");
     } catch (err) { window.alert(err.message); }
   };
+
+  // ── Sync ──
+  const leaveSync = () => {
+    if (!window.confirm("Auf diesem Gerät abmelden? Deine Karten bleiben hier, werden aber nicht mehr mit deinen anderen Geräten abgeglichen.")) return;
+    sync.signOut();
+  };
+  const syncText = {
+    connecting: "Verbinde …",
+    syncing: "Wird synchronisiert …",
+    ok: sync.lastSync ? `Synchronisiert · ${new Date(sync.lastSync).toLocaleTimeString("de-DE", { hour: "2-digit", minute: "2-digit" })} Uhr` : "Synchronisiert",
+    offline: sync.error,
+    error: sync.error,
+  }[sync.status] || "";
 
   // ── Header ──
   const cIdx = Math.min(cardIdx, dCards.length - 1);
@@ -247,7 +305,9 @@ export default function App() {
           </div>
         )}
         <div className="spacer" />
-        {view === "deck" && !STUDY_ONLY && <button className="pill-btn" onClick={newCard}>+ Karte</button>}
+        {(view === "deck" || view === "card") && !STUDY_ONLY && <button className="pill-btn" onClick={newCard}>+ Karte</button>}
+        {view === "edit" && draft && <button className="pill-btn" onClick={saveAndNew}
+          title={draft.title.trim() ? "Aktuelle Karte speichern und eine neue anfangen" : "Neue Karte anfangen"}>+ Neue Karte</button>}
         {(view === "study" || view === "card") && <span className="counter" aria-label={`Karte ${counterText.replace(" / ", " von ")}`}>{counterText}</span>}
       </div>
       {view === "study" && <div className="progress"><div style={{ width: (qPos / queue.length * 100) + "%" }} /></div>}
@@ -266,7 +326,7 @@ export default function App() {
     const due = cards.filter(isDue);
     const daysLeft = examDate ? daysBetween(today(), examDate) : null;
     const backupAge = data.lastBackup ? daysBetween(data.lastBackup, today()) : null;
-    const nudgeBackup = total > 0 && (backupAge == null || backupAge >= 7);
+    const nudgeBackup = total > 0 && !sync.user && (backupAge == null || backupAge >= 7);
     const results = searchCards(cards, query);
     screen = (
       <div className="screen home">
@@ -289,9 +349,9 @@ export default function App() {
               {editingExam ? (
                 <>
                   <input type="date" className="exam-input" min={today()} defaultValue={examDate || ""} autoFocus
-                    onChange={e => { if (e.target.value) setData(d => ({ ...d, examDate: e.target.value })); }}
+                    onChange={e => { if (e.target.value) update(d => ({ ...d, examDate: e.target.value })); }}
                     onBlur={() => setEditingExam(false)} />
-                  {examDate && <button className="link-btn danger" onMouseDown={e => { e.preventDefault(); setData(d => ({ ...d, examDate: null })); setEditingExam(false); }}>Entfernen</button>}
+                  {examDate && <button className="link-btn danger" onMouseDown={e => { e.preventDefault(); update(d => ({ ...d, examDate: null })); setEditingExam(false); }}>Entfernen</button>}
                   <button className="link-btn" onMouseDown={e => { e.preventDefault(); setEditingExam(false); }}>Fertig</button>
                 </>
               ) : examDate && daysLeft >= 0 ? (
@@ -376,6 +436,40 @@ export default function App() {
         )}
         {!addingSubject && !STUDY_ONLY && <button className="new-deck" onClick={() => setAddingSubject(true)}>+ Neue Mappe</button>}
         </>)}
+        <div className="sync" aria-live="polite">
+          {sync.choice ? (
+            <>
+              <span className="sync-title">Deine Karten in der Cloud</span>
+              <p className="sync-hint">In deinem Konto: <b>{plural(sync.choice.remoteCards, "Karte", "Karten")}</b> · auf diesem Gerät: <b>{plural(cards.length, "Karte", "Karten")}</b></p>
+              <div className="stack10">
+                <button className="btn-primary h48" onClick={() => sync.resolveChoice("merge")}>Zusammenführen – beide behalten</button>
+                <button className="btn-secondary h48" onClick={() => sync.resolveChoice("replace")}>Nur die Karten aus meinem Konto</button>
+              </div>
+              <p className="sync-hint">Sind hier nur die Beispielkarten? Dann nimm „Nur die Karten aus meinem Konto“.</p>
+            </>
+          ) : sync.user ? (
+            <>
+              <div className="sync-row">
+                <span className={`sync-dot ${sync.status}`} aria-hidden="true" />
+                <span className="sync-text">{syncText}</span>
+              </div>
+              <div className="sync-actions">
+                <span className="sync-hint sync-account">{sync.user.email || sync.user.displayName}</span>
+                <button className="link-btn danger" onClick={leaveSync}>Abmelden</button>
+              </div>
+            </>
+          ) : (
+            <>
+              <span className="sync-title">Auf allen Geräten lernen</span>
+              <p className="sync-hint">Melde dich mit Google an – wie bei Goldhort – und deine Karten sind automatisch auf Handy, Tablet und Laptop.</p>
+              <button className="btn-primary h48" disabled={sync.status === "connecting"} onClick={sync.signIn}>
+                {sync.status === "connecting" ? "Einen Moment …" : "Mit Google anmelden"}
+              </button>
+              {sync.error && <p className="form-error" role="alert">{sync.error}</p>}
+            </>
+          )}
+          {sync.user && sync.status === "error" && <p className="form-error" role="alert">{sync.error}</p>}
+        </div>
         <div className="backup">
           {nudgeBackup && <p className="backup-nudge">{backupAge == null ? "Du hast noch keine Sicherung gemacht." : `Letzte Sicherung vor ${backupAge} Tagen.`} Deine Karten liegen nur in diesem Browser.</p>}
           <div className="backup-row">
@@ -484,8 +578,8 @@ export default function App() {
     screen = (
       <div className="screen study">
         <div className="mode-toggle" role="group" aria-label="Aufdecken">
-          <button className={!POINT_BY_POINT ? "on" : ""} aria-pressed={!POINT_BY_POINT} onClick={() => setData(d => ({ ...d, pointByPoint: false }))}>Ganze Karte</button>
-          <button className={POINT_BY_POINT ? "on" : ""} aria-pressed={POINT_BY_POINT} onClick={() => setData(d => ({ ...d, pointByPoint: true }))}>Punkt für Punkt</button>
+          <button className={!POINT_BY_POINT ? "on" : ""} aria-pressed={!POINT_BY_POINT} onClick={() => update(d => ({ ...d, pointByPoint: false }))}>Ganze Karte</button>
+          <button className={POINT_BY_POINT ? "on" : ""} aria-pressed={POINT_BY_POINT} onClick={() => update(d => ({ ...d, pointByPoint: true }))}>Punkt für Punkt</button>
         </div>
         <p className="sr-only" aria-live="polite">{flipped ? `Rückseite: ${c.title}.${canRate ? " Bewerte mit 1, 2 oder 3." : ""}` : `Vorderseite: ${c.title}. Leertaste zum Umdrehen.`}</p>
         <div className="flip-wrap" onPointerDown={pDown} onPointerMove={pMove} onPointerUp={pUp} onPointerCancel={pCancel}
@@ -581,6 +675,7 @@ export default function App() {
             ))}
           </div>
         </div>
+        {flash && <p className="flash" role="status">✓ {flash}</p>}
         <p className="e-help">Enter = neue Zeile · Tab / ⇧Tab = ein- und ausrücken · Leere Zeile + ⌫ = löschen</p>
         {cards.some(c => c.id === draft.id) && <button className="e-delete" onClick={deleteCard}>Karte löschen</button>}
         <div className="spacer" />

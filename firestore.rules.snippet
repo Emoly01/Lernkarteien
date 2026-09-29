@@ -1,0 +1,13 @@
+// Lernkarten: add inside `match /databases/{database}/documents { ... }` of the
+// dnd-tools-1dd87 rules (Firebase console → Firestore → Regeln).
+//
+// Skip this if the rules already contain a catch-all for the user's folder like
+//   match /users/{userId}/{document=**} { allow read, write: if request.auth.uid == userId; }
+// because that already covers Lernkarten.
+
+match /users/{userId}/lernkarten-cards/{cardId} {
+  allow read, write: if request.auth != null && request.auth.uid == userId;
+}
+match /users/{userId}/lernkarten/{docId} {
+  allow read, write: if request.auth != null && request.auth.uid == userId;
+}
