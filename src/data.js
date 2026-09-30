@@ -176,6 +176,18 @@ export function parseBackup(text) {
 }
 
 // Turns card lines into render rows; `reveal` hides everything after the n-th Hauptpunkt.
+// A line with arrows is a process: "Problem → Methode → Lösung" becomes boxes with arrows.
+// Optional caption before a colon: "Ablauf: A → B → C". "->" and "=>" count as arrows too.
+const ARROW = /\s*(?:→|->|=>)\s*/;
+export function parseFlow(text) {
+  let caption = "", body = text;
+  const m = text.match(/^([^:]+?):\s+(.*)$/); // "Ablauf: …" – a colon followed by a space, so "10:30" stays intact
+  if (m && !ARROW.test(m[1])) { caption = m[1].trim(); body = m[2]; }
+  const steps = body.split(ARROW).map(s => s.trim());
+  if (steps.length < 2 || steps.some(s => !s)) return null;
+  return { caption, steps };
+}
+
 export function mapLines(lines, reveal) {
   let g = -1;
   return lines.filter(l => l.text.trim()).map(l => {
@@ -183,6 +195,6 @@ export function mapLines(lines, reveal) {
     const shown = reveal == null || g < reveal;
     let label = "", rest = l.text;
     if (l.level >= 2) { const i = l.text.indexOf(":"); if (i > 0) { label = l.text.slice(0, i + 1) + " "; rest = l.text.slice(i + 1).trim(); } }
-    return { key: l.id, level: l.level, text: l.text, label, rest, hidden: !shown, pad: l.level * 26 + 4, ghostW: [46, 58, 64, 60, 56][l.level] ?? 56 };
+    return { key: l.id, level: l.level, text: l.text, label, rest, flow: parseFlow(l.text), hidden: !shown, pad: l.level * 26 + 4, ghostW: [46, 58, 64, 60, 56][l.level] ?? 56 };
   });
 }

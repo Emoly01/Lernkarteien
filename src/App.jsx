@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef, useCallback } from "react";
-import { ACC, STATUS, LEVELS, MARKS, MAX_LEVEL, mid, L, plural, load, persist, mapLines, schedule, isDue, today, daysBetween, formatDate, exportBackup, parseBackup, nextAccent, renameSubject, deleteSubject, searchCards } from "./data.js";
+import { ACC, STATUS, LEVELS, MARKS, MAX_LEVEL, parseFlow, mid, L, plural, load, persist, mapLines, schedule, isDue, today, daysBetween, formatDate, exportBackup, parseBackup, nextAccent, renameSubject, deleteSubject, searchCards } from "./data.js";
 import { stamp } from "./sync.js";
 import { useCloudSync } from "./useCloudSync.js";
 import "./styles.css";
@@ -10,14 +10,55 @@ const SHUFFLE = true;              // shuffle study queue
 const TITLE_TURQUOISE = false;     // true = every title bar turquoise, false = subject colour
 
 // ── Card lines (read-only) ───────────────────────────────────
+// Process lines ("A → B → C") as boxes with arrows. Consecutive process lines on the same level
+// with the same number of steps share one grid, so their steps line up like on a slide:
+// the first row is framed, the rows below are filled. Narrow cards run top to bottom.
+function Flow({ rows, pad }) {
+  const R = rows.length, C = rows[0].flow.steps.length;
+  const caption = rows[0].flow.caption;
+  const cells = [];
+  rows.forEach((ln, r) => ln.flow.steps.forEach((step, i) => {
+    const pos = { "--hr": r + 1, "--hc": 2 * i + 1, "--vr": 2 * i + 1, "--vc": r + 1 };
+    cells.push(<div key={`${ln.key}-${i}`} className={"flow-box" + (R > 1 && r === 0 ? " outline" : "")} style={pos}>{step}</div>);
+    if (i < C - 1) cells.push(
+      <span key={`${ln.key}-a${i}`} className="flow-arrow" aria-hidden="true"
+        style={{ "--hr": r + 1, "--hc": 2 * i + 2, "--vr": 2 * i + 2, "--vc": r + 1 }}>
+        <svg viewBox="0 0 24 12" width="24" height="12"><path d="M1 6h19M15 1.5 21 6l-6 4.5" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" /></svg>
+      </span>);
+  }));
+  return (
+    <div className="flow-wrap" style={{ paddingLeft: pad }}>
+      {caption && <div className="flow-caption">{caption}</div>}
+      <div className={`flow flow-c${Math.min(C, 5)}`} style={{ "--rows": R, "--gaps": C - 1 }}
+        role="img" aria-label={rows.map(ln => ln.flow.steps.join(", dann ")).join(". Darunter: ")}>
+        {cells}
+      </div>
+    </div>
+  );
+}
+
 function Lines({ lines }) {
-  return lines.map(ln => {
-    if (ln.hidden) return <div key={ln.key} className="ln-ghost" style={{ paddingLeft: ln.pad }}><div style={{ width: ln.ghostW + "%" }} /></div>;
-    if (ln.level === 0) return <div key={ln.key} className="ln"><span className="ln-bullet">•</span><span className="ln-0-text">{ln.text}</span></div>;
-    if (ln.level === 1) return <div key={ln.key} className="ln ln-1"><span className="ln-1-mark">×</span><span className="ln-1-text">{ln.text}</span></div>;
-    // Detail and deeper: "Begriff: Rest" gets a bold label; each level indents a bit further.
-    return <div key={ln.key} className={`ln ln-deep ln-${ln.level}`} style={{ paddingLeft: ln.level * 26 }}><span className="ln-2-mark">{MARKS[ln.level]}</span><span className="ln-2-text"><b>{ln.label}</b>{ln.rest}</span></div>;
-  });
+  const out = [];
+  for (let i = 0; i < lines.length; i++) {
+    const ln = lines[i];
+    if (ln.flow && !ln.hidden) {
+      const rows = [ln];
+      while (i + 1 < lines.length && !lines[i + 1].hidden && lines[i + 1].flow && lines[i + 1].level === ln.level
+        && lines[i + 1].flow.steps.length === ln.flow.steps.length && !lines[i + 1].flow.caption) rows.push(lines[++i]);
+      out.push(<Flow key={ln.key} rows={rows} pad={ln.level * 26} />);
+      continue;
+    }
+    out.push(renderLine(ln));
+  }
+  return out;
+}
+
+function renderLine(ln) {
+  if (ln.hidden) return <div key={ln.key} className="ln-ghost" style={{ paddingLeft: ln.pad }}><div style={{ width: ln.ghostW + "%" }} /></div>;
+  if (ln.level === 0) return <div key={ln.key} className="ln"><span className="ln-bullet">•</span><span className="ln-0-text">{ln.text}</span></div>;
+  if (ln.level === 1) return <div key={ln.key} className="ln ln-1"><span className="ln-1-mark">×</span><span className="ln-1-text">{ln.text}</span></div>;
+  // Detail and deeper: "Begriff: Rest" gets a bold label; each level indents a bit further.
+  return <div key={ln.key} className={`ln ln-deep ln-${ln.level}`} style={{ paddingLeft: ln.level * 26 }}><span className="ln-2-mark">{MARKS[ln.level]}</span><span className="ln-2-text"><b>{ln.label}</b>{ln.rest}</span></div>;
 }
 
 export default function App() {
@@ -59,6 +100,7 @@ export default function App() {
 
   const drag = useRef(null);
   const pendingFocus = useRef(null);
+  const pendingCaret = useRef(null); // cursor position to restore after a programmatic edit
   const handlers = useRef({});
 
   useEffect(() => { persist(data); }, [data]);
@@ -69,7 +111,8 @@ export default function App() {
     if (pendingFocus.current == null) return;
     const el = document.querySelector(`[data-line-idx="${pendingFocus.current}"]`);
     pendingFocus.current = null;
-    if (el) { el.focus(); const n = el.value.length; try { el.setSelectionRange(n, n); } catch (e) {} }
+    const caret = pendingCaret.current; pendingCaret.current = null;
+    if (el) { el.focus(); const n = caret ?? el.value.length; try { el.setSelectionRange(n, n); } catch (e) {} }
   });
 
   useEffect(() => { window.scrollTo(0, 0); setDeckMenu(false); setFlash(""); }, [view]);
@@ -558,7 +601,7 @@ export default function App() {
     const c = dCards[cIdx];
     screen = c && (
       <div className="screen card-view">
-        <div className="paper">
+        <div className="paper" style={{ "--accent": titleColor(c.subject) }}>
           <div className="paper-title" style={{ background: titleColor(c.subject) }}>{c.title}</div>
           <div className="paper-body" style={{ minHeight: 220 }}><Lines lines={mapLines(c.lines)} /></div>
         </div>
@@ -593,7 +636,7 @@ export default function App() {
               <div className="face-title">{c.title}</div>
               <div className="face-hint">{plural(g, "Hauptpunkt", "Hauptpunkte")} — {POINT_BY_POINT ? "erinnere dich an jeden einzeln." : "was weißt du dazu?"} Tippen zum Umdrehen.</div>
             </div>
-            <div className="face face-back" aria-hidden={!flipped}>
+            <div className="face face-back" aria-hidden={!flipped} style={{ "--accent": acc }}>
               <div className="paper-title" style={{ background: acc }}>{c.title}</div>
               <div className="paper-body"><Lines lines={mapLines(c.lines, POINT_BY_POINT ? reveal : null)} /></div>
             </div>
@@ -640,6 +683,16 @@ export default function App() {
   if (view === "edit" && draft) {
     const ls = draft.lines, fi = Math.min(focusIdx, ls.length - 1), fl = ls[fi];
     const placeholders = ["Hauptpunkt", "Unterpunkt", "Begriff: Detail; Detail", "Unterdetail", "Stichpunkt"];
+    // Inserts " → " at the cursor of the current line; two or more steps turn the line into boxes.
+    const insertArrow = () => {
+      if (!fl) return;
+      const el = document.querySelector(`[data-line-idx="${fi}"]`);
+      const text = fl.text, start = el?.selectionStart ?? text.length, end = el?.selectionEnd ?? start;
+      const before = text.slice(0, start).replace(/\s+$/, ""), after = text.slice(end).replace(/^\s+/, "");
+      const ins = (before ? " " : "") + "→ ";
+      pendingCaret.current = before.length + ins.length;
+      setLines(x => { x[fi] = { ...x[fi], text: before + ins + after }; return x; }, fi);
+    };
     const addLineAfter = () => setLines(x => { x.splice(fi + 1, 0, L(fl ? fl.level : 0, "")); return x; }, fi + 1);
     screen = (
       <div className="screen editor">
@@ -668,7 +721,13 @@ export default function App() {
               <div key={l.id} className={`e-ln e-ln-${l.level}${l.level >= 2 ? " e-ln-deep" : ""}`} style={{ paddingLeft: 6 + l.level * 26 }}>
                 <span className="e-mark" aria-hidden="true">{MARKS[l.level]}</span>
                 <input data-line-idx={i} value={l.text} placeholder={placeholders[l.level]} aria-label={`Zeile ${i + 1}, ${LEVELS[l.level]}`}
-                  onChange={e => { const t = e.target.value; setLines(x => { x[i] = { ...x[i], text: t }; return x; }); }}
+                  onChange={e => {
+                    // "->" becomes a real arrow as you type; keep the cursor where it was.
+                    const raw = e.target.value, at = e.target.selectionStart ?? raw.length;
+                    const t = raw.replace(/->/g, "→");
+                    if (t !== raw) { pendingCaret.current = at - (raw.slice(0, at).match(/->/g) || []).length; pendingFocus.current = i; }
+                    setLines(x => { x[i] = { ...x[i], text: t }; return x; });
+                  }}
                   onKeyDown={e => lineKey(i, e)}
                   onFocus={() => { if (focusIdx !== i) setFocusIdx(i); }} />
               </div>
@@ -676,14 +735,15 @@ export default function App() {
           </div>
         </div>
         {flash && <p className="flash" role="status">✓ {flash}</p>}
-        <p className="e-help">Enter = neue Zeile · Tab / ⇧Tab = ein- und ausrücken · Leere Zeile + ⌫ = löschen</p>
+        <p className="e-help">Enter = neue Zeile · Tab / ⇧Tab = ein- und ausrücken · Leere Zeile + ⌫ = löschen · → trennt Schritte eines Ablaufs (z. B. Problem → Methode → Lösung); zwei Ablauf-Zeilen untereinander werden zu zwei Reihen</p>
         {cards.some(c => c.id === draft.id) && <button className="e-delete" onClick={deleteCard}>Karte löschen</button>}
         <div className="spacer" />
         <div className="e-footer">
           <div className="toolbar">
             <button className="tool" disabled={!fl || fl.level === 0} onMouseDown={e => { e.preventDefault(); shift(fi, -1); }} onClick={e => { if (e.detail === 0) shift(fi, -1); }} aria-label="Ausrücken">⇤ Aus</button>
             <button className="tool" disabled={!fl || fl.level >= maxLevel(ls, fi)} onMouseDown={e => { e.preventDefault(); shift(fi, 1); }} onClick={e => { if (e.detail === 0) shift(fi, 1); }} aria-label="Einrücken">Ein ⇥</button>
-            <span className="tool-level" aria-live="polite">{fl ? `Zeile ${fi + 1}: ${LEVELS[fl.level]}` : ""}</span>
+            <span className="tool-level" aria-live="polite">{fl ? `${LEVELS[fl.level]}${parseFlow(fl.text) ? " · Ablauf" : ""}` : ""}</span>
+            <button className="tool" disabled={!fl} onMouseDown={e => { e.preventDefault(); insertArrow(); }} onClick={e => { if (e.detail === 0) insertArrow(); }} aria-label="Pfeil einfügen – macht aus der Zeile einen Ablauf">→</button>
             <button className="tool" onMouseDown={e => { e.preventDefault(); addLineAfter(); }} onClick={e => { if (e.detail === 0) addLineAfter(); }}>+ Zeile</button>
           </div>
           <div className="bottom-row">
