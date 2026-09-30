@@ -9,6 +9,8 @@ const STUDY_ONLY = false;          // hides all editing UI
 const SHUFFLE = true;              // shuffle study queue
 const TITLE_TURQUOISE = false;     // true = every title bar turquoise, false = subject colour
 
+const MOD = /Mac|iPhone|iPad/.test(navigator.platform) ? "⌘" : "Strg";
+
 // ── Card lines (read-only) ───────────────────────────────────
 // Process lines ("A → B → C") as boxes with arrows. Consecutive process lines on the same level
 // with the same number of steps share one grid, so their steps line up like on a slide:
@@ -202,6 +204,7 @@ export default function App() {
   const openEditor = (card, back) => {
     const d = JSON.parse(JSON.stringify(card));
     if (!d.lines.length) d.lines = [L(0, "")];
+    if (!d.title) focusTitle.current = true; // new card: start typing the title right away
     setDraft(d); setReturnTo(back); setFocusIdx(0); setView("edit");
   };
   const newCard = () => openEditor({ id: mid(), subject: deck || subjects[0], title: "", status: "neu", lines: [] }, "deck");
@@ -219,6 +222,7 @@ export default function App() {
   }, i);
   const lineKey = (i, e) => {
     const ls = draft.lines, ln = ls[i];
+    if (e.key === "Enter" && (e.ctrlKey || e.metaKey)) return; // shortcut: save & new card
     if (e.key === "Enter") {
       e.preventDefault();
       if (!ln.text.trim() && ln.level > 0) return shift(i, -1);
@@ -264,6 +268,29 @@ export default function App() {
     focusTitle.current = true;
     window.scrollTo(0, 0);
   };
+  handlers.current.newCard = newCard;
+  handlers.current.saveAndNew = saveAndNew;
+
+  // Keyboard shortcuts for writing cards (Ctrl/Cmd+N belongs to the browser and can't be used):
+  //   N          new card (when not typing in a field)
+  //   Alt/⌥+N    new card from anywhere; in the editor: save this one and start the next
+  //   Ctrl/⌘+Enter in the editor: save and start the next card
+  useEffect(() => {
+    const onKey = (e) => {
+      const h = handlers.current;
+      if (STUDY_ONLY || !["home", "deck", "card", "edit"].includes(h.view)) return;
+      const typing = /^(INPUT|TEXTAREA|SELECT)$/.test(e.target.tagName) || e.target.isContentEditable;
+      const mod = e.ctrlKey || e.metaKey;
+      const altN = e.altKey && !mod && e.code === "KeyN"; // e.code: on a Mac ⌥+N types a dead key
+      const plainN = !typing && !mod && !e.altKey && e.key.toLowerCase() === "n";
+      const saveNext = h.view === "edit" && mod && e.key === "Enter";
+      if (!altN && !plainN && !saveNext) return;
+      e.preventDefault();
+      if (h.view === "edit") h.saveAndNew(); else h.newCard();
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, []);
   const deleteCard = () => {
     if (!window.confirm("Diese Karte löschen?")) return;
     update(d => ({ ...d, cards: d.cards.filter(c => c.id !== draft.id) }));
@@ -348,9 +375,9 @@ export default function App() {
           </div>
         )}
         <div className="spacer" />
-        {(view === "deck" || view === "card") && !STUDY_ONLY && <button className="pill-btn" onClick={newCard}>+ Karte</button>}
-        {view === "edit" && draft && <button className="pill-btn" onClick={saveAndNew}
-          title={draft.title.trim() ? "Aktuelle Karte speichern und eine neue anfangen" : "Neue Karte anfangen"}>+ Neue Karte</button>}
+        {(view === "deck" || view === "card") && !STUDY_ONLY && <button className="pill-btn" onClick={newCard} title="Neue Karte (Taste N)" aria-keyshortcuts="N">+ Karte</button>}
+        {view === "edit" && draft && <button className="pill-btn" onClick={saveAndNew} aria-keyshortcuts="Control+Enter Meta+Enter Alt+N"
+          title={`${draft.title.trim() ? "Aktuelle Karte speichern und eine neue anfangen" : "Neue Karte anfangen"} (${MOD} + Enter)`}>+ Neue Karte</button>}
         {(view === "study" || view === "card") && <span className="counter" aria-label={`Karte ${counterText.replace(" / ", " von ")}`}>{counterText}</span>}
       </div>
       {view === "study" && <div className="progress"><div style={{ width: (qPos / queue.length * 100) + "%" }} /></div>}
@@ -708,7 +735,7 @@ export default function App() {
             <input className="e-title" value={draft.title} placeholder="Titel der Karte" aria-label="Titel der Karte"
               onChange={e => setDraft({ ...draft, title: e.target.value })}
               onKeyDown={e => {
-                if (e.key !== "Enter") return;
+                if (e.key !== "Enter" || e.ctrlKey || e.metaKey) return;
                 e.preventDefault();
                 // Focus directly: if focusIdx is already 0 there is no re-render to trigger the focus effect.
                 const el = document.querySelector('[data-line-idx="0"]');
@@ -735,7 +762,7 @@ export default function App() {
           </div>
         </div>
         {flash && <p className="flash" role="status">✓ {flash}</p>}
-        <p className="e-help">Enter = neue Zeile · Tab / ⇧Tab = ein- und ausrücken · Leere Zeile + ⌫ = löschen · → trennt Schritte eines Ablaufs (z. B. Problem → Methode → Lösung); zwei Ablauf-Zeilen untereinander werden zu zwei Reihen</p>
+        <p className="e-help">{MOD} + Enter = speichern & nächste Karte · Enter = neue Zeile · Tab / ⇧Tab = ein- und ausrücken · Leere Zeile + ⌫ = löschen · → trennt Schritte eines Ablaufs (z. B. Problem → Methode → Lösung); zwei Ablauf-Zeilen untereinander werden zu zwei Reihen</p>
         {cards.some(c => c.id === draft.id) && <button className="e-delete" onClick={deleteCard}>Karte löschen</button>}
         <div className="spacer" />
         <div className="e-footer">
