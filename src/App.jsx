@@ -11,6 +11,22 @@ const TITLE_TURQUOISE = false;     // true = every title bar turquoise, false = 
 
 const MOD = /Mac|iPhone|iPad/.test(navigator.platform) ? "⌘" : "Strg";
 
+// Scrolls the editor so the line being typed in stays visible: below the sticky header and above
+// the sticky toolbar and, on phones, the on-screen keyboard (visualViewport excludes it).
+function keepInView(el) {
+  if (!el) return;
+  const r = el.getBoundingClientRect();
+  const vv = window.visualViewport;
+  const viewTop = vv ? vv.offsetTop : 0;
+  const viewBottom = vv ? vv.offsetTop + vv.height : window.innerHeight;
+  const header = document.querySelector(".hdr")?.getBoundingClientRect();
+  const footer = document.querySelector(".e-footer")?.getBoundingClientRect();
+  const top = Math.max(viewTop, header ? header.bottom : 0) + 12;
+  const bottom = Math.min(viewBottom, footer && footer.top < viewBottom ? footer.top : viewBottom) - 16;
+  if (r.bottom > bottom) window.scrollBy({ top: r.bottom - bottom, behavior: "smooth" });
+  else if (r.top < top) window.scrollBy({ top: r.top - top, behavior: "smooth" });
+}
+
 // ── Card lines (read-only) ───────────────────────────────────
 // Process lines ("A → B → C") as boxes with arrows. Consecutive process lines on the same level
 // with the same number of steps share one grid, so their steps line up like on a slide:
@@ -114,8 +130,20 @@ export default function App() {
     const el = document.querySelector(`[data-line-idx="${pendingFocus.current}"]`);
     pendingFocus.current = null;
     const caret = pendingCaret.current; pendingCaret.current = null;
-    if (el) { el.focus(); const n = caret ?? el.value.length; try { el.setSelectionRange(n, n); } catch (e) {} }
+    if (el) {
+      el.focus({ preventScroll: true });
+      const n = caret ?? el.value.length; try { el.setSelectionRange(n, n); } catch (e) {}
+      keepInView(el);
+    }
   });
+
+  // When the phone keyboard opens or closes, the visible area changes: keep the active line in view.
+  useEffect(() => {
+    if (view !== "edit" || !window.visualViewport) return;
+    const onResize = () => { const el = document.activeElement; if (el?.closest?.(".editor")) keepInView(el); };
+    window.visualViewport.addEventListener("resize", onResize);
+    return () => window.visualViewport.removeEventListener("resize", onResize);
+  }, [view]);
 
   useEffect(() => { window.scrollTo(0, 0); setDeckMenu(false); setFlash(""); }, [view]);
 
@@ -756,7 +784,7 @@ export default function App() {
                     setLines(x => { x[i] = { ...x[i], text: t }; return x; });
                   }}
                   onKeyDown={e => lineKey(i, e)}
-                  onFocus={() => { if (focusIdx !== i) setFocusIdx(i); }} />
+                  onFocus={e => { if (focusIdx !== i) setFocusIdx(i); const el = e.target; requestAnimationFrame(() => keepInView(el)); }} />
               </div>
             ))}
           </div>
