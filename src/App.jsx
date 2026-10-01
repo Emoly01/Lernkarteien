@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef, useCallback } from "react";
-import { ACC, STATUS, LEVELS, MARKS, MAX_LEVEL, parseFlow, mid, L, plural, load, persist, mapLines, schedule, isDue, today, daysBetween, formatDate, exportBackup, parseBackup, nextAccent, renameSubject, deleteSubject, searchCards } from "./data.js";
+import { ACC, STATUS, LEVELS, MARKS, MAX_LEVEL, parseFlow, parsePasted, mid, L, plural, load, persist, mapLines, schedule, isDue, today, daysBetween, formatDate, exportBackup, parseBackup, nextAccent, renameSubject, deleteSubject, searchCards } from "./data.js";
 import { stamp } from "./sync.js";
 import { useCloudSync } from "./useCloudSync.js";
 import "./styles.css";
@@ -748,6 +748,52 @@ export default function App() {
       pendingCaret.current = before.length + ins.length;
       setLines(x => { x[fi] = { ...x[fi], text: before + ins + after }; return x; }, fi);
     };
+    // Pasting several lines: each becomes its own line, indentation sets the level.
+    // Into an empty line it replaces that line; otherwise the lines go below the current one.
+    const insertRows = (x, rows, at, replace, base) => {
+      const start = replace ? at : at + 1;
+      let prev = start > 0 ? x[start - 1].level : -1;
+      const fresh = rows.map(r => {
+        const level = Math.max(0, Math.min(base + r.level, prev + 1, MAX_LEVEL));
+        prev = level;
+        return L(level, r.text);
+      });
+      x.splice(start, replace ? 1 : 0, ...fresh);
+      // Lines below must not end up more than one level deeper than the last pasted line.
+      for (let j = start + fresh.length; j < x.length && x[j].level > prev + 1; j++) { x[j] = { ...x[j], level: prev + 1 }; prev = x[j].level; }
+      return { lines: x, last: start + fresh.length - 1 };
+    };
+    const pasteRows = (rows, at, replace, base) => {
+      const { lines, last } = insertRows(draft.lines.slice(), rows, at, replace, base);
+      pendingCaret.current = null; pendingFocus.current = last; setFocusIdx(last);
+      setDraft({ ...draft, lines });
+    };
+    const onLinePaste = (i, e) => {
+      const text = e.clipboardData?.getData("text") || "";
+      if (!/\n/.test(text.trim())) return; // single line: normal paste
+      e.preventDefault();
+      const rows = parsePasted(text);
+      if (rows.length) pasteRows(rows, i, !ls[i].text.trim(), ls[i].level);
+    };
+    const onTitlePaste = (e) => {
+      const text = e.clipboardData?.getData("text") || "";
+      if (!/\n/.test(text.trim())) return;
+      e.preventDefault();
+      let rows = parsePasted(text), title = draft.title;
+      if (!rows.length) return;
+      if (!title.trim()) {
+        // First line becomes the title, the rest the card's lines (re-based to the top level).
+        title = rows[0].text;
+        rows = rows.slice(1);
+        const min = Math.min(...rows.map(r => r.level));
+        rows = rows.map(r => ({ ...r, level: r.level - min }));
+      }
+      if (!rows.length) { setDraft({ ...draft, title }); return; }
+      const onlyEmpty = ls.length === 1 && !ls[0].text.trim();
+      const { lines, last } = insertRows(draft.lines.slice(), rows, onlyEmpty ? 0 : ls.length - 1, onlyEmpty, 0);
+      pendingCaret.current = null; pendingFocus.current = last; setFocusIdx(last);
+      setDraft({ ...draft, title, lines });
+    };
     const addLineAfter = () => setLines(x => { x.splice(fi + 1, 0, L(fl ? fl.level : 0, "")); return x; }, fi + 1);
     screen = (
       <div className="screen editor">
@@ -760,7 +806,7 @@ export default function App() {
         </div>
         <div className="paper">
           <div className="e-title-bar" style={{ background: titleColor(draft.subject) }}>
-            <input className="e-title" value={draft.title} placeholder="Titel der Karte" aria-label="Titel der Karte"
+            <input className="e-title" value={draft.title} placeholder="Titel der Karte" aria-label="Titel der Karte" onPaste={onTitlePaste}
               onChange={e => setDraft({ ...draft, title: e.target.value })}
               onKeyDown={e => {
                 if (e.key !== "Enter" || e.ctrlKey || e.metaKey) return;
@@ -784,13 +830,14 @@ export default function App() {
                     setLines(x => { x[i] = { ...x[i], text: t }; return x; });
                   }}
                   onKeyDown={e => lineKey(i, e)}
+                  onPaste={e => onLinePaste(i, e)}
                   onFocus={e => { if (focusIdx !== i) setFocusIdx(i); const el = e.target; requestAnimationFrame(() => keepInView(el)); }} />
               </div>
             ))}
           </div>
         </div>
         {flash && <p className="flash" role="status">✓ {flash}</p>}
-        <p className="e-help">{MOD} + Enter = speichern & nächste Karte · Enter = neue Zeile · Tab / ⇧Tab = ein- und ausrücken · Leere Zeile + ⌫ = löschen · → trennt Schritte eines Ablaufs (z. B. Problem → Methode → Lösung); zwei Ablauf-Zeilen untereinander werden zu zwei Reihen</p>
+        <p className="e-help">{MOD} + Enter = speichern & nächste Karte · Enter = neue Zeile · Tab / ⇧Tab = ein- und ausrücken · Leere Zeile + ⌫ = löschen · Mehrere Zeilen einfügen: Einrückung wird übernommen · → trennt Schritte eines Ablaufs (z. B. Problem → Methode → Lösung); zwei Ablauf-Zeilen untereinander werden zu zwei Reihen</p>
         {cards.some(c => c.id === draft.id) && <button className="e-delete" onClick={deleteCard}>Karte löschen</button>}
         <div className="spacer" />
         <div className="e-footer">

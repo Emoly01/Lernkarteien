@@ -176,6 +176,34 @@ export function parseBackup(text) {
 }
 
 // Turns card lines into render rows; `reveal` hides everything after the n-th Hauptpunkt.
+// Turns pasted multi-line text into outline lines. Indentation decides the level (each deeper
+// indent = one level); without indentation, the app's own markers (• × — ◦ ·) do. Bullet
+// symbols are stripped, empty lines skipped, "->" becomes "→". Levels are relative (0 = top).
+const BULLET = /^([•\-*×—–◦·▪●○])\s+/;
+const MARKER_LEVEL = { "•": 0, "●": 0, "×": 1, "—": 2, "–": 2, "◦": 3, "○": 3, "·": 4, "▪": 4 };
+export function parsePasted(text) {
+  const rows = text.replace(/\r\n?/g, "\n").split("\n")
+    .map(raw => {
+      const indent = raw.match(/^[ \t]*/)[0].replace(/\t/g, "    ").length;
+      let body = raw.trim(), marker = null;
+      const m = body.match(BULLET);
+      if (m) { marker = m[1]; body = body.slice(m[0].length).trim(); }
+      return { indent, marker, text: body.replace(/->/g, "→") };
+    })
+    .filter(r => r.text);
+  if (!rows.length) return [];
+  const indents = [...new Set(rows.map(r => r.indent))].sort((a, b) => a - b);
+  const useMarkers = indents.length === 1 && rows.some(r => r.marker && r.marker in MARKER_LEVEL && MARKER_LEVEL[r.marker] > 0);
+  const out = [];
+  for (const r of rows) {
+    let level = useMarkers ? (MARKER_LEVEL[r.marker] ?? 0) : indents.indexOf(r.indent);
+    const prev = out.length ? out[out.length - 1].level : 0;
+    level = Math.max(0, Math.min(level, MAX_LEVEL, out.length ? prev + 1 : 0));
+    out.push({ level, text: r.text });
+  }
+  return out;
+}
+
 // A line with arrows is a process: "Problem → Methode → Lösung" becomes boxes with arrows.
 // Optional caption before a colon: "Ablauf: A → B → C". "->" and "=>" count as arrows too.
 const ARROW = /\s*(?:→|->|=>)\s*/;
