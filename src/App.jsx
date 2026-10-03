@@ -11,6 +11,14 @@ const TITLE_TURQUOISE = false;     // true = every title bar turquoise, false = 
 
 const MOD = /Mac|iPhone|iPad/.test(navigator.platform) ? "⌘" : "Strg";
 
+// The card being edited is kept in localStorage while typing, so nothing is lost if the app
+// is closed, the phone kills it in the background, or the battery dies.
+const DRAFT_KEY = "lernkarten-draft";
+const readDraft = () => { try { return JSON.parse(localStorage.getItem(DRAFT_KEY)); } catch (e) { return null; } };
+const writeDraft = v => { try { v ? localStorage.setItem(DRAFT_KEY, JSON.stringify(v)) : localStorage.removeItem(DRAFT_KEY); } catch (e) {} };
+// What counts as a change: title, deck and non-empty lines (not empty lines or ids).
+const draftKey = d => JSON.stringify([d.title.trim(), d.subject, d.lines.filter(l => l.text.trim()).map(l => [l.level, l.text])]);
+
 // Scrolls the editor so the line being typed in stays visible: below the sticky header and above
 // the sticky toolbar and, on phones, the on-screen keyboard (visualViewport excludes it).
 function keepInView(el) {
@@ -109,6 +117,8 @@ export default function App() {
   const [addingSubject, setAddingSubject] = useState(false);
   const [newSubject, setNewSubject] = useState("");
   const [focusIdx, setFocusIdx] = useState(0);
+  const draftOrig = useRef(null);                       // draftKey of the card when the editor opened
+  const [savedDraft, setSavedDraft] = useState(readDraft); // unsaved card from a previous visit
   const [query, setQuery] = useState("");
   const [deckMenu, setDeckMenu] = useState(false);
   const [renameVal, setRenameVal] = useState("");
@@ -232,10 +242,33 @@ export default function App() {
   const openEditor = (card, back) => {
     const d = JSON.parse(JSON.stringify(card));
     if (!d.lines.length) d.lines = [L(0, "")];
+    draftOrig.current = draftKey(d);
     if (!d.title) focusTitle.current = true; // new card: start typing the title right away
     setDraft(d); setReturnTo(back); setFocusIdx(0); setView("edit");
   };
   const newCard = () => openEditor({ id: mid(), subject: deck || subjects[0], title: "", status: "neu", lines: [] }, "deck");
+  const draftDirty = !!draft && draftKey(draft) !== draftOrig.current;
+  useEffect(() => {
+    if (view === "edit" && draft) {
+      if (draftDirty) writeDraft({ draft, orig: draftOrig.current, returnTo, at: Date.now() });
+      else writeDraft(null);
+    }
+  }, [draft, view, draftDirty, returnTo]);
+  // Closing the tab or browser with unsaved changes: let the browser ask first.
+  useEffect(() => {
+    if (!draftDirty) return;
+    const warn = e => { e.preventDefault(); e.returnValue = ""; };
+    window.addEventListener("beforeunload", warn);
+    return () => window.removeEventListener("beforeunload", warn);
+  }, [draftDirty]);
+  const closeEditor = (to) => { writeDraft(null); setSavedDraft(null); setDraft(null); setView(to); };
+  const resumeDraft = () => {
+    const s = savedDraft;
+    draftOrig.current = s.orig;
+    setDraft(s.draft); setReturnTo(s.returnTo || "deck"); setDeck(s.draft.subject); setFocusIdx(0);
+    setSavedDraft(null); setView("edit");
+  };
+  const dropSavedDraft = () => { writeDraft(null); setSavedDraft(null); };
   const setLines = (fn, focus) => {
     const lines = fn(draft.lines.slice());
     if (focus != null) { pendingFocus.current = focus; setFocusIdx(focus); }
@@ -274,7 +307,20 @@ export default function App() {
     const { clean, next } = storeDraft();
     setDeck(clean.subject);
     setCardIdx(Math.max(0, next.filter(c => c.subject === clean.subject).findIndex(c => c.id === clean.id)));
-    setDraft(null); setView("card");
+    closeEditor("card");
+  };
+  // Leaving the editor by going back (header button, browser/phone back) keeps the work:
+  // a card with a title is saved; only an untitled card with text asks before it's dropped.
+  // Returns false if the user chose to stay.
+  const leaveEditor = () => {
+    if (!draft || !draftDirty) { closeEditor(returnTo); return true; }
+    if (draft.title.trim()) { saveDraft(); return true; }
+    if (!window.confirm("Diese Karte hat noch keinen Titel und kann nicht gespeichert werden. Verwerfen?")) return false;
+    closeEditor(returnTo); return true;
+  };
+  const cancelEdit = () => {
+    if (draftDirty && !window.confirm("Deine Änderungen an dieser Karte verwerfen?")) return;
+    closeEditor(returnTo);
   };
   // Save the current card (if it has anything worth keeping) and start a blank one in the same deck.
   const saveAndNew = () => {
@@ -291,7 +337,10 @@ export default function App() {
     } else if (!cards.some(c => c.id === draft.id)) {
       focusTitle.current = true; setFocusIdx(0); return; // already a blank new card
     }
-    setDraft({ id: mid(), subject, title: "", status: "neu", lines: [L(0, "")] });
+    const blank = { id: mid(), subject, title: "", status: "neu", lines: [L(0, "")] };
+    draftOrig.current = draftKey(blank);
+    writeDraft(null);
+    setDraft(blank);
     setReturnTo("deck"); setFocusIdx(0);
     focusTitle.current = true;
     window.scrollTo(0, 0);
@@ -322,7 +371,7 @@ export default function App() {
   const deleteCard = () => {
     if (!window.confirm("Diese Karte löschen?")) return;
     update(d => ({ ...d, cards: d.cards.filter(c => c.id !== draft.id) }));
-    setDraft(null); setCardIdx(0); setView("deck");
+    setCardIdx(0); closeEditor("deck");
   };
 
   // ── Subjects ──
@@ -351,10 +400,34 @@ export default function App() {
 
   const goBack = () => {
     if (view === "deck") return setView("home");
-    if (view === "edit") { setDraft(null); return setView(returnTo); }
+    if (view === "edit") return leaveEditor();
     if ((view === "study" || view === "done") && !studyScope) return setView("home");
     setView("deck");
   };
+
+  handlers.current.back = goBack;
+
+  // Browser and phone "back" should move back inside the app (editor → card → deck → overview)
+  // instead of leaving it. While not on the overview, one extra history entry is kept; pressing
+  // back consumes it, we navigate back in-app and add it again if we're still not home.
+  const ignorePop = useRef(false);
+  useEffect(() => {
+    const hasEntry = history.state?.lernkarten;
+    if (view !== "home" && !hasEntry) history.pushState({ lernkarten: true }, "");
+    if (view === "home" && hasEntry) { ignorePop.current = true; history.back(); }
+  }, [view]);
+  useEffect(() => {
+    const onPop = () => {
+      if (ignorePop.current) { ignorePop.current = false; return; }
+      const h = handlers.current;
+      if (h.view === "home") return;
+      const left = h.back();
+      // Stayed (e.g. "keep this untitled card?" → Cancel): restore the entry for the next back press.
+      if (left === false) history.pushState({ lernkarten: true }, "");
+    };
+    window.addEventListener("popstate", onPop);
+    return () => window.removeEventListener("popstate", onPop);
+  }, []);
 
   // ── Backup ──
   const doExport = () => { exportBackup(data); update(d => ({ ...d, lastBackup: today() })); };
@@ -432,6 +505,18 @@ export default function App() {
           <h1>Welches Fach lernst du heute?</h1>
           <p className="muted">{total ? `${plural(total, "Karte", "Karten")} · ${unsure} noch unsicher` : "Leg eine Mappe an und schreib deine erste Karte."}</p>
         </div>
+        {savedDraft?.draft && (
+          <div className="draft-banner" role="status">
+            <div className="draft-text">
+              <b>Ungespeicherte Karte</b>
+              <span>{savedDraft.draft.title.trim() || "Ohne Titel"}{savedDraft.draft.subject ? ` · ${savedDraft.draft.subject}` : ""}</span>
+            </div>
+            <div className="draft-actions">
+              <button className="btn-primary draft-btn" onClick={resumeDraft}>Weiterschreiben</button>
+              <button className="link-btn danger" onClick={() => { if (window.confirm("Diesen Entwurf endgültig verwerfen?")) dropSavedDraft(); }}>Verwerfen</button>
+            </div>
+          </div>
+        )}
         {total > 0 && (
           <div className="today">
             <div className="today-row">
@@ -849,7 +934,7 @@ export default function App() {
             <button className="tool" onMouseDown={e => { e.preventDefault(); addLineAfter(); }} onClick={e => { if (e.detail === 0) addLineAfter(); }}>+ Zeile</button>
           </div>
           <div className="bottom-row">
-            <button className="btn-secondary h52 cancel" onClick={() => { setDraft(null); setView(returnTo); }}>Abbrechen</button>
+            <button className="btn-secondary h52 cancel" onClick={cancelEdit}>Abbrechen</button>
             <button className="btn-primary h52 spacer" disabled={!draft.title.trim() || !draft.subject} onClick={saveDraft}>Karte speichern</button>
           </div>
         </div>

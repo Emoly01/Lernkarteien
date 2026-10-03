@@ -338,3 +338,11 @@ input::placeholder { color: var(--faint); }
 @container (min-width: 300px) { .flow-c2 > * { grid-row: var(--hr); grid-column: var(--hc); } .flow-c2 .flow-arrow { height: auto; } .flow-c2 .flow-arrow svg { transform: none; } }
 @container (min-width: 470px) { .flow-c3 > * { grid-row: var(--hr); grid-column: var(--hc); } .flow-c3 .flow-arrow { height: auto; } .flow-c3 .flow-arrow svg { transform: none; } }
 @container (min-width: 620px) { .flow-c4 > * { grid-row: var(--hr); grid-column: var(--hc); } .flow-c4 .flow-arrow { height: auto; } .flow-c4 .flow-arrow svg { transform: none; } }
+
+/* ── Unsaved draft from a previous visit ── */
+.draft-banner { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; padding: 14px 16px; border-radius: 14px; border: 1.5px solid var(--amber-line); background: var(--amber-soft); }
+.draft-text { flex: 1; min-width: 160px; display: flex; flex-direction: column; gap: 2px; }
+.draft-text b { font-size: 14px; color: var(--amber-ink); }
+.draft-text span { font-family: Kalam, cursive; font-weight: 700; font-size: 18px; color: var(--ink); overflow-wrap: anywhere; }
+.draft-actions { display: flex; align-items: center; gap: 10px; }
+.draft-btn { height: 44px; padding: 0 16px; border-radius: 999px; font-size: 15px; }
