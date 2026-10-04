@@ -216,6 +216,80 @@ export function parseFlow(text) {
   return { caption, steps };
 }
 
+// Flow lines that share a step ("A → C" and "B → C") are one flowchart: a step name used more
+// than once (ignoring case and spacing) is one box, linked to everything it's linked to.
+const stepKey = s => fold(s).replace(/\s+/g, " ");
+export function flowConnects(stepRows) {
+  const all = stepRows.flat().map(stepKey);
+  return new Set(all).size < all.length;
+}
+
+// Lays a flowchart out top to bottom in rows ("layers"). Returns
+//   nodes: step texts; items: boxes plus invisible waypoints ({ node } or {}), one per row an
+//   arrow skips; rows: item indices per row, left to right; links: one per arrow, the items it
+//   passes through from top to bottom, and `back` when it really points up (closes a loop).
+export function flowGraph(stepRows) {
+  const nodes = [], index = new Map(), edges = [], have = new Set();
+  const id = text => {
+    const k = stepKey(text);
+    if (!index.has(k)) { index.set(k, nodes.length); nodes.push(text); }
+    return index.get(k);
+  };
+  for (const steps of stepRows) {
+    const ids = steps.map(id);
+    for (let i = 1; i < ids.length; i++) {
+      const a = ids[i - 1], b = ids[i];
+      if (a !== b && !have.has(a + ">" + b)) { have.add(a + ">" + b); edges.push({ from: a, to: b }); }
+    }
+  }
+  // Loops: an arrow back to a step we're still following gets laid out reversed and drawn pointing up.
+  const out = nodes.map(() => []), hasIn = nodes.map(() => false);
+  edges.forEach((e, i) => { out[e.from].push(i); hasIn[e.to] = true; });
+  const state = nodes.map(() => 0), finished = []; // 0 unseen, 1 being followed, 2 done
+  const visit = v => {
+    state[v] = 1;
+    for (const i of out[v]) { const w = edges[i].to; if (state[w] === 1) edges[i].back = true; else if (!state[w]) visit(w); }
+    state[v] = 2; finished.push(v);
+  };
+  nodes.forEach((_, v) => { if (!hasIn[v] && !state[v]) visit(v); });
+  nodes.forEach((_, v) => { if (!state[v]) visit(v); });
+  const topo = finished.reverse();
+  const dag = edges.map(e => (e.back ? [e.to, e.from] : [e.from, e.to]));
+  const preds = nodes.map(() => []), succs = nodes.map(() => []);
+  dag.forEach(([a, b]) => { succs[a].push(b); preds[b].push(a); });
+  // Each step goes one row below the lowest step leading to it; a starting step sits right above
+  // the first step it leads to instead of at the very top.
+  const layer = nodes.map(() => 0);
+  for (const v of topo) for (const w of succs[v]) layer[w] = Math.max(layer[w], layer[v] + 1);
+  for (const v of topo) if (!preds[v].length && succs[v].length) layer[v] = Math.min(...succs[v].map(w => layer[w])) - 1;
+  // Arrows that skip rows get a waypoint in every row they cross, so they can go around boxes.
+  const items = nodes.map((_, v) => ({ node: v, layer: layer[v] }));
+  const links = dag.map(([a, b], i) => {
+    const chain = [a];
+    for (let l = layer[a] + 1; l < layer[b]; l++) { chain.push(items.length); items.push({ layer: l }); }
+    chain.push(b);
+    return { chain, back: !!edges[i].back };
+  });
+  const rows = Array.from({ length: Math.max(0, ...layer) + 1 }, () => []);
+  items.forEach((it, i) => rows[it.layer].push(i));
+  // Fewer crossings: sort each row by the average position of what it's connected to, a few times down and up.
+  const up = items.map(() => []), down = items.map(() => []);
+  for (const { chain } of links) for (let k = 1; k < chain.length; k++) { down[chain[k - 1]].push(chain[k]); up[chain[k]].push(chain[k - 1]); }
+  const pos = [];
+  const place = r => r.forEach((it, i) => { pos[it] = (i + 0.5) / r.length; });
+  rows.forEach(place);
+  const sortRow = (r, nb) => {
+    const key = new Map(r.map(it => [it, nb[it].length ? nb[it].reduce((s, n) => s + pos[n], 0) / nb[it].length : pos[it]]));
+    r.sort((a, b) => key.get(a) - key.get(b));
+    place(r);
+  };
+  for (let n = 0; n < 4; n++) {
+    for (let l = 1; l < rows.length; l++) sortRow(rows[l], up);
+    for (let l = rows.length - 2; l >= 0; l--) sortRow(rows[l], down);
+  }
+  return { nodes, items: items.map(it => (it.node == null ? {} : { node: it.node })), rows, links };
+}
+
 export function mapLines(lines, reveal) {
   let g = -1;
   return lines.filter(l => l.text.trim()).map(l => {

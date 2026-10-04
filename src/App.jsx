@@ -1,5 +1,5 @@
-import { useState, useEffect, useRef, useCallback } from "react";
-import { ACC, STATUS, LEVELS, MARKS, MAX_LEVEL, parseFlow, parsePasted, mid, L, plural, load, persist, mapLines, schedule, isDue, today, daysBetween, formatDate, exportBackup, parseBackup, nextAccent, renameSubject, deleteSubject, searchCards } from "./data.js";
+import { useState, useEffect, useLayoutEffect, useMemo, useRef, useCallback } from "react";
+import { ACC, STATUS, LEVELS, MARKS, MAX_LEVEL, parseFlow, flowConnects, flowGraph, parsePasted, mid, L, plural, load, persist, mapLines, schedule, isDue, today, daysBetween, formatDate, exportBackup, parseBackup, nextAccent, renameSubject, deleteSubject, searchCards } from "./data.js";
 import { stamp } from "./sync.js";
 import { useCloudSync } from "./useCloudSync.js";
 import "./styles.css";
@@ -63,15 +63,101 @@ function Flow({ rows, pad }) {
   );
 }
 
+// Flowchart: process lines that share a step ("A → C", "B → C", "C → D") become one diagram,
+// top to bottom. Boxes are laid out by CSS (so text wraps like everywhere else); the arrows are
+// drawn on top once the boxes have been measured, and again whenever the card changes size.
+function FlowGraph({ rows, pad }) {
+  const steps = rows.map(ln => ln.flow.steps);
+  const shape = JSON.stringify(steps);
+  const g = useMemo(() => flowGraph(steps), [shape]);
+  const wrap = useRef(null), els = useRef([]);
+  const [arrows, setArrows] = useState({ w: 0, h: 0, list: [] });
+
+  useLayoutEffect(() => {
+    const box = wrap.current;
+    if (!box) return;
+    const measure = () => {
+      // offset* (not getBoundingClientRect): unaffected by the card's flip and swipe transforms.
+      const R = g.items.map((_, i) => { const el = els.current[i]; return el && { x: el.offsetLeft, y: el.offsetTop, w: el.offsetWidth, h: el.offsetHeight }; });
+      if (R.some(r => !r)) return;
+      const cx = i => R[i].x + R[i].w / 2;
+      // Several arrows leaving or entering one box spread out along its edge, ordered left to right.
+      const spread = (end, next) => {
+        const at = [], by = new Map();
+        g.links.forEach((l, li) => { const k = end(l.chain); if (!by.has(k)) by.set(k, []); by.get(k).push({ li, nb: next(l.chain) }); });
+        by.forEach((list, item) => {
+          list.sort((a, b) => cx(a.nb) - cx(b.nb));
+          const s = Math.min(16, (R[item].w * 0.6) / list.length);
+          list.forEach((e, j) => { at[e.li] = cx(item) + (j - (list.length - 1) / 2) * s; });
+        });
+        return at;
+      };
+      const sx = spread(c => c[0], c => c[1]), tx = spread(c => c[c.length - 1], c => c[c.length - 2]);
+      const list = g.links.map(({ chain, back }, li) => {
+        let x0 = sx[li], y0 = R[chain[0]].y + R[chain[0]].h + 1;
+        let d = `M${x0} ${y0}`;
+        for (let k = 1; k < chain.length; k++) {
+          const last = k === chain.length - 1, r = R[chain[k]];
+          const x1 = last ? tx[li] : cx(chain[k]), y1 = r.y - (last ? 1 : 0), m = (y1 - y0) / 2;
+          d += ` C${x0} ${y0 + m} ${x1} ${y1 - m} ${x1} ${y1}`;
+          if (!last) { y0 = r.y + r.h; d += ` L${x1} ${y0}`; x0 = x1; }
+        }
+        // The head sits on the box the arrow really points to: the lower one, or the upper one for a loop.
+        const hx = back ? sx[li] : tx[li], hy = back ? R[chain[0]].y + R[chain[0]].h + 1 : R[chain[chain.length - 1]].y - 1, dir = back ? 1 : -1;
+        return { d, head: `M${hx - 4.5} ${hy + 7 * dir}L${hx} ${hy}L${hx + 4.5} ${hy + 7 * dir}Z` };
+      });
+      const next = { w: box.offsetWidth, h: box.offsetHeight, list };
+      setArrows(prev => (JSON.stringify(prev) === JSON.stringify(next) ? prev : next));
+    };
+    measure();
+    if (typeof ResizeObserver === "undefined") return;
+    const ro = new ResizeObserver(measure);
+    ro.observe(box);
+    els.current.forEach(el => el && ro.observe(el));
+    return () => ro.disconnect();
+  }, [g]);
+
+  const label = steps.map(s => s.join(", dann ")).join(". ");
+  return (
+    <div className="flow-wrap" style={{ paddingLeft: pad }}>
+      {rows[0].flow.caption && <div className="flow-caption">{rows[0].flow.caption}</div>}
+      <div className="fg" ref={wrap} role="img" aria-label={label}>
+        {g.rows.map((row, r) => (
+          <div key={r} className="fg-row">
+            {row.map(it => g.items[it].node == null
+              ? <span key={it} className="fg-via" ref={el => { els.current[it] = el; }} />
+              : <div key={it} className="flow-box fg-box" ref={el => { els.current[it] = el; }}>{g.nodes[g.items[it].node]}</div>)}
+          </div>
+        ))}
+        <svg className="fg-arrows" width={arrows.w} height={arrows.h} aria-hidden="true">
+          {arrows.list.map((a, i) => <g key={i}><path d={a.d} className="fg-line" /><path d={a.head} className="fg-head" /></g>)}
+        </svg>
+      </div>
+    </div>
+  );
+}
+
 function Lines({ lines }) {
   const out = [];
   for (let i = 0; i < lines.length; i++) {
     const ln = lines[i];
     if (ln.flow && !ln.hidden) {
-      const rows = [ln];
-      while (i + 1 < lines.length && !lines[i + 1].hidden && lines[i + 1].flow && lines[i + 1].level === ln.level
-        && lines[i + 1].flow.steps.length === ln.flow.steps.length && !lines[i + 1].flow.caption) rows.push(lines[++i]);
-      out.push(<Flow key={ln.key} rows={rows} pad={ln.level * 26} />);
+      // Process lines directly below each other on the same level; a caption starts a new diagram.
+      const run = [ln];
+      for (let j = i + 1; j < lines.length; j++) {
+        const nx = lines[j];
+        if (nx.hidden || !nx.flow || nx.level !== ln.level || nx.flow.caption) break;
+        run.push(nx);
+      }
+      if (flowConnects(run.map(r => r.flow.steps))) {
+        out.push(<FlowGraph key={ln.key} rows={run} pad={ln.level * 26} />);
+        i += run.length - 1;
+        continue;
+      }
+      let n = 1;
+      while (n < run.length && run[n].flow.steps.length === ln.flow.steps.length) n++;
+      out.push(<Flow key={ln.key} rows={run.slice(0, n)} pad={ln.level * 26} />);
+      i += n - 1;
       continue;
     }
     out.push(renderLine(ln));
@@ -922,7 +1008,7 @@ export default function App() {
           </div>
         </div>
         {flash && <p className="flash" role="status">✓ {flash}</p>}
-        <p className="e-help">{MOD} + Enter = speichern & nächste Karte · Enter = neue Zeile · Tab / ⇧Tab = ein- und ausrücken · Leere Zeile + ⌫ = löschen · Mehrere Zeilen einfügen: Einrückung wird übernommen · → trennt Schritte eines Ablaufs (z. B. Problem → Methode → Lösung); zwei Ablauf-Zeilen untereinander werden zu zwei Reihen</p>
+        <p className="e-help">{MOD} + Enter = speichern & nächste Karte · Enter = neue Zeile · Tab / ⇧Tab = ein- und ausrücken · Leere Zeile + ⌫ = löschen · Mehrere Zeilen einfügen: Einrückung wird übernommen · → trennt Schritte eines Ablaufs (z. B. Problem → Methode → Lösung); zwei Ablauf-Zeilen untereinander werden zu zwei Reihen · Flussdiagramm: kommt ein Schritt in mehreren Ablauf-Zeilen untereinander vor, werden sie verbunden (z. B. A → C, B → C, C → D)</p>
         {cards.some(c => c.id === draft.id) && <button className="e-delete" onClick={deleteCard}>Karte löschen</button>}
         <div className="spacer" />
         <div className="e-footer">
