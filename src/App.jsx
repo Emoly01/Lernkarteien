@@ -53,7 +53,7 @@ function Flow({ rows, pad }) {
       </span>);
   }));
   return (
-    <div className="flow-wrap" style={{ paddingLeft: pad }}>
+    <div className="flow-wrap" style={{ "--pad": pad + "px" }}>
       {caption && <div className="flow-caption">{caption}</div>}
       <div className={`flow flow-c${Math.min(C, 5)}`} style={{ "--rows": R, "--gaps": C - 1 }}
         role="img" aria-label={rows.map(ln => ln.flow.steps.join(", dann ")).join(". Darunter: ")}>
@@ -119,7 +119,7 @@ function FlowGraph({ rows, pad }) {
 
   const label = steps.map(s => s.join(", dann ")).join(". ");
   return (
-    <div className="flow-wrap" style={{ paddingLeft: pad }}>
+    <div className="flow-wrap" style={{ "--pad": pad + "px" }}>
       {rows[0].flow.caption && <div className="flow-caption">{rows[0].flow.caption}</div>}
       <div className="fg" ref={wrap} role="img" aria-label={label}>
         {g.rows.map((row, r) => (
@@ -546,9 +546,11 @@ export default function App() {
   // ── Header ──
   const cIdx = Math.min(cardIdx, dCards.length - 1);
   const counterText = view === "study" ? `${qPos + 1} / ${queue.length}` : view === "card" ? `${cIdx + 1} / ${dCards.length}` : "";
+  // Cards get more room on big screens; overview and deck lists stay narrow and easy to scan.
+  const wide = ["card", "study", "edit"].includes(view) ? " wide" : "";
   const header = (
     <div className="hdr">
-      <div className="hdr-inner">
+      <div className={"hdr-inner" + wide}>
         {view !== "home" && (
           <button className="back-btn" onClick={goBack} aria-label="Zurück">
             <span className="back-arrow">‹</span>
@@ -1031,7 +1033,7 @@ export default function App() {
   return (
     <div className="app">
       {header}
-      <div className="main">{screen}</div>
+      <div className={"main" + wide}>{screen}</div>
     </div>
   );
 }
