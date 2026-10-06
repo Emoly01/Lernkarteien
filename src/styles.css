@@ -343,9 +343,12 @@ input::placeholder { color: var(--faint); }
 @container (min-width: 620px) { .flow-c4 > * { grid-row: var(--hr); grid-column: var(--hc); } .flow-c4 .flow-arrow { height: auto; } .flow-c4 .flow-arrow svg { transform: none; } }
 
 /* Flowcharts (process lines sharing a step): rows of boxes, top to bottom, arrows drawn over them. */
-.fg { position: relative; display: flex; flex-direction: column; gap: 30px; padding: 2px 0; }
-.fg-row { display: flex; justify-content: center; align-items: center; gap: 12px; }
-.fg-box { flex: 0 1 auto; min-width: 0; max-width: 280px; overflow-wrap: anywhere; }
+/* Boxes never get narrower than their longest word (hyphenated where the browser can); if a row
+   still doesn't fit, the diagram scrolls sideways instead of chopping words apart. */
+.fg { position: relative; display: flex; flex-direction: column; gap: 30px; padding: 2px 0; overflow-x: auto; }
+.fg-row { display: flex; justify-content: center; justify-content: safe center; align-items: center; gap: 12px; }
+.fg-box { flex: 0 1 auto; min-width: min-content; max-width: 280px; }
+@container (max-width: 420px) { .fg-row { gap: 8px; } .fg-box { font-size: 14px; padding: 8px 6px; } }
 .fg-via { flex: 0 0 8px; align-self: stretch; }
 .fg-arrows { position: absolute; left: 0; top: 0; overflow: visible; pointer-events: none; }
 .fg-line { fill: none; stroke: var(--muted); stroke-width: 1.6; }
