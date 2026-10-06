@@ -243,15 +243,16 @@ export function flowGraph(stepRows) {
     }
   }
   // Loops: an arrow back to a step we're still following gets laid out reversed and drawn pointing up.
-  const out = nodes.map(() => []), hasIn = nodes.map(() => false);
-  edges.forEach((e, i) => { out[e.from].push(i); hasIn[e.to] = true; });
+  const out = nodes.map(() => []);
+  edges.forEach((e, i) => out[e.from].push(i));
   const state = nodes.map(() => 0), finished = []; // 0 unseen, 1 being followed, 2 done
   const visit = v => {
     state[v] = 1;
     for (const i of out[v]) { const w = edges[i].to; if (state[w] === 1) edges[i].back = true; else if (!state[w]) visit(w); }
     state[v] = 2; finished.push(v);
   };
-  nodes.forEach((_, v) => { if (!hasIn[v] && !state[v]) visit(v); });
+  // Follow the steps in the order they were written, so the arrow that closes a loop is the one
+  // written last ("Ergebnis → Ursache"), not whichever the walk happens to reach last.
   nodes.forEach((_, v) => { if (!state[v]) visit(v); });
   const topo = finished.reverse();
   const dag = edges.map(e => (e.back ? [e.to, e.from] : [e.from, e.to]));
