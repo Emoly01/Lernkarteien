@@ -1,5 +1,5 @@
 import { useState, useEffect, useLayoutEffect, useMemo, useRef, useCallback } from "react";
-import { ACC, STATUS, LEVELS, MARKS, MAX_LEVEL, parseFlow, flowConnects, flowGraph, parsePasted, mid, L, plural, load, persist, mapLines, schedule, isDue, today, daysBetween, formatDate, exportBackup, parseBackup, nextAccent, renameSubject, deleteSubject, searchCards } from "./data.js";
+import { ACC, STATUS, LEVELS, MARKS, MAX_LEVEL, parseFlow, flowConnects, flowCycle, flowGraph, parsePasted, mid, L, plural, load, persist, mapLines, schedule, isDue, today, daysBetween, formatDate, exportBackup, parseBackup, nextAccent, renameSubject, deleteSubject, searchCards } from "./data.js";
 import { stamp } from "./sync.js";
 import { useCloudSync } from "./useCloudSync.js";
 import "./styles.css";
@@ -137,6 +137,101 @@ function FlowGraph({ rows, pad }) {
   );
 }
 
+// Cycle ("A → B → C → A"): the steps sit on an oval, first one at the top, going clockwise, with
+// each arrow following the oval to the next step. The oval grows taller until no boxes overlap and
+// every arrow has room to show, so long cycles on a phone become tall instead of cramped.
+function FlowCycle({ steps, caption, pad }) {
+  const wrap = useRef(null), els = useRef([]);
+  const [lay, setLay] = useState(null);
+  const N = steps.length;
+
+  useLayoutEffect(() => {
+    const box = wrap.current;
+    if (!box) return;
+    const measure = () => {
+      const S = steps.map((_, i) => els.current[i] && { w: els.current[i].offsetWidth, h: els.current[i].offsetHeight });
+      if (S.some(s => !s)) return;
+      const W = box.offsetWidth, maxW = Math.max(...S.map(s => s.w)), maxH = Math.max(...S.map(s => s.h));
+      // Wide cards don't stretch the ring: it only gets as wide as its steps need.
+      const rx = Math.max(maxW * 0.55, Math.min((W - maxW) / 2 - 2, N === 2 ? maxW * 0.8 : 70 + maxW * (0.35 + 0.1 * N)));
+      // Steps sit at equal distances along the oval (not equal angles), so a tall oval doesn't
+      // bunch them up at the top and bottom.
+      const angles = ry => {
+        const M = 720, ts = [], cum = [0];
+        for (let k = 0; k <= M; k++) ts.push(-Math.PI / 2 + (2 * Math.PI * k) / M);
+        for (let k = 1; k <= M; k++) cum.push(cum[k - 1] + Math.hypot(rx * (Math.cos(ts[k]) - Math.cos(ts[k - 1])), ry * (Math.sin(ts[k]) - Math.sin(ts[k - 1]))));
+        const out = [];
+        for (let i = 0, k = 0; i <= N; i++) { const want = (cum[M] * i) / N; while (k < M && cum[k] < want) k++; out.push(ts[k]); }
+        return out;
+      };
+      const rects = (ry, A) => S.map((s, i) => { const x = rx * Math.cos(A[i]), y = ry * Math.sin(A[i]); return { x: x - s.w / 2, y: y - s.h / 2, w: s.w, h: s.h }; });
+      const inside = (r, x, y, m) => x > r.x - m && x < r.x + r.w + m && y > r.y - m && y < r.y + r.h + m;
+      // The part of the oval between box i and the next one that isn't hidden under either box.
+      const arc = (R, ry, A, i) => {
+        const a = R[i], b = R[(i + 1) % N], pts = [];
+        for (let k = 0; k <= 80; k++) {
+          const t = A[i] + ((A[i + 1] - A[i]) * k) / 80, x = rx * Math.cos(t), y = ry * Math.sin(t);
+          if (inside(b, x, y, 5)) break;
+          if (!inside(a, x, y, 5)) pts.push([x, y]);
+        }
+        return pts;
+      };
+      const len = pts => pts.reduce((s, p, k) => (k ? s + Math.hypot(p[0] - pts[k - 1][0], p[1] - pts[k - 1][1]) : 0), 0);
+      const fits = ry => {
+        const A = angles(ry), R = rects(ry, A);
+        for (let i = 0; i < N; i++) for (let j = i + 1; j < N; j++) {
+          const a = R[i], b = R[j];
+          if (a.x < b.x + b.w + 12 && b.x < a.x + a.w + 12 && a.y < b.y + b.h + 12 && b.y < a.y + a.h + 12) return false;
+        }
+        return R.every((_, i) => len(arc(R, ry, A, i)) >= 26);
+      };
+      let ry = Math.max(rx * 0.6, maxH + 20);
+      for (let n = 0; n < 60 && !fits(ry); n++) ry *= 1.07;
+      const A = angles(ry), R = rects(ry, A), arcs = R.map((_, i) => arc(R, ry, A, i));
+      // Arrows can bulge past the boxes (e.g. under the bottom two of three), so they count for the height too.
+      const ys = R.flatMap(r => [r.y, r.y + r.h]).concat(arcs.flat().map(p => p[1]));
+      const top = Math.min(...ys) - 6, bottom = Math.max(...ys) + 6;
+      const ox = W / 2, oy = 2 - top;
+      const list = arcs.map(arcPts => {
+        const pts = arcPts.map(([x, y]) => [x + ox, y + oy]);
+        if (pts.length < 2) return null;
+        const [ex, ey] = pts[pts.length - 1], [px, py] = pts[pts.length - 2];
+        const l = Math.hypot(ex - px, ey - py) || 1, ux = (ex - px) / l, uy = (ey - py) / l;
+        const bx = ex - ux * 7, by = ey - uy * 7;
+        pts[pts.length - 1] = [bx + ux, by + uy]; // the line stops inside the head, not at its tip
+        return {
+          d: "M" + pts.map(p => p[0].toFixed(1) + " " + p[1].toFixed(1)).join("L"),
+          head: `M${(bx - uy * 4.5).toFixed(1)} ${(by + ux * 4.5).toFixed(1)}L${ex.toFixed(1)} ${ey.toFixed(1)}L${(bx + uy * 4.5).toFixed(1)} ${(by - ux * 4.5).toFixed(1)}Z`,
+        };
+      }).filter(Boolean);
+      const next = { h: Math.ceil(bottom - top + 4), pos: R.map(r => [Math.round(r.x + ox), Math.round(r.y + oy)]), list };
+      setLay(prev => (JSON.stringify(prev) === JSON.stringify(next) ? prev : next));
+    };
+    measure();
+    if (typeof ResizeObserver === "undefined") return;
+    const ro = new ResizeObserver(measure);
+    ro.observe(box);
+    els.current.forEach(el => el && ro.observe(el));
+    return () => ro.disconnect();
+  }, [JSON.stringify(steps)]);
+
+  return (
+    <div className="flow-wrap" style={{ "--pad": pad + "px" }}>
+      {caption && <div className="flow-caption">{caption}</div>}
+      <div className="fc" ref={wrap} style={{ height: lay ? lay.h : 120, "--maxw": N <= 4 ? "42%" : N <= 6 ? "36%" : "31%" }}
+        role="img" aria-label={`Kreislauf: ${steps.join(", dann ")}, dann wieder ${steps[0]}`}>
+        {steps.map((s, i) => (
+          <div key={i} className="flow-box fc-box" ref={el => { els.current[i] = el; }}
+            style={lay ? { transform: `translate(${lay.pos[i][0]}px, ${lay.pos[i][1]}px)` } : { visibility: "hidden" }}>{s}</div>
+        ))}
+        {lay && <svg className="fg-arrows" width="100%" height={lay.h} aria-hidden="true">
+          {lay.list.map((a, i) => <g key={i}><path d={a.d} className="fg-line" /><path d={a.head} className="fg-head" /></g>)}
+        </svg>}
+      </div>
+    </div>
+  );
+}
+
 function Lines({ lines }) {
   const out = [];
   for (let i = 0; i < lines.length; i++) {
@@ -150,7 +245,10 @@ function Lines({ lines }) {
         run.push(nx);
       }
       if (flowConnects(run.map(r => r.flow.steps))) {
-        out.push(<FlowGraph key={ln.key} rows={run} pad={ln.level * 26} />);
+        const ring = flowCycle(run.map(r => r.flow.steps));
+        out.push(ring
+          ? <FlowCycle key={ln.key} steps={ring} caption={ln.flow.caption} pad={ln.level * 26} />
+          : <FlowGraph key={ln.key} rows={run} pad={ln.level * 26} />);
         i += run.length - 1;
         continue;
       }
@@ -1010,7 +1108,7 @@ export default function App() {
           </div>
         </div>
         {flash && <p className="flash" role="status">✓ {flash}</p>}
-        <p className="e-help">{MOD} + Enter = speichern & nächste Karte · Enter = neue Zeile · Tab / ⇧Tab = ein- und ausrücken · Leere Zeile + ⌫ = löschen · Mehrere Zeilen einfügen: Einrückung wird übernommen · → trennt Schritte eines Ablaufs (z. B. Problem → Methode → Lösung); zwei Ablauf-Zeilen untereinander werden zu zwei Reihen · Flussdiagramm: kommt ein Schritt in mehreren Ablauf-Zeilen untereinander vor, werden sie verbunden (z. B. A → C, B → C, C → D)</p>
+        <p className="e-help">{MOD} + Enter = speichern & nächste Karte · Enter = neue Zeile · Tab / ⇧Tab = ein- und ausrücken · Leere Zeile + ⌫ = löschen · Mehrere Zeilen einfügen: Einrückung wird übernommen · → trennt Schritte eines Ablaufs (z. B. Problem → Methode → Lösung); zwei Ablauf-Zeilen untereinander werden zu zwei Reihen · Flussdiagramm: kommt ein Schritt in mehreren Ablauf-Zeilen untereinander vor, werden sie verbunden (z. B. A → C, B → C, C → D) · Kreislauf: endet ein Ablauf wieder beim ersten Schritt (A → B → C → A), wird er als Kreis gezeichnet</p>
         {cards.some(c => c.id === draft.id) && <button className="e-delete" onClick={deleteCard}>Karte löschen</button>}
         <div className="spacer" />
         <div className="e-footer">
