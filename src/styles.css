@@ -353,6 +353,10 @@ input::placeholder { color: var(--faint); }
 .fg-arrows { position: absolute; left: 0; top: 0; overflow: visible; pointer-events: none; }
 .fg-line { fill: none; stroke: var(--muted); stroke-width: 1.6; }
 .fg-head { fill: var(--muted); }
+/* Cycles: boxes placed on an oval by the script (see FlowCycle), arrows following it. */
+.fc { position: relative; }
+.fc-box { position: absolute; left: 0; top: 0; width: max-content; min-width: min-content; max-width: min(var(--maxw), 220px); }
+@container (max-width: 420px) { .fc-box { font-size: 14px; padding: 8px 6px; } }
 
 /* ── Unsaved draft from a previous visit ── */
 .draft-banner { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; padding: 14px 16px; border-radius: 14px; border: 1.5px solid var(--amber-line); background: var(--amber-soft); }

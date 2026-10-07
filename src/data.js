@@ -224,11 +224,7 @@ export function flowConnects(stepRows) {
   return new Set(all).size < all.length;
 }
 
-// Lays a flowchart out top to bottom in rows ("layers"). Returns
-//   nodes: step texts; items: boxes plus invisible waypoints ({ node } or {}), one per row an
-//   arrow skips; rows: item indices per row, left to right; links: one per arrow, the items it
-//   passes through from top to bottom, and `back` when it really points up (closes a loop).
-export function flowGraph(stepRows) {
+function flowEdges(stepRows) {
   const nodes = [], index = new Map(), edges = [], have = new Set();
   const id = text => {
     const k = stepKey(text);
@@ -242,6 +238,28 @@ export function flowGraph(stepRows) {
       if (a !== b && !have.has(a + ">" + b)) { have.add(a + ">" + b); edges.push({ from: a, to: b }); }
     }
   }
+  return { nodes, edges };
+}
+
+// A flowchart that is nothing but one closed loop ("A → B → C → A", or written over several lines)
+// is a cycle and gets drawn as a ring. Returns its steps in order, starting with the first one
+// written, or null when anything branches off or the loop doesn't close.
+export function flowCycle(stepRows) {
+  const { nodes, edges } = flowEdges(stepRows);
+  if (nodes.length < 2 || edges.length !== nodes.length) return null;
+  const next = nodes.map(() => -1);
+  for (const e of edges) { if (next[e.from] !== -1) return null; next[e.from] = e.to; }
+  const order = [0];
+  for (let v = next[0]; v !== 0; v = next[v]) { if (v === -1 || order.length >= nodes.length) return null; order.push(v); }
+  return order.length === nodes.length ? order.map(v => nodes[v]) : null;
+}
+
+// Lays a flowchart out top to bottom in rows ("layers"). Returns
+//   nodes: step texts; items: boxes plus invisible waypoints ({ node } or {}), one per row an
+//   arrow skips; rows: item indices per row, left to right; links: one per arrow, the items it
+//   passes through from top to bottom, and `back` when it really points up (closes a loop).
+export function flowGraph(stepRows) {
+  const { nodes, edges } = flowEdges(stepRows);
   // Loops: an arrow back to a step we're still following gets laid out reversed and drawn pointing up.
   const out = nodes.map(() => []);
   edges.forEach((e, i) => out[e.from].push(i));
