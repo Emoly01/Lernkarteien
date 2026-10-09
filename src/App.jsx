@@ -1049,7 +1049,7 @@ export default function App() {
 
   if (view === "edit" && draft) {
     const ls = draft.lines, fi = Math.min(focusIdx, ls.length - 1), fl = ls[fi];
-    const placeholders = ["Hauptpunkt", "Unterpunkt", "Begriff: Detail; Detail", "Unterdetail", "Stichpunkt"];
+    const placeholders = ["Hauptpunkt", "Unterpunkt", "Begriff: Detail; Detail", "Unterdetail", "Stichpunkt", "Unterstichpunkt"];
     const flChart = fl && parseChart(fl.text);
     const flKind = !fl ? "" : flChart ? (flChart.kind === "dist" ? "Verteilung" : "Diagramm") : parseTable(fl.text) ? "Tabelle" : parseFlow(fl.text) ? "Ablauf" : "";
     // Inserts " → " at the cursor of the current line; two or more steps turn the line into boxes.
