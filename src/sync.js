@@ -11,6 +11,8 @@
 // Title, lines, deck and progress merge separately: fix a card's title on the laptop while
 // editing its text or rating it on the phone, and every change survives.
 
+import { MAX_LEVEL } from "./data.js";
+
 const contentKey = c => JSON.stringify([c.subject, c.title, c.lines]);
 const srsKey = c => JSON.stringify([c.status, c.box, c.due]);
 const FIELDS = [["title", "tAt"], ["lines", "lAt"], ["subject", "sAt"]];
@@ -137,7 +139,7 @@ export function sanitizeState(s) {
     cards: s.cards.filter(c => c && typeof c.id === "string").map(c => ({
       id: str(c.id, 64), subject: str(c.subject, 200), title: str(c.title, 500),
       lines: (Array.isArray(c.lines) ? c.lines : []).slice(0, 500).map(l => ({
-        id: str(l?.id, 64), level: Math.max(0, Math.min(4, Math.floor(num(l?.level)))), text: str(l?.text, 4000),
+        id: str(l?.id, 64), level: Math.max(0, Math.min(MAX_LEVEL, Math.floor(num(l?.level)))), text: str(l?.text, 4000),
       })),
       status: ["neu", "unsicher", "sicher"].includes(c.status) ? c.status : "neu",
       box: Math.max(0, Math.min(10, Math.floor(num(c.box)))), due: date(c.due),

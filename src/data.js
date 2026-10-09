@@ -1,7 +1,7 @@
 export const ACC = ["#6ecece", "#90d490", "#f0c080", "#d090c8", "#90b8e0", "#e09090", "#a8c870", "#c8a870"];
 export const STATUS = { neu: ["neu", "#c8bfa8"], unsicher: ["unsicher", "#e0a94a"], sicher: ["sicher", "#5a7a4a"] };
-export const LEVELS = ["Hauptpunkt", "Unterpunkt", "Detail", "Unterdetail", "Stichpunkt"];
-export const MARKS = ["•", "×", "—", "◦", "·"];
+export const LEVELS = ["Hauptpunkt", "Unterpunkt", "Detail", "Unterdetail", "Stichpunkt", "Unterstichpunkt"];
+export const MARKS = ["•", "×", "—", "◦", "·", "‣"];
 export const MAX_LEVEL = LEVELS.length - 1;
 
 const KEY = "lernkarten-redesign-v1";
@@ -177,10 +177,10 @@ export function parseBackup(text) {
 
 // Turns card lines into render rows; `reveal` hides everything after the n-th Hauptpunkt.
 // Turns pasted multi-line text into outline lines. Indentation decides the level (each deeper
-// indent = one level); without indentation, the app's own markers (• × — ◦ ·) do. Bullet
+// indent = one level); without indentation, the app's own markers (• × — ◦ · ‣) do. Bullet
 // symbols are stripped, empty lines skipped, "->" becomes "→". Levels are relative (0 = top).
-const BULLET = /^([•\-*×—–◦·▪●○])\s+/;
-const MARKER_LEVEL = { "•": 0, "●": 0, "×": 1, "—": 2, "–": 2, "◦": 3, "○": 3, "·": 4, "▪": 4 };
+const BULLET = /^([•\-*×—–◦·▪●○‣])\s+/;
+const MARKER_LEVEL = { "•": 0, "●": 0, "×": 1, "—": 2, "–": 2, "◦": 3, "○": 3, "·": 4, "▪": 4, "‣": 5 };
 export function parsePasted(text) {
   const raw = text.replace(/\r\n?/g, "\n").split("\n");
   // Copied from Excel or SPSS: tabs separate cells, so each line becomes a table row. Leading tabs
@@ -397,6 +397,6 @@ export function mapLines(lines, reveal) {
     const chart = parseChart(l.text);
     const table = chart ? null : parseTable(l.text);
     if (l.level >= 2) { const i = l.text.indexOf(":"); if (i > 0) { label = l.text.slice(0, i + 1) + " "; rest = l.text.slice(i + 1).trim(); } }
-    return { key: l.id, level: l.level, text: l.text, label, rest, chart, table, flow: chart || table ? null : parseFlow(l.text), hidden: !shown, pad: l.level * 26 + 4, ghostW: [46, 58, 64, 60, 56][l.level] ?? 56 };
+    return { key: l.id, level: l.level, text: l.text, label, rest, chart, table, flow: chart || table ? null : parseFlow(l.text), hidden: !shown, pad: l.level * 26 + 4, ghostW: [46, 58, 64, 60, 56, 52][l.level] ?? 52 };
   });
 }
