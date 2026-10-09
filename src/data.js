@@ -182,7 +182,14 @@ export function parseBackup(text) {
 const BULLET = /^([•\-*×—–◦·▪●○])\s+/;
 const MARKER_LEVEL = { "•": 0, "●": 0, "×": 1, "—": 2, "–": 2, "◦": 3, "○": 3, "·": 4, "▪": 4 };
 export function parsePasted(text) {
-  const rows = text.replace(/\r\n?/g, "\n").split("\n")
+  const raw = text.replace(/\r\n?/g, "\n").split("\n");
+  // Copied from Excel or SPSS: tabs separate cells, so each line becomes a table row. Leading tabs
+  // are empty cells here, not indentation.
+  const filled = raw.filter(r => r.trim()), tabbed = filled.filter(r => /\S\t/.test(r)).length;
+  if (tabbed >= 2 && tabbed * 2 >= filled.length) {
+    return filled.map(r => ({ level: 0, text: r.replace(/\s+$/, "").split("\t").map(c => c.trim()).join(" | ").trim() }));
+  }
+  const rows = raw
     .map(raw => {
       const indent = raw.match(/^[ \t]*/)[0].replace(/\t/g, "    ").length;
       let body = raw.trim(), marker = null;
@@ -309,13 +316,24 @@ export function flowGraph(stepRows) {
   return { nodes, items: items.map(it => (it.node == null ? {} : { node: it.node })), rows, links };
 }
 
+// A line with "|" is a table row: "Häufigkeit | Prozent". The first row of a table is its header.
+// A cell starting with "?" is a gap that stays hidden while studying until it's tapped: "?16,0".
+export function parseTable(text) {
+  if (!text.includes("|")) return null;
+  return text.split("|").map(c => {
+    c = c.trim();
+    return c.length > 1 && c[0] === "?" ? { text: c.slice(1).trim(), gap: true } : { text: c };
+  });
+}
+
 export function mapLines(lines, reveal) {
   let g = -1;
   return lines.filter(l => l.text.trim()).map(l => {
     if (l.level === 0) g++;
     const shown = reveal == null || g < reveal;
     let label = "", rest = l.text;
+    const table = parseTable(l.text);
     if (l.level >= 2) { const i = l.text.indexOf(":"); if (i > 0) { label = l.text.slice(0, i + 1) + " "; rest = l.text.slice(i + 1).trim(); } }
-    return { key: l.id, level: l.level, text: l.text, label, rest, flow: parseFlow(l.text), hidden: !shown, pad: l.level * 26 + 4, ghostW: [46, 58, 64, 60, 56][l.level] ?? 56 };
+    return { key: l.id, level: l.level, text: l.text, label, rest, table, flow: table ? null : parseFlow(l.text), hidden: !shown, pad: l.level * 26 + 4, ghostW: [46, 58, 64, 60, 56][l.level] ?? 56 };
   });
 }

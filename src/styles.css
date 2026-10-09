@@ -358,6 +358,17 @@ input::placeholder { color: var(--faint); }
 .fc-box { position: absolute; left: 0; top: 0; width: max-content; min-width: min-content; max-width: min(var(--maxw), 220px); }
 @container (max-width: 420px) { .fc-box { font-size: 14px; padding: 8px 6px; } }
 
+/* ── Tables (lines with |) ── */
+.tbl-wrap { margin: 6px 0 10px; padding-left: var(--pad, 0); overflow-x: auto; }
+.tbl { border-collapse: collapse; font-size: 14px; line-height: 1.3; color: var(--ink); background: var(--surface); font-variant-numeric: tabular-nums; }
+.tbl th, .tbl td { padding: 5px 9px; border: 1px solid var(--line-strong); text-align: left; vertical-align: top; }
+.tbl th { font-weight: 600; background: var(--surface-2); background: color-mix(in srgb, var(--accent, #6ecece) 30%, var(--surface)); }
+.tbl .num { text-align: right; }
+.gap { border-bottom: 1.5px dashed var(--muted); }
+.gap.open { border-bottom: none; border-radius: 3px; padding: 0 3px; background: var(--hl-soft); }
+.gap-q { min-width: 2.6em; height: 22px; padding: 0 6px; border-radius: 5px; border: 1.5px dashed var(--line-strong); background: var(--surface-2); color: var(--muted); font: inherit; font-weight: 600; cursor: pointer; }
+@container (max-width: 420px) { .tbl-wrap { padding-left: 0; } .tbl { font-size: 13px; } .tbl th, .tbl td { padding: 4px 6px; } }
+
 /* ── Unsaved draft from a previous visit ── */
 .draft-banner { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; padding: 14px 16px; border-radius: 14px; border: 1.5px solid var(--amber-line); background: var(--amber-soft); }
 .draft-text { flex: 1; min-width: 160px; display: flex; flex-direction: column; gap: 2px; }
