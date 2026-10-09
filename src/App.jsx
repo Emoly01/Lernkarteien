@@ -1,7 +1,8 @@
 import { useState, useEffect, useLayoutEffect, useMemo, useRef, useCallback } from "react";
-import { ACC, STATUS, LEVELS, MARKS, MAX_LEVEL, parseFlow, parseTable, flowConnects, flowCycle, flowGraph, parsePasted, mid, L, plural, load, persist, mapLines, schedule, isDue, today, daysBetween, formatDate, exportBackup, parseBackup, nextAccent, renameSubject, deleteSubject, searchCards } from "./data.js";
+import { ACC, STATUS, LEVELS, MARKS, MAX_LEVEL, parseChart, parseFlow, parseTable, flowConnects, flowCycle, flowGraph, parsePasted, mid, L, plural, load, persist, mapLines, schedule, isDue, today, daysBetween, formatDate, exportBackup, parseBackup, nextAccent, renameSubject, deleteSubject, searchCards } from "./data.js";
 import { stamp } from "./sync.js";
 import { useCloudSync } from "./useCloudSync.js";
+import { Chart, Dist } from "./charts.jsx";
 import "./styles.css";
 
 // ── Settings (were design-tool toggles in the prototype) ─────
@@ -264,6 +265,11 @@ function Lines({ lines, quiz }) {
   const out = [];
   for (let i = 0; i < lines.length; i++) {
     const ln = lines[i];
+    if (ln.chart && !ln.hidden) {
+      const Comp = ln.chart.kind === "dist" ? Dist : Chart;
+      out.push(<Comp key={ln.key} chart={ln.chart} pad={ln.level * 26} quiz={quiz} />);
+      continue;
+    }
     if (ln.table && !ln.hidden) {
       const rows = [ln];
       while (i + 1 < lines.length && !lines[i + 1].hidden && lines[i + 1].table && lines[i + 1].level === ln.level) rows.push(lines[++i]);
@@ -1044,6 +1050,8 @@ export default function App() {
   if (view === "edit" && draft) {
     const ls = draft.lines, fi = Math.min(focusIdx, ls.length - 1), fl = ls[fi];
     const placeholders = ["Hauptpunkt", "Unterpunkt", "Begriff: Detail; Detail", "Unterdetail", "Stichpunkt"];
+    const flChart = fl && parseChart(fl.text);
+    const flKind = !fl ? "" : flChart ? (flChart.kind === "dist" ? "Verteilung" : "Diagramm") : parseTable(fl.text) ? "Tabelle" : parseFlow(fl.text) ? "Ablauf" : "";
     // Inserts " → " at the cursor of the current line; two or more steps turn the line into boxes.
     const insertArrow = () => {
       if (!fl) return;
@@ -1143,14 +1151,14 @@ export default function App() {
           </div>
         </div>
         {flash && <p className="flash" role="status">✓ {flash}</p>}
-        <p className="e-help">{MOD} + Enter = speichern & nächste Karte · Enter = neue Zeile · Tab / ⇧Tab = ein- und ausrücken · Leere Zeile + ⌫ = löschen · Mehrere Zeilen einfügen: Einrückung wird übernommen · → trennt Schritte eines Ablaufs (z. B. Problem → Methode → Lösung); zwei Ablauf-Zeilen untereinander werden zu zwei Reihen · Flussdiagramm: kommt ein Schritt in mehreren Ablauf-Zeilen untereinander vor, werden sie verbunden (z. B. A → C, B → C, C → D) · Kreislauf: endet ein Ablauf wieder beim ersten Schritt (A → B → C → A), wird er als Kreis gezeichnet · Tabelle: | trennt Spalten, die erste Zeile ist die Kopfzeile (aus Excel oder SPSS einfügen geht auch) · Lücke: ?Wert in einer Zelle bleibt beim Lernen leer, bis du sie antippst</p>
+        <p className="e-help">{MOD} + Enter = speichern & nächste Karte · Enter = neue Zeile · Tab / ⇧Tab = ein- und ausrücken · Leere Zeile + ⌫ = löschen · Mehrere Zeilen einfügen: Einrückung wird übernommen · → trennt Schritte eines Ablaufs (z. B. Problem → Methode → Lösung); zwei Ablauf-Zeilen untereinander werden zu zwei Reihen · Flussdiagramm: kommt ein Schritt in mehreren Ablauf-Zeilen untereinander vor, werden sie verbunden (z. B. A → C, B → C, C → D) · Kreislauf: endet ein Ablauf wieder beim ersten Schritt (A → B → C → A), wird er als Kreis gezeichnet · Tabelle: | trennt Spalten, die erste Zeile ist die Kopfzeile (aus Excel oder SPSS einfügen geht auch) · Lücke: ?Wert in einer Zelle bleibt beim Lernen leer, bis du sie antippst · Diagramm: Kreisdiagramm, Balkendiagramm oder Histogramm, dann Doppelpunkt und Werte mit | getrennt (z. B. Kreisdiagramm: gedrückt 11 | gehoben 147; Histogramm: 15–20 36 | 20–25 69); ein Teil ohne Zahl am Anfang wird zur Überschrift · Verteilung: z. B. Verteilung: linkssteil | rechtssteil – kennt symmetrisch, asymmetrisch, unimodal, bimodal, multimodal, schmalgipfelig, breitgipfelig, linkssteil, rechtssteil, u-förmig, abfallend, Normalverteilung, flache / steile / normale Wölbung (und rechtsschief, linksschief, eingipfelig, zweigipfelig) · ? vor einem Wert, vor dem Diagrammtyp oder vor einer Verteilung macht daraus eine Lücke</p>
         {cards.some(c => c.id === draft.id) && <button className="e-delete" onClick={deleteCard}>Karte löschen</button>}
         <div className="spacer" />
         <div className="e-footer">
           <div className="toolbar">
             <button className="tool" disabled={!fl || fl.level === 0} onMouseDown={e => { e.preventDefault(); shift(fi, -1); }} onClick={e => { if (e.detail === 0) shift(fi, -1); }} aria-label="Ausrücken">⇤ Aus</button>
             <button className="tool" disabled={!fl || fl.level >= maxLevel(ls, fi)} onMouseDown={e => { e.preventDefault(); shift(fi, 1); }} onClick={e => { if (e.detail === 0) shift(fi, 1); }} aria-label="Einrücken">Ein ⇥</button>
-            <span className="tool-level" aria-live="polite">{fl ? `${LEVELS[fl.level]}${parseTable(fl.text) ? " · Tabelle" : parseFlow(fl.text) ? " · Ablauf" : ""}` : ""}</span>
+            <span className="tool-level" aria-live="polite">{fl ? `${LEVELS[fl.level]}${flKind ? " · " + flKind : ""}` : ""}</span>
             <button className="tool" disabled={!fl} onMouseDown={e => { e.preventDefault(); insertArrow(); }} onClick={e => { if (e.detail === 0) insertArrow(); }} aria-label="Pfeil einfügen – macht aus der Zeile einen Ablauf">→</button>
             <button className="tool" onMouseDown={e => { e.preventDefault(); addLineAfter(); }} onClick={e => { if (e.detail === 0) addLineAfter(); }}>+ Zeile</button>
           </div>

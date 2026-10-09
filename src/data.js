@@ -326,14 +326,77 @@ export function parseTable(text) {
   });
 }
 
+// Distribution shapes, named as in the lecture (Bortz 2005: 33, 38). The first name is the one the
+// slides use; the others are accepted too and shown as "= …" under the picture. `note` is the
+// Kennwert from the slides.
+export const DISTS = [
+  { id: "normal", names: ["Normalverteilung", "Gauß'sche Glockenkurve", "Glockenkurve", "normalverteilt"] },
+  { id: "symmetrisch", names: ["symmetrisch"], note: "γ₁ = 0" },
+  { id: "asymmetrisch", names: ["asymmetrisch"] },
+  { id: "unimodal", names: ["unimodal", "eingipfelig"] },
+  { id: "bimodal", names: ["bimodal", "zweigipfelig"] },
+  { id: "multimodal", names: ["multimodal", "mehrgipfelig"] },
+  { id: "schmalgipfelig", names: ["schmalgipfelig"] },
+  { id: "breitgipfelig", names: ["breitgipfelig"] },
+  { id: "linkssteil", names: ["linkssteil", "rechtsschief", "positiv schief"], note: "γ₁ > 0" },
+  { id: "rechtssteil", names: ["rechtssteil", "linksschief", "negativ schief"], note: "γ₁ < 0" },
+  { id: "uformig", names: ["u-förmig"] },
+  { id: "abfallend", names: ["abfallend"] },
+  { id: "flach", names: ["flache Wölbung", "platykurtisch"], note: "γ₂ < 0" },
+  { id: "steil", names: ["steile Wölbung", "starke Wölbung", "leptokurtisch"], note: "γ₂ > 0" },
+  { id: "normalW", names: ["normale Wölbung", "mesokurtisch"], note: "γ₂ = 0" },
+];
+const distKey = s => fold(s).replace(/[\s'’‘-]/g, "");
+const DIST_BY_NAME = new Map(DISTS.flatMap(d => d.names.map(n => [distKey(n), { d, name: n }])));
+function findDist(text) {
+  // "linkssteile Verteilung", "Symmetrische" … are the same shape.
+  const full = distKey(text), k = full.replace(/verteilung$/, "");
+  return DIST_BY_NAME.get(full) || DIST_BY_NAME.get(k) || (k.endsWith("e") && DIST_BY_NAME.get(k.slice(0, -1))) || null;
+}
+
+// A line that starts with a chart type and a colon is drawn as that chart:
+//   Kreisdiagramm: gedrückt 11 | gehoben 147
+//   Balkendiagramm: Zufriedenheit | sehr unzufrieden 1,25 % | unzufrieden 6,88 % | …
+//   Histogramm: 15–20 36 | 20–25 69 | 25–30 34
+//   Verteilung: linkssteil | rechtssteil
+// A first part without a number is the title. "?" makes a gap that stays hidden while studying:
+// before a value ("neutral ?62"), before the chart type ("?Histogramm: …") or before a shape
+// ("Verteilung: ?linkssteil"). Anything that doesn't fit (e.g. "Histogramm: nur metrisch")
+// stays a normal line.
+const CHART_TYPES = { kreisdiagramm: "pie", kuchendiagramm: "pie", tortendiagramm: "pie", balkendiagramm: "bar", saulendiagramm: "bar", stabdiagramm: "bar", histogramm: "hist", verteilung: "dist", verteilungsform: "dist", verteilungsformen: "dist" };
+const ITEM = /^(.*?\S)(?:\s+|\s*[:=]\s*)(\?)?\s*([−+-]?\d+(?:[.,]\d+)*)(\s*%)?$/;
+export const toNumber = s => { s = s.replace(/−/g, "-"); return parseFloat(s.includes(",") ? s.replace(/\./g, "").replace(",", ".") : s); };
+export function parseChart(text) {
+  const m = text.match(/^(\?)?\s*([^:|]+?)\s*:\s*(.+)$/);
+  const kind = m && CHART_TYPES[fold(m[2]).replace(/\s+/g, "")];
+  if (!kind) return null;
+  const parts = m[3].split(kind === "dist" ? /\s*[|;,]\s*/ : /\s*[|;]\s*/).filter(Boolean);
+  if (kind === "dist") {
+    const items = parts.map(p => {
+      const gap = p[0] === "?", hit = findDist(gap ? p.slice(1) : p);
+      return hit && { id: hit.d.id, name: hit.name, also: hit.d.names.find(n => n !== hit.name), note: hit.d.note, gap };
+    });
+    return items.length && items.every(Boolean) ? { kind, items } : null;
+  }
+  let title = "";
+  if (parts.length && !ITEM.test(parts[0])) title = parts.shift();
+  const items = parts.map(p => {
+    const im = p.match(ITEM);
+    return im && { label: im[1], value: im[3] + (im[4] ? " %" : ""), num: Math.max(0, toNumber(im[3])) || 0, gap: !!im[2] };
+  });
+  if (items.length < 2 || !items.every(Boolean)) return null;
+  return { kind, type: m[2].trim(), typeGap: !!m[1], title, items };
+}
+
 export function mapLines(lines, reveal) {
   let g = -1;
   return lines.filter(l => l.text.trim()).map(l => {
     if (l.level === 0) g++;
     const shown = reveal == null || g < reveal;
     let label = "", rest = l.text;
-    const table = parseTable(l.text);
+    const chart = parseChart(l.text);
+    const table = chart ? null : parseTable(l.text);
     if (l.level >= 2) { const i = l.text.indexOf(":"); if (i > 0) { label = l.text.slice(0, i + 1) + " "; rest = l.text.slice(i + 1).trim(); } }
-    return { key: l.id, level: l.level, text: l.text, label, rest, table, flow: table ? null : parseFlow(l.text), hidden: !shown, pad: l.level * 26 + 4, ghostW: [46, 58, 64, 60, 56][l.level] ?? 56 };
+    return { key: l.id, level: l.level, text: l.text, label, rest, chart, table, flow: chart || table ? null : parseFlow(l.text), hidden: !shown, pad: l.level * 26 + 4, ghostW: [46, 58, 64, 60, 56][l.level] ?? 56 };
   });
 }
