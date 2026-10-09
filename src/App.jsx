@@ -1,5 +1,5 @@
 import { useState, useEffect, useLayoutEffect, useMemo, useRef, useCallback } from "react";
-import { ACC, STATUS, LEVELS, MARKS, MAX_LEVEL, parseFlow, flowConnects, flowCycle, flowGraph, parsePasted, mid, L, plural, load, persist, mapLines, schedule, isDue, today, daysBetween, formatDate, exportBackup, parseBackup, nextAccent, renameSubject, deleteSubject, searchCards } from "./data.js";
+import { ACC, STATUS, LEVELS, MARKS, MAX_LEVEL, parseFlow, parseTable, flowConnects, flowCycle, flowGraph, parsePasted, mid, L, plural, load, persist, mapLines, schedule, isDue, today, daysBetween, formatDate, exportBackup, parseBackup, nextAccent, renameSubject, deleteSubject, searchCards } from "./data.js";
 import { stamp } from "./sync.js";
 import { useCloudSync } from "./useCloudSync.js";
 import "./styles.css";
@@ -232,10 +232,44 @@ function FlowCycle({ steps, caption, pad }) {
   );
 }
 
-function Lines({ lines }) {
+// Table rows directly below each other on the same level form one table; the first row is the header.
+// Gaps ("?16,0") show their answer while browsing; while studying (`quiz`) they stay empty until tapped.
+const NUM = /^[−+-]?[\d.,\s]*\d[\d.,\s]*%?$/;
+function Table({ rows, pad, quiz }) {
+  const [open, setOpen] = useState(() => new Set());
+  const width = Math.max(...rows.map(r => r.table.length));
+  const grid = rows.map(r => Array.from({ length: width }, (_, c) => r.table[c] || { text: "" }));
+  // Columns empty in every row ("| a | b |" written with outer bars) are dropped.
+  const cols = [...Array(width).keys()].filter(c => grid.some(row => row[c].text));
+  const num = cols.map(c => grid.length > 1 && grid.slice(1).every(row => !row[c].text || NUM.test(row[c].text)) && grid.slice(1).some(row => row[c].text));
+  const cell = (cl, k) => {
+    if (!cl.gap) return cl.text;
+    if (!quiz || open.has(k)) return <span className={"gap" + (quiz ? " open" : "")}>{cl.text}</span>;
+    return <button type="button" className="gap-q" aria-label="Lücke aufdecken"
+      onPointerDown={e => e.stopPropagation()} onClick={e => { e.stopPropagation(); setOpen(o => new Set(o).add(k)); }}>?</button>;
+  };
+  return (
+    <div className="tbl-wrap" style={{ "--pad": pad + "px" }}>
+      <table className="tbl">
+        <thead><tr>{cols.map((c, j) => <th key={c} className={num[j] ? "num" : undefined}>{cell(grid[0][c], "0:" + c)}</th>)}</tr></thead>
+        {grid.length > 1 && <tbody>{grid.slice(1).map((row, r) => (
+          <tr key={rows[r + 1].key}>{cols.map((c, j) => <td key={c} className={num[j] ? "num" : undefined}>{cell(row[c], r + 1 + ":" + c)}</td>)}</tr>
+        ))}</tbody>}
+      </table>
+    </div>
+  );
+}
+
+function Lines({ lines, quiz }) {
   const out = [];
   for (let i = 0; i < lines.length; i++) {
     const ln = lines[i];
+    if (ln.table && !ln.hidden) {
+      const rows = [ln];
+      while (i + 1 < lines.length && !lines[i + 1].hidden && lines[i + 1].table && lines[i + 1].level === ln.level) rows.push(lines[++i]);
+      out.push(<Table key={ln.key} rows={rows} pad={ln.level * 26} quiz={quiz} />);
+      continue;
+    }
     if (ln.flow && !ln.hidden) {
       // Process lines directly below each other on the same level; a caption starts a new diagram.
       const run = [ln];
@@ -387,6 +421,7 @@ export default function App() {
     const onKey = (e) => {
       const h = handlers.current;
       if (h.view !== "study") return;
+      if (e.target.closest?.(".gap-q")) return; // Space/Enter on a gap opens just that gap
       if (e.key === " " || e.key === "Enter") { e.preventDefault(); h.tap(); }
       else if (h.canRate) { if (e.key === "1") h.rate("nochmal"); if (e.key === "2") h.rate("unsicher"); if (e.key === "3") h.rate("sicher"); }
     };
@@ -964,7 +999,7 @@ export default function App() {
             </div>
             <div className="face face-back" aria-hidden={!flipped} style={{ "--accent": acc }}>
               <div className="paper-title" style={{ background: acc }}>{c.title}</div>
-              <div className="paper-body"><Lines lines={mapLines(c.lines, POINT_BY_POINT ? reveal : null)} /></div>
+              <div className="paper-body" key={qPos}><Lines lines={mapLines(c.lines, POINT_BY_POINT ? reveal : null)} quiz /></div>
             </div>
           </div>
         </div>
@@ -1096,7 +1131,7 @@ export default function App() {
                   onChange={e => {
                     // "->" becomes a real arrow as you type; keep the cursor where it was.
                     const raw = e.target.value, at = e.target.selectionStart ?? raw.length;
-                    const t = raw.replace(/->/g, "→");
+                    const t = raw.replace(/->/g, "→").replace(/\t/g, " | ");
                     if (t !== raw) { pendingCaret.current = at - (raw.slice(0, at).match(/->/g) || []).length; pendingFocus.current = i; }
                     setLines(x => { x[i] = { ...x[i], text: t }; return x; });
                   }}
@@ -1108,14 +1143,14 @@ export default function App() {
           </div>
         </div>
         {flash && <p className="flash" role="status">✓ {flash}</p>}
-        <p className="e-help">{MOD} + Enter = speichern & nächste Karte · Enter = neue Zeile · Tab / ⇧Tab = ein- und ausrücken · Leere Zeile + ⌫ = löschen · Mehrere Zeilen einfügen: Einrückung wird übernommen · → trennt Schritte eines Ablaufs (z. B. Problem → Methode → Lösung); zwei Ablauf-Zeilen untereinander werden zu zwei Reihen · Flussdiagramm: kommt ein Schritt in mehreren Ablauf-Zeilen untereinander vor, werden sie verbunden (z. B. A → C, B → C, C → D) · Kreislauf: endet ein Ablauf wieder beim ersten Schritt (A → B → C → A), wird er als Kreis gezeichnet</p>
+        <p className="e-help">{MOD} + Enter = speichern & nächste Karte · Enter = neue Zeile · Tab / ⇧Tab = ein- und ausrücken · Leere Zeile + ⌫ = löschen · Mehrere Zeilen einfügen: Einrückung wird übernommen · → trennt Schritte eines Ablaufs (z. B. Problem → Methode → Lösung); zwei Ablauf-Zeilen untereinander werden zu zwei Reihen · Flussdiagramm: kommt ein Schritt in mehreren Ablauf-Zeilen untereinander vor, werden sie verbunden (z. B. A → C, B → C, C → D) · Kreislauf: endet ein Ablauf wieder beim ersten Schritt (A → B → C → A), wird er als Kreis gezeichnet · Tabelle: | trennt Spalten, die erste Zeile ist die Kopfzeile (aus Excel oder SPSS einfügen geht auch) · Lücke: ?Wert in einer Zelle bleibt beim Lernen leer, bis du sie antippst</p>
         {cards.some(c => c.id === draft.id) && <button className="e-delete" onClick={deleteCard}>Karte löschen</button>}
         <div className="spacer" />
         <div className="e-footer">
           <div className="toolbar">
             <button className="tool" disabled={!fl || fl.level === 0} onMouseDown={e => { e.preventDefault(); shift(fi, -1); }} onClick={e => { if (e.detail === 0) shift(fi, -1); }} aria-label="Ausrücken">⇤ Aus</button>
             <button className="tool" disabled={!fl || fl.level >= maxLevel(ls, fi)} onMouseDown={e => { e.preventDefault(); shift(fi, 1); }} onClick={e => { if (e.detail === 0) shift(fi, 1); }} aria-label="Einrücken">Ein ⇥</button>
-            <span className="tool-level" aria-live="polite">{fl ? `${LEVELS[fl.level]}${parseFlow(fl.text) ? " · Ablauf" : ""}` : ""}</span>
+            <span className="tool-level" aria-live="polite">{fl ? `${LEVELS[fl.level]}${parseTable(fl.text) ? " · Tabelle" : parseFlow(fl.text) ? " · Ablauf" : ""}` : ""}</span>
             <button className="tool" disabled={!fl} onMouseDown={e => { e.preventDefault(); insertArrow(); }} onClick={e => { if (e.detail === 0) insertArrow(); }} aria-label="Pfeil einfügen – macht aus der Zeile einen Ablauf">→</button>
             <button className="tool" onMouseDown={e => { e.preventDefault(); addLineAfter(); }} onClick={e => { if (e.detail === 0) addLineAfter(); }}>+ Zeile</button>
           </div>
