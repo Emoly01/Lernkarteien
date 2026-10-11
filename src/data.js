@@ -1,4 +1,5 @@
-export const ACC = ["#6ecece", "#90d490", "#f0c080", "#d090c8", "#90b8e0", "#e09090", "#a8c870", "#c8a870"];
+export const ACC = ["#6ecece", "#90d490", "#f0c080", "#d090c8", "#90b8e0", "#e09090", "#a8c870", "#c8a870",
+  "#b8a8e8", "#88dcc0", "#e8d878", "#f0a080", "#f0b0d0", "#a8c0a0", "#a8b8c8", "#d8b0a0"];
 export const STATUS = { neu: ["neu", "#c8bfa8"], unsicher: ["unsicher", "#e0a94a"], sicher: ["sicher", "#5a7a4a"] };
 export const LEVELS = ["Hauptpunkt", "Unterpunkt", "Detail", "Unterdetail", "Stichpunkt", "Unterstichpunkt"];
 export const MARKS = ["•", "×", "—", "◦", "·", "‣"];
@@ -76,10 +77,11 @@ export function schedule(card, kind, examDate) {
 }
 
 // Each deck keeps its own colour, so deleting or renaming one never recolours the others.
-// Decks without a stored colour get the one they had by position before this existed.
+// Decks without a stored colour get the one they had by position before this existed
+// (from the original eight, so growing the palette never recolours them).
 function withAccents(subjects, accents = {}) {
   const out = {};
-  subjects.forEach((s, i) => { out[s] = accents[s] || ACC[i % ACC.length]; });
+  subjects.forEach((s, i) => { out[s] = accents[s] || ACC[i % 8]; });
   return out;
 }
 
@@ -88,6 +90,8 @@ export function nextAccent(accents) {
   const used = Object.values(accents);
   return ACC.reduce((best, c) => (used.filter(u => u === c).length < used.filter(u => u === best).length ? c : best), ACC[0]);
 }
+
+export const setAccent = (d, name, color) => ({ ...d, accents: { ...d.accents, [name]: color } });
 
 export function renameSubject(d, from, to) {
   const accents = { ...d.accents, [to]: d.accents[from] };

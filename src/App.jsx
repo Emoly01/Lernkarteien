@@ -1,5 +1,5 @@
 import { useState, useEffect, useLayoutEffect, useMemo, useRef, useCallback } from "react";
-import { ACC, STATUS, LEVELS, MARKS, MAX_LEVEL, parseChart, parseFlow, parseTable, flowConnects, flowCycle, flowGraph, parsePasted, mid, L, plural, load, persist, mapLines, schedule, isDue, today, daysBetween, formatDate, exportBackup, parseBackup, nextAccent, renameSubject, deleteSubject, searchCards } from "./data.js";
+import { ACC, STATUS, LEVELS, MARKS, MAX_LEVEL, parseChart, parseFlow, parseTable, flowConnects, flowCycle, flowGraph, parsePasted, mid, L, plural, load, persist, mapLines, schedule, isDue, today, daysBetween, formatDate, exportBackup, parseBackup, nextAccent, setAccent, renameSubject, deleteSubject, searchCards } from "./data.js";
 import { stamp } from "./sync.js";
 import { useCloudSync } from "./useCloudSync.js";
 import { Chart, Dist } from "./charts.jsx";
@@ -918,6 +918,13 @@ export default function App() {
               <button className="btn-primary add-ok" disabled={!!renameError} onClick={doRename}>Speichern</button>
             </div>
             {renameError && renameVal !== deck && <p className="form-error" role="alert">{renameError}</p>}
+            <span className="section-label" style={{ padding: 0 }}>Farbe</span>
+            <div className="color-grid" role="radiogroup" aria-label="Farbe der Mappe">
+              {ACC.map(c => (
+                <button key={c} className="color-pick" role="radio" aria-checked={accent(deck) === c} aria-label={c}
+                  style={{ background: c }} onClick={() => update(d => setAccent(d, deck, c))} />
+              ))}
+            </div>
             <div className="deck-menu-actions">
               <button className="link-btn danger" onClick={doDeleteDeck}>Mappe löschen</button>
               <button className="link-btn" onClick={() => setDeckMenu(false)}>Schließen</button>
