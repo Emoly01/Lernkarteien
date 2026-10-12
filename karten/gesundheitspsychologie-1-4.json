@@ -1,0 +1,3110 @@
+{
+ "app": "lernkarten",
+ "version": 1,
+ "pack": true,
+ "name": "Einführung in die Gesundheitspsychologie und -förderung 1–4",
+ "subjects": [
+  "Gesundheitspsychologie"
+ ],
+ "cards": [
+  {
+   "id": "gpf1-01",
+   "subject": "Gesundheitspsychologie",
+   "title": "GPF1 · Was ist Gesundheitspsychologie?",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "gpf1-01-01",
+     "level": 0,
+     "text": "Teildisziplin der Psychologie, entstanden in den 1980er Jahren"
+    },
+    {
+     "id": "gpf1-01-02",
+     "level": 0,
+     "text": "Zweck: Grundlagen- und anwendungsorientierte Forschung …"
+    },
+    {
+     "id": "gpf1-01-03",
+     "level": 1,
+     "text": "zur Förderung von Gesundheit"
+    },
+    {
+     "id": "gpf1-01-04",
+     "level": 1,
+     "text": "zur Behandlung von Krankheiten"
+    },
+    {
+     "id": "gpf1-01-05",
+     "level": 1,
+     "text": "zur allgemeinen Verbesserung von Einzelversorgungen"
+    },
+    {
+     "id": "gpf1-01-06",
+     "level": 0,
+     "text": "Definition (Schwarzer, 2004)"
+    },
+    {
+     "id": "gpf1-01-07",
+     "level": 1,
+     "text": "befasst sich mit dem menschlichen Erleben und Verhalten angesichts gesundheitlicher Risiken und Beeinträchtigungen"
+    },
+    {
+     "id": "gpf1-01-08",
+     "level": 1,
+     "text": "sowie mit der Optimierung von Gesundheit (im Sinne von Fitness oder Wellness)"
+    },
+    {
+     "id": "gpf1-01-09",
+     "level": 0,
+     "text": "Orientiert am biopsychosozialen Modell, das SUBJEKT steht im Vordergrund"
+    }
+   ]
+  },
+  {
+   "id": "gpf1-02",
+   "subject": "Gesundheitspsychologie",
+   "title": "GPF1 · Grundfragen und Einflussfaktoren der Gesundheitspsychologie",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "gpf1-02-01",
+     "level": 0,
+     "text": "Grundfragen"
+    },
+    {
+     "id": "gpf1-02-02",
+     "level": 1,
+     "text": "Wie können wir Gesundheit fördern, welche Verhaltensweisen sind dazu nötig?"
+    },
+    {
+     "id": "gpf1-02-03",
+     "level": 1,
+     "text": "Wie kann ein Individuum Krankheiten präventiv begegnen?"
+    },
+    {
+     "id": "gpf1-02-04",
+     "level": 1,
+     "text": "Wie kann die Lebensqualität bei Krankheit erhöht werden?"
+    },
+    {
+     "id": "gpf1-02-05",
+     "level": 0,
+     "text": "Individuelle Faktoren | Soziale Faktoren"
+    },
+    {
+     "id": "gpf1-02-06",
+     "level": 0,
+     "text": "Persönlichkeit | ?soziale Netzwerke"
+    },
+    {
+     "id": "gpf1-02-07",
+     "level": 0,
+     "text": "Veranlagung | ?soziale Unterstützung"
+    },
+    {
+     "id": "gpf1-02-08",
+     "level": 0,
+     "text": "Informationsverarbeitung | ?Normen"
+    },
+    {
+     "id": "gpf1-02-09",
+     "level": 0,
+     "text": "– | ?Zugang zu Versorgung"
+    },
+    {
+     "id": "gpf1-02-10",
+     "level": 0,
+     "text": "Ziel: Optimierung der Gesundheit; Theorien und Modelle sollen Verhalten prognostizieren"
+    }
+   ]
+  },
+  {
+   "id": "gpf1-03",
+   "subject": "Gesundheitspsychologie",
+   "title": "GPF1 · Psychologische Einflussfaktoren auf die Gesundheit",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "gpf1-03-01",
+     "level": 0,
+     "text": "Selbstwirksamkeitserwartungen"
+    },
+    {
+     "id": "gpf1-03-02",
+     "level": 0,
+     "text": "Ziele"
+    },
+    {
+     "id": "gpf1-03-03",
+     "level": 0,
+     "text": "Optimismus"
+    },
+    {
+     "id": "gpf1-03-04",
+     "level": 0,
+     "text": "Erwartungen, Überzeugungen"
+    },
+    {
+     "id": "gpf1-03-05",
+     "level": 0,
+     "text": "Soziale Unterstützung"
+    },
+    {
+     "id": "gpf1-03-06",
+     "level": 0,
+     "text": "Positive und negative Affektivität"
+    },
+    {
+     "id": "gpf1-03-07",
+     "level": 0,
+     "text": "Selbstregulation des Verhaltens"
+    },
+    {
+     "id": "gpf1-03-08",
+     "level": 0,
+     "text": "Informationsverarbeitung"
+    }
+   ]
+  },
+  {
+   "id": "gpf1-04",
+   "subject": "Gesundheitspsychologie",
+   "title": "GPF1 · Das biopsychosoziale Modell",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "gpf1-04-01",
+     "level": 0,
+     "text": "Mitte des 20. Jh.: löst das biomedizinische Modell ab"
+    },
+    {
+     "id": "gpf1-04-02",
+     "level": 0,
+     "text": "Bio | Psycho | Sozial"
+    },
+    {
+     "id": "gpf1-04-03",
+     "level": 0,
+     "text": "?Bakterien, Viren, Genetik | ?Einstellungen, Verhalten, Stress, Coping, Schmerz | ?Verhältnisse, Ethnie, Sozialökonomie"
+    },
+    {
+     "id": "gpf1-04-04",
+     "level": 0,
+     "text": "Physisch-genetische, psychische und sozial-gesellschaftliche Faktoren beeinflussen die Gesundheit"
+    },
+    {
+     "id": "gpf1-04-05",
+     "level": 0,
+     "text": "Eigeninitiative des Individuums im Mittelpunkt"
+    },
+    {
+     "id": "gpf1-04-06",
+     "level": 1,
+     "text": "Hauptziel: Unterstützung der Eigenaktivität"
+    },
+    {
+     "id": "gpf1-04-07",
+     "level": 0,
+     "text": "Gesundheitsförderung: Gesundheit als positiver Gesamtzustand des Individuums"
+    }
+   ]
+  },
+  {
+   "id": "gpf1-05",
+   "subject": "Gesundheitspsychologie",
+   "title": "GPF1 · Gesundheit und Krankheit als Kontinuum",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "gpf1-05-01",
+     "level": 0,
+     "text": "Völlige Krankheit ↔ Durchschnitt ↔ völlige Gesundheit"
+    },
+    {
+     "id": "gpf1-05-02",
+     "level": 0,
+     "text": "Völlige Gesundheit oder völlige Krankheit sind nicht möglich (Franke; Hurrelmann)"
+    },
+    {
+     "id": "gpf1-05-03",
+     "level": 0,
+     "text": "Normalität: Individuum ist grundsätzlich gesund, nur manchmal krank (altersspezifisch)"
+    },
+    {
+     "id": "gpf1-05-04",
+     "level": 0,
+     "text": "Abweichung von der Normalität: häufigere Krankheiten"
+    }
+   ]
+  },
+  {
+   "id": "gpf1-06",
+   "subject": "Gesundheitspsychologie",
+   "title": "GPF1 · Wie entstand die Gesundheitspsychologie?",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "gpf1-06-01",
+     "level": 0,
+     "text": "Gründe"
+    },
+    {
+     "id": "gpf1-06-02",
+     "level": 1,
+     "text": "Kostenexplosion"
+    },
+    {
+     "id": "gpf1-06-03",
+     "level": 1,
+     "text": "Neue Erkrankungen"
+    },
+    {
+     "id": "gpf1-06-04",
+     "level": 1,
+     "text": "Neues Wissen"
+    },
+    {
+     "id": "gpf1-06-05",
+     "level": 0,
+     "text": "Vor allem in den Industrienationen, Umdenken notwendig"
+    },
+    {
+     "id": "gpf1-06-06",
+     "level": 0,
+     "text": "Meilensteine"
+    },
+    {
+     "id": "gpf1-06-07",
+     "level": 1,
+     "text": "1978: Division of Health Psychology"
+    },
+    {
+     "id": "gpf1-06-08",
+     "level": 1,
+     "text": "1979: erstes Lehrbuch"
+    },
+    {
+     "id": "gpf1-06-09",
+     "level": 1,
+     "text": "1986: Fachgruppe der British Psychological Society, Gründung der European Health Psychology Society (EHPS)"
+    },
+    {
+     "id": "gpf1-06-10",
+     "level": 1,
+     "text": "1988: Wahlpflichtfach an der FU Berlin"
+    },
+    {
+     "id": "gpf1-06-11",
+     "level": 0,
+     "text": "Überschneidungen mit"
+    },
+    {
+     "id": "gpf1-06-12",
+     "level": 1,
+     "text": "Public Health"
+    },
+    {
+     "id": "gpf1-06-13",
+     "level": 1,
+     "text": "Klinische Psychologie, Psychiatrie, Psychosomatik"
+    },
+    {
+     "id": "gpf1-06-14",
+     "level": 1,
+     "text": "Verhaltensmedizin, Medizinische Psychologie"
+    }
+   ]
+  },
+  {
+   "id": "gpf1-07",
+   "subject": "Gesundheitspsychologie",
+   "title": "GPF1 · Albert Bandura und die sozial-kognitive Theorie",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "gpf1-07-01",
+     "level": 0,
+     "text": "Albert Bandura (*1925)"
+    },
+    {
+     "id": "gpf1-07-02",
+     "level": 1,
+     "text": "1960: Lernen durch Beobachtung"
+    },
+    {
+     "id": "gpf1-07-03",
+     "level": 1,
+     "text": "1974: Präsident der American Psychological Association"
+    },
+    {
+     "id": "gpf1-07-04",
+     "level": 0,
+     "text": "Soziale Lerntheorie (1977), dann sozial-kognitive Theorie (1986, 1997, 2000)"
+    },
+    {
+     "id": "gpf1-07-05",
+     "level": 0,
+     "text": "Grund- und Standardtheorie der gesamten Psychologie"
+    },
+    {
+     "id": "gpf1-07-06",
+     "level": 0,
+     "text": "Selbstwirksamkeitserwartung ist ein Teil davon, die Theorie ist aber mehr"
+    },
+    {
+     "id": "gpf1-07-07",
+     "level": 0,
+     "text": "Spätwerk (1997): „Self-efficacy: The Exercise of Control\""
+    }
+   ]
+  },
+  {
+   "id": "gpf1-08",
+   "subject": "Gesundheitspsychologie",
+   "title": "GPF1 · Sozial-kognitive Theorie: das Modell",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "gpf1-08-01",
+     "level": 0,
+     "text": "Handlungsergebniserwartungen + Selbstwirksamkeitserwartungen = subjektive Erwartungen (in Wechselwirkung)"
+    },
+    {
+     "id": "gpf1-08-02",
+     "level": 0,
+     "text": "Handlungsergebniserwartungen"
+    },
+    {
+     "id": "gpf1-08-03",
+     "level": 1,
+     "text": "körperliche, soziale, selbstbewertende Erwartungen"
+    },
+    {
+     "id": "gpf1-08-04",
+     "level": 0,
+     "text": "Selbstwirksamkeit baut auf: Symbolisierung → Vorausschauendes Denken → Selbstreflexion"
+    },
+    {
+     "id": "gpf1-08-05",
+     "level": 0,
+     "text": "Subjektive Erwartungen steuern vier Prozesse"
+    },
+    {
+     "id": "gpf1-08-06",
+     "level": 1,
+     "text": "Kognitive Prozesse: Denken"
+    },
+    {
+     "id": "gpf1-08-07",
+     "level": 1,
+     "text": "Motivationale Prozesse: Wille"
+    },
+    {
+     "id": "gpf1-08-08",
+     "level": 1,
+     "text": "Emotionale Prozesse: Gefühle"
+    },
+    {
+     "id": "gpf1-08-09",
+     "level": 1,
+     "text": "Aktionale Prozesse: Handlungen"
+    }
+   ]
+  },
+  {
+   "id": "gpf1-09",
+   "subject": "Gesundheitspsychologie",
+   "title": "GPF1 · Modelllernen",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "gpf1-09-01",
+     "level": 0,
+     "text": "Lernen durch Beobachten des Verhaltens anderer"
+    },
+    {
+     "id": "gpf1-09-02",
+     "level": 1,
+     "text": "betrifft Verhalten und verschiedenste Kompetenzen"
+    },
+    {
+     "id": "gpf1-09-03",
+     "level": 1,
+     "text": "bewusst oder unbewusst"
+    },
+    {
+     "id": "gpf1-09-04",
+     "level": 0,
+     "text": "Modelllernen ist je nach … leichter oder schwerer"
+    },
+    {
+     "id": "gpf1-09-05",
+     "level": 1,
+     "text": "Vorerfahrungen und Fähigkeiten des Beobachters"
+    },
+    {
+     "id": "gpf1-09-06",
+     "level": 1,
+     "text": "positiver oder negativer Wirkung des Modells"
+    },
+    {
+     "id": "gpf1-09-07",
+     "level": 1,
+     "text": "Ähnlichkeit zwischen Modell und Beobachter"
+    },
+    {
+     "id": "gpf1-09-08",
+     "level": 0,
+     "text": "Für die Gesundheitsförderung sehr interessant (Bandura, 1995)"
+    }
+   ]
+  },
+  {
+   "id": "gpf1-10",
+   "subject": "Gesundheitspsychologie",
+   "title": "GPF1 · Selbstwirksamkeitserwartung",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "gpf1-10-01",
+     "level": 0,
+     "text": "Definition: subjektive Gewissheit, neue oder schwierige Anforderungen aufgrund eigener Kompetenz bewältigen zu können"
+    },
+    {
+     "id": "gpf1-10-02",
+     "level": 1,
+     "text": "= Kompetenzerwartung"
+    },
+    {
+     "id": "gpf1-10-03",
+     "level": 0,
+     "text": "Menschen mit hoher Selbstwirksamkeit …"
+    },
+    {
+     "id": "gpf1-10-04",
+     "level": 1,
+     "text": "setzen sich höhere Anforderungen und Ziele"
+    },
+    {
+     "id": "gpf1-10-05",
+     "level": 1,
+     "text": "handeln rascher und effektiver"
+    },
+    {
+     "id": "gpf1-10-06",
+     "level": 1,
+     "text": "haben mehr Durchhaltevermögen bei Schwierigkeiten"
+    },
+    {
+     "id": "gpf1-10-07",
+     "level": 0,
+     "text": "Spezielle vs. allgemeine Selbstwirksamkeitserwartung"
+    },
+    {
+     "id": "gpf1-10-08",
+     "level": 0,
+     "text": "Reicht allein nicht: Intention, Planung usw. sind ebenso relevant"
+    }
+   ]
+  },
+  {
+   "id": "gpf1-11",
+   "subject": "Gesundheitspsychologie",
+   "title": "GPF1 · Wie entsteht Selbstwirksamkeit? (4 Quellen)",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "gpf1-11-01",
+     "level": 0,
+     "text": "Quelle | Bedeutung"
+    },
+    {
+     "id": "gpf1-11-02",
+     "level": 0,
+     "text": "Mastery experience | ?Gefühl, eine Handlung erfolgreich abgeschlossen zu haben"
+    },
+    {
+     "id": "gpf1-11-03",
+     "level": 0,
+     "text": "Vicarous experience | ?Erfahrung eines anderen (stellvertretend)"
+    },
+    {
+     "id": "gpf1-11-04",
+     "level": 0,
+     "text": "Symbolic experience | ?Erfahrung auf symbolische Art und Weise"
+    },
+    {
+     "id": "gpf1-11-05",
+     "level": 0,
+     "text": "Emotional arousal | ?Erregung auf emotionaler Ebene"
+    }
+   ]
+  },
+  {
+   "id": "gpf1-12",
+   "subject": "Gesundheitspsychologie",
+   "title": "GPF1 · Selbstwirksamkeit vs. Optimismus",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "gpf1-12-01",
+     "level": 0,
+     "text": "Selbstwirksamkeit | Optimismus"
+    },
+    {
+     "id": "gpf1-12-02",
+     "level": 0,
+     "text": "?Überzeugung, eine Herausforderung aufgrund eigener Kompetenzen positiv zu meistern | ?Überzeugung, es werde schon alles irgendwie gut gehen"
+    },
+    {
+     "id": "gpf1-12-03",
+     "level": 0,
+     "text": "Unterschied: Selbstwirksamkeit hängt an der eigenen Kompetenz"
+    }
+   ]
+  },
+  {
+   "id": "gpf1-13",
+   "subject": "Gesundheitspsychologie",
+   "title": "GPF1 · Skala zur Allgemeinen Selbstwirksamkeitserwartung",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "gpf1-13-01",
+     "level": 0,
+     "text": "Schwarzer & Jerusalem (1999), aufbauend auf Bandura"
+    },
+    {
+     "id": "gpf1-13-02",
+     "level": 0,
+     "text": "Seit 1981: 10-Item-Instrument"
+    },
+    {
+     "id": "gpf1-13-03",
+     "level": 1,
+     "text": "Prognoseverfahren"
+    },
+    {
+     "id": "gpf1-13-04",
+     "level": 1,
+     "text": "in 27 Sprachen verfügbar"
+    },
+    {
+     "id": "gpf1-13-05",
+     "level": 1,
+     "text": "eindimensionale Skala"
+    },
+    {
+     "id": "gpf1-13-06",
+     "level": 0,
+     "text": "Für Jugendliche ab 12 Jahren und Erwachsene"
+    },
+    {
+     "id": "gpf1-13-07",
+     "level": 0,
+     "text": "Antworten: (1) stimmt nicht, (2) stimmt kaum, (3) stimmt eher, (4) stimmt genau"
+    },
+    {
+     "id": "gpf1-13-08",
+     "level": 0,
+     "text": "Summe der Werte: Gesamtwert zwischen 10 und 40"
+    },
+    {
+     "id": "gpf1-13-09",
+     "level": 0,
+     "text": "Beispielitem: „Für jedes Problem kann ich eine Lösung finden.\""
+    }
+   ]
+  },
+  {
+   "id": "gpf1-14",
+   "subject": "Gesundheitspsychologie",
+   "title": "GPF1 · Studie: Selbstwirksamkeit zu gesunder Ernährung",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "gpf1-14-01",
+     "level": 0,
+     "text": "Gölz, Schwarzer & Fuchs (1998)"
+    },
+    {
+     "id": "gpf1-14-02",
+     "level": 1,
+     "text": "Patient:innen mit Fettstoffwechselstörungen, Lipidambulanz Berlin"
+    },
+    {
+     "id": "gpf1-14-03",
+     "level": 1,
+     "text": "N = 144, Alter 19–76, Drop-out 27 % beim 2. Zeitpunkt"
+    },
+    {
+     "id": "gpf1-14-04",
+     "level": 0,
+     "text": "Ergebnisse"
+    },
+    {
+     "id": "gpf1-14-05",
+     "level": 1,
+     "text": "Selbstwirksamkeit beeinflusst die Intention direkt"
+    },
+    {
+     "id": "gpf1-14-06",
+     "level": 1,
+     "text": "Selbstwirksamkeit beeinflusst das Verhalten direkt und indirekt"
+    },
+    {
+     "id": "gpf1-14-07",
+     "level": 1,
+     "text": "Hohe Selbstwirksamkeit: Intention wird eher in Verhaltensänderung umgesetzt, weniger Rückfälle"
+    },
+    {
+     "id": "gpf1-14-08",
+     "level": 1,
+     "text": "Ernährungsverhalten lässt sich durch Selbstwirksamkeit prognostizieren"
+    },
+    {
+     "id": "gpf1-14-09",
+     "level": 0,
+     "text": "Einschränkungen: kleine Stichprobe, nur Patient:innen mit Fettstoffwechselstörungen"
+    }
+   ]
+  },
+  {
+   "id": "gpf2-01",
+   "subject": "Gesundheitspsychologie",
+   "title": "GPF2 · Was ist Gesundheitsverhalten?",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "gpf2-01-01",
+     "level": 0,
+     "text": "Alle Verhaltensweisen, die Entstehung und Verlauf von Gesundheit und Krankheit beeinflussen"
+    },
+    {
+     "id": "gpf2-01-02",
+     "level": 0,
+     "text": "Einflüsse"
+    },
+    {
+     "id": "gpf2-01-03",
+     "level": 1,
+     "text": "intern: Motivation, Durchhaltevermögen"
+    },
+    {
+     "id": "gpf2-01-04",
+     "level": 1,
+     "text": "extern: Umfeld, Mitmenschen"
+    },
+    {
+     "id": "gpf2-01-05",
+     "level": 0,
+     "text": "Fokus auf Ursachen, die das Individuum selbst bestimmen kann"
+    },
+    {
+     "id": "gpf2-01-06",
+     "level": 1,
+     "text": "Selbstbestimmtheit und Eigenverantwortung im Vordergrund"
+    },
+    {
+     "id": "gpf2-01-07",
+     "level": 0,
+     "text": "Förderung: Krankheiten verhüten, Risikoverhalten vermeiden, Gesundheit fördern"
+    }
+   ]
+  },
+  {
+   "id": "gpf2-02",
+   "subject": "Gesundheitspsychologie",
+   "title": "GPF2 · Breslow & Enstrom: gesunder Lebensstil",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "gpf2-02-01",
+     "level": 0,
+     "text": "1965: knapp 7000 Proband:innen, 7 Faktoren der Lebensführung"
+    },
+    {
+     "id": "gpf2-02-02",
+     "level": 1,
+     "text": "7–8 Stunden Schlaf"
+    },
+    {
+     "id": "gpf2-02-03",
+     "level": 1,
+     "text": "Frühstück"
+    },
+    {
+     "id": "gpf2-02-04",
+     "level": 1,
+     "text": "Keine Zwischenmahlzeiten"
+    },
+    {
+     "id": "gpf2-02-05",
+     "level": 1,
+     "text": "Gewicht passend zur Größe"
+    },
+    {
+     "id": "gpf2-02-06",
+     "level": 1,
+     "text": "Regelmäßige Bewegung"
+    },
+    {
+     "id": "gpf2-02-07",
+     "level": 1,
+     "text": "Wenig Alkohol"
+    },
+    {
+     "id": "gpf2-02-08",
+     "level": 1,
+     "text": "Kein Tabak"
+    },
+    {
+     "id": "gpf2-02-09",
+     "level": 0,
+     "text": "1974: Messung der Mortalität"
+    },
+    {
+     "id": "gpf2-02-10",
+     "level": 1,
+     "text": "alle 7 Faktoren eingehalten: geringere Mortalität"
+    },
+    {
+     "id": "gpf2-02-11",
+     "level": 1,
+     "text": "3 oder weniger: höhere Mortalität (28 % Männer, 43 % Frauen)"
+    },
+    {
+     "id": "gpf2-02-12",
+     "level": 0,
+     "text": "Fazit: Ein gesunder Lebensstil verlängert das Leben!"
+    }
+   ]
+  },
+  {
+   "id": "gpf2-03",
+   "subject": "Gesundheitspsychologie",
+   "title": "GPF2 · Wozu Modelle – und welche Arten gibt es?",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "gpf2-03-01",
+     "level": 0,
+     "text": "Modelle sollen Verhalten nachvollziehbar und erklärbar machen und evidenzbasiertes Vorgehen ermöglichen"
+    },
+    {
+     "id": "gpf2-03-02",
+     "level": 0,
+     "text": "Bivariate Analysen reichen oft nicht, weil Verhalten multifaktoriell ist"
+    },
+    {
+     "id": "gpf2-03-03",
+     "level": 0,
+     "text": "Prädiktionsmodelle"
+    },
+    {
+     "id": "gpf2-03-04",
+     "level": 1,
+     "text": "Leitgedanke: Unter welchen Umständen will jemand sein Verhalten ändern?"
+    },
+    {
+     "id": "gpf2-03-05",
+     "level": 1,
+     "text": "Wahrscheinlichkeitskontinuum, keine Aussage über einzelne Individuen"
+    },
+    {
+     "id": "gpf2-03-06",
+     "level": 1,
+     "text": "Sozial-kognitive Theorie, Health Belief Modell, Protection Motivation Theory, Theory of Reasoned Action, Theory of Planned Behavior"
+    },
+    {
+     "id": "gpf2-03-07",
+     "level": 0,
+     "text": "Dynamische Stadienmodelle"
+    },
+    {
+     "id": "gpf2-03-08",
+     "level": 1,
+     "text": "Leitgedanke: Personen befinden sich in Stadien mit individuellen Barrieren"
+    },
+    {
+     "id": "gpf2-03-09",
+     "level": 1,
+     "text": "Transtheoretisches Modell, Prozessmodell präventiven Handelns, sozial-kognitives Prozessmodell des Gesundheitsverhaltens"
+    },
+    {
+     "id": "gpf2-03-10",
+     "level": 1,
+     "text": "Nachteil: Stadien gelten vielen als bloße Heuristiken"
+    }
+   ]
+  },
+  {
+   "id": "gpf2-04",
+   "subject": "Gesundheitspsychologie",
+   "title": "GPF2 · Health Belief Modell: Grundidee",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "gpf2-04-01",
+     "level": 0,
+     "text": "= Modell gesundheitlicher Überzeugungen"
+    },
+    {
+     "id": "gpf2-04-02",
+     "level": 0,
+     "text": "Becker und Rosenstock (1950), Vorläufer moderner Gesundheitsverhaltenstheorien"
+    },
+    {
+     "id": "gpf2-04-03",
+     "level": 0,
+     "text": "Annahme: Menschliches Verhalten ist rational bestimmt"
+    },
+    {
+     "id": "gpf2-04-04",
+     "level": 0,
+     "text": "Ziel: beeinflussbare Faktoren finden, um das Gesundheitsverhalten vieler zu verbessern"
+    },
+    {
+     "id": "gpf2-04-05",
+     "level": 0,
+     "text": "Unveränderliche Faktoren: Alter, Status, Geschlecht"
+    }
+   ]
+  },
+  {
+   "id": "gpf2-05",
+   "subject": "Gesundheitspsychologie",
+   "title": "GPF2 · Health Belief Modell: die Bausteine",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "gpf2-05-01",
+     "level": 0,
+     "text": "Gesundheitsverhalten hängt ab von"
+    },
+    {
+     "id": "gpf2-05-02",
+     "level": 1,
+     "text": "Motivation"
+    },
+    {
+     "id": "gpf2-05-03",
+     "level": 1,
+     "text": "Hinweisreizen"
+    },
+    {
+     "id": "gpf2-05-04",
+     "level": 1,
+     "text": "unveränderlichen Faktoren"
+    },
+    {
+     "id": "gpf2-05-05",
+     "level": 0,
+     "text": "Ausmaß der Wirksamkeit der Verhaltensänderung"
+    },
+    {
+     "id": "gpf2-05-06",
+     "level": 1,
+     "text": "Wirksamkeit = Nutzen minus Kosten"
+    },
+    {
+     "id": "gpf2-05-07",
+     "level": 0,
+     "text": "Grad der wahrgenommenen Bedrohung"
+    },
+    {
+     "id": "gpf2-05-08",
+     "level": 1,
+     "text": "Subjektive Vulnerabilität: Verletzlichkeit, wird oft unterschätzt"
+    },
+    {
+     "id": "gpf2-05-09",
+     "level": 1,
+     "text": "Schweregrad: Wie bedrohlich wird die Krankheit eingestuft? Wird oft unterschätzt"
+    }
+   ]
+  },
+  {
+   "id": "gpf2-06",
+   "subject": "Gesundheitspsychologie",
+   "title": "GPF2 · Kritik am Health Belief Modell",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "gpf2-06-01",
+     "level": 0,
+     "text": "Zusammenhänge mit Verhalten vorhanden, aber sehr schwach"
+    },
+    {
+     "id": "gpf2-06-02",
+     "level": 0,
+     "text": "Unklar, wie die Faktoren zusammenwirken"
+    },
+    {
+     "id": "gpf2-06-03",
+     "level": 0,
+     "text": "Zu hohe Bedeutung der Bedrohung"
+    },
+    {
+     "id": "gpf2-06-04",
+     "level": 0,
+     "text": "Intention und Kompetenzerwartung fehlen"
+    },
+    {
+     "id": "gpf2-06-05",
+     "level": 0,
+     "text": "Kosten-Nutzen-Analyse zu vereinfacht"
+    },
+    {
+     "id": "gpf2-06-06",
+     "level": 0,
+     "text": "Keine Unterteilung in motivationale und volitionale Phase"
+    },
+    {
+     "id": "gpf2-06-07",
+     "level": 0,
+     "text": "Gesamtes Modell zu statisch"
+    },
+    {
+     "id": "gpf2-06-08",
+     "level": 0,
+     "text": "Fazit: gute Grundlage, aber Vorhersagekraft fraglich"
+    }
+   ]
+  },
+  {
+   "id": "gpf2-07",
+   "subject": "Gesundheitspsychologie",
+   "title": "GPF2 · Protection Motivation Theory (Theorie der Schutzmotivation)",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "gpf2-07-01",
+     "level": 0,
+     "text": "R. W. Rogers (1975)"
+    },
+    {
+     "id": "gpf2-07-02",
+     "level": 0,
+     "text": "Ziel: Wie beeinflussen Informationen die Entwicklung einer Schutzmotivation – und welches Verhalten folgt?"
+    },
+    {
+     "id": "gpf2-07-03",
+     "level": 0,
+     "text": "Ausgang: Wahrnehmung von Informationen"
+    },
+    {
+     "id": "gpf2-07-04",
+     "level": 1,
+     "text": "Furchtappelle, umweltbezogene und intrapersonale Prädiktoren"
+    },
+    {
+     "id": "gpf2-07-05",
+     "level": 0,
+     "text": "Zwei Bewertungsprozesse"
+    },
+    {
+     "id": "gpf2-07-06",
+     "level": 1,
+     "text": "Einschätzung der Bedrohung: + intrinsische und extrinsische Belohnung, − Vulnerabilität, Schweregrad"
+    },
+    {
+     "id": "gpf2-07-07",
+     "level": 1,
+     "text": "Einschätzung der Bewältigung: + Selbstwirksamkeit, positive Handlungsergebniserwartungen, − negative Handlungsergebniserwartungen"
+    },
+    {
+     "id": "gpf2-07-08",
+     "level": 0,
+     "text": "Bedrohung → Bewältigung → Schutzmotivation → Verhalten"
+    },
+    {
+     "id": "gpf2-07-09",
+     "level": 0,
+     "text": "Maladaptiv: riskantes Verhalten beibehalten oder neu aufnehmen"
+    },
+    {
+     "id": "gpf2-07-10",
+     "level": 0,
+     "text": "Adaptiv: Verhalten anpassen"
+    }
+   ]
+  },
+  {
+   "id": "gpf2-08",
+   "subject": "Gesundheitspsychologie",
+   "title": "GPF2 · Kritik an der Protection Motivation Theory",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "gpf2-08-01",
+     "level": 0,
+     "text": "Vor allem in korrelativen Querschnittstudien eingesetzt"
+    },
+    {
+     "id": "gpf2-08-02",
+     "level": 0,
+     "text": "Gut geeignet für Forschung zu Bewegung und körperlicher Aktivität"
+    },
+    {
+     "id": "gpf2-08-03",
+     "level": 0,
+     "text": "Kritik"
+    },
+    {
+     "id": "gpf2-08-04",
+     "level": 1,
+     "text": "Einfluss von Schweregrad und erlebter Bedrohung unsicher"
+    },
+    {
+     "id": "gpf2-08-05",
+     "level": 1,
+     "text": "Kombinationsregel für Bedrohungs- und Bewältigungseinschätzung fehlt"
+    },
+    {
+     "id": "gpf2-08-06",
+     "level": 1,
+     "text": "Übergang von Intention zu Verhalten schwierig"
+    },
+    {
+     "id": "gpf2-08-07",
+     "level": 1,
+     "text": "Bisher nur Einzelfaktoren geprüft"
+    },
+    {
+     "id": "gpf2-08-08",
+     "level": 0,
+     "text": "Fazit: gute Vorlage für spezielle Themen, als Ganzes in der Praxis kaum einsetzbar"
+    }
+   ]
+  },
+  {
+   "id": "gpf2-09",
+   "subject": "Gesundheitspsychologie",
+   "title": "GPF2 · Theory of Reasoned Action (Theorie der Handlungsveranlassung)",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "gpf2-09-01",
+     "level": 0,
+     "text": "Ajzen und Fishbein (1980)"
+    },
+    {
+     "id": "gpf2-09-02",
+     "level": 0,
+     "text": "Ziel: Wie wirkt die Einstellung auf das Verhalten?"
+    },
+    {
+     "id": "gpf2-09-03",
+     "level": 0,
+     "text": "Intention = wichtigster Prädiktor des Verhaltens"
+    },
+    {
+     "id": "gpf2-09-04",
+     "level": 1,
+     "text": "Intention ist immer eine Wahrscheinlichkeitsaussage"
+    },
+    {
+     "id": "gpf2-09-05",
+     "level": 0,
+     "text": "Persönliche Einstellung → Intention → Verhalten"
+    },
+    {
+     "id": "gpf2-09-06",
+     "level": 0,
+     "text": "Soziale Norm → Intention"
+    },
+    {
+     "id": "gpf2-09-07",
+     "level": 0,
+     "text": "Zwischen Intention und Verhalten: Zeit, interne und externe Hindernisse"
+    },
+    {
+     "id": "gpf2-09-08",
+     "level": 0,
+     "text": "Vier Elemente des Verhaltens: Handlung, Ziel, Kontext, Zeitpunkt"
+    }
+   ]
+  },
+  {
+   "id": "gpf2-10",
+   "subject": "Gesundheitspsychologie",
+   "title": "GPF2 · Theory of Reasoned Action: Einstellung und Norm",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "gpf2-10-01",
+     "level": 0,
+     "text": "Persönliche Einstellung"
+    },
+    {
+     "id": "gpf2-10-02",
+     "level": 1,
+     "text": "eine Gefühls-Einschätzung, eher unbestimmt"
+    },
+    {
+     "id": "gpf2-10-03",
+     "level": 1,
+     "text": "Kognitionen → Einstellungen → Handlungen"
+    },
+    {
+     "id": "gpf2-10-04",
+     "level": 1,
+     "text": "gemessen mit positiv oder negativ bewerteten Items"
+    },
+    {
+     "id": "gpf2-10-05",
+     "level": 0,
+     "text": "Soziale Norm"
+    },
+    {
+     "id": "gpf2-10-06",
+     "level": 1,
+     "text": "Menschen handeln auch danach, was andere vermutlich von ihnen erwarten"
+    },
+    {
+     "id": "gpf2-10-07",
+     "level": 1,
+     "text": "Einflüsse der Umwelt werden wahrgenommen und verinnerlicht"
+    },
+    {
+     "id": "gpf2-10-08",
+     "level": 0,
+     "text": "Kritik"
+    },
+    {
+     "id": "gpf2-10-09",
+     "level": 1,
+     "text": "erklärt nur Situationen, die man selbst unter Kontrolle hat"
+    },
+    {
+     "id": "gpf2-10-10",
+     "level": 1,
+     "text": "ist ein Verhalten nicht möglich, bildet sich keine Intention"
+    },
+    {
+     "id": "gpf2-10-11",
+     "level": 0,
+     "text": "Großer Wert auf den „generalisierten Anderen\""
+    }
+   ]
+  },
+  {
+   "id": "gpf2-11",
+   "subject": "Gesundheitspsychologie",
+   "title": "GPF2 · Theory of Planned Behavior (Theorie des geplanten Verhaltens)",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "gpf2-11-01",
+     "level": 0,
+     "text": "Erweiterung der Theory of Reasoned Action"
+    },
+    {
+     "id": "gpf2-11-02",
+     "level": 0,
+     "text": "Bleibt: Intention als wichtigster Prädiktor, beeinflusst von Einstellung und Norm"
+    },
+    {
+     "id": "gpf2-11-03",
+     "level": 0,
+     "text": "Neu: wahrgenommene Verhaltenskontrolle (Kontrollierbarkeit)"
+    },
+    {
+     "id": "gpf2-11-04",
+     "level": 1,
+     "text": "bezieht fehlende Ressourcen mit ein"
+    },
+    {
+     "id": "gpf2-11-05",
+     "level": 1,
+     "text": "wirkt auf die Intention UND direkt auf das Verhalten"
+    },
+    {
+     "id": "gpf2-11-06",
+     "level": 0,
+     "text": "Einstellung → Intention → Verhalten"
+    },
+    {
+     "id": "gpf2-11-07",
+     "level": 0,
+     "text": "Soziale Norm → Intention"
+    },
+    {
+     "id": "gpf2-11-08",
+     "level": 0,
+     "text": "Kontrollierbarkeit → Intention"
+    },
+    {
+     "id": "gpf2-11-09",
+     "level": 0,
+     "text": "Kontrollierbarkeit → Verhalten"
+    },
+    {
+     "id": "gpf2-11-10",
+     "level": 0,
+     "text": "Verwendung: Vorhersage und Erklärung von Gesundheitsverhalten"
+    }
+   ]
+  },
+  {
+   "id": "gpf2-12",
+   "subject": "Gesundheitspsychologie",
+   "title": "GPF2 · Theory of Reasoned Action vs. Theory of Planned Behavior",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "gpf2-12-01",
+     "level": 0,
+     "text": "| Reasoned Action | Planned Behavior"
+    },
+    {
+     "id": "gpf2-12-02",
+     "level": 0,
+     "text": "Prädiktoren der Intention | ?Einstellung, soziale Norm | ?Einstellung, soziale Norm, Kontrollierbarkeit"
+    },
+    {
+     "id": "gpf2-12-03",
+     "level": 0,
+     "text": "Direkter Einfluss auf Verhalten | ?nur die Intention | ?Intention und Kontrollierbarkeit"
+    },
+    {
+     "id": "gpf2-12-04",
+     "level": 0,
+     "text": "Fehlende Ressourcen | ?nicht berücksichtigt | ?berücksichtigt"
+    }
+   ]
+  },
+  {
+   "id": "gpf2-13",
+   "subject": "Gesundheitspsychologie",
+   "title": "GPF2 · Transtheoretisches Modell: die 6 Stadien",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "gpf2-13-01",
+     "level": 0,
+     "text": "Bekanntestes Stadienmodell, ursprünglich für die Raucherentwöhnung"
+    },
+    {
+     "id": "gpf2-13-02",
+     "level": 0,
+     "text": "Stadium | Merkmal"
+    },
+    {
+     "id": "gpf2-13-03",
+     "level": 0,
+     "text": "Präkontemplation | ?keine Änderung im nächsten halben Jahr geplant, Problem nicht erkannt"
+    },
+    {
+     "id": "gpf2-13-04",
+     "level": 0,
+     "text": "Kontemplation | ?Änderung im nächsten halben Jahr geplant, aber nicht im nächsten Monat"
+    },
+    {
+     "id": "gpf2-13-05",
+     "level": 0,
+     "text": "Vorbereitung | ?schon einmal versucht, will es im nächsten Monat wieder probieren"
+    },
+    {
+     "id": "gpf2-13-06",
+     "level": 0,
+     "text": "Handlung | ?ändert gerade das Verhalten (1 Tag bis 6 Monate)"
+    },
+    {
+     "id": "gpf2-13-07",
+     "level": 0,
+     "text": "Aufrechterhaltung | ?seit mehr als 6 Monaten erfolgreich"
+    },
+    {
+     "id": "gpf2-13-08",
+     "level": 0,
+     "text": "Termination | ?seit mehr als 5 Jahren erfolgreich"
+    },
+    {
+     "id": "gpf2-13-09",
+     "level": 0,
+     "text": "Rückfälle sind möglich, es entsteht ein Kreislauf; man kann lange in einem Stadium verharren"
+    }
+   ]
+  },
+  {
+   "id": "gpf2-14",
+   "subject": "Gesundheitspsychologie",
+   "title": "GPF2 · Transtheoretisches Modell: Prozesse der Veränderung",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "gpf2-14-01",
+     "level": 0,
+     "text": "Kognitiv-affektive Prozesse"
+    },
+    {
+     "id": "gpf2-14-02",
+     "level": 1,
+     "text": "Consciousness raising: Bewusstseinserhöhung"
+    },
+    {
+     "id": "gpf2-14-03",
+     "level": 1,
+     "text": "Self-reevaluation: Neubewertung der eigenen Person"
+    },
+    {
+     "id": "gpf2-14-04",
+     "level": 1,
+     "text": "Environmental reevaluation: Neubewertung der Umwelt"
+    },
+    {
+     "id": "gpf2-14-05",
+     "level": 1,
+     "text": "Dramatic relief: emotionale Relevanz"
+    },
+    {
+     "id": "gpf2-14-06",
+     "level": 1,
+     "text": "Social liberation: soziale Befreiung"
+    },
+    {
+     "id": "gpf2-14-07",
+     "level": 0,
+     "text": "Verhaltensorientierte Prozesse"
+    },
+    {
+     "id": "gpf2-14-08",
+     "level": 1,
+     "text": "Reinforcement management: Kontingenzmanagement"
+    },
+    {
+     "id": "gpf2-14-09",
+     "level": 1,
+     "text": "Helping relationships: hilfreiche Beziehungen"
+    },
+    {
+     "id": "gpf2-14-10",
+     "level": 1,
+     "text": "Counterconditioning: Gegenkonditionierung"
+    },
+    {
+     "id": "gpf2-14-11",
+     "level": 1,
+     "text": "Self-liberation: Selbstbefreiung"
+    },
+    {
+     "id": "gpf2-14-12",
+     "level": 1,
+     "text": "Stimulus control: Stimuluskontrolle"
+    }
+   ]
+  },
+  {
+   "id": "gpf2-15",
+   "subject": "Gesundheitspsychologie",
+   "title": "GPF2 · Kritik am Transtheoretischen Modell",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "gpf2-15-01",
+     "level": 0,
+     "text": "Stadien beliebig nach zeitlichen Kriterien zugeordnet"
+    },
+    {
+     "id": "gpf2-15-02",
+     "level": 0,
+     "text": "Psychologische Kriterien zu wenig berücksichtigt"
+    },
+    {
+     "id": "gpf2-15-03",
+     "level": 0,
+     "text": "Unklar: Steigt die Selbstwirksamkeit mit den Stadien?"
+    },
+    {
+     "id": "gpf2-15-04",
+     "level": 0,
+     "text": "Meist nur Einzelaspekte gemessen"
+    },
+    {
+     "id": "gpf2-15-05",
+     "level": 0,
+     "text": "Als Ganzes schwer zu operationalisieren"
+    },
+    {
+     "id": "gpf2-15-06",
+     "level": 0,
+     "text": "Stadienmodelle haben allgemein viele Gegner"
+    }
+   ]
+  },
+  {
+   "id": "gpf3-01",
+   "subject": "Gesundheitspsychologie",
+   "title": "GPF3 · Stress: Begriff und Definition",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "gpf3-01-01",
+     "level": 0,
+     "text": "Lat. stringere = zusammenziehen; engl. stress"
+    },
+    {
+     "id": "gpf3-01-02",
+     "level": 0,
+     "text": "Bis Mitte des 20. Jh. für Maschinen verwendet, danach Modewort und Leitbegriff der Gesundheitswissenschaften"
+    },
+    {
+     "id": "gpf3-01-03",
+     "level": 0,
+     "text": "Keine einheitliche Definition"
+    },
+    {
+     "id": "gpf3-01-04",
+     "level": 0,
+     "text": "EU-Agentur für Sicherheit und Gesundheitsschutz am Arbeitsplatz"
+    },
+    {
+     "id": "gpf3-01-05",
+     "level": 1,
+     "text": "Stress entsteht, wenn Menschen ein Ungleichgewicht wahrnehmen zwischen Anforderungen und den Mitteln, sie zu bewältigen"
+    },
+    {
+     "id": "gpf3-01-06",
+     "level": 0,
+     "text": "Organismus strebt nach Homöostase; starke Belastung stört das Gleichgewicht, es folgt eine Notreaktion"
+    },
+    {
+     "id": "gpf3-01-07",
+     "level": 1,
+     "text": "kurzfristige und langfristige Stressreaktionen"
+    }
+   ]
+  },
+  {
+   "id": "gpf3-02",
+   "subject": "Gesundheitspsychologie",
+   "title": "GPF3 · Eustress vs. Disstress und die 3 Definitionsgruppen",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "gpf3-02-01",
+     "level": 0,
+     "text": "Art | Bedeutung"
+    },
+    {
+     "id": "gpf3-02-02",
+     "level": 0,
+     "text": "Eustress | ?positiver Stress, Herausforderung, die motiviert"
+    },
+    {
+     "id": "gpf3-02-03",
+     "level": 0,
+     "text": "Disstress | ?negativer Stress mit Angst, Ärger"
+    },
+    {
+     "id": "gpf3-02-04",
+     "level": 0,
+     "text": "3 Gruppen von Definitionen"
+    },
+    {
+     "id": "gpf3-02-05",
+     "level": 1,
+     "text": "Stress als Reaktion (Selye)"
+    },
+    {
+     "id": "gpf3-02-06",
+     "level": 1,
+     "text": "Stress als Auslöser für Emotionen (persönlichkeitstheoretische Ansätze)"
+    },
+    {
+     "id": "gpf3-02-07",
+     "level": 1,
+     "text": "Stress als Prozess bei fehlenden Ressourcen (Lazarus)"
+    }
+   ]
+  },
+  {
+   "id": "gpf3-03",
+   "subject": "Gesundheitspsychologie",
+   "title": "GPF3 · Stressoren",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "gpf3-03-01",
+     "level": 0,
+     "text": "Faktoren, die den Alltag beeinflussen, physisch und/oder psychisch, und das Wohlbefinden beeinträchtigen"
+    },
+    {
+     "id": "gpf3-03-02",
+     "level": 0,
+     "text": "Unterscheidung nach"
+    },
+    {
+     "id": "gpf3-03-03",
+     "level": 1,
+     "text": "Dauer, Intensität"
+    },
+    {
+     "id": "gpf3-03-04",
+     "level": 1,
+     "text": "Kontrollierbarkeit, Vorhersagbarkeit"
+    },
+    {
+     "id": "gpf3-03-05",
+     "level": 1,
+     "text": "Ein- bzw. Mehrdeutigkeit, persönlichem Wert"
+    },
+    {
+     "id": "gpf3-03-06",
+     "level": 0,
+     "text": "Nach Schwere"
+    },
+    {
+     "id": "gpf3-03-07",
+     "level": 1,
+     "text": "Ereignisse, die ein Trauma verursachen"
+    },
+    {
+     "id": "gpf3-03-08",
+     "level": 1,
+     "text": "kritische Ereignisse"
+    },
+    {
+     "id": "gpf3-03-09",
+     "level": 1,
+     "text": "tägliche Ereignisse und Belastungen"
+    }
+   ]
+  },
+  {
+   "id": "gpf3-04",
+   "subject": "Gesundheitspsychologie",
+   "title": "GPF3 · Auswirkungen von Stress",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "gpf3-04-01",
+     "level": 0,
+     "text": "Negativ: körperlich"
+    },
+    {
+     "id": "gpf3-04-02",
+     "level": 1,
+     "text": "Herzkrankheiten, Geschwüre, Muskelstörungen, Verspannungen"
+    },
+    {
+     "id": "gpf3-04-03",
+     "level": 1,
+     "text": "Leistungsminderung, Gedächtnisstörungen"
+    },
+    {
+     "id": "gpf3-04-04",
+     "level": 1,
+     "text": "langfristig schwächeres Immunsystem"
+    },
+    {
+     "id": "gpf3-04-05",
+     "level": 0,
+     "text": "Negativ: psychisch"
+    },
+    {
+     "id": "gpf3-04-06",
+     "level": 1,
+     "text": "Depressionen, allgemeine Erschöpfung, Burnout"
+    },
+    {
+     "id": "gpf3-04-07",
+     "level": 0,
+     "text": "Positiv"
+    },
+    {
+     "id": "gpf3-04-08",
+     "level": 1,
+     "text": "ausgeglichener Wechsel zwischen Entspannung und Aktivierung"
+    },
+    {
+     "id": "gpf3-04-09",
+     "level": 1,
+     "text": "kurzfristig evtl. positiv fürs Immunsystem"
+    },
+    {
+     "id": "gpf3-04-10",
+     "level": 0,
+     "text": "Messung"
+    },
+    {
+     "id": "gpf3-04-11",
+     "level": 1,
+     "text": "Kortisolwerte (Speichel, Urin)"
+    },
+    {
+     "id": "gpf3-04-12",
+     "level": 1,
+     "text": "persönliche Auswirkungen"
+    }
+   ]
+  },
+  {
+   "id": "gpf3-05",
+   "subject": "Gesundheitspsychologie",
+   "title": "GPF3 · Laux: Vier Theorierichtungen der Stressforschung",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "gpf3-05-01",
+     "level": 0,
+     "text": "Reaktionsorientierte und psychophysiologische Stresstheorien"
+    },
+    {
+     "id": "gpf3-05-02",
+     "level": 0,
+     "text": "Stimulusorientierte Stresstheorien"
+    },
+    {
+     "id": "gpf3-05-03",
+     "level": 0,
+     "text": "Kognitiv-transaktionale Stresstheorie"
+    },
+    {
+     "id": "gpf3-05-04",
+     "level": 0,
+     "text": "Theorie der Ressourcenerhaltung"
+    }
+   ]
+  },
+  {
+   "id": "gpf3-06",
+   "subject": "Gesundheitspsychologie",
+   "title": "GPF3 · Reaktionsorientierte Stresstheorien (Selye)",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "gpf3-06-01",
+     "level": 0,
+     "text": "Aus Medizin, Biologie, Psychophysiologie; Stress als biologischer Prozess"
+    },
+    {
+     "id": "gpf3-06-02",
+     "level": 0,
+     "text": "Vertreter: Cannon (1915, 1932), Selye (1976) – Selye = „Vater des Stresses\""
+    },
+    {
+     "id": "gpf3-06-03",
+     "level": 0,
+     "text": "Auslöser gilt als gegeben, externe Reize rufen Reaktionen hervor"
+    },
+    {
+     "id": "gpf3-06-04",
+     "level": 0,
+     "text": "Ablauf: Alarmreaktion → Widerstand → Erschöpfung"
+    },
+    {
+     "id": "gpf3-06-05",
+     "level": 0,
+     "text": "Kritik: Reduktion auf Physiologie und Biologie, aber erste wichtige Erkenntnisse"
+    }
+   ]
+  },
+  {
+   "id": "gpf3-07",
+   "subject": "Gesundheitspsychologie",
+   "title": "GPF3 · Stimulusorientierte Stresstheorien",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "gpf3-07-01",
+     "level": 0,
+     "text": "Stärke des Stresses hängt vom Stressor ab, Coping muss angepasst sein"
+    },
+    {
+     "id": "gpf3-07-02",
+     "level": 0,
+     "text": "Individuum gilt als Opfer von Stresssituationen"
+    },
+    {
+     "id": "gpf3-07-03",
+     "level": 0,
+     "text": "Bereiche"
+    },
+    {
+     "id": "gpf3-07-04",
+     "level": 1,
+     "text": "Kritische Lebensereignisse (Holmes und Rahe, 1967)"
+    },
+    {
+     "id": "gpf3-07-05",
+     "level": 1,
+     "text": "Alltagsschwierigkeiten (Lazarus, 1984)"
+    },
+    {
+     "id": "gpf3-07-06",
+     "level": 0,
+     "text": "DeLongis et al. (1988): Instrument für Alltagsschwierigkeiten vs. Alltagsfreuden, 53 Bereiche"
+    },
+    {
+     "id": "gpf3-07-07",
+     "level": 1,
+     "text": "zentrale Schwierigkeiten: kehren immer wieder"
+    },
+    {
+     "id": "gpf3-07-08",
+     "level": 1,
+     "text": "periphere Schwierigkeiten: treten seltener auf"
+    },
+    {
+     "id": "gpf3-07-09",
+     "level": 0,
+     "text": "Kritik: Ereignisse zu wenig systematisch, Stressoren schlecht vorhersagbar"
+    }
+   ]
+  },
+  {
+   "id": "gpf3-08",
+   "subject": "Gesundheitspsychologie",
+   "title": "GPF3 · Kognitiv-transaktionale Stresstheorie (Lazarus)",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "gpf3-08-01",
+     "level": 0,
+     "text": "Lazarus (1984), bekannteste und einflussreichste Stresstheorie"
+    },
+    {
+     "id": "gpf3-08-02",
+     "level": 0,
+     "text": "Kognitiv: Die subjektive Einschätzung ist Ausgangspunkt der Stresssituation"
+    },
+    {
+     "id": "gpf3-08-03",
+     "level": 0,
+     "text": "Transaktional: Individuum und Umwelt hängen zusammen, das Ganze ist mehr als die Teile"
+    },
+    {
+     "id": "gpf3-08-04",
+     "level": 0,
+     "text": "Primary appraisal: Einschätzung der Situation"
+    },
+    {
+     "id": "gpf3-08-05",
+     "level": 1,
+     "text": "Wie wird das Wohlbefinden beeinflusst? Vorhersagbarkeit, Kontrollierbarkeit, Dauer"
+    },
+    {
+     "id": "gpf3-08-06",
+     "level": 0,
+     "text": "Secondary appraisal: Einschätzung der eigenen Ressourcen"
+    },
+    {
+     "id": "gpf3-08-07",
+     "level": 1,
+     "text": "Motive, Ziele, Erwartungen"
+    },
+    {
+     "id": "gpf3-08-08",
+     "level": 0,
+     "text": "Die Reihenfolge kann sich auch umkehren"
+    }
+   ]
+  },
+  {
+   "id": "gpf3-09",
+   "subject": "Gesundheitspsychologie",
+   "title": "GPF3 · Lazarus: Bewertung, Bewältigung und Kritik",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "gpf3-09-01",
+     "level": 0,
+     "text": "Ereignis | Bewertung"
+    },
+    {
+     "id": "gpf3-09-02",
+     "level": 0,
+     "text": "in der Vergangenheit | ?Schaden, Gewinn oder Gleichgültigkeit"
+    },
+    {
+     "id": "gpf3-09-03",
+     "level": 0,
+     "text": "in der Zukunft | ?Herausforderung oder Bedrohung"
+    },
+    {
+     "id": "gpf3-09-04",
+     "level": 0,
+     "text": "Bewältigung: problemorientiert oder emotionsorientiert"
+    },
+    {
+     "id": "gpf3-09-05",
+     "level": 0,
+     "text": "Kritik"
+    },
+    {
+     "id": "gpf3-09-06",
+     "level": 1,
+     "text": "schwer zu operationalisieren"
+    },
+    {
+     "id": "gpf3-09-07",
+     "level": 1,
+     "text": "kein empirischer Gesamtnachweis"
+    },
+    {
+     "id": "gpf3-09-08",
+     "level": 1,
+     "text": "eher subjektiv ausgerichtet"
+    },
+    {
+     "id": "gpf3-09-09",
+     "level": 1,
+     "text": "Auslöser schwer von der Reaktion zu trennen"
+    }
+   ]
+  },
+  {
+   "id": "gpf3-10",
+   "subject": "Gesundheitspsychologie",
+   "title": "GPF3 · Theorie der Ressourcenerhaltung (Hobfoll)",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "gpf3-10-01",
+     "level": 0,
+     "text": "Hobfoll (1989): Alle versuchen zu bekommen und zu schützen, was ihnen wichtig ist"
+    },
+    {
+     "id": "gpf3-10-02",
+     "level": 0,
+     "text": "Ressourcen: Objekte, Bedingungen, personale Ressourcen, Energieressourcen"
+    },
+    {
+     "id": "gpf3-10-03",
+     "level": 0,
+     "text": "Stress entsteht, wenn Ressourcen fehlen, verloren gehen oder kein Gewinn möglich ist"
+    },
+    {
+     "id": "gpf3-10-04",
+     "level": 0,
+     "text": "Zwei Prinzipien"
+    },
+    {
+     "id": "gpf3-10-05",
+     "level": 1,
+     "text": "Verlust wiegt schwerer als ein gleich großer Gewinn"
+    },
+    {
+     "id": "gpf3-10-06",
+     "level": 1,
+     "text": "Stress entsteht, weil man Ressourcen schützen und neue gewinnen muss"
+    },
+    {
+     "id": "gpf3-10-07",
+     "level": 0,
+     "text": "Ableitungen"
+    },
+    {
+     "id": "gpf3-10-08",
+     "level": 1,
+     "text": "generelle Ungleichheit"
+    },
+    {
+     "id": "gpf3-10-09",
+     "level": 1,
+     "text": "Verlust-Spirale: wer verliert, verliert schnell weiter"
+    },
+    {
+     "id": "gpf3-10-10",
+     "level": 1,
+     "text": "Gewinn-Spirale: wer gewinnt, gewinnt leichter dazu"
+    },
+    {
+     "id": "gpf3-10-11",
+     "level": 1,
+     "text": "wer wenig Ressourcen hat, sollte defensiv statt offensiv vorgehen"
+    },
+    {
+     "id": "gpf3-10-12",
+     "level": 0,
+     "text": "Kritik: nur eine modernere Version von Lazarus; aber leichter messbar"
+    }
+   ]
+  },
+  {
+   "id": "gpf3-11",
+   "subject": "Gesundheitspsychologie",
+   "title": "GPF3 · Coping: Formen der Bewältigung",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "gpf3-11-01",
+     "level": 0,
+     "text": "Coping = Bewältigung: mit Stressoren umgehen, Gleichgewicht wiederherstellen"
+    },
+    {
+     "id": "gpf3-11-02",
+     "level": 0,
+     "text": "Nach Ansatz"
+    },
+    {
+     "id": "gpf3-11-03",
+     "level": 1,
+     "text": "Problemzentriert: Stressor verändern oder ausschalten"
+    },
+    {
+     "id": "gpf3-11-04",
+     "level": 1,
+     "text": "Emotionszentriert: mit den entstandenen Gefühlen umgehen"
+    },
+    {
+     "id": "gpf3-11-05",
+     "level": 0,
+     "text": "Nach Zeit"
+    },
+    {
+     "id": "gpf3-11-06",
+     "level": 1,
+     "text": "Reaktiv: auf die Vergangenheit bezogen"
+    },
+    {
+     "id": "gpf3-11-07",
+     "level": 1,
+     "text": "Antizipatorisch: Situation tritt sehr wahrscheinlich ein"
+    },
+    {
+     "id": "gpf3-11-08",
+     "level": 1,
+     "text": "Präventiv: unsicher, ob die Situation eintritt"
+    },
+    {
+     "id": "gpf3-11-09",
+     "level": 1,
+     "text": "Proaktiv: das Leben mit Möglichkeiten und Perspektiven ausstatten"
+    },
+    {
+     "id": "gpf3-11-10",
+     "level": 0,
+     "text": "PCI: Fragebogen zu allgemeiner und proaktiver Stressbewältigung (Schwarzer, Greenglass & Taubert, 2000)"
+    }
+   ]
+  },
+  {
+   "id": "gpf3-12",
+   "subject": "Gesundheitspsychologie",
+   "title": "GPF3 · Coping und Krankheit",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "gpf3-12-01",
+     "level": 0,
+     "text": "Coping ist schwer messbar, kaum einheitlich"
+    },
+    {
+     "id": "gpf3-12-02",
+     "level": 0,
+     "text": "Coping hat oft mehr Einfluss auf Krankheit als die Stressoren selbst"
+    },
+    {
+     "id": "gpf3-12-03",
+     "level": 1,
+     "text": "Grund: dauernde Anstrengung, Ressourcen aufzuwenden"
+    },
+    {
+     "id": "gpf3-12-04",
+     "level": 0,
+     "text": "Typ-A-Verhalten (Ehrgeiz, Leistung, Konkurrenz, Ungeduld)"
+    },
+    {
+     "id": "gpf3-12-05",
+     "level": 1,
+     "text": "begünstigt ungesunden Lebensstil, Rauchen, Herz-Kreislauf-Erkrankungen"
+    },
+    {
+     "id": "gpf3-12-06",
+     "level": 0,
+     "text": "Erhöhtes Risiko sowohl bei häufig unterdrücktem als auch bei häufig geäußertem Ärger"
+    },
+    {
+     "id": "gpf3-12-07",
+     "level": 0,
+     "text": "Schutzfaktoren: Persönlichkeit, soziale Netzwerke, soziale Unterstützung"
+    }
+   ]
+  },
+  {
+   "id": "gpf3-13",
+   "subject": "Gesundheitspsychologie",
+   "title": "GPF3 · Persönliche Ressourcen und Persönlichkeitstypen",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "gpf3-13-01",
+     "level": 0,
+     "text": "Persönliche Ressourcen"
+    },
+    {
+     "id": "gpf3-13-02",
+     "level": 1,
+     "text": "Kompetenzerwartung"
+    },
+    {
+     "id": "gpf3-13-03",
+     "level": 1,
+     "text": "Optimismus"
+    },
+    {
+     "id": "gpf3-13-04",
+     "level": 1,
+     "text": "Hardiness: Engagement, Kontrolle, Herausforderung"
+    },
+    {
+     "id": "gpf3-13-05",
+     "level": 1,
+     "text": "Kohärenzsinn"
+    },
+    {
+     "id": "gpf3-13-06",
+     "level": 0,
+     "text": "Typ | Merkmale"
+    },
+    {
+     "id": "gpf3-13-07",
+     "level": 0,
+     "text": "Typ A | ?laut, schnell, feindselig, ungeduldig, leistungs- und erfolgsorientiert; mehr koronare Herzkrankheit"
+    },
+    {
+     "id": "gpf3-13-08",
+     "level": 0,
+     "text": "Typ B | ?wenig Typ-A-Eigenschaften"
+    },
+    {
+     "id": "gpf3-13-09",
+     "level": 0,
+     "text": "Typ C | ?„Krebspersönlichkeit\": meidet Konflikte, opferbereit, stellt andere vor sich"
+    },
+    {
+     "id": "gpf3-13-10",
+     "level": 0,
+     "text": "Typ A nach Friedman und Rosenman; Typenmodelle sind schwer messbar"
+    }
+   ]
+  },
+  {
+   "id": "gpf3-14",
+   "subject": "Gesundheitspsychologie",
+   "title": "GPF3 · Resilienz",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "gpf3-14-01",
+     "level": 0,
+     "text": "Lat. resilire = zurückspringen, abprallen"
+    },
+    {
+     "id": "gpf3-14-02",
+     "level": 0,
+     "text": "Widerstandsfähigkeit: trotz widriger Umstände gesund bleiben, flexibel sein"
+    },
+    {
+     "id": "gpf3-14-03",
+     "level": 0,
+     "text": "Salutogenetische Leitfrage: Warum bleiben Menschen gesund?"
+    },
+    {
+     "id": "gpf3-14-04",
+     "level": 0,
+     "text": "Ergebnis | Gesundheitsrisiko | Gesundheit"
+    },
+    {
+     "id": "gpf3-14-05",
+     "level": 0,
+     "text": "Vulnerabel | ?gering | ?schlecht"
+    },
+    {
+     "id": "gpf3-14-06",
+     "level": 0,
+     "text": "Nicht resilient | ?hoch | ?schlecht"
+    },
+    {
+     "id": "gpf3-14-07",
+     "level": 0,
+     "text": "Resilient | ?hoch | ?gut"
+    }
+   ]
+  },
+  {
+   "id": "gpf3-15",
+   "subject": "Gesundheitspsychologie",
+   "title": "GPF3 · Resilienz: Person und Umwelt (Rutter, 1987)",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "gpf3-15-01",
+     "level": 0,
+     "text": "Umweltfaktoren: soziales Netzwerk, Erziehungsstil, schulische Bildung, Förderung"
+    },
+    {
+     "id": "gpf3-15-02",
+     "level": 0,
+     "text": "Man kann in einem Lebensbereich resilient und in einem anderen „krank\" sein"
+    },
+    {
+     "id": "gpf3-15-03",
+     "level": 0,
+     "text": "Auch ein negatives Erlebnis kann später zum Schutzfaktor werden"
+    },
+    {
+     "id": "gpf3-15-04",
+     "level": 0,
+     "text": "Rutters Hauptannahmen"
+    },
+    {
+     "id": "gpf3-15-05",
+     "level": 1,
+     "text": "Niemand ist absolut immun gegen Stress"
+    },
+    {
+     "id": "gpf3-15-06",
+     "level": 1,
+     "text": "Persönlichkeit und Umwelt beeinflussen die Resilienz je nach Risiko"
+    },
+    {
+     "id": "gpf3-15-07",
+     "level": 1,
+     "text": "Resilienz betrifft immer nur einzelne Risikofaktoren, nie alle"
+    },
+    {
+     "id": "gpf3-15-08",
+     "level": 1,
+     "text": "Ein Merkmal kann in einer Situation schützen und in einer anderen schaden"
+    }
+   ]
+  },
+  {
+   "id": "gpf3-16",
+   "subject": "Gesundheitspsychologie",
+   "title": "GPF3 · Kriterien erfolgreicher Anpassung",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "gpf3-16-01",
+     "level": 0,
+     "text": "Subjektives Wohlbefinden"
+    },
+    {
+     "id": "gpf3-16-02",
+     "level": 0,
+     "text": "Fehlen von Störungen"
+    },
+    {
+     "id": "gpf3-16-03",
+     "level": 0,
+     "text": "Fitness"
+    },
+    {
+     "id": "gpf3-16-04",
+     "level": 0,
+     "text": "Beruf erfolgreich ausüben können"
+    },
+    {
+     "id": "gpf3-16-05",
+     "level": 0,
+     "text": "Leistungsfähigkeit"
+    },
+    {
+     "id": "gpf3-16-06",
+     "level": 0,
+     "text": "Positive Sozialbeziehungen"
+    },
+    {
+     "id": "gpf3-16-07",
+     "level": 0,
+     "text": "Wiedereingliederung in Alltag und Sozialkontakte nach Krankheit"
+    }
+   ]
+  },
+  {
+   "id": "gpf3-17",
+   "subject": "Gesundheitspsychologie",
+   "title": "GPF3 · Positive und negative Affektivität",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "gpf3-17-01",
+     "level": 0,
+     "text": "| Positive Affektivität | Negative Affektivität"
+    },
+    {
+     "id": "gpf3-17-02",
+     "level": 0,
+     "text": "Frage | wie begeistert, engagiert, achtsam? | wie ungeduldig, angespannt?"
+    },
+    {
+     "id": "gpf3-17-03",
+     "level": 0,
+     "text": "hoch | ?Dynamik, Leistung, Tatkraft | ?Beklemmung, Nervosität"
+    },
+    {
+     "id": "gpf3-17-04",
+     "level": 0,
+     "text": "niedrig | ?Desinteresse, Passivität, Traurigkeit | ?Ruhe, Ausgewogenheit"
+    },
+    {
+     "id": "gpf3-17-05",
+     "level": 0,
+     "text": "Folgen bei hoher Ausprägung | ?geringeres Erkrankungs- und Mortalitätsrisiko | ?mehr Depression, eher Herz-Kreislauf-Erkrankungen"
+    }
+   ]
+  },
+  {
+   "id": "gpf3-18",
+   "subject": "Gesundheitspsychologie",
+   "title": "GPF3 · Soziale Unterstützung vs. soziale Integration",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "gpf3-18-01",
+     "level": 0,
+     "text": "Soziale Unterstützung | Soziale Integration"
+    },
+    {
+     "id": "gpf3-18-02",
+     "level": 0,
+     "text": "tatsächliche Interaktion zwischen Menschen | ?Quantität von Beziehungen"
+    },
+    {
+     "id": "gpf3-18-03",
+     "level": 0,
+     "text": "Qualität von Beziehungen | ?gemessen über Indikatoren wie Familienstand"
+    },
+    {
+     "id": "gpf3-18-04",
+     "level": 0,
+     "text": "Wahrgenommene Unterstützung"
+    },
+    {
+     "id": "gpf3-18-05",
+     "level": 1,
+     "text": "„Wer würde dir zur Seite stehen, wenn du Pflege brauchst?\""
+    },
+    {
+     "id": "gpf3-18-06",
+     "level": 0,
+     "text": "Erhaltene Unterstützung"
+    },
+    {
+     "id": "gpf3-18-07",
+     "level": 1,
+     "text": "Fragen nach Hilfe in der Vergangenheit, objektive Beobachtung"
+    }
+   ]
+  },
+  {
+   "id": "gpf3-19",
+   "subject": "Gesundheitspsychologie",
+   "title": "GPF3 · Arten und Wirkung sozialer Unterstützung",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "gpf3-19-01",
+     "level": 0,
+     "text": "Drei Arten"
+    },
+    {
+     "id": "gpf3-19-02",
+     "level": 1,
+     "text": "emotionale Unterstützung"
+    },
+    {
+     "id": "gpf3-19-03",
+     "level": 1,
+     "text": "informationelle Unterstützung"
+    },
+    {
+     "id": "gpf3-19-04",
+     "level": 1,
+     "text": "instrumentelle Unterstützung"
+    },
+    {
+     "id": "gpf3-19-05",
+     "level": 0,
+     "text": "Unterstützung kann auch negativ wirken"
+    },
+    {
+     "id": "gpf3-19-06",
+     "level": 0,
+     "text": "Idealfall: Helfer, Empfänger und Beobachter kommen zum gleichen Ergebnis"
+    },
+    {
+     "id": "gpf3-19-07",
+     "level": 1,
+     "text": "Helfer: altruistische Absicht; Empfänger: wahrgenommener Nutzen; Beobachter: stattgefundene Unterstützung"
+    },
+    {
+     "id": "gpf3-19-08",
+     "level": 0,
+     "text": "Besonders wirksam"
+    },
+    {
+     "id": "gpf3-19-09",
+     "level": 1,
+     "text": "unsichtbare Unterstützung"
+    },
+    {
+     "id": "gpf3-19-10",
+     "level": 1,
+     "text": "Reziprozität: wenn man etwas zurückgeben kann"
+    },
+    {
+     "id": "gpf3-19-11",
+     "level": 1,
+     "text": "mobilisierende Unterstützung: spontane Hilfe wirkt mehr als eingeforderte"
+    },
+    {
+     "id": "gpf3-19-12",
+     "level": 0,
+     "text": "Manche können in Stresssituationen schwer Hilfe annehmen; Geschlechtsunterschiede"
+    }
+   ]
+  },
+  {
+   "id": "gpf4-01",
+   "subject": "Gesundheitspsychologie",
+   "title": "GPF4 · Gesundheitsförderung: Ottawa-Charta",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "gpf4-01-01",
+     "level": 0,
+     "text": "Konzept aus dem 20. Jh., bezieht sich auf die Salutogenese: Warum bleiben Menschen gesund?"
+    },
+    {
+     "id": "gpf4-01-02",
+     "level": 0,
+     "text": "Ottawa-Charta der WHO (1986)"
+    },
+    {
+     "id": "gpf4-01-03",
+     "level": 1,
+     "text": "„Gesundheitsförderung zielt auf einen Prozess, allen Menschen ein höheres Maß an Selbstbestimmung über ihre Gesundheit zu ermöglichen und sie damit zur Stärkung ihrer Gesundheit zu befähigen.\""
+    },
+    {
+     "id": "gpf4-01-04",
+     "level": 0,
+     "text": "Schlüsselpunkte"
+    },
+    {
+     "id": "gpf4-01-05",
+     "level": 1,
+     "text": "Empowerment"
+    },
+    {
+     "id": "gpf4-01-06",
+     "level": 1,
+     "text": "Intersektoralität"
+    }
+   ]
+  },
+  {
+   "id": "gpf4-02",
+   "subject": "Gesundheitspsychologie",
+   "title": "GPF4 · Ressourcenförderung: Grundlagen",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "gpf4-02-01",
+     "level": 0,
+     "text": "Strategie hinter Empowerment: ressourcenorientierte Gesundheitsförderung"
+    },
+    {
+     "id": "gpf4-02-02",
+     "level": 0,
+     "text": "Basis"
+    },
+    {
+     "id": "gpf4-02-03",
+     "level": 1,
+     "text": "Individuelle Ressourcen: emotionale, soziale, kognitive Kompetenzen"
+    },
+    {
+     "id": "gpf4-02-04",
+     "level": 1,
+     "text": "Systemische Ressourcen: Klima in Schule, Familie, Betrieb"
+    },
+    {
+     "id": "gpf4-02-05",
+     "level": 0,
+     "text": "Allgemeine vs. gesundheitsspezifische Ressourcenförderung"
+    },
+    {
+     "id": "gpf4-02-06",
+     "level": 0,
+     "text": "Schlüsselressource: Selbstwirksamkeit"
+    },
+    {
+     "id": "gpf4-02-07",
+     "level": 1,
+     "text": "für realistische Ziele, Ausdauer, Anstrengung, Umgang mit Rückschlägen"
+    },
+    {
+     "id": "gpf4-02-08",
+     "level": 1,
+     "text": "für Gesundheitsverhalten, Stressbewältigung, schwierige Lebenssituationen"
+    }
+   ]
+  },
+  {
+   "id": "gpf4-03",
+   "subject": "Gesundheitspsychologie",
+   "title": "GPF4 · Allgemeine Ressourcenförderung",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "gpf4-03-01",
+     "level": 0,
+     "text": "Copingstrategien fördern, um mit Alltagssituationen umgehen zu können"
+    },
+    {
+     "id": "gpf4-03-02",
+     "level": 0,
+     "text": "Ressource | Fähigkeit"
+    },
+    {
+     "id": "gpf4-03-03",
+     "level": 0,
+     "text": "kognitiv | ?Probleme lösen, Wissen und Kreativität einsetzen"
+    },
+    {
+     "id": "gpf4-03-04",
+     "level": 0,
+     "text": "motorisch-sensorisch | ?entspannen, sich frei bewegen"
+    },
+    {
+     "id": "gpf4-03-05",
+     "level": 0,
+     "text": "emotional | ?Bindungen eingehen, mit eigenen und fremden Gefühlen umgehen"
+    },
+    {
+     "id": "gpf4-03-06",
+     "level": 0,
+     "text": "sozial | ?kommunizieren, Kritik üben und annehmen"
+    },
+    {
+     "id": "gpf4-03-07",
+     "level": 0,
+     "text": "Altersabhängig, lebenslang; Lebensstile werden schon in Kindheit und Jugend geprägt"
+    },
+    {
+     "id": "gpf4-03-08",
+     "level": 0,
+     "text": "Ziele: weniger gesundheitliche Ungleichheit, Lebenskompetenzen, gesundheitsfördernde Lebenswelten"
+    }
+   ]
+  },
+  {
+   "id": "gpf4-04",
+   "subject": "Gesundheitspsychologie",
+   "title": "GPF4 · Gesundheitsspezifische Ressourcenförderung",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "gpf4-04-01",
+     "level": 0,
+     "text": "Kompetenzen für gesundheitsförderliches Verhalten und weniger riskantes Verhalten"
+    },
+    {
+     "id": "gpf4-04-02",
+     "level": 0,
+     "text": "Bei Kindern Eltern einbeziehen"
+    },
+    {
+     "id": "gpf4-04-03",
+     "level": 0,
+     "text": "Bereits angeeignetes Verhalten ist schwer zu ändern"
+    },
+    {
+     "id": "gpf4-04-04",
+     "level": 0,
+     "text": "Spezifische Ressourcen"
+    },
+    {
+     "id": "gpf4-04-05",
+     "level": 1,
+     "text": "realitätsnahe Risikowahrnehmung"
+    },
+    {
+     "id": "gpf4-04-06",
+     "level": 1,
+     "text": "Vorschläge für Handlungsoptionen"
+    },
+    {
+     "id": "gpf4-04-07",
+     "level": 0,
+     "text": "Verhaltensumstellung ist ein länger dauernder Prozess mit Stadien"
+    },
+    {
+     "id": "gpf4-04-08",
+     "level": 1,
+     "text": "Zielerreichung definieren, Kompetenzen stärken"
+    }
+   ]
+  },
+  {
+   "id": "gpf4-05",
+   "subject": "Gesundheitspsychologie",
+   "title": "GPF4 · Ausgewählte Themen – mit welchem Modell erklärt?",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "gpf4-05-01",
+     "level": 0,
+     "text": "Thema | Modell"
+    },
+    {
+     "id": "gpf4-05-02",
+     "level": 0,
+     "text": "Sonnenschutz | ?Health Belief Modell"
+    },
+    {
+     "id": "gpf4-05-03",
+     "level": 0,
+     "text": "Ernährung und Gewicht | ?Sozial-kognitive Theorie"
+    },
+    {
+     "id": "gpf4-05-04",
+     "level": 0,
+     "text": "Bewegung | ?Theory of Planned Behavior"
+    },
+    {
+     "id": "gpf4-05-05",
+     "level": 0,
+     "text": "Sonnenschutz: Ambivalenz – Sonne gut für die Psyche, schlecht für die Haut"
+    },
+    {
+     "id": "gpf4-05-06",
+     "level": 0,
+     "text": "Ernährung: viele psychologische Einflüsse, Lebensstil relevant"
+    },
+    {
+     "id": "gpf4-05-07",
+     "level": 0,
+     "text": "Bewegung: braucht hohe Motivation und Selbstwirksamkeit"
+    }
+   ]
+  },
+  {
+   "id": "gpf4-06",
+   "subject": "Gesundheitspsychologie",
+   "title": "GPF4 · Sonnenschutz: Hautkrebs und Risiko",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "gpf4-06-01",
+     "level": 0,
+     "text": "Melanom-Fälle in Österreich steigen (1991 bis 2011 etwa verdoppelt)"
+    },
+    {
+     "id": "gpf4-06-02",
+     "level": 0,
+     "text": "Hautkrebsart | Hauptursache"
+    },
+    {
+     "id": "gpf4-06-03",
+     "level": 0,
+     "text": "Spinaliom | ?Lebenszeitdosis UV"
+    },
+    {
+     "id": "gpf4-06-04",
+     "level": 0,
+     "text": "Basaliom | ?Lebenszeitdosis UV, intensive Bestrahlung in Kindheit und Jugend"
+    },
+    {
+     "id": "gpf4-06-05",
+     "level": 0,
+     "text": "Melanom | ?kurzfristige, sehr intensive UV-Exposition"
+    },
+    {
+     "id": "gpf4-06-06",
+     "level": 0,
+     "text": "Exposition vermeiden ist am effektivsten; Maßnahmen während der Exposition sind nicht effizient"
+    },
+    {
+     "id": "gpf4-06-07",
+     "level": 0,
+     "text": "Ein Melanom entsteht meist über 10 Jahre oder länger"
+    },
+    {
+     "id": "gpf4-06-08",
+     "level": 0,
+     "text": "Männer häufiger leichtere, Frauen häufiger schwerere Hautkrebstypen"
+    },
+    {
+     "id": "gpf4-06-09",
+     "level": 0,
+     "text": "Risiko wird unterschätzt, steigt mit dem Alter"
+    },
+    {
+     "id": "gpf4-06-10",
+     "level": 0,
+     "text": "Schutz: Sonnenbrille, schützende Kleidung, Sonnencreme passend zum Hauttyp"
+    }
+   ]
+  },
+  {
+   "id": "gpf4-07",
+   "subject": "Gesundheitspsychologie",
+   "title": "GPF4 · Sonnenschutzverhalten",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "gpf4-07-01",
+     "level": 0,
+     "text": "Gebräunte Haut als Statussymbol für Vitalität und Gesundheit"
+    },
+    {
+     "id": "gpf4-07-02",
+     "level": 0,
+     "text": "Verhalten hängt ab von"
+    },
+    {
+     "id": "gpf4-07-03",
+     "level": 1,
+     "text": "selbst wahrgenommener Gefahr"
+    },
+    {
+     "id": "gpf4-07-04",
+     "level": 1,
+     "text": "Vorwissen"
+    },
+    {
+     "id": "gpf4-07-05",
+     "level": 1,
+     "text": "bewerteten Vor- und Nachteilen"
+    },
+    {
+     "id": "gpf4-07-06",
+     "level": 1,
+     "text": "Kompetenzerwartungen"
+    },
+    {
+     "id": "gpf4-07-07",
+     "level": 0,
+     "text": "Geprägt in Kindheit und Jugend (Verhalten der Eltern)"
+    },
+    {
+     "id": "gpf4-07-08",
+     "level": 0,
+     "text": "Positiv an der Sonne: Vitamin D, Licht und Wärme für die Psyche"
+    },
+    {
+     "id": "gpf4-07-09",
+     "level": 0,
+     "text": "Studie (Keesling & Friedman, 1987)"
+    },
+    {
+     "id": "gpf4-07-10",
+     "level": 1,
+     "text": "Frauen verwenden eher Sonnenschutz als Männer"
+    },
+    {
+     "id": "gpf4-07-11",
+     "level": 1,
+     "text": "Risikofreude, Freundeskreis, optimistischer Fehlschluss"
+    },
+    {
+     "id": "gpf4-07-12",
+     "level": 0,
+     "text": "Kontrollgruppenstudien wären nötig, sind aber ethisch nicht vertretbar"
+    }
+   ]
+  },
+  {
+   "id": "gpf4-08",
+   "subject": "Gesundheitspsychologie",
+   "title": "GPF4 · Beispiel Frau A. (Health Belief Modell)",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "gpf4-08-01",
+     "level": 0,
+     "text": "50 Jahre, Hauttyp 2, auffällige Muttermale, Sonnenbrände, sehr licht- und wärmebedürftig"
+    },
+    {
+     "id": "gpf4-08-02",
+     "level": 0,
+     "text": "Bräunt sich, um gut auszusehen und das Selbstbewusstsein zu stärken"
+    },
+    {
+     "id": "gpf4-08-03",
+     "level": 0,
+     "text": "Motivation: gering"
+    },
+    {
+     "id": "gpf4-08-04",
+     "level": 0,
+     "text": "Hinweisreize: Werbung"
+    },
+    {
+     "id": "gpf4-08-05",
+     "level": 0,
+     "text": "Nutzen: weniger Sonnenbrände"
+    },
+    {
+     "id": "gpf4-08-06",
+     "level": 0,
+     "text": "Kosten: Psyche, Aussehen"
+    },
+    {
+     "id": "gpf4-08-07",
+     "level": 0,
+     "text": "Eigenes Risiko: als minimal eingeschätzt"
+    },
+    {
+     "id": "gpf4-08-08",
+     "level": 0,
+     "text": "Schweregrad: eher hoch"
+    }
+   ]
+  },
+  {
+   "id": "gpf4-09",
+   "subject": "Gesundheitspsychologie",
+   "title": "GPF4 · Ernährung und Übergewicht",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "gpf4-09-01",
+     "level": 0,
+     "text": "Störungen: Mangelernährung, Magersucht, Übergewicht, Adipositas"
+    },
+    {
+     "id": "gpf4-09-02",
+     "level": 0,
+     "text": "Nahrungsaufnahme hängt ab von Hunger, Erziehung, Stress, Belastungen"
+    },
+    {
+     "id": "gpf4-09-03",
+     "level": 0,
+     "text": "Zusatzrisiken bei Übergewicht: Bluthochdruck, Cholesterin, Diabetes, Krebs"
+    },
+    {
+     "id": "gpf4-09-04",
+     "level": 0,
+     "text": "Einflussfaktoren: Bewegung, Essverhalten, Sättigungsregulation, Genetik, Fettzellen, Sozialisation, sozioökonomischer Status"
+    },
+    {
+     "id": "gpf4-09-05",
+     "level": 0,
+     "text": "Weitere Essstörungen: Anorexia nervosa, Bulimia nervosa, Binge Eating Disorder"
+    }
+   ]
+  },
+  {
+   "id": "gpf4-10",
+   "subject": "Gesundheitspsychologie",
+   "title": "GPF4 · Ernährung: Frauen vs. Männer",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "gpf4-10-01",
+     "level": 0,
+     "text": "Frauen | Männer"
+    },
+    {
+     "id": "gpf4-10-02",
+     "level": 0,
+     "text": "geringerer Tagesenergieumsatz | ?hoher Tagesenergieumsatz"
+    },
+    {
+     "id": "gpf4-10-03",
+     "level": 0,
+     "text": "Fettgewebe ändert sich in Pubertät, Schwangerschaft, Menopause | ?keine speziellen Lebensphasen"
+    },
+    {
+     "id": "gpf4-10-04",
+     "level": 0,
+     "text": "fühlen sich bei Übergewicht oft belastet | ?fühlen sich weniger belastet"
+    },
+    {
+     "id": "gpf4-10-05",
+     "level": 0,
+     "text": "halten erreichtes Gewicht länger | ?halten geringeres Gewicht schwerer"
+    },
+    {
+     "id": "gpf4-10-06",
+     "level": 0,
+     "text": "Essen beeinflusst von Deprimiertheit, Angst | ?Essen beeinflusst von Geselligkeit, Konflikten"
+    },
+    {
+     "id": "gpf4-10-07",
+     "level": 0,
+     "text": "Set-Point: Ein Messfühler steuert die Nahrungsaufnahme, Gefahr des Jo-Jo-Effekts"
+    }
+   ]
+  },
+  {
+   "id": "gpf4-11",
+   "subject": "Gesundheitspsychologie",
+   "title": "GPF4 · Externalitätshypothese und emotionales Essen",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "gpf4-11-01",
+     "level": 0,
+     "text": "Externalitätshypothese"
+    },
+    {
+     "id": "gpf4-11-02",
+     "level": 1,
+     "text": "Reize von außen steuern das Essen: viel Nahrung, Uhrzeit, leichte Verfügbarkeit"
+    },
+    {
+     "id": "gpf4-11-03",
+     "level": 1,
+     "text": "Normalgewichtige richten sich eher nach inneren Reizen"
+    },
+    {
+     "id": "gpf4-11-04",
+     "level": 1,
+     "text": "Übergewichtige richten sich eher nach äußeren Reizen"
+    },
+    {
+     "id": "gpf4-11-05",
+     "level": 0,
+     "text": "Emotionaler Zustand"
+    },
+    {
+     "id": "gpf4-11-06",
+     "level": 1,
+     "text": "mehr Essen in oder nach deprimierenden Situationen und bei Depressivität"
+    },
+    {
+     "id": "gpf4-11-07",
+     "level": 1,
+     "text": "höhere emotionale Stabilität, mehr Durchhaltevermögen"
+    }
+   ]
+  },
+  {
+   "id": "gpf4-12",
+   "subject": "Gesundheitspsychologie",
+   "title": "GPF4 · Ernährungsumstellung: psychologische Determinanten",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "gpf4-12-01",
+     "level": 0,
+     "text": "Bedrohung wahrnehmen: Wissen, subjektive Vulnerabilität"
+    },
+    {
+     "id": "gpf4-12-02",
+     "level": 0,
+     "text": "Ergebniserwartungen: positive und negative Konsequenzen"
+    },
+    {
+     "id": "gpf4-12-03",
+     "level": 0,
+     "text": "Selbstwirksamkeit: Handlungspläne, Überwachung, soziale Unterstützung"
+    },
+    {
+     "id": "gpf4-12-04",
+     "level": 0,
+     "text": "Elemente dauerhafter Umstellung"
+    },
+    {
+     "id": "gpf4-12-05",
+     "level": 1,
+     "text": "Selbstbeobachtung"
+    },
+    {
+     "id": "gpf4-12-06",
+     "level": 1,
+     "text": "Reizkontrolle"
+    },
+    {
+     "id": "gpf4-12-07",
+     "level": 1,
+     "text": "Selbstverstärkung"
+    },
+    {
+     "id": "gpf4-12-08",
+     "level": 1,
+     "text": "soziale Unterstützung"
+    },
+    {
+     "id": "gpf4-12-09",
+     "level": 1,
+     "text": "kognitives Umstrukturieren: dysfunktionale Selbstgespräche ändern"
+    },
+    {
+     "id": "gpf4-12-10",
+     "level": 0,
+     "text": "Rückfälle: meist abends, gesellig oder einsam; „Essen kann man nicht abgewöhnen\""
+    },
+    {
+     "id": "gpf4-12-11",
+     "level": 0,
+     "text": "Personen mit hoher Selbstwirksamkeit ernähren sich besser"
+    }
+   ]
+  },
+  {
+   "id": "gpf4-13",
+   "subject": "Gesundheitspsychologie",
+   "title": "GPF4 · Beispiel Frau B. (sozial-kognitive Theorie)",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "gpf4-13-01",
+     "level": 0,
+     "text": "35 Jahre, übergewichtig, viele erfolglose Diäten"
+    },
+    {
+     "id": "gpf4-13-02",
+     "level": 0,
+     "text": "Körperlich: Cholesterin, Neigung zu Bluthochdruck, Diabetes"
+    },
+    {
+     "id": "gpf4-13-03",
+     "level": 0,
+     "text": "Psychisch: Selbstwerteinbrüche, „Unwohlsein in der eigenen Haut\""
+    },
+    {
+     "id": "gpf4-13-04",
+     "level": 0,
+     "text": "Handlungsergebniserwartungen"
+    },
+    {
+     "id": "gpf4-13-05",
+     "level": 1,
+     "text": "körperlich: Senkung der Cholesterinwerte (Gefahr: Deprivation)"
+    },
+    {
+     "id": "gpf4-13-06",
+     "level": 1,
+     "text": "sozial: Akzeptanz der Umwelt, Familie"
+    },
+    {
+     "id": "gpf4-13-07",
+     "level": 0,
+     "text": "Selbstwirksamkeit stärken"
+    },
+    {
+     "id": "gpf4-13-08",
+     "level": 1,
+     "text": "kleinere Ziele setzen, um Handlungen erfolgreich abzuschließen"
+    },
+    {
+     "id": "gpf4-13-09",
+     "level": 1,
+     "text": "Freundin hat die Umstellung schon geschafft (Modelllernen)"
+    },
+    {
+     "id": "gpf4-13-10",
+     "level": 1,
+     "text": "Selbstreflexion, Aktivität erhöhen"
+    }
+   ]
+  },
+  {
+   "id": "gpf4-14",
+   "subject": "Gesundheitspsychologie",
+   "title": "GPF4 · Bewegung: Vorteile und Motivation",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "gpf4-14-01",
+     "level": 0,
+     "text": "Vorteile"
+    },
+    {
+     "id": "gpf4-14-02",
+     "level": 1,
+     "text": "Gewichtskontrolle, Herz-Kreislauf-Verbesserung"
+    },
+    {
+     "id": "gpf4-14-03",
+     "level": 1,
+     "text": "bessere Laune 2–5 Stunden nach gezielter Bewegung"
+    },
+    {
+     "id": "gpf4-14-04",
+     "level": 1,
+     "text": "höheres Wohlbefinden und höhere Lebensqualität"
+    },
+    {
+     "id": "gpf4-14-05",
+     "level": 1,
+     "text": "positiv bei psychischen Störungen"
+    },
+    {
+     "id": "gpf4-14-06",
+     "level": 0,
+     "text": "Wirkung hängt ab von Dauer, Intensität, Häufigkeit und lässt sich nicht isolieren"
+    },
+    {
+     "id": "gpf4-14-07",
+     "level": 0,
+     "text": "Motivierende Faktoren"
+    },
+    {
+     "id": "gpf4-14-08",
+     "level": 1,
+     "text": "Sozialisierung in Kindheit und Jugend"
+    },
+    {
+     "id": "gpf4-14-09",
+     "level": 1,
+     "text": "Spaß und Wohlbefinden durch Bewegung"
+    },
+    {
+     "id": "gpf4-14-10",
+     "level": 1,
+     "text": "soziale Anerkennung durch die Gruppe"
+    },
+    {
+     "id": "gpf4-14-11",
+     "level": 1,
+     "text": "Selbstmotivation, Selbstwirksamkeit"
+    },
+    {
+     "id": "gpf4-14-12",
+     "level": 1,
+     "text": "Personen- und Umweltmerkmale, Zugang"
+    }
+   ]
+  },
+  {
+   "id": "gpf4-15",
+   "subject": "Gesundheitspsychologie",
+   "title": "GPF4 · Beispiel Herr C. (Theory of Planned Behavior)",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "gpf4-15-01",
+     "level": 0,
+     "text": "45 Jahre, leichter Herzinfarkt vor drei Monaten"
+    },
+    {
+     "id": "gpf4-15-02",
+     "level": 1,
+     "text": "Stress, kann beruflich nicht abschalten, ungesunder Lebensstil"
+    },
+    {
+     "id": "gpf4-15-03",
+     "level": 1,
+     "text": "Verordnung: Bewegung zur Rehabilitation"
+    },
+    {
+     "id": "gpf4-15-04",
+     "level": 0,
+     "text": "Externe Hindernisse: schlechtes Wetter, fehlende Zeit"
+    },
+    {
+     "id": "gpf4-15-05",
+     "level": 0,
+     "text": "Interne Hindernisse: Faulheit, fehlende Priorität"
+    },
+    {
+     "id": "gpf4-15-06",
+     "level": 0,
+     "text": "Dazu: persönliche Einstellung, soziale Norm, Kontrollierbarkeit"
+    }
+   ]
+  }
+ ]
+}
