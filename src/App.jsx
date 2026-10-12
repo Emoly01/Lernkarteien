@@ -1,5 +1,5 @@
 import { useState, useEffect, useLayoutEffect, useMemo, useRef, useCallback } from "react";
-import { ACC, STATUS, LEVELS, MARKS, MAX_LEVEL, parseChart, parseFlow, parseTable, flowConnects, flowCycle, flowGraph, parsePasted, mid, L, plural, load, persist, mapLines, schedule, isDue, today, daysBetween, formatDate, exportBackup, parseBackup, nextAccent, setAccent, renameSubject, deleteSubject, searchCards } from "./data.js";
+import { ACC, STATUS, LEVELS, MARKS, MAX_LEVEL, parseChart, parseFlow, parseTable, flowConnects, flowCycle, flowGraph, parsePasted, mid, L, plural, load, persist, mapLines, schedule, isDue, today, daysBetween, formatDate, exportBackup, parseBackup, addPack, nextAccent, setAccent, renameSubject, deleteSubject, searchCards } from "./data.js";
 import { stamp } from "./sync.js";
 import { useCloudSync } from "./useCloudSync.js";
 import { Chart, Dist } from "./charts.jsx";
@@ -662,6 +662,14 @@ export default function App() {
     if (!file) return;
     try {
       const next = parseBackup(await file.text());
+      if (next.pack) {
+        const { next: merged, added } = addPack(data, next);
+        if (!added) { window.alert("Alle Karten aus diesem Paket sind schon da."); return; }
+        if (!window.confirm(`${plural(added, "neue Karte", "neue Karten")} hinzufügen? Deine bisherigen Karten bleiben, wie sie sind.`)) return;
+        update(d => addPack(d, next).next);
+        setView("home");
+        return;
+      }
       const also = sync.user ? " Durch den Sync gilt das auch für deine anderen Geräte." : "";
       if (!window.confirm(`${plural(next.cards.length, "Karte", "Karten")} aus der Sicherung laden? Deine aktuellen Karten werden dabei ersetzt.${also}`)) return;
       update({ ...next, lastBackup: today() });
@@ -885,7 +893,7 @@ export default function App() {
           <div className="backup-row">
             <button className="link-btn" onClick={doExport}>Sicherung speichern</button>
             <span className="backup-sep">·</span>
-            <button className="link-btn" onClick={() => fileInput.current?.click()}>Sicherung laden</button>
+            <button className="link-btn" onClick={() => fileInput.current?.click()}>Sicherung oder Kartenpaket laden</button>
           </div>
           <input ref={fileInput} type="file" accept="application/json,.json" hidden onChange={doImport} />
         </div>

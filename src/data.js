@@ -176,7 +176,21 @@ export function parseBackup(text) {
   const ok = d.cards.every(c => c && typeof c.title === "string" && typeof c.subject === "string" && Array.isArray(c.lines));
   if (!ok) throw new Error("Einige Karten in der Datei sind beschädigt.");
   for (const c of d.cards) if (!d.subjects.includes(c.subject)) d.subjects.push(c.subject);
-  return normalize(d);
+  return d.pack === true ? { ...normalize(d), pack: true } : normalize(d);
+}
+
+// A card pack ("pack": true in the file) adds its cards to the ones already there instead of
+// replacing them. Cards that are already there (same id) are skipped, so loading a pack twice
+// doesn't duplicate anything. New decks get the least-used colour.
+export function addPack(d, pack) {
+  const have = new Set(d.cards.map(c => c.id));
+  const fresh = pack.cards.filter(c => !have.has(c.id));
+  let next = { ...d, cards: [...d.cards, ...fresh] };
+  for (const s of pack.subjects) {
+    if (next.subjects.includes(s)) continue;
+    next = setAccent({ ...next, subjects: [...next.subjects, s] }, s, nextAccent(next.accents));
+  }
+  return { next, added: fresh.length };
 }
 
 // Turns card lines into render rows; `reveal` hides everything after the n-th Hauptpunkt.
