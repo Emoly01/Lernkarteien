@@ -1,0 +1,1695 @@
+{
+ "app": "lernkarten",
+ "version": 1,
+ "pack": true,
+ "name": "Theoretische Grundlagen der Pflege, Lernbaustein 1–3",
+ "subjects": [
+  "Theoretische Grundlagen der Pflege"
+ ],
+ "cards": [
+  {
+   "id": "tg1-01",
+   "subject": "Theoretische Grundlagen der Pflege",
+   "title": "TG1 · Grundbegriffe nach Meleis",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "tg1-01-01",
+     "level": 0,
+     "text": "Wissenschaft"
+    },
+    {
+     "id": "tg1-01-02",
+     "level": 0,
+     "text": "Paradigma"
+    },
+    {
+     "id": "tg1-01-03",
+     "level": 0,
+     "text": "Domäne"
+    },
+    {
+     "id": "tg1-01-04",
+     "level": 0,
+     "text": "Phänomen"
+    },
+    {
+     "id": "tg1-01-05",
+     "level": 0,
+     "text": "Annahmen"
+    },
+    {
+     "id": "tg1-01-06",
+     "level": 0,
+     "text": "Dazu: Konzept bzw. Begriff, Modell, Theorie – greifen ineinander wie Zahnräder"
+    }
+   ]
+  },
+  {
+   "id": "tg1-02",
+   "subject": "Theoretische Grundlagen der Pflege",
+   "title": "TG1 · Was ist ein Konzept?",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "tg1-02-01",
+     "level": 0,
+     "text": "Konzept (dt.) = Idee oder Plan; concept (engl.) = Begriff"
+    },
+    {
+     "id": "tg1-02-02",
+     "level": 0,
+     "text": "Beschreibt ein Phänomen oder eine Gruppe von Phänomenen"
+    },
+    {
+     "id": "tg1-02-03",
+     "level": 0,
+     "text": "Abstrakte Verallgemeinerung beobachteter Sachverhalte"
+    },
+    {
+     "id": "tg1-02-04",
+     "level": 0,
+     "text": "Annahmen verbinden Konzepte miteinander"
+    },
+    {
+     "id": "tg1-02-05",
+     "level": 0,
+     "text": "Konzepte sind die kleinsten Bausteine einer Theorie"
+    }
+   ]
+  },
+  {
+   "id": "tg1-03",
+   "subject": "Theoretische Grundlagen der Pflege",
+   "title": "TG1 · Was ist ein Modell?",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "tg1-03-01",
+     "level": 0,
+     "text": "Vereinfachte und modifizierte Darstellung eines tatsächlichen Sachverhalts"
+    },
+    {
+     "id": "tg1-03-02",
+     "level": 1,
+     "text": "gegenständliche bzw. empirische Modelle"
+    },
+    {
+     "id": "tg1-03-03",
+     "level": 1,
+     "text": "abstrakte bzw. theoretische Modelle"
+    },
+    {
+     "id": "tg1-03-04",
+     "level": 0,
+     "text": "Merkmale (Neumann-Ponesch, 2021)"
+    },
+    {
+     "id": "tg1-03-05",
+     "level": 1,
+     "text": "Reduktion der Realität"
+    },
+    {
+     "id": "tg1-03-06",
+     "level": 1,
+     "text": "Hervorhebung von Perspektiven des sozialen Umfelds"
+    },
+    {
+     "id": "tg1-03-07",
+     "level": 1,
+     "text": "Schaffung von Übersichtlichkeit"
+    }
+   ]
+  },
+  {
+   "id": "tg1-04",
+   "subject": "Theoretische Grundlagen der Pflege",
+   "title": "TG1 · Pflegemodelle – Anforderungen",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "tg1-04-01",
+     "level": 0,
+     "text": "Abstrakte Modelle von dem, was Pflege ist oder sein sollte"
+    },
+    {
+     "id": "tg1-04-02",
+     "level": 0,
+     "text": "Sollten …"
+    },
+    {
+     "id": "tg1-04-03",
+     "level": 1,
+     "text": "systematisch aufgebaut sein"
+    },
+    {
+     "id": "tg1-04-04",
+     "level": 1,
+     "text": "eine wissenschaftliche Grundlage haben"
+    },
+    {
+     "id": "tg1-04-05",
+     "level": 1,
+     "text": "logisch verknüpfte Bestandteile haben"
+    },
+    {
+     "id": "tg1-04-06",
+     "level": 1,
+     "text": "auf Verwendbarkeit und Gültigkeit in der Praxis überprüft werden"
+    }
+   ]
+  },
+  {
+   "id": "tg1-05",
+   "subject": "Theoretische Grundlagen der Pflege",
+   "title": "TG1 · Was ist eine Theorie? (Meleis)",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "tg1-05-01",
+     "level": 0,
+     "text": "Bündel von Ideen oder erklärenden Vermutungen"
+    },
+    {
+     "id": "tg1-05-02",
+     "level": 0,
+     "text": "Für einen speziellen Zweck konstruiert"
+    },
+    {
+     "id": "tg1-05-03",
+     "level": 0,
+     "text": "Systematische Abstraktion"
+    },
+    {
+     "id": "tg1-05-04",
+     "level": 1,
+     "text": "strukturiert die zugrunde liegenden Phänomene"
+    },
+    {
+     "id": "tg1-05-05",
+     "level": 1,
+     "text": "Theorie ist nicht mit der Wirklichkeit identisch"
+    },
+    {
+     "id": "tg1-05-06",
+     "level": 0,
+     "text": "Besteht aus Konzepten"
+    },
+    {
+     "id": "tg1-05-07",
+     "level": 0,
+     "text": "Zweck: Beschreibung, Erklärung, Vorhersage"
+    },
+    {
+     "id": "tg1-05-08",
+     "level": 0,
+     "text": "Pflegetheorie = Konzeptualisierung einiger Aspekte der Pflegerealität"
+    }
+   ]
+  },
+  {
+   "id": "tg1-06",
+   "subject": "Theoretische Grundlagen der Pflege",
+   "title": "TG1 · Theorienmonismus vs. Theorienpluralismus",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "tg1-06-01",
+     "level": 0,
+     "text": "Theorienmonismus"
+    },
+    {
+     "id": "tg1-06-02",
+     "level": 1,
+     "text": "eine umfassende, allgemeingültige Theorie der Pflege"
+    },
+    {
+     "id": "tg1-06-03",
+     "level": 0,
+     "text": "Theorienpluralismus"
+    },
+    {
+     "id": "tg1-06-04",
+     "level": 1,
+     "text": "verschiedene, widerstreitende und teils überlappende Theorien sind gleichzeitig einflussreich"
+    },
+    {
+     "id": "tg1-06-05",
+     "level": 0,
+     "text": "Evers (1991): Pflege ist so komplex, dass theoretischer Pluralismus notwendig ist"
+    },
+    {
+     "id": "tg1-06-06",
+     "level": 1,
+     "text": "die alles erklärende Pflegetheorie ist eine Illusion"
+    }
+   ]
+  },
+  {
+   "id": "tg1-07",
+   "subject": "Theoretische Grundlagen der Pflege",
+   "title": "TG1 · Warum braucht die Pflege Theorien?",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "tg1-07-01",
+     "level": 0,
+     "text": "Unverzichtbar, weil sie … (Chinn & Kramer)"
+    },
+    {
+     "id": "tg1-07-02",
+     "level": 1,
+     "text": "eine fundierte Grundlage für die Praxis bieten"
+    },
+    {
+     "id": "tg1-07-03",
+     "level": 1,
+     "text": "professionelle Identität stiften"
+    },
+    {
+     "id": "tg1-07-04",
+     "level": 1,
+     "text": "Meinungsverschiedenheiten darüber, was in der Pflege machbar ist, ausräumen"
+    },
+    {
+     "id": "tg1-07-05",
+     "level": 1,
+     "text": "Grundlage für bewusste Entscheidungen sind"
+    },
+    {
+     "id": "tg1-07-06",
+     "level": 0,
+     "text": "„Kolumbus ist nicht ziellos umhergereist. Er segelte nach Westen aufgrund einer plausiblen Theorie.\""
+    }
+   ]
+  },
+  {
+   "id": "tg1-08",
+   "subject": "Theoretische Grundlagen der Pflege",
+   "title": "TG1 · Funktionen von Theorien (Hunink)",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "tg1-08-01",
+     "level": 0,
+     "text": "Bezugsrahmen"
+    },
+    {
+     "id": "tg1-08-02",
+     "level": 0,
+     "text": "Ordnung von Phänomenen"
+    },
+    {
+     "id": "tg1-08-03",
+     "level": 0,
+     "text": "Ratgeber für die praktische Situation"
+    },
+    {
+     "id": "tg1-08-04",
+     "level": 0,
+     "text": "Grundlage der Aus- und Weiterbildung"
+    },
+    {
+     "id": "tg1-08-05",
+     "level": 0,
+     "text": "Rahmen für Pflegeforschung"
+    },
+    {
+     "id": "tg1-08-06",
+     "level": 0,
+     "text": "Grundlage pflegerischer Ethik"
+    },
+    {
+     "id": "tg1-08-07",
+     "level": 0,
+     "text": "Grundlage pflegerischer Qualitätssicherung"
+    }
+   ]
+  },
+  {
+   "id": "tg1-09",
+   "subject": "Theoretische Grundlagen der Pflege",
+   "title": "TG1 · Geschichte der Pflegetheorien",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "tg1-09-01",
+     "level": 0,
+     "text": "Bis 1940er: Pflege stark von anderen Disziplinen geprägt"
+    },
+    {
+     "id": "tg1-09-02",
+     "level": 0,
+     "text": "Späte 1940er/1950er: Sozial- und Geisteswissenschaften gewinnen an Bedeutung"
+    },
+    {
+     "id": "tg1-09-03",
+     "level": 0,
+     "text": "1952: Peplau, „Interpersonelle Beziehungen in der Pflege\""
+    },
+    {
+     "id": "tg1-09-04",
+     "level": 0,
+     "text": "1968: „Nursing Research\" – Artikelserie von Dickoff, James und Wiedenbach"
+    },
+    {
+     "id": "tg1-09-05",
+     "level": 0,
+     "text": "Anfang 1970er: Was ist eigentlich eine Theorie?"
+    },
+    {
+     "id": "tg1-09-06",
+     "level": 0,
+     "text": "1980er/1990er: vermehrt Theorien mittlerer und kleiner Reichweite"
+    },
+    {
+     "id": "tg1-09-07",
+     "level": 0,
+     "text": "Ab 2000: große Anzahl an Theorien mittlerer Reichweite"
+    }
+   ]
+  },
+  {
+   "id": "tg1-10",
+   "subject": "Theoretische Grundlagen der Pflege",
+   "title": "TG1 · Theorien mittlerer Reichweite seit 2000 (Beispiele)",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "tg1-10-01",
+     "level": 0,
+     "text": "Jahr, Autor:in | Theorie"
+    },
+    {
+     "id": "tg1-10-02",
+     "level": 0,
+     "text": "2000 Resnick | ?Theory of Self-Efficacy"
+    },
+    {
+     "id": "tg1-10-03",
+     "level": 0,
+     "text": "2004 Mefford | ?Health Promotion for Preterm Infants"
+    },
+    {
+     "id": "tg1-10-04",
+     "level": 0,
+     "text": "2007 Chen/Boore | ?Super-Link System for Rehabilitation"
+    },
+    {
+     "id": "tg1-10-05",
+     "level": 0,
+     "text": "2010 v. d. Kooij | ?mäeutisches Pflege- und Betreuungsmodell"
+    },
+    {
+     "id": "tg1-10-06",
+     "level": 0,
+     "text": "2012 Dyess/Chase | ?Sustaining Health in Faith Communities"
+    },
+    {
+     "id": "tg1-10-07",
+     "level": 0,
+     "text": "2017 Quernheim | ?Warten und Wartemanagement"
+    },
+    {
+     "id": "tg1-10-08",
+     "level": 0,
+     "text": "2021 Urselmann/Georg | ?übermäßige Vokalisation bei Demenz"
+    }
+   ]
+  },
+  {
+   "id": "tg1-11",
+   "subject": "Theoretische Grundlagen der Pflege",
+   "title": "TG1 · Richtungen der Theorieentwicklung (Chinn & Kramer)",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "tg1-11-01",
+     "level": 0,
+     "text": "Große Theorien und praxisbezogene Philosophien"
+    },
+    {
+     "id": "tg1-11-02",
+     "level": 0,
+     "text": "Anwendung von Theorien aus anderen Disziplinen"
+    },
+    {
+     "id": "tg1-11-03",
+     "level": 0,
+     "text": "Theorien, die die Pflege allgemein definieren"
+    },
+    {
+     "id": "tg1-11-04",
+     "level": 0,
+     "text": "Praxisbezogene Theorien mittlerer Reichweite"
+    }
+   ]
+  },
+  {
+   "id": "tg1-12",
+   "subject": "Theoretische Grundlagen der Pflege",
+   "title": "TG1 · Stadien der Pflege- und Theorieentwicklung (Meleis)",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "tg1-12-01",
+     "level": 0,
+     "text": "1. Praxis"
+    },
+    {
+     "id": "tg1-12-02",
+     "level": 0,
+     "text": "2. Ausbildung und Administration"
+    },
+    {
+     "id": "tg1-12-03",
+     "level": 0,
+     "text": "3. Forschung"
+    },
+    {
+     "id": "tg1-12-04",
+     "level": 0,
+     "text": "4. Theorie"
+    },
+    {
+     "id": "tg1-12-05",
+     "level": 0,
+     "text": "5. Philosophie"
+    },
+    {
+     "id": "tg1-12-06",
+     "level": 0,
+     "text": "6. Integration"
+    },
+    {
+     "id": "tg1-12-07",
+     "level": 0,
+     "text": "7. Interdisziplinarität und Interprofessionalität"
+    },
+    {
+     "id": "tg1-12-08",
+     "level": 0,
+     "text": "8. Technologie- und Informationssysteme"
+    },
+    {
+     "id": "tg1-12-09",
+     "level": 0,
+     "text": "Die deutschsprachigen Länder stehen bei den Stadien 2 bis 5"
+    }
+   ]
+  },
+  {
+   "id": "tg2-01",
+   "subject": "Theoretische Grundlagen der Pflege",
+   "title": "TG2 · Klassifikation nach Meleis",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "tg2-01-01",
+     "level": 0,
+     "text": "Große Theorien (grand theories)"
+    },
+    {
+     "id": "tg2-01-02",
+     "level": 1,
+     "text": "systematische Konstruktionen des Wesens und der Aufgaben der Pflege und der Ziele pflegerischer Fürsorge"
+    },
+    {
+     "id": "tg2-01-03",
+     "level": 0,
+     "text": "Theorien mittlerer Reichweite (middle range theories)"
+    },
+    {
+     "id": "tg2-01-04",
+     "level": 1,
+     "text": "behandeln spezifische Phänomene"
+    },
+    {
+     "id": "tg2-01-05",
+     "level": 0,
+     "text": "Situationsspezifische Theorien"
+    },
+    {
+     "id": "tg2-01-06",
+     "level": 1,
+     "text": "konzentrieren sich auf ein spezifisches Pflegephänomen"
+    }
+   ]
+  },
+  {
+   "id": "tg2-02",
+   "subject": "Theoretische Grundlagen der Pflege",
+   "title": "TG2 · Klassifikation nach Fawcett",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "tg2-02-01",
+     "level": 0,
+     "text": "Metaparadigma"
+    },
+    {
+     "id": "tg2-02-02",
+     "level": 1,
+     "text": "Geltungsbereich, in dem sich eine Disziplin von anderen unterscheidet"
+    },
+    {
+     "id": "tg2-02-03",
+     "level": 1,
+     "text": "perspektivneutral, international gültig"
+    },
+    {
+     "id": "tg2-02-04",
+     "level": 1,
+     "text": "für die Pflege: Person, Umwelt, Gesundheit, Pflege"
+    },
+    {
+     "id": "tg2-02-05",
+     "level": 0,
+     "text": "Konzeptuelle Modelle"
+    },
+    {
+     "id": "tg2-02-06",
+     "level": 1,
+     "text": "abstrakte, allgemeine Vorstellungen; beschreiben den Gesamtgegenstand der Pflege"
+    },
+    {
+     "id": "tg2-02-07",
+     "level": 1,
+     "text": "setzen Person, Umwelt, Gesundheit und Pflege in Beziehung"
+    },
+    {
+     "id": "tg2-02-08",
+     "level": 1,
+     "text": "empirisch nicht überprüfbar"
+    },
+    {
+     "id": "tg2-02-09",
+     "level": 0,
+     "text": "Theorien"
+    },
+    {
+     "id": "tg2-02-10",
+     "level": 1,
+     "text": "relativ spezifische Begriffe und Aussagen zu bestimmten Phänomenen, in geordnetem Rahmen"
+    },
+    {
+     "id": "tg2-02-11",
+     "level": 0,
+     "text": "Empirische Indikatoren"
+    },
+    {
+     "id": "tg2-02-12",
+     "level": 1,
+     "text": "Instrumente, experimentelle Bedingungen und Verfahren"
+    }
+   ]
+  },
+  {
+   "id": "tg2-03",
+   "subject": "Theoretische Grundlagen der Pflege",
+   "title": "TG2 · Klassifikation nach Walker & Avant",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "tg2-03-01",
+     "level": 0,
+     "text": "Metatheorien"
+    },
+    {
+     "id": "tg2-03-02",
+     "level": 1,
+     "text": "generelle theoretische Probleme, Theorien über Theorien"
+    },
+    {
+     "id": "tg2-03-03",
+     "level": 1,
+     "text": "nicht empirisch überprüfbar"
+    },
+    {
+     "id": "tg2-03-04",
+     "level": 0,
+     "text": "Globale Theorien"
+    },
+    {
+     "id": "tg2-03-05",
+     "level": 1,
+     "text": "umfassende Perspektive für Ziele und Strukturen der Pflege"
+    },
+    {
+     "id": "tg2-03-06",
+     "level": 1,
+     "text": "nicht empirisch überprüfbar"
+    },
+    {
+     "id": "tg2-03-07",
+     "level": 0,
+     "text": "Theorien mittlerer Reichweite"
+    },
+    {
+     "id": "tg2-03-08",
+     "level": 1,
+     "text": "wenige Konzepte, begrenzte Zahl an Variablen"
+    },
+    {
+     "id": "tg2-03-09",
+     "level": 1,
+     "text": "empirisch überprüfbar"
+    },
+    {
+     "id": "tg2-03-10",
+     "level": 0,
+     "text": "Praxisnahe Theorien"
+    },
+    {
+     "id": "tg2-03-11",
+     "level": 1,
+     "text": "Ziel: Handlungsanweisungen"
+    },
+    {
+     "id": "tg2-03-12",
+     "level": 1,
+     "text": "kleiner, detailliert beschriebener Ausschnitt der Pflege, direkt umsetzbar"
+    }
+   ]
+  },
+  {
+   "id": "tg2-04",
+   "subject": "Theoretische Grundlagen der Pflege",
+   "title": "TG2 · Walker & Avant: wie die Ebenen zusammenhängen",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "tg2-04-01",
+     "level": 0,
+     "text": "Von oben nach unten"
+    },
+    {
+     "id": "tg2-04-02",
+     "level": 1,
+     "text": "Metatheorien klären globale Theorien"
+    },
+    {
+     "id": "tg2-04-03",
+     "level": 1,
+     "text": "globale Theorien leiten Theorien mittlerer Reichweite"
+    },
+    {
+     "id": "tg2-04-04",
+     "level": 1,
+     "text": "Theorien mittlerer Reichweite bestimmen praxisnahe Theorien"
+    },
+    {
+     "id": "tg2-04-05",
+     "level": 0,
+     "text": "Von unten nach oben"
+    },
+    {
+     "id": "tg2-04-06",
+     "level": 1,
+     "text": "praxisnahe Theorien überprüfen mittlere Theorien praktisch"
+    },
+    {
+     "id": "tg2-04-07",
+     "level": 1,
+     "text": "mittlere Theorien klären und vervollständigen globale Theorien"
+    },
+    {
+     "id": "tg2-04-08",
+     "level": 1,
+     "text": "globale Theorien liefern Material für Metatheorien"
+    }
+   ]
+  },
+  {
+   "id": "tg2-05",
+   "subject": "Theoretische Grundlagen der Pflege",
+   "title": "TG2 · Klassifikation nach Hunink",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "tg2-05-01",
+     "level": 0,
+     "text": "Meta-Theorie (der Rahmen)"
+    },
+    {
+     "id": "tg2-05-02",
+     "level": 0,
+     "text": "Haupttheorie: wie eine Landkarte des ganzen D-A-CH-Raums"
+    },
+    {
+     "id": "tg2-05-03",
+     "level": 0,
+     "text": "Theorie mittlerer Reichweite: wie eine Karte eines Bundeslands"
+    },
+    {
+     "id": "tg2-05-04",
+     "level": 0,
+     "text": "Theorie der Mikroebene: wie ein Stadtplan"
+    }
+   ]
+  },
+  {
+   "id": "tg2-06",
+   "subject": "Theoretische Grundlagen der Pflege",
+   "title": "TG2 · Die vier Klassifikationen im Vergleich",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "tg2-06-01",
+     "level": 0,
+     "text": "Oberste Ebene"
+    },
+    {
+     "id": "tg2-06-02",
+     "level": 1,
+     "text": "Fawcett: Metaparadigma, Philosophie"
+    },
+    {
+     "id": "tg2-06-03",
+     "level": 1,
+     "text": "Walker & Avant: Metatheorien"
+    },
+    {
+     "id": "tg2-06-04",
+     "level": 0,
+     "text": "Große Ebene"
+    },
+    {
+     "id": "tg2-06-05",
+     "level": 1,
+     "text": "Meleis: große Theorien"
+    },
+    {
+     "id": "tg2-06-06",
+     "level": 1,
+     "text": "Fawcett: konzeptuelle Modelle"
+    },
+    {
+     "id": "tg2-06-07",
+     "level": 1,
+     "text": "Walker & Avant: globale Theorien"
+    },
+    {
+     "id": "tg2-06-08",
+     "level": 1,
+     "text": "Hunink: Haupttheorie"
+    },
+    {
+     "id": "tg2-06-09",
+     "level": 0,
+     "text": "Mittlere Ebene"
+    },
+    {
+     "id": "tg2-06-10",
+     "level": 1,
+     "text": "Meleis, Walker & Avant, Hunink: Theorien mittlerer Reichweite"
+    },
+    {
+     "id": "tg2-06-11",
+     "level": 1,
+     "text": "Fawcett: Theorien"
+    },
+    {
+     "id": "tg2-06-12",
+     "level": 0,
+     "text": "Unterste Ebene"
+    },
+    {
+     "id": "tg2-06-13",
+     "level": 1,
+     "text": "Meleis: situationsspezifische Theorien"
+    },
+    {
+     "id": "tg2-06-14",
+     "level": 1,
+     "text": "Fawcett: empirische Indikatoren"
+    },
+    {
+     "id": "tg2-06-15",
+     "level": 1,
+     "text": "Walker & Avant: praxisnahe Theorien"
+    },
+    {
+     "id": "tg2-06-16",
+     "level": 1,
+     "text": "Hunink: Theorie der Mikroebene"
+    }
+   ]
+  },
+  {
+   "id": "tg2-07",
+   "subject": "Theoretische Grundlagen der Pflege",
+   "title": "TG2 · Funktion von Theorien (Hunink)",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "tg2-07-01",
+     "level": 0,
+     "text": "Nach ihrer Beziehung zur Realität, von außen nach innen"
+    },
+    {
+     "id": "tg2-07-02",
+     "level": 0,
+     "text": "beschreibend → erklärend → voraussagend → vorschreibend"
+    },
+    {
+     "id": "tg2-07-03",
+     "level": 0,
+     "text": "Beschreibend: deskriptiv"
+    },
+    {
+     "id": "tg2-07-04",
+     "level": 0,
+     "text": "Erklärend: explanativ"
+    },
+    {
+     "id": "tg2-07-05",
+     "level": 0,
+     "text": "Voraussagend: prognostisch"
+    },
+    {
+     "id": "tg2-07-06",
+     "level": 0,
+     "text": "Vorschreibend: präskriptiv"
+    },
+    {
+     "id": "tg2-07-07",
+     "level": 0,
+     "text": "Jede innere Stufe setzt die äußeren voraus"
+    }
+   ]
+  },
+  {
+   "id": "tg2-08",
+   "subject": "Theoretische Grundlagen der Pflege",
+   "title": "TG2 · Ebenen von Theorien (Dickoff & James)",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "tg2-08-01",
+     "level": 0,
+     "text": "Pyramide, von unten nach oben"
+    },
+    {
+     "id": "tg2-08-02",
+     "level": 0,
+     "text": "faktorenisolierend → faktorenbezogen → situationsbezogen → situationsherstellend"
+    },
+    {
+     "id": "tg2-08-03",
+     "level": 0,
+     "text": "Die Spitze (situationsherstellend) ist die höchste Ebene"
+    }
+   ]
+  },
+  {
+   "id": "tg2-09",
+   "subject": "Theoretische Grundlagen der Pflege",
+   "title": "TG2 · Begriffe in der Theoriebildung (Walker & Avant)",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "tg2-09-01",
+     "level": 0,
+     "text": "Elementarste Bausteine jeder Theorie"
+    },
+    {
+     "id": "tg2-09-02",
+     "level": 0,
+     "text": "Geistiges Bild eines Phänomens, Idee oder gedankliche Vorstellung von Dingen oder Ereignissen"
+    },
+    {
+     "id": "tg2-09-03",
+     "level": 0,
+     "text": "Helfen festzustellen, wie vergleichbar Erfahrungen sind"
+    },
+    {
+     "id": "tg2-09-04",
+     "level": 0,
+     "text": "Erlauben, Erfahrungen zu klassifizieren"
+    },
+    {
+     "id": "tg2-09-05",
+     "level": 0,
+     "text": "Arten"
+    },
+    {
+     "id": "tg2-09-06",
+     "level": 1,
+     "text": "elementare Begriffe"
+    },
+    {
+     "id": "tg2-09-07",
+     "level": 1,
+     "text": "konkrete Begriffe"
+    },
+    {
+     "id": "tg2-09-08",
+     "level": 1,
+     "text": "abstrakte Begriffe"
+    }
+   ]
+  },
+  {
+   "id": "tg2-10",
+   "subject": "Theoretische Grundlagen der Pflege",
+   "title": "TG2 · Thesen in der Theoriebildung",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "tg2-10-01",
+     "level": 0,
+     "text": "Wichtiger Bestandteil des wissenschaftlichen Wissensgebäudes"
+    },
+    {
+     "id": "tg2-10-02",
+     "level": 0,
+     "text": "Muss definiert sein, bevor man Erklärungen und Prognosen aufstellt"
+    },
+    {
+     "id": "tg2-10-03",
+     "level": 0,
+     "text": "Synonyme: Vorschlag, Behauptung, Aussage"
+    },
+    {
+     "id": "tg2-10-04",
+     "level": 0,
+     "text": "Arten"
+    },
+    {
+     "id": "tg2-10-05",
+     "level": 1,
+     "text": "These → relationale These"
+    },
+    {
+     "id": "tg2-10-06",
+     "level": 1,
+     "text": "These → nicht-relationale These"
+    },
+    {
+     "id": "tg2-10-07",
+     "level": 1,
+     "text": "relationale These → assoziative These"
+    },
+    {
+     "id": "tg2-10-08",
+     "level": 1,
+     "text": "relationale These → kausale These"
+    }
+   ]
+  },
+  {
+   "id": "tg2-11",
+   "subject": "Theoretische Grundlagen der Pflege",
+   "title": "TG2 · Theorie nach Walker & Avant",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "tg2-11-01",
+     "level": 0,
+     "text": "In sich konsistente Gruppe relationaler Thesen"
+    },
+    {
+     "id": "tg2-11-02",
+     "level": 0,
+     "text": "Stellt eine systematische Sicht eines Phänomens dar"
+    },
+    {
+     "id": "tg2-11-03",
+     "level": 0,
+     "text": "Nützlich für Beschreibung, Erklärung, Vorhersage und/oder Kontrolle"
+    },
+    {
+     "id": "tg2-11-04",
+     "level": 0,
+     "text": "Bringt eine neue Vorstellung oder Einsicht in ein Phänomen zum Ausdruck"
+    },
+    {
+     "id": "tg2-11-05",
+     "level": 0,
+     "text": "Bausteine: Begriffe → Thesen → Theorie"
+    }
+   ]
+  },
+  {
+   "id": "tg2-12",
+   "subject": "Theoretische Grundlagen der Pflege",
+   "title": "TG2 · Prozesse der Theorieentwicklung (Chinn & Kramer)",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "tg2-12-01",
+     "level": 0,
+     "text": "Konzeptuelle Bedeutung schaffen → Theorie strukturieren und kontextualisieren → Theoretische Beziehungen generieren und überprüfen → Theorie gezielt anwenden → Konzeptuelle Bedeutung schaffen"
+    }
+   ]
+  },
+  {
+   "id": "tg2-13",
+   "subject": "Theoretische Grundlagen der Pflege",
+   "title": "TG2 · Anwendungsbereiche von Theorien (Meleis)",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "tg2-13-01",
+     "level": 0,
+     "text": "Forschung"
+    },
+    {
+     "id": "tg2-13-02",
+     "level": 1,
+     "text": "begrenzt die Art der Fragen und die anwendbaren Methoden"
+    },
+    {
+     "id": "tg2-13-03",
+     "level": 0,
+     "text": "Praxis"
+    },
+    {
+     "id": "tg2-13-04",
+     "level": 1,
+     "text": "gibt der Pflegekraft Ziele für Einschätzung, Diagnose und Intervention"
+    }
+   ]
+  },
+  {
+   "id": "tg3-01",
+   "subject": "Theoretische Grundlagen der Pflege",
+   "title": "TG3 · Komponenten einer Theorie (Chinn & Kramer)",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "tg3-01-01",
+     "level": 0,
+     "text": "Was ist der Zweck der Theorie?"
+    },
+    {
+     "id": "tg3-01-02",
+     "level": 0,
+     "text": "Welche Konzepte hat sie?"
+    },
+    {
+     "id": "tg3-01-03",
+     "level": 0,
+     "text": "Wie sind die Konzepte definiert?"
+    },
+    {
+     "id": "tg3-01-04",
+     "level": 0,
+     "text": "Welcher Art sind die Beziehungen?"
+    },
+    {
+     "id": "tg3-01-05",
+     "level": 0,
+     "text": "Wie sieht die Struktur aus?"
+    },
+    {
+     "id": "tg3-01-06",
+     "level": 0,
+     "text": "Welche Annahmen liegen zugrunde?"
+    }
+   ]
+  },
+  {
+   "id": "tg3-02",
+   "subject": "Theoretische Grundlagen der Pflege",
+   "title": "TG3 · Die drei Denkschulen nach Meleis",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "tg3-02-01",
+     "level": 0,
+     "text": "Denkschule | Theoretikerinnen"
+    },
+    {
+     "id": "tg3-02-02",
+     "level": 0,
+     "text": "Bedürfnis | ?Abdellah, Henderson, Orem"
+    },
+    {
+     "id": "tg3-02-03",
+     "level": 0,
+     "text": "Interaktion | ?King, Orlando, Paterson & Zderad, Peplau, Travelbee, Wiedenbach"
+    },
+    {
+     "id": "tg3-02-04",
+     "level": 0,
+     "text": "Ergebnis | ?Johnson, Levine, Rogers, Roy"
+    },
+    {
+     "id": "tg3-02-05",
+     "level": 0,
+     "text": "Pflegetheoretische Denkschulen 1950 bis 1970"
+    }
+   ]
+  },
+  {
+   "id": "tg3-03",
+   "subject": "Theoretische Grundlagen der Pflege",
+   "title": "TG3 · Bedürfnistheoretikerinnen",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "tg3-03-01",
+     "level": 0,
+     "text": "Theoretikerin | Werk"
+    },
+    {
+     "id": "tg3-03-02",
+     "level": 0,
+     "text": "Faye Glenn Abdellah (1919–2017) | ?1960: 21 Pflegeprobleme"
+    },
+    {
+     "id": "tg3-03-03",
+     "level": 0,
+     "text": "Virginia Henderson (1897–1996) | ?1955/1966: 14 Grundbedürfnisse"
+    },
+    {
+     "id": "tg3-03-04",
+     "level": 0,
+     "text": "Dorothea E. Orem (1914–2007) | ?1971: Selbstpflegefähigkeit und Selbstpflegedefizit"
+    }
+   ]
+  },
+  {
+   "id": "tg3-04",
+   "subject": "Theoretische Grundlagen der Pflege",
+   "title": "TG3 · Die Denkschule der Bedürfnisse",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "tg3-04-01",
+     "level": 0,
+     "text": "Fokus"
+    },
+    {
+     "id": "tg3-04-02",
+     "level": 1,
+     "text": "Problem, Funktion der Pflegekraft"
+    },
+    {
+     "id": "tg3-04-03",
+     "level": 0,
+     "text": "Person"
+    },
+    {
+     "id": "tg3-04-04",
+     "level": 1,
+     "text": "Set von Bedürfnissen oder Problemen, Wesen, das sich entwickelt"
+    },
+    {
+     "id": "tg3-04-05",
+     "level": 0,
+     "text": "Patient:in"
+    },
+    {
+     "id": "tg3-04-06",
+     "level": 1,
+     "text": "Bedürfnisdefizit"
+    },
+    {
+     "id": "tg3-04-07",
+     "level": 0,
+     "text": "Orientierung"
+    },
+    {
+     "id": "tg3-04-08",
+     "level": 1,
+     "text": "Krankheit, Leiden"
+    },
+    {
+     "id": "tg3-04-09",
+     "level": 0,
+     "text": "Rolle der Pflegekraft"
+    },
+    {
+     "id": "tg3-04-10",
+     "level": 1,
+     "text": "von der Medizin abhängig, Anfänge unabhängiger Funktion"
+    },
+    {
+     "id": "tg3-04-11",
+     "level": 1,
+     "text": "Erfüllung von Bedürfnissen und Erfordernissen"
+    },
+    {
+     "id": "tg3-04-12",
+     "level": 0,
+     "text": "Entscheidungsträger"
+    },
+    {
+     "id": "tg3-04-13",
+     "level": 1,
+     "text": "Fachleute der gesundheitlichen Grundversorgung"
+    }
+   ]
+  },
+  {
+   "id": "tg3-05",
+   "subject": "Theoretische Grundlagen der Pflege",
+   "title": "TG3 · Interaktionstheoretikerinnen",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "tg3-05-01",
+     "level": 0,
+     "text": "Theoretikerin | Werk"
+    },
+    {
+     "id": "tg3-05-02",
+     "level": 0,
+     "text": "Hildegard Peplau (1909–1999) | ?1952: zwischenmenschliche Beziehungen in der Pflege"
+    },
+    {
+     "id": "tg3-05-03",
+     "level": 0,
+     "text": "Ida Jean Orlando (1926–2007) | ?1961: dynamische Schwester-Patient-Beziehung"
+    },
+    {
+     "id": "tg3-05-04",
+     "level": 0,
+     "text": "Paterson & Zderad | ?1961: humanistische Pflege"
+    },
+    {
+     "id": "tg3-05-05",
+     "level": 0,
+     "text": "Ernestine Wiedenbach (1900–1998) | ?1964: klinische Pflege – eine helfende Kunst"
+    },
+    {
+     "id": "tg3-05-06",
+     "level": 0,
+     "text": "Joyce Travelbee (1926–1970) | ?1966: zwischenmenschliche Aspekte der Pflege"
+    },
+    {
+     "id": "tg3-05-07",
+     "level": 0,
+     "text": "Imogene King (1923–2007) | ?1971: Pflege als Prozess von Aktion, Reaktion, Interaktion, Transaktion"
+    }
+   ]
+  },
+  {
+   "id": "tg3-06",
+   "subject": "Theoretische Grundlagen der Pflege",
+   "title": "TG3 · Die Denkschule der Interaktion",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "tg3-06-01",
+     "level": 0,
+     "text": "Fokus"
+    },
+    {
+     "id": "tg3-06-02",
+     "level": 1,
+     "text": "Pflegekraft-Patient-Interaktion"
+    },
+    {
+     "id": "tg3-06-03",
+     "level": 1,
+     "text": "Krankheit als Erfahrung, interagierendes Wesen"
+    },
+    {
+     "id": "tg3-06-04",
+     "level": 0,
+     "text": "Person"
+    },
+    {
+     "id": "tg3-06-05",
+     "level": 1,
+     "text": "Set von Bedürfnissen, kann Bedürfnisse validieren"
+    },
+    {
+     "id": "tg3-06-06",
+     "level": 1,
+     "text": "menschliche Erfahrung mit Sinn"
+    },
+    {
+     "id": "tg3-06-07",
+     "level": 0,
+     "text": "Patient:in"
+    },
+    {
+     "id": "tg3-06-08",
+     "level": 1,
+     "text": "hilfloses Wesen, menschliche Erfahrung mit Sinn"
+    },
+    {
+     "id": "tg3-06-09",
+     "level": 0,
+     "text": "Orientierung"
+    },
+    {
+     "id": "tg3-06-10",
+     "level": 1,
+     "text": "Krankheit, Leiden"
+    },
+    {
+     "id": "tg3-06-11",
+     "level": 0,
+     "text": "Rolle der Pflegekraft"
+    },
+    {
+     "id": "tg3-06-12",
+     "level": 1,
+     "text": "bewusster Prozess des Helfens"
+    },
+    {
+     "id": "tg3-06-13",
+     "level": 1,
+     "text": "das Selbst als therapeutischer Agent, Anwendung des Pflegeprozesses"
+    },
+    {
+     "id": "tg3-06-14",
+     "level": 0,
+     "text": "Entscheidungsträger"
+    },
+    {
+     "id": "tg3-06-15",
+     "level": 1,
+     "text": "Fachleute der Grundversorgung, von den Klient:innen validiert"
+    }
+   ]
+  },
+  {
+   "id": "tg3-07",
+   "subject": "Theoretische Grundlagen der Pflege",
+   "title": "TG3 · Ergebnistheoretikerinnen",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "tg3-07-01",
+     "level": 0,
+     "text": "Theoretikerin | Werk"
+    },
+    {
+     "id": "tg3-07-02",
+     "level": 0,
+     "text": "Myra E. Levine (1921–1996) | ?1967: vier Erhaltungsprinzipien"
+    },
+    {
+     "id": "tg3-07-03",
+     "level": 0,
+     "text": "Martha E. Rogers (1914–1994) | ?1970: Pflege als Wissenschaft vom einheitlichen Menschen"
+    },
+    {
+     "id": "tg3-07-04",
+     "level": 0,
+     "text": "Sister Callista Roy (*1939) | ?1976: Anpassungsmodell"
+    },
+    {
+     "id": "tg3-07-05",
+     "level": 0,
+     "text": "Dorothy E. Johnson (1919–1999) | ?1980: Pflege als Verhaltenssystem"
+    }
+   ]
+  },
+  {
+   "id": "tg3-08",
+   "subject": "Theoretische Grundlagen der Pflege",
+   "title": "TG3 · Die Denkschule der Ergebnisse",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "tg3-08-01",
+     "level": 0,
+     "text": "Fokus"
+    },
+    {
+     "id": "tg3-08-02",
+     "level": 1,
+     "text": "Energie; Gleichgewicht, Stabilität, Homöostase"
+    },
+    {
+     "id": "tg3-08-03",
+     "level": 1,
+     "text": "Pflegeergebnis"
+    },
+    {
+     "id": "tg3-08-04",
+     "level": 0,
+     "text": "Person"
+    },
+    {
+     "id": "tg3-08-05",
+     "level": 1,
+     "text": "adaptives, entwicklungsbedingtes Wesen"
+    },
+    {
+     "id": "tg3-08-06",
+     "level": 0,
+     "text": "Patient:in"
+    },
+    {
+     "id": "tg3-08-07",
+     "level": 1,
+     "text": "Mangel an Anpassung, System-Defizienz"
+    },
+    {
+     "id": "tg3-08-08",
+     "level": 0,
+     "text": "Orientierung"
+    },
+    {
+     "id": "tg3-08-09",
+     "level": 1,
+     "text": "Krankheit, Leiden"
+    },
+    {
+     "id": "tg3-08-10",
+     "level": 0,
+     "text": "Rolle der Pflegekraft"
+    },
+    {
+     "id": "tg3-08-11",
+     "level": 1,
+     "text": "externer Regulationsmechanismus"
+    },
+    {
+     "id": "tg3-08-12",
+     "level": 0,
+     "text": "Entscheidungsträger"
+    },
+    {
+     "id": "tg3-08-13",
+     "level": 1,
+     "text": "Pflegekraft der gesundheitlichen Grundversorgung"
+    }
+   ]
+  },
+  {
+   "id": "tg3-09",
+   "subject": "Theoretische Grundlagen der Pflege",
+   "title": "TG3 · Die Denkschulen im Vergleich: Patient:in und Pflegekraft",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "tg3-09-01",
+     "level": 0,
+     "text": "Denkschule | Patient:in ist …"
+    },
+    {
+     "id": "tg3-09-02",
+     "level": 0,
+     "text": "Bedürfnis | ?Bedürfnisdefizit"
+    },
+    {
+     "id": "tg3-09-03",
+     "level": 0,
+     "text": "Interaktion | ?hilfloses Wesen, menschliche Erfahrung mit Sinn"
+    },
+    {
+     "id": "tg3-09-04",
+     "level": 0,
+     "text": "Ergebnis | ?Mangel an Anpassung, System-Defizienz"
+    },
+    {
+     "id": "tg3-09-05",
+     "level": 0,
+     "text": "Und die Rolle der Pflegekraft?"
+    },
+    {
+     "id": "tg3-09-06",
+     "level": 0,
+     "text": "Denkschule | Pflegekraft ist …"
+    },
+    {
+     "id": "tg3-09-07",
+     "level": 0,
+     "text": "Bedürfnis | ?erfüllt Bedürfnisse, noch von der Medizin abhängig"
+    },
+    {
+     "id": "tg3-09-08",
+     "level": 0,
+     "text": "Interaktion | ?bewusster Prozess des Helfens, Selbst als therapeutischer Agent"
+    },
+    {
+     "id": "tg3-09-09",
+     "level": 0,
+     "text": "Ergebnis | ?externer Regulationsmechanismus"
+    },
+    {
+     "id": "tg3-09-10",
+     "level": 0,
+     "text": "Gemeinsam: Orientierung an Krankheit und Leiden"
+    }
+   ]
+  },
+  {
+   "id": "tg3-10",
+   "subject": "Theoretische Grundlagen der Pflege",
+   "title": "TG3 · Weitere wichtige Personen",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "tg3-10-01",
+     "level": 0,
+     "text": "Florence Nightingale (1820–1910)"
+    },
+    {
+     "id": "tg3-10-02",
+     "level": 0,
+     "text": "Nancy Roper (1918–2004)"
+    },
+    {
+     "id": "tg3-10-03",
+     "level": 0,
+     "text": "Betty Neuman (1924–2022)"
+    },
+    {
+     "id": "tg3-10-04",
+     "level": 0,
+     "text": "Patricia Benner (*1934)"
+    },
+    {
+     "id": "tg3-10-05",
+     "level": 0,
+     "text": "Monika Krohwinkel (*1941)"
+    }
+   ]
+  },
+  {
+   "id": "tg3-11",
+   "subject": "Theoretische Grundlagen der Pflege",
+   "title": "TG3 · Fragen zur kritischen Reflexion einer Theorie",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "tg3-11-01",
+     "level": 0,
+     "text": "Wie verständlich ist die Theorie?"
+    },
+    {
+     "id": "tg3-11-02",
+     "level": 0,
+     "text": "Wie pragmatisch ist sie?"
+    },
+    {
+     "id": "tg3-11-03",
+     "level": 0,
+     "text": "Wie allgemeingültig ist sie?"
+    },
+    {
+     "id": "tg3-11-04",
+     "level": 0,
+     "text": "Wie erreichbar bzw. zugänglich ist sie?"
+    },
+    {
+     "id": "tg3-11-05",
+     "level": 0,
+     "text": "Wie substanziell ist sie?"
+    },
+    {
+     "id": "tg3-11-06",
+     "level": 0,
+     "text": "Nach Chinn & Kramer (2022)"
+    }
+   ]
+  },
+  {
+   "id": "tg3-12",
+   "subject": "Theoretische Grundlagen der Pflege",
+   "title": "TG3 · Kritik an Pflegetheorien (Moers, Schaeffer & Steppe)",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "tg3-12-01",
+     "level": 0,
+     "text": "Viele Theorien sind eher verallgemeinertes Alltagswissen"
+    },
+    {
+     "id": "tg3-12-02",
+     "level": 1,
+     "text": "niedrige Allgemeinheitsstufe, kaum theoretische Fundierung"
+    },
+    {
+     "id": "tg3-12-03",
+     "level": 0,
+     "text": "Manche suchen ein neues Aufgabenverständnis der Pflege"
+    },
+    {
+     "id": "tg3-12-04",
+     "level": 0,
+     "text": "Andere fassen Pflege allgemeingültig und entwerfen Begriffs- und Klassifikationssysteme"
+    },
+    {
+     "id": "tg3-12-05",
+     "level": 0,
+     "text": "Theorien sind nur im Kontext der US-amerikanischen Pflegewissenschaft verständlich"
+    },
+    {
+     "id": "tg3-12-06",
+     "level": 0,
+     "text": "Neuer Ansatz für Praxisprobleme: Theorien geringer und mittlerer Reichweite"
+    }
+   ]
+  },
+  {
+   "id": "tg3-13",
+   "subject": "Theoretische Grundlagen der Pflege",
+   "title": "TG3 · Relevanz für die deutschsprachige Pflegewissenschaft",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "tg3-13-01",
+     "level": 0,
+     "text": "Verknüpfung von Theorie- und Forschungsentwicklung"
+    },
+    {
+     "id": "tg3-13-02",
+     "level": 0,
+     "text": "Vermeidung des Theorie-Praxis-Gefälles"
+    },
+    {
+     "id": "tg3-13-03",
+     "level": 0,
+     "text": "Anstoß eines Diskurses konkurrierender Ansätze und Ideen"
+    },
+    {
+     "id": "tg3-13-04",
+     "level": 0,
+     "text": "Daher erstrebenswert: Theorien mittlerer und kleiner Reichweite"
+    },
+    {
+     "id": "tg3-13-05",
+     "level": 0,
+     "text": "Eppel-Meichlinger et al. (2023)"
+    },
+    {
+     "id": "tg3-13-06",
+     "level": 1,
+     "text": "untersuchten Theoriebildung im D-A-CH-Raum 2016–2021"
+    },
+    {
+     "id": "tg3-13-07",
+     "level": 1,
+     "text": "nur 2 % der Artikel in Fachzeitschriften befassten sich mit Theoriebildung"
+    },
+    {
+     "id": "tg3-13-08",
+     "level": 1,
+     "text": "Fazit: wenig Aktivität, heterogen, ohne erkennbares Muster"
+    }
+   ]
+  }
+ ]
+}
