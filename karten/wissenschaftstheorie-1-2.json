@@ -1349,7 +1349,7 @@
     {
      "id": "wt2-08-01",
      "level": 0,
-     "text": "Satz | Art | wissenschaftlich?"
+     "text": "Satz | Art | wiss.?"
     },
     {
      "id": "wt2-08-02",
@@ -1569,22 +1569,47 @@
     {
      "id": "wt2-13-01",
      "level": 0,
-     "text": "| Qualitativ | Quantitativ"
+     "text": "Epistemologie"
     },
     {
      "id": "wt2-13-02",
-     "level": 0,
-     "text": "Epistemologie | ?gelebte Erfahrung Einzelner ist nicht weniger wahr als die von Vielen | ?auf die Gesamtheit übertragbare Wahrheit, die durch Messungen hervortritt"
+     "level": 1,
+     "text": "Qualitativ: Die gelebte Erfahrung Einzelner ist nicht weniger wahr als die von Vielen"
     },
     {
      "id": "wt2-13-03",
-     "level": 0,
-     "text": "Ontologie | ?soziale Prozesse und Erlebnisse sind IMMER subjektiv, nicht objektivierbar | ?die Welt besteht aus unabhängigen, beständigen Gesetzen, objektiv darstellbar und testbar"
+     "level": 1,
+     "text": "Quantitativ: Ziel ist eine auf die Gesamtheit übertragbare Wahrheit, die durch Messungen hervortritt"
     },
     {
      "id": "wt2-13-04",
      "level": 0,
-     "text": "Axiologie | ?subjektive Wahrnehmung ist Gegenstand, fließt ein und muss reflektiert werden | ?möglichst hohe Objektivität, Subjektivität darf nicht beeinflussen"
+     "text": "Ontologie"
+    },
+    {
+     "id": "wt2-13-05",
+     "level": 1,
+     "text": "Qualitativ: Soziale Prozesse und Erlebnisse sind IMMER subjektiv und nicht objektivierbar"
+    },
+    {
+     "id": "wt2-13-06",
+     "level": 1,
+     "text": "Quantitativ: Die Welt besteht aus unabhängigen, beständigen Gesetzen, die sich objektiv darstellen und testen lassen"
+    },
+    {
+     "id": "wt2-13-07",
+     "level": 0,
+     "text": "Axiologie"
+    },
+    {
+     "id": "wt2-13-08",
+     "level": 1,
+     "text": "Qualitativ: Subjektive Wahrnehmung ist Gegenstand der Forschung, fließt ein und muss reflektiert werden"
+    },
+    {
+     "id": "wt2-13-09",
+     "level": 1,
+     "text": "Quantitativ: Möglichst hohe Objektivität, Subjektivität darf die Forschung nicht beeinflussen"
     }
    ]
   },
@@ -1607,7 +1632,7 @@
     {
      "id": "wt2-14-03",
      "level": 0,
-     "text": "Ziel | ?Beschreibung eines Phänomens und seiner Zusammenhänge | ?Verallgemeinerbarkeit"
+     "text": "Ziel | ?Beschreibung eines Phänomens und seiner Zusammenhänge | ?Ergebnisse verallgemeinern"
     }
    ]
   }
