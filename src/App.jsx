@@ -6,16 +6,11 @@ import { Chart, Dist } from "./charts.jsx";
 import "./styles.css";
 
 // ── Settings (were design-tool toggles in the prototype) ─────
+const STUDY_ONLY = false;          // hides all editing UI
 const SHUFFLE = true;              // shuffle study queue
 const TITLE_TURQUOISE = false;     // true = every title bar turquoise, false = subject colour
 
 const MOD = /Mac|iPhone|iPad/.test(navigator.platform) ? "⌘" : "Strg";
-
-// Read-only mode hides all editing UI on this device (studying still works). Kept per device,
-// not synced: lock the phone you study on, keep writing on the laptop.
-const READ_ONLY_KEY = "lernkarten-read-only";
-const readReadOnly = () => { try { return localStorage.getItem(READ_ONLY_KEY) === "1"; } catch (e) { return false; } };
-const writeReadOnly = v => { try { v ? localStorage.setItem(READ_ONLY_KEY, "1") : localStorage.removeItem(READ_ONLY_KEY); } catch (e) {} };
 
 // The card being edited is kept in localStorage while typing, so nothing is lost if the app
 // is closed, the phone kills it in the background, or the battery dies.
@@ -330,7 +325,7 @@ export default function App() {
   const [studyScope, setStudyScope] = useState(null); // deck name, or null = all due cards
   const [editingExam, setEditingExam] = useState(false);
   const fileInput = useRef(null);
-  const [view, setView] = useState("home"); // home | deck | card | study | done | edit
+  const [view, setView] = useState("home"); // home | deck | card | study | done | read | readDone | edit
   const [deck, setDeck] = useState(null);
   const [cardIdx, setCardIdx] = useState(0);
   const [queue, setQueue] = useState([]);
@@ -341,6 +336,9 @@ export default function App() {
   const [dx, setDx] = useState(0);
   const [dragging, setDragging] = useState(false);
   const [tally, setTally] = useState({ sicher: 0, unsicher: 0, nochmal: 0 });
+  const [readIds, setReadIds] = useState([]);
+  const [readPos, setReadPos] = useState(0);
+  const turning = useRef(null); // timer while a card slides out and the next one in
   const [draft, setDraft] = useState(null);
   const [returnTo, setReturnTo] = useState("deck");
   const [addingSubject, setAddingSubject] = useState(false);
@@ -352,8 +350,6 @@ export default function App() {
   const [deckMenu, setDeckMenu] = useState(false);
   const [renameVal, setRenameVal] = useState("");
   const [flash, setFlash] = useState("");
-  const [readOnly, setReadOnlyState] = useState(readReadOnly);
-  const setReadOnly = v => { writeReadOnly(v); setReadOnlyState(v); };
   const flashTimer = useRef(null);
   const focusTitle = useRef(false);
 
@@ -386,7 +382,11 @@ export default function App() {
     return () => window.visualViewport.removeEventListener("resize", onResize);
   }, [view]);
 
-  useEffect(() => { window.scrollTo(0, 0); setDeckMenu(false); setFlash(""); }, [view]);
+  useEffect(() => {
+    window.scrollTo(0, 0); setDeckMenu(false); setFlash("");
+    clearTimeout(turning.current); turning.current = null; setDx(0); setDragging(false);
+  }, [view]);
+  useEffect(() => { if (view === "read") window.scrollTo(0, 0); }, [readPos]);
 
   // ── Helpers ──
   const accent = (subject) => data.accents[subject] || ACC[0];
@@ -394,6 +394,7 @@ export default function App() {
   const dCards = deck ? cards.filter(c => c.subject === deck) : [];
   const weak = dCards.filter(c => c.status !== "sicher");
   const studyCard = cards.find(c => c.id === queue[qPos]);
+  const readCard = cards.find(c => c.id === readIds[readPos]);
   const groups = (card) => (card ? card.lines.filter(l => l.level === 0 && l.text.trim()).length : 0);
   const canRate = flipped && (!POINT_BY_POINT || reveal >= groups(studyCard));
 
@@ -433,6 +434,11 @@ export default function App() {
   useEffect(() => {
     const onKey = (e) => {
       const h = handlers.current;
+      if (h.view === "read") {
+        if (e.key === "ArrowRight" || e.key === " " || e.key === "Enter") { e.preventDefault(); h.turn(1); }
+        else if (e.key === "ArrowLeft") { e.preventDefault(); h.turn(-1); }
+        return;
+      }
       if (h.view !== "study") return;
       if (e.target.closest?.(".gap-q")) return; // Space/Enter on a gap opens just that gap
       if (e.key === " " || e.key === "Enter") { e.preventDefault(); h.tap(); }
@@ -469,6 +475,51 @@ export default function App() {
     setDx(0); setDragging(false);
   };
   const pCancel = () => { drag.current = null; setDx(0); setDragging(false); };
+
+  // ── Read ──
+  // Going through the whole cards before studying them, to learn them in the first place.
+  // Swipe left (or Weiter / → / Space) for the next card, right (or ‹ / ←) for the previous one.
+  const startRead = (ids) => {
+    if (!ids.length) return;
+    setReadIds(ids); setReadPos(0); setView("read");
+  };
+  const turn = (step) => {
+    if (turning.current) return;
+    const next = readPos + step;
+    if (next < 0) { setDx(0); setDragging(false); return; }
+    if (next >= readIds.length) { setView("readDone"); return; }
+    // The card leaves the way it's being pushed and the next one comes in from the other side.
+    const out = step > 0 ? -1 : 1;
+    setDragging(false); setDx(out * 480);
+    turning.current = setTimeout(() => {
+      setDragging(true); setReadPos(next); setDx(-out * 480);
+      turning.current = setTimeout(() => { turning.current = null; setDragging(false); setDx(0); }, 30);
+    }, 180);
+  };
+  handlers.current.turn = turn;
+  // Only sideways drags turn the page; up and down still scroll a long card.
+  const rDown = (e) => { drag.current = { x: e.clientX, y: e.clientY, side: null }; };
+  const rMove = (e) => {
+    const d = drag.current; if (!d || turning.current) return;
+    const x = e.clientX - d.x, y = e.clientY - d.y;
+    if (d.side == null && (Math.abs(x) > 8 || Math.abs(y) > 8)) {
+      d.side = Math.abs(x) > Math.abs(y);
+      if (d.side) { try { e.currentTarget.setPointerCapture(e.pointerId); } catch (_) {} }
+    }
+    if (d.side) { setDx(x); setDragging(true); }
+  };
+  const rUp = () => {
+    const d = drag.current; drag.current = null;
+    if (!d?.side || turning.current) return;
+    if (Math.abs(dx) > 80) return turn(dx < 0 ? 1 : -1);
+    setDx(0); setDragging(false);
+  };
+
+  // A card being read can disappear if another device deletes it; just skip it.
+  useEffect(() => {
+    if (view !== "read" || readCard || !readIds.length) return;
+    if (readPos + 1 < readIds.length) setReadPos(readPos + 1); else setView("readDone");
+  }, [view, readCard, readPos, readIds.length]);
 
   // ── Editor ──
   const openEditor = (card, back) => {
@@ -577,7 +628,6 @@ export default function App() {
     focusTitle.current = true;
     window.scrollTo(0, 0);
   };
-  handlers.current.readOnly = readOnly;
   handlers.current.newCard = newCard;
   handlers.current.saveAndNew = saveAndNew;
 
@@ -588,7 +638,7 @@ export default function App() {
   useEffect(() => {
     const onKey = (e) => {
       const h = handlers.current;
-      if (h.readOnly || !["home", "deck", "card", "edit"].includes(h.view)) return;
+      if (STUDY_ONLY || !["home", "deck", "card", "edit"].includes(h.view)) return;
       const typing = /^(INPUT|TEXTAREA|SELECT)$/.test(e.target.tagName) || e.target.isContentEditable;
       const mod = e.ctrlKey || e.metaKey;
       const altN = e.altKey && !mod && e.code === "KeyN"; // e.code: on a Mac ⌥+N types a dead key
@@ -700,15 +750,9 @@ export default function App() {
 
   // ── Header ──
   const cIdx = Math.min(cardIdx, dCards.length - 1);
-  const counterText = view === "study" ? `${qPos + 1} / ${queue.length}` : view === "card" ? `${cIdx + 1} / ${dCards.length}` : "";
+  const counterText = view === "study" ? `${qPos + 1} / ${queue.length}` : view === "read" ? `${readPos + 1} / ${readIds.length}` : view === "card" ? `${cIdx + 1} / ${dCards.length}` : "";
   // Cards get more room on big screens; overview and deck lists stay narrow and easy to scan.
-  const wide = ["card", "study", "edit"].includes(view) ? " wide" : "";
-  const lockIcon = (
-    <svg className="lock-icon" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true">
-      <rect x="3" y="7" width="10" height="7" rx="1.5" fill="currentColor" />
-      <path d="M5.5 7V5a2.5 2.5 0 0 1 5 0v2" fill="none" stroke="currentColor" strokeWidth="1.6" />
-    </svg>
-  );
+  const wide = ["card", "study", "read", "edit"].includes(view) ? " wide" : "";
   const header = (
     <div className="hdr">
       <div className={"hdr-inner" + wide}>
@@ -725,14 +769,13 @@ export default function App() {
           </div>
         )}
         <div className="spacer" />
-        {(view === "deck" || view === "card") && readOnly && <button className="pill-btn lock-pill" onClick={() => setReadOnly(false)}
-          title="Nur-lesen-Modus ausschalten" aria-label="Nur lesen – zum Bearbeiten entsperren">{lockIcon}Nur lesen</button>}
-        {(view === "deck" || view === "card") && !readOnly && <button className="pill-btn" onClick={newCard} title="Neue Karte (Taste N)" aria-keyshortcuts="N">+ Karte</button>}
+        {(view === "deck" || view === "card") && !STUDY_ONLY && <button className="pill-btn" onClick={newCard} title="Neue Karte (Taste N)" aria-keyshortcuts="N">+ Karte</button>}
         {view === "edit" && draft && <button className="pill-btn" onClick={saveAndNew} aria-keyshortcuts="Control+Enter Meta+Enter Alt+N"
           title={`${draft.title.trim() ? "Aktuelle Karte speichern und eine neue anfangen" : "Neue Karte anfangen"} (${MOD} + Enter)`}>+ Neue Karte</button>}
-        {(view === "study" || view === "card") && <span className="counter" aria-label={`Karte ${counterText.replace(" / ", " von ")}`}>{counterText}</span>}
+        {(view === "study" || view === "read" || view === "card") && <span className="counter" aria-label={`Karte ${counterText.replace(" / ", " von ")}`}>{counterText}</span>}
       </div>
       {view === "study" && <div className="progress"><div style={{ width: (qPos / queue.length * 100) + "%" }} /></div>}
+      {view === "read" && <div className="progress"><div style={{ width: ((readPos + 1) / readIds.length * 100) + "%" }} /></div>}
     </div>
   );
 
@@ -756,13 +799,7 @@ export default function App() {
           <h1>Welches Fach lernst du heute?</h1>
           <p className="muted">{total ? `${plural(total, "Karte", "Karten")} · ${unsure} noch unsicher` : "Leg eine Mappe an und schreib deine erste Karte."}</p>
         </div>
-        {readOnly && (
-          <div className="lock-banner" role="status">
-            <span className="lock-banner-text">{lockIcon}<span><b>Nur lesen</b> · Karten und Mappen lassen sich auf diesem Gerät gerade nicht ändern.</span></span>
-            <button className="link-btn" onClick={() => setReadOnly(false)}>Entsperren</button>
-          </div>
-        )}
-        {savedDraft?.draft && !readOnly && (
+        {savedDraft?.draft && (
           <div className="draft-banner" role="status">
             <div className="draft-text">
               <b>Ungespeicherte Karte</b>
@@ -865,7 +902,7 @@ export default function App() {
             );
           })}
         </div>
-        {addingSubject && !readOnly && (
+        {addingSubject && (
           <div className="add-row">
             <input className="add-input" value={newSubject} autoFocus placeholder="Name der Mappe" aria-label="Name der neuen Mappe"
               onChange={e => setNewSubject(e.target.value)}
@@ -874,7 +911,7 @@ export default function App() {
             <button className="add-x" onClick={cancelSubject} aria-label="Abbrechen">×</button>
           </div>
         )}
-        {!addingSubject && !readOnly && <button className="new-deck" onClick={() => setAddingSubject(true)}>+ Neue Mappe</button>}
+        {!addingSubject && !STUDY_ONLY && <button className="new-deck" onClick={() => setAddingSubject(true)}>+ Neue Mappe</button>}
         </>)}
         <div className="sync" aria-live="polite">
           {sync.choice ? (
@@ -914,12 +951,9 @@ export default function App() {
           {nudgeBackup && <p className="backup-nudge">{backupAge == null ? "Du hast noch keine Sicherung gemacht." : `Letzte Sicherung vor ${backupAge} Tagen.`} Deine Karten liegen nur in diesem Browser.</p>}
           <div className="backup-row">
             <button className="link-btn" onClick={doExport}>Sicherung speichern</button>
-            {!readOnly && <>
-              <span className="backup-sep">·</span>
-              <button className="link-btn" onClick={() => fileInput.current?.click()}>Sicherung oder Kartenpaket laden</button>
-            </>}
+            <span className="backup-sep">·</span>
+            <button className="link-btn" onClick={() => fileInput.current?.click()}>Sicherung oder Kartenpaket laden</button>
           </div>
-          {!readOnly && <button className="link-btn" onClick={() => setReadOnly(true)}>Nur-lesen-Modus einschalten</button>}
           <input ref={fileInput} type="file" accept="application/json,.json" hidden onChange={doImport} />
         </div>
       </div>
@@ -929,6 +963,7 @@ export default function App() {
   if (view === "deck") {
     const sure = dCards.filter(c => c.status === "sicher").length;
     const dueCards = dCards.filter(isDue);
+    const fresh = dCards.filter(c => (c.status || "neu") === "neu");
     const t = today();
     screen = (
       <div className="screen deck">
@@ -936,7 +971,7 @@ export default function App() {
           <div className="deck-swatch" style={{ background: accent(deck) }} />
           <div className="deck-title-row">
             <h1>{deck}</h1>
-            {!readOnly && <button className="icon-btn" aria-label="Mappe bearbeiten" aria-expanded={deckMenu}
+            {!STUDY_ONLY && <button className="icon-btn" aria-label="Mappe bearbeiten" aria-expanded={deckMenu}
               onClick={() => { setRenameVal(deck); setDeckMenu(m => !m); }}>⋯</button>}
           </div>
           <p className="muted">{dCards.length ? `${plural(dCards.length, "Karte", "Karten")} · ${sure} sicher · ${dCards.length - sure} offen` : "Noch keine Karten"}</p>
@@ -974,6 +1009,10 @@ export default function App() {
                 <button className="btn-secondary h48 spacer" onClick={() => startStudy(dCards.map(c => c.id), deck)}>Alle üben ({dCards.length})</button>
                 {weak.length > 0 && <button className="btn-secondary h48 spacer" onClick={() => startStudy(weak.map(c => c.id), deck)}>Unsichere ({weak.length})</button>}
               </div>
+              <div className="bottom-row">
+                <button className="btn-secondary h48 spacer" onClick={() => startRead(dCards.map(c => c.id))}>Durchlesen ({dCards.length})</button>
+                {fresh.length > 0 && fresh.length < dCards.length && <button className="btn-secondary h48 spacer" onClick={() => startRead(fresh.map(c => c.id))}>Neue lesen ({fresh.length})</button>}
+              </div>
             </div>
             <div className="stack10">
               <span className="section-label">Karten</span>
@@ -997,7 +1036,7 @@ export default function App() {
         ) : (
           <div className="empty">
             <p>Noch keine Karten in dieser Mappe.</p>
-            {!readOnly && <button className="btn-primary" onClick={newCard}>Erste Karte schreiben</button>}
+            {!STUDY_ONLY && <button className="btn-primary" onClick={newCard}>Erste Karte schreiben</button>}
           </div>
         )}
       </div>
@@ -1015,8 +1054,8 @@ export default function App() {
         <div className="spacer" />
         <div className="bottom-bar bottom-row">
           <button className="btn-secondary nav-arrow" aria-label="Vorherige Karte" disabled={cIdx === 0} onClick={() => setCardIdx(Math.max(0, cIdx - 1))}>‹</button>
-          {!readOnly && <button className="btn-secondary h52 spacer" onClick={() => openEditor(c, "card")}>Bearbeiten</button>}
-          {readOnly && <button className="btn-primary h52 spacer" onClick={() => startStudy(dCards.map(x => x.id), deck)}>Mappe lernen</button>}
+          {!STUDY_ONLY && <button className="btn-secondary h52 spacer" onClick={() => openEditor(c, "card")}>Bearbeiten</button>}
+          {STUDY_ONLY && <button className="btn-primary h52 spacer" onClick={() => startStudy(dCards.map(x => x.id), deck)}>Mappe lernen</button>}
           <button className="btn-secondary nav-arrow" aria-label="Nächste Karte" disabled={cIdx === dCards.length - 1} onClick={() => setCardIdx(Math.min(dCards.length - 1, cIdx + 1))}>›</button>
         </div>
       </div>
@@ -1063,6 +1102,45 @@ export default function App() {
               <p className="swipe-hint" aria-hidden="true">oder Karte wischen: ← Nochmal · Sicher →</p>
             </>
           )}
+        </div>
+      </div>
+    );
+  }
+
+  if (view === "read" && readCard) {
+    const c = readCard, acc = titleColor(c.subject), last = readPos === readIds.length - 1;
+    screen = (
+      <div className="screen read">
+        <p className="sr-only" aria-live="polite">Karte {readPos + 1} von {readIds.length}: {c.title}</p>
+        <div className="read-wrap" onPointerDown={rDown} onPointerMove={rMove} onPointerUp={rUp} onPointerCancel={pCancel}
+          style={{ transition: dragging ? "none" : "transform .18s ease, opacity .18s ease", transform: `translateX(${dx}px) rotate(${dx / 50}deg)`, opacity: 1 - Math.min(0.6, Math.abs(dx) / 800) }}>
+          <div className="paper" style={{ "--accent": acc }}>
+            <div className="paper-title" style={{ background: acc }}>{c.title}</div>
+            <div className="paper-body" style={{ minHeight: 220 }}><Lines lines={mapLines(c.lines)} /></div>
+          </div>
+        </div>
+        <div className="spacer" />
+        <div className="bottom-bar">
+          <div className="bottom-row">
+            <button className="btn-secondary nav-arrow" aria-label="Vorherige Karte" disabled={readPos === 0} onClick={() => turn(-1)}>‹</button>
+            <button className="btn-primary h52 spacer" onClick={() => turn(1)}>{last ? "Fertig gelesen" : "Weiter ›"}</button>
+          </div>
+          <p className="swipe-hint" aria-hidden="true">oder wischen: nach links weiter · nach rechts zurück</p>
+        </div>
+      </div>
+    );
+  }
+
+  if (view === "readDone") {
+    const n = readIds.filter(id => cards.some(c => c.id === id)).length;
+    screen = (
+      <div className="screen done">
+        <h1>Durchgelesen!</h1>
+        <p>{plural(n, "Karte", "Karten")} aus {deck}. Jetzt abfragen, solange es frisch ist?</p>
+        <div className="stack10" style={{ width: "100%" }}>
+          {n > 0 && <button className="btn-primary h56" onClick={() => startStudy(readIds.filter(id => cards.some(c => c.id === id)), deck)}>Jetzt lernen · {plural(n, "Karte", "Karten")}</button>}
+          {n > 0 && <button className="btn-secondary h52" onClick={() => startRead(readIds.filter(id => cards.some(c => c.id === id)))}>Nochmal durchlesen</button>}
+          <button className="btn-secondary h52" onClick={() => setView("deck")}>Zurück zur Mappe</button>
         </div>
       </div>
     );
