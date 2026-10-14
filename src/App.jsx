@@ -6,11 +6,16 @@ import { Chart, Dist } from "./charts.jsx";
 import "./styles.css";
 
 // ── Settings (were design-tool toggles in the prototype) ─────
-const STUDY_ONLY = false;          // hides all editing UI
 const SHUFFLE = true;              // shuffle study queue
 const TITLE_TURQUOISE = false;     // true = every title bar turquoise, false = subject colour
 
 const MOD = /Mac|iPhone|iPad/.test(navigator.platform) ? "⌘" : "Strg";
+
+// Read-only mode hides all editing UI on this device (studying still works). Kept per device,
+// not synced: lock the phone you study on, keep writing on the laptop.
+const READ_ONLY_KEY = "lernkarten-read-only";
+const readReadOnly = () => { try { return localStorage.getItem(READ_ONLY_KEY) === "1"; } catch (e) { return false; } };
+const writeReadOnly = v => { try { v ? localStorage.setItem(READ_ONLY_KEY, "1") : localStorage.removeItem(READ_ONLY_KEY); } catch (e) {} };
 
 // The card being edited is kept in localStorage while typing, so nothing is lost if the app
 // is closed, the phone kills it in the background, or the battery dies.
@@ -347,6 +352,8 @@ export default function App() {
   const [deckMenu, setDeckMenu] = useState(false);
   const [renameVal, setRenameVal] = useState("");
   const [flash, setFlash] = useState("");
+  const [readOnly, setReadOnlyState] = useState(readReadOnly);
+  const setReadOnly = v => { writeReadOnly(v); setReadOnlyState(v); };
   const flashTimer = useRef(null);
   const focusTitle = useRef(false);
 
@@ -570,6 +577,7 @@ export default function App() {
     focusTitle.current = true;
     window.scrollTo(0, 0);
   };
+  handlers.current.readOnly = readOnly;
   handlers.current.newCard = newCard;
   handlers.current.saveAndNew = saveAndNew;
 
@@ -580,7 +588,7 @@ export default function App() {
   useEffect(() => {
     const onKey = (e) => {
       const h = handlers.current;
-      if (STUDY_ONLY || !["home", "deck", "card", "edit"].includes(h.view)) return;
+      if (h.readOnly || !["home", "deck", "card", "edit"].includes(h.view)) return;
       const typing = /^(INPUT|TEXTAREA|SELECT)$/.test(e.target.tagName) || e.target.isContentEditable;
       const mod = e.ctrlKey || e.metaKey;
       const altN = e.altKey && !mod && e.code === "KeyN"; // e.code: on a Mac ⌥+N types a dead key
@@ -695,6 +703,12 @@ export default function App() {
   const counterText = view === "study" ? `${qPos + 1} / ${queue.length}` : view === "card" ? `${cIdx + 1} / ${dCards.length}` : "";
   // Cards get more room on big screens; overview and deck lists stay narrow and easy to scan.
   const wide = ["card", "study", "edit"].includes(view) ? " wide" : "";
+  const lockIcon = (
+    <svg className="lock-icon" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true">
+      <rect x="3" y="7" width="10" height="7" rx="1.5" fill="currentColor" />
+      <path d="M5.5 7V5a2.5 2.5 0 0 1 5 0v2" fill="none" stroke="currentColor" strokeWidth="1.6" />
+    </svg>
+  );
   const header = (
     <div className="hdr">
       <div className={"hdr-inner" + wide}>
@@ -711,7 +725,9 @@ export default function App() {
           </div>
         )}
         <div className="spacer" />
-        {(view === "deck" || view === "card") && !STUDY_ONLY && <button className="pill-btn" onClick={newCard} title="Neue Karte (Taste N)" aria-keyshortcuts="N">+ Karte</button>}
+        {(view === "deck" || view === "card") && readOnly && <button className="pill-btn lock-pill" onClick={() => setReadOnly(false)}
+          title="Nur-lesen-Modus ausschalten" aria-label="Nur lesen – zum Bearbeiten entsperren">{lockIcon}Nur lesen</button>}
+        {(view === "deck" || view === "card") && !readOnly && <button className="pill-btn" onClick={newCard} title="Neue Karte (Taste N)" aria-keyshortcuts="N">+ Karte</button>}
         {view === "edit" && draft && <button className="pill-btn" onClick={saveAndNew} aria-keyshortcuts="Control+Enter Meta+Enter Alt+N"
           title={`${draft.title.trim() ? "Aktuelle Karte speichern und eine neue anfangen" : "Neue Karte anfangen"} (${MOD} + Enter)`}>+ Neue Karte</button>}
         {(view === "study" || view === "card") && <span className="counter" aria-label={`Karte ${counterText.replace(" / ", " von ")}`}>{counterText}</span>}
@@ -740,7 +756,13 @@ export default function App() {
           <h1>Welches Fach lernst du heute?</h1>
           <p className="muted">{total ? `${plural(total, "Karte", "Karten")} · ${unsure} noch unsicher` : "Leg eine Mappe an und schreib deine erste Karte."}</p>
         </div>
-        {savedDraft?.draft && (
+        {readOnly && (
+          <div className="lock-banner" role="status">
+            <span className="lock-banner-text">{lockIcon}<span><b>Nur lesen</b> · Karten und Mappen lassen sich auf diesem Gerät gerade nicht ändern.</span></span>
+            <button className="link-btn" onClick={() => setReadOnly(false)}>Entsperren</button>
+          </div>
+        )}
+        {savedDraft?.draft && !readOnly && (
           <div className="draft-banner" role="status">
             <div className="draft-text">
               <b>Ungespeicherte Karte</b>
@@ -843,7 +865,7 @@ export default function App() {
             );
           })}
         </div>
-        {addingSubject && (
+        {addingSubject && !readOnly && (
           <div className="add-row">
             <input className="add-input" value={newSubject} autoFocus placeholder="Name der Mappe" aria-label="Name der neuen Mappe"
               onChange={e => setNewSubject(e.target.value)}
@@ -852,7 +874,7 @@ export default function App() {
             <button className="add-x" onClick={cancelSubject} aria-label="Abbrechen">×</button>
           </div>
         )}
-        {!addingSubject && !STUDY_ONLY && <button className="new-deck" onClick={() => setAddingSubject(true)}>+ Neue Mappe</button>}
+        {!addingSubject && !readOnly && <button className="new-deck" onClick={() => setAddingSubject(true)}>+ Neue Mappe</button>}
         </>)}
         <div className="sync" aria-live="polite">
           {sync.choice ? (
@@ -892,9 +914,12 @@ export default function App() {
           {nudgeBackup && <p className="backup-nudge">{backupAge == null ? "Du hast noch keine Sicherung gemacht." : `Letzte Sicherung vor ${backupAge} Tagen.`} Deine Karten liegen nur in diesem Browser.</p>}
           <div className="backup-row">
             <button className="link-btn" onClick={doExport}>Sicherung speichern</button>
-            <span className="backup-sep">·</span>
-            <button className="link-btn" onClick={() => fileInput.current?.click()}>Sicherung oder Kartenpaket laden</button>
+            {!readOnly && <>
+              <span className="backup-sep">·</span>
+              <button className="link-btn" onClick={() => fileInput.current?.click()}>Sicherung oder Kartenpaket laden</button>
+            </>}
           </div>
+          {!readOnly && <button className="link-btn" onClick={() => setReadOnly(true)}>Nur-lesen-Modus einschalten</button>}
           <input ref={fileInput} type="file" accept="application/json,.json" hidden onChange={doImport} />
         </div>
       </div>
@@ -911,7 +936,7 @@ export default function App() {
           <div className="deck-swatch" style={{ background: accent(deck) }} />
           <div className="deck-title-row">
             <h1>{deck}</h1>
-            {!STUDY_ONLY && <button className="icon-btn" aria-label="Mappe bearbeiten" aria-expanded={deckMenu}
+            {!readOnly && <button className="icon-btn" aria-label="Mappe bearbeiten" aria-expanded={deckMenu}
               onClick={() => { setRenameVal(deck); setDeckMenu(m => !m); }}>⋯</button>}
           </div>
           <p className="muted">{dCards.length ? `${plural(dCards.length, "Karte", "Karten")} · ${sure} sicher · ${dCards.length - sure} offen` : "Noch keine Karten"}</p>
@@ -972,7 +997,7 @@ export default function App() {
         ) : (
           <div className="empty">
             <p>Noch keine Karten in dieser Mappe.</p>
-            {!STUDY_ONLY && <button className="btn-primary" onClick={newCard}>Erste Karte schreiben</button>}
+            {!readOnly && <button className="btn-primary" onClick={newCard}>Erste Karte schreiben</button>}
           </div>
         )}
       </div>
@@ -990,8 +1015,8 @@ export default function App() {
         <div className="spacer" />
         <div className="bottom-bar bottom-row">
           <button className="btn-secondary nav-arrow" aria-label="Vorherige Karte" disabled={cIdx === 0} onClick={() => setCardIdx(Math.max(0, cIdx - 1))}>‹</button>
-          {!STUDY_ONLY && <button className="btn-secondary h52 spacer" onClick={() => openEditor(c, "card")}>Bearbeiten</button>}
-          {STUDY_ONLY && <button className="btn-primary h52 spacer" onClick={() => startStudy(dCards.map(x => x.id), deck)}>Mappe lernen</button>}
+          {!readOnly && <button className="btn-secondary h52 spacer" onClick={() => openEditor(c, "card")}>Bearbeiten</button>}
+          {readOnly && <button className="btn-primary h52 spacer" onClick={() => startStudy(dCards.map(x => x.id), deck)}>Mappe lernen</button>}
           <button className="btn-secondary nav-arrow" aria-label="Nächste Karte" disabled={cIdx === dCards.length - 1} onClick={() => setCardIdx(Math.min(dCards.length - 1, cIdx + 1))}>›</button>
         </div>
       </div>

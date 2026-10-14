@@ -241,6 +241,14 @@ input::placeholder { color: var(--faint); }
 .backup-row { display: flex; align-items: center; gap: 6px; }
 .backup-sep { color: var(--faint); }
 
+/* ── Read-only mode ── */
+.lock-icon { flex-shrink: 0; }
+.lock-pill { display: flex; align-items: center; gap: 6px; color: var(--muted); }
+.lock-banner { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 10px 14px; border: 1px solid var(--line); border-radius: 14px; background: var(--chip); }
+.lock-banner-text { display: flex; align-items: flex-start; gap: 8px; font-size: 14px; line-height: 1.45; color: var(--ink-2); }
+.lock-banner-text .lock-icon { margin-top: 3px; color: var(--muted); }
+.lock-banner .link-btn { flex-shrink: 0; }
+
 /* ── Reveal toggle ── */
 .mode-toggle { align-self: center; display: flex; padding: 3px; border-radius: 999px; background: var(--chip); }
 .mode-toggle button { height: 34px; padding: 0 14px; border: none; border-radius: 999px; background: none; color: var(--muted); font-size: 14px; font-weight: 600; }
