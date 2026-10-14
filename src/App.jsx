@@ -339,6 +339,7 @@ export default function App() {
   const [readIds, setReadIds] = useState([]);
   const [readPos, setReadPos] = useState(0);
   const turning = useRef(null); // timer while a card slides out and the next one in
+  const queued = useRef(0);      // a swipe made while the previous card is still sliding: done right after
   const [draft, setDraft] = useState(null);
   const [returnTo, setReturnTo] = useState("deck");
   const [addingSubject, setAddingSubject] = useState(false);
@@ -384,7 +385,7 @@ export default function App() {
 
   useEffect(() => {
     window.scrollTo(0, 0); setDeckMenu(false); setFlash("");
-    clearTimeout(turning.current); turning.current = null; setDx(0); setDragging(false);
+    clearTimeout(turning.current); turning.current = null; queued.current = 0; setDx(0); setDragging(false);
   }, [view]);
   useEffect(() => { if (view === "read") window.scrollTo(0, 0); }, [readPos]);
 
@@ -483,37 +484,52 @@ export default function App() {
     if (!ids.length) return;
     setReadIds(ids); setReadPos(0); setView("read");
   };
+  // Refs, not state: a turn finishes in a timer and a swipe can end before React re-renders.
+  const readAt = useRef({ pos: 0, len: 0 });
+  readAt.current = { pos: readPos, len: readIds.length };
   const turn = (step) => {
-    if (turning.current) return;
-    const next = readPos + step;
+    if (turning.current) { queued.current = step; return; }
+    const { pos, len } = readAt.current, next = pos + step;
     if (next < 0) { setDx(0); setDragging(false); return; }
-    if (next >= readIds.length) { setView("readDone"); return; }
+    if (next >= len) { setView("readDone"); return; }
     // The card leaves the way it's being pushed and the next one comes in from the other side.
     const out = step > 0 ? -1 : 1;
     setDragging(false); setDx(out * 480);
     turning.current = setTimeout(() => {
+      readAt.current = { pos: next, len };
       setDragging(true); setReadPos(next); setDx(-out * 480);
-      turning.current = setTimeout(() => { turning.current = null; setDragging(false); setDx(0); }, 30);
-    }, 180);
+      turning.current = setTimeout(() => {
+        turning.current = null; setDragging(false); setDx(0);
+        const q = queued.current; queued.current = 0;
+        if (q) turn(q);
+      }, 30);
+    }, 160);
   };
   handlers.current.turn = turn;
-  // Only sideways drags turn the page; up and down still scroll a long card.
-  const rDown = (e) => { drag.current = { x: e.clientX, y: e.clientY, side: null }; };
+  // Only sideways drags turn the page; up and down still scroll a long card. A long drag or a
+  // quick flick turns it, so short flicks on a phone count too.
+  const rDown = (e) => { drag.current = { x0: e.clientX, y0: e.clientY, x: e.clientX, t: e.timeStamp, v: 0, side: null }; };
   const rMove = (e) => {
-    const d = drag.current; if (!d || turning.current) return;
-    const x = e.clientX - d.x, y = e.clientY - d.y;
+    const d = drag.current; if (!d) return;
+    const x = e.clientX - d.x0, y = e.clientY - d.y0;
     if (d.side == null && (Math.abs(x) > 8 || Math.abs(y) > 8)) {
       d.side = Math.abs(x) > Math.abs(y);
       if (d.side) { try { e.currentTarget.setPointerCapture(e.pointerId); } catch (_) {} }
     }
-    if (d.side) { setDx(x); setDragging(true); }
+    const dt = e.timeStamp - d.t;
+    if (dt > 0) d.v = 0.6 * ((e.clientX - d.x) / dt) + 0.4 * d.v; // px per ms, smoothed
+    d.x = e.clientX; d.t = e.timeStamp;
+    if (d.side && !turning.current) { setDx(x); setDragging(true); }
   };
-  const rUp = () => {
+  const rUp = (e) => {
     const d = drag.current; drag.current = null;
-    if (!d?.side || turning.current) return;
-    if (Math.abs(dx) > 80) return turn(dx < 0 ? 1 : -1);
-    setDx(0); setDragging(false);
+    if (!d?.side) return;
+    const dist = (e.clientX ?? d.x) - d.x0, fresh = e.timeStamp - d.t < 100;
+    const flick = fresh && Math.abs(d.v) > 0.3 && Math.abs(dist) > 40 && Math.sign(d.v) === Math.sign(dist);
+    if (Math.abs(dist) > 70 || flick) return turn(dist < 0 ? 1 : -1);
+    if (!turning.current) { setDx(0); setDragging(false); }
   };
+  const rCancel = () => { drag.current = null; if (!turning.current) { setDx(0); setDragging(false); } };
 
   // A card being read can disappear if another device deletes it; just skip it.
   useEffect(() => {
@@ -1112,14 +1128,16 @@ export default function App() {
     screen = (
       <div className="screen read">
         <p className="sr-only" aria-live="polite">Karte {readPos + 1} von {readIds.length}: {c.title}</p>
-        <div className="read-wrap" onPointerDown={rDown} onPointerMove={rMove} onPointerUp={rUp} onPointerCancel={pCancel}
-          style={{ transition: dragging ? "none" : "transform .18s ease, opacity .18s ease", transform: `translateX(${dx}px) rotate(${dx / 50}deg)`, opacity: 1 - Math.min(0.6, Math.abs(dx) / 800) }}>
-          <div className="paper" style={{ "--accent": acc }}>
-            <div className="paper-title" style={{ background: acc }}>{c.title}</div>
-            <div className="paper-body" style={{ minHeight: 220 }}><Lines lines={mapLines(c.lines)} /></div>
+        {/* The whole area above the buttons takes swipes, also where the card has just slid away from. */}
+        <div className="read-stage" onPointerDown={rDown} onPointerMove={rMove} onPointerUp={rUp} onPointerCancel={rCancel}>
+          <div className="read-wrap"
+            style={{ transition: dragging ? "none" : "transform .18s ease, opacity .18s ease", transform: `translateX(${dx}px) rotate(${dx / 50}deg)`, opacity: 1 - Math.min(0.6, Math.abs(dx) / 800) }}>
+            <div className="paper" style={{ "--accent": acc }}>
+              <div className="paper-title" style={{ background: acc }}>{c.title}</div>
+              <div className="paper-body" style={{ minHeight: 220 }}><Lines lines={mapLines(c.lines)} /></div>
+            </div>
           </div>
         </div>
-        <div className="spacer" />
         <div className="bottom-bar">
           <div className="bottom-row">
             <button className="btn-secondary nav-arrow" aria-label="Vorherige Karte" disabled={readPos === 0} onClick={() => turn(-1)}>‹</button>
