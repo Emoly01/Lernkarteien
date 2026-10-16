@@ -151,6 +151,14 @@ input::placeholder { color: var(--faint); }
 /* ── Study ── */
 .study { gap: 16px; flex: 1; }
 .read { gap: 16px; flex: 1; overflow-x: clip; }
+.listen-start { display: flex; align-items: center; justify-content: center; gap: 8px; }
+.listen-bar { display: flex; gap: 8px; margin-bottom: 10px; }
+.listen-btn { height: 40px; padding: 0 14px; border-radius: 999px; border: 1px solid var(--line-strong); background: var(--surface); color: var(--ink-2); font-size: 14px; font-weight: 600; display: flex; align-items: center; gap: 7px; font-variant-numeric: tabular-nums; }
+.listen-btn.sel { border-color: var(--green); background: var(--green-soft); color: var(--green-ink); }
+.listen-play { flex: 1; justify-content: center; }
+.listen-play.on { border-color: var(--ink-2); background: var(--ink-2); color: #fff; }
+.read .paper-body > * { transition: filter .3s ease; }
+.read .paper-body.thinking > * { filter: blur(7px); }
 .read-stage { flex: 1; touch-action: pan-y; user-select: none; -webkit-user-select: none; -webkit-tap-highlight-color: transparent; }
 .flip-wrap { position: relative; perspective: 1600px; cursor: pointer; touch-action: pan-y; user-select: none; -webkit-user-select: none; -webkit-tap-highlight-color: transparent; }
 .stamp { position: absolute; top: 22px; z-index: 2; pointer-events: none; padding: 6px 14px; border-radius: 10px; background: var(--stamp-bg); font-size: 20px; font-weight: 700; letter-spacing: .06em; }

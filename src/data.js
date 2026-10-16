@@ -418,3 +418,29 @@ export function mapLines(lines, reveal) {
     return { key: l.id, level: l.level, text: l.text, label, rest, chart, table, flow: chart || table ? null : parseFlow(l.text), hidden: !shown, pad: l.level * 26 + 4, ghostW: [46, 58, 64, 60, 56, 52][l.level] ?? 52 };
   });
 }
+
+// What the Vorlesemodus says for a card, one phrase per line: arrows become "dann", "|" and ";"
+// short pauses, gap marks are dropped (the answer is read out). Tables are read row by row with
+// their header: "ledig: Häufigkeit 12, Prozent 16,0".
+const sayable = s => s.replace(/\s*(?:→|->|=>)\s*/g, ", dann ").replace(/\s*[|;]\s*/g, ", ").replace(/(^|[\s:(])\?(?=\S)/g, "$1").replace(/^[,\s]+|[,\s]+$/g, "").replace(/\s+/g, " ");
+export function speechLines(card) {
+  const out = [];
+  let head = null, headLevel = -1;
+  for (const l of card.lines) {
+    const text = l.text.trim();
+    if (!text) continue;
+    const table = parseChart(text) ? null : parseTable(text);
+    if (!table) { head = null; out.push(sayable(text)); continue; }
+    const cells = table.map(c => sayable(c.text));
+    if (!head || l.level !== headLevel) {
+      head = cells; headLevel = l.level;
+      out.push("Tabelle: " + cells.filter(Boolean).join(", "));
+      continue;
+    }
+    const filled = cells.map((c, i) => [head[i], c]).filter(([, c]) => c);
+    if (!filled.length) continue;
+    const [first, ...rest] = filled;
+    out.push([first[1], rest.map(([h, c]) => (h ? `${h} ${c}` : c)).join(", ")].filter(Boolean).join(": "));
+  }
+  return out.filter(Boolean);
+}
