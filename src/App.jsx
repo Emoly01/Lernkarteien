@@ -1,5 +1,5 @@
 import { useState, useEffect, useLayoutEffect, useMemo, useRef, useCallback } from "react";
-import { ACC, STATUS, LEVELS, MARKS, MAX_LEVEL, parseChart, parseFlow, parseTable, flowConnects, flowCycle, flowGraph, parsePasted, mid, L, plural, load, persist, mapLines, schedule, isDue, today, daysBetween, formatDate, exportBackup, parseBackup, addPack, nextAccent, setAccent, renameSubject, deleteSubject, searchCards } from "./data.js";
+import { ACC, STATUS, LEVELS, MARKS, MAX_LEVEL, parseChart, parseFlow, parseTable, flowConnects, flowCycle, flowGraph, parsePasted, mid, L, plural, load, persist, mapLines, speechLines, schedule, isDue, today, daysBetween, formatDate, exportBackup, parseBackup, addPack, nextAccent, setAccent, renameSubject, deleteSubject, searchCards } from "./data.js";
 import { stamp } from "./sync.js";
 import { useCloudSync } from "./useCloudSync.js";
 import { Chart, Dist } from "./charts.jsx";
@@ -35,6 +35,39 @@ function keepInView(el) {
   if (r.bottom > bottom) window.scrollBy({ top: r.bottom - bottom, behavior: "smooth" });
   else if (r.top < top) window.scrollBy({ top: r.top - top, behavior: "smooth" });
 }
+
+// ── Vorlesen ─────────────────────────────────────────────────
+// Cards read aloud by the browser's own voice (Web Speech API), so studying works while cooking,
+// cleaning or on the bus. Tempo and Denkpause are kept per device.
+const canSpeak = typeof window !== "undefined" && "speechSynthesis" in window && "SpeechSynthesisUtterance" in window;
+const RATES = [0.8, 1, 1.2, 1.4];
+const THINK_MS = 5000;
+const LISTEN_KEY = "lernkarten-vorlesen";
+const readListenPrefs = () => { try { return { rate: 1, think: false, ...JSON.parse(localStorage.getItem(LISTEN_KEY)) }; } catch (e) { return { rate: 1, think: false }; } };
+const writeListenPrefs = v => { try { localStorage.setItem(LISTEN_KEY, JSON.stringify(v)); } catch (e) {} };
+let germanVoice = null;
+const pickVoice = () => {
+  const vs = speechSynthesis.getVoices().filter(v => /^de([-_]|$)/i.test(v.lang));
+  germanVoice = vs.find(v => /de[-_]DE/i.test(v.lang) && v.default) || vs.find(v => /de[-_]DE/i.test(v.lang)) || vs[0] || null;
+};
+if (canSpeak) { pickVoice(); speechSynthesis.addEventListener?.("voiceschanged", pickVoice); }
+const spoken = new Set(); // keeps utterances alive: Chrome drops `onend` of ones that were garbage-collected
+// Says one phrase; resolves when it's done, cancelled, or – should the browser never report the
+// end – after a generous timeout, so playback can't get stuck.
+const utter = (text, rate) => new Promise(resolve => {
+  const u = new SpeechSynthesisUtterance(text);
+  u.lang = germanVoice?.lang || "de-DE";
+  if (germanVoice) u.voice = germanVoice;
+  u.rate = rate;
+  let t = null;
+  const done = () => { clearTimeout(t); spoken.delete(u); resolve(); };
+  u.onend = u.onerror = done;
+  t = setTimeout(done, 4000 + (text.length * 110) / rate);
+  spoken.add(u);
+  speechSynthesis.speak(u);
+});
+// iOS only lets a page speak after it first spoke inside a tap, so every play button calls this.
+const primeSpeech = () => { try { speechSynthesis.cancel(); speechSynthesis.speak(new SpeechSynthesisUtterance(" ")); } catch (e) {} };
 
 // ── Card lines (read-only) ───────────────────────────────────
 // Process lines ("A → B → C") as boxes with arrows. Consecutive process lines on the same level
@@ -340,6 +373,10 @@ export default function App() {
   const [readPos, setReadPos] = useState(0);
   const turning = useRef(null); // timer while a card slides out and the next one in
   const queued = useRef(0);      // a swipe made while the previous card is still sliding: done right after
+  const [listening, setListening] = useState(false); // Vorlesen: reading the cards aloud, one after the other
+  const [listenPrefs, setListenPrefsState] = useState(readListenPrefs);
+  const [listenPhase, setListenPhase] = useState(null); // "title" | "think" | "lines" while speaking
+  const [heard, setHeard] = useState(false);            // the last run ended by listening to the end
   const [draft, setDraft] = useState(null);
   const [returnTo, setReturnTo] = useState("deck");
   const [addingSubject, setAddingSubject] = useState(false);
@@ -438,6 +475,7 @@ export default function App() {
       if (h.view === "read") {
         if (e.key === "ArrowRight" || e.key === " " || e.key === "Enter") { e.preventDefault(); h.turn(1); }
         else if (e.key === "ArrowLeft") { e.preventDefault(); h.turn(-1); }
+        else if (e.key.toLowerCase() === "p" && h.toggleListen) { e.preventDefault(); h.toggleListen(); }
         return;
       }
       if (h.view !== "study") return;
@@ -480,9 +518,10 @@ export default function App() {
   // ── Read ──
   // Going through the whole cards before studying them, to learn them in the first place.
   // Swipe left (or Weiter / → / Space) for the next card, right (or ‹ / ←) for the previous one.
-  const startRead = (ids) => {
+  const startRead = (ids, listen = false) => {
     if (!ids.length) return;
-    setReadIds(ids); setReadPos(0); setView("read");
+    if (listen) primeSpeech();
+    setReadIds(ids); setReadPos(0); setHeard(false); setListening(listen); setView("read");
   };
   // Refs, not state: a turn finishes in a timer and a swipe can end before React re-renders.
   const readAt = useRef({ pos: 0, len: 0 });
@@ -506,6 +545,7 @@ export default function App() {
     }, 160);
   };
   handlers.current.turn = turn;
+  handlers.current.toggleListen = canSpeak ? () => toggleListen() : null;
   // Only sideways drags turn the page; up and down still scroll a long card. A long drag or a
   // quick flick turns it, so short flicks on a phone count too.
   const rDown = (e) => { drag.current = { x0: e.clientX, y0: e.clientY, x: e.clientX, t: e.timeStamp, v: 0, side: null }; };
@@ -530,6 +570,50 @@ export default function App() {
     if (!turning.current) { setDx(0); setDragging(false); }
   };
   const rCancel = () => { drag.current = null; if (!turning.current) { setDx(0); setDragging(false); } };
+
+  // ── Vorlesen ──
+  // Title, then (with Denkpause) a few seconds to recall the answer, then the lines; then on to the
+  // next card. Turning a card by hand while listening simply reads the new one.
+  const setListenPrefs = v => { writeListenPrefs(v); setListenPrefsState(v); };
+  const toggleListen = () => { if (!listening) primeSpeech(); setListening(!listening); };
+  const cycleRate = () => setListenPrefs({ ...listenPrefs, rate: RATES[(RATES.indexOf(listenPrefs.rate) + 1) % RATES.length] || 1 });
+  const toggleThink = () => setListenPrefs({ ...listenPrefs, think: !listenPrefs.think });
+  useEffect(() => { if (view !== "read") setListening(false); }, [view]);
+  useEffect(() => {
+    if (!canSpeak || !listening || view !== "read" || !readCard) { setListenPhase(null); return; }
+    let alive = true;
+    const timers = [];
+    const wait = ms => new Promise(r => timers.push(setTimeout(r, ms)));
+    const { rate, think } = listenPrefs, card = readCard;
+    (async () => {
+      speechSynthesis.cancel();
+      await wait(250); if (!alive) return;
+      setListenPhase("title");
+      await utter(card.title, rate); if (!alive) return;
+      if (think) { setListenPhase("think"); await wait(THINK_MS); if (!alive) return; }
+      setListenPhase("lines");
+      for (const line of speechLines(card)) {
+        await utter(line, rate); if (!alive) return;
+        await wait(300); if (!alive) return;
+      }
+      setListenPhase(null);
+      const { pos, len } = readAt.current;
+      if (pos >= len - 1) { await utter("Das war die letzte Karte.", rate); if (!alive) return; setHeard(true); }
+      else { await wait(1200); if (!alive) return; }
+      handlers.current.turn(1);
+    })();
+    return () => { alive = false; timers.forEach(clearTimeout); speechSynthesis.cancel(); };
+  }, [listening, view, readCard?.id, readPos, listenPrefs.rate, listenPrefs.think]);
+  // The screen stays on while listening: phones stop speaking when they lock.
+  useEffect(() => {
+    if (!listening || !navigator.wakeLock) return;
+    let lock = null, alive = true;
+    const get = () => navigator.wakeLock.request("screen").then(l => { if (alive) lock = l; else l.release(); }).catch(() => {});
+    const onVis = () => { if (document.visibilityState === "visible") get(); };
+    get();
+    document.addEventListener("visibilitychange", onVis);
+    return () => { alive = false; document.removeEventListener("visibilitychange", onVis); lock?.release().catch(() => {}); };
+  }, [listening]);
 
   // A card being read can disappear if another device deletes it; just skip it.
   useEffect(() => {
@@ -769,6 +853,12 @@ export default function App() {
   const counterText = view === "study" ? `${qPos + 1} / ${queue.length}` : view === "read" ? `${readPos + 1} / ${readIds.length}` : view === "card" ? `${cIdx + 1} / ${dCards.length}` : "";
   // Cards get more room on big screens; overview and deck lists stay narrow and easy to scan.
   const wide = ["card", "study", "read", "edit"].includes(view) ? " wide" : "";
+  const speakerIcon = (
+    <svg className="btn-icon" viewBox="0 0 20 20" width="18" height="18" aria-hidden="true">
+      <path d="M3 7.5h3l4-3.5v12l-4-3.5H3z" fill="currentColor" />
+      <path d="M13 7a4 4 0 0 1 0 6M15.5 4.5a7.5 7.5 0 0 1 0 11" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" />
+    </svg>
+  );
   const header = (
     <div className="hdr">
       <div className={"hdr-inner" + wide}>
@@ -1029,6 +1119,7 @@ export default function App() {
                 <button className="btn-secondary h48 spacer" onClick={() => startRead(dCards.map(c => c.id))}>Durchlesen ({dCards.length})</button>
                 {fresh.length > 0 && fresh.length < dCards.length && <button className="btn-secondary h48 spacer" onClick={() => startRead(fresh.map(c => c.id))}>Neue lesen ({fresh.length})</button>}
               </div>
+              {canSpeak && <button className="btn-secondary h48 listen-start" onClick={() => startRead(dCards.map(c => c.id), true)}>{speakerIcon}Vorlesen lassen ({dCards.length})</button>}
             </div>
             <div className="stack10">
               <span className="section-label">Karten</span>
@@ -1134,16 +1225,30 @@ export default function App() {
             style={{ transition: dragging ? "none" : "transform .18s ease, opacity .18s ease", transform: `translateX(${dx}px) rotate(${dx / 50}deg)`, opacity: 1 - Math.min(0.6, Math.abs(dx) / 800) }}>
             <div className="paper" style={{ "--accent": acc }}>
               <div className="paper-title" style={{ background: acc }}>{c.title}</div>
-              <div className="paper-body" style={{ minHeight: 220 }}><Lines lines={mapLines(c.lines)} /></div>
+              <div className={"paper-body" + (listenPhase === "think" ? " thinking" : "")} style={{ minHeight: 220 }}><Lines lines={mapLines(c.lines)} /></div>
             </div>
           </div>
         </div>
         <div className="bottom-bar">
+          {canSpeak && (
+            <div className="listen-bar">
+              <button className={"listen-btn listen-play" + (listening ? " on" : "")} aria-pressed={listening} onClick={toggleListen} aria-keyshortcuts="P">
+                {listening
+                  ? <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><rect x="3" y="2.5" width="3.5" height="11" rx="1" fill="currentColor" /><rect x="9.5" y="2.5" width="3.5" height="11" rx="1" fill="currentColor" /></svg>
+                  : <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M4 2.5v11l9.5-5.5z" fill="currentColor" /></svg>}
+                {listening ? "Pause" : "Vorlesen"}
+              </button>
+              <button className="listen-btn" onClick={cycleRate} aria-label={`Tempo ${String(listenPrefs.rate).replace(".", ",")}-fach, tippen zum Ändern`}>{String(listenPrefs.rate).replace(".", ",")}×</button>
+              <button className={"listen-btn" + (listenPrefs.think ? " sel" : "")} aria-pressed={listenPrefs.think} onClick={toggleThink}
+                title="Nach dem Titel 5 Sekunden Pause, damit du dich erst selbst erinnerst">Denkpause</button>
+            </div>
+          )}
           <div className="bottom-row">
             <button className="btn-secondary nav-arrow" aria-label="Vorherige Karte" disabled={readPos === 0} onClick={() => turn(-1)}>‹</button>
             <button className="btn-primary h52 spacer" onClick={() => turn(1)}>{last ? "Fertig gelesen" : "Weiter ›"}</button>
           </div>
-          <p className="swipe-hint" aria-hidden="true">oder wischen: nach links weiter · nach rechts zurück</p>
+          <p className="swipe-hint" aria-live="polite">{!listening ? "oder wischen: nach links weiter · nach rechts zurück"
+            : listenPhase === "think" ? "Denkpause – was weißt du dazu?" : "Liest vor · der Bildschirm bleibt an"}</p>
         </div>
       </div>
     );
@@ -1153,11 +1258,12 @@ export default function App() {
     const n = readIds.filter(id => cards.some(c => c.id === id)).length;
     screen = (
       <div className="screen done">
-        <h1>Durchgelesen!</h1>
+        <h1>{heard ? "Vorgelesen!" : "Durchgelesen!"}</h1>
         <p>{plural(n, "Karte", "Karten")} aus {deck}. Jetzt abfragen, solange es frisch ist?</p>
         <div className="stack10" style={{ width: "100%" }}>
           {n > 0 && <button className="btn-primary h56" onClick={() => startStudy(readIds.filter(id => cards.some(c => c.id === id)), deck)}>Jetzt lernen · {plural(n, "Karte", "Karten")}</button>}
           {n > 0 && <button className="btn-secondary h52" onClick={() => startRead(readIds.filter(id => cards.some(c => c.id === id)))}>Nochmal durchlesen</button>}
+          {n > 0 && canSpeak && <button className="btn-secondary h52" onClick={() => startRead(readIds.filter(id => cards.some(c => c.id === id)), true)}>Nochmal vorlesen</button>}
           <button className="btn-secondary h52" onClick={() => setView("deck")}>Zurück zur Mappe</button>
         </div>
       </div>
