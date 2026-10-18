@@ -1,8 +1,11 @@
 import { useState } from "react";
-import { ACC } from "./data.js";
 
 // Charts and distribution shapes written as one line (see parseChart in data.js).
 // Gaps work like in tables: shown underlined while browsing, a "?" to tap while studying.
+
+// Slices and bars: ink first, then the pastel deck colours.
+const CHART_COLORS = ["var(--ink)", "#6ecece", "#f0c080", "#d090c8", "#90b8e0", "#e09090", "#a8c870"];
+const chartColor = i => CHART_COLORS[i % CHART_COLORS.length];
 
 const de = (n, d = 0) => n.toLocaleString("de-DE", { minimumFractionDigits: d, maximumFractionDigits: d });
 
@@ -46,11 +49,11 @@ function Pie({ items, total, counts, gap, label }) {
   let a = -Math.PI / 2;
   const slices = items.map((it, i) => {
     const share = total ? it.num / total : 0, a0 = a, a1 = (a += share * 2 * Math.PI);
-    const color = ACC[i % ACC.length];
-    if (share >= 0.9999) return <circle key={i} cx={C} cy={C} r={R} fill={color} />;
+    const fill = { fill: chartColor(i) };
+    if (share >= 0.9999) return <circle key={i} cx={C} cy={C} r={R} style={fill} />;
     if (share <= 0) return null;
     const p = t => `${(C + R * Math.cos(t)).toFixed(2)} ${(C + R * Math.sin(t)).toFixed(2)}`;
-    return <path key={i} d={`M${C} ${C}L${p(a0)}A${R} ${R} 0 ${a1 - a0 > Math.PI ? 1 : 0} 1 ${p(a1)}Z`} fill={color} />;
+    return <path key={i} d={`M${C} ${C}L${p(a0)}A${R} ${R} 0 ${a1 - a0 > Math.PI ? 1 : 0} 1 ${p(a1)}Z`} style={fill} />;
   });
   return (
     <div className="pie">
@@ -61,7 +64,7 @@ function Pie({ items, total, counts, gap, label }) {
       <ul className="pie-legend">
         {items.map((it, i) => (
           <li key={i}>
-            <span className="pie-swatch" style={{ background: ACC[i % ACC.length] }} aria-hidden="true" />
+            <span className="pie-swatch" style={{ background: chartColor(i) }} aria-hidden="true" />
             <span className="pie-label">{it.label}</span>
             <span className="pie-val">{gap(it.gap, i, <>{it.value}{counts && total > 0 && <small> · {de((it.num / total) * 100, 1)} %</small>}</>)}</span>
           </li>
@@ -71,7 +74,7 @@ function Pie({ items, total, counts, gap, label }) {
   );
 }
 
-// Bars stand apart (nominal, ordinal); histogram bars touch (metric classes). Histogram classes
+// Bars stand apart (nominal, ordinal), one colour each; histogram bars touch (metric classes). Histogram classes
 // written as "15–20" get their boundaries on the axis instead of a label under each bar.
 const RANGE = /^([−-]?\d+(?:[.,]\d+)?)\s*(?:–|—|-|bis)\s*([−-]?\d+(?:[.,]\d+)?)$/;
 function Bars({ items, hist, gap, label }) {
@@ -85,7 +88,7 @@ function Bars({ items, hist, gap, label }) {
       {items.map((it, i) => (
         <div key={i} className="bar-col" style={{ gridColumn: i + 1 }}>
           {values && <span className="bar-val">{gap(it.gap, i, it.value)}</span>}
-          <div className="bar" style={{ height: Math.max(it.num > 0 ? 1 : 0, Math.round((it.num / max) * 108)) }} />
+          <div className="bar" style={{ height: Math.max(it.num > 0 ? 1 : 0, Math.round((it.num / max) * 124)), background: hist ? undefined : chartColor(i) }} />
         </div>
       ))}
       {items.map((it, i) => (
