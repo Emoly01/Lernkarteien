@@ -1,6 +1,6 @@
 export const ACC = ["#6ecece", "#90d490", "#f0c080", "#d090c8", "#90b8e0", "#e09090", "#a8c870", "#c8a870",
   "#b8a8e8", "#88dcc0", "#e8d878", "#f0a080", "#f0b0d0", "#a8c0a0", "#a8b8c8", "#d8b0a0"];
-export const STATUS = { neu: ["neu", "#c8bfa8"], unsicher: ["unsicher", "#e0a94a"], sicher: ["sicher", "#5a7a4a"] };
+export const STATUS = { neu: ["neu", "var(--faint)"], unsicher: ["unsicher", "var(--unsure)"], sicher: ["sicher", "var(--sure)"] };
 export const LEVELS = ["Hauptpunkt", "Unterpunkt", "Detail", "Unterdetail", "Stichpunkt", "Unterstichpunkt"];
 export const MARKS = ["•", "×", "—", "◦", "·", "‣"];
 export const MAX_LEVEL = LEVELS.length - 1;
@@ -415,7 +415,7 @@ export function mapLines(lines, reveal) {
     const chart = parseChart(l.text);
     const table = chart ? null : parseTable(l.text);
     if (l.level >= 2) { const i = l.text.indexOf(":"); if (i > 0) { label = l.text.slice(0, i + 1) + " "; rest = l.text.slice(i + 1).trim(); } }
-    return { key: l.id, level: l.level, text: l.text, label, rest, chart, table, flow: chart || table ? null : parseFlow(l.text), hidden: !shown, pad: l.level * 26 + 4, ghostW: [46, 58, 64, 60, 56, 52][l.level] ?? 52 };
+    return { key: l.id, level: l.level, text: l.text, label, rest, chart, table, flow: chart || table ? null : parseFlow(l.text), hidden: !shown, pad: l.level * 24 + 4, ghostW: [46, 58, 64, 60, 56, 52][l.level] ?? 52 };
   });
 }
 

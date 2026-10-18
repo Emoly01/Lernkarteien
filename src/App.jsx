@@ -36,6 +36,25 @@ function keepInView(el) {
   else if (r.top < top) window.scrollBy({ top: r.top - top, behavior: "smooth" });
 }
 
+// What a line turns into on the card, shown next to it in the editor.
+function lineKind(text) {
+  const chart = parseChart(text);
+  if (chart) return chart.kind === "dist" ? "Verteilung" : chart.kind === "pie" ? "Kreisdiagramm" : "Diagramm";
+  return parseTable(text) ? "Tabelle" : parseFlow(text) ? "Ablauf" : "";
+}
+
+// "Schreibhilfe & Formate" in the editor.
+const HELP = [
+  { t: "Tastatur", d: `${MOD} + Enter speichert & startet die nächste Karte · Enter = neue Zeile · Tab / ⇧Tab = ein- und ausrücken · leere Zeile + ⌫ = löschen` },
+  { t: "Einfügen", d: "Mehrere Zeilen einfügen: Einrückung wird übernommen. In den leeren Titel eingefügt, wird die erste Zeile zum Titel." },
+  { t: "Ablauf", d: "→ trennt Schritte. Zwei Ablauf-Zeilen untereinander werden zu zwei Reihen. -> wird automatisch zum Pfeil.", ex: "Problem → Methode → Lösung" },
+  { t: "Flussdiagramm & Kreislauf", d: "Kommt ein Schritt in mehreren Ablauf-Zeilen untereinander vor, werden sie verbunden (A → C, B → C, C → D). Endet ein Ablauf beim ersten Schritt, wird er ein Kreis.", ex: "A → B → C → A" },
+  { t: "Tabelle", d: "| trennt Spalten, die erste Zeile ist die Kopfzeile. Aus Excel oder SPSS einfügen geht auch.", ex: "| Skala | Beispiel" },
+  { t: "Lücke", d: "?Wert in einer Zelle bleibt beim Lernen leer, bis du sie antippst. Geht auch vor einem Diagrammwert, dem Diagrammtyp oder einer Verteilung.", ex: "| Fentanyl | ?100" },
+  { t: "Diagramm", d: "Kreisdiagramm, Balkendiagramm oder Histogramm, Doppelpunkt, Werte mit | getrennt. Ein Teil ohne Zahl am Anfang wird zur Überschrift. Histogramm-Klassen wie 15–20 kommen an die Achse.", ex: "Kreisdiagramm: gedrückt 11 | gehoben 147" },
+  { t: "Verteilung", d: "Kennt symmetrisch, asymmetrisch, unimodal, bimodal, multimodal, schmal- und breitgipfelig, linkssteil, rechtssteil, u-förmig, abfallend, Normalverteilung, flache / steile / normale Wölbung (auch rechtsschief, linksschief, eingipfelig, zweigipfelig).", ex: "Verteilung: linkssteil | rechtssteil" },
+];
+
 // ── Vorlesen ─────────────────────────────────────────────────
 // Cards read aloud by the browser's own voice (Web Speech API), so studying works while cooking,
 // cleaning or on the bus. Tempo and Denkpause are kept per device.
@@ -300,13 +319,13 @@ function Lines({ lines, quiz }) {
     const ln = lines[i];
     if (ln.chart && !ln.hidden) {
       const Comp = ln.chart.kind === "dist" ? Dist : Chart;
-      out.push(<Comp key={ln.key} chart={ln.chart} pad={ln.level * 26} quiz={quiz} />);
+      out.push(<Comp key={ln.key} chart={ln.chart} pad={ln.level * 24} quiz={quiz} />);
       continue;
     }
     if (ln.table && !ln.hidden) {
       const rows = [ln];
       while (i + 1 < lines.length && !lines[i + 1].hidden && lines[i + 1].table && lines[i + 1].level === ln.level) rows.push(lines[++i]);
-      out.push(<Table key={ln.key} rows={rows} pad={ln.level * 26} quiz={quiz} />);
+      out.push(<Table key={ln.key} rows={rows} pad={ln.level * 24} quiz={quiz} />);
       continue;
     }
     if (ln.flow && !ln.hidden) {
@@ -320,14 +339,14 @@ function Lines({ lines, quiz }) {
       if (flowConnects(run.map(r => r.flow.steps))) {
         const ring = flowCycle(run.map(r => r.flow.steps));
         out.push(ring
-          ? <FlowCycle key={ln.key} steps={ring} caption={ln.flow.caption} pad={ln.level * 26} />
-          : <FlowGraph key={ln.key} rows={run} pad={ln.level * 26} />);
+          ? <FlowCycle key={ln.key} steps={ring} caption={ln.flow.caption} pad={ln.level * 24} />
+          : <FlowGraph key={ln.key} rows={run} pad={ln.level * 24} />);
         i += run.length - 1;
         continue;
       }
       let n = 1;
       while (n < run.length && run[n].flow.steps.length === ln.flow.steps.length) n++;
-      out.push(<Flow key={ln.key} rows={run.slice(0, n)} pad={ln.level * 26} />);
+      out.push(<Flow key={ln.key} rows={run.slice(0, n)} pad={ln.level * 24} />);
       i += n - 1;
       continue;
     }
@@ -341,7 +360,7 @@ function renderLine(ln) {
   if (ln.level === 0) return <div key={ln.key} className="ln"><span className="ln-bullet">•</span><span className="ln-0-text">{ln.text}</span></div>;
   if (ln.level === 1) return <div key={ln.key} className="ln ln-1"><span className="ln-1-mark">×</span><span className="ln-1-text">{ln.text}</span></div>;
   // Detail and deeper: "Begriff: Rest" gets a bold label; each level indents a bit further.
-  return <div key={ln.key} className={`ln ln-deep ln-${ln.level}`} style={{ paddingLeft: ln.level * 26 }}><span className="ln-2-mark">{MARKS[ln.level]}</span><span className="ln-2-text"><b>{ln.label}</b>{ln.rest}</span></div>;
+  return <div key={ln.key} className={`ln ln-deep ln-${ln.level}`} style={{ paddingLeft: ln.level * 24 }}><span className="ln-2-mark">{MARKS[ln.level]}</span><span className="ln-2-text"><b>{ln.label}</b>{ln.rest}</span></div>;
 }
 
 export default function App() {
@@ -388,6 +407,7 @@ export default function App() {
   const [deckMenu, setDeckMenu] = useState(false);
   const [renameVal, setRenameVal] = useState("");
   const [flash, setFlash] = useState("");
+  const [helpOpen, setHelpOpen] = useState(false);
   const flashTimer = useRef(null);
   const focusTitle = useRef(false);
 
@@ -870,12 +890,12 @@ export default function App() {
         )}
         {view === "home" && (
           <div className="logo">
-            <div className="logo-icon"><div className="logo-back" /><div className="logo-front"><div /></div></div>
+            <div className="logo-icon" aria-hidden="true"><div className="logo-back" /><div className="logo-front" /></div>
             <span className="logo-text">Lernkarten</span>
           </div>
         )}
         <div className="spacer" />
-        {(view === "deck" || view === "card") && !STUDY_ONLY && <button className="pill-btn" onClick={newCard} title="Neue Karte (Taste N)" aria-keyshortcuts="N">+ Karte</button>}
+        {(view === "deck" || view === "card") && !STUDY_ONLY && <button className="pill-btn ink" onClick={newCard} title="Neue Karte (Taste N)" aria-keyshortcuts="N">+ Karte<kbd className="key" aria-hidden="true">N</kbd></button>}
         {view === "edit" && draft && <button className="pill-btn" onClick={saveAndNew} aria-keyshortcuts="Control+Enter Meta+Enter Alt+N"
           title={`${draft.title.trim() ? "Aktuelle Karte speichern und eine neue anfangen" : "Neue Karte anfangen"} (${MOD} + Enter)`}>+ Neue Karte</button>}
         {(view === "study" || view === "read" || view === "card") && <span className="counter" aria-label={`Karte ${counterText.replace(" / ", " von ")}`}>{counterText}</span>}
@@ -922,10 +942,13 @@ export default function App() {
             <div className="today-row">
               <div className="today-info">
                 <span className="today-label">Heute fällig</span>
-                <span className="today-count">{due.length ? plural(due.length, "Karte", "Karten") : "Alles erledigt"}</span>
+                <span className="today-count">
+                  <span className="today-num">{due.length}</span>
+                  <span className="today-unit">{due.length ? (due.length === 1 ? "Karte" : "Karten") : "Alles erledigt"}</span>
+                </span>
               </div>
               {due.length > 0
-                ? <button className="btn-primary today-btn" onClick={() => startStudy(due.map(c => c.id), null)}>Jetzt lernen</button>
+                ? <button className="today-btn" onClick={() => startStudy(due.map(c => c.id), null)}>Jetzt lernen <span aria-hidden="true">→</span></button>
                 : <span className="today-done" aria-hidden="true">✓</span>}
             </div>
             <div className="exam-row">
@@ -966,7 +989,7 @@ export default function App() {
                 setCardIdx(cards.filter(x => x.subject === c.subject).findIndex(x => x.id === c.id));
                 setView("card");
               }}>
-                <div className="card-row-accent" style={{ background: titleColor(c.subject) }} />
+                <span className="card-row-accent" style={{ background: titleColor(c.subject) }} aria-hidden="true" />
                 <div className="card-row-body">
                   <span className="card-row-deck">{c.subject}</span>
                   <span className="card-row-title">{c.title}</span>
@@ -975,38 +998,41 @@ export default function App() {
               </button>
             ))}
           </div>
-        ) : (<>
-        <div className="deck-list">
+        ) : (<div className="stack12">
+        <span className="section-label">Mappen</span>
+        <div className="deck-grid">
           {subjects.map((name) => {
             const cs = cards.filter(c => c.subject === name), n = cs.length;
             const sure = cs.filter(c => c.status === "sicher").length, uns = cs.filter(c => c.status === "unsicher").length;
             const dueIds = cs.filter(isDue).map(c => c.id);
             return (
-              <div key={name} className="deck-row">
+              <div key={name} className="deck-tile">
                 <button className="deck-open" onClick={() => { setDeck(name); setView("deck"); }}>
-                  <div className="deck-icon" aria-hidden="true">
-                    <div className="deck-icon-back" />
-                    <div className="deck-icon-front"><div className="strip" style={{ background: accent(name) }} /><div className="il" /><div className="il" /><div className="il" /></div>
+                  <div className="deck-cover" style={{ background: accent(name) }}>
+                    <div className="deck-cover-back" aria-hidden="true" />
+                    <div className="deck-cover-front" aria-hidden="true"><div style={{ background: accent(name) }} /><div /><div /></div>
+                    <span className="deck-count">{n ? plural(n, "Karte", "Karten") : "leer"}</span>
                   </div>
                   <div className="deck-info">
                     <span className="deck-name">{name}</span>
-                    <span className="deck-meta">{n ? `${plural(n, "Karte", "Karten")} · ${dueIds.length ? `${dueIds.length} fällig` : "nichts fällig"}` : "Noch leer"}</span>
+                    <span className="deck-meta">{n ? `${dueIds.length ? `${dueIds.length} fällig` : "nichts fällig"} · ${sure} sicher` : "Noch leer"}</span>
                     {n > 0 && (
                       <div className="deck-bar" role="img" aria-label={`${sure} sicher, ${uns} unsicher`}>
-                        <div style={{ background: "var(--green)", width: (sure / n * 100) + "%" }} />
-                        <div style={{ background: "var(--amber)", width: (uns / n * 100) + "%" }} />
+                        <div style={{ background: "var(--sure)", width: (sure / n * 100) + "%" }} />
+                        <div style={{ background: "var(--unsure)", width: (uns / n * 100) + "%" }} />
                       </div>
                     )}
                   </div>
                 </button>
                 {dueIds.length > 0 && (
                   <div className="deck-learn-wrap">
-                    <button className="btn-primary deck-learn" aria-label={`${name} lernen`} onClick={() => { setDeck(name); startStudy(dueIds, name); }}>Lernen</button>
+                    <button className="btn-primary deck-learn" aria-label={`${name} lernen`} onClick={() => { setDeck(name); startStudy(dueIds, name); }}>Lernen · {dueIds.length} fällig</button>
                   </div>
                 )}
               </div>
             );
           })}
+          {!addingSubject && !STUDY_ONLY && <button className="new-deck" onClick={() => setAddingSubject(true)}><span className="new-deck-plus" aria-hidden="true">+</span>Neue Mappe</button>}
         </div>
         {addingSubject && (
           <div className="add-row">
@@ -1017,13 +1043,12 @@ export default function App() {
             <button className="add-x" onClick={cancelSubject} aria-label="Abbrechen">×</button>
           </div>
         )}
-        {!addingSubject && !STUDY_ONLY && <button className="new-deck" onClick={() => setAddingSubject(true)}>+ Neue Mappe</button>}
-        </>)}
+        </div>)}
         <div className="sync" aria-live="polite">
           {sync.choice ? (
             <>
               <span className="sync-title">Deine Karten in der Cloud</span>
-              <p className="sync-hint">In deinem Konto: <b>{plural(sync.choice.remoteCards, "Karte", "Karten")}</b> · auf diesem Gerät: <b>{plural(cards.length, "Karte", "Karten")}</b></p>
+              <p className="sync-body">In deinem Konto: <b>{plural(sync.choice.remoteCards, "Karte", "Karten")}</b> · auf diesem Gerät: <b>{plural(cards.length, "Karte", "Karten")}</b></p>
               <div className="stack10">
                 <button className="btn-primary h48" onClick={() => sync.resolveChoice("merge")}>Zusammenführen – beide behalten</button>
                 <button className="btn-secondary h48" onClick={() => sync.resolveChoice("replace")}>Nur die Karten aus meinem Konto</button>
@@ -1043,9 +1068,15 @@ export default function App() {
             </>
           ) : (
             <>
-              <span className="sync-title">Auf allen Geräten lernen</span>
-              <p className="sync-hint">Melde dich mit Google an – wie bei Goldhort – und deine Karten sind automatisch auf Handy, Tablet und Laptop.</p>
-              <button className="btn-primary h48" disabled={sync.status === "connecting"} onClick={sync.signIn}>
+              <div className="sync-head">
+                <span className="sync-icon" aria-hidden="true">☁</span>
+                <div className="sync-head-text">
+                  <span className="sync-title">Auf allen Geräten lernen</span>
+                  <span className="sync-hint">Handy, Tablet und Laptop – automatisch abgeglichen.</span>
+                </div>
+              </div>
+              <p className="sync-body">Melde dich mit Google an – wie bei Goldhort – und deine Karten sind überall.</p>
+              <button className="btn-secondary h48" disabled={sync.status === "connecting"} onClick={sync.signIn}>
                 {sync.status === "connecting" ? "Einen Moment …" : "Mit Google anmelden"}
               </button>
               {sync.error && <p className="form-error" role="alert">{sync.error}</p>}
@@ -1074,13 +1105,13 @@ export default function App() {
     screen = (
       <div className="screen deck">
         <div className="deck-head">
-          <div className="deck-swatch" style={{ background: accent(deck) }} />
-          <div className="deck-title-row">
+          <div className="deck-swatch" style={{ background: accent(deck) }} aria-hidden="true" />
+          <div className="deck-head-text">
             <h1>{deck}</h1>
-            {!STUDY_ONLY && <button className="icon-btn" aria-label="Mappe bearbeiten" aria-expanded={deckMenu}
-              onClick={() => { setRenameVal(deck); setDeckMenu(m => !m); }}>⋯</button>}
+            <p className="muted">{dCards.length ? `${plural(dCards.length, "Karte", "Karten")} · ${sure} sicher · ${dCards.length - sure} offen` : "Noch keine Karten"}</p>
           </div>
-          <p className="muted">{dCards.length ? `${plural(dCards.length, "Karte", "Karten")} · ${sure} sicher · ${dCards.length - sure} offen` : "Noch keine Karten"}</p>
+          {!STUDY_ONLY && <button className="icon-btn" aria-label="Mappe bearbeiten" aria-expanded={deckMenu}
+            onClick={() => { setRenameVal(deck); setDeckMenu(m => !m); }}>⋯</button>}
         </div>
         {deckMenu && (
           <div className="deck-menu">
@@ -1109,32 +1140,32 @@ export default function App() {
           <>
             <div className="stack10">
               {dueCards.length > 0
-                ? <button className="btn-primary h56 learn-all" onClick={() => startStudy(dueCards.map(c => c.id), deck)}>Fällige lernen · {plural(dueCards.length, "Karte", "Karten")}</button>
+                ? <button className="learn-all" onClick={() => startStudy(dueCards.map(c => c.id), deck)}>
+                    <span>Fällige lernen</span><span className="learn-all-n">{plural(dueCards.length, "Karte", "Karten")} →</span>
+                  </button>
                 : <p className="all-done">Für heute alles wiederholt. Stark.</p>}
-              <div className="bottom-row">
-                <button className="btn-secondary h48 spacer" onClick={() => startStudy(dCards.map(c => c.id), deck)}>Alle üben ({dCards.length})</button>
-                {weak.length > 0 && <button className="btn-secondary h48 spacer" onClick={() => startStudy(weak.map(c => c.id), deck)}>Unsichere ({weak.length})</button>}
+              <div className="deck-actions">
+                <button className="btn-secondary h50" onClick={() => startStudy(dCards.map(c => c.id), deck)}>Alle üben ({dCards.length})</button>
+                {weak.length > 0 && <button className="btn-secondary h50" onClick={() => startStudy(weak.map(c => c.id), deck)}>Unsichere ({weak.length})</button>}
+                <button className="btn-secondary h50" onClick={() => startRead(dCards.map(c => c.id))}>Durchlesen ({dCards.length})</button>
+                {fresh.length > 0 && fresh.length < dCards.length && <button className="btn-secondary h50" onClick={() => startRead(fresh.map(c => c.id))}>Neue lesen ({fresh.length})</button>}
+                {canSpeak && <button className="btn-secondary h50 listen-start" onClick={() => startRead(dCards.map(c => c.id), true)}>{speakerIcon}Vorlesen lassen ({dCards.length})</button>}
               </div>
-              <div className="bottom-row">
-                <button className="btn-secondary h48 spacer" onClick={() => startRead(dCards.map(c => c.id))}>Durchlesen ({dCards.length})</button>
-                {fresh.length > 0 && fresh.length < dCards.length && <button className="btn-secondary h48 spacer" onClick={() => startRead(fresh.map(c => c.id))}>Neue lesen ({fresh.length})</button>}
-              </div>
-              {canSpeak && <button className="btn-secondary h48 listen-start" onClick={() => startRead(dCards.map(c => c.id), true)}>{speakerIcon}Vorlesen lassen ({dCards.length})</button>}
             </div>
-            <div className="stack10">
+            <div className="stack8">
               <span className="section-label">Karten</span>
               {dCards.map((c, i) => {
                 const [statusLabel, color] = STATUS[c.status || "neu"];
                 const inDays = c.due && c.due > t ? daysBetween(t, c.due) : 0;
-                const label = c.status === "neu" ? statusLabel : inDays === 1 ? "morgen" : inDays ? `in ${inDays} T.` : "fällig";
+                const label = (c.status || "neu") === "neu" ? statusLabel : inDays === 1 ? "morgen" : inDays ? `in ${inDays} T.` : "fällig";
                 return (
                   <button key={c.id} className="card-row" onClick={() => { setCardIdx(i); setView("card"); }}>
-                    <div className="card-row-accent" style={{ background: titleColor(c.subject) }} />
+                    <span className="card-row-num" aria-hidden="true">{String(i + 1).padStart(2, "0")}</span>
                     <div className="card-row-body">
                       <span className="card-row-title">{c.title}</span>
                       <span className="card-row-preview">{c.lines.filter(l => l.level === 0).map(l => l.text).join(" · ") || "leer"}</span>
                     </div>
-                    <div className="card-row-status"><span className="dot" style={{ background: color }} aria-hidden="true" />{label}</div>
+                    <span className="card-row-status"><span className="dot" style={{ background: color }} aria-hidden="true" />{label}</span>
                   </button>
                 );
               })}
@@ -1155,14 +1186,17 @@ export default function App() {
     screen = c && (
       <div className="screen card-view">
         <div className="paper" style={{ "--accent": titleColor(c.subject) }}>
-          <div className="paper-title" style={{ background: titleColor(c.subject) }}>{c.title}</div>
+          <div className="paper-head" style={{ background: titleColor(c.subject) }}>
+            <span className="paper-subject">{c.subject}</span>
+            <span className="paper-title">{c.title}</span>
+          </div>
           <div className="paper-body" style={{ minHeight: 220 }}><Lines lines={mapLines(c.lines)} /></div>
         </div>
         <div className="spacer" />
         <div className="bottom-bar bottom-row">
           <button className="btn-secondary nav-arrow" aria-label="Vorherige Karte" disabled={cIdx === 0} onClick={() => setCardIdx(Math.max(0, cIdx - 1))}>‹</button>
-          {!STUDY_ONLY && <button className="btn-secondary h52 spacer" onClick={() => openEditor(c, "card")}>Bearbeiten</button>}
-          {STUDY_ONLY && <button className="btn-primary h52 spacer" onClick={() => startStudy(dCards.map(x => x.id), deck)}>Mappe lernen</button>}
+          {!STUDY_ONLY && <button className="btn-secondary h54 spacer" onClick={() => openEditor(c, "card")}>Bearbeiten</button>}
+          {STUDY_ONLY && <button className="btn-primary h54 spacer" onClick={() => startStudy(dCards.map(x => x.id), deck)}>Mappe lernen</button>}
           <button className="btn-secondary nav-arrow" aria-label="Nächste Karte" disabled={cIdx === dCards.length - 1} onClick={() => setCardIdx(Math.min(dCards.length - 1, cIdx + 1))}>›</button>
         </div>
       </div>
@@ -1185,12 +1219,15 @@ export default function App() {
           <div className="flipper" style={{ transition: noAnim ? "none" : "transform .55s cubic-bezier(.2,.7,.2,1)", transform: flipped ? "rotateY(180deg)" : "rotateY(0deg)" }}>
             <div className="face face-front" aria-hidden={flipped}>
               <div className="face-strip" style={{ background: acc }} />
-              <div className="face-subject">{c.subject}</div>
-              <div className="face-title">{c.title}</div>
-              <div className="face-hint">{plural(g, "Hauptpunkt", "Hauptpunkte")} — {POINT_BY_POINT ? "erinnere dich an jeden einzeln." : "was weißt du dazu?"} Tippen zum Umdrehen.</div>
+              <div className="face-main">
+                <span className="face-subject">{c.subject}</span>
+                <span className="face-title">{c.title}</span>
+                <span className="face-hint">{plural(g, "Hauptpunkt", "Hauptpunkte")} — {POINT_BY_POINT ? "erinnere dich an jeden einzeln." : "was weißt du dazu?"}</span>
+              </div>
+              <div className="face-foot">Tippen oder Leertaste zum Umdrehen</div>
             </div>
             <div className="face face-back" aria-hidden={!flipped} style={{ "--accent": acc }}>
-              <div className="paper-title" style={{ background: acc }}>{c.title}</div>
+              <div className="paper-head" style={{ background: acc }}><span className="paper-title">{c.title}</span></div>
               <div className="paper-body" key={qPos}><Lines lines={mapLines(c.lines, POINT_BY_POINT ? reveal : null)} quiz /></div>
             </div>
           </div>
@@ -1202,9 +1239,9 @@ export default function App() {
           ) : (
             <>
               <div className="rate-grid" role="group" aria-label="Wie gut wusstest du es?">
-                <button className="rate rate-again" onClick={() => rate("nochmal")}>Nochmal<small>kommt gleich wieder</small></button>
-                <button className="rate rate-unsure" onClick={() => rate("unsicher")}>Unsicher<small>fast gewusst</small></button>
-                <button className="rate rate-sure" onClick={() => rate("sicher")}>Sicher<small>gewusst</small></button>
+                <button className="rate rate-again" onClick={() => rate("nochmal")} aria-keyshortcuts="1">Nochmal<small>kommt gleich wieder<span className="key-hint"> · 1</span></small></button>
+                <button className="rate rate-unsure" onClick={() => rate("unsicher")} aria-keyshortcuts="2">Unsicher<small>fast gewusst<span className="key-hint"> · 2</span></small></button>
+                <button className="rate rate-sure" onClick={() => rate("sicher")} aria-keyshortcuts="3">Sicher<small>gewusst<span className="key-hint"> · 3</span></small></button>
               </div>
               <p className="swipe-hint" aria-hidden="true">oder Karte wischen: ← Nochmal · Sicher →</p>
             </>
@@ -1224,7 +1261,10 @@ export default function App() {
           <div className="read-wrap"
             style={{ transition: dragging ? "none" : "transform .18s ease, opacity .18s ease", transform: `translateX(${dx}px) rotate(${dx / 50}deg)`, opacity: 1 - Math.min(0.6, Math.abs(dx) / 800) }}>
             <div className="paper" style={{ "--accent": acc }}>
-              <div className="paper-title" style={{ background: acc }}>{c.title}</div>
+              <div className="paper-head" style={{ background: acc }}>
+                <span className="paper-subject">{listenPhase === "title" ? "Liest Titel …" : listenPhase === "think" ? "Denkpause" : listenPhase === "lines" ? "Liest vor …" : c.subject}</span>
+                <span className="paper-title">{c.title}</span>
+              </div>
               <div className={"paper-body" + (listenPhase === "think" ? " thinking" : "")} style={{ minHeight: 220 }}><Lines lines={mapLines(c.lines)} /></div>
             </div>
           </div>
@@ -1237,15 +1277,16 @@ export default function App() {
                   ? <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><rect x="3" y="2.5" width="3.5" height="11" rx="1" fill="currentColor" /><rect x="9.5" y="2.5" width="3.5" height="11" rx="1" fill="currentColor" /></svg>
                   : <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M4 2.5v11l9.5-5.5z" fill="currentColor" /></svg>}
                 {listening ? "Pause" : "Vorlesen"}
+                <kbd className="key-hint" aria-hidden="true">P</kbd>
               </button>
-              <button className="listen-btn" onClick={cycleRate} aria-label={`Tempo ${String(listenPrefs.rate).replace(".", ",")}-fach, tippen zum Ändern`}>{String(listenPrefs.rate).replace(".", ",")}×</button>
+              <button className="listen-btn listen-rate" onClick={cycleRate} aria-label={`Tempo ${String(listenPrefs.rate).replace(".", ",")}-fach, tippen zum Ändern`}>{String(listenPrefs.rate).replace(".", ",")}×</button>
               <button className={"listen-btn" + (listenPrefs.think ? " sel" : "")} aria-pressed={listenPrefs.think} onClick={toggleThink}
                 title="Nach dem Titel 5 Sekunden Pause, damit du dich erst selbst erinnerst">Denkpause</button>
             </div>
           )}
           <div className="bottom-row">
             <button className="btn-secondary nav-arrow" aria-label="Vorherige Karte" disabled={readPos === 0} onClick={() => turn(-1)}>‹</button>
-            <button className="btn-primary h52 spacer" onClick={() => turn(1)}>{last ? "Fertig gelesen" : "Weiter ›"}</button>
+            <button className="btn-primary h54 spacer" onClick={() => turn(1)}>{last ? "Fertig gelesen" : "Weiter ›"}</button>
           </div>
           <p className="swipe-hint" aria-live="polite">{!listening ? "oder wischen: nach links weiter · nach rechts zurück"
             : listenPhase === "think" ? "Denkpause – was weißt du dazu?" : "Liest vor · der Bildschirm bleibt an"}</p>
@@ -1258,13 +1299,14 @@ export default function App() {
     const n = readIds.filter(id => cards.some(c => c.id === id)).length;
     screen = (
       <div className="screen done">
+        <div className="done-mark" aria-hidden="true">✓</div>
         <h1>{heard ? "Vorgelesen!" : "Durchgelesen!"}</h1>
         <p>{plural(n, "Karte", "Karten")} aus {deck}. Jetzt abfragen, solange es frisch ist?</p>
         <div className="stack10" style={{ width: "100%" }}>
-          {n > 0 && <button className="btn-primary h56" onClick={() => startStudy(readIds.filter(id => cards.some(c => c.id === id)), deck)}>Jetzt lernen · {plural(n, "Karte", "Karten")}</button>}
-          {n > 0 && <button className="btn-secondary h52" onClick={() => startRead(readIds.filter(id => cards.some(c => c.id === id)))}>Nochmal durchlesen</button>}
-          {n > 0 && canSpeak && <button className="btn-secondary h52" onClick={() => startRead(readIds.filter(id => cards.some(c => c.id === id)), true)}>Nochmal vorlesen</button>}
-          <button className="btn-secondary h52" onClick={() => setView("deck")}>Zurück zur Mappe</button>
+          {n > 0 && <button className="btn-primary h54" onClick={() => startStudy(readIds.filter(id => cards.some(c => c.id === id)), deck)}>Jetzt lernen · {plural(n, "Karte", "Karten")}</button>}
+          {n > 0 && <button className="btn-secondary h54" onClick={() => startRead(readIds.filter(id => cards.some(c => c.id === id)))}>Nochmal durchlesen</button>}
+          {n > 0 && canSpeak && <button className="btn-secondary h54" onClick={() => startRead(readIds.filter(id => cards.some(c => c.id === id)), true)}>Nochmal vorlesen</button>}
+          <button className="btn-secondary h54" onClick={() => setView("deck")}>Zurück zur Mappe</button>
         </div>
       </div>
     );
@@ -1274,16 +1316,17 @@ export default function App() {
     const n = new Set(queue).size;
     screen = (
       <div className="screen done">
+        <div className="done-mark" aria-hidden="true">✓</div>
         <h1>Geschafft!</h1>
         <p>{plural(n, "Karte", "Karten")} {studyScope ? `aus ${studyScope}` : "aus allen Mappen"} durchgearbeitet.</p>
         <div className="tally">
-          <div><b style={{ color: "var(--green)" }}>{tally.sicher}</b><span>sicher</span></div>
-          <div><b style={{ color: "var(--amber)" }}>{tally.unsicher}</b><span>unsicher</span></div>
-          <div><b style={{ color: "var(--red)" }}>{tally.nochmal}</b><span>wiederholt</span></div>
+          <div className="t-sure"><b>{tally.sicher}</b><span>sicher</span></div>
+          <div className="t-unsure"><b>{tally.unsicher}</b><span>unsicher</span></div>
+          <div className="t-again"><b>{tally.nochmal}</b><span>wiederholt</span></div>
         </div>
         <div className="stack10" style={{ width: "100%" }}>
-          {studyScope && learnWeakBtn("btn-primary h56")}
-          <button className="btn-secondary h52" onClick={() => setView(studyScope ? "deck" : "home")}>{studyScope ? "Zurück zur Mappe" : "Zur Übersicht"}</button>
+          {studyScope && learnWeakBtn("btn-primary h54")}
+          <button className="btn-secondary h54" onClick={() => setView(studyScope ? "deck" : "home")}>{studyScope ? "Zurück zur Mappe" : "Zur Übersicht"}</button>
         </div>
       </div>
     );
@@ -1292,8 +1335,7 @@ export default function App() {
   if (view === "edit" && draft) {
     const ls = draft.lines, fi = Math.min(focusIdx, ls.length - 1), fl = ls[fi];
     const placeholders = ["Hauptpunkt", "Unterpunkt", "Begriff: Detail; Detail", "Unterdetail", "Stichpunkt", "Unterstichpunkt"];
-    const flChart = fl && parseChart(fl.text);
-    const flKind = !fl ? "" : flChart ? (flChart.kind === "dist" ? "Verteilung" : "Diagramm") : parseTable(fl.text) ? "Tabelle" : parseFlow(fl.text) ? "Ablauf" : "";
+    const flKind = fl ? lineKind(fl.text) : "";
     // Inserts " → " at the cursor of the current line; two or more steps turn the line into boxes.
     const insertArrow = () => {
       if (!fl) return;
@@ -1375,7 +1417,7 @@ export default function App() {
           </div>
           <div className="e-body">
             {ls.map((l, i) => (
-              <div key={l.id} className={`e-ln e-ln-${l.level}${l.level >= 2 ? " e-ln-deep" : ""}`} style={{ paddingLeft: 6 + l.level * 26 }}>
+              <div key={l.id} className={`e-ln e-ln-${l.level}${l.level >= 2 ? " e-ln-deep" : ""}${i === fi ? " focus" : ""}`} style={{ paddingLeft: 4 + l.level * 24 }}>
                 <span className="e-mark" aria-hidden="true">{MARKS[l.level]}</span>
                 <input data-line-idx={i} value={l.text} placeholder={placeholders[l.level]} aria-label={`Zeile ${i + 1}, ${LEVELS[l.level]}`}
                   onChange={e => {
@@ -1388,12 +1430,26 @@ export default function App() {
                   onKeyDown={e => lineKey(i, e)}
                   onPaste={e => onLinePaste(i, e)}
                   onFocus={e => { if (focusIdx !== i) setFocusIdx(i); const el = e.target; requestAnimationFrame(() => keepInView(el)); }} />
+                <span className="e-kind" aria-hidden="true">{lineKind(l.text)}</span>
               </div>
             ))}
           </div>
         </div>
         {flash && <p className="flash" role="status">✓ {flash}</p>}
-        <p className="e-help">{MOD} + Enter = speichern & nächste Karte · Enter = neue Zeile · Tab / ⇧Tab = ein- und ausrücken · Leere Zeile + ⌫ = löschen · Mehrere Zeilen einfügen: Einrückung wird übernommen · → trennt Schritte eines Ablaufs (z. B. Problem → Methode → Lösung); zwei Ablauf-Zeilen untereinander werden zu zwei Reihen · Flussdiagramm: kommt ein Schritt in mehreren Ablauf-Zeilen untereinander vor, werden sie verbunden (z. B. A → C, B → C, C → D) · Kreislauf: endet ein Ablauf wieder beim ersten Schritt (A → B → C → A), wird er als Kreis gezeichnet · Tabelle: | trennt Spalten, die erste Zeile ist die Kopfzeile (aus Excel oder SPSS einfügen geht auch) · Lücke: ?Wert in einer Zelle bleibt beim Lernen leer, bis du sie antippst · Diagramm: Kreisdiagramm, Balkendiagramm oder Histogramm, dann Doppelpunkt und Werte mit | getrennt (z. B. Kreisdiagramm: gedrückt 11 | gehoben 147; Histogramm: 15–20 36 | 20–25 69); ein Teil ohne Zahl am Anfang wird zur Überschrift · Verteilung: z. B. Verteilung: linkssteil | rechtssteil – kennt symmetrisch, asymmetrisch, unimodal, bimodal, multimodal, schmalgipfelig, breitgipfelig, linkssteil, rechtssteil, u-förmig, abfallend, Normalverteilung, flache / steile / normale Wölbung (und rechtsschief, linksschief, eingipfelig, zweigipfelig) · ? vor einem Wert, vor dem Diagrammtyp oder vor einer Verteilung macht daraus eine Lücke</p>
+        <button className="e-help-toggle" aria-expanded={helpOpen} onClick={() => setHelpOpen(o => !o)}>
+          <span className="e-help-icon" aria-hidden="true">{helpOpen ? "−" : "+"}</span>Schreibhilfe &amp; Formate
+        </button>
+        {helpOpen && (
+          <div className="e-help">
+            {HELP.map(h => (
+              <div key={h.t} className="e-help-item">
+                <b>{h.t}</b>
+                <span>{h.d}</span>
+                {h.ex && <code>{h.ex}</code>}
+              </div>
+            ))}
+          </div>
+        )}
         {cards.some(c => c.id === draft.id) && <button className="e-delete" onClick={deleteCard}>Karte löschen</button>}
         <div className="spacer" />
         <div className="e-footer">
@@ -1405,8 +1461,10 @@ export default function App() {
             <button className="tool" onMouseDown={e => { e.preventDefault(); addLineAfter(); }} onClick={e => { if (e.detail === 0) addLineAfter(); }}>+ Zeile</button>
           </div>
           <div className="bottom-row">
-            <button className="btn-secondary h52 cancel" onClick={cancelEdit}>Abbrechen</button>
-            <button className="btn-primary h52 spacer" disabled={!draft.title.trim() || !draft.subject} onClick={saveDraft}>Karte speichern</button>
+            <button className="btn-secondary h54 cancel" onClick={cancelEdit}>Abbrechen</button>
+            <button className="btn-primary h54 spacer save-btn" disabled={!draft.title.trim() || !draft.subject} onClick={saveDraft}>
+              Karte speichern<span className="key-hint" aria-hidden="true">{MOD} ↵ = + neue</span>
+            </button>
           </div>
         </div>
       </div>
