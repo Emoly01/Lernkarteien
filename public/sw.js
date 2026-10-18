@@ -1,5 +1,5 @@
 // Offline support: app shell is network-first (so updates arrive), hashed assets are cache-first.
-const CACHE = "lernkarten-v3";
+const CACHE = "lernkarten-v4";
 const SHELL = ["/", "/manifest.webmanifest", "/icon.svg", "/icon-192.png", "/icon-180.png"];
 
 self.addEventListener("install", e => {
