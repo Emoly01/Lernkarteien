@@ -88,6 +88,47 @@ const utter = (text, rate) => new Promise(resolve => {
 // iOS only lets a page speak after it first spoke inside a tap, so every play button calls this.
 const primeSpeech = () => { try { speechSynthesis.cancel(); speechSynthesis.speak(new SpeechSynthesisUtterance(" ")); } catch (e) {} };
 
+// ── Swipes (studying and reading) ────────────────────────────
+// How far and how fast the finger went is read from the pointer events themselves: React state
+// can still be a few moves behind on a fast flick. A long drag or a quick flick counts, so short
+// flicks on a phone do too. Only sideways drags count; up and down still scroll a long card.
+const swipeStart = (e) => ({ x0: e.clientX, y0: e.clientY, x: e.clientX, t: e.timeStamp, v: 0, side: null,
+  onButton: !!e.target.closest?.("button") });
+// How far the finger has gone sideways, or null while it isn't a sideways drag.
+const swipeMove = (d, e) => {
+  const x = e.clientX - d.x0, y = e.clientY - d.y0;
+  if (d.side == null && (Math.abs(x) > 8 || Math.abs(y) > 8)) {
+    d.side = Math.abs(x) > Math.abs(y);
+    if (d.side) { try { e.currentTarget.setPointerCapture(e.pointerId); } catch (_) {} }
+  }
+  const dt = e.timeStamp - d.t;
+  if (dt > 0) d.v = 0.6 * ((e.clientX - d.x) / dt) + 0.4 * d.v; // px per ms, smoothed
+  d.x = e.clientX; d.t = e.timeStamp;
+  return d.side ? x : null;
+};
+// -1 for a swipe to the left, 1 to the right, 0 if it wasn't one.
+const swipeEnd = (d, e) => {
+  if (!d?.side) return 0;
+  const dist = (e.clientX ?? d.x) - d.x0, fresh = e.timeStamp - d.t < 100;
+  const flick = fresh && Math.abs(d.v) > 0.3 && Math.abs(dist) > 40 && Math.sign(d.v) === Math.sign(dist);
+  return Math.abs(dist) > 70 || flick ? Math.sign(dist) : 0;
+};
+// The browser takes a swipe over for scrolling when it starts off a little up or down, and then
+// sends no more pointer events. Touch events still come, so where the finger let go is read from
+// those; if that was clearly sideways it still counts. Returns a function that stops listening.
+const swipeAfterCancel = (d, e, done) => {
+  if (!d || e.pointerType !== "touch") return () => {};
+  const stop = () => { window.removeEventListener("touchend", end); window.removeEventListener("touchcancel", stop); };
+  const end = (t) => {
+    stop();
+    const p = t.changedTouches?.[0]; if (!p) return;
+    const x = p.clientX - d.x0, y = p.clientY - d.y0;
+    if (Math.abs(x) > 70 && Math.abs(x) > 1.5 * Math.abs(y)) done(Math.sign(x));
+  };
+  window.addEventListener("touchend", end); window.addEventListener("touchcancel", stop);
+  return stop;
+};
+
 // ── Card lines (read-only) ───────────────────────────────────
 // Process lines ("A → B → C") as boxes with arrows. Consecutive process lines on the same level
 // with the same number of steps share one grid, so their steps line up like on a slide:
@@ -299,7 +340,7 @@ function Table({ rows, pad, quiz }) {
     if (!cl.gap) return cl.text;
     if (!quiz || open.has(k)) return <span className={"gap" + (quiz ? " open" : "")}>{cl.text}</span>;
     return <button type="button" className="gap-q" aria-label="Lücke aufdecken"
-      onPointerDown={e => e.stopPropagation()} onClick={e => { e.stopPropagation(); setOpen(o => new Set(o).add(k)); }}>?</button>;
+      onClick={e => { e.stopPropagation(); setOpen(o => new Set(o).add(k)); }}>?</button>;
   };
   return (
     <div className="tbl-wrap" style={{ "--pad": pad + "px" }}>
@@ -412,6 +453,8 @@ export default function App() {
   const focusTitle = useRef(false);
 
   const drag = useRef(null);
+  const flying = useRef(null);            // timer while a rated card flies off after a swipe
+  const afterCancel = useRef(() => {});   // stops following a swipe the browser took over for scrolling
   const pendingFocus = useRef(null);
   const pendingCaret = useRef(null); // cursor position to restore after a programmatic edit
   const handlers = useRef({});
@@ -443,6 +486,7 @@ export default function App() {
   useEffect(() => {
     window.scrollTo(0, 0); setDeckMenu(false); setFlash("");
     clearTimeout(turning.current); turning.current = null; queued.current = 0; setDx(0); setDragging(false);
+    clearTimeout(flying.current); flying.current = null; afterCancel.current(); drag.current = null;
   }, [view]);
   useEffect(() => { if (view === "read") window.scrollTo(0, 0); }, [readPos]);
 
@@ -507,33 +551,34 @@ export default function App() {
     return () => window.removeEventListener("keydown", onKey);
   }, []);
 
-  const pDown = (e) => { drag.current = { x: e.clientX, y: e.clientY, moved: false }; };
+  // Swipe right for Sicher, left for Nochmal; a tap turns the card (but not a tap on a gap's "?").
+  const swipeRate = (dir) => {
+    if (!dir || flying.current || !handlers.current.canRate) { setDx(0); setDragging(false); return; }
+    setDx(dir * 600); setDragging(false);
+    flying.current = setTimeout(() => {
+      flying.current = null;
+      setDx(0); setDragging(true);
+      handlers.current.rate(dir > 0 ? "sicher" : "nochmal");
+      setTimeout(() => setDragging(false), 40);
+    }, 220);
+  };
+  const pDown = (e) => { afterCancel.current(); drag.current = flying.current ? null : swipeStart(e); };
   const pMove = (e) => {
     const d = drag.current; if (!d) return;
-    const x = e.clientX - d.x;
-    if (Math.abs(x) > 8 || Math.abs(e.clientY - d.y) > 8) d.moved = true;
-    if (canRate && d.moved) {
-      if (!dragging) { try { e.currentTarget.setPointerCapture(e.pointerId); } catch (_) {} }
-      setDx(x); setDragging(true);
-    }
+    const x = swipeMove(d, e);
+    if (x != null && canRate) { setDx(x); setDragging(true); }
   };
-  const pUp = () => {
+  const pUp = (e) => {
     const d = drag.current; drag.current = null;
     if (!d) return;
-    if (!d.moved) { setDx(0); setDragging(false); return tap(); }
-    if (canRate && Math.abs(dx) > 100) {
-      const right = dx > 0;
-      setDx(right ? 600 : -600); setDragging(false);
-      setTimeout(() => {
-        setDx(0); setDragging(true);
-        handlers.current.rate(right ? "sicher" : "nochmal");
-        setTimeout(() => setDragging(false), 40);
-      }, 220);
-      return;
-    }
-    setDx(0); setDragging(false);
+    if (d.side == null) { setDx(0); setDragging(false); if (!d.onButton) tap(); return; }
+    swipeRate(swipeEnd(d, e));
   };
-  const pCancel = () => { drag.current = null; setDx(0); setDragging(false); };
+  const pCancel = (e) => {
+    const d = drag.current; drag.current = null;
+    setDx(0); setDragging(false);
+    afterCancel.current = swipeAfterCancel(d, e, swipeRate);
+  };
 
   // ── Read ──
   // Going through the whole cards before studying them, to learn them in the first place.
@@ -568,28 +613,25 @@ export default function App() {
   handlers.current.toggleListen = canSpeak ? () => toggleListen() : null;
   // Only sideways drags turn the page; up and down still scroll a long card. A long drag or a
   // quick flick turns it, so short flicks on a phone count too.
-  const rDown = (e) => { drag.current = { x0: e.clientX, y0: e.clientY, x: e.clientX, t: e.timeStamp, v: 0, side: null }; };
+  const rDown = (e) => { afterCancel.current(); drag.current = swipeStart(e); };
   const rMove = (e) => {
     const d = drag.current; if (!d) return;
-    const x = e.clientX - d.x0, y = e.clientY - d.y0;
-    if (d.side == null && (Math.abs(x) > 8 || Math.abs(y) > 8)) {
-      d.side = Math.abs(x) > Math.abs(y);
-      if (d.side) { try { e.currentTarget.setPointerCapture(e.pointerId); } catch (_) {} }
-    }
-    const dt = e.timeStamp - d.t;
-    if (dt > 0) d.v = 0.6 * ((e.clientX - d.x) / dt) + 0.4 * d.v; // px per ms, smoothed
-    d.x = e.clientX; d.t = e.timeStamp;
-    if (d.side && !turning.current) { setDx(x); setDragging(true); }
+    const x = swipeMove(d, e);
+    if (x != null && !turning.current) { setDx(x); setDragging(true); }
+  };
+  const rSwiped = (dir) => {
+    if (dir) return turn(-dir);
+    if (!turning.current) { setDx(0); setDragging(false); }
   };
   const rUp = (e) => {
     const d = drag.current; drag.current = null;
-    if (!d?.side) return;
-    const dist = (e.clientX ?? d.x) - d.x0, fresh = e.timeStamp - d.t < 100;
-    const flick = fresh && Math.abs(d.v) > 0.3 && Math.abs(dist) > 40 && Math.sign(d.v) === Math.sign(dist);
-    if (Math.abs(dist) > 70 || flick) return turn(dist < 0 ? 1 : -1);
-    if (!turning.current) { setDx(0); setDragging(false); }
+    if (d?.side) rSwiped(swipeEnd(d, e));
   };
-  const rCancel = () => { drag.current = null; if (!turning.current) { setDx(0); setDragging(false); } };
+  const rCancel = (e) => {
+    const d = drag.current; drag.current = null;
+    if (!turning.current) { setDx(0); setDragging(false); }
+    afterCancel.current = swipeAfterCancel(d, e, rSwiped);
+  };
 
   // ── Vorlesen ──
   // Title, then (with Denkpause) a few seconds to recall the answer, then the lines; then on to the
