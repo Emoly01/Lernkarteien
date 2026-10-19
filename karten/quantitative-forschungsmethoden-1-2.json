@@ -1,0 +1,1096 @@
+{
+ "app": "lernkarten",
+ "version": 1,
+ "pack": true,
+ "name": "Einführung in die quantitativen Forschungsmethoden 1–2",
+ "subjects": [
+  "Quantitative Forschungsmethoden"
+ ],
+ "cards": [
+  {
+   "id": "qf1-01",
+   "subject": "Quantitative Forschungsmethoden",
+   "title": "QF1 · Voraussetzungen für eine quantitative Studie",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "qf1-01-01",
+     "level": 0,
+     "text": "Zeit"
+    },
+    {
+     "id": "qf1-01-02",
+     "level": 0,
+     "text": "Studienteilnehmer"
+    },
+    {
+     "id": "qf1-01-03",
+     "level": 0,
+     "text": "Hilfsmittel"
+    },
+    {
+     "id": "qf1-01-04",
+     "level": 0,
+     "text": "Finanzielle Mittel"
+    },
+    {
+     "id": "qf1-01-05",
+     "level": 0,
+     "text": "Erfahrene Forscher"
+    },
+    {
+     "id": "qf1-01-06",
+     "level": 0,
+     "text": "Klärung ethischer Fragen"
+    }
+   ]
+  },
+  {
+   "id": "qf1-02",
+   "subject": "Quantitative Forschungsmethoden",
+   "title": "QF1 · Zeit, Teilnehmer, Hilfsmittel – worauf achten?",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "qf1-02-01",
+     "level": 0,
+     "text": "Zeit"
+    },
+    {
+     "id": "qf1-02-02",
+     "level": 1,
+     "text": "realistischer Zeitrahmen für das Forschungsproblem"
+    },
+    {
+     "id": "qf1-02-03",
+     "level": 1,
+     "text": "fester Abschlusstermin als Grundlage der Planung"
+    },
+    {
+     "id": "qf1-02-04",
+     "level": 1,
+     "text": "zeitlicher Puffer für Unvorhergesehenes"
+    },
+    {
+     "id": "qf1-02-05",
+     "level": 0,
+     "text": "Studienteilnehmer"
+    },
+    {
+     "id": "qf1-02-06",
+     "level": 1,
+     "text": "ausreichende Anzahl geeigneter Teilnehmer, auch nach unerwartetem Verlust"
+    },
+    {
+     "id": "qf1-02-07",
+     "level": 0,
+     "text": "Hilfsmittel"
+    },
+    {
+     "id": "qf1-02-08",
+     "level": 1,
+     "text": "Raum, Computer, Software (Statistikprogramm)"
+    },
+    {
+     "id": "qf1-02-09",
+     "level": 1,
+     "text": "Internetzugang, Bibliothek für Fachliteratur"
+    },
+    {
+     "id": "qf1-02-10",
+     "level": 1,
+     "text": "Telefon, Papier, Briefmarken usw."
+    }
+   ]
+  },
+  {
+   "id": "qf1-03",
+   "subject": "Quantitative Forschungsmethoden",
+   "title": "QF1 · Finanzen, Forscher, Ethik – worauf achten?",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "qf1-03-01",
+     "level": 0,
+     "text": "Finanzielle Mittel"
+    },
+    {
+     "id": "qf1-03-02",
+     "level": 1,
+     "text": "Finanzierung beantragen"
+    },
+    {
+     "id": "qf1-03-03",
+     "level": 1,
+     "text": "Mittel bereitstellen"
+    },
+    {
+     "id": "qf1-03-04",
+     "level": 0,
+     "text": "Erfahrene Forscher"
+    },
+    {
+     "id": "qf1-03-05",
+     "level": 1,
+     "text": "Sachkenntnis zur Forschungsfrage"
+    },
+    {
+     "id": "qf1-03-06",
+     "level": 1,
+     "text": "Erfahrung mit dem Forschungsdesign"
+    },
+    {
+     "id": "qf1-03-07",
+     "level": 0,
+     "text": "Klärung ethischer Fragen"
+    },
+    {
+     "id": "qf1-03-08",
+     "level": 1,
+     "text": "Ethische Probleme identifizieren → Lösungsstrategien erarbeiten → Vorlage bei der Ethikkommission → Billigung durch die Ethikkommission"
+    }
+   ]
+  },
+  {
+   "id": "qf1-04",
+   "subject": "Quantitative Forschungsmethoden",
+   "title": "QF1 · Die 5 Phasen des Forschungsprozesses",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "qf1-04-01",
+     "level": 0,
+     "text": "Konzeptionelle Phase → Design- und Planungsphase → Empirische Phase → Analysephase → Verbreitungsphase"
+    },
+    {
+     "id": "qf1-04-02",
+     "level": 0,
+     "text": "1. Konzeptionelle Phase: denken, lesen, überdenken, überprüfen"
+    },
+    {
+     "id": "qf1-04-03",
+     "level": 0,
+     "text": "2. Design- und Planungsphase: Methode wählen, Datenerhebung planen"
+    },
+    {
+     "id": "qf1-04-04",
+     "level": 0,
+     "text": "3. Empirische Phase: Daten erheben, Analyse vorbereiten"
+    },
+    {
+     "id": "qf1-04-05",
+     "level": 0,
+     "text": "4. Analysephase: Daten auswerten, Ergebnisse interpretieren"
+    },
+    {
+     "id": "qf1-04-06",
+     "level": 0,
+     "text": "5. Verbreitungsphase: Ergebnisse verfügbar machen"
+    },
+    {
+     "id": "qf1-04-07",
+     "level": 0,
+     "text": "Nach Polit, Beck & Hungler (2004)"
+    }
+   ]
+  },
+  {
+   "id": "qf1-05",
+   "subject": "Quantitative Forschungsmethoden",
+   "title": "QF1 · Phase 1: Formulierung der Forschungsfrage",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "qf1-05-01",
+     "level": 0,
+     "text": "Die Forschungsfrage bezieht sich auf ein Problem"
+    },
+    {
+     "id": "qf1-05-02",
+     "level": 0,
+     "text": "Fragen dazu"
+    },
+    {
+     "id": "qf1-05-03",
+     "level": 1,
+     "text": "Ist das Problem relevant für Pflegepraxis oder Theorie?"
+    },
+    {
+     "id": "qf1-05-04",
+     "level": 1,
+     "text": "Wer hat das Problem (Patient:innen, Pflegende)?"
+    },
+    {
+     "id": "qf1-05-05",
+     "level": 1,
+     "text": "Wie groß ist das Problem?"
+    },
+    {
+     "id": "qf1-05-06",
+     "level": 1,
+     "text": "Wem nützen die Ergebnisse?"
+    },
+    {
+     "id": "qf1-05-07",
+     "level": 1,
+     "text": "Sind genug Ressourcen für eine Studie da?"
+    },
+    {
+     "id": "qf1-05-08",
+     "level": 1,
+     "text": "Wie lässt es sich am besten untersuchen?"
+    }
+   ]
+  },
+  {
+   "id": "qf1-06",
+   "subject": "Quantitative Forschungsmethoden",
+   "title": "QF1 · Phase 1: Variablen, Literatur, Theorie, Hypothesen",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "qf1-06-01",
+     "level": 0,
+     "text": "Die Forschungsfrage enthält Variablen"
+    },
+    {
+     "id": "qf1-06-02",
+     "level": 1,
+     "text": "Variablen = veränderliche Merkmale eines Menschen und seiner Umgebung"
+    },
+    {
+     "id": "qf1-06-03",
+     "level": 1,
+     "text": "z. B. Alter, Blutdruck, Angst, Stress"
+    },
+    {
+     "id": "qf1-06-04",
+     "level": 0,
+     "text": "Literatur sichten"
+    },
+    {
+     "id": "qf1-06-05",
+     "level": 1,
+     "text": "Literaturübersicht und -analyse zum Wissensstand"
+    },
+    {
+     "id": "qf1-06-06",
+     "level": 0,
+     "text": "Theoretischen Bezugsrahmen definieren"
+    },
+    {
+     "id": "qf1-06-07",
+     "level": 1,
+     "text": "Theorie = systematische, abstrakte Erklärung eines Aspekts der Wirklichkeit"
+    },
+    {
+     "id": "qf1-06-08",
+     "level": 1,
+     "text": "eine vorhandene Theorie dient als Grundlage für Vorhersagen"
+    },
+    {
+     "id": "qf1-06-09",
+     "level": 0,
+     "text": "Hypothesen formulieren"
+    },
+    {
+     "id": "qf1-06-10",
+     "level": 1,
+     "text": "Voraussage über die Beziehung zwischen den Variablen der Forschungsfrage"
+    }
+   ]
+  },
+  {
+   "id": "qf1-07",
+   "subject": "Quantitative Forschungsmethoden",
+   "title": "QF1 · Quantitative Forschungsdesigns im Überblick",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "qf1-07-01",
+     "level": 0,
+     "text": "Experimentelle Designs"
+    },
+    {
+     "id": "qf1-07-02",
+     "level": 1,
+     "text": "Experimentelles Design: kausale Zusammenhänge"
+    },
+    {
+     "id": "qf1-07-03",
+     "level": 1,
+     "text": "Quasi-experimentelles Design: kausale Zusammenhänge"
+    },
+    {
+     "id": "qf1-07-04",
+     "level": 0,
+     "text": "Nicht-experimentelle Designs"
+    },
+    {
+     "id": "qf1-07-05",
+     "level": 1,
+     "text": "Deskriptives Design: Häufigkeiten"
+    },
+    {
+     "id": "qf1-07-06",
+     "level": 1,
+     "text": "Komparatives Design: Unterschiede zwischen Gruppen"
+    },
+    {
+     "id": "qf1-07-07",
+     "level": 1,
+     "text": "Korrelationsdesign: Beziehung bzw. Zusammenhang zwischen Variablen"
+    }
+   ]
+  },
+  {
+   "id": "qf1-08",
+   "subject": "Quantitative Forschungsmethoden",
+   "title": "QF1 · Kausale Aussagekraft der Designs",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "qf1-08-01",
+     "level": 0,
+     "text": "Von stark nach schwach: Experimentell → Quasi-experimentell → Komparativ → Korrelationell → Deskriptiv"
+    },
+    {
+     "id": "qf1-08-02",
+     "level": 0,
+     "text": "Nur Experimente können Ursache und Wirkung wirklich belegen"
+    },
+    {
+     "id": "qf1-08-03",
+     "level": 0,
+     "text": "Deskriptive Designs beschreiben nur"
+    }
+   ]
+  },
+  {
+   "id": "qf1-09",
+   "subject": "Quantitative Forschungsmethoden",
+   "title": "QF1 · Phase 2: Population und Stichprobe",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "qf1-09-01",
+     "level": 0,
+     "text": "Population bzw. Grundgesamtheit"
+    },
+    {
+     "id": "qf1-09-02",
+     "level": 1,
+     "text": "Summe aller Individuen oder Objekte mit gemeinsamen, bestimmbaren Merkmalen"
+    },
+    {
+     "id": "qf1-09-03",
+     "level": 1,
+     "text": "die zu untersuchende Population wird festgelegt"
+    },
+    {
+     "id": "qf1-09-04",
+     "level": 0,
+     "text": "Stichprobe"
+    },
+    {
+     "id": "qf1-09-05",
+     "level": 1,
+     "text": "Untergruppe der Population, weil man nicht alle untersuchen kann"
+    },
+    {
+     "id": "qf1-09-06",
+     "level": 1,
+     "text": "festlegen: wie wird sie ausgewählt, wie viele Proband:innen?"
+    },
+    {
+     "id": "qf1-09-07",
+     "level": 1,
+     "text": "soll die Grundgesamtheit möglichst exakt widerspiegeln = Repräsentativität"
+    }
+   ]
+  },
+  {
+   "id": "qf1-10",
+   "subject": "Quantitative Forschungsmethoden",
+   "title": "QF1 · Phase 2: Variablen messen und Entwurf abschließen",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "qf1-10-01",
+     "level": 0,
+     "text": "Messen der Forschungsvariablen"
+    },
+    {
+     "id": "qf1-10-02",
+     "level": 1,
+     "text": "Begriffe der Variablen klären"
+    },
+    {
+     "id": "qf1-10-03",
+     "level": 1,
+     "text": "festlegen, wie gemessen wird = Operationalisierung"
+    },
+    {
+     "id": "qf1-10-04",
+     "level": 1,
+     "text": "Messinstrumente auswählen"
+    },
+    {
+     "id": "qf1-10-05",
+     "level": 0,
+     "text": "Forschungsentwurf abschließen und überprüfen"
+    },
+    {
+     "id": "qf1-10-06",
+     "level": 1,
+     "text": "Vorlage beim Auftraggeber"
+    },
+    {
+     "id": "qf1-10-07",
+     "level": 1,
+     "text": "Zustimmung der Ethikkommission"
+    },
+    {
+     "id": "qf1-10-08",
+     "level": 1,
+     "text": "Pretest durchführen"
+    }
+   ]
+  },
+  {
+   "id": "qf1-11",
+   "subject": "Quantitative Forschungsmethoden",
+   "title": "QF1 · Phase 3: Empirische Phase",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "qf1-11-01",
+     "level": 0,
+     "text": "Datenerhebung durch"
+    },
+    {
+     "id": "qf1-11-02",
+     "level": 1,
+     "text": "Befragung"
+    },
+    {
+     "id": "qf1-11-03",
+     "level": 1,
+     "text": "Beobachtung"
+    },
+    {
+     "id": "qf1-11-04",
+     "level": 1,
+     "text": "biophysiologische Messung"
+    },
+    {
+     "id": "qf1-11-05",
+     "level": 0,
+     "text": "Datenanalyse vorbereiten"
+    },
+    {
+     "id": "qf1-11-06",
+     "level": 1,
+     "text": "Daten kodieren → in ein Statistikprogramm eingeben (z. B. SPSS)"
+    }
+   ]
+  },
+  {
+   "id": "qf1-12",
+   "subject": "Quantitative Forschungsmethoden",
+   "title": "QF1 · Phase 4 und 5: Analyse und Verbreitung",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "qf1-12-01",
+     "level": 0,
+     "text": "Phase 4: Datenanalyse"
+    },
+    {
+     "id": "qf1-12-02",
+     "level": 1,
+     "text": "deskriptive Statistik"
+    },
+    {
+     "id": "qf1-12-03",
+     "level": 1,
+     "text": "Inferenzstatistik"
+    },
+    {
+     "id": "qf1-12-04",
+     "level": 1,
+     "text": "fortgeschrittene Verfahren"
+    },
+    {
+     "id": "qf1-12-05",
+     "level": 0,
+     "text": "Phase 4: Interpretation"
+    },
+    {
+     "id": "qf1-12-06",
+     "level": 1,
+     "text": "Bedeutung der Ergebnisse für die Praxis"
+    },
+    {
+     "id": "qf1-12-07",
+     "level": 1,
+     "text": "Ergebnisse mit der Theorie in Zusammenhang bringen"
+    },
+    {
+     "id": "qf1-12-08",
+     "level": 0,
+     "text": "Phase 5: Ergebnisse mitteilen"
+    },
+    {
+     "id": "qf1-12-09",
+     "level": 1,
+     "text": "Forschungsbericht schreiben"
+    },
+    {
+     "id": "qf1-12-10",
+     "level": 1,
+     "text": "Artikel in Fachzeitschriften veröffentlichen"
+    },
+    {
+     "id": "qf1-12-11",
+     "level": 0,
+     "text": "Phase 5: Ergebnisse anwenden"
+    },
+    {
+     "id": "qf1-12-12",
+     "level": 1,
+     "text": "überlegen, wie sie in der Pflegepraxis umgesetzt werden können"
+    },
+    {
+     "id": "qf1-12-13",
+     "level": 1,
+     "text": "idealerweise konkrete Planung der Umsetzung"
+    }
+   ]
+  },
+  {
+   "id": "qf2-01",
+   "subject": "Quantitative Forschungsmethoden",
+   "title": "QF2 · Die Leitfragen der vier Designs",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "qf2-01-01",
+     "level": 0,
+     "text": "Design | Leitfrage"
+    },
+    {
+     "id": "qf2-01-02",
+     "level": 0,
+     "text": "Experimentell | ?Welche Auswirkungen hat A auf B?"
+    },
+    {
+     "id": "qf2-01-03",
+     "level": 0,
+     "text": "Korrelationell | ?Welche Beziehung besteht zwischen A und B?"
+    },
+    {
+     "id": "qf2-01-04",
+     "level": 0,
+     "text": "Komparativ | ?Welcher Unterschied besteht zwischen Gruppe A und B?"
+    },
+    {
+     "id": "qf2-01-05",
+     "level": 0,
+     "text": "Deskriptiv | ?Wie häufig kommen A, B … vor?"
+    }
+   ]
+  },
+  {
+   "id": "qf2-02",
+   "subject": "Quantitative Forschungsmethoden",
+   "title": "QF2 · Die drei Merkmale eines Experiments",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "qf2-02-01",
+     "level": 0,
+     "text": "Manipulation der unabhängigen Variablen"
+    },
+    {
+     "id": "qf2-02-02",
+     "level": 1,
+     "text": "Durchführung einer pflegerischen Intervention bei den Teilnehmenden"
+    },
+    {
+     "id": "qf2-02-03",
+     "level": 0,
+     "text": "Kontrolle"
+    },
+    {
+     "id": "qf2-02-04",
+     "level": 1,
+     "text": "Kontrolle der Experimentalsituation"
+    },
+    {
+     "id": "qf2-02-05",
+     "level": 1,
+     "text": "Kontrollgruppe"
+    },
+    {
+     "id": "qf2-02-06",
+     "level": 0,
+     "text": "Randomisierung"
+    },
+    {
+     "id": "qf2-02-07",
+     "level": 1,
+     "text": "Zuteilung zu Experiment- oder Kontrollgruppe nach Zufall (z. B. Münzwurf)"
+    },
+    {
+     "id": "qf2-02-08",
+     "level": 1,
+     "text": "jede:r hat die gleiche Chance auf jede Gruppe"
+    },
+    {
+     "id": "qf2-02-09",
+     "level": 1,
+     "text": "zusätzliche Einflussvariablen verteilen sich gleich"
+    }
+   ]
+  },
+  {
+   "id": "qf2-03",
+   "subject": "Quantitative Forschungsmethoden",
+   "title": "QF2 · Experimentelles Pretest-Posttest-Design",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "qf2-03-01",
+     "level": 0,
+     "text": "Stichprobe → Randomisierung"
+    },
+    {
+     "id": "qf2-03-02",
+     "level": 0,
+     "text": "Randomisierung → Experimentgruppe → Pre-Test EG → Intervention → Post-Test EG"
+    },
+    {
+     "id": "qf2-03-03",
+     "level": 0,
+     "text": "Randomisierung → Kontrollgruppe → Pre-Test KG → Post-Test KG"
+    },
+    {
+     "id": "qf2-03-04",
+     "level": 0,
+     "text": "Nur die Experimentgruppe erhält die Intervention; der Vergleich der Post-Tests zeigt ihre Wirkung"
+    }
+   ]
+  },
+  {
+   "id": "qf2-04",
+   "subject": "Quantitative Forschungsmethoden",
+   "title": "QF2 · Kausalität: die 3 Kriterien nach Lazarsfeld (1955)",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "qf2-04-01",
+     "level": 0,
+     "text": "Die Ursache geht der Wirkung zeitlich voraus"
+    },
+    {
+     "id": "qf2-04-02",
+     "level": 0,
+     "text": "Es besteht eine empirische Beziehung zwischen angenommener Ursache und Wirkung"
+    },
+    {
+     "id": "qf2-04-03",
+     "level": 0,
+     "text": "Die Beziehung geht nicht auf eine dritte Variable zurück"
+    }
+   ]
+  },
+  {
+   "id": "qf2-05",
+   "subject": "Quantitative Forschungsmethoden",
+   "title": "QF2 · Vor- und Nachteile von Experimenten",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "qf2-05-01",
+     "level": 0,
+     "text": "Vorteile"
+    },
+    {
+     "id": "qf2-05-02",
+     "level": 1,
+     "text": "stärkste Bestätigung des Ursache-Wirkungs-Zusammenhangs zwischen unabhängiger und abhängiger Variable"
+    },
+    {
+     "id": "qf2-05-03",
+     "level": 1,
+     "text": "aussagefähigste Designs zum Testen kausaler Hypothesen"
+    },
+    {
+     "id": "qf2-05-04",
+     "level": 0,
+     "text": "Nachteile"
+    },
+    {
+     "id": "qf2-05-05",
+     "level": 1,
+     "text": "viele Variablen dürfen aus ethischen oder technischen Gründen nicht manipuliert werden (z. B. notwendige Pflege weglassen)"
+    },
+    {
+     "id": "qf2-05-06",
+     "level": 1,
+     "text": "Randomisierung oft unmöglich (Krank- oder Gesundsein lässt sich nicht zuteilen)"
+    },
+    {
+     "id": "qf2-05-07",
+     "level": 1,
+     "text": "Hawthorne-Effekt: Allein das Wissen um die Studienteilnahme verändert das Verhalten"
+    }
+   ]
+  },
+  {
+   "id": "qf2-06",
+   "subject": "Quantitative Forschungsmethoden",
+   "title": "QF2 · Quasi-Experiment",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "qf2-06-01",
+     "level": 0,
+     "text": "Definition: Fehlen Kontrolle und/oder Randomisierung, spricht man von einem Quasi-Experiment"
+    },
+    {
+     "id": "qf2-06-02",
+     "level": 0,
+     "text": "Vorteile gegenüber dem Experiment"
+    },
+    {
+     "id": "qf2-06-03",
+     "level": 1,
+     "text": "praktischer"
+    },
+    {
+     "id": "qf2-06-04",
+     "level": 1,
+     "text": "einfacher durchzuführen"
+    },
+    {
+     "id": "qf2-06-05",
+     "level": 0,
+     "text": "Nachteile gegenüber dem Experiment"
+    },
+    {
+     "id": "qf2-06-06",
+     "level": 1,
+     "text": "geringere Aussagekraft"
+    },
+    {
+     "id": "qf2-06-07",
+     "level": 1,
+     "text": "Schlüsse auf Ursache und Wirkung schwieriger"
+    },
+    {
+     "id": "qf2-06-08",
+     "level": 1,
+     "text": "alternative Erklärungen für die Ergebnisse möglich"
+    }
+   ]
+  },
+  {
+   "id": "qf2-07",
+   "subject": "Quantitative Forschungsmethoden",
+   "title": "QF2 · Korrelationsdesign",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "qf2-07-01",
+     "level": 0,
+     "text": "Leitfrage: Welche Beziehung besteht zwischen den Variablen A und B?"
+    },
+    {
+     "id": "qf2-07-02",
+     "level": 0,
+     "text": "Die unabhängige Variable hat sich schon vor der Studie verändert"
+    },
+    {
+     "id": "qf2-07-03",
+     "level": 0,
+     "text": "Untersucht die Beziehung zwischen Variablen"
+    },
+    {
+     "id": "qf2-07-04",
+     "level": 0,
+     "text": "Kein Schluss auf kausale Ursachen!"
+    },
+    {
+     "id": "qf2-07-05",
+     "level": 0,
+     "text": "Beispiel: Depression und Lebensalter"
+    },
+    {
+     "id": "qf2-07-06",
+     "level": 0,
+     "text": "Ablauf"
+    },
+    {
+     "id": "qf2-07-07",
+     "level": 1,
+     "text": "Stichprobe → Variable 1 beschreiben → Beziehung untersuchen → Interpretation"
+    },
+    {
+     "id": "qf2-07-08",
+     "level": 1,
+     "text": "Stichprobe → Variable 2 beschreiben → Beziehung untersuchen"
+    }
+   ]
+  },
+  {
+   "id": "qf2-08",
+   "subject": "Quantitative Forschungsmethoden",
+   "title": "QF2 · Komparatives Design",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "qf2-08-01",
+     "level": 0,
+     "text": "Leitfrage: Welcher Unterschied besteht zwischen den Gruppen A und B hinsichtlich bestimmter Variablen?"
+    },
+    {
+     "id": "qf2-08-02",
+     "level": 0,
+     "text": "Ablauf"
+    },
+    {
+     "id": "qf2-08-03",
+     "level": 1,
+     "text": "Stichprobe 1 → Ergebnisse beschreiben 1 → Vergleich beider Ergebnisse → Interpretation"
+    },
+    {
+     "id": "qf2-08-04",
+     "level": 1,
+     "text": "Stichprobe 2 → Ergebnisse beschreiben 2 → Vergleich beider Ergebnisse"
+    },
+    {
+     "id": "qf2-08-05",
+     "level": 0,
+     "text": "Nach Burns & Grove (2005)"
+    }
+   ]
+  },
+  {
+   "id": "qf2-09",
+   "subject": "Quantitative Forschungsmethoden",
+   "title": "QF2 · Deskriptives Design",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "qf2-09-01",
+     "level": 0,
+     "text": "Leitfrage: Wie häufig kommen die Variablen A, B … vor?"
+    },
+    {
+     "id": "qf2-09-02",
+     "level": 0,
+     "text": "Ablauf"
+    },
+    {
+     "id": "qf2-09-03",
+     "level": 1,
+     "text": "Eine Stichprobe"
+    },
+    {
+     "id": "qf2-09-04",
+     "level": 1,
+     "text": "Jede Variable wird einzeln beschrieben"
+    },
+    {
+     "id": "qf2-09-05",
+     "level": 1,
+     "text": "Danach Interpretation"
+    },
+    {
+     "id": "qf2-09-06",
+     "level": 0,
+     "text": "Beschreibt nur, keine Beziehungen, keine Kausalität"
+    },
+    {
+     "id": "qf2-09-07",
+     "level": 0,
+     "text": "Nach Burns & Grove (2005)"
+    }
+   ]
+  },
+  {
+   "id": "qf2-10",
+   "subject": "Quantitative Forschungsmethoden",
+   "title": "QF2 · Querschnitt- vs. Längsschnittdesign",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "qf2-10-01",
+     "level": 0,
+     "text": "Das Design legt Zeitpunkt und Häufigkeit der Datenerhebung fest"
+    },
+    {
+     "id": "qf2-10-02",
+     "level": 0,
+     "text": "Querschnittdesign | Längsschnittdesign"
+    },
+    {
+     "id": "qf2-10-03",
+     "level": 0,
+     "text": "eine Datenerhebung zu einem Zeitpunkt | ?mehrere Datenerhebungen über einen längeren Zeitraum"
+    },
+    {
+     "id": "qf2-10-04",
+     "level": 0,
+     "text": "keine Veränderungen in der Zeit sichtbar | ?bildet Veränderungen und zeitliche Abfolgen ab"
+    },
+    {
+     "id": "qf2-10-05",
+     "level": 0,
+     "text": "einfach und kostengünstig | ?aufwendiger"
+    },
+    {
+     "id": "qf2-10-06",
+     "level": 0,
+     "text": "Retrospektiv: Blick zurück von heute | ?Prospektiv: Follow-ups in die Zukunft"
+    }
+   ]
+  },
+  {
+   "id": "qf2-11",
+   "subject": "Quantitative Forschungsmethoden",
+   "title": "QF2 · Querschnittdesign und retrospektive Studien",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "qf2-11-01",
+     "level": 0,
+     "text": "Datenerhebung zu einem Zeitpunkt"
+    },
+    {
+     "id": "qf2-11-02",
+     "level": 1,
+     "text": "erfasst den Zustand von Phänomenen oder ihre Beziehungen zu einem festen Zeitpunkt"
+    },
+    {
+     "id": "qf2-11-03",
+     "level": 1,
+     "text": "z. B. Symptome und Alter"
+    },
+    {
+     "id": "qf2-11-04",
+     "level": 1,
+     "text": "zeigt keine Veränderungen in der Zeit"
+    },
+    {
+     "id": "qf2-11-05",
+     "level": 0,
+     "text": "Retrospektive Studien"
+    },
+    {
+     "id": "qf2-11-06",
+     "level": 1,
+     "text": "meist Querschnittstudien"
+    },
+    {
+     "id": "qf2-11-07",
+     "level": 1,
+     "text": "Daten aus der Vergangenheit, oft aus Dokumenten"
+    },
+    {
+     "id": "qf2-11-08",
+     "level": 0,
+     "text": "Einfach und kostengünstig durchzuführen"
+    }
+   ]
+  },
+  {
+   "id": "qf2-12",
+   "subject": "Quantitative Forschungsmethoden",
+   "title": "QF2 · Longitudinaldesign",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "qf2-12-01",
+     "level": 0,
+     "text": "Mehrere Datenerhebungen über einen Zeitraum"
+    },
+    {
+     "id": "qf2-12-02",
+     "level": 1,
+     "text": "die Forschungsfrage bestimmt Anzahl und Zeitpunkte"
+    },
+    {
+     "id": "qf2-12-03",
+     "level": 0,
+     "text": "Bildet Veränderungen in der Zeit ab"
+    },
+    {
+     "id": "qf2-12-04",
+     "level": 0,
+     "text": "Stellt zeitliche Abfolgen von Phänomenen dar"
+    },
+    {
+     "id": "qf2-12-05",
+     "level": 0,
+     "text": "Essenzielles Kriterium für den Nachweis von Kausalität!"
+    }
+   ]
+  },
+  {
+   "id": "qf2-13",
+   "subject": "Quantitative Forschungsmethoden",
+   "title": "QF2 · Trend-, Panel- und Follow-up-Studien",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "qf2-13-01",
+     "level": 0,
+     "text": "Studie | Merkmal"
+    },
+    {
+     "id": "qf2-13-02",
+     "level": 0,
+     "text": "Trendstudie | ?verschiedene Stichproben aus derselben Population in wiederholten Abständen"
+    },
+    {
+     "id": "qf2-13-03",
+     "level": 0,
+     "text": "Panelstudie | ?dieselben Teilnehmenden zu zwei oder mehr Zeitpunkten"
+    },
+    {
+     "id": "qf2-13-04",
+     "level": 0,
+     "text": "Follow-up-Studie | ?Status von Teilnehmenden mit einer Erkrankung oder nach einer Intervention"
+    },
+    {
+     "id": "qf2-13-05",
+     "level": 0,
+     "text": "Trendstudie: Vorhersagen über künftige Entwicklungen aus Mustern und Veränderungsraten"
+    },
+    {
+     "id": "qf2-13-06",
+     "level": 0,
+     "text": "Panelstudie: untersucht Veränderungsmuster und ihre Gründe"
+    },
+    {
+     "id": "qf2-13-07",
+     "level": 1,
+     "text": "teuer und schwierig"
+    },
+    {
+     "id": "qf2-13-08",
+     "level": 1,
+     "text": "Problem: Teilnehmende gehen verloren, das schwächt die Verallgemeinerbarkeit"
+    },
+    {
+     "id": "qf2-13-09",
+     "level": 0,
+     "text": "Follow-up-Studie: bildet die Auswirkungen einer Behandlung ab"
+    }
+   ]
+  }
+ ]
+}

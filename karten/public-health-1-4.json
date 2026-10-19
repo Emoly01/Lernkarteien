@@ -1,0 +1,2305 @@
+{
+ "app": "lernkarten",
+ "version": 1,
+ "pack": true,
+ "name": "Einführung in Public Health, Lernbaustein 1–4",
+ "subjects": [
+  "Public Health"
+ ],
+ "cards": [
+  {
+   "id": "ph1-01",
+   "subject": "Public Health",
+   "title": "PH1 · Die Ebenen der Perspektive",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "ph1-01-01",
+     "level": 0,
+     "text": "Bevölkerungs-Ebene: Public Health"
+    },
+    {
+     "id": "ph1-01-02",
+     "level": 0,
+     "text": "Gesundheitssystem-Ebene"
+    },
+    {
+     "id": "ph1-01-03",
+     "level": 0,
+     "text": "Nationale Ebene: Österreich, Deutschland, Schweiz, Liechtenstein …"
+    },
+    {
+     "id": "ph1-01-04",
+     "level": 0,
+     "text": "Versorgungs-Ebene: Hausärzt:innen, Fachärzt:innen, Krankenhäuser"
+    },
+    {
+     "id": "ph1-01-05",
+     "level": 0,
+     "text": "Ebene des Individuums"
+    },
+    {
+     "id": "ph1-01-06",
+     "level": 0,
+     "text": "Public Health = Makroebene: Die Bevölkerungsebene wirkt auf die Ebenen darunter"
+    }
+   ]
+  },
+  {
+   "id": "ph1-02",
+   "subject": "Public Health",
+   "title": "PH1 · Gesundheitsbegriff der WHO",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "ph1-02-01",
+     "level": 0,
+     "text": "„Gesundheit ist der Zustand vollständigen körperlichen, geistigen und sozialen Wohlbefindens und nicht nur das Freisein von Krankheit oder Gebrechen.\" (WHO, 1948)"
+    },
+    {
+     "id": "ph1-02-02",
+     "level": 0,
+     "text": "Angelehnt an das biopsychosoziale Modell (Engel, 1977)"
+    },
+    {
+     "id": "ph1-02-03",
+     "level": 1,
+     "text": "biologisch: Alter, Geschlecht, Genetik"
+    },
+    {
+     "id": "ph1-02-04",
+     "level": 1,
+     "text": "psychologisch: emotionale und mentale Gesundheit, Überzeugungen"
+    },
+    {
+     "id": "ph1-02-05",
+     "level": 1,
+     "text": "soziologisch: Beziehungen, Unterstützung, Sozioökonomie"
+    }
+   ]
+  },
+  {
+   "id": "ph1-03",
+   "subject": "Public Health",
+   "title": "PH1 · Was ist Public Health?",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "ph1-03-01",
+     "level": 0,
+     "text": "„Die Wissenschaft und Praxis von Verhinderung von Krankheit, Verlängerung des Lebens und Förderung der Gesundheit durch organisierte Anstrengungen der Gesellschaft\" (Acheson, 1988; WHO, 2011)"
+    },
+    {
+     "id": "ph1-03-02",
+     "level": 0,
+     "text": "Merkmale"
+    },
+    {
+     "id": "ph1-03-03",
+     "level": 1,
+     "text": "Anwendungsbezug: Theorie und Praxis"
+    },
+    {
+     "id": "ph1-03-04",
+     "level": 1,
+     "text": "Bevölkerungsbezug: Gesundheit der Bevölkerung bzw. von Subpopulationen"
+    },
+    {
+     "id": "ph1-03-05",
+     "level": 1,
+     "text": "Multi- bzw. Interdisziplinarität: Zusammenarbeit verschiedener Disziplinen"
+    },
+    {
+     "id": "ph1-03-06",
+     "level": 0,
+     "text": "Weitere Definitionen ergänzen"
+    },
+    {
+     "id": "ph1-03-07",
+     "level": 1,
+     "text": "gerechte und effiziente Nutzung der Ressourcen"
+    },
+    {
+     "id": "ph1-03-08",
+     "level": 1,
+     "text": "Multidisziplinarität der Akteur:innen und Handlungsfelder"
+    },
+    {
+     "id": "ph1-03-09",
+     "level": 1,
+     "text": "Nachhaltigkeit der Maßnahmen"
+    },
+    {
+     "id": "ph1-03-10",
+     "level": 0,
+     "text": "Gesundheit ist nicht nur individuelles Anliegen, sondern öffentliche Aufgabe"
+    },
+    {
+     "id": "ph1-03-11",
+     "level": 0,
+     "text": "Im deutschsprachigen Raum junge Disziplin, in Europa ohne einheitliche Definition"
+    }
+   ]
+  },
+  {
+   "id": "ph1-04",
+   "subject": "Public Health",
+   "title": "PH1 · Old vs. New Public Health",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "ph1-04-01",
+     "level": 0,
+     "text": "Old Public Health | New Public Health"
+    },
+    {
+     "id": "ph1-04-02",
+     "level": 0,
+     "text": "Krankheitsparadigma | ?Gesundheitsparadigma"
+    },
+    {
+     "id": "ph1-04-03",
+     "level": 0,
+     "text": "Gesundheit = Fehlen von Krankheit | ?Gesundheit positiv definiert"
+    },
+    {
+     "id": "ph1-04-04",
+     "level": 0,
+     "text": "Verteilung von Krankheiten | ?Verteilung von Gesundheit"
+    },
+    {
+     "id": "ph1-04-05",
+     "level": 0,
+     "text": "Risikofaktoren | ?Risikofaktoren und Determinanten der Gesundheit"
+    },
+    {
+     "id": "ph1-04-06",
+     "level": 0,
+     "text": "Methode: Epidemiologie | ?neuere Form der Epidemiologie"
+    },
+    {
+     "id": "ph1-04-07",
+     "level": 0,
+     "text": "Krankenversorgung, Infektions- und Krankheitsprävention | ?alle Bedrohungen, auch chronische und psychische Krankheit; Gesundheitsförderung"
+    },
+    {
+     "id": "ph1-04-08",
+     "level": 0,
+     "text": "Health Medicine | ?Health Promotion"
+    }
+   ]
+  },
+  {
+   "id": "ph1-05",
+   "subject": "Public Health",
+   "title": "PH1 · Gesellschaftlicher Nutzen von Gesundheit",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "ph1-05-01",
+     "level": 0,
+     "text": "Einflussfaktoren wirken auf Gesundheit und Gesellschaft"
+    },
+    {
+     "id": "ph1-05-02",
+     "level": 1,
+     "text": "z. B. Lebenswelt, Umwelt, Gesellschaft, Politik"
+    },
+    {
+     "id": "ph1-05-03",
+     "level": 0,
+     "text": "Gesundheit ist ein Grundrecht"
+    },
+    {
+     "id": "ph1-05-04",
+     "level": 0,
+     "text": "Gesundheit bringt gesellschaftlichen Nutzen"
+    },
+    {
+     "id": "ph1-05-05",
+     "level": 1,
+     "text": "Sozialkapital, Humankapital, wirtschaftliche Produktivität, Gesundheitskosten"
+    }
+   ]
+  },
+  {
+   "id": "ph1-06",
+   "subject": "Public Health",
+   "title": "PH1 · Einflussfaktoren nach dem WHO-Modell (2010)",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "ph1-06-01",
+     "level": 0,
+     "text": "Sozioökonomischer und politischer Kontext"
+    },
+    {
+     "id": "ph1-06-02",
+     "level": 1,
+     "text": "Governance, Wirtschafts-, Sozial- und Gesundheitspolitik, Kultur und gesellschaftliche Werte"
+    },
+    {
+     "id": "ph1-06-03",
+     "level": 0,
+     "text": "Sozioökonomische Position"
+    },
+    {
+     "id": "ph1-06-04",
+     "level": 1,
+     "text": "soziale Schicht, Geschlecht, Ethnizität"
+    },
+    {
+     "id": "ph1-06-05",
+     "level": 1,
+     "text": "Bildung, Beruf, Einkommen"
+    },
+    {
+     "id": "ph1-06-06",
+     "level": 0,
+     "text": "Individuelle Gesundheitsebene"
+    },
+    {
+     "id": "ph1-06-07",
+     "level": 1,
+     "text": "materielle Umstände (Wohnen, Arbeit, Ernährung)"
+    },
+    {
+     "id": "ph1-06-08",
+     "level": 1,
+     "text": "Verhalten und biologische Faktoren"
+    },
+    {
+     "id": "ph1-06-09",
+     "level": 1,
+     "text": "psychosoziale Faktoren"
+    },
+    {
+     "id": "ph1-06-10",
+     "level": 0,
+     "text": "Dazu: sozialer Zusammenhalt und Sozialkapital, Gesundheitssystem"
+    },
+    {
+     "id": "ph1-06-11",
+     "level": 0,
+     "text": "Ergebnis: Auswirkung auf gesundheitliche Chancengleichheit und Wohlbefinden"
+    }
+   ]
+  },
+  {
+   "id": "ph1-07",
+   "subject": "Public Health",
+   "title": "PH1 · Gesundheitsdeterminantenmodell (Dahlgren & Whitehead)",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "ph1-07-01",
+     "level": 0,
+     "text": "Regenbogenmodell, von innen nach außen"
+    },
+    {
+     "id": "ph1-07-02",
+     "level": 1,
+     "text": "Alter, Geschlecht, Erbanlagen"
+    },
+    {
+     "id": "ph1-07-03",
+     "level": 1,
+     "text": "Faktoren individueller Lebensweisen"
+    },
+    {
+     "id": "ph1-07-04",
+     "level": 1,
+     "text": "soziale und kommunale Netzwerke"
+    },
+    {
+     "id": "ph1-07-05",
+     "level": 1,
+     "text": "Lebens- und Arbeitsbedingungen"
+    },
+    {
+     "id": "ph1-07-06",
+     "level": 1,
+     "text": "allgemeine sozioökonomische, kulturelle und physische Umweltbedingungen"
+    }
+   ]
+  },
+  {
+   "id": "ph1-08",
+   "subject": "Public Health",
+   "title": "PH1 · Makro-, Meso- und Mikroebene der Determinanten",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "ph1-08-01",
+     "level": 0,
+     "text": "Ebene | Beispiele | Faktoren"
+    },
+    {
+     "id": "ph1-08-02",
+     "level": 0,
+     "text": "Makro | ?Politik, Gesetze, Verkehr, gesellschaftliche Lebensbedingungen, Normen | ?distal"
+    },
+    {
+     "id": "ph1-08-03",
+     "level": 0,
+     "text": "Meso | ?Bildungs- und Gesundheitseinrichtungen, Arbeits- und Wohnumwelt, Netzwerke | ?–"
+    },
+    {
+     "id": "ph1-08-04",
+     "level": 0,
+     "text": "Mikro | ?Bildungsstand, Gesundheitsverhalten, Arbeitsbelastung | ?proximal"
+    },
+    {
+     "id": "ph1-08-05",
+     "level": 0,
+     "text": "Distal = weit weg vom Individuum, proximal = nah dran (Klemperer, 2020)"
+    }
+   ]
+  },
+  {
+   "id": "ph1-09",
+   "subject": "Public Health",
+   "title": "PH1 · Modell der Gesundheitsproduktion (Brock, 2008)",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "ph1-09-01",
+     "level": 0,
+     "text": "Gesundheitsdeterminanten → Gesundheit der Bevölkerung"
+    },
+    {
+     "id": "ph1-09-02",
+     "level": 0,
+     "text": "Epidemiologie → Gesundheit der Bevölkerung"
+    },
+    {
+     "id": "ph1-09-03",
+     "level": 0,
+     "text": "Darunter: Gesundheitsförderung und Prävention (Primär-, Sekundär-, Tertiärprävention)"
+    },
+    {
+     "id": "ph1-09-04",
+     "level": 0,
+     "text": "Interaktion"
+    },
+    {
+     "id": "ph1-09-05",
+     "level": 1,
+     "text": "Einflussfaktoren wirken auf Lebenschancen ↔ Lebenskompetenzen"
+    },
+    {
+     "id": "ph1-09-06",
+     "level": 1,
+     "text": "beide zusammen bestimmen die Gesundheit"
+    }
+   ]
+  },
+  {
+   "id": "ph1-10",
+   "subject": "Public Health",
+   "title": "PH1 · Gesundheitsindikatoren",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "ph1-10-01",
+     "level": 0,
+     "text": "Machen Gesundheits- und Krankheitszustände von Gruppen messbar"
+    },
+    {
+     "id": "ph1-10-02",
+     "level": 0,
+     "text": "EU-Aktionsprogramme Öffentliche Gesundheit"
+    },
+    {
+     "id": "ph1-10-03",
+     "level": 1,
+     "text": "2003–2008, 2008–2013, 2014–2020, 2021–2027 (EU4Health)"
+    },
+    {
+     "id": "ph1-10-04",
+     "level": 0,
+     "text": "Demografie"
+    },
+    {
+     "id": "ph1-10-05",
+     "level": 1,
+     "text": "Geburtenraten, Immigration, Emigration, Mortalität, Todesursachen, Morbidität"
+    },
+    {
+     "id": "ph1-10-06",
+     "level": 0,
+     "text": "Epidemiologie: Inzidenz, Prävalenz"
+    },
+    {
+     "id": "ph1-10-07",
+     "level": 0,
+     "text": "Begriffe"
+    },
+    {
+     "id": "ph1-10-08",
+     "level": 1,
+     "text": "Mortalität: Sterblichkeit"
+    },
+    {
+     "id": "ph1-10-09",
+     "level": 1,
+     "text": "Morbidität: Krankheitshäufigkeit in einer Bevölkerungsgruppe"
+    },
+    {
+     "id": "ph1-10-10",
+     "level": 0,
+     "text": "Beispiele: Tuberkulosefälle pro 100.000 Einwohner, HIV-Inzidenzrate"
+    }
+   ]
+  },
+  {
+   "id": "ph1-11",
+   "subject": "Public Health",
+   "title": "PH1 · Heutige Herausforderungen für Public Health",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "ph1-11-01",
+     "level": 0,
+     "text": "Geopolitische Konflikte, Kriege"
+    },
+    {
+     "id": "ph1-11-02",
+     "level": 0,
+     "text": "Ökonomische Krise, demografischer Wandel"
+    },
+    {
+     "id": "ph1-11-03",
+     "level": 0,
+     "text": "Chronische Erkrankungen, psychische Gesundheit"
+    },
+    {
+     "id": "ph1-11-04",
+     "level": 0,
+     "text": "Antibiotika-Resistenzen"
+    },
+    {
+     "id": "ph1-11-05",
+     "level": 0,
+     "text": "Urbanisierung und Migration"
+    },
+    {
+     "id": "ph1-11-06",
+     "level": 0,
+     "text": "Covid 19, Long Covid und Zoonosen"
+    },
+    {
+     "id": "ph1-11-07",
+     "level": 0,
+     "text": "Klimawandel und Degradierung von Ökosystemen"
+    },
+    {
+     "id": "ph1-11-08",
+     "level": 0,
+     "text": "Soziale und gesundheitliche Ungleichheit"
+    },
+    {
+     "id": "ph1-11-09",
+     "level": 0,
+     "text": "Ottawa-Charta: Frieden, Wohnen, Bildung, Ernährung, Einkommen, stabiles Ökosystem, Gerechtigkeit sind Grundvoraussetzungen für Gesundheit"
+    }
+   ]
+  },
+  {
+   "id": "ph1-12",
+   "subject": "Public Health",
+   "title": "PH1 · Der One-Health-Ansatz",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "ph1-12-01",
+     "level": 0,
+     "text": "Gesundheit von Mensch, Tier und Umwelt ist eng miteinander verbunden"
+    },
+    {
+     "id": "ph1-12-02",
+     "level": 0,
+     "text": "Interdisziplinäre Herangehensweise für ganzheitliche, nachhaltige Lösungen"
+    },
+    {
+     "id": "ph1-12-03",
+     "level": 1,
+     "text": "Kommunikation, Kollaboration, Koordination, Capacity Building"
+    },
+    {
+     "id": "ph1-12-04",
+     "level": 0,
+     "text": "Beispiel: Vermeidung von Zoonosen"
+    },
+    {
+     "id": "ph1-12-05",
+     "level": 1,
+     "text": "Krankheiten, die von Wirbeltieren auf Menschen übertragen werden"
+    },
+    {
+     "id": "ph1-12-06",
+     "level": 1,
+     "text": "mehr als 2/3 der bekannten Infektionskrankheiten, z. B. Ebola, Vogelgrippe"
+    },
+    {
+     "id": "ph1-12-07",
+     "level": 1,
+     "text": "Ursache: engerer Kontakt durch Abholzung, Klimawandel, Massentierhaltung"
+    },
+    {
+     "id": "ph1-12-08",
+     "level": 1,
+     "text": "mehrere Disziplinen sind gefragt"
+    }
+   ]
+  },
+  {
+   "id": "ph1-13",
+   "subject": "Public Health",
+   "title": "PH1 · Der Public Health Action Cycle",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "ph1-13-01",
+     "level": 0,
+     "text": "Analyse → Planung → Umsetzung → Evaluation → Analyse"
+    },
+    {
+     "id": "ph1-13-02",
+     "level": 0,
+     "text": "1. Analyse: Gesundheitsprobleme und Ursachen identifizieren und definieren"
+    },
+    {
+     "id": "ph1-13-03",
+     "level": 0,
+     "text": "2. Planung: Ziele und Strategien formulieren"
+    },
+    {
+     "id": "ph1-13-04",
+     "level": 0,
+     "text": "3. Umsetzung: Gesundheitsstrategien und Qualitätssicherung umsetzen"
+    },
+    {
+     "id": "ph1-13-05",
+     "level": 0,
+     "text": "4. Evaluation: Ziele überprüfen, Ergebnisse kommunizieren bzw. präsentieren"
+    }
+   ]
+  },
+  {
+   "id": "ph1-14",
+   "subject": "Public Health",
+   "title": "PH1 · Akteure und Gesundheitsdaten",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "ph1-14-01",
+     "level": 0,
+     "text": "Public-Health-Akteure"
+    },
+    {
+     "id": "ph1-14-02",
+     "level": 1,
+     "text": "Österreichische und Deutsche Gesellschaft für Public Health, Public Health Schweiz"
+    },
+    {
+     "id": "ph1-14-03",
+     "level": 1,
+     "text": "WHO Europe, Europäische Kommission, Robert Koch Institut"
+    },
+    {
+     "id": "ph1-14-04",
+     "level": 0,
+     "text": "Quellen für Gesundheitsdaten"
+    },
+    {
+     "id": "ph1-14-05",
+     "level": 1,
+     "text": "Statistik Austria, Eurostat"
+    },
+    {
+     "id": "ph1-14-06",
+     "level": 1,
+     "text": "OECD Health Data, WHO European Health Report"
+    },
+    {
+     "id": "ph1-14-07",
+     "level": 1,
+     "text": "European Health Information Gateway"
+    },
+    {
+     "id": "ph1-14-08",
+     "level": 1,
+     "text": "European Centre for Disease Prevention and Control"
+    }
+   ]
+  },
+  {
+   "id": "ph2-01",
+   "subject": "Public Health",
+   "title": "PH2 · Was ist Epidemiologie?",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "ph2-01-01",
+     "level": 0,
+     "text": "„Quantitative Erforschung der Verteilung und der Determinanten (Risikofaktoren) von Krankheiten bzw. Gesundheitszuständen in Bevölkerungen und die Anwendung der Erkenntnisse auf die Kontrolle (Prävention und Behandlung) von Krankheiten\" (Dreier, Kramer & Stark)"
+    },
+    {
+     "id": "ph2-01-02",
+     "level": 0,
+     "text": "Wie sind Gesundheit und Krankheit in Bevölkerungen verteilt?"
+    },
+    {
+     "id": "ph2-01-03",
+     "level": 0,
+     "text": "Welche sozialen Faktoren beeinflussen dieses Verteilungsmuster?"
+    },
+    {
+     "id": "ph2-01-04",
+     "level": 0,
+     "text": "Basiswissenschaft der Public Health"
+    }
+   ]
+  },
+  {
+   "id": "ph2-02",
+   "subject": "Public Health",
+   "title": "PH2 · Warum ist Epidemiologie wichtig?",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "ph2-02-01",
+     "level": 0,
+     "text": "Ziel von Public Health: gesundheitliche Lage von Bevölkerungsgruppen verbessern"
+    },
+    {
+     "id": "ph2-02-02",
+     "level": 0,
+     "text": "Dazu nötig: fundiertes Wissen über"
+    },
+    {
+     "id": "ph2-02-03",
+     "level": 1,
+     "text": "Ursachen und Verbreitung von Krankheiten"
+    },
+    {
+     "id": "ph2-02-04",
+     "level": 1,
+     "text": "Effektivität und Effizienz von Maßnahmen"
+    },
+    {
+     "id": "ph2-02-05",
+     "level": 1,
+     "text": "Risikofaktoren, Eignung von Maßnahmen, Heilung, Lebensqualität"
+    },
+    {
+     "id": "ph2-02-06",
+     "level": 0,
+     "text": "Effektivität: Maß für die Wirksamkeit einer Maßnahme"
+    },
+    {
+     "id": "ph2-02-07",
+     "level": 0,
+     "text": "Effizienz: Maß für die Wirtschaftlichkeit des Mitteleinsatzes"
+    },
+    {
+     "id": "ph2-02-08",
+     "level": 0,
+     "text": "Wie wirkt sie? naturwissenschaftlich-quantitativ, liefert Daten, statistisch ausgewertet, Grundlage für Gesundheitsplanung und -politik"
+    }
+   ]
+  },
+  {
+   "id": "ph2-03",
+   "subject": "Public Health",
+   "title": "PH2 · Einschränkungen: Confounding und Multifaktorialität",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "ph2-03-01",
+     "level": 0,
+     "text": "Vorsicht bei Ursache-Wirkungs-Beziehungen"
+    },
+    {
+     "id": "ph2-03-02",
+     "level": 0,
+     "text": "Confounding Factors = Dritteinflüsse bzw. Interaktionen"
+    },
+    {
+     "id": "ph2-03-03",
+     "level": 0,
+     "text": "Beispiel"
+    },
+    {
+     "id": "ph2-03-04",
+     "level": 1,
+     "text": "Alkoholkonsum und Lungenkarzinom scheinen zusammenzuhängen"
+    },
+    {
+     "id": "ph2-03-05",
+     "level": 1,
+     "text": "Confounder: Tabakkonsum (wer trinkt, raucht oft auch)"
+    },
+    {
+     "id": "ph2-03-06",
+     "level": 0,
+     "text": "Multifaktorialität: Mehrere Ursachen (A1–A4) wirken gemeinsam auf eine Wirkung (B)"
+    },
+    {
+     "id": "ph2-03-07",
+     "level": 0,
+     "text": "Trotzdem wertvoll: Risikofaktoren erkennen, Zusammenhänge sichtbar machen, wenn Fehler mitbedacht werden"
+    }
+   ]
+  },
+  {
+   "id": "ph2-04",
+   "subject": "Public Health",
+   "title": "PH2 · Bias – systematische Fehler",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "ph2-04-01",
+     "level": 0,
+     "text": "Verzerrung = systematischer Fehler = Bias"
+    },
+    {
+     "id": "ph2-04-02",
+     "level": 0,
+     "text": "Bias | Bedeutung"
+    },
+    {
+     "id": "ph2-04-03",
+     "level": 0,
+     "text": "Selektionsbias | ?Auswahl der Stichprobe nicht repräsentativ"
+    },
+    {
+     "id": "ph2-04-04",
+     "level": 0,
+     "text": "Klassifikationsbias | ?falsche Einteilung der Personen in Gruppen"
+    },
+    {
+     "id": "ph2-04-05",
+     "level": 0,
+     "text": "Erinnerungsbias | ?unterschiedliche Erinnerung der Personen(gruppen)"
+    },
+    {
+     "id": "ph2-04-06",
+     "level": 0,
+     "text": "Untersuchungsbias | ?Exponierte werden genauer untersucht"
+    },
+    {
+     "id": "ph2-04-07",
+     "level": 0,
+     "text": "Publikationsbias | ?bei Literaturstudien und Meta-Analysen"
+    }
+   ]
+  },
+  {
+   "id": "ph2-05",
+   "subject": "Public Health",
+   "title": "PH2 · Inzidenz vs. Prävalenz",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "ph2-05-01",
+     "level": 0,
+     "text": "Maßzahl | Definition"
+    },
+    {
+     "id": "ph2-05-02",
+     "level": 0,
+     "text": "Inzidenz | ?Neuerkrankungen an einer Krankheit in einem definierten Zeitraum"
+    },
+    {
+     "id": "ph2-05-03",
+     "level": 0,
+     "text": "Prävalenz | ?Krankheitsfälle einer Bevölkerungsgruppe zu einem definierten Zeitpunkt"
+    },
+    {
+     "id": "ph2-05-04",
+     "level": 0,
+     "text": "Merke: Inzidenz = neu, Zeitraum; Prävalenz = alle, Zeitpunkt"
+    },
+    {
+     "id": "ph2-05-05",
+     "level": 0,
+     "text": "Voraussetzungen für Maßzahlen"
+    },
+    {
+     "id": "ph2-05-06",
+     "level": 1,
+     "text": "Krankheit muss definiert sein (Ein- und Ausschlusskriterien)"
+    },
+    {
+     "id": "ph2-05-07",
+     "level": 1,
+     "text": "Bezugsgruppe muss angegeben sein"
+    },
+    {
+     "id": "ph2-05-08",
+     "level": 1,
+     "text": "immer in Relation zur Bevölkerungsgruppe und zum Beobachtungszeitpunkt bzw. -raum"
+    }
+   ]
+  },
+  {
+   "id": "ph2-06",
+   "subject": "Public Health",
+   "title": "PH2 · Exposition",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "ph2-06-01",
+     "level": 0,
+     "text": "Exponiert: Personen sind Einflüssen (Risikofaktoren) ausgesetzt"
+    },
+    {
+     "id": "ph2-06-02",
+     "level": 0,
+     "text": "Nicht-exponiert: Personen sind diesen Einflüssen nicht ausgesetzt"
+    },
+    {
+     "id": "ph2-06-03",
+     "level": 0,
+     "text": "Epidemiologie vergleicht exponierte und nicht-exponierte Gruppen"
+    }
+   ]
+  },
+  {
+   "id": "ph2-07",
+   "subject": "Public Health",
+   "title": "PH2 · Assoziationsmaße",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "ph2-07-01",
+     "level": 0,
+     "text": "Relatives Risiko"
+    },
+    {
+     "id": "ph2-07-02",
+     "level": 1,
+     "text": "Quotient der Krankheitshäufigkeit: Exponierte geteilt durch Nicht-Exponierte"
+    },
+    {
+     "id": "ph2-07-03",
+     "level": 1,
+     "text": "Frage: Wie viel mal höher ist das Risiko?"
+    },
+    {
+     "id": "ph2-07-04",
+     "level": 0,
+     "text": "Attributables Risiko"
+    },
+    {
+     "id": "ph2-07-05",
+     "level": 1,
+     "text": "Differenz der Krankheitshäufigkeit: Exponierte minus Nicht-Exponierte"
+    },
+    {
+     "id": "ph2-07-06",
+     "level": 1,
+     "text": "Frage: Wie viele Erkrankungsfälle verursacht der Risikofaktor?"
+    },
+    {
+     "id": "ph2-07-07",
+     "level": 0,
+     "text": "Bevölkerungsbezogenes attributables Risiko"
+    },
+    {
+     "id": "ph2-07-08",
+     "level": 1,
+     "text": "Relative Differenz der Krankheitshäufigkeit: Gesamtbevölkerung vs. Nicht-Exponierte"
+    },
+    {
+     "id": "ph2-07-09",
+     "level": 1,
+     "text": "Frage: Welche Bedeutung hat der Risikofaktor in der Bevölkerung?"
+    },
+    {
+     "id": "ph2-07-10",
+     "level": 0,
+     "text": "Odds Ratio"
+    },
+    {
+     "id": "ph2-07-11",
+     "level": 1,
+     "text": "Verhältnis der Quote (Odds) bei Exponierten zur Quote bei Nicht-Exponierten"
+    },
+    {
+     "id": "ph2-07-12",
+     "level": 1,
+     "text": "Frage: Wie ist das Verhältnis zweier sich ausschließender Wahrscheinlichkeiten?"
+    }
+   ]
+  },
+  {
+   "id": "ph2-08",
+   "subject": "Public Health",
+   "title": "PH2 · Epidemiologische Studienansätze",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "ph2-08-01",
+     "level": 0,
+     "text": "Beobachtungsstudie: deskriptiv"
+    },
+    {
+     "id": "ph2-08-02",
+     "level": 1,
+     "text": "bildet Hypothesen, generiert Hypothesen"
+    },
+    {
+     "id": "ph2-08-03",
+     "level": 1,
+     "text": "Statistiken zu Mortalität und Morbidität, Korrelationsstudien, Querschnittstudien"
+    },
+    {
+     "id": "ph2-08-04",
+     "level": 0,
+     "text": "Beobachtungsstudie: analytisch"
+    },
+    {
+     "id": "ph2-08-05",
+     "level": 1,
+     "text": "testet Hypothesen, erklärt Zusammenhänge"
+    },
+    {
+     "id": "ph2-08-06",
+     "level": 1,
+     "text": "Kohortenstudien, Fall-Kontroll-Studien, Zeitreihenstudien, Panel-Studien"
+    },
+    {
+     "id": "ph2-08-07",
+     "level": 0,
+     "text": "Interventionsstudie"
+    },
+    {
+     "id": "ph2-08-08",
+     "level": 1,
+     "text": "belegt Wirkungen, beweist sie experimentell"
+    },
+    {
+     "id": "ph2-08-09",
+     "level": 1,
+     "text": "(randomisierte) klinische Versuche, Bevölkerungsinterventionen"
+    }
+   ]
+  },
+  {
+   "id": "ph2-09",
+   "subject": "Public Health",
+   "title": "PH2 · Kohortenstudien",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "ph2-09-01",
+     "level": 0,
+     "text": "Beobachtend, nicht experimentell"
+    },
+    {
+     "id": "ph2-09-02",
+     "level": 0,
+     "text": "Längsschnitt durch wiederholte Untersuchungen über Jahre"
+    },
+    {
+     "id": "ph2-09-03",
+     "level": 0,
+     "text": "Kohorte: Gruppe mit definierten gleichen Eigenschaften (Geburtskohorte, Scheidungskohorte …)"
+    },
+    {
+     "id": "ph2-09-04",
+     "level": 0,
+     "text": "Aufteilung in exponierte und nicht-exponierte Gruppe"
+    },
+    {
+     "id": "ph2-09-05",
+     "level": 0,
+     "text": "Meistens prospektiv"
+    },
+    {
+     "id": "ph2-09-06",
+     "level": 0,
+     "text": "Problem: Loss-to-follow-up"
+    },
+    {
+     "id": "ph2-09-07",
+     "level": 1,
+     "text": "Kohorte wird „gesünder\", weil Personen versterben und Kranke schwer zu halten sind"
+    },
+    {
+     "id": "ph2-09-08",
+     "level": 0,
+     "text": "Ziel: Kausalzusammenhänge erkennen"
+    }
+   ]
+  },
+  {
+   "id": "ph2-10",
+   "subject": "Public Health",
+   "title": "PH2 · Fall-Kontroll-Studien",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "ph2-10-01",
+     "level": 0,
+     "text": "Geeignet für seltene Krankheiten und Krankheiten mit langer Exposition"
+    },
+    {
+     "id": "ph2-10-02",
+     "level": 0,
+     "text": "Fälle mit der Krankheit rekrutieren"
+    },
+    {
+     "id": "ph2-10-03",
+     "level": 0,
+     "text": "Kontrollen rekrutieren: ähnlich (Alter, Geschlecht, Wohnsituation …), aber nicht erkrankt"
+    },
+    {
+     "id": "ph2-10-04",
+     "level": 0,
+     "text": "Matching: passende Kontrollperson für jeden einzelnen Fall"
+    },
+    {
+     "id": "ph2-10-05",
+     "level": 0,
+     "text": "Auswertung mit Odds Ratio"
+    },
+    {
+     "id": "ph2-10-06",
+     "level": 0,
+     "text": "Retrospektiv"
+    },
+    {
+     "id": "ph2-10-07",
+     "level": 0,
+     "text": "Probleme: unterschiedliche Erinnerung, Auswahl passender Kontrollen schwierig"
+    },
+    {
+     "id": "ph2-10-08",
+     "level": 0,
+     "text": "Ziel: Kausalzusammenhänge erkennen"
+    }
+   ]
+  },
+  {
+   "id": "ph2-11",
+   "subject": "Public Health",
+   "title": "PH2 · Kohortenstudie vs. Fall-Kontroll-Studie",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "ph2-11-01",
+     "level": 0,
+     "text": "| Kohorte | Fall-Kontrolle"
+    },
+    {
+     "id": "ph2-11-02",
+     "level": 0,
+     "text": "Basis | ?Kohorte | ?Fälle der Krankheit"
+    },
+    {
+     "id": "ph2-11-03",
+     "level": 0,
+     "text": "Dauer | ?Jahre bis Jahrzehnte | ?Monate bis Jahre"
+    },
+    {
+     "id": "ph2-11-04",
+     "level": 0,
+     "text": "Verlauf | ?meist prospektiv | ?retrospektiv"
+    },
+    {
+     "id": "ph2-11-05",
+     "level": 0,
+     "text": "Aufwand | ?teuer, zeitintensiv | ?weniger aufwendig"
+    },
+    {
+     "id": "ph2-11-06",
+     "level": 0,
+     "text": "Vorteil | ?keine Verzerrung durch Erinnerung | ?schnellere Aufklärung vermuteter Einflüsse"
+    },
+    {
+     "id": "ph2-11-07",
+     "level": 0,
+     "text": "Nachteil | ?Loss-to-follow-up | ?Kontrollen schwer zu finden, unterschiedliche Erinnerung"
+    },
+    {
+     "id": "ph2-11-08",
+     "level": 0,
+     "text": "Beispiel | ?Nurses' Health Study, British Doctor Study | ?Richard Doll: Mortalität und Rauchen"
+    }
+   ]
+  },
+  {
+   "id": "ph2-12",
+   "subject": "Public Health",
+   "title": "PH2 · Beispiel: Nurses' Health Study",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "ph2-12-01",
+     "level": 0,
+     "text": "Eine der größten Kohortenstudien, in den USA"
+    },
+    {
+     "id": "ph2-12-02",
+     "level": 0,
+     "text": "Untersucht Frauen mit Krankenpflegediplom"
+    },
+    {
+     "id": "ph2-12-03",
+     "level": 0,
+     "text": "Drei Wellen: NHS I (1976), NHS II (1989), NHS III (2009)"
+    },
+    {
+     "id": "ph2-12-04",
+     "level": 0,
+     "text": "Schriftliche Befragung alle zwei Jahre"
+    },
+    {
+     "id": "ph2-12-05",
+     "level": 0,
+     "text": "Bei einem Teil auch Blut- und Urinproben"
+    },
+    {
+     "id": "ph2-12-06",
+     "level": 0,
+     "text": "Fazit Epidemiologie: Epidemiologie → Quantifizierung von Gesundheits- und Krankheitsdaten → gezielte Prävention und Gesundheitsförderung"
+    }
+   ]
+  },
+  {
+   "id": "ph3-01",
+   "subject": "Public Health",
+   "title": "PH3 · Pathogenese vs. Salutogenese",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "ph3-01-01",
+     "level": 0,
+     "text": "Pathogenese | Salutogenese"
+    },
+    {
+     "id": "ph3-01-02",
+     "level": 0,
+     "text": "Entstehung und Entwicklung von Krankheiten | ?individueller Entwicklungsprozess von Gesundheit"
+    },
+    {
+     "id": "ph3-01-03",
+     "level": 0,
+     "text": "kurative Medizin im Vordergrund | ?Gesundheitsförderung im Vordergrund"
+    },
+    {
+     "id": "ph3-01-04",
+     "level": 0,
+     "text": "Warum werden Menschen krank? | ?Warum bleiben Menschen gesund?"
+    },
+    {
+     "id": "ph3-01-05",
+     "level": 0,
+     "text": "Wandel: 19. Jh. Krankheitsprävention, 20. Jh. Gesundheitsförderung"
+    },
+    {
+     "id": "ph3-01-06",
+     "level": 0,
+     "text": "Beides sind Interventionsformen mit dem Ziel, Krankheits- und Gesundheitszustände zu verändern"
+    }
+   ]
+  },
+  {
+   "id": "ph3-02",
+   "subject": "Public Health",
+   "title": "PH3 · Salutogenese nach Antonovsky",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "ph3-02-01",
+     "level": 0,
+     "text": "Aaron Antonovsky, amerikanisch-israelischer Soziologe"
+    },
+    {
+     "id": "ph3-02-02",
+     "level": 0,
+     "text": "Saluto = Heil, Glück, Unverletztheit; Genese = Entstehung"
+    },
+    {
+     "id": "ph3-02-03",
+     "level": 0,
+     "text": "Verbindet soziologische, biologische und psychologische Konzepte"
+    },
+    {
+     "id": "ph3-02-04",
+     "level": 0,
+     "text": "Ausgangsbasis"
+    },
+    {
+     "id": "ph3-02-05",
+     "level": 1,
+     "text": "Stressoren sind ständig präsent"
+    },
+    {
+     "id": "ph3-02-06",
+     "level": 1,
+     "text": "die meisten Menschen haben genug Widerstandsressourcen"
+    },
+    {
+     "id": "ph3-02-07",
+     "level": 0,
+     "text": "Fokus: Bewältigung = Spannungsverarbeitung"
+    },
+    {
+     "id": "ph3-02-08",
+     "level": 0,
+     "text": "Ergebnis: gesund, neutral oder krank"
+    },
+    {
+     "id": "ph3-02-09",
+     "level": 0,
+     "text": "Schlüsselfrage: Ist genügend Spannungsverarbeitung vorhanden?"
+    }
+   ]
+  },
+  {
+   "id": "ph3-03",
+   "subject": "Public Health",
+   "title": "PH3 · Kohärenzgefühl (Sense of Coherence)",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "ph3-03-01",
+     "level": 0,
+     "text": "Trägt zur Spannungsbewältigung bei"
+    },
+    {
+     "id": "ph3-03-02",
+     "level": 0,
+     "text": "Positive bzw. negative Lebenseinstellung"
+    },
+    {
+     "id": "ph3-03-03",
+     "level": 0,
+     "text": "Stark: Trotz Belastungen macht das Leben Sinn und ist bewältigbar"
+    },
+    {
+     "id": "ph3-03-04",
+     "level": 0,
+     "text": "Laut Antonovsky bis zum 30. Lebensjahr entwickelt, dann stabil"
+    },
+    {
+     "id": "ph3-03-05",
+     "level": 1,
+     "text": "Studien zeigen: kann sich auch danach noch verändern"
+    },
+    {
+     "id": "ph3-03-06",
+     "level": 0,
+     "text": "Kindheitserfahrungen bestimmen seine Stärke"
+    },
+    {
+     "id": "ph3-03-07",
+     "level": 0,
+     "text": "Wie Stressoren wahrgenommen werden, hängt von seiner Stärke ab"
+    },
+    {
+     "id": "ph3-03-08",
+     "level": 0,
+     "text": "Drei Dimensionen"
+    },
+    {
+     "id": "ph3-03-09",
+     "level": 1,
+     "text": "Verstehbarkeit (sense of comprehensibility)"
+    },
+    {
+     "id": "ph3-03-10",
+     "level": 1,
+     "text": "Bewältigbarkeit (sense of manageability)"
+    },
+    {
+     "id": "ph3-03-11",
+     "level": 1,
+     "text": "Sinnhaftigkeit (sense of meaningfulness)"
+    }
+   ]
+  },
+  {
+   "id": "ph3-04",
+   "subject": "Public Health",
+   "title": "PH3 · Das HEDE-Kontinuum",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "ph3-04-01",
+     "level": 0,
+     "text": "Health Ease / Disease = Gesundheits-Krankheits-Kontinuum"
+    },
+    {
+     "id": "ph3-04-02",
+     "level": 0,
+     "text": "Bewusstsein der Sterblichkeit"
+    },
+    {
+     "id": "ph3-04-03",
+     "level": 0,
+     "text": "Ablehnung einer Dichotomie von Gesundheit und Krankheit"
+    },
+    {
+     "id": "ph3-04-04",
+     "level": 0,
+     "text": "Völlige Krankheit ↔ Durchschnitt ↔ völlige Gesundheit"
+    },
+    {
+     "id": "ph3-04-05",
+     "level": 1,
+     "text": "völlige Gesundheit oder völlige Krankheit ist nicht möglich"
+    },
+    {
+     "id": "ph3-04-06",
+     "level": 0,
+     "text": "Zusammenfassung des Modells"
+    },
+    {
+     "id": "ph3-04-07",
+     "level": 1,
+     "text": "Stressoren → Widerstandsressourcen → Spannungsverarbeitung → Position auf dem HEDE-Kontinuum"
+    },
+    {
+     "id": "ph3-04-08",
+     "level": 1,
+     "text": "beeinflusst durch Kohärenzgefühl und Stresszustand"
+    }
+   ]
+  },
+  {
+   "id": "ph3-05",
+   "subject": "Public Health",
+   "title": "PH3 · Salutogenese und Pathogenese im Gesundheitskonzept",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "ph3-05-01",
+     "level": 0,
+     "text": "Im Zentrum: individueller bio-psycho-sozialer Gesundheitszustand"
+    },
+    {
+     "id": "ph3-05-02",
+     "level": 0,
+     "text": "Richtung Health-ease"
+    },
+    {
+     "id": "ph3-05-03",
+     "level": 1,
+     "text": "Ressourcen, Salutogenese, Gesundheitsförderung"
+    },
+    {
+     "id": "ph3-05-04",
+     "level": 0,
+     "text": "Richtung Health-disease"
+    },
+    {
+     "id": "ph3-05-05",
+     "level": 1,
+     "text": "Risikofaktoren, Pathogenese, Schutz, Prävention, Versorgung"
+    },
+    {
+     "id": "ph3-05-06",
+     "level": 0,
+     "text": "Dazu: sozioökonomische Gesundheitsdeterminanten"
+    }
+   ]
+  },
+  {
+   "id": "ph3-06",
+   "subject": "Public Health",
+   "title": "PH3 · Prävention und ihre drei Stufen",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "ph3-06-01",
+     "level": 0,
+     "text": "Prävention = Krankheitsverhütung, lat. praevenire: zuvorkommen"
+    },
+    {
+     "id": "ph3-06-02",
+     "level": 0,
+     "text": "Gesundheitliche Schädigung verhindern oder zumindest verzögern"
+    },
+    {
+     "id": "ph3-06-03",
+     "level": 0,
+     "text": "Primärprävention"
+    },
+    {
+     "id": "ph3-06-04",
+     "level": 1,
+     "text": "Zeitpunkt: vor Eintreten einer Krankheit"
+    },
+    {
+     "id": "ph3-06-05",
+     "level": 1,
+     "text": "Ziel: Inzidenz verringern"
+    },
+    {
+     "id": "ph3-06-06",
+     "level": 1,
+     "text": "Adressat:innen: Gesunde, Personen ohne Symptome"
+    },
+    {
+     "id": "ph3-06-07",
+     "level": 0,
+     "text": "Sekundärprävention"
+    },
+    {
+     "id": "ph3-06-08",
+     "level": 1,
+     "text": "Zeitpunkt: im Frühstadium einer Krankheit"
+    },
+    {
+     "id": "ph3-06-09",
+     "level": 1,
+     "text": "Ziel: Progredienz oder Chronifizierung eindämmen"
+    },
+    {
+     "id": "ph3-06-10",
+     "level": 1,
+     "text": "Adressat:innen: Akutpatient:innen, Klient:innen"
+    },
+    {
+     "id": "ph3-06-11",
+     "level": 0,
+     "text": "Tertiärprävention"
+    },
+    {
+     "id": "ph3-06-12",
+     "level": 1,
+     "text": "Zeitpunkt: nach Manifestation bzw. Akutbehandlung"
+    },
+    {
+     "id": "ph3-06-13",
+     "level": 1,
+     "text": "Ziel: Folgeschäden oder Rückfälle verhindern"
+    },
+    {
+     "id": "ph3-06-14",
+     "level": 1,
+     "text": "Adressat:innen: chronisch Beeinträchtigte, Rehabilitand:innen"
+    }
+   ]
+  },
+  {
+   "id": "ph3-07",
+   "subject": "Public Health",
+   "title": "PH3 · Präventionsstrategien",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "ph3-07-01",
+     "level": 0,
+     "text": "Universelle Strategien vs. Strategien für spezielle Zielgruppen"
+    },
+    {
+     "id": "ph3-07-02",
+     "level": 0,
+     "text": "Auswahlmerkmale für Zielgruppen"
+    },
+    {
+     "id": "ph3-07-03",
+     "level": 1,
+     "text": "soziodemografisch, soziokulturell, Kontextmerkmale"
+    },
+    {
+     "id": "ph3-07-04",
+     "level": 0,
+     "text": "Zielgruppenstrategien"
+    },
+    {
+     "id": "ph3-07-05",
+     "level": 1,
+     "text": "selektiv, indiziert, Hochrisiko"
+    },
+    {
+     "id": "ph3-07-06",
+     "level": 1,
+     "text": "Gefahr: Stigmatisierung (Ausgrenzung durch Zuschreibung negativer Eigenschaften)"
+    },
+    {
+     "id": "ph3-07-07",
+     "level": 0,
+     "text": "Präventionsparadox"
+    }
+   ]
+  },
+  {
+   "id": "ph3-08",
+   "subject": "Public Health",
+   "title": "PH3 · Hochrisiko- vs. Bevölkerungsstrategie",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "ph3-08-01",
+     "level": 0,
+     "text": "Hochrisikogruppenstrategie"
+    },
+    {
+     "id": "ph3-08-02",
+     "level": 1,
+     "text": "Sekundär- und Tertiärprävention"
+    },
+    {
+     "id": "ph3-08-03",
+     "level": 1,
+     "text": "meist nicht nachhaltige Reduktion der Risikopopulation"
+    },
+    {
+     "id": "ph3-08-04",
+     "level": 0,
+     "text": "Bevölkerungsstrategie"
+    },
+    {
+     "id": "ph3-08-05",
+     "level": 1,
+     "text": "Primärprävention und Gesundheitsförderung"
+    },
+    {
+     "id": "ph3-08-06",
+     "level": 1,
+     "text": "höhere Wahrscheinlichkeit nachhaltiger Reduktion der Risikopopulation"
+    }
+   ]
+  },
+  {
+   "id": "ph3-09",
+   "subject": "Public Health",
+   "title": "PH3 · Verhaltens- vs. Verhältnisprävention",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "ph3-09-01",
+     "level": 0,
+     "text": "Verhaltensprävention | Verhältnisprävention"
+    },
+    {
+     "id": "ph3-09-02",
+     "level": 0,
+     "text": "setzt am Verhalten von Individuen und Gruppen an | ?verändert biologische, technische oder soziale Umwelt"
+    },
+    {
+     "id": "ph3-09-03",
+     "level": 0,
+     "text": "z. B. Aufforderungen auf Plakaten oder in Spots | ?z. B. Verbote"
+    },
+    {
+     "id": "ph3-09-04",
+     "level": 0,
+     "text": "z. B. schulische Aufklärungsprogramme | ?z. B. Einführung von Screening-Untersuchungen"
+    }
+   ]
+  },
+  {
+   "id": "ph3-10",
+   "subject": "Public Health",
+   "title": "PH3 · Gesundheitsförderung und die Ottawa-Charta",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "ph3-10-01",
+     "level": 0,
+     "text": "Ottawa-Charta, verabschiedet am 21.11.1986"
+    },
+    {
+     "id": "ph3-10-02",
+     "level": 1,
+     "text": "Gesundheit erstmals als Prozess betrachtet"
+    },
+    {
+     "id": "ph3-10-03",
+     "level": 1,
+     "text": "Setting-Ansatz: Gesundheit entsteht im Alltag"
+    },
+    {
+     "id": "ph3-10-04",
+     "level": 0,
+     "text": "Definition: Gesundheitsförderung zielt auf einen Prozess, allen Menschen mehr Selbstbestimmung über ihre Gesundheit zu ermöglichen und sie zur Stärkung ihrer Gesundheit zu befähigen"
+    },
+    {
+     "id": "ph3-10-05",
+     "level": 0,
+     "text": "Schlüsselpunkte: Empowerment und Intersektoralität"
+    },
+    {
+     "id": "ph3-10-06",
+     "level": 0,
+     "text": "Gesundheitsförderung = geplante Veränderung von Lebensbedingungen und Lebensstilen durch umweltbezogene und individuelle Strategien"
+    },
+    {
+     "id": "ph3-10-07",
+     "level": 1,
+     "text": "umweltbezogene Lebensbedingungen, politisches Handeln"
+    },
+    {
+     "id": "ph3-10-08",
+     "level": 1,
+     "text": "individuelle Lebensziele, Gesundheitsbildung"
+    },
+    {
+     "id": "ph3-10-09",
+     "level": 1,
+     "text": "im Zentrum: Settings bzw. Lebenswelten"
+    },
+    {
+     "id": "ph3-10-10",
+     "level": 1,
+     "text": "Ergebnis: gesündere Individuen und Bevölkerungen"
+    },
+    {
+     "id": "ph3-10-11",
+     "level": 0,
+     "text": "Zielgruppen: Kinder, Jugendliche, Alleinerziehende, Arbeitslose, Migrant:innen, ältere Menschen"
+    }
+   ]
+  },
+  {
+   "id": "ph3-11",
+   "subject": "Public Health",
+   "title": "PH3 · Sozialkapital",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "ph3-11-01",
+     "level": 0,
+     "text": "Begriff von Putnam, Coleman und Bourdieu, etabliert Anfang der 1990er"
+    },
+    {
+     "id": "ph3-11-02",
+     "level": 0,
+     "text": "Ottawa-Charta: Gesundheit wird von Menschen in ihrer alltäglichen Umwelt geschaffen und gelebt"
+    },
+    {
+     "id": "ph3-11-03",
+     "level": 1,
+     "text": "Sorge für sich und andere, eigene Entscheidungen, Kontrolle über Lebensumstände"
+    },
+    {
+     "id": "ph3-11-04",
+     "level": 1,
+     "text": "die Gesellschaft muss dafür Möglichkeiten schaffen"
+    },
+    {
+     "id": "ph3-11-05",
+     "level": 0,
+     "text": "Merkmale"
+    },
+    {
+     "id": "ph3-11-06",
+     "level": 1,
+     "text": "Grad des sozialen Zusammenhalts in Gemeinschaften"
+    },
+    {
+     "id": "ph3-11-07",
+     "level": 1,
+     "text": "bezieht sich auf Prozesse zwischen Menschen, entsteht durch alltägliche Interaktionen"
+    },
+    {
+     "id": "ph3-11-08",
+     "level": 1,
+     "text": "je stärker das Netzwerk, desto mehr Zusammenarbeit zum gegenseitigen Nutzen"
+    },
+    {
+     "id": "ph3-11-09",
+     "level": 1,
+     "text": "soziales Kapital erzeugt Gesundheit"
+    },
+    {
+     "id": "ph3-11-10",
+     "level": 0,
+     "text": "Coleman: Sortiment an gesellschaftlichen Mitteln, auf die man zurückgreifen kann, um etwas zu erreichen"
+    },
+    {
+     "id": "ph3-11-11",
+     "level": 0,
+     "text": "Putnam: „Bowling alone\"-Phänomen in den USA"
+    },
+    {
+     "id": "ph3-11-12",
+     "level": 0,
+     "text": "Dimensionen: Partizipation, Netzwerk, Vertrauen, Zugehörigkeit, Austausch, Engagement, Werte"
+    },
+    {
+     "id": "ph3-11-13",
+     "level": 0,
+     "text": "Starke Effekte auf die Gesundheit, aber sehr schwer messbar"
+    }
+   ]
+  },
+  {
+   "id": "ph4-01",
+   "subject": "Public Health",
+   "title": "PH4 · Gesundheitspolitik: national und international",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "ph4-01-01",
+     "level": 0,
+     "text": "National"
+    },
+    {
+     "id": "ph4-01-02",
+     "level": 1,
+     "text": "z. B. Bundesministerium für Gesundheit"
+    },
+    {
+     "id": "ph4-01-03",
+     "level": 0,
+     "text": "International"
+    },
+    {
+     "id": "ph4-01-04",
+     "level": 1,
+     "text": "Europäische Union (EU)"
+    },
+    {
+     "id": "ph4-01-05",
+     "level": 1,
+     "text": "Europarat, Vereinte Nationen (UNO)"
+    },
+    {
+     "id": "ph4-01-06",
+     "level": 1,
+     "text": "OECD: Organisation für wirtschaftliche Zusammenarbeit und Entwicklung"
+    },
+    {
+     "id": "ph4-01-07",
+     "level": 1,
+     "text": "Weltgesundheitsorganisation (WHO)"
+    }
+   ]
+  },
+  {
+   "id": "ph4-02",
+   "subject": "Public Health",
+   "title": "PH4 · „Health for all\" – die Meilensteine",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "ph4-02-01",
+     "level": 0,
+     "text": "1978: Deklaration von Alma-Ata"
+    },
+    {
+     "id": "ph4-02-02",
+     "level": 0,
+     "text": "1998: Gesundheit 21"
+    },
+    {
+     "id": "ph4-02-03",
+     "level": 0,
+     "text": "2000: Deklaration von München"
+    },
+    {
+     "id": "ph4-02-04",
+     "level": 0,
+     "text": "2015: Agenda 2030, Sustainable Development Goals"
+    }
+   ]
+  },
+  {
+   "id": "ph4-03",
+   "subject": "Public Health",
+   "title": "PH4 · Deklaration von Alma-Ata (1978)",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "ph4-03-01",
+     "level": 0,
+     "text": "Ziel: „Health for all\" bzw. „Gesundheit für alle bis zum Jahr 2000\""
+    },
+    {
+     "id": "ph4-03-02",
+     "level": 0,
+     "text": "Beteiligt: 134 Länder, 67 internationale Organisationen"
+    },
+    {
+     "id": "ph4-03-03",
+     "level": 0,
+     "text": "Kernpunkte"
+    },
+    {
+     "id": "ph4-03-04",
+     "level": 1,
+     "text": "Gesundheit ist ein Menschenrecht"
+    },
+    {
+     "id": "ph4-03-05",
+     "level": 1,
+     "text": "Ungleichheit muss länderübergreifend behandelt werden"
+    },
+    {
+     "id": "ph4-03-06",
+     "level": 1,
+     "text": "Gesundheit wirkt auf ökonomische und soziale Entwicklung"
+    },
+    {
+     "id": "ph4-03-07",
+     "level": 1,
+     "text": "Individuen haben Rechte und Pflichten mitzuwirken"
+    },
+    {
+     "id": "ph4-03-08",
+     "level": 1,
+     "text": "Gesundheit bis 2000 durch primäre Gesundheitsversorgung"
+    },
+    {
+     "id": "ph4-03-09",
+     "level": 1,
+     "text": "Verbindung von Praxis und Wissenschaft, partnerschaftliche Zusammenarbeit, bessere Ressourcennutzung"
+    },
+    {
+     "id": "ph4-03-10",
+     "level": 0,
+     "text": "Danach"
+    },
+    {
+     "id": "ph4-03-11",
+     "level": 1,
+     "text": "Ernüchterung: große Unterschiede arm/reich, wachsende Ungleichheit, Urbanisierung"
+    },
+    {
+     "id": "ph4-03-12",
+     "level": 1,
+     "text": "Fortschritte: geringere Kindersterblichkeit, bessere Versorgungsstrukturen (z. B. Wasser)"
+    }
+   ]
+  },
+  {
+   "id": "ph4-04",
+   "subject": "Public Health",
+   "title": "PH4 · Gesundheit 21 (WHO, 1998)",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "ph4-04-01",
+     "level": 0,
+     "text": "Weltgesundheitserklärung Mai 1998: Rahmenkonzept für „Gesundheit für alle\""
+    },
+    {
+     "id": "ph4-04-02",
+     "level": 0,
+     "text": "Gesundheit als Grund- und Menschenrecht, primäre Versorgung sichern"
+    },
+    {
+     "id": "ph4-04-03",
+     "level": 0,
+     "text": "Ausgangslage: reich/arm, unterschiedliche Infrastruktur, Arbeitslosigkeit"
+    },
+    {
+     "id": "ph4-04-04",
+     "level": 0,
+     "text": "Zwei Hauptziele"
+    },
+    {
+     "id": "ph4-04-05",
+     "level": 1,
+     "text": "Förderung und Schutz der Gesundheit während des gesamten Lebens"
+    },
+    {
+     "id": "ph4-04-06",
+     "level": 1,
+     "text": "Verringerung der Inzidenz der wichtigsten Krankheiten und Verletzungen und des damit verbundenen Leidens"
+    },
+    {
+     "id": "ph4-04-07",
+     "level": 0,
+     "text": "21 Ziele, z. B."
+    },
+    {
+     "id": "ph4-04-08",
+     "level": 1,
+     "text": "Solidarität, Chancengleichheit, gesunder Lebensanfang, Altern in Gesundheit"
+    },
+    {
+     "id": "ph4-04-09",
+     "level": 1,
+     "text": "psychische Gesundheit, übertragbare und nicht übertragbare Krankheiten verringern"
+    },
+    {
+     "id": "ph4-04-10",
+     "level": 1,
+     "text": "Settings, multisektorale Verantwortung, Qualifizierung von Fachkräften"
+    }
+   ]
+  },
+  {
+   "id": "ph4-05",
+   "subject": "Public Health",
+   "title": "PH4 · Deklaration von München und SDGs",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "ph4-05-01",
+     "level": 0,
+     "text": "Deklaration von München (2000)"
+    },
+    {
+     "id": "ph4-05-02",
+     "level": 1,
+     "text": "„Nurses and Midwives: A Force for Health\""
+    },
+    {
+     "id": "ph4-05-03",
+     "level": 1,
+     "text": "18 Länder beteiligt"
+    },
+    {
+     "id": "ph4-05-04",
+     "level": 0,
+     "text": "Sustainable Development Goals (Agenda 2030, 2015)"
+    },
+    {
+     "id": "ph4-05-05",
+     "level": 1,
+     "text": "17 Ziele, Ziel 3: Gesundheit und Wohlergehen"
+    },
+    {
+     "id": "ph4-05-06",
+     "level": 1,
+     "text": "Gerechtigkeit und Menschenrechte"
+    },
+    {
+     "id": "ph4-05-07",
+     "level": 1,
+     "text": "nachhaltige Finanzierung, gerechte Steuerpolitik"
+    },
+    {
+     "id": "ph4-05-08",
+     "level": 1,
+     "text": "Forschung und Innovation"
+    },
+    {
+     "id": "ph4-05-09",
+     "level": 1,
+     "text": "sektorenübergreifende Zusammenarbeit, allgemeine Gesundheitsversorgung"
+    }
+   ]
+  },
+  {
+   "id": "ph4-06",
+   "subject": "Public Health",
+   "title": "PH4 · Health in all Policies",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "ph4-06-01",
+     "level": 0,
+     "text": "Vorschlag der finnischen EU-Präsidentschaft 2006"
+    },
+    {
+     "id": "ph4-06-02",
+     "level": 0,
+     "text": "Herausforderungen in Europa"
+    },
+    {
+     "id": "ph4-06-03",
+     "level": 1,
+     "text": "Zugang zu bedarfs- und qualitätsgerechter Versorgung für alle"
+    },
+    {
+     "id": "ph4-06-04",
+     "level": 1,
+     "text": "alle relevanten Gesundheitsdeterminanten und Sektoren einbeziehen"
+    },
+    {
+     "id": "ph4-06-05",
+     "level": 0,
+     "text": "Ziele"
+    },
+    {
+     "id": "ph4-06-06",
+     "level": 1,
+     "text": "wirksam koordiniertes Versorgungssystem"
+    },
+    {
+     "id": "ph4-06-07",
+     "level": 1,
+     "text": "Minimum an Über-, Unter- und Fehlversorgung"
+    },
+    {
+     "id": "ph4-06-08",
+     "level": 1,
+     "text": "andere gesellschaftliche Ziele (Kosten) nicht gefährden"
+    },
+    {
+     "id": "ph4-06-09",
+     "level": 0,
+     "text": "Wichtig dafür"
+    },
+    {
+     "id": "ph4-06-10",
+     "level": 1,
+     "text": "Health evidence: gesichertes, wirksames Gesundheitswissen"
+    },
+    {
+     "id": "ph4-06-11",
+     "level": 1,
+     "text": "Health literacy: gesundheitswissenschaftliche Qualifikation und Kompetenz"
+    },
+    {
+     "id": "ph4-06-12",
+     "level": 0,
+     "text": "Sektoren: Bildung, Wissenschaft, Arbeit, soziale Sicherung, Umwelt, Wohnen, Verkehr, Medien …"
+    }
+   ]
+  },
+  {
+   "id": "ph4-07",
+   "subject": "Public Health",
+   "title": "PH4 · Health in all Policies heißt also …",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "ph4-07-01",
+     "level": 0,
+     "text": "Gesundheit in allen Politikbereichen verankern"
+    },
+    {
+     "id": "ph4-07-02",
+     "level": 0,
+     "text": "In allen Bereichen auf Gesundheitsauswirkungen achten"
+    },
+    {
+     "id": "ph4-07-03",
+     "level": 0,
+     "text": "Bestehende gesundheitsfördernde Aspekte verstärken"
+    },
+    {
+     "id": "ph4-07-04",
+     "level": 0,
+     "text": "Soziale Ungleichheit verringern"
+    },
+    {
+     "id": "ph4-07-05",
+     "level": 0,
+     "text": "Von den Besten lernen"
+    },
+    {
+     "id": "ph4-07-06",
+     "level": 0,
+     "text": "Health system capacities: nachhaltige Steuerungs- und Entwicklungspotenziale"
+    },
+    {
+     "id": "ph4-07-07",
+     "level": 0,
+     "text": "Capacity building: Kapazitätsentwicklung (Kultur, Infrastruktur, Netzwerke, Partizipation, Empowerment, Leadership)"
+    }
+   ]
+  },
+  {
+   "id": "ph4-08",
+   "subject": "Public Health",
+   "title": "PH4 · Das Nordkarelienprojekt",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "ph4-08-01",
+     "level": 0,
+     "text": "Beispiel für Health in all Policies, aus Finnland"
+    },
+    {
+     "id": "ph4-08-02",
+     "level": 0,
+     "text": "Lebensweise (Ernährung, Tabakkonsum) → Herz-Kreislauf-Erkrankungen → Mortalität"
+    },
+    {
+     "id": "ph4-08-03",
+     "level": 0,
+     "text": "Bessere Lebensweise: weniger Herz-Kreislauf-Erkrankungen, sinkende Mortalität, steigende Gesundheit"
+    },
+    {
+     "id": "ph4-08-04",
+     "level": 0,
+     "text": "Einbezogene Sektoren"
+    },
+    {
+     "id": "ph4-08-05",
+     "level": 1,
+     "text": "Bildung, Medien, Industrie, Politik"
+    },
+    {
+     "id": "ph4-08-06",
+     "level": 1,
+     "text": "gesetzliche Rahmenbedingungen, Gemeinschaftsaktivitäten"
+    }
+   ]
+  },
+  {
+   "id": "ph4-09",
+   "subject": "Public Health",
+   "title": "PH4 · Public Health und Pflegewissenschaft",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "ph4-09-01",
+     "level": 0,
+     "text": "Gemeinsamkeiten"
+    },
+    {
+     "id": "ph4-09-02",
+     "level": 1,
+     "text": "Gesundheit als Kernelement"
+    },
+    {
+     "id": "ph4-09-03",
+     "level": 1,
+     "text": "Paradigmenwechsel, ähnliche Entwicklungen"
+    },
+    {
+     "id": "ph4-09-04",
+     "level": 1,
+     "text": "Versorgungsforschung und -gestaltung"
+    },
+    {
+     "id": "ph4-09-05",
+     "level": 0,
+     "text": "Voneinander lernen"
+    },
+    {
+     "id": "ph4-09-06",
+     "level": 1,
+     "text": "Public Health bringt: Wissen und Erkenntnisse, Emanzipationspotenzial im Gesundheitswesen"
+    },
+    {
+     "id": "ph4-09-07",
+     "level": 1,
+     "text": "Pflege bringt: individuelle, gesundheitsfördernde Ansätze, wichtiger Player, Gesundheitsförderung und Prävention"
+    },
+    {
+     "id": "ph4-09-08",
+     "level": 0,
+     "text": "Kernelemente von Public Health"
+    },
+    {
+     "id": "ph4-09-09",
+     "level": 1,
+     "text": "Bevölkerungsbezug, Gesundheitsorientierung, Soziallagenbezug"
+    },
+    {
+     "id": "ph4-09-10",
+     "level": 1,
+     "text": "Interdisziplinarität und Zusammenarbeit, Interventionen"
+    }
+   ]
+  },
+  {
+   "id": "ph4-10",
+   "subject": "Public Health",
+   "title": "PH4 · Public Health Nursing",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "ph4-10-01",
+     "level": 0,
+     "text": "Beitrag der Pflegeberufe zu Public-Health-Aufgaben"
+    },
+    {
+     "id": "ph4-10-02",
+     "level": 0,
+     "text": "Begriff aus dem angloamerikanischen Raum, nicht einheitlich definiert"
+    },
+    {
+     "id": "ph4-10-03",
+     "level": 0,
+     "text": "APHA: Praxis der Förderung und des Schutzes der Gesundheit von Populationen"
+    },
+    {
+     "id": "ph4-10-04",
+     "level": 1,
+     "text": "Spezialgebiet von Pflege und Public Health"
+    },
+    {
+     "id": "ph4-10-05",
+     "level": 1,
+     "text": "Fokus auf Prävention und Gesundheitsdeterminanten, soziale Gerechtigkeit"
+    },
+    {
+     "id": "ph4-10-06",
+     "level": 0,
+     "text": "Tätigkeitsbereiche"
+    },
+    {
+     "id": "ph4-10-07",
+     "level": 1,
+     "text": "Public Health Nurse, Community Health Nurse, Family Health Nurse"
+    },
+    {
+     "id": "ph4-10-08",
+     "level": 1,
+     "text": "School Health Nurse, Disaster Nurse, Refugee Health Nurse"
+    }
+   ]
+  },
+  {
+   "id": "ph4-11",
+   "subject": "Public Health",
+   "title": "PH4 · Prävention und Gesundheitsförderung in der Pflege",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "ph4-11-01",
+     "level": 0,
+     "text": "Ist-Situation"
+    },
+    {
+     "id": "ph4-11-02",
+     "level": 1,
+     "text": "mehr Blick auf Ressourcen und Kompetenzen"
+    },
+    {
+     "id": "ph4-11-03",
+     "level": 1,
+     "text": "Prävention und Gesundheitsförderung auch im pflegerischen Handeln"
+    },
+    {
+     "id": "ph4-11-04",
+     "level": 1,
+     "text": "Pflege wird nötig, wenn Gesundheitsförderung, Kuration und Rehabilitation erschöpft sind"
+    },
+    {
+     "id": "ph4-11-05",
+     "level": 0,
+     "text": "Soll-Situation"
+    },
+    {
+     "id": "ph4-11-06",
+     "level": 1,
+     "text": "Pflege hat viele Möglichkeiten, Gesundheit positiv zu beeinflussen"
+    },
+    {
+     "id": "ph4-11-07",
+     "level": 1,
+     "text": "Kompetenzvermittlung, Selbstständigkeit, soziale Netzwerke stärken"
+    },
+    {
+     "id": "ph4-11-08",
+     "level": 1,
+     "text": "höchstmögliche Lebensqualität"
+    },
+    {
+     "id": "ph4-11-09",
+     "level": 0,
+     "text": "Notwendig (Optimierungsbedarf)"
+    },
+    {
+     "id": "ph4-11-10",
+     "level": 1,
+     "text": "Gesundheit und nötige Ressourcen bereitstellen"
+    },
+    {
+     "id": "ph4-11-11",
+     "level": 1,
+     "text": "Pflege als Prozess, der Strategien der Gesundheitsarbeit einschließt"
+    }
+   ]
+  }
+ ]
+}

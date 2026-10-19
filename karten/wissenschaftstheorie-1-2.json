@@ -1,0 +1,1640 @@
+{
+ "app": "lernkarten",
+ "version": 1,
+ "pack": true,
+ "name": "Einführung in die Wissenschaftstheorie, Lernbaustein 1–2",
+ "subjects": [
+  "Wissenschaftstheorie"
+ ],
+ "cards": [
+  {
+   "id": "wt1-01",
+   "subject": "Wissenschaftstheorie",
+   "title": "WT1 · Welchen Fragen geht die Wissenschaftstheorie nach?",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "wt1-01-01",
+     "level": 0,
+     "text": "Was ist Wissenschaft?"
+    },
+    {
+     "id": "wt1-01-02",
+     "level": 0,
+     "text": "In welcher Hinsicht ist die Pflegewissenschaft eine Wissenschaft?"
+    },
+    {
+     "id": "wt1-01-03",
+     "level": 0,
+     "text": "Was ist Wissen? Was ist Wahrheit?"
+    },
+    {
+     "id": "wt1-01-04",
+     "level": 0,
+     "text": "Mit welchen Methoden ist Wahrheit zu erreichen?"
+    },
+    {
+     "id": "wt1-01-05",
+     "level": 0,
+     "text": "Warum ändern sich die Auffassungen von Wahrheit im Laufe der Geschichte?"
+    },
+    {
+     "id": "wt1-01-06",
+     "level": 0,
+     "text": "Gibt es wissenschaftlichen Fortschritt?"
+    },
+    {
+     "id": "wt1-01-07",
+     "level": 0,
+     "text": "Begründet von Aristoteles (385–322 v. Chr.)"
+    }
+   ]
+  },
+  {
+   "id": "wt1-02",
+   "subject": "Wissenschaftstheorie",
+   "title": "WT1 · Ziel der Pflegewissenschaft",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "wt1-02-01",
+     "level": 0,
+     "text": "Pflegerische Versorgung auf einer wissenschaftlichen Basis"
+    },
+    {
+     "id": "wt1-02-02",
+     "level": 0,
+     "text": "Wissenschaftliche Erkenntnisse durch eigene Forschung gewinnen"
+    },
+    {
+     "id": "wt1-02-03",
+     "level": 0,
+     "text": "Empirische Untersuchungen mit unterschiedlichen Methoden, um eine empirische Wahrheit zu verankern"
+    },
+    {
+     "id": "wt1-02-04",
+     "level": 0,
+     "text": "Daher sinnvoll: Pflegeforschung wissenschaftstheoretisch betrachten"
+    }
+   ]
+  },
+  {
+   "id": "wt1-03",
+   "subject": "Wissenschaftstheorie",
+   "title": "WT1 · Vulnerable Personen in der Pflegeforschung",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "wt1-03-01",
+     "level": 0,
+     "text": "Vulnerabel = verletzlich"
+    },
+    {
+     "id": "wt1-03-02",
+     "level": 1,
+     "text": "Wie sie geschützt werden: Thema der Forschungsethik"
+    },
+    {
+     "id": "wt1-03-03",
+     "level": 0,
+     "text": "Beispiele"
+    },
+    {
+     "id": "wt1-03-04",
+     "level": 1,
+     "text": "Patient:innen in einer kritischen Situation"
+    },
+    {
+     "id": "wt1-03-05",
+     "level": 1,
+     "text": "Angehörige, die durch die Pflege einer Person belastet sind"
+    },
+    {
+     "id": "wt1-03-06",
+     "level": 1,
+     "text": "Kinder, die ihre Eltern versorgen"
+    },
+    {
+     "id": "wt1-03-07",
+     "level": 1,
+     "text": "Beruflich Pflegende mit außergewöhnlich großer Verantwortung"
+    }
+   ]
+  },
+  {
+   "id": "wt1-04",
+   "subject": "Wissenschaftstheorie",
+   "title": "WT1 · Die 5 essenziellen Grundbegriffe",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "wt1-04-01",
+     "level": 0,
+     "text": "Ontologie"
+    },
+    {
+     "id": "wt1-04-02",
+     "level": 1,
+     "text": "Lehre vom Sein, seinen Ordnungs-, Begriffs- und Wesensbestimmungen"
+    },
+    {
+     "id": "wt1-04-03",
+     "level": 0,
+     "text": "Epistemologie"
+    },
+    {
+     "id": "wt1-04-04",
+     "level": 1,
+     "text": "Erkenntnistheorie"
+    },
+    {
+     "id": "wt1-04-05",
+     "level": 0,
+     "text": "Axiologie und Objektmodell"
+    },
+    {
+     "id": "wt1-04-06",
+     "level": 1,
+     "text": "Axiologie: Wertlehre, Bedeutung von Subjektivität und Werthaltung"
+    },
+    {
+     "id": "wt1-04-07",
+     "level": 1,
+     "text": "Objektmodell: Sachmodell, wie wir den Forschungsgegenstand verstehen"
+    },
+    {
+     "id": "wt1-04-08",
+     "level": 0,
+     "text": "Paradigma"
+    },
+    {
+     "id": "wt1-04-09",
+     "level": 1,
+     "text": "Weltbild"
+    },
+    {
+     "id": "wt1-04-10",
+     "level": 0,
+     "text": "Logik"
+    },
+    {
+     "id": "wt1-04-11",
+     "level": 1,
+     "text": "Form des Schließens"
+    }
+   ]
+  },
+  {
+   "id": "wt1-05",
+   "subject": "Wissenschaftstheorie",
+   "title": "WT1 · Ontologie: Was ist Realität? (zwei Positionen)",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "wt1-05-01",
+     "level": 0,
+     "text": "Position 1: Realität ist etwas, …"
+    },
+    {
+     "id": "wt1-05-02",
+     "level": 1,
+     "text": "das feststeht und dauerhaft gültig ist (Naturgesetze)"
+    },
+    {
+     "id": "wt1-05-03",
+     "level": 1,
+     "text": "das objektiv real ist"
+    },
+    {
+     "id": "wt1-05-04",
+     "level": 1,
+     "text": "dem wir uns annähern können"
+    },
+    {
+     "id": "wt1-05-05",
+     "level": 0,
+     "text": "Position 2: Realität ist etwas, …"
+    },
+    {
+     "id": "wt1-05-06",
+     "level": 1,
+     "text": "das flexibel ist (Erleben)"
+    },
+    {
+     "id": "wt1-05-07",
+     "level": 1,
+     "text": "das wahrgenommen und interpretiert oder konstruiert ist"
+    },
+    {
+     "id": "wt1-05-08",
+     "level": 1,
+     "text": "das zeitweise und situativ beschrieben werden kann"
+    }
+   ]
+  },
+  {
+   "id": "wt1-06",
+   "subject": "Wissenschaftstheorie",
+   "title": "WT1 · Epistemologie im Alltag: epistemische Arbeit",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "wt1-06-01",
+     "level": 0,
+     "text": "„Wir ordnen etwas als etwas Bestimmtes ein und unterscheiden es damit von anderem.\" (Sedmak, 2003)"
+    },
+    {
+     "id": "wt1-06-02",
+     "level": 0,
+     "text": "Wir …"
+    },
+    {
+     "id": "wt1-06-03",
+     "level": 1,
+     "text": "deuten Umwelt und Erlebnisse ständig"
+    },
+    {
+     "id": "wt1-06-04",
+     "level": 1,
+     "text": "unterscheiden sie damit von anderem"
+    },
+    {
+     "id": "wt1-06-05",
+     "level": 1,
+     "text": "bauen uns schrittweise ein Ordnungs- bzw. Kategoriensystem auf, um die Eindrücke zu verarbeiten"
+    },
+    {
+     "id": "wt1-06-06",
+     "level": 0,
+     "text": "Wenn die Einordnung nicht gelingt"
+    },
+    {
+     "id": "wt1-06-07",
+     "level": 1,
+     "text": "erneute Einordnung oder Anpassung unserer Kategorien"
+    }
+   ]
+  },
+  {
+   "id": "wt1-07",
+   "subject": "Wissenschaftstheorie",
+   "title": "WT1 · Epistemologie in der Forschung",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "wt1-07-01",
+     "level": 0,
+     "text": "Wissenschaft nutzt den Erkenntnisprozess bewusst und positioniert sich"
+    },
+    {
+     "id": "wt1-07-02",
+     "level": 0,
+     "text": "Erkenntnistheorie = systematisch an bestehenden Kategorien und Kategoriesystemen arbeiten"
+    },
+    {
+     "id": "wt1-07-03",
+     "level": 0,
+     "text": "Zentral: Verhältnis von Forschenden (erkennendes Subjekt) zu Teilnehmenden (erkannte Objekte)"
+    },
+    {
+     "id": "wt1-07-04",
+     "level": 1,
+     "text": "hier setzen Axiologie und Objektmodell an"
+    },
+    {
+     "id": "wt1-07-05",
+     "level": 0,
+     "text": "Jede Erkenntnistheorie ist mit einem Wahrheitsverständnis verknüpft"
+    },
+    {
+     "id": "wt1-07-06",
+     "level": 1,
+     "text": "also: Wann gelten Erkenntnis und Wissen als wahr?"
+    },
+    {
+     "id": "wt1-07-07",
+     "level": 0,
+     "text": "Es gibt verschiedene Wahrheitstheorien (Skirbekk)"
+    }
+   ]
+  },
+  {
+   "id": "wt1-08",
+   "subject": "Wissenschaftstheorie",
+   "title": "WT1 · Wann gilt etwas als wahr – und wie entsteht Wissen?",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "wt1-08-01",
+     "level": 0,
+     "text": "Als wahr gilt … | Wissens(zu)gewinn entsteht …"
+    },
+    {
+     "id": "wt1-08-02",
+     "level": 0,
+     "text": "allein was wiederholt gemessen werden kann (eine einzige bestehende Realität) | ?durch möglichst objektive, standardisierte Messungen"
+    },
+    {
+     "id": "wt1-08-03",
+     "level": 0,
+     "text": "auch das Veränderliche und Subjektive (erlebte Wirklichkeit) | ?in der systematischen, aber offenen Interaktion"
+    },
+    {
+     "id": "wt1-08-04",
+     "level": 0,
+     "text": "was praktisch, sinnvoll und nützlich ist | ?durch systematisches und aktives Handeln"
+    }
+   ]
+  },
+  {
+   "id": "wt1-09",
+   "subject": "Wissenschaftstheorie",
+   "title": "WT1 · Axiologie: Welche Rolle spielt Subjektivität?",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "wt1-09-01",
+     "level": 0,
+     "text": "Im Rahmen von Forschung …"
+    },
+    {
+     "id": "wt1-09-02",
+     "level": 1,
+     "text": "hat Subjektivität keinen Platz, Objektivität ist anzustreben"
+    },
+    {
+     "id": "wt1-09-03",
+     "level": 1,
+     "text": "gibt es immer Subjektivität, sie darf aber das Vorgehen nicht beeinflussen"
+    },
+    {
+     "id": "wt1-09-04",
+     "level": 1,
+     "text": "ist Subjektivität immer vorhanden und muss offengelegt und reflektiert werden"
+    },
+    {
+     "id": "wt1-09-05",
+     "level": 1,
+     "text": "ist Subjektivität ein elementarer und wichtiger Aspekt"
+    },
+    {
+     "id": "wt1-09-06",
+     "level": 0,
+     "text": "Je nach Haltung ergibt sich ein anderes Verhältnis zwischen Forschenden und Teilnehmenden (Subjekt-Objekt-Verhältnis)"
+    }
+   ]
+  },
+  {
+   "id": "wt1-10",
+   "subject": "Wissenschaftstheorie",
+   "title": "WT1 · Objektmodell: Gegenstand von Pflege und Pflegewissenschaft",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "wt1-10-01",
+     "level": 0,
+     "text": "Gegenstand der Pflege"
+    },
+    {
+     "id": "wt1-10-02",
+     "level": 1,
+     "text": "(oft vulnerable) kranke, pflegebedürftige Menschen und Menschen mit Behinderung und deren Versorgung"
+    },
+    {
+     "id": "wt1-10-03",
+     "level": 1,
+     "text": "nicht nur Patient:innen oder Bewohner:innen, sondern Menschen"
+    },
+    {
+     "id": "wt1-10-04",
+     "level": 0,
+     "text": "Gegenstand der Pflegewissenschaft: die Pflege"
+    },
+    {
+     "id": "wt1-10-05",
+     "level": 1,
+     "text": "in unterschiedlichen Bereichen und Settings"
+    },
+    {
+     "id": "wt1-10-06",
+     "level": 1,
+     "text": "als komplexe Interaktion zwischen Pflegenden, Patient:innen, Angehörigen, anderen Berufsgruppen"
+    },
+    {
+     "id": "wt1-10-07",
+     "level": 1,
+     "text": "mit verschiedenen Perspektiven und Zielen, daher braucht es eine Vielfalt an Forschungsansätzen"
+    }
+   ]
+  },
+  {
+   "id": "wt1-11",
+   "subject": "Wissenschaftstheorie",
+   "title": "WT1 · Paradigma – wie wir die Welt sehen",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "wt1-11-01",
+     "level": 0,
+     "text": "Paradigmen = „Weltbilder\": wie wir die Welt wahrnehmen, sehen und erklären"
+    },
+    {
+     "id": "wt1-11-02",
+     "level": 0,
+     "text": "Begriff von Thomas S. Kuhn (1922–1996)"
+    },
+    {
+     "id": "wt1-11-03",
+     "level": 1,
+     "text": "Paradigmen innerhalb einer Wissenschaft oder Gruppe von Wissenschaftler:innen"
+    },
+    {
+     "id": "wt1-11-04",
+     "level": 0,
+     "text": "Paradigmenstreit: Weltanschauungen widerstreben sich"
+    },
+    {
+     "id": "wt1-11-05",
+     "level": 0,
+     "text": "Paradigmenwechsel"
+    },
+    {
+     "id": "wt1-11-06",
+     "level": 1,
+     "text": "laut Kuhn braucht es oft eine neue Generation von Wissenschaftler:innen, um den Streit beizulegen"
+    },
+    {
+     "id": "wt1-11-07",
+     "level": 1,
+     "text": "Fleck sieht diese Entwicklung als weniger konflikthaft"
+    }
+   ]
+  },
+  {
+   "id": "wt1-12",
+   "subject": "Wissenschaftstheorie",
+   "title": "WT1 · Logik: Deduktion, Induktion, Abduktion",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "wt1-12-01",
+     "level": 0,
+     "text": "Deduktion"
+    },
+    {
+     "id": "wt1-12-02",
+     "level": 1,
+     "text": "vom Allgemeinen auf das Besondere"
+    },
+    {
+     "id": "wt1-12-03",
+     "level": 1,
+     "text": "wenn man bestehende Theorien oder Hypothesen auf Wahrheit und Anwendbarkeit testen will"
+    },
+    {
+     "id": "wt1-12-04",
+     "level": 0,
+     "text": "Induktion"
+    },
+    {
+     "id": "wt1-12-05",
+     "level": 1,
+     "text": "vom Besonderen auf das Allgemeine"
+    },
+    {
+     "id": "wt1-12-06",
+     "level": 1,
+     "text": "wenn man Einzelne befragt oder beobachtet und auf allgemeine Annahmen schließt"
+    },
+    {
+     "id": "wt1-12-07",
+     "level": 0,
+     "text": "Abduktion"
+    },
+    {
+     "id": "wt1-12-08",
+     "level": 1,
+     "text": "offen Daten erheben, um Neues zu entdecken, das danach wieder getestet wird"
+    },
+    {
+     "id": "wt1-12-09",
+     "level": 1,
+     "text": "eine Art ständiger Problemlösungsprozess"
+    }
+   ]
+  },
+  {
+   "id": "wt1-13",
+   "subject": "Wissenschaftstheorie",
+   "title": "WT1 · Phänomenologie: Begründer und Ausgangspunkt",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "wt1-13-01",
+     "level": 0,
+     "text": "Begründer: Edmund Husserl (1859–1938)"
+    },
+    {
+     "id": "wt1-13-02",
+     "level": 0,
+     "text": "Ausgang: Das, WAS sich uns in der Erfahrung zeigt, und WIE es sich darin zeigt, sollen wir ernst nehmen"
+    },
+    {
+     "id": "wt1-13-03",
+     "level": 0,
+     "text": "Erfahrung als Erkenntnisquelle"
+    },
+    {
+     "id": "wt1-13-04",
+     "level": 1,
+     "text": "Farbe des Balls? Ich sehe sie"
+    },
+    {
+     "id": "wt1-13-05",
+     "level": 1,
+     "text": "Dass es Essig ist? Ich rieche ihn"
+    },
+    {
+     "id": "wt1-13-06",
+     "level": 1,
+     "text": "Wetter im letzten Sommer? Ich erinnere mich"
+    },
+    {
+     "id": "wt1-13-07",
+     "level": 1,
+     "text": "Das kommende Weihnachtsfest? Ich hoffe und wünsche mir etwas"
+    },
+    {
+     "id": "wt1-13-08",
+     "level": 0,
+     "text": "Husserls „Prinzip aller Prinzipien\": Was sich originär in der Anschauung darbietet, ist hinzunehmen, als was es sich gibt – aber nur in den Schranken, in denen es sich gibt"
+    }
+   ]
+  },
+  {
+   "id": "wt1-14",
+   "subject": "Wissenschaftstheorie",
+   "title": "WT1 · Intentionalität – die Struktur der Erfahrung",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "wt1-14-01",
+     "level": 0,
+     "text": "Der Phänomenologie geht es um die Struktur der Erfahrung"
+    },
+    {
+     "id": "wt1-14-02",
+     "level": 0,
+     "text": "Husserl nennt diese Struktur Intentionalität"
+    },
+    {
+     "id": "wt1-14-03",
+     "level": 0,
+     "text": "Jede Erfahrung hat 3 Elemente"
+    },
+    {
+     "id": "wt1-14-04",
+     "level": 1,
+     "text": "Jeder Akt meint etwas stets als etwas / wie"
+    },
+    {
+     "id": "wt1-14-05",
+     "level": 0,
+     "text": "Beispiel Stuhl"
+    },
+    {
+     "id": "wt1-14-06",
+     "level": 1,
+     "text": "Ich sehe (Akt) einen Stuhl (Was), immer in einer bestimmten Weise (Wie)"
+    },
+    {
+     "id": "wt1-14-07",
+     "level": 1,
+     "text": "Um ihn von hinten zu sehen, muss ich herumgehen oder ihn drehen"
+    },
+    {
+     "id": "wt1-14-08",
+     "level": 0,
+     "text": "Wirklichkeit = Realität im Licht von Interpretationen"
+    }
+   ]
+  },
+  {
+   "id": "wt1-15",
+   "subject": "Wissenschaftstheorie",
+   "title": "WT1 · Intentionale Struktur: Akt, Zugangsart, Sachgehalt",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "wt1-15-01",
+     "level": 0,
+     "text": "Akt | Zugangsart (wie / als was) | Sachgehalt (was)"
+    },
+    {
+     "id": "wt1-15-02",
+     "level": 0,
+     "text": "Wahrnehmen | ?räumlich = Perspektive | Dinge"
+    },
+    {
+     "id": "wt1-15-03",
+     "level": 0,
+     "text": "Denken | ?zeitlich = gegenwärtig mit Verweis auf Zukunft und Vergangenheit | andere Menschen"
+    },
+    {
+     "id": "wt1-15-04",
+     "level": 0,
+     "text": "Handeln | ?funktional = als zum Gebrauch für | Schulaufgabe"
+    },
+    {
+     "id": "wt1-15-05",
+     "level": 0,
+     "text": "Wollen | ?fiktional = als ob | Lied"
+    },
+    {
+     "id": "wt1-15-06",
+     "level": 0,
+     "text": "Urteilen | ?sozial = als uns zugehörig | Abwesendes, Fremdes"
+    },
+    {
+     "id": "wt1-15-07",
+     "level": 0,
+     "text": "Die Phänomenologie gibt Aufschluss über das „Wie\""
+    },
+    {
+     "id": "wt1-15-08",
+     "level": 1,
+     "text": "das „Wie\" ist das mittlere Glied der intentionalen Struktur"
+    }
+   ]
+  },
+  {
+   "id": "wt1-16",
+   "subject": "Wissenschaftstheorie",
+   "title": "WT1 · Beispiel Franz-Josef: Ordnungsschema und Identität",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "wt1-16-01",
+     "level": 0,
+     "text": "Derselbe Franz-Josef (Sachgehalt) wird verschieden erfahren"
+    },
+    {
+     "id": "wt1-16-02",
+     "level": 1,
+     "text": "gesehen als Kaiser (politisch)"
+    },
+    {
+     "id": "wt1-16-03",
+     "level": 1,
+     "text": "gehört als Sohn (Familie)"
+    },
+    {
+     "id": "wt1-16-04",
+     "level": 1,
+     "text": "gedacht als Enkel (Familie, Abstammung)"
+    },
+    {
+     "id": "wt1-16-05",
+     "level": 1,
+     "text": "gewollt als Vater seiner Kinder (Familie, Oberhaupt)"
+    },
+    {
+     "id": "wt1-16-06",
+     "level": 0,
+     "text": "Funktion des Ordnungsschemas (wie / als was)"
+    },
+    {
+     "id": "wt1-16-07",
+     "level": 1,
+     "text": "bedeutungsstiftender Kontext: etwas tritt im Zusammenhang mit etwas anderem auf"
+    },
+    {
+     "id": "wt1-16-08",
+     "level": 1,
+     "text": "entscheidet über die Identität einer Sache"
+    },
+    {
+     "id": "wt1-16-09",
+     "level": 0,
+     "text": "Identität: Die Sache hält sich in allen Akten und Kontexten als „identisch derselbe\" Gegenstand durch"
+    },
+    {
+     "id": "wt1-16-10",
+     "level": 1,
+     "text": "Sie bildet sich nur in den Akten, nicht daneben"
+    },
+    {
+     "id": "wt1-16-11",
+     "level": 0,
+     "text": "Erfahrungen sind keine privaten Empfindungen, weil sie einem allgemeinen Ordnungsschema unterliegen"
+    }
+   ]
+  },
+  {
+   "id": "wt1-17",
+   "subject": "Wissenschaftstheorie",
+   "title": "WT1 · Grenze der Phänomenologie",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "wt1-17-01",
+     "level": 0,
+     "text": "Menschliche Erfahrung ist ein offener Prozess"
+    },
+    {
+     "id": "wt1-17-02",
+     "level": 1,
+     "text": "Phänomenologie beschreibt diese Prozesse"
+    },
+    {
+     "id": "wt1-17-03",
+     "level": 0,
+     "text": "Zur Erfahrung gehören aber auch"
+    },
+    {
+     "id": "wt1-17-04",
+     "level": 1,
+     "text": "Geschichte, Kultur, Sprache"
+    },
+    {
+     "id": "wt1-17-05",
+     "level": 1,
+     "text": "Gesellschaft, Mitmenschen, Regeln und Normen"
+    },
+    {
+     "id": "wt1-17-06",
+     "level": 0,
+     "text": "Diese Aspekte thematisiert die moderne Hermeneutik"
+    },
+    {
+     "id": "wt1-17-07",
+     "level": 1,
+     "text": "entsteht zur selben Zeit wie Husserls Phänomenologie, aber aus anderem Anlass"
+    }
+   ]
+  },
+  {
+   "id": "wt1-18",
+   "subject": "Wissenschaftstheorie",
+   "title": "WT1 · Hermeneutik: Begründer und Ansatz",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "wt1-18-01",
+     "level": 0,
+     "text": "Begründer: Wilhelm Dilthey (1833–1911)"
+    },
+    {
+     "id": "wt1-18-02",
+     "level": 0,
+     "text": "Unterschied Natur- vs. Geisteswissenschaften"
+    },
+    {
+     "id": "wt1-18-03",
+     "level": 1,
+     "text": "Naturwissenschaften: Raum, Zeit, Masse, Bewegung"
+    },
+    {
+     "id": "wt1-18-04",
+     "level": 1,
+     "text": "Geisteswissenschaften: Zusammenhang von Leben, Ausdruck und Verstehen"
+    },
+    {
+     "id": "wt1-18-05",
+     "level": 0,
+     "text": "Verstehen setzt Erleben und Ausdruck des Erlebten voraus"
+    },
+    {
+     "id": "wt1-18-06",
+     "level": 1,
+     "text": "Erleben (Kälte) → Ausdruck (Schütteln) → Verstehen (mir ist kalt)"
+    },
+    {
+     "id": "wt1-18-07",
+     "level": 0,
+     "text": "„Der Mensch lernt sich nur auf dem Umweg des Verstehens selbst kennen.\""
+    }
+   ]
+  },
+  {
+   "id": "wt1-19",
+   "subject": "Wissenschaftstheorie",
+   "title": "WT1 · Hermeneutik: Verstehen als Erkenntnisquelle",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "wt1-19-01",
+     "level": 0,
+     "text": "Wir verstehen etwas nur, wenn es durchlebt, ausgedrückt und gedeutet wird"
+    },
+    {
+     "id": "wt1-19-02",
+     "level": 0,
+     "text": "Beispiele"
+    },
+    {
+     "id": "wt1-19-03",
+     "level": 1,
+     "text": "Was Kälte ist? Im Schnee gezittert und den Körperausdruck gedeutet"
+    },
+    {
+     "id": "wt1-19-04",
+     "level": 1,
+     "text": "Dass jemand wütend ist? Körperhaltung gesehen, Worte gehört, Ausdruck gedeutet"
+    },
+    {
+     "id": "wt1-19-05",
+     "level": 1,
+     "text": "Wie Menschen im 19. Jh. lebten? Historische Zeugnisse gelesen und verstanden"
+    },
+    {
+     "id": "wt1-19-06",
+     "level": 0,
+     "text": "Verstehen bezieht sich auf das eigene Leben und auf das Leben anderer"
+    }
+   ]
+  },
+  {
+   "id": "wt1-20",
+   "subject": "Wissenschaftstheorie",
+   "title": "WT1 · Verstehen des eigenen Lebens",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "wt1-20-01",
+     "level": 0,
+     "text": "Das eigene Leben ist ein Verlauf aus verschiedenen Teilen"
+    },
+    {
+     "id": "wt1-20-02",
+     "level": 1,
+     "text": "wird verstanden, indem man Kategorien darauf anwendet"
+    },
+    {
+     "id": "wt1-20-03",
+     "level": 0,
+     "text": "Kategorien des Verstehens"
+    },
+    {
+     "id": "wt1-20-04",
+     "level": 1,
+     "text": "Kategorie | drückt aus"
+    },
+    {
+     "id": "wt1-20-05",
+     "level": 1,
+     "text": "Werte | ?Gegenwart"
+    },
+    {
+     "id": "wt1-20-06",
+     "level": 1,
+     "text": "Zweck | ?Zukunft"
+    },
+    {
+     "id": "wt1-20-07",
+     "level": 1,
+     "text": "Bedeutung | ?Erinnerung"
+    },
+    {
+     "id": "wt1-20-08",
+     "level": 0,
+     "text": "Beispiel: „Nach dem Krieg war mein Leben mühsam (Erinnerung), der Aufschwung brachte Wohlstand (Gegenwart), der lange andauern möge (Zukunft).\""
+    },
+    {
+     "id": "wt1-20-09",
+     "level": 0,
+     "text": "Alles Verstehen bezieht sich auf eine durchlebte Zeit, erfasst im Licht der Kategorien"
+    }
+   ]
+  },
+  {
+   "id": "wt1-21",
+   "subject": "Wissenschaftstheorie",
+   "title": "WT1 · Verstehen anderer Personen",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "wt1-21-01",
+     "level": 0,
+     "text": "Man versteht nicht die Person selbst, sondern ihre Lebensäußerungen"
+    },
+    {
+     "id": "wt1-21-02",
+     "level": 0,
+     "text": "Lebensäußerung | zu verstehen ist …"
+    },
+    {
+     "id": "wt1-21-03",
+     "level": 0,
+     "text": "Erlebnisausdrücke | ?Wie ist der Ausdruck gemeint oder empfunden?"
+    },
+    {
+     "id": "wt1-21-04",
+     "level": 0,
+     "text": "Handlungen | ?Was ist der Beweggrund, das Motiv?"
+    },
+    {
+     "id": "wt1-21-05",
+     "level": 0,
+     "text": "Theorien | ?Was sind die Geltungsgründe?"
+    },
+    {
+     "id": "wt1-21-06",
+     "level": 0,
+     "text": "Kunstwerke | ?Was ist der Gehalt?"
+    }
+   ]
+  },
+  {
+   "id": "wt1-22",
+   "subject": "Wissenschaftstheorie",
+   "title": "WT1 · Kultur als Kontext des Verstehens",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "wt1-22-01",
+     "level": 0,
+     "text": "Lebensäußerungen anderer verstehen wir immer im Kontext einer Kultur"
+    },
+    {
+     "id": "wt1-22-02",
+     "level": 1,
+     "text": "ohne Kontextualisierung bleiben sie unverständlich"
+    },
+    {
+     "id": "wt1-22-03",
+     "level": 0,
+     "text": "Kultur = ein „dem Ich und Du Gemeinsames\""
+    },
+    {
+     "id": "wt1-22-04",
+     "level": 1,
+     "text": "gemeinsam: Kulturkreis, Ordnung des Benehmens, Stellung der Personen, Verhaltensregeln"
+    },
+    {
+     "id": "wt1-22-05",
+     "level": 0,
+     "text": "Beispiel: Flattern mit der Hand"
+    },
+    {
+     "id": "wt1-22-06",
+     "level": 1,
+     "text": "wird als Winken bzw. Verabschiedung verstanden, weil die Kultur das so festlegt"
+    },
+    {
+     "id": "wt1-22-07",
+     "level": 1,
+     "text": "ohne diesen Kontext erscheint es sinnlos"
+    }
+   ]
+  },
+  {
+   "id": "wt1-23",
+   "subject": "Wissenschaftstheorie",
+   "title": "WT1 · Phänomenologie vs. Hermeneutik",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "wt1-23-01",
+     "level": 0,
+     "text": "Phänomenologie | Hermeneutik"
+    },
+    {
+     "id": "wt1-23-02",
+     "level": 0,
+     "text": "Struktur der menschlichen Erfahrung und ihre Sagbarkeit | ?Interpretation und kulturelle Kontextualisierung von Lebensäußerungen"
+    },
+    {
+     "id": "wt1-23-03",
+     "level": 0,
+     "text": "Husserl | ?Dilthey"
+    },
+    {
+     "id": "wt1-23-04",
+     "level": 0,
+     "text": "Gemeinsames Ziel: das Verstehen der Erfahrungen, die Menschen beim Durchleben ihres Lebens gemacht haben"
+    },
+    {
+     "id": "wt1-23-05",
+     "level": 0,
+     "text": "Paul Ricoeur (1913–2005): „hermeneutische Phänomenologie\""
+    },
+    {
+     "id": "wt1-23-06",
+     "level": 1,
+     "text": "beide sind zusammen zu betrachten"
+    }
+   ]
+  },
+  {
+   "id": "wt1-24",
+   "subject": "Wissenschaftstheorie",
+   "title": "WT1 · Phänomenologie & Hermeneutik als Basis qualitativer Forschung",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "wt1-24-01",
+     "level": 0,
+     "text": "Subjektives Erleben im Mittelpunkt des Erkenntnisinteresses"
+    },
+    {
+     "id": "wt1-24-02",
+     "level": 0,
+     "text": "Fragen nach Beschreibungen des Erlebens aus Sicht der Menschen selbst"
+    },
+    {
+     "id": "wt1-24-03",
+     "level": 0,
+     "text": "Implikationen für die Forschung"
+    },
+    {
+     "id": "wt1-24-04",
+     "level": 1,
+     "text": "Offenheit: systematisches, aber nicht standardisiertes Vorgehen"
+    },
+    {
+     "id": "wt1-24-05",
+     "level": 1,
+     "text": "Interaktion der Forschenden mit den Teilnehmenden"
+    },
+    {
+     "id": "wt1-24-06",
+     "level": 1,
+     "text": "narrative Daten (verschriftlichte Interviews oder Beobachtungen)"
+    },
+    {
+     "id": "wt1-24-07",
+     "level": 1,
+     "text": "Reflexivität: eigene Vorerfahrungen und Wissensbestände reflektieren"
+    },
+    {
+     "id": "wt1-24-08",
+     "level": 1,
+     "text": "induktives Schließen"
+    }
+   ]
+  },
+  {
+   "id": "wt2-01",
+   "subject": "Wissenschaftstheorie",
+   "title": "WT2 · Kritischer Rationalismus: Begründer und Grundfrage",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "wt2-01-01",
+     "level": 0,
+     "text": "Begründer: Sir Karl Popper (1902–1994)"
+    },
+    {
+     "id": "wt2-01-02",
+     "level": 0,
+     "text": "Grundfrage: Wie können wissenschaftliche oder gesellschaftliche Probleme pragmatisch und vernünftig untersucht und geklärt werden?"
+    },
+    {
+     "id": "wt2-01-03",
+     "level": 0,
+     "text": "Sind wissenschaftliche Theorien fehlerhaft und können daher falsifiziert werden?"
+    },
+    {
+     "id": "wt2-01-04",
+     "level": 0,
+     "text": "Ansicht: Endgültige Wahrheiten sind von der Wissenschaft nicht zu erwarten"
+    },
+    {
+     "id": "wt2-01-05",
+     "level": 0,
+     "text": "Untersucht, was als „gültiges Wissen\" bezeichnet werden kann"
+    }
+   ]
+  },
+  {
+   "id": "wt2-02",
+   "subject": "Wissenschaftstheorie",
+   "title": "WT2 · Die zwei Probleme des Kritischen Rationalismus",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "wt2-02-01",
+     "level": 0,
+     "text": "Leitfrage: Woran erkennt man Wissen, das sicher und wahr ist?"
+    },
+    {
+     "id": "wt2-02-02",
+     "level": 0,
+     "text": "1. Abgrenzungsproblem"
+    },
+    {
+     "id": "wt2-02-03",
+     "level": 1,
+     "text": "Wie grenzt man wissenschaftliches Wissen von Glaubensgrundsätzen ab?"
+    },
+    {
+     "id": "wt2-02-04",
+     "level": 1,
+     "text": "Welche Aussagen sind wissenschaftlich, also allgemein überprüfbar?"
+    },
+    {
+     "id": "wt2-02-05",
+     "level": 0,
+     "text": "2. Induktionsproblem"
+    },
+    {
+     "id": "wt2-02-06",
+     "level": 1,
+     "text": "Welchen Stellenwert hat die Induktion in der Wahrheitsfrage?"
+    },
+    {
+     "id": "wt2-02-07",
+     "level": 1,
+     "text": "Kommt man von Einzelbeobachtungen zu einer allgemeinen Theorie, etwa indem man sie addiert?"
+    },
+    {
+     "id": "wt2-02-08",
+     "level": 0,
+     "text": "Die Antwort auf Problem 2 weist die Richtung für Problem 1"
+    }
+   ]
+  },
+  {
+   "id": "wt2-03",
+   "subject": "Wissenschaftstheorie",
+   "title": "WT2 · Induktionsproblem – Poppers Antwort",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "wt2-03-01",
+     "level": 0,
+     "text": "Induktion führt vom Besonderen zum Allgemeinen"
+    },
+    {
+     "id": "wt2-03-02",
+     "level": 0,
+     "text": "Daraus resultieren nur Vermutungen"
+    },
+    {
+     "id": "wt2-03-03",
+     "level": 1,
+     "text": "gelten nur, solange sie nicht widerlegt (falsifiziert) sind"
+    },
+    {
+     "id": "wt2-03-04",
+     "level": 1,
+     "text": "jeder neue Satz muss sich wieder der Falsifizierung stellen"
+    },
+    {
+     "id": "wt2-03-05",
+     "level": 0,
+     "text": "Stellenwert der Induktion in der Wahrheitsfrage: keiner!"
+    },
+    {
+     "id": "wt2-03-06",
+     "level": 0,
+     "text": "Wissenschaftliche Theorien haben immer nur den Status von Hypothesen"
+    }
+   ]
+  },
+  {
+   "id": "wt2-04",
+   "subject": "Wissenschaftstheorie",
+   "title": "WT2 · Abgrenzungsproblem – Poppers Antwort",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "wt2-04-01",
+     "level": 0,
+     "text": "Glaubenssätze betrachten sich als ewige Wahrheiten"
+    },
+    {
+     "id": "wt2-04-02",
+     "level": 0,
+     "text": "Wissenschaftliches Wissen besteht aus Hypothesen"
+    },
+    {
+     "id": "wt2-04-03",
+     "level": 1,
+     "text": "alle Theorien können umgestoßen werden"
+    },
+    {
+     "id": "wt2-04-04",
+     "level": 1,
+     "text": "Wahrheit wird geprüft, indem man das Falsche ausscheidet"
+    },
+    {
+     "id": "wt2-04-05",
+     "level": 0,
+     "text": "Wissenschaftler:innen müssen die Fehlbarkeit ihrer Theorien anerkennen und aus Fehlern lernen"
+    },
+    {
+     "id": "wt2-04-06",
+     "level": 0,
+     "text": "Motto: Versuch und Irrtum"
+    },
+    {
+     "id": "wt2-04-07",
+     "level": 0,
+     "text": "Abgrenzungskriterium: Falsifizierbarkeit!"
+    }
+   ]
+  },
+  {
+   "id": "wt2-05",
+   "subject": "Wissenschaftstheorie",
+   "title": "WT2 · Popper vs. Schlick: Falsifikation vs. Verifikation",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "wt2-05-01",
+     "level": 0,
+     "text": "Moritz Schlick (1882–1936)"
+    },
+    {
+     "id": "wt2-05-02",
+     "level": 1,
+     "text": "Wissen ist erst akzeptabel, wenn es mit absoluter Gewissheit verifiziert, also bewiesen ist"
+    },
+    {
+     "id": "wt2-05-03",
+     "level": 0,
+     "text": "Karl Popper"
+    },
+    {
+     "id": "wt2-05-04",
+     "level": 1,
+     "text": "Falsifikationsprinzip: Wissen gilt, bis es widerlegt ist"
+    },
+    {
+     "id": "wt2-05-05",
+     "level": 0,
+     "text": "Absolute Gewissheit kann es laut Kritischem Rationalismus in den Wissenschaften nicht geben"
+    }
+   ]
+  },
+  {
+   "id": "wt2-06",
+   "subject": "Wissenschaftstheorie",
+   "title": "WT2 · Kernaussagen des Kritischen Rationalismus",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "wt2-06-01",
+     "level": 0,
+     "text": "Alles Wissen gilt stets vorläufig, als Wahrheit auf Zeit"
+    },
+    {
+     "id": "wt2-06-02",
+     "level": 0,
+     "text": "Wissen entsteht durch „Versuch und Irrtum\""
+    },
+    {
+     "id": "wt2-06-03",
+     "level": 0,
+     "text": "Alles Wissen dient dem Versuch, ein Problem zu lösen"
+    },
+    {
+     "id": "wt2-06-04",
+     "level": 0,
+     "text": "Der Spalt zwischen Wissen und Nichtwissen ist nie ganz zu schließen"
+    }
+   ]
+  },
+  {
+   "id": "wt2-07",
+   "subject": "Wissenschaftstheorie",
+   "title": "WT2 · Was ist ein wissenschaftlicher Satz?",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "wt2-07-01",
+     "level": 0,
+     "text": "Wissenschaftliche Forschung = Aufstellen und Überprüfen von Sätzen auf ihre Geltung"
+    },
+    {
+     "id": "wt2-07-02",
+     "level": 0,
+     "text": "Ein wissenschaftlicher Satz ist"
+    },
+    {
+     "id": "wt2-07-03",
+     "level": 1,
+     "text": "synthetisch: widerspruchsfrei und logisch möglich"
+    },
+    {
+     "id": "wt2-07-04",
+     "level": 1,
+     "text": "nicht metaphysisch: mit erfahrbarem Inhalt"
+    },
+    {
+     "id": "wt2-07-05",
+     "level": 1,
+     "text": "ausgezeichnet: bezieht sich auf die menschliche Welt"
+    },
+    {
+     "id": "wt2-07-06",
+     "level": 0,
+     "text": "Kurz: Er kann an der Erfahrung scheitern"
+    },
+    {
+     "id": "wt2-07-07",
+     "level": 0,
+     "text": "Nicht wissenschaftlich: „Im Jenseits erfahren alle Geschöpfe Gottes Segen.\""
+    }
+   ]
+  },
+  {
+   "id": "wt2-08",
+   "subject": "Wissenschaftstheorie",
+   "title": "WT2 · Welche Sätze sind wissenschaftlich?",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "wt2-08-01",
+     "level": 0,
+     "text": "Satz | Art | wiss.?"
+    },
+    {
+     "id": "wt2-08-02",
+     "level": 0,
+     "text": "„Alle Junggesellen sind unverheiratet.\" | ?analytisch, immer wahr per Definition | ?nein"
+    },
+    {
+     "id": "wt2-08-03",
+     "level": 0,
+     "text": "„Alle Frauen sind unverheiratet.\" | ?synthetisch, bezieht sich auf Erfahrung, aber falsch | ?ja"
+    },
+    {
+     "id": "wt2-08-04",
+     "level": 0,
+     "text": "„Morgen wird es regnen.\" | ?synthetisch, kann wahr oder falsch sein | ?ja"
+    },
+    {
+     "id": "wt2-08-05",
+     "level": 0,
+     "text": "„Heute regnet es in ganz Salzburg und heute nicht in ganz Salzburg.\" | ?logischer Widerspruch, unhaltbar | ?nein"
+    },
+    {
+     "id": "wt2-08-06",
+     "level": 0,
+     "text": "Prüfbar: Statistiker:innen zählen verheiratete Frauen, Meteorolog:innen machen Prognosen"
+    },
+    {
+     "id": "wt2-08-07",
+     "level": 0,
+     "text": "Wissenschaftliche Sätze sind das Resultat empirischer Forschung"
+    }
+   ]
+  },
+  {
+   "id": "wt2-09",
+   "subject": "Wissenschaftstheorie",
+   "title": "WT2 · Wahrheit und Wahrheitsnähe",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "wt2-09-01",
+     "level": 0,
+     "text": "Wahr ist eine Aussage, die mit den Tatsachen übereinstimmt"
+    },
+    {
+     "id": "wt2-09-02",
+     "level": 1,
+     "text": "Wir sehen einen Ball und sagen: „Das ist ein Ball.\""
+    },
+    {
+     "id": "wt2-09-03",
+     "level": 0,
+     "text": "Eine Theorie beschreibt die Außenwelt mehr oder weniger nah"
+    },
+    {
+     "id": "wt2-09-04",
+     "level": 1,
+     "text": "je näher, desto wahrer"
+    },
+    {
+     "id": "wt2-09-05",
+     "level": 0,
+     "text": "Wahrheitsnähe impliziert wissenschaftlichen Fortschritt"
+    },
+    {
+     "id": "wt2-09-06",
+     "level": 0,
+     "text": "Eine Theorie hat größere Wahrheitsnähe als eine konkurrierende, wenn sie besser oder mit mehr Tatsachen übereinstimmt"
+    }
+   ]
+  },
+  {
+   "id": "wt2-10",
+   "subject": "Wissenschaftstheorie",
+   "title": "WT2 · Wann ist eine Theorie einer anderen vorzuziehen?",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "wt2-10-01",
+     "level": 0,
+     "text": "Die weiterführende Theorie beantwortet …"
+    },
+    {
+     "id": "wt2-10-02",
+     "level": 1,
+     "text": "alle Fragen, die die erste beantwortet"
+    },
+    {
+     "id": "wt2-10-03",
+     "level": 1,
+     "text": "zusätzlich Fragen, die die erste offen gelassen hat"
+    },
+    {
+     "id": "wt2-10-04",
+     "level": 0,
+     "text": "Solange sie den empirischen Prüfungen standhält, wo sie sich von der ersten unterscheidet"
+    },
+    {
+     "id": "wt2-10-05",
+     "level": 1,
+     "text": "gilt sie als bessere Annäherung an die Wahrheit"
+    },
+    {
+     "id": "wt2-10-06",
+     "level": 0,
+     "text": "Poppers Beispiel aus der Physik"
+    },
+    {
+     "id": "wt2-10-07",
+     "level": 1,
+     "text": "Aristoteles → Ptolemäus → Galilei → Kopernikus, Newton, Einstein, Heisenberg"
+    },
+    {
+     "id": "wt2-10-08",
+     "level": 1,
+     "text": "Ptolemäus erklärte Aristoteles' Phänomene und mehr, war also leistungsfähiger"
+    },
+    {
+     "id": "wt2-10-09",
+     "level": 0,
+     "text": "Vorsichtiger Optimismus: Probleme können pragmatisch und vernünftig untersucht und geklärt werden"
+    }
+   ]
+  },
+  {
+   "id": "wt2-11",
+   "subject": "Wissenschaftstheorie",
+   "title": "WT2 · Kritischer Rationalismus als Basis quantitativer Forschung",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "wt2-11-01",
+     "level": 0,
+     "text": "Abgrenzungs- und Induktionsproblem verweisen auf eine objektive Realitätsvorstellung"
+    },
+    {
+     "id": "wt2-11-02",
+     "level": 0,
+     "text": "Im Mittelpunkt: Überprüfung (Testung) wissenschaftlicher Sätze, also Hypothesen"
+    },
+    {
+     "id": "wt2-11-03",
+     "level": 0,
+     "text": "Implikationen für das Vorgehen"
+    },
+    {
+     "id": "wt2-11-04",
+     "level": 1,
+     "text": "hohe Standardisierung"
+    },
+    {
+     "id": "wt2-11-05",
+     "level": 1,
+     "text": "Kontrolle der Studienbedingungen"
+    },
+    {
+     "id": "wt2-11-06",
+     "level": 1,
+     "text": "numerische Daten aus (wiederholten) Messungen"
+    },
+    {
+     "id": "wt2-11-07",
+     "level": 1,
+     "text": "möglichst objektive Herangehensweise, um Beeinflussung und Messfehler zu vermeiden"
+    },
+    {
+     "id": "wt2-11-08",
+     "level": 1,
+     "text": "deduktives Schließen"
+    }
+   ]
+  },
+  {
+   "id": "wt2-12",
+   "subject": "Wissenschaftstheorie",
+   "title": "WT2 · Die zwei Paradigmen der Pflegeforschung",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "wt2-12-01",
+     "level": 0,
+     "text": "Quantitative Forschung"
+    },
+    {
+     "id": "wt2-12-02",
+     "level": 1,
+     "text": "positivistisches, empirisch-analytisches, theorie- bzw. hypothesentestendes Paradigma"
+    },
+    {
+     "id": "wt2-12-03",
+     "level": 0,
+     "text": "Qualitative Forschung"
+    },
+    {
+     "id": "wt2-12-04",
+     "level": 1,
+     "text": "phänomenologisch-hermeneutisches, interpretatives, theoriegenerierendes Paradigma"
+    },
+    {
+     "id": "wt2-12-05",
+     "level": 0,
+     "text": "Pflegeforschung arbeitet meist qualitativ und/oder quantitativ"
+    },
+    {
+     "id": "wt2-12-06",
+     "level": 1,
+     "text": "unterschiedliche Grundannahmen und wissenschaftstheoretische Annahmen"
+    }
+   ]
+  },
+  {
+   "id": "wt2-13",
+   "subject": "Wissenschaftstheorie",
+   "title": "WT2 · Qualitativ vs. quantitativ: Epistemologie, Ontologie, Axiologie",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "wt2-13-01",
+     "level": 0,
+     "text": "Epistemologie"
+    },
+    {
+     "id": "wt2-13-02",
+     "level": 1,
+     "text": "Qualitativ: Die gelebte Erfahrung Einzelner ist nicht weniger wahr als die von Vielen"
+    },
+    {
+     "id": "wt2-13-03",
+     "level": 1,
+     "text": "Quantitativ: Ziel ist eine auf die Gesamtheit übertragbare Wahrheit, die durch Messungen hervortritt"
+    },
+    {
+     "id": "wt2-13-04",
+     "level": 0,
+     "text": "Ontologie"
+    },
+    {
+     "id": "wt2-13-05",
+     "level": 1,
+     "text": "Qualitativ: Soziale Prozesse und Erlebnisse sind IMMER subjektiv und nicht objektivierbar"
+    },
+    {
+     "id": "wt2-13-06",
+     "level": 1,
+     "text": "Quantitativ: Die Welt besteht aus unabhängigen, beständigen Gesetzen, die sich objektiv darstellen und testen lassen"
+    },
+    {
+     "id": "wt2-13-07",
+     "level": 0,
+     "text": "Axiologie"
+    },
+    {
+     "id": "wt2-13-08",
+     "level": 1,
+     "text": "Qualitativ: Subjektive Wahrnehmung ist Gegenstand der Forschung, fließt ein und muss reflektiert werden"
+    },
+    {
+     "id": "wt2-13-09",
+     "level": 1,
+     "text": "Quantitativ: Möglichst hohe Objektivität, Subjektivität darf die Forschung nicht beeinflussen"
+    }
+   ]
+  },
+  {
+   "id": "wt2-14",
+   "subject": "Wissenschaftstheorie",
+   "title": "WT2 · Qualitativ vs. quantitativ: Art des Schließens",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "wt2-14-01",
+     "level": 0,
+     "text": "| Qualitativ | Quantitativ"
+    },
+    {
+     "id": "wt2-14-02",
+     "level": 0,
+     "text": "Schluss | ?Induktion: vom Einzelfall auf das Allgemeine | ?Deduktion: vom Allgemeinen auf den Einzelfall"
+    },
+    {
+     "id": "wt2-14-03",
+     "level": 0,
+     "text": "Ziel | ?Beschreibung eines Phänomens und seiner Zusammenhänge | ?Ergebnisse verallgemeinern"
+    }
+   ]
+  }
+ ]
+}
