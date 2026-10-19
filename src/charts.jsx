@@ -15,7 +15,7 @@ function useGaps(quiz) {
     if (!show) return children;
     if (!quiz || open.has(k)) return <span className={"gap" + (quiz ? " open" : "")}>{children}</span>;
     return <button type="button" className="gap-q" aria-label="Lücke aufdecken"
-      onPointerDown={e => e.stopPropagation()} onClick={e => { e.stopPropagation(); setOpen(o => new Set(o).add(k)); }}>?</button>;
+      onClick={e => { e.stopPropagation(); setOpen(o => new Set(o).add(k)); }}>?</button>;
   };
 }
 
