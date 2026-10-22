@@ -116,6 +116,14 @@ input::placeholder { color: var(--faint); }
 .exam-text { flex: 1; min-width: 0; opacity: .85; }
 .exam-input { height: 36px; padding: 0 10px; border: none; border-radius: 10px; background: var(--on-ink); color: var(--ink); font-size: 14px; outline: none; color-scheme: light; }
 @media (prefers-color-scheme: dark) { .exam-input { color-scheme: dark; } }
+.today-split { font-family: var(--mono); font-size: 12px; opacity: .7; margin-top: 6px; }
+.new-row { justify-content: space-between; }
+.new-warn { font-weight: 700; color: var(--unsure); }
+.stepper { display: flex; align-items: center; gap: 4px; flex-shrink: 0; }
+.stepper-btn { width: 36px; height: 36px; border-radius: 50%; border: 1px solid color-mix(in srgb, var(--on-ink) 30%, transparent); background: none; color: var(--on-ink); font-size: 18px; font-weight: 600; line-height: 1; }
+.stepper-btn:disabled { opacity: .3; }
+.stepper-val { min-width: 64px; display: flex; flex-direction: column; align-items: center; font-size: 18px; font-weight: 800; font-variant-numeric: tabular-nums; line-height: 1.1; }
+.stepper-val small { font-family: var(--mono); font-size: 10px; font-weight: 500; opacity: .65; }
 .today .link-btn { height: auto; padding: 0; color: var(--on-ink); text-decoration-color: currentColor; }
 .today .link-btn.danger { opacity: .75; text-decoration: underline; }
 
@@ -398,6 +406,8 @@ input::placeholder { color: var(--faint); }
 .tbl-wrap { margin: 10px 0 6px; padding-left: var(--pad, 0); overflow-x: auto; }
 .tbl { border-collapse: separate; border-spacing: 0; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; background: var(--surface); color: var(--ink); font-variant-numeric: tabular-nums; }
 .tbl th, .tbl td { padding: 8px 14px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; line-height: 1.3; }
+/* Long German compounds: hyphenate where the browser can, instead of pushing the table sideways. */
+.tbl td, .tbl th { hyphens: auto; -webkit-hyphens: auto; }
 .tbl tbody tr:last-child td, .tbl thead:last-child th { border-bottom: none; }
 .tbl th { background: var(--surface-2); font-size: 13px; font-weight: 700; }
 .tbl td { font-family: var(--serif); font-size: 16px; }

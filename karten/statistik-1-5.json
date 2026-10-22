@@ -8,4073 +8,3637 @@
  ],
  "cards": [
   {
-   "id": "st1-01",
+   "id": "st1-v2-01",
    "subject": "Einführung in die Statistik",
    "title": "ST1 · Was ist Statistik?",
    "status": "neu",
    "lines": [
     {
-     "id": "st1-01-01",
+     "id": "st1-v2-01-01",
      "level": 0,
      "text": "Teilbereich der empirischen Sozialforschung"
     },
     {
-     "id": "st1-01-02",
+     "id": "st1-v2-01-02",
      "level": 1,
      "text": "Sammlung von Techniken zur korrekten wissenschaftlichen Untersuchung menschlichen Verhaltens und gesellschaftlicher Phänomene (Schnell/Hill/Esser)"
     },
     {
-     "id": "st1-01-03",
+     "id": "st1-v2-01-03",
      "level": 1,
      "text": "regelgeleitete Prüfung von Hypothesen bzw. Testung von Theorien"
     },
     {
-     "id": "st1-01-04",
+     "id": "st1-v2-01-04",
      "level": 0,
      "text": "„Unter Statistik verstehen wir das Sammeln und Interpretieren von Zahlen, um Hypothesen zu finden und zu überprüfen.\" (Ostermann/Wolf-Ostermann 2005)"
     },
     {
-     "id": "st1-01-05",
+     "id": "st1-v2-01-05",
      "level": 0,
      "text": "Anwendungsbereiche: Wirtschafts-, Betriebs-, Bevölkerungs-, Sozial-, Medizinstatistik …"
     },
     {
-     "id": "st1-01-06",
+     "id": "st1-v2-01-06",
      "level": 1,
      "text": "Methoden immer im Kontext des Anwendungsbereichs diskutieren"
     }
    ]
   },
   {
-   "id": "st1-02",
+   "id": "st1-v2-02",
    "subject": "Einführung in die Statistik",
-   "title": "ST1 · Alltagsstatistik vs. statistische Methoden",
+   "title": "ST1 · Alltagsstatistik oder statistische Methoden?",
    "status": "neu",
    "lines": [
     {
-     "id": "st1-02-01",
+     "id": "st1-v2-02-01",
      "level": 0,
-     "text": "Alltagsstatistik | Statistische Methoden"
+     "text": "Gegenüberstellung"
     },
     {
-     "id": "st1-02-02",
-     "level": 0,
-     "text": "Bundesliga-Tabelle | ?Quantifizierung"
+     "id": "st1-v2-02-02",
+     "level": 1,
+     "text": "All­tags­sta­tis­tik | Sta­tisti­sche Methoden"
     },
     {
-     "id": "st1-02-03",
-     "level": 0,
-     "text": "„der Durchschnittsösterreicher\" | ?Deskription"
+     "id": "st1-v2-02-03",
+     "level": 1,
+     "text": "Bundesliga-Tabelle | ?Quantifi­zie­rung"
     },
     {
-     "id": "st1-02-04",
-     "level": 0,
+     "id": "st1-v2-02-04",
+     "level": 1,
+     "text": "„der Durch­schnittsös­ter­rei­cher\" | ?Deskription"
+    },
+    {
+     "id": "st1-v2-02-05",
+     "level": 1,
      "text": "Bierkonsum im Vergleich | ?Folgerung"
     },
     {
-     "id": "st1-02-05",
-     "level": 0,
+     "id": "st1-v2-02-06",
+     "level": 1,
      "text": "Regen- und Sonnentage pro Monat | ?Grundlage für Erklärung"
     },
     {
-     "id": "st1-02-06",
+     "id": "st1-v2-02-07",
      "level": 0,
      "text": "Statistische Methoden sind systematisch und regelgeleitet"
     }
    ]
   },
   {
-   "id": "st1-03",
+   "id": "st1-v2-03",
    "subject": "Einführung in die Statistik",
-   "title": "ST1 · Wozu Statistik in der Pflege?",
+   "title": "ST1 · Wozu braucht man Statistik in der Pflege?",
    "status": "neu",
    "lines": [
     {
-     "id": "st1-03-01",
+     "id": "st1-v2-03-01",
      "level": 0,
      "text": "Statistische Fragestellungen aus dem Pflegealltag"
     },
     {
-     "id": "st1-03-02",
+     "id": "st1-v2-03-02",
      "level": 1,
      "text": "„Was würde wohl geschehen, wenn …?\""
     },
     {
-     "id": "st1-03-03",
+     "id": "st1-v2-03-03",
      "level": 1,
      "text": "„Welche Merkmale hängen zusammen mit …?\""
     },
     {
-     "id": "st1-03-04",
+     "id": "st1-v2-03-04",
      "level": 1,
      "text": "„Was ist die Wirkung von … auf die Ergebnisse bei Patienten?\""
     },
     {
-     "id": "st1-03-05",
+     "id": "st1-v2-03-05",
      "level": 0,
      "text": "Konzeption quantitativer Studien"
     },
     {
-     "id": "st1-03-06",
+     "id": "st1-v2-03-06",
      "level": 0,
      "text": "Fachartikel lesen und verstehen"
     },
     {
-     "id": "st1-03-07",
+     "id": "st1-v2-03-07",
      "level": 0,
      "text": "Mitwirkung in Untersuchungen und Studien"
     }
    ]
   },
   {
-   "id": "st1-04",
+   "id": "st1-v2-04",
    "subject": "Einführung in die Statistik",
-   "title": "ST1 · Statistik im Forschungsprozess",
+   "title": "ST1 · Wo steht die Statistik im Forschungsprozess?",
    "status": "neu",
    "lines": [
     {
-     "id": "st1-04-01",
+     "id": "st1-v2-04-01",
      "level": 0,
      "text": "Problembenennung → Gegenstandsbenennung → Durchführung → Analyse → Verwertung"
     },
     {
-     "id": "st1-04-02",
+     "id": "st1-v2-04-02",
      "level": 0,
-     "text": "1. Problembenennung: wissenschaftliche Fragestellung"
+     "text": "Was in jedem Schritt passiert"
     },
     {
-     "id": "st1-04-03",
-     "level": 0,
-     "text": "2. Gegenstandsbenennung: Forschungsdesign, Operationalisierung, Hypothesen"
+     "id": "st1-v2-04-03",
+     "level": 1,
+     "text": "Schritt | Inhalt"
     },
     {
-     "id": "st1-04-04",
-     "level": 0,
-     "text": "3. Durchführung: Forschungsmethoden anwenden"
+     "id": "st1-v2-04-04",
+     "level": 1,
+     "text": "1 Pro­blembe­nen­nung | ?wis­sen­schaftli­che Frage­stel­lung"
     },
     {
-     "id": "st1-04-05",
-     "level": 0,
-     "text": "4. Analyse: Auswertungsverfahren – hier ist die Statistik"
+     "id": "st1-v2-04-05",
+     "level": 1,
+     "text": "2 Gegen­standsbe­nen­nung | ?For­schungsde­sign, Operationali­sie­rung, Hypothesen"
     },
     {
-     "id": "st1-04-06",
-     "level": 0,
-     "text": "5. Verwertung: Ergebnisse aufbereiten (Tabellen, Grafiken), Berichte und Publikationen"
+     "id": "st1-v2-04-06",
+     "level": 1,
+     "text": "3 Durch­füh­rung | ?For­schungsme­tho­den anwenden"
     },
     {
-     "id": "st1-04-07",
+     "id": "st1-v2-04-07",
+     "level": 1,
+     "text": "4 Analyse | ?Aus­wer­tungs­ver­fah­ren – hier ist die Statistik"
+    },
+    {
+     "id": "st1-v2-04-08",
+     "level": 1,
+     "text": "5 Verwertung | ?Ergebnisse aufbereiten (Tabellen, Grafiken), Berichte und Publikatio­nen"
+    },
+    {
+     "id": "st1-v2-04-09",
      "level": 0,
      "text": "Grundsatz: Wer Statistik anwendet, muss die vorangehenden Forschungsschritte mitdenken"
     }
    ]
   },
   {
-   "id": "st1-05",
+   "id": "st1-v2-05",
    "subject": "Einführung in die Statistik",
-   "title": "ST1 · Deskriptive vs. schließende Statistik",
+   "title": "ST1 · Deskriptive oder schließende Statistik?",
    "status": "neu",
    "lines": [
     {
-     "id": "st1-05-01",
+     "id": "st1-v2-05-01",
      "level": 0,
+     "text": "Gegenüberstellung"
+    },
+    {
+     "id": "st1-v2-05-02",
+     "level": 1,
      "text": "Deskriptive Statistik | Schließende Statistik"
     },
     {
-     "id": "st1-05-02",
-     "level": 0,
-     "text": "auch: beschreibende Statistik | ?auch: Inferenzstatistik, analytische oder induktive Statistik"
+     "id": "st1-v2-05-03",
+     "level": 1,
+     "text": "auch: beschrei­bende Statistik | ?auch: Infe­renz­sta­tis­tik, analytische oder induktive Statistik"
     },
     {
-     "id": "st1-05-03",
-     "level": 0,
-     "text": "zusammenfassende Beschreibung empirischer Daten | ?Hypothesentestung, statistische Prüfung von Aussagen"
+     "id": "st1-v2-05-04",
+     "level": 1,
+     "text": "zusam­men­fas­sende Beschrei­bung empirischer Daten | ?Hypo­the­sen­tes­tung, sta­tisti­sche Prüfung von Aussagen"
     },
     {
-     "id": "st1-05-04",
-     "level": 0,
-     "text": "Strukturierung in Tabellen und Grafiken | ?Schluss von der Stichprobe auf die Grundgesamtheit (Schätzung)"
+     "id": "st1-v2-05-05",
+     "level": 1,
+     "text": "Struktu­rie­rung in Tabellen und Grafiken | ?Schluss von der Stichprobe auf die Grundge­samt­heit (Schätzung)"
     },
     {
-     "id": "st1-05-05",
+     "id": "st1-v2-05-06",
      "level": 0,
-     "text": "Beide gliedern sich in univariate, bivariate und multivariate Analysen"
+     "text": "Beide gliedern sich nach Zahl der Variablen"
     },
     {
-     "id": "st1-05-06",
+     "id": "st1-v2-05-07",
      "level": 1,
      "text": "univariat: eine Variable"
     },
     {
-     "id": "st1-05-07",
+     "id": "st1-v2-05-08",
      "level": 1,
      "text": "bivariat: zwei Variablen"
     },
     {
-     "id": "st1-05-08",
+     "id": "st1-v2-05-09",
      "level": 1,
      "text": "multivariat: mehrere Variablen"
+    },
+    {
+     "id": "st1-v2-05-10",
+     "level": 0,
+     "text": "Merkhilfe Suppe: Topf = Grundgesamtheit, Löffel = Stichprobe"
+    },
+    {
+     "id": "st1-v2-05-11",
+     "level": 1,
+     "text": "deskriptiv: „Was ist auf meinem Löffel?\" – z. B. „Von meinen 40 Befragten rauchen 19\""
+    },
+    {
+     "id": "st1-v2-05-12",
+     "level": 1,
+     "text": "schließend: „Was sagt mein Löffel über den ganzen Topf?\" – z. B. „Rauchen Männer auch in der Bevölkerung häufiger?\""
     }
    ]
   },
   {
-   "id": "st1-e01",
+   "id": "st1-v2-06",
    "subject": "Einführung in die Statistik",
-   "title": "ST1 · Einfach erklärt: deskriptiv vs. schließend",
+   "title": "ST1 · Was sind Merkmalsträger, Merkmal und Grundgesamtheit?",
    "status": "neu",
    "lines": [
     {
-     "id": "st1-e01-01",
-     "level": 0,
-     "text": "Bild: Suppe probieren"
-    },
-    {
-     "id": "st1-e01-02",
-     "level": 1,
-     "text": "Topf = Grundgesamtheit, Löffel = Stichprobe"
-    },
-    {
-     "id": "st1-e01-03",
-     "level": 0,
-     "text": "Deskriptiv: „Was ist auf meinem Löffel?\""
-    },
-    {
-     "id": "st1-e01-04",
-     "level": 1,
-     "text": "Ich beschreibe nur die Daten, die ich habe"
-    },
-    {
-     "id": "st1-e01-05",
-     "level": 1,
-     "text": "z. B. „Von meinen 40 Befragten rauchen 19\""
-    },
-    {
-     "id": "st1-e01-06",
-     "level": 0,
-     "text": "Schließend: „Was sagt mein Löffel über den ganzen Topf?\""
-    },
-    {
-     "id": "st1-e01-07",
-     "level": 1,
-     "text": "Ich schließe von der Stichprobe auf die Grundgesamtheit"
-    },
-    {
-     "id": "st1-e01-08",
-     "level": 1,
-     "text": "z. B. „Rauchen Männer auch in der ganzen Bevölkerung häufiger als Frauen?\""
-    },
-    {
-     "id": "st1-e01-09",
-     "level": 0,
-     "text": "Merke: beschreiben = deskriptiv, verallgemeinern = schließend (Inferenz)"
-    }
-   ]
-  },
-  {
-   "id": "st1-06",
-   "subject": "Einführung in die Statistik",
-   "title": "ST1 · Grundbegriffe: Merkmalsträger, Merkmal, Grundgesamtheit",
-   "status": "neu",
-   "lines": [
-    {
-     "id": "st1-06-01",
+     "id": "st1-v2-06-01",
      "level": 0,
      "text": "Merkmalsträger (Untersuchungseinheiten)"
     },
     {
-     "id": "st1-06-02",
+     "id": "st1-v2-06-02",
      "level": 1,
      "text": "Träger der Eigenschaften, die untersucht werden"
     },
     {
-     "id": "st1-06-03",
+     "id": "st1-v2-06-03",
      "level": 0,
      "text": "Merkmale"
     },
     {
-     "id": "st1-06-04",
+     "id": "st1-v2-06-04",
      "level": 1,
      "text": "interessierende Größen bzw. Eigenschaften der Untersuchungseinheiten"
     },
     {
-     "id": "st1-06-05",
+     "id": "st1-v2-06-05",
      "level": 0,
      "text": "Grundgesamtheit (target population)"
     },
     {
-     "id": "st1-06-06",
+     "id": "st1-v2-06-06",
      "level": 1,
      "text": "Menge aller Merkmalsträger, über die Aussagen getroffen werden sollen"
     },
     {
-     "id": "st1-06-07",
+     "id": "st1-v2-06-07",
      "level": 1,
      "text": "definiert sachlich, räumlich und zeitlich"
     },
     {
-     "id": "st1-06-08",
+     "id": "st1-v2-06-08",
      "level": 1,
      "text": "Beispiel: alle Personen, die an der PMU Salzburg (räumlich) zum 01.09.2009 (zeitlich) als Studierende gemeldet (sachlich) waren"
     }
    ]
   },
   {
-   "id": "st1-07",
+   "id": "st1-v2-07",
    "subject": "Einführung in die Statistik",
-   "title": "ST1 · Grundbegriffe: Stichprobe",
+   "title": "ST1 · Was ist eine Stichprobe?",
    "status": "neu",
    "lines": [
     {
-     "id": "st1-07-01",
+     "id": "st1-v2-07-01",
      "level": 0,
      "text": "Teilerhebung aus der Grundgesamtheit (sample)"
     },
     {
-     "id": "st1-07-02",
+     "id": "st1-v2-07-02",
      "level": 0,
      "text": "Auswahlverfahren: Zufallsstichproben vs. systematische Auswahl"
     },
     {
-     "id": "st1-07-03",
+     "id": "st1-v2-07-03",
      "level": 0,
-     "text": "Einfache Zufallsstichprobe: Alle Elemente haben die gleiche Wahrscheinlichkeit, gezogen zu werden"
+     "text": "Einfache Zufallsstichprobe: alle Elemente haben die gleiche Wahrscheinlichkeit, gezogen zu werden"
     },
     {
-     "id": "st1-07-04",
+     "id": "st1-v2-07-04",
      "level": 0,
      "text": "Repräsentative Schlüsse auf die Grundgesamtheit erlauben streng genommen nur Zufallsstichproben"
     },
     {
-     "id": "st1-07-05",
+     "id": "st1-v2-07-05",
      "level": 0,
      "text": "Der gesamte Forschungsprozess muss systematisch kontrolliert und dokumentiert werden"
     }
    ]
   },
   {
-   "id": "st1-e02",
+   "id": "st1-v2-08",
    "subject": "Einführung in die Statistik",
-   "title": "ST1 · Einfach erklärt: die Grundbegriffe an einem Beispiel",
+   "title": "ST1 · Grundbegriffe am Beispiel: Schmerzen nach Hüft-OP",
    "status": "neu",
    "lines": [
     {
-     "id": "st1-e02-01",
+     "id": "st1-v2-08-01",
      "level": 0,
      "text": "Studie: Wie stark sind die Schmerzen nach einer Hüft-OP im Klinikum X (2026)?"
     },
     {
-     "id": "st1-e02-02",
+     "id": "st1-v2-08-02",
      "level": 0,
-     "text": "Merkmalsträger = wer oder was untersucht wird"
+     "text": "Zuordnen"
     },
     {
-     "id": "st1-e02-03",
+     "id": "st1-v2-08-03",
      "level": 1,
-     "text": "jede einzelne operierte Person"
+     "text": "Begriff | im Beispiel"
     },
     {
-     "id": "st1-e02-04",
+     "id": "st1-v2-08-04",
+     "level": 1,
+     "text": "Merk­mals­trä­ger (wer wird untersucht?) | ?jede einzelne operierte Person"
+    },
+    {
+     "id": "st1-v2-08-05",
+     "level": 1,
+     "text": "Merkmal (was will ich wissen?) | ?Schmerz­stärke"
+    },
+    {
+     "id": "st1-v2-08-06",
+     "level": 1,
+     "text": "Merk­mals­ausprä­gung (konkreter Wert) | ?z. B. „6\" auf der Schmerz­skala"
+    },
+    {
+     "id": "st1-v2-08-07",
+     "level": 1,
+     "text": "Grundge­samt­heit (über wen will ich etwas sagen?) | ?alle Hüft-OP-Patient:innen im Klinikum X im Jahr 2026"
+    },
+    {
+     "id": "st1-v2-08-08",
+     "level": 1,
+     "text": "Stichprobe (wen befrage ich wirklich?) | ?z. B. 100 zufällig ausgewählte davon"
+    },
+    {
+     "id": "st1-v2-08-09",
      "level": 0,
-     "text": "Merkmal = was ich an ihnen wissen will"
-    },
-    {
-     "id": "st1-e02-05",
-     "level": 1,
-     "text": "Schmerzstärke"
-    },
-    {
-     "id": "st1-e02-06",
-     "level": 0,
-     "text": "Merkmalsausprägung = der konkrete Wert"
-    },
-    {
-     "id": "st1-e02-07",
-     "level": 1,
-     "text": "z. B. „6\" auf der Schmerzskala"
-    },
-    {
-     "id": "st1-e02-08",
-     "level": 0,
-     "text": "Grundgesamtheit = über wen ich eine Aussage will"
-    },
-    {
-     "id": "st1-e02-09",
-     "level": 1,
-     "text": "alle Hüft-OP-Patient:innen im Klinikum X im Jahr 2026"
-    },
-    {
-     "id": "st1-e02-10",
-     "level": 1,
-     "text": "sachlich (Hüft-OP), räumlich (Klinikum X), zeitlich (2026)"
-    },
-    {
-     "id": "st1-e02-11",
-     "level": 0,
-     "text": "Stichprobe = die, die ich wirklich befrage"
-    },
-    {
-     "id": "st1-e02-12",
-     "level": 1,
-     "text": "z. B. 100 zufällig ausgewählte davon"
+     "text": "Grundgesamtheit hier: sachlich (Hüft-OP), räumlich (Klinikum X), zeitlich (2026)"
     }
    ]
   },
   {
-   "id": "st1-08",
+   "id": "st1-v2-09",
    "subject": "Einführung in die Statistik",
-   "title": "ST1 · Operationalisierung, Codierung, Variable",
+   "title": "ST1 · Was sind Operationalisierung, Codierung und Variable?",
    "status": "neu",
    "lines": [
     {
-     "id": "st1-08-01",
+     "id": "st1-v2-09-01",
      "level": 0,
-     "text": "Operationalisierung = Messbarmachung von Merkmalen"
+     "text": "Operationalisierung = Messbarmachung von Merkmalen: „Wie mache ich das messbar?\""
     },
     {
-     "id": "st1-08-02",
+     "id": "st1-v2-09-02",
      "level": 1,
-     "text": "Körpergröße mit Maßband, Schmerz mit Schmerzskala (NRS), Agitation mit CMAI"
+     "text": "Körpergröße mit Maßband, Schmerz mit Schmerzskala (NRS 0–10), Agitation mit CMAI"
     },
     {
-     "id": "st1-08-03",
+     "id": "st1-v2-09-03",
      "level": 0,
-     "text": "Codierung = einem empirischen Relativ ein numerisches Relativ zuordnen"
+     "text": "Codierung = einem empirischen Relativ ein numerisches Relativ zuordnen: „Welche Zahl schreibe ich in die Tabelle?\""
     },
     {
-     "id": "st1-08-04",
+     "id": "st1-v2-09-04",
      "level": 1,
      "text": "Geschlecht | Code"
     },
     {
-     "id": "st1-08-05",
+     "id": "st1-v2-09-05",
      "level": 1,
      "text": "männlich | ?1"
     },
     {
-     "id": "st1-08-06",
+     "id": "st1-v2-09-06",
      "level": 1,
      "text": "weiblich | ?2"
     },
     {
-     "id": "st1-08-07",
-     "level": 0,
-     "text": "Variable = operationalisiertes Merkmal"
-    },
-    {
-     "id": "st1-08-08",
-     "level": 1,
-     "text": "Sammelbegriff für die Ausprägungen einer Eigenschaft (Variablenwerte)"
-    },
-    {
-     "id": "st1-08-09",
-     "level": 0,
-     "text": "Arten von Variablen"
-    },
-    {
-     "id": "st1-08-10",
-     "level": 1,
-     "text": "dichotom vs. polytom"
-    },
-    {
-     "id": "st1-08-11",
-     "level": 1,
-     "text": "manifest vs. latent"
-    },
-    {
-     "id": "st1-08-12",
-     "level": 1,
-     "text": "kategorial vs. metrisch"
-    },
-    {
-     "id": "st1-08-13",
-     "level": 1,
-     "text": "stetig vs. diskret"
-    },
-    {
-     "id": "st1-08-14",
-     "level": 1,
-     "text": "nach Skalenniveau"
-    }
-   ]
-  },
-  {
-   "id": "st1-e03",
-   "subject": "Einführung in die Statistik",
-   "title": "ST1 · Einfach erklärt: Operationalisierung und Codierung",
-   "status": "neu",
-   "lines": [
-    {
-     "id": "st1-e03-01",
-     "level": 0,
-     "text": "Operationalisierung: „Wie mache ich das messbar?\""
-    },
-    {
-     "id": "st1-e03-02",
-     "level": 1,
-     "text": "Schmerz kann man nicht direkt sehen, also: Schmerzskala 0–10 (NRS)"
-    },
-    {
-     "id": "st1-e03-03",
-     "level": 1,
-     "text": "Körpergröße: Maßband in cm"
-    },
-    {
-     "id": "st1-e03-04",
-     "level": 0,
-     "text": "Codierung: „Welche Zahl schreibe ich in die Tabelle?\""
-    },
-    {
-     "id": "st1-e03-05",
-     "level": 1,
-     "text": "männlich = 1, weiblich = 2"
-    },
-    {
-     "id": "st1-e03-06",
+     "id": "st1-v2-09-07",
      "level": 0,
      "text": "Achtung: Codes sind nur Etiketten"
     },
     {
-     "id": "st1-e03-07",
+     "id": "st1-v2-09-08",
      "level": 1,
-     "text": "2 ist hier nicht „mehr\" als 1, man könnte genauso 7 und 3 nehmen"
+     "text": "2 ist hier nicht „mehr\" als 1 – deshalb darf man mit nominalen Codes nicht rechnen"
     },
     {
-     "id": "st1-e03-08",
-     "level": 1,
-     "text": "deshalb darf man mit nominalen Codes nicht rechnen"
-    },
-    {
-     "id": "st1-e03-09",
+     "id": "st1-v2-09-09",
      "level": 0,
-     "text": "Variable = das fertig messbar gemachte Merkmal mit seinen möglichen Werten"
+     "text": "Variable = operationalisiertes Merkmal"
+    },
+    {
+     "id": "st1-v2-09-10",
+     "level": 1,
+     "text": "Sammelbegriff für die Ausprägungen einer Eigenschaft (Variablenwerte)"
     }
    ]
   },
   {
-   "id": "st1-09",
+   "id": "st1-v2-10",
    "subject": "Einführung in die Statistik",
-   "title": "ST1 · Die vier Skalenniveaus (Stevens, 1946)",
+   "title": "ST1 · Welche Arten von Variablen gibt es?",
    "status": "neu",
    "lines": [
     {
-     "id": "st1-09-01",
+     "id": "st1-v2-10-01",
+     "level": 0,
+     "text": "Fünf Unterscheidungen"
+    },
+    {
+     "id": "st1-v2-10-02",
+     "level": 1,
+     "text": "Gegen­satz­paar | Erklärung"
+    },
+    {
+     "id": "st1-v2-10-03",
+     "level": 1,
+     "text": "dichotom vs. polytom | ?zwei Aus­prä­gun­gen vs. mehr als zwei"
+    },
+    {
+     "id": "st1-v2-10-04",
+     "level": 1,
+     "text": "manifest vs. latent | ?direkt beobachtbar (Puls) vs. nur indirekt erfassbar (Angst)"
+    },
+    {
+     "id": "st1-v2-10-05",
+     "level": 1,
+     "text": "kategorial vs. metrisch | ?Kategorien vs. Zahlenwerte mit Abständen"
+    },
+    {
+     "id": "st1-v2-10-06",
+     "level": 1,
+     "text": "stetig vs. diskret | ?beliebige Zwi­schen­werte (Körpergröße) vs. abzählbare Werte (Anzahl Stürze)"
+    },
+    {
+     "id": "st1-v2-10-07",
+     "level": 1,
+     "text": "nach Ska­lenni­veau | ?nominal, ordinal, intervall, ratio"
+    },
+    {
+     "id": "st1-v2-10-08",
+     "level": 0,
+     "text": "Erklärungen in der rechten Spalte sind Standarddefinitionen, auf den Folien stehen nur die Begriffe"
+    }
+   ]
+  },
+  {
+   "id": "st1-v2-11",
+   "subject": "Einführung in die Statistik",
+   "title": "ST1 · Welche vier Skalenniveaus gibt es? (Stevens, 1946)",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "st1-v2-11-01",
      "level": 0,
      "text": "Kategoriale (qualitative) Skalen"
     },
     {
-     "id": "st1-09-02",
+     "id": "st1-v2-11-02",
      "level": 1,
      "text": "Nominalskala"
     },
     {
-     "id": "st1-09-03",
+     "id": "st1-v2-11-03",
      "level": 1,
      "text": "Ordinalskala"
     },
     {
-     "id": "st1-09-04",
+     "id": "st1-v2-11-04",
      "level": 0,
      "text": "Metrische (quantitative) Skalen"
     },
     {
-     "id": "st1-09-05",
+     "id": "st1-v2-11-05",
      "level": 1,
      "text": "Intervallskala"
     },
     {
-     "id": "st1-09-06",
+     "id": "st1-v2-11-06",
      "level": 1,
      "text": "Ratioskala"
     },
     {
-     "id": "st1-09-07",
+     "id": "st1-v2-11-07",
      "level": 0,
      "text": "Jede Stufe hat alle Eigenschaften der vorherigen plus eine neue"
     },
     {
-     "id": "st1-09-08",
-     "level": 0,
+     "id": "st1-v2-11-08",
+     "level": 1,
      "text": "Hierarchie: nominal → ordinal → metrisch"
     },
     {
-     "id": "st1-09-09",
+     "id": "st1-v2-11-09",
+     "level": 1,
+     "text": "je höher das Niveau, desto mehr Informationsgehalt und desto mehr statistische Verfahren sind möglich"
+    },
+    {
+     "id": "st1-v2-11-10",
      "level": 0,
-     "text": "Je höher das Niveau, desto mehr Informationsgehalt und desto mehr statistische Verfahren sind möglich"
+     "text": "Merkhilfe: NOIR (französisch „schwarz\") – Nominal, Ordinal, Intervall, Ratio"
     }
    ]
   },
   {
-   "id": "st1-10",
+   "id": "st1-v2-12",
    "subject": "Einführung in die Statistik",
-   "title": "ST1 · Skalenniveaus: was jedes kann",
+   "title": "ST1 · Was kann jedes Skalenniveau?",
    "status": "neu",
    "lines": [
     {
-     "id": "st1-10-01",
+     "id": "st1-v2-12-01",
      "level": 0,
-     "text": "Nominalskala"
+     "text": "Jede Stufe bringt etwas dazu"
     },
     {
-     "id": "st1-10-02",
+     "id": "st1-v2-12-02",
      "level": 1,
-     "text": "Etikettierung; Informationsgehalt: gleich oder ungleich"
+     "text": "Skala | neu dazu"
     },
     {
-     "id": "st1-10-03",
+     "id": "st1-v2-12-03",
      "level": 1,
-     "text": "Kriterium: a = b oder a ≠ b"
+     "text": "nominal | ?Eti­ket­tie­rung: gleich oder ungleich"
     },
     {
-     "id": "st1-10-04",
+     "id": "st1-v2-12-04",
      "level": 1,
-     "text": "z. B. Geschlecht, Blutgruppe"
+     "text": "ordinal | ?Rangfolge: größer oder kleiner"
     },
     {
-     "id": "st1-10-05",
+     "id": "st1-v2-12-05",
+     "level": 1,
+     "text": "intervall | ?gleich große Abstände: Größe der Differenzen"
+    },
+    {
+     "id": "st1-v2-12-06",
+     "level": 1,
+     "text": "ratio | ?natürlicher Nullpunkt: Ver­hält­nisse"
+    },
+    {
+     "id": "st1-v2-12-07",
      "level": 0,
-     "text": "Ordinalskala (zusätzlich)"
+     "text": "Beispiele"
     },
     {
-     "id": "st1-10-06",
+     "id": "st1-v2-12-08",
      "level": 1,
-     "text": "Rangfolge; Informationsgehalt: größer oder kleiner"
+     "text": "Skala | Beispiel"
     },
     {
-     "id": "st1-10-07",
+     "id": "st1-v2-12-09",
      "level": 1,
-     "text": "Kriterium: a < b < c"
+     "text": "nominal | ?Geschlecht, Blutgruppe"
     },
     {
-     "id": "st1-10-08",
+     "id": "st1-v2-12-10",
      "level": 1,
-     "text": "z. B. Schulnote, Pflegestufe"
+     "text": "ordinal | ?Schulnote, Pflegestufe"
     },
     {
-     "id": "st1-10-09",
+     "id": "st1-v2-12-11",
+     "level": 1,
+     "text": "intervall | ?Temperatur in °C, IQ-Test"
+    },
+    {
+     "id": "st1-v2-12-12",
+     "level": 1,
+     "text": "ratio | ?Temperatur in Kelvin, Alter, Blutdruck"
+    },
+    {
+     "id": "st1-v2-12-13",
      "level": 0,
-     "text": "Intervallskala (zusätzlich)"
+     "text": "Kriterium"
     },
     {
-     "id": "st1-10-10",
+     "id": "st1-v2-12-14",
      "level": 1,
-     "text": "gleich große Abstände; Informationsgehalt: Größe der Differenzen"
+     "text": "Skala | Kriterium"
     },
     {
-     "id": "st1-10-11",
+     "id": "st1-v2-12-15",
      "level": 1,
-     "text": "Kriterium: Abstand a zu b = b zu c"
+     "text": "nominal | ?a = b oder a ≠ b"
     },
     {
-     "id": "st1-10-12",
+     "id": "st1-v2-12-16",
      "level": 1,
-     "text": "z. B. Temperatur in °C, IQ-Test"
+     "text": "ordinal | ?a < b < c"
     },
     {
-     "id": "st1-10-13",
-     "level": 0,
-     "text": "Ratioskala (zusätzlich)"
-    },
-    {
-     "id": "st1-10-14",
+     "id": "st1-v2-12-17",
      "level": 1,
-     "text": "natürlicher Nullpunkt; Informationsgehalt: Verhältnisse"
+     "text": "intervall | ?Abstand a zu b = b zu c"
     },
     {
-     "id": "st1-10-15",
+     "id": "st1-v2-12-18",
      "level": 1,
-     "text": "Kriterium: a : b = b : c"
-    },
-    {
-     "id": "st1-10-16",
-     "level": 1,
-     "text": "z. B. Temperatur in Kelvin, Alter, Blutdruck"
+     "text": "ratio | ?a : b = b : c"
     }
    ]
   },
   {
-   "id": "st1-e04",
+   "id": "st1-v2-13",
    "subject": "Einführung in die Statistik",
-   "title": "ST1 · Einfach erklärt: Skalenniveaus mit 4 Fragen",
+   "title": "ST1 · Wie bestimme ich das Skalenniveau mit 4 Fragen?",
    "status": "neu",
    "lines": [
     {
-     "id": "st1-e04-01",
+     "id": "st1-v2-13-01",
      "level": 0,
      "text": "Stell dir die Fragen der Reihe nach, bis du ein „nein\" bekommst"
     },
     {
-     "id": "st1-e04-02",
+     "id": "st1-v2-13-02",
      "level": 0,
      "text": "1. Kann ich nur sagen „gleich oder verschieden\"?"
     },
     {
-     "id": "st1-e04-03",
+     "id": "st1-v2-13-03",
      "level": 1,
      "text": "dann nominal (z. B. Blutgruppe A, B, AB, 0)"
     },
     {
-     "id": "st1-e04-04",
+     "id": "st1-v2-13-04",
      "level": 0,
      "text": "2. Kann ich die Werte sinnvoll ordnen?"
     },
     {
-     "id": "st1-e04-05",
+     "id": "st1-v2-13-05",
      "level": 1,
      "text": "dann mindestens ordinal (z. B. Schulnote 1 bis 5)"
     },
     {
-     "id": "st1-e04-06",
+     "id": "st1-v2-13-06",
      "level": 0,
      "text": "3. Sind die Abstände zwischen den Werten gleich groß?"
     },
     {
-     "id": "st1-e04-07",
+     "id": "st1-v2-13-07",
      "level": 1,
      "text": "dann mindestens intervall (z. B. 10 °C auf 20 °C = 20 °C auf 30 °C)"
     },
     {
-     "id": "st1-e04-08",
+     "id": "st1-v2-13-08",
      "level": 0,
      "text": "4. Gibt es einen echten Nullpunkt, kann ich „doppelt so viel\" sagen?"
     },
     {
-     "id": "st1-e04-09",
+     "id": "st1-v2-13-09",
      "level": 1,
      "text": "dann ratio (z. B. 40 Jahre sind doppelt so alt wie 20 Jahre)"
     },
     {
-     "id": "st1-e04-10",
+     "id": "st1-v2-13-10",
      "level": 0,
-     "text": "Warum ist die Schulnote nicht intervall?"
-    },
-    {
-     "id": "st1-e04-11",
-     "level": 1,
-     "text": "Der Abstand von 1 zu 2 ist nicht unbedingt gleich groß wie von 4 zu 5"
+     "text": "Warum ist die Schulnote nicht intervall? Der Abstand von 1 zu 2 ist nicht unbedingt gleich groß wie von 4 zu 5"
     }
    ]
   },
   {
-   "id": "st1-e05",
+   "id": "st1-v2-14",
    "subject": "Einführung in die Statistik",
-   "title": "ST1 · Einfach erklärt: der Marathon",
+   "title": "ST1 · Wie zeigt ein Marathon alle vier Skalenniveaus?",
    "status": "neu",
    "lines": [
     {
-     "id": "st1-e05-01",
+     "id": "st1-v2-14-01",
      "level": 0,
-     "text": "Ein Marathon zeigt alle vier Skalenniveaus"
+     "text": "Vier Messungen"
     },
     {
-     "id": "st1-e05-02",
+     "id": "st1-v2-14-02",
      "level": 1,
-     "text": "Messung | Skalenniveau"
+     "text": "Messung | Ska­lenni­veau"
     },
     {
-     "id": "st1-e05-03",
+     "id": "st1-v2-14-03",
      "level": 1,
      "text": "Startnummer | ?nominal"
     },
     {
-     "id": "st1-e05-04",
+     "id": "st1-v2-14-04",
      "level": 1,
      "text": "Platzierung (1., 2., 3. …) | ?ordinal"
     },
     {
-     "id": "st1-e05-05",
+     "id": "st1-v2-14-05",
      "level": 1,
      "text": "Uhrzeit beim Zieleinlauf | ?intervall"
     },
     {
-     "id": "st1-e05-06",
+     "id": "st1-v2-14-06",
      "level": 1,
      "text": "Laufzeit in Minuten | ?ratio"
     },
     {
-     "id": "st1-e05-07",
+     "id": "st1-v2-14-07",
      "level": 0,
      "text": "Startnummer: nur ein Name, 200 ist nicht „besser\" als 100"
     },
     {
-     "id": "st1-e05-08",
+     "id": "st1-v2-14-08",
      "level": 0,
      "text": "Platzierung: Reihenfolge ja, aber Platz 1 und 2 können 1 Sekunde oder 10 Minuten trennen"
     },
     {
-     "id": "st1-e05-09",
+     "id": "st1-v2-14-09",
      "level": 0,
      "text": "Uhrzeit: gleiche Abstände, aber 0 Uhr ist kein echtes „nichts\", 14 Uhr ist nicht doppelt so spät wie 7 Uhr"
     },
     {
-     "id": "st1-e05-10",
+     "id": "st1-v2-14-10",
      "level": 0,
      "text": "Laufzeit: 0 Minuten = wirklich keine Zeit, 240 Minuten sind doppelt so lang wie 120"
     }
    ]
   },
   {
-   "id": "st1-11",
+   "id": "st1-v2-15",
    "subject": "Einführung in die Statistik",
-   "title": "ST1 · Welches Skalenniveau hat …?",
+   "title": "ST1 · Übung 1: Welches Skalenniveau hat …?",
    "status": "neu",
    "lines": [
     {
-     "id": "st1-11-01",
+     "id": "st1-v2-15-01",
      "level": 0,
-     "text": "Variable | Skalenniveau"
+     "text": "Variablen aus der Vorlesung"
     },
     {
-     "id": "st1-11-02",
-     "level": 0,
+     "id": "st1-v2-15-02",
+     "level": 1,
+     "text": "Variable | Ska­lenni­veau"
+    },
+    {
+     "id": "st1-v2-15-03",
+     "level": 1,
      "text": "Geschlecht | ?nominal"
     },
     {
-     "id": "st1-11-03",
-     "level": 0,
+     "id": "st1-v2-15-04",
+     "level": 1,
      "text": "Blutgruppe | ?nominal"
     },
     {
-     "id": "st1-11-04",
-     "level": 0,
+     "id": "st1-v2-15-05",
+     "level": 1,
      "text": "Schulnote | ?ordinal"
     },
     {
-     "id": "st1-11-05",
-     "level": 0,
+     "id": "st1-v2-15-06",
+     "level": 1,
      "text": "Pflegestufe | ?ordinal"
     },
     {
-     "id": "st1-11-06",
-     "level": 0,
+     "id": "st1-v2-15-07",
+     "level": 1,
      "text": "Temperatur in °C | ?intervall"
     },
     {
-     "id": "st1-11-07",
-     "level": 0,
-     "text": "IQ-Testergebnis | ?intervall"
+     "id": "st1-v2-15-08",
+     "level": 1,
+     "text": "IQ-Tester­geb­nis | ?intervall"
     },
     {
-     "id": "st1-11-08",
-     "level": 0,
+     "id": "st1-v2-15-09",
+     "level": 1,
      "text": "Temperatur in Kelvin | ?ratio"
     },
     {
-     "id": "st1-11-09",
-     "level": 0,
+     "id": "st1-v2-15-10",
+     "level": 1,
      "text": "Alter | ?ratio"
     },
     {
-     "id": "st1-11-10",
-     "level": 0,
+     "id": "st1-v2-15-11",
+     "level": 1,
      "text": "Blutdruck | ?ratio"
     }
    ]
   },
   {
-   "id": "st1-e06",
+   "id": "st1-v2-16",
    "subject": "Einführung in die Statistik",
-   "title": "ST1 · Übung: Welches Skalenniveau hat …?",
+   "title": "ST1 · Übung 2: Welches Skalenniveau hat …?",
    "status": "neu",
    "lines": [
     {
-     "id": "st1-e06-01",
+     "id": "st1-v2-16-01",
      "level": 0,
-     "text": "Variable | Skalenniveau"
+     "text": "Neue Variablen"
     },
     {
-     "id": "st1-e06-02",
-     "level": 0,
-     "text": "Familienstand | ?nominal"
+     "id": "st1-v2-16-02",
+     "level": 1,
+     "text": "Variable | Ska­lenni­veau"
     },
     {
-     "id": "st1-e06-03",
-     "level": 0,
-     "text": "Postleitzahl | ?nominal"
+     "id": "st1-v2-16-03",
+     "level": 1,
+     "text": "Familien­stand | ?nominal"
     },
     {
-     "id": "st1-e06-04",
-     "level": 0,
-     "text": "Höchster Bildungsabschluss | ?ordinal"
+     "id": "st1-v2-16-04",
+     "level": 1,
+     "text": "Post­leit­zahl | ?nominal"
     },
     {
-     "id": "st1-e06-05",
-     "level": 0,
-     "text": "Zufriedenheit (sehr bis gar nicht) | ?ordinal"
+     "id": "st1-v2-16-05",
+     "level": 1,
+     "text": "höchster Bil­dungsab­schluss | ?ordinal"
     },
     {
-     "id": "st1-e06-06",
-     "level": 0,
+     "id": "st1-v2-16-06",
+     "level": 1,
+     "text": "Zufrie­den­heit (sehr bis gar nicht) | ?ordinal"
+    },
+    {
+     "id": "st1-v2-16-07",
+     "level": 1,
      "text": "Jahreszahl (z. B. 2026) | ?intervall"
     },
     {
-     "id": "st1-e06-07",
-     "level": 0,
-     "text": "Körpergewicht in kg | ?ratio"
+     "id": "st1-v2-16-08",
+     "level": 1,
+     "text": "Kör­perge­wicht in kg | ?ratio"
     },
     {
-     "id": "st1-e06-08",
-     "level": 0,
+     "id": "st1-v2-16-09",
+     "level": 1,
      "text": "Anzahl der Stürze im Monat | ?ratio"
     },
     {
-     "id": "st1-e06-09",
-     "level": 0,
-     "text": "Pulsfrequenz | ?ratio"
+     "id": "st1-v2-16-10",
+     "level": 1,
+     "text": "Puls­fre­quenz | ?ratio"
     },
     {
-     "id": "st1-e06-10",
+     "id": "st1-v2-16-11",
      "level": 0,
      "text": "Trick Intervall vs. Ratio: Klingt „doppelt so viel\" sinnvoll? Dann ratio"
     }
    ]
   },
   {
-   "id": "st1-12",
+   "id": "st1-v2-17",
    "subject": "Einführung in die Statistik",
-   "title": "ST1 · Zulässige Rechenoperationen je Skalenniveau",
+   "title": "ST1 · Welche Rechenoperationen sind je Skalenniveau zulässig?",
    "status": "neu",
    "lines": [
     {
-     "id": "st1-12-01",
+     "id": "st1-v2-17-01",
      "level": 0,
+     "text": "Was zusätzlich erlaubt ist"
+    },
+    {
+     "id": "st1-v2-17-02",
+     "level": 1,
      "text": "Skala | zusätzlich erlaubt"
     },
     {
-     "id": "st1-12-02",
-     "level": 0,
+     "id": "st1-v2-17-03",
+     "level": 1,
      "text": "nominal | ?Umbenennung"
     },
     {
-     "id": "st1-12-03",
-     "level": 0,
-     "text": "ordinal | ?Rangtransformation"
+     "id": "st1-v2-17-04",
+     "level": 1,
+     "text": "ordinal | ?Rang­trans­forma­tion"
     },
     {
-     "id": "st1-12-04",
-     "level": 0,
+     "id": "st1-v2-17-05",
+     "level": 1,
      "text": "intervall | ?Addition und Subtraktion"
     },
     {
-     "id": "st1-12-05",
-     "level": 0,
-     "text": "ratio | ?Multiplikation und Division"
+     "id": "st1-v2-17-06",
+     "level": 1,
+     "text": "ratio | ?Multi­plika­tion und Division"
     },
     {
-     "id": "st1-12-06",
+     "id": "st1-v2-17-07",
      "level": 0,
      "text": "Praktische Relevanz: Statistische Verfahren sind an Skalenniveaus gebunden, Voraussetzungen müssen geprüft werden"
     }
    ]
   },
   {
-   "id": "st2-01",
+   "id": "st2-v2-01",
    "subject": "Einführung in die Statistik",
-   "title": "ST2 · Aufgaben der deskriptiven Statistik",
+   "title": "ST2 · Welche Aufgaben hat die deskriptive Statistik?",
    "status": "neu",
    "lines": [
     {
-     "id": "st2-01-01",
+     "id": "st2-v2-01-01",
      "level": 0,
      "text": "Darstellung von Daten"
     },
     {
-     "id": "st2-01-02",
+     "id": "st2-v2-01-02",
      "level": 0,
      "text": "Beschreibung (Kennwerte)"
     },
     {
-     "id": "st2-01-03",
+     "id": "st2-v2-01-03",
      "level": 0,
      "text": "Zusammenhänge (Assoziations- und Korrelationsmaße)"
     },
     {
-     "id": "st2-01-04",
+     "id": "st2-v2-01-04",
      "level": 0,
      "text": "Zusammenfassung und Reduktion"
     },
     {
-     "id": "st2-01-05",
+     "id": "st2-v2-01-05",
      "level": 0,
      "text": "Schätzungen bzw. Prognosen"
     }
    ]
   },
   {
-   "id": "st2-02",
+   "id": "st2-v2-02",
    "subject": "Einführung in die Statistik",
-   "title": "ST2 · Univariate Analyse in 3 Schritten",
+   "title": "ST2 · In welchen 3 Schritten läuft eine univariate Analyse?",
    "status": "neu",
    "lines": [
     {
-     "id": "st2-02-01",
+     "id": "st2-v2-02-01",
      "level": 0,
      "text": "Klassifizierung in Häufigkeitstabellen → Grafische Darstellung in Diagrammen → Numerische Beschreibung durch Kennwerte"
     },
     {
-     "id": "st2-02-02",
+     "id": "st2-v2-02-02",
      "level": 0,
      "text": "Univariat = eine Variable"
+    },
+    {
+     "id": "st2-v2-02-03",
+     "level": 0,
+     "text": "Merkhilfe: zählen – zeichnen – kennzeichnen"
     }
    ]
   },
   {
-   "id": "st2-03",
+   "id": "st2-v2-03",
    "subject": "Einführung in die Statistik",
-   "title": "ST2 · Die Häufigkeitstabelle",
+   "title": "ST2 · Welche Spalten hat eine Häufigkeitstabelle?",
    "status": "neu",
    "lines": [
     {
-     "id": "st2-03-01",
+     "id": "st2-v2-03-01",
      "level": 0,
      "text": "Ordnen und Zählen der beobachteten Werte = Häufigkeitsverteilung"
     },
     {
-     "id": "st2-03-02",
+     "id": "st2-v2-03-02",
      "level": 0,
-     "text": "Spalten"
+     "text": "Die Spalten"
     },
     {
-     "id": "st2-03-03",
+     "id": "st2-v2-03-03",
      "level": 1,
      "text": "Absolute Häufigkeit: Anzahl"
     },
     {
-     "id": "st2-03-04",
+     "id": "st2-v2-03-04",
      "level": 1,
      "text": "Relative Häufigkeit: Prozent aller Fälle"
     },
     {
-     "id": "st2-03-05",
+     "id": "st2-v2-03-05",
      "level": 1,
      "text": "Valide (gültige) Prozent: Prozent ohne fehlende Werte"
     },
     {
-     "id": "st2-03-06",
+     "id": "st2-v2-03-06",
      "level": 1,
      "text": "Kumulierte Prozent: aufsummierte gültige Prozent"
     },
     {
-     "id": "st2-03-07",
-     "level": 0,
-     "text": "Beispiel: Hilfe zur Mündigkeit gegenüber Ärzten (n = 146, 2 fehlend)"
-    },
-    {
-     "id": "st2-03-08",
-     "level": 1,
-     "text": "Ausprägung | Anzahl | kumuliert"
-    },
-    {
-     "id": "st2-03-09",
-     "level": 1,
-     "text": "sehr wichtig | 23 | 16,0 %"
-    },
-    {
-     "id": "st2-03-10",
-     "level": 1,
-     "text": "eher wichtig | 49 | ?50,0 %"
-    },
-    {
-     "id": "st2-03-11",
-     "level": 1,
-     "text": "neutral | 62 | ?93,1 %"
-    },
-    {
-     "id": "st2-03-12",
-     "level": 1,
-     "text": "eher unwichtig | 6 | ?97,2 %"
-    },
-    {
-     "id": "st2-03-13",
-     "level": 1,
-     "text": "unwichtig | 4 | ?100 %"
-    }
-   ]
-  },
-  {
-   "id": "st2-e01",
-   "subject": "Einführung in die Statistik",
-   "title": "ST2 · Einfach erklärt: die Spalten der Häufigkeitstabelle",
-   "status": "neu",
-   "lines": [
-    {
-     "id": "st2-e01-01",
+     "id": "st2-v2-03-07",
      "level": 0,
      "text": "Mini-Beispiel: 10 Personen gefragt „Rauchen Sie?\", 2 antworten nicht"
     },
     {
-     "id": "st2-e01-02",
+     "id": "st2-v2-03-08",
      "level": 1,
      "text": "Antwort | Anzahl | Prozent | gültige Prozent"
     },
     {
-     "id": "st2-e01-03",
+     "id": "st2-v2-03-09",
      "level": 1,
      "text": "ja | 3 | ?30 % | ?37,5 %"
     },
     {
-     "id": "st2-e01-04",
+     "id": "st2-v2-03-10",
      "level": 1,
      "text": "nein | 5 | ?50 % | ?62,5 %"
     },
     {
-     "id": "st2-e01-05",
+     "id": "st2-v2-03-11",
      "level": 1,
      "text": "keine Antwort | 2 | ?20 % | –"
     },
     {
-     "id": "st2-e01-06",
+     "id": "st2-v2-03-12",
      "level": 0,
-     "text": "Prozent = von allen 10, auch denen ohne Antwort"
-    },
+     "text": "Prozent = von allen 10; gültige Prozent = nur von den 8, die geantwortet haben"
+    }
+   ]
+  },
+  {
+   "id": "st2-v2-04",
+   "subject": "Einführung in die Statistik",
+   "title": "ST2 · Wie liest man kumulierte Prozent?",
+   "status": "neu",
+   "lines": [
     {
-     "id": "st2-e01-07",
+     "id": "st2-v2-04-01",
      "level": 0,
-     "text": "Gültige Prozent = nur von den 8, die geantwortet haben"
+     "text": "Beispiel: Hilfe zur Mündigkeit gegenüber Ärzten (n = 146, 2 fehlend)"
     },
     {
-     "id": "st2-e01-08",
+     "id": "st2-v2-04-02",
      "level": 1,
-     "text": "3 von 8 = 37,5 %"
+     "text": "Ausprägung | Anzahl | kumuliert"
     },
     {
-     "id": "st2-e01-09",
+     "id": "st2-v2-04-03",
+     "level": 1,
+     "text": "sehr wichtig | 23 | 16,0 %"
+    },
+    {
+     "id": "st2-v2-04-04",
+     "level": 1,
+     "text": "eher wichtig | 49 | ?50,0 %"
+    },
+    {
+     "id": "st2-v2-04-05",
+     "level": 1,
+     "text": "neutral | 62 | ?93,1 %"
+    },
+    {
+     "id": "st2-v2-04-06",
+     "level": 1,
+     "text": "eher unwichtig | 6 | ?97,2 %"
+    },
+    {
+     "id": "st2-v2-04-07",
+     "level": 1,
+     "text": "unwichtig | 4 | ?100 %"
+    },
+    {
+     "id": "st2-v2-04-08",
      "level": 0,
-     "text": "Kumulierte Prozent = „diese Antwort oder eine davor\", Schritt für Schritt addiert"
+     "text": "Kumuliert = „diese Antwort oder eine davor\", Schritt für Schritt addiert"
     },
     {
-     "id": "st2-e01-10",
+     "id": "st2-v2-04-09",
      "level": 1,
-     "text": "Im Folien-Beispiel: 16,0 % + 34,0 % = 50,0 %"
+     "text": "16,0 % + 34,0 % = 50,0 %: die Hälfte fand es „sehr\" oder „eher wichtig\""
     },
     {
-     "id": "st2-e01-11",
-     "level": 1,
-     "text": "heißt: die Hälfte fand es „sehr\" oder „eher wichtig\""
-    },
-    {
-     "id": "st2-e01-12",
-     "level": 1,
+     "id": "st2-v2-04-10",
+     "level": 0,
      "text": "Die letzte Zeile ist immer 100 %"
     }
    ]
   },
   {
-   "id": "st2-04",
+   "id": "st2-v2-05",
    "subject": "Einführung in die Statistik",
-   "title": "ST2 · Welches Diagramm für welches Skalenniveau?",
+   "title": "ST2 · Welches Diagramm passt zu welchem Skalenniveau?",
    "status": "neu",
    "lines": [
     {
-     "id": "st2-04-01",
+     "id": "st2-v2-05-01",
      "level": 0,
      "text": "Anforderungen: aussagekräftig, übersichtlich, verständlich – und wahrheitsgetreu (Manipulationsgefahr!)"
     },
     {
-     "id": "st2-04-02",
+     "id": "st2-v2-05-02",
      "level": 0,
-     "text": "Kreisdiagramm (pie chart)"
+     "text": "Kreisdiagramm (pie chart): Teile eines Ganzen, wenige Kategorien"
     },
     {
-     "id": "st2-04-03",
+     "id": "st2-v2-05-03",
      "level": 1,
      "text": "Kreisdiagramm: Stimmung (n = 158) | eher gedrückt 11 | eher gehoben 147"
     },
     {
-     "id": "st2-04-04",
+     "id": "st2-v2-05-04",
      "level": 0,
-     "text": "Balken- bzw. Stabdiagramm (bar chart): nominal und ordinal"
+     "text": "Balken- bzw. Stabdiagramm (bar chart): nominal und ordinal, Lücken zwischen den Balken"
     },
     {
-     "id": "st2-04-05",
+     "id": "st2-v2-05-05",
      "level": 1,
      "text": "Balkendiagramm: Zufriedenheit mit körperlicher Gesundheit (n = 160) | sehr unzufrieden 1,25 % | unzufrieden 6,88 % | neutral 14,37 % | zufrieden 45,63 % | sehr zufrieden 31,87 %"
     },
     {
-     "id": "st2-04-06",
+     "id": "st2-v2-05-06",
      "level": 0,
-     "text": "Histogramm: ausschließlich metrisch"
+     "text": "Histogramm: ausschließlich metrisch, Klassen (Zahlenbereiche) – die Balken berühren sich, weil die Zahlenskala durchgehend ist"
     },
     {
-     "id": "st2-04-07",
+     "id": "st2-v2-05-07",
      "level": 1,
      "text": "Histogramm: Alter in Jahren (n = 159) | 20–24 105 | 25–29 42 | 30–34 8 | 35–39 0 | 40–44 1 | 45–49 0 | 50–54 0 | 55–59 0 | 60–64 0 | 65–69 2 | 70–74 0 | 75–79 1"
-    }
-   ]
-  },
-  {
-   "id": "st2-e02",
-   "subject": "Einführung in die Statistik",
-   "title": "ST2 · Einfach erklärt: Kreis, Balken oder Histogramm?",
-   "status": "neu",
-   "lines": [
-    {
-     "id": "st2-e02-01",
-     "level": 0,
-     "text": "Kreisdiagramm – Teile von einem Ganzen"
     },
     {
-     "id": "st2-e02-02",
-     "level": 1,
-     "text": "gut bei wenigen Kategorien, die zusammen 100 % ergeben"
-    },
-    {
-     "id": "st2-e02-03",
-     "level": 0,
-     "text": "Balkendiagramm – Kategorien vergleichen"
-    },
-    {
-     "id": "st2-e02-04",
-     "level": 1,
-     "text": "Lücken zwischen den Balken, weil die Kategorien getrennt sind"
-    },
-    {
-     "id": "st2-e02-05",
-     "level": 1,
-     "text": "geht für nominal und ordinal"
-    },
-    {
-     "id": "st2-e02-06",
-     "level": 0,
-     "text": "Histogramm – Zahlenbereiche (Klassen) einer metrischen Variable"
-    },
-    {
-     "id": "st2-e02-07",
-     "level": 1,
-     "text": "die Balken berühren sich, weil die Zahlenskala durchgehend ist"
-    },
-    {
-     "id": "st2-e02-08",
-     "level": 1,
-     "text": "z. B. Alter 20–24, 25–29, 30–34 …"
-    },
-    {
-     "id": "st2-e02-09",
+     "id": "st2-v2-05-08",
      "level": 0,
      "text": "Eselsbrücke: Lücke = Kategorien, keine Lücke = Zahlen"
     }
    ]
   },
   {
-   "id": "st2-05",
+   "id": "st2-v2-06",
    "subject": "Einführung in die Statistik",
-   "title": "ST2 · Kennwerte der univariaten Analyse",
+   "title": "ST2 · Welche Kennwerte beschreiben eine Variable?",
    "status": "neu",
    "lines": [
     {
-     "id": "st2-05-01",
+     "id": "st2-v2-06-01",
      "level": 0,
-     "text": "Zentrale Tendenz"
+     "text": "Zentrale Tendenz: Wo liegt die Mitte?"
     },
     {
-     "id": "st2-05-02",
+     "id": "st2-v2-06-02",
      "level": 1,
      "text": "Modus, Median, Mittelwert"
     },
     {
-     "id": "st2-05-03",
+     "id": "st2-v2-06-03",
      "level": 0,
-     "text": "Dispersion (Streuung)"
+     "text": "Dispersion (Streuung): Wie breit verteilt?"
     },
     {
-     "id": "st2-05-04",
+     "id": "st2-v2-06-04",
      "level": 1,
      "text": "Minimum, Maximum, Spannweite"
     },
     {
-     "id": "st2-05-05",
+     "id": "st2-v2-06-05",
      "level": 1,
      "text": "Quartile, Interquartilbereich"
     },
     {
-     "id": "st2-05-06",
+     "id": "st2-v2-06-06",
      "level": 1,
      "text": "Varianz, Standardabweichung"
     },
     {
-     "id": "st2-05-07",
+     "id": "st2-v2-06-07",
      "level": 0,
-     "text": "Verteilung"
+     "text": "Verteilung: Welche Form?"
     },
     {
-     "id": "st2-05-08",
+     "id": "st2-v2-06-08",
      "level": 1,
      "text": "Schiefe"
     },
     {
-     "id": "st2-05-09",
+     "id": "st2-v2-06-09",
      "level": 1,
      "text": "Wölbung"
     }
    ]
   },
   {
-   "id": "st2-06",
+   "id": "st2-v2-07",
    "subject": "Einführung in die Statistik",
-   "title": "ST2 · Kennwerte: ab welchem Skalenniveau?",
+   "title": "ST2 · Ab welchem Skalenniveau ist welcher Kennwert erlaubt?",
    "status": "neu",
    "lines": [
     {
-     "id": "st2-06-01",
+     "id": "st2-v2-07-01",
      "level": 0,
+     "text": "Erlaubt ab …"
+    },
+    {
+     "id": "st2-v2-07-02",
+     "level": 1,
      "text": "Kennwert | erlaubt ab"
     },
     {
-     "id": "st2-06-02",
-     "level": 0,
+     "id": "st2-v2-07-03",
+     "level": 1,
      "text": "Modus | ?nominal (alle Skalen)"
     },
     {
-     "id": "st2-06-03",
-     "level": 0,
+     "id": "st2-v2-07-04",
+     "level": 1,
      "text": "Median | ?ordinal"
     },
     {
-     "id": "st2-06-04",
-     "level": 0,
+     "id": "st2-v2-07-05",
+     "level": 1,
      "text": "Mittelwert | ?metrisch"
     },
     {
-     "id": "st2-06-05",
-     "level": 0,
+     "id": "st2-v2-07-06",
+     "level": 1,
      "text": "Minimum, Maximum | ?ordinal"
     },
     {
-     "id": "st2-06-06",
-     "level": 0,
+     "id": "st2-v2-07-07",
+     "level": 1,
      "text": "Spannweite | ?ordinal, sinnvoll erst ab metrisch"
     },
     {
-     "id": "st2-06-07",
-     "level": 0,
-     "text": "Quartile, Interquartilbereich | ?ordinal"
+     "id": "st2-v2-07-08",
+     "level": 1,
+     "text": "Quartile, Inter­quar­tilbe­reich | ?ordinal"
     },
     {
-     "id": "st2-06-08",
+     "id": "st2-v2-07-09",
+     "level": 1,
+     "text": "Varianz, Stan­dardab­wei­chung | ?metrisch"
+    },
+    {
+     "id": "st2-v2-07-10",
      "level": 0,
-     "text": "Varianz, Standardabweichung | ?metrisch"
+     "text": "Merkhilfe: alles mit „Ordnen\" (Median, Quartile, Min/Max) ab ordinal – alles mit „Rechnen\" (Mittelwert, Varianz) ab metrisch"
     }
    ]
   },
   {
-   "id": "st2-07",
+   "id": "st2-v2-08",
    "subject": "Einführung in die Statistik",
-   "title": "ST2 · Modus, Median, Mittelwert",
+   "title": "ST2 · Was sind Modus, Median und Mittelwert?",
    "status": "neu",
    "lines": [
     {
-     "id": "st2-07-01",
+     "id": "st2-v2-08-01",
      "level": 0,
-     "text": "Modus (Modalwert)"
+     "text": "Modus (Modalwert): Wert bzw. Kategorie mit der größten Häufigkeit"
     },
     {
-     "id": "st2-07-02",
+     "id": "st2-v2-08-02",
      "level": 1,
-     "text": "Wert bzw. Kategorie mit der größten Häufigkeit"
+     "text": "„Was kommt am öftesten vor?\""
     },
     {
-     "id": "st2-07-03",
+     "id": "st2-v2-08-03",
      "level": 0,
-     "text": "Median (Zentralwert)"
+     "text": "Median (Zentralwert): teilt die gereihten Messwerte in zwei Hälften"
     },
     {
-     "id": "st2-07-04",
+     "id": "st2-v2-08-04",
      "level": 1,
-     "text": "teilt die gereihten Messwerte in zwei Hälften"
+     "text": "„Wer steht in der Mitte, wenn sich alle der Größe nach aufstellen?\""
     },
     {
-     "id": "st2-07-05",
+     "id": "st2-v2-08-05",
      "level": 1,
      "text": "unempfindlich gegenüber Extremwerten"
     },
     {
-     "id": "st2-07-06",
+     "id": "st2-v2-08-06",
      "level": 1,
-     "text": "ungerades n: der mittlere Wert"
+     "text": "ungerades n: der mittlere Wert; gerades n: Mittelwert der beiden mittleren Werte"
     },
     {
-     "id": "st2-07-07",
-     "level": 1,
-     "text": "gerades n: Mittelwert der beiden mittleren Werte"
-    },
-    {
-     "id": "st2-07-08",
+     "id": "st2-v2-08-07",
      "level": 0,
-     "text": "Mittelwert (arithmetisches Mittel)"
+     "text": "Mittelwert (arithmetisches Mittel): Summe der Messwerte geteilt durch ihre Anzahl"
     },
     {
-     "id": "st2-07-09",
+     "id": "st2-v2-08-08",
      "level": 1,
-     "text": "Summe der Messwerte geteilt durch ihre Anzahl"
+     "text": "„Wie viel hätte jede:r, wenn man alles gerecht aufteilt?\""
     },
     {
-     "id": "st2-07-10",
+     "id": "st2-v2-08-09",
      "level": 1,
-     "text": "der am häufigsten verwendete Kennwert"
+     "text": "der am häufigsten verwendete Kennwert, aber anfällig für Extremwerte"
     },
     {
-     "id": "st2-07-11",
-     "level": 1,
-     "text": "anfällig für Extremwerte"
-    }
-   ]
-  },
-  {
-   "id": "st2-e03",
-   "subject": "Einführung in die Statistik",
-   "title": "ST2 · Einfach erklärt: Modus, Median, Mittelwert",
-   "status": "neu",
-   "lines": [
-    {
-     "id": "st2-e03-01",
+     "id": "st2-v2-08-10",
      "level": 0,
-     "text": "Beispiel: Liegedauer im Krankenhaus in Tagen: 1, 2, 2, 3, 12"
+     "text": "Beispiel Liegedauer in Tagen: 1, 2, 2, 3, 12"
     },
     {
-     "id": "st2-e03-02",
+     "id": "st2-v2-08-11",
      "level": 1,
      "text": "Kennwert | Ergebnis"
     },
     {
-     "id": "st2-e03-03",
+     "id": "st2-v2-08-12",
      "level": 1,
      "text": "Modus | ?2 (kommt am häufigsten vor)"
     },
     {
-     "id": "st2-e03-04",
+     "id": "st2-v2-08-13",
      "level": 1,
      "text": "Median | ?2 (steht in der Mitte der Reihe)"
     },
     {
-     "id": "st2-e03-05",
+     "id": "st2-v2-08-14",
      "level": 1,
-     "text": "Mittelwert | ?4 (20 ÷ 5)"
-    },
-    {
-     "id": "st2-e03-06",
-     "level": 0,
-     "text": "Modus = „Was kommt am öftesten vor?\""
-    },
-    {
-     "id": "st2-e03-07",
-     "level": 0,
-     "text": "Median = „Wer steht in der Mitte, wenn sich alle der Größe nach aufstellen?\""
-    },
-    {
-     "id": "st2-e03-08",
-     "level": 0,
-     "text": "Mittelwert = „Wie viel hätte jede:r, wenn man alles gerecht aufteilt?\""
-    },
-    {
-     "id": "st2-e03-09",
-     "level": 0,
-     "text": "Die eine Person mit 12 Tagen zieht den Mittelwert hoch, den Median nicht"
+     "text": "Mittelwert | ?4 (20 ÷ 5) – die 12 zieht ihn hoch"
     }
    ]
   },
   {
-   "id": "st2-e04",
+   "id": "st2-v2-09",
    "subject": "Einführung in die Statistik",
-   "title": "ST2 · Einfach erklärt: Median bei gerader Anzahl",
+   "title": "ST2 · Übung: Wie bestimmt man den Median bei gerader Anzahl?",
    "status": "neu",
    "lines": [
     {
-     "id": "st2-e04-01",
+     "id": "st2-v2-09-01",
      "level": 0,
      "text": "Werte: 3, 8, 1, 6"
     },
     {
-     "id": "st2-e04-02",
+     "id": "st2-v2-09-02",
      "level": 0,
      "text": "1. Der Größe nach ordnen"
     },
     {
-     "id": "st2-e04-03",
+     "id": "st2-v2-09-03",
      "level": 1,
      "text": "1, 3, 6, 8"
     },
     {
-     "id": "st2-e04-04",
+     "id": "st2-v2-09-04",
      "level": 0,
      "text": "2. Es gibt keinen einzelnen mittleren Wert"
     },
     {
-     "id": "st2-e04-05",
+     "id": "st2-v2-09-05",
      "level": 1,
      "text": "die beiden mittleren sind 3 und 6"
     },
     {
-     "id": "st2-e04-06",
+     "id": "st2-v2-09-06",
      "level": 0,
      "text": "3. Den Mittelwert der beiden nehmen"
     },
     {
-     "id": "st2-e04-07",
+     "id": "st2-v2-09-07",
      "level": 1,
      "text": "(3 + 6) ÷ 2 = 4,5"
     },
     {
-     "id": "st2-e04-08",
+     "id": "st2-v2-09-08",
      "level": 0,
      "text": "Häufigster Fehler: vergessen, vorher zu sortieren!"
     }
    ]
   },
   {
-   "id": "st2-08",
+   "id": "st2-v2-10",
    "subject": "Einführung in die Statistik",
-   "title": "ST2 · Das Basketball-Beispiel: Mittelwert vs. Median",
+   "title": "ST2 · Was zeigt das Basketball-Beispiel über Mittelwert und Median?",
    "status": "neu",
    "lines": [
     {
-     "id": "st2-08-01",
+     "id": "st2-v2-10-01",
      "level": 0,
      "text": "Körpergrößen: 159, 162, 163, 164, 166, 168, 195 cm"
     },
     {
-     "id": "st2-08-02",
+     "id": "st2-v2-10-02",
      "level": 0,
      "text": "Mittelwert: (164 + 162 + 166 + 159 + 163 + 195 + 168) / 7 = 168,14 cm"
     },
     {
-     "id": "st2-08-03",
+     "id": "st2-v2-10-03",
      "level": 0,
      "text": "Median: 164 cm (der mittlere von 7 gereihten Werten)"
     },
     {
-     "id": "st2-08-04",
+     "id": "st2-v2-10-04",
      "level": 0,
      "text": "Der Median beschreibt die zentrale Tendenz besser, weil 195 ein Extremwert ist"
     },
     {
-     "id": "st2-08-05",
+     "id": "st2-v2-10-05",
      "level": 0,
      "text": "„Sollen wir das arithmetische Mittel nehmen und den Gegner erschrecken, oder wollen wir ihn einlullen und nehmen den Median?\" (Krämer)"
     }
    ]
   },
   {
-   "id": "st2-e05",
+   "id": "st2-v2-11",
    "subject": "Einführung in die Statistik",
-   "title": "ST2 · Einfach erklärt: Wann Median, wann Mittelwert?",
+   "title": "ST2 · Wann nimmt man Median, Mittelwert oder Modus?",
    "status": "neu",
    "lines": [
     {
-     "id": "st2-e05-01",
+     "id": "st2-v2-11-01",
      "level": 0,
      "text": "Bild: Ein Millionär kommt in eine Kneipe"
     },
     {
-     "id": "st2-e05-02",
+     "id": "st2-v2-11-02",
      "level": 1,
-     "text": "Das durchschnittliche Vermögen (Mittelwert) schießt hoch"
+     "text": "das durchschnittliche Vermögen (Mittelwert) schießt hoch"
     },
     {
-     "id": "st2-e05-03",
+     "id": "st2-v2-11-03",
      "level": 1,
-     "text": "Der Median bleibt fast gleich, der „typische Gast\" ist ja nicht reicher geworden"
+     "text": "der Median bleibt fast gleich, der „typische Gast\" ist ja nicht reicher geworden"
     },
     {
-     "id": "st2-e05-04",
+     "id": "st2-v2-11-04",
      "level": 0,
-     "text": "Mittelwert nehmen"
+     "text": "Mittelwert: metrische Daten ohne starke Ausreißer"
     },
     {
-     "id": "st2-e05-05",
-     "level": 1,
-     "text": "metrische Daten ohne starke Ausreißer"
-    },
-    {
-     "id": "st2-e05-06",
+     "id": "st2-v2-11-05",
      "level": 0,
-     "text": "Median nehmen"
+     "text": "Median: bei Ausreißern oder schiefen Verteilungen (z. B. Einkommen, Liegedauer) und bei ordinalen Daten (z. B. Schulnoten)"
     },
     {
-     "id": "st2-e05-07",
-     "level": 1,
-     "text": "bei Ausreißern oder schiefen Verteilungen (z. B. Einkommen, Liegedauer)"
-    },
-    {
-     "id": "st2-e05-08",
-     "level": 1,
-     "text": "bei ordinalen Daten (z. B. Schulnoten)"
-    },
-    {
-     "id": "st2-e05-09",
+     "id": "st2-v2-11-06",
      "level": 0,
-     "text": "Modus nehmen"
-    },
-    {
-     "id": "st2-e05-10",
-     "level": 1,
-     "text": "bei nominalen Daten: der einzige erlaubte Kennwert (z. B. häufigste Blutgruppe)"
+     "text": "Modus: bei nominalen Daten der einzige erlaubte Kennwert (z. B. häufigste Blutgruppe)"
     }
    ]
   },
   {
-   "id": "st2-09",
+   "id": "st2-v2-12",
    "subject": "Einführung in die Statistik",
-   "title": "ST2 · Streuung: Spannweite und Quartile",
+   "title": "ST2 · Warum braucht man Streuung – und was sind Minimum, Maximum, Spannweite?",
    "status": "neu",
    "lines": [
     {
-     "id": "st2-09-01",
+     "id": "st2-v2-12-01",
+     "level": 0,
+     "text": "Zwei Gruppen mit dem gleichen Mittelwert 5"
+    },
+    {
+     "id": "st2-v2-12-02",
+     "level": 1,
+     "text": "Gruppe A: 5, 5, 5, 5, 5"
+    },
+    {
+     "id": "st2-v2-12-03",
+     "level": 1,
+     "text": "Gruppe B: 1, 3, 5, 7, 9"
+    },
+    {
+     "id": "st2-v2-12-04",
+     "level": 0,
+     "text": "Der Mittelwert sagt nicht, wie unterschiedlich die Werte sind"
+    },
+    {
+     "id": "st2-v2-12-05",
+     "level": 1,
+     "text": "Streuung = „Liegen die Werte eng beieinander oder weit auseinander?\""
+    },
+    {
+     "id": "st2-v2-12-06",
      "level": 0,
      "text": "Minimum und Maximum: kleinster und größter beobachteter Wert"
     },
     {
-     "id": "st2-09-02",
+     "id": "st2-v2-12-07",
      "level": 0,
      "text": "Spannweite (range): Abstand zwischen Maximum und Minimum"
     },
     {
-     "id": "st2-09-03",
-     "level": 0,
-     "text": "Quartile: teilen die Werte in vier gleich große Gruppen"
+     "id": "st2-v2-12-08",
+     "level": 1,
+     "text": "Gruppe | Spannweite"
     },
     {
-     "id": "st2-09-04",
+     "id": "st2-v2-12-09",
+     "level": 1,
+     "text": "A | ?0 (5 − 5)"
+    },
+    {
+     "id": "st2-v2-12-10",
+     "level": 1,
+     "text": "B | ?8 (9 − 1)"
+    }
+   ]
+  },
+  {
+   "id": "st2-v2-13",
+   "subject": "Einführung in die Statistik",
+   "title": "ST2 · Was sind Quartile und der Interquartilbereich?",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "st2-v2-13-01",
+     "level": 0,
+     "text": "Quartile teilen die Werte in vier gleich große Gruppen"
+    },
+    {
+     "id": "st2-v2-13-02",
      "level": 1,
      "text": "Quartil | teilt in"
     },
     {
-     "id": "st2-09-05",
+     "id": "st2-v2-13-03",
      "level": 1,
      "text": "Q1 | ?25 % : 75 %"
     },
     {
-     "id": "st2-09-06",
+     "id": "st2-v2-13-04",
      "level": 1,
      "text": "Q2 (= Median) | ?50 % : 50 %"
     },
     {
-     "id": "st2-09-07",
+     "id": "st2-v2-13-05",
      "level": 1,
      "text": "Q3 | ?75 % : 25 %"
     },
     {
-     "id": "st2-09-08",
+     "id": "st2-v2-13-06",
      "level": 0,
-     "text": "Interquartilbereich = die mittleren 50 %"
+     "text": "Bild: 100 Personen stellen sich der Größe nach in eine Reihe"
     },
     {
-     "id": "st2-09-09",
+     "id": "st2-v2-13-07",
+     "level": 1,
+     "text": "Q1 = Platz 25, Q2 = Platz 50 (Median), Q3 = Platz 75"
+    },
+    {
+     "id": "st2-v2-13-08",
+     "level": 0,
+     "text": "Interquartilbereich = Q3 − Q1 = die mittleren 50 %"
+    },
+    {
+     "id": "st2-v2-13-09",
+     "level": 1,
+     "text": "Ausreißer ganz vorne oder ganz hinten ändern ihn nicht"
+    },
+    {
+     "id": "st2-v2-13-10",
      "level": 0,
      "text": "Perzentile = Überbegriff für beliebige prozentuale Einteilungen"
     }
    ]
   },
   {
-   "id": "st2-e06",
+   "id": "st2-v2-14",
    "subject": "Einführung in die Statistik",
-   "title": "ST2 · Einfach erklärt: Warum braucht man Streuung?",
+   "title": "ST2 · Was ist die Varianz und wie berechnet man sie?",
    "status": "neu",
    "lines": [
     {
-     "id": "st2-e06-01",
-     "level": 0,
-     "text": "Zwei Gruppen mit dem gleichen Mittelwert 5"
-    },
-    {
-     "id": "st2-e06-02",
-     "level": 1,
-     "text": "Gruppe A: 5, 5, 5, 5, 5"
-    },
-    {
-     "id": "st2-e06-03",
-     "level": 1,
-     "text": "Gruppe B: 1, 3, 5, 7, 9"
-    },
-    {
-     "id": "st2-e06-04",
-     "level": 0,
-     "text": "Der Mittelwert sagt nicht, wie unterschiedlich die Werte sind"
-    },
-    {
-     "id": "st2-e06-05",
-     "level": 1,
-     "text": "Gruppe | Spannweite"
-    },
-    {
-     "id": "st2-e06-06",
-     "level": 1,
-     "text": "A | ?0 (5 − 5)"
-    },
-    {
-     "id": "st2-e06-07",
-     "level": 1,
-     "text": "B | ?8 (9 − 1)"
-    },
-    {
-     "id": "st2-e06-08",
-     "level": 0,
-     "text": "Streuung = „Liegen die Werte eng beieinander oder weit auseinander?\""
-    }
-   ]
-  },
-  {
-   "id": "st2-e07",
-   "subject": "Einführung in die Statistik",
-   "title": "ST2 · Einfach erklärt: Quartile",
-   "status": "neu",
-   "lines": [
-    {
-     "id": "st2-e07-01",
-     "level": 0,
-     "text": "Bild: 100 Personen stellen sich der Größe nach in eine Reihe"
-    },
-    {
-     "id": "st2-e07-02",
-     "level": 0,
-     "text": "Q1 = die Person an Platz 25"
-    },
-    {
-     "id": "st2-e07-03",
-     "level": 1,
-     "text": "ein Viertel ist kleiner, drei Viertel sind größer"
-    },
-    {
-     "id": "st2-e07-04",
-     "level": 0,
-     "text": "Q2 = die Person an Platz 50"
-    },
-    {
-     "id": "st2-e07-05",
-     "level": 1,
-     "text": "das ist der Median"
-    },
-    {
-     "id": "st2-e07-06",
-     "level": 0,
-     "text": "Q3 = die Person an Platz 75"
-    },
-    {
-     "id": "st2-e07-07",
-     "level": 1,
-     "text": "drei Viertel sind kleiner, ein Viertel ist größer"
-    },
-    {
-     "id": "st2-e07-08",
-     "level": 0,
-     "text": "Interquartilbereich = Q3 − Q1"
-    },
-    {
-     "id": "st2-e07-09",
-     "level": 1,
-     "text": "hier stehen die mittleren 50 %"
-    },
-    {
-     "id": "st2-e07-10",
-     "level": 1,
-     "text": "Ausreißer ganz vorne oder ganz hinten ändern ihn nicht"
-    }
-   ]
-  },
-  {
-   "id": "st2-10",
-   "subject": "Einführung in die Statistik",
-   "title": "ST2 · Varianz berechnen",
-   "status": "neu",
-   "lines": [
-    {
-     "id": "st2-10-01",
+     "id": "st2-v2-14-01",
      "level": 0,
      "text": "Varianz s² = mittlere quadrierte Abweichung vom Mittelwert"
     },
     {
-     "id": "st2-10-02",
+     "id": "st2-v2-14-02",
      "level": 1,
      "text": "alle gültigen Messwerte werden berücksichtigt"
     },
     {
-     "id": "st2-10-03",
+     "id": "st2-v2-14-03",
      "level": 1,
      "text": "erst ab metrischem Skalenniveau"
     },
     {
-     "id": "st2-10-04",
+     "id": "st2-v2-14-04",
      "level": 0,
      "text": "s² = Summe der (xᵢ − x̄)² geteilt durch (n − 1)"
     },
     {
-     "id": "st2-10-05",
+     "id": "st2-v2-14-05",
      "level": 0,
      "text": "Rechenweg"
     },
     {
-     "id": "st2-10-06",
+     "id": "st2-v2-14-06",
      "level": 1,
      "text": "Mittelwert berechnen → Abstand jedes Werts zum Mittelwert → Abstände quadrieren → Summe bilden → durch (n − 1) teilen"
     }
    ]
   },
   {
-   "id": "st2-e08",
+   "id": "st2-v2-15",
    "subject": "Einführung in die Statistik",
-   "title": "ST2 · Einfach erklärt: Varianz Schritt für Schritt",
+   "title": "ST2 · Übung: Varianz Schritt für Schritt (Werte 2, 4, 6)",
    "status": "neu",
    "lines": [
     {
-     "id": "st2-e08-01",
-     "level": 0,
-     "text": "Werte: 2, 4, 6"
-    },
-    {
-     "id": "st2-e08-02",
+     "id": "st2-v2-15-01",
      "level": 0,
      "text": "1. Mittelwert: (2 + 4 + 6) ÷ 3 = 4"
     },
     {
-     "id": "st2-e08-03",
+     "id": "st2-v2-15-02",
      "level": 0,
      "text": "2. Abstand jedes Werts zum Mittelwert, dann quadrieren"
     },
     {
-     "id": "st2-e08-04",
+     "id": "st2-v2-15-03",
      "level": 1,
      "text": "Wert | Abstand zu x̄ | quadriert"
     },
     {
-     "id": "st2-e08-05",
+     "id": "st2-v2-15-04",
      "level": 1,
      "text": "2 | ?−2 | ?4"
     },
     {
-     "id": "st2-e08-06",
+     "id": "st2-v2-15-05",
      "level": 1,
      "text": "4 | ?0 | ?0"
     },
     {
-     "id": "st2-e08-07",
+     "id": "st2-v2-15-06",
      "level": 1,
      "text": "6 | ?+2 | ?4"
     },
     {
-     "id": "st2-e08-08",
+     "id": "st2-v2-15-07",
      "level": 1,
      "text": "Summe | ?0 | ?8"
     },
     {
-     "id": "st2-e08-09",
+     "id": "st2-v2-15-08",
      "level": 0,
      "text": "3. Summe der Quadrate durch (n − 1) teilen"
     },
     {
-     "id": "st2-e08-10",
+     "id": "st2-v2-15-09",
      "level": 1,
      "text": "s² = 8 ÷ (3 − 1) = 4"
     },
     {
-     "id": "st2-e08-11",
+     "id": "st2-v2-15-10",
      "level": 0,
-     "text": "Warum quadrieren?"
+     "text": "Warum quadrieren? Die Abstände ohne Quadrat ergeben zusammen immer 0 (−2 + 0 + 2) – durch das Quadrat wird alles positiv"
     },
     {
-     "id": "st2-e08-12",
-     "level": 1,
-     "text": "Die Abstände ohne Quadrat ergeben zusammen immer 0 (−2 + 0 + 2)"
-    },
-    {
-     "id": "st2-e08-13",
-     "level": 1,
-     "text": "Durch das Quadrat wird alles positiv"
-    },
-    {
-     "id": "st2-e08-14",
+     "id": "st2-v2-15-11",
      "level": 0,
      "text": "Warum n − 1? Bei Stichproben ist die Schätzung so genauer – merken reicht"
     }
    ]
   },
   {
-   "id": "st2-11",
+   "id": "st2-v2-16",
    "subject": "Einführung in die Statistik",
-   "title": "ST2 · Standardabweichung",
+   "title": "ST2 · Was ist die Standardabweichung?",
    "status": "neu",
    "lines": [
     {
-     "id": "st2-11-01",
+     "id": "st2-v2-16-01",
      "level": 0,
      "text": "s = √s² (Wurzel aus der Varianz)"
     },
     {
-     "id": "st2-11-02",
+     "id": "st2-v2-16-02",
      "level": 0,
-     "text": "Hat die Einheit der Variable"
+     "text": "Macht die Varianz wieder „lesbar\""
     },
     {
-     "id": "st2-11-03",
+     "id": "st2-v2-16-03",
+     "level": 1,
+     "text": "Varianz ist in Einheit² (z. B. cm²), die Wurzel bringt sie zurück in die Einheit der Variable (z. B. cm)"
+    },
+    {
+     "id": "st2-v2-16-04",
+     "level": 1,
+     "text": "im Beispiel 2, 4, 6: s = √4 = 2"
+    },
+    {
+     "id": "st2-v2-16-05",
      "level": 0,
+     "text": "Grob: wie weit die Werte typischerweise um den Mittelwert streuen"
+    },
+    {
+     "id": "st2-v2-16-06",
+     "level": 1,
      "text": "Aussagen über die Streuung nur im Vergleich mit anderen Kennwerten"
     },
     {
-     "id": "st2-11-04",
+     "id": "st2-v2-16-07",
+     "level": 1,
+     "text": "bei Normalverteilung liegen etwa 2/3 der Werte zwischen x̄ − s und x̄ + s (IQ: 100 ± 15, also 85 bis 115)"
+    },
+    {
+     "id": "st2-v2-16-08",
      "level": 0,
      "text": "Achtung: Die Standardabweichung ist NICHT die durchschnittliche Abweichung vom Mittelwert"
     },
     {
-     "id": "st2-11-05",
+     "id": "st2-v2-16-09",
      "level": 1,
      "text": "sondern die Wurzel aus der durchschnittlichen quadrierten Abweichung!"
     }
    ]
   },
   {
-   "id": "st2-e09",
+   "id": "st3-v2-01",
    "subject": "Einführung in die Statistik",
-   "title": "ST2 · Einfach erklärt: Standardabweichung",
+   "title": "ST3 · Welche typischen Verteilungsformen gibt es? (Bortz 2005)",
    "status": "neu",
    "lines": [
     {
-     "id": "st2-e09-01",
+     "id": "st3-v2-01-01",
      "level": 0,
-     "text": "Sie macht die Varianz wieder „lesbar\""
+     "text": "Verteilung: ?symmetrisch | ?asymmetrisch"
     },
     {
-     "id": "st2-e09-02",
-     "level": 1,
-     "text": "Varianz ist in Einheit² (z. B. cm²), das kann man sich nicht vorstellen"
-    },
-    {
-     "id": "st2-e09-03",
-     "level": 1,
-     "text": "die Wurzel bringt sie zurück in die Einheit der Variable (z. B. cm)"
-    },
-    {
-     "id": "st2-e09-04",
+     "id": "st3-v2-01-02",
      "level": 0,
-     "text": "Im Beispiel 2, 4, 6: s = √4 = 2"
+     "text": "Verteilung: ?unimodal | ?bimodal"
     },
     {
-     "id": "st2-e09-05",
+     "id": "st3-v2-01-03",
      "level": 0,
-     "text": "Grob gesagt: wie weit die Werte typischerweise um den Mittelwert streuen"
+     "text": "Verteilung: ?schmalgipfelig | ?breitgipfelig"
     },
     {
-     "id": "st2-e09-06",
-     "level": 1,
-     "text": "klein = Werte liegen eng beieinander"
-    },
-    {
-     "id": "st2-e09-07",
-     "level": 1,
-     "text": "groß = Werte liegen weit auseinander"
-    },
-    {
-     "id": "st2-e09-08",
-     "level": 0,
-     "text": "Bei einer Normalverteilung: etwa 2/3 der Werte liegen zwischen x̄ − s und x̄ + s"
-    },
-    {
-     "id": "st2-e09-09",
-     "level": 1,
-     "text": "IQ: x̄ = 100, s = 15, also haben etwa 2/3 einen IQ zwischen 85 und 115"
-    }
-   ]
-  },
-  {
-   "id": "st3-01",
-   "subject": "Einführung in die Statistik",
-   "title": "ST3 · Typische Verteilungsformen",
-   "status": "neu",
-   "lines": [
-    {
-     "id": "st3-01-01",
-     "level": 0,
-     "text": "Verteilung: symmetrisch | asymmetrisch"
-    },
-    {
-     "id": "st3-01-02",
-     "level": 0,
-     "text": "Verteilung: unimodal | bimodal"
-    },
-    {
-     "id": "st3-01-03",
-     "level": 0,
-     "text": "Verteilung: schmalgipfelig | breitgipfelig"
-    },
-    {
-     "id": "st3-01-04",
-     "level": 0,
-     "text": "Verteilung: linkssteil | rechtssteil"
-    },
-    {
-     "id": "st3-01-05",
-     "level": 0,
-     "text": "Verteilung: u-förmig | abfallend"
-    },
-    {
-     "id": "st3-01-06",
-     "level": 0,
-     "text": "Nach Bortz (2005)"
-    }
-   ]
-  },
-  {
-   "id": "st3-02",
-   "subject": "Einführung in die Statistik",
-   "title": "ST3 · Welche Form ist das?",
-   "status": "neu",
-   "lines": [
-    {
-     "id": "st3-02-01",
-     "level": 0,
-     "text": "Verteilung: ?symmetrisch | ?bimodal"
-    },
-    {
-     "id": "st3-02-02",
+     "id": "st3-v2-01-04",
      "level": 0,
      "text": "Verteilung: ?linkssteil | ?rechtssteil"
     },
     {
-     "id": "st3-02-03",
+     "id": "st3-v2-01-05",
      "level": 0,
-     "text": "Verteilung: ?schmalgipfelig | ?u-förmig"
+     "text": "Verteilung: ?u-förmig | ?abfallend"
     }
    ]
   },
   {
-   "id": "st3-03",
+   "id": "st3-v2-02",
    "subject": "Einführung in die Statistik",
-   "title": "ST3 · Die Normalverteilung",
+   "title": "ST3 · Was kennzeichnet die Normalverteilung?",
    "status": "neu",
    "lines": [
     {
-     "id": "st3-03-01",
+     "id": "st3-v2-02-01",
      "level": 0,
      "text": "Verteilung: Normalverteilung"
     },
     {
-     "id": "st3-03-02",
+     "id": "st3-v2-02-02",
      "level": 0,
      "text": "„Gauß'sche Glockenkurve\""
     },
     {
-     "id": "st3-03-03",
+     "id": "st3-v2-02-03",
      "level": 0,
      "text": "Eigenschaften"
     },
     {
-     "id": "st3-03-04",
+     "id": "st3-v2-02-04",
      "level": 1,
      "text": "eingipfelig (unimodal)"
     },
     {
-     "id": "st3-03-05",
+     "id": "st3-v2-02-05",
      "level": 1,
      "text": "symmetrisch"
     },
     {
-     "id": "st3-03-06",
+     "id": "st3-v2-02-06",
      "level": 1,
      "text": "glockenförmig"
     },
     {
-     "id": "st3-03-07",
+     "id": "st3-v2-02-07",
      "level": 1,
      "text": "von −∞ bis +∞"
     },
     {
-     "id": "st3-03-08",
+     "id": "st3-v2-02-08",
      "level": 1,
      "text": "etwa 2/3 der Messwerte liegen zwischen den Wendepunkten"
     },
     {
-     "id": "st3-03-09",
+     "id": "st3-v2-02-09",
      "level": 0,
      "text": "Empirisch annähernd normalverteilt: IQ, Körpergröße, Körpergewicht"
     },
     {
-     "id": "st3-03-10",
+     "id": "st3-v2-02-10",
      "level": 0,
      "text": "Theoretisch: Modell für Kennwerte, Basis für weitere Verteilungen"
     }
    ]
   },
   {
-   "id": "st3-04",
+   "id": "st3-v2-03",
    "subject": "Einführung in die Statistik",
-   "title": "ST3 · Schiefe (γ₁)",
+   "title": "ST3 · Was ist die Schiefe (γ₁) – linkssteil oder rechtssteil?",
    "status": "neu",
    "lines": [
     {
-     "id": "st3-04-01",
+     "id": "st3-v2-03-01",
      "level": 0,
      "text": "Verteilung: linkssteil | rechtssteil | symmetrisch"
     },
     {
-     "id": "st3-04-02",
+     "id": "st3-v2-03-02",
      "level": 0,
+     "text": "Kennwert"
+    },
+    {
+     "id": "st3-v2-03-03",
+     "level": 1,
      "text": "Form | Schiefe"
     },
     {
-     "id": "st3-04-03",
-     "level": 0,
-     "text": "Linkssteil = rechtsschief | ?γ₁ > 0"
-    },
-    {
-     "id": "st3-04-04",
-     "level": 0,
-     "text": "Rechtssteil = linksschief | ?γ₁ < 0"
-    },
-    {
-     "id": "st3-04-05",
-     "level": 0,
-     "text": "Symmetrisch | ?γ₁ = 0"
-    },
-    {
-     "id": "st3-04-06",
-     "level": 0,
-     "text": "Merke: „steil\" ist die Seite, wo der Gipfel steht"
-    }
-   ]
-  },
-  {
-   "id": "st3-e01",
-   "subject": "Einführung in die Statistik",
-   "title": "ST3 · Einfach erklärt: linkssteil und rechtssteil",
-   "status": "neu",
-   "lines": [
-    {
-     "id": "st3-e01-01",
-     "level": 0,
-     "text": "Verteilung: linkssteil | rechtssteil"
-    },
-    {
-     "id": "st3-e01-02",
-     "level": 0,
-     "text": "Steil = die Seite, auf der der Berg (Gipfel) steht"
-    },
-    {
-     "id": "st3-e01-03",
-     "level": 0,
-     "text": "Schief = die Seite, in die der lange flache Schwanz zeigt"
-    },
-    {
-     "id": "st3-e01-04",
+     "id": "st3-v2-03-04",
      "level": 1,
-     "text": "linkssteil = Gipfel links, Schwanz nach rechts = rechtsschief"
+     "text": "linkssteil = rechts­schief | ?γ₁ > 0"
     },
     {
-     "id": "st3-e01-05",
+     "id": "st3-v2-03-05",
      "level": 1,
-     "text": "rechtssteil = Gipfel rechts, Schwanz nach links = linksschief"
+     "text": "rechtssteil = linksschief | ?γ₁ < 0"
     },
     {
-     "id": "st3-e01-06",
+     "id": "st3-v2-03-06",
+     "level": 1,
+     "text": "symmetrisch | ?γ₁ = 0"
+    },
+    {
+     "id": "st3-v2-03-07",
+     "level": 0,
+     "text": "Merkhilfe: steil = wo der Gipfel steht, schief = wohin der lange flache Schwanz zeigt"
+    },
+    {
+     "id": "st3-v2-03-08",
      "level": 0,
      "text": "Beispiele"
     },
     {
-     "id": "st3-e01-07",
+     "id": "st3-v2-03-09",
      "level": 1,
      "text": "Beispiel | Form"
     },
     {
-     "id": "st3-e01-08",
+     "id": "st3-v2-03-10",
      "level": 1,
-     "text": "Liegedauer, Einkommen, Alter der Studierenden | ?linkssteil"
+     "text": "Liegedauer, Einkommen, Alter der Stu­die­ren­den | ?linkssteil"
     },
     {
-     "id": "st3-e01-09",
+     "id": "st3-v2-03-11",
      "level": 1,
      "text": "Punkte bei einer sehr leichten Klausur | ?rechtssteil"
     },
     {
-     "id": "st3-e01-10",
+     "id": "st3-v2-03-12",
      "level": 0,
-     "text": "Bei linkssteil zieht der Schwanz den Mittelwert nach rechts"
-    },
-    {
-     "id": "st3-e01-11",
-     "level": 1,
-     "text": "daher: Mittelwert > Median"
+     "text": "Bei linkssteil zieht der Schwanz den Mittelwert nach rechts: Mittelwert > Median"
     }
    ]
   },
   {
-   "id": "st3-05",
+   "id": "st3-v2-04",
    "subject": "Einführung in die Statistik",
-   "title": "ST3 · Wölbung bzw. Exzess (γ₂)",
+   "title": "ST3 · Was ist die Wölbung bzw. der Exzess (γ₂)?",
    "status": "neu",
    "lines": [
     {
-     "id": "st3-05-01",
-     "level": 0,
-     "text": "Verteilung: flache Wölbung | steile Wölbung"
-    },
-    {
-     "id": "st3-05-02",
-     "level": 0,
-     "text": "Form | Exzess"
-    },
-    {
-     "id": "st3-05-03",
-     "level": 0,
-     "text": "Flache Wölbung | ?γ₂ < 0"
-    },
-    {
-     "id": "st3-05-04",
-     "level": 0,
-     "text": "Steile bzw. starke Wölbung | ?γ₂ > 0"
-    },
-    {
-     "id": "st3-05-05",
-     "level": 0,
-     "text": "Normale Wölbung | ?γ₂ = 0"
-    }
-   ]
-  },
-  {
-   "id": "st3-e02",
-   "subject": "Einführung in die Statistik",
-   "title": "ST3 · Einfach erklärt: Wölbung",
-   "status": "neu",
-   "lines": [
-    {
-     "id": "st3-e02-01",
+     "id": "st3-v2-04-01",
      "level": 0,
      "text": "Verteilung: steile Wölbung | normale Wölbung | flache Wölbung"
     },
     {
-     "id": "st3-e02-02",
+     "id": "st3-v2-04-02",
      "level": 0,
-     "text": "Die Wölbung vergleicht mit der Normalverteilung (dort γ₂ = 0)"
+     "text": "Vergleich mit der Normalverteilung (dort γ₂ = 0)"
     },
     {
-     "id": "st3-e02-03",
-     "level": 0,
-     "text": "Steil (γ₂ > 0)"
-    },
-    {
-     "id": "st3-e02-04",
+     "id": "st3-v2-04-03",
      "level": 1,
-     "text": "spitzer Gipfel, viele Werte drängen sich eng in der Mitte"
+     "text": "Form | Exzess"
     },
     {
-     "id": "st3-e02-05",
-     "level": 0,
-     "text": "Flach (γ₂ < 0)"
-    },
-    {
-     "id": "st3-e02-06",
+     "id": "st3-v2-04-04",
      "level": 1,
-     "text": "breiter, flacher Hügel, die Werte sind gleichmäßiger verteilt"
+     "text": "flache Wölbung | ?γ₂ < 0"
     },
     {
-     "id": "st3-e02-07",
+     "id": "st3-v2-04-05",
+     "level": 1,
+     "text": "steile bzw. starke Wölbung | ?γ₂ > 0"
+    },
+    {
+     "id": "st3-v2-04-06",
+     "level": 1,
+     "text": "normale Wölbung | ?γ₂ = 0"
+    },
+    {
+     "id": "st3-v2-04-07",
      "level": 0,
-     "text": "Merke: Plus = spitz, Minus = platt"
+     "text": "Steil: spitzer Gipfel, viele Werte drängen sich eng in der Mitte"
+    },
+    {
+     "id": "st3-v2-04-08",
+     "level": 0,
+     "text": "Flach: breiter, flacher Hügel, die Werte sind gleichmäßiger verteilt"
+    },
+    {
+     "id": "st3-v2-04-09",
+     "level": 0,
+     "text": "Merkhilfe: Plus = spitz, Minus = platt"
     }
    ]
   },
   {
-   "id": "st3-06",
+   "id": "st3-v2-05",
    "subject": "Einführung in die Statistik",
-   "title": "ST3 · Univariate Analyse: idealtypischer Ablauf",
+   "title": "ST3 · Wie läuft eine univariate Analyse idealtypisch ab?",
    "status": "neu",
    "lines": [
     {
-     "id": "st3-06-01",
+     "id": "st3-v2-05-01",
      "level": 0,
      "text": "1. Inhaltliche Bedeutung klären"
     },
     {
-     "id": "st3-06-02",
+     "id": "st3-v2-05-02",
      "level": 0,
      "text": "2. Skalenniveau bestimmen"
     },
     {
-     "id": "st3-06-03",
+     "id": "st3-v2-05-03",
      "level": 0,
      "text": "3. Gültige und fehlende (missing) Fälle beschreiben"
     },
     {
-     "id": "st3-06-04",
+     "id": "st3-v2-05-04",
      "level": 0,
      "text": "4. Häufigkeit bzw. Verteilung darstellen (Tabellen, Diagramme)"
     },
     {
-     "id": "st3-06-05",
+     "id": "st3-v2-05-05",
      "level": 0,
      "text": "5. Numerisch beschreiben: zentrale Tendenz, Streuung, Verteilung"
     }
    ]
   },
   {
-   "id": "st3-07",
+   "id": "st3-v2-06",
    "subject": "Einführung in die Statistik",
-   "title": "ST3 · Bivariate Analyse und die Kreuztabelle",
+   "title": "ST3 · Was ist eine bivariate Analyse und was zeigt die Kreuztabelle?",
    "status": "neu",
    "lines": [
     {
-     "id": "st3-07-01",
+     "id": "st3-v2-06-01",
      "level": 0,
      "text": "Frage: Bestehen Zusammenhänge zwischen zwei Variablen, oder sind sie unabhängig?"
     },
     {
-     "id": "st3-07-02",
+     "id": "st3-v2-06-02",
      "level": 1,
      "text": "z. B. Hängen Lungenkrebs und Rauchen zusammen?"
     },
     {
-     "id": "st3-07-03",
+     "id": "st3-v2-06-03",
      "level": 0,
      "text": "Kreuztabelle = bivariate Häufigkeitstabelle (Kontingenztabelle)"
     },
     {
-     "id": "st3-07-04",
+     "id": "st3-v2-06-04",
      "level": 1,
      "text": "zeigt die beobachteten Wertekombinationen"
     },
     {
-     "id": "st3-07-05",
+     "id": "st3-v2-06-05",
      "level": 1,
      "text": "kleinste Form: 2×2-Tabelle (Vierfeldertafel)"
     },
     {
-     "id": "st3-07-06",
+     "id": "st3-v2-06-06",
      "level": 1,
      "text": "Wertepaare in den Zellen, Summen in den Rändern"
     },
     {
-     "id": "st3-07-07",
+     "id": "st3-v2-06-07",
      "level": 0,
-     "text": "| männlich | weiblich | Total"
+     "text": "Beispiel Rauchen × Geschlecht"
     },
     {
-     "id": "st3-07-08",
-     "level": 0,
-     "text": "Raucher:in | 12 | 7 | 19"
+     "id": "st3-v2-06-08",
+     "level": 1,
+     "text": "| Männer | Frauen | gesamt"
     },
     {
-     "id": "st3-07-09",
-     "level": 0,
-     "text": "Nicht-Raucher:in | 6 | 15 | 21"
+     "id": "st3-v2-06-09",
+     "level": 1,
+     "text": "raucht | 12 | 7 | 19"
     },
     {
-     "id": "st3-07-10",
-     "level": 0,
-     "text": "Total | 18 | 22 | 40"
+     "id": "st3-v2-06-10",
+     "level": 1,
+     "text": "raucht nicht | 6 | 15 | 21"
+    },
+    {
+     "id": "st3-v2-06-11",
+     "level": 1,
+     "text": "gesamt | 18 | 22 | 40"
     }
    ]
   },
   {
-   "id": "st3-08",
+   "id": "st3-v2-07",
    "subject": "Einführung in die Statistik",
-   "title": "ST3 · Abhängige und unabhängige Variable",
+   "title": "ST3 · Was sind abhängige und unabhängige Variable?",
    "status": "neu",
    "lines": [
     {
-     "id": "st3-08-01",
+     "id": "st3-v2-07-01",
      "level": 0,
      "text": "Unabhängige Variable (uV) = potenzielle Ursache"
     },
     {
-     "id": "st3-08-02",
+     "id": "st3-v2-07-02",
      "level": 0,
      "text": "Abhängige Variable (aV) = Wirkung"
     },
     {
-     "id": "st3-08-03",
+     "id": "st3-v2-07-03",
      "level": 0,
      "text": "Nicht von vornherein gegeben, sondern inhaltlich zu begründen"
     },
     {
-     "id": "st3-08-04",
+     "id": "st3-v2-07-04",
      "level": 1,
      "text": "Trick: Möglichkeiten „vorsagen\""
     },
     {
-     "id": "st3-08-05",
+     "id": "st3-v2-07-05",
      "level": 1,
      "text": "Rauchen kann vom Geschlecht abhängen: plausibel"
     },
     {
-     "id": "st3-08-06",
+     "id": "st3-v2-07-06",
      "level": 1,
      "text": "Geschlecht kann vom Rauchen abhängen: unsinnig"
     },
     {
-     "id": "st3-08-07",
+     "id": "st3-v2-07-07",
      "level": 0,
-     "text": "Asymmetrische Beziehung: uV und aV unterscheidbar"
+     "text": "Asymmetrische Beziehung: uV und aV unterscheidbar; symmetrische: keine Richtung festgelegt"
     },
     {
-     "id": "st3-08-08",
-     "level": 0,
-     "text": "Symmetrische Beziehung: keine Richtung festgelegt"
-    },
-    {
-     "id": "st3-08-09",
+     "id": "st3-v2-07-08",
      "level": 0,
      "text": "Konvention: uV in die Spalten, aV in die Zeilen, Spaltenprozent interpretieren"
     }
    ]
   },
   {
-   "id": "st3-e03",
+   "id": "st3-v2-08",
    "subject": "Einführung in die Statistik",
    "title": "ST3 · Übung: Was ist uV, was ist aV?",
    "status": "neu",
    "lines": [
     {
-     "id": "st3-e03-01",
+     "id": "st3-v2-08-01",
      "level": 0,
-     "text": "Frag dich: „Was beeinflusst was?\" bzw. „Was kommt zuerst?\""
+     "text": "Frag dich: „Was beeinflusst was?\" bzw. „Was kommt zuerst?\" – die andere Variable ist die aV"
     },
     {
-     "id": "st3-e03-02",
+     "id": "st3-v2-08-02",
      "level": 1,
-     "text": "Paar | uV (Ursache) | aV (Wirkung)"
+     "text": "Paar | uV (Ursache)"
     },
     {
-     "id": "st3-e03-03",
+     "id": "st3-v2-08-03",
      "level": 1,
-     "text": "Alter und Sturzhäufigkeit | ?Alter | ?Sturzhäufigkeit"
+     "text": "Alter und Sturz­häu­fig­keit | ?Alter"
     },
     {
-     "id": "st3-e03-04",
+     "id": "st3-v2-08-04",
      "level": 1,
-     "text": "Rauchen und Lungenkrebs | ?Rauchen | ?Lungenkrebs"
+     "text": "Rauchen und Lungenkrebs | ?Rauchen"
     },
     {
-     "id": "st3-e03-05",
+     "id": "st3-v2-08-05",
      "level": 1,
-     "text": "Hygieneschulung und Händedesinfektion | ?Schulung | ?Händedesinfektion"
+     "text": "Hygiene­schu­lung und Hände­desin­fek­tion | ?Schulung"
     },
     {
-     "id": "st3-e03-06",
+     "id": "st3-v2-08-06",
      "level": 1,
-     "text": "Haushaltsgröße und Wohnungsgröße | ?Haushaltsgröße | ?Wohnungsgröße"
+     "text": "Haus­halts­größe und Woh­nungs­größe | ?Haus­halts­größe"
     },
     {
-     "id": "st3-e03-07",
+     "id": "st3-v2-08-07",
      "level": 0,
      "text": "Probe: den Satz umdrehen"
     },
     {
-     "id": "st3-e03-08",
+     "id": "st3-v2-08-08",
      "level": 1,
      "text": "„Das Alter hängt von den Stürzen ab\" klingt unsinnig, also ist Alter die uV"
     }
    ]
   },
   {
-   "id": "st3-09",
+   "id": "st3-v2-09",
    "subject": "Einführung in die Statistik",
-   "title": "ST3 · Kreuztabelle mit Prozenten lesen",
+   "title": "ST3 · Wie liest man eine Kreuztabelle mit Prozenten?",
    "status": "neu",
    "lines": [
     {
-     "id": "st3-09-01",
+     "id": "st3-v2-09-01",
      "level": 0,
-     "text": "Spaltenprozent (% von Geschlecht)"
+     "text": "Absolut rauchen 12 Männer und 7 Frauen – aber die Gruppen sind verschieden groß (18 und 22)"
     },
     {
-     "id": "st3-09-02",
-     "level": 1,
-     "text": "Männer: 66,7 % rauchen"
-    },
-    {
-     "id": "st3-09-03",
-     "level": 1,
-     "text": "Frauen: 31,8 % rauchen"
-    },
-    {
-     "id": "st3-09-04",
+     "id": "st3-v2-09-02",
      "level": 0,
-     "text": "Zeilenprozent (% von Rauchen)"
+     "text": "Spaltenprozent (% von Geschlecht): fair vergleichen innerhalb jeder Gruppe"
     },
     {
-     "id": "st3-09-05",
-     "level": 1,
-     "text": "Raucher:innen: 63,2 % männlich, 36,8 % weiblich"
-    },
-    {
-     "id": "st3-09-06",
-     "level": 0,
-     "text": "Gesamtprozent (% von Total)"
-    },
-    {
-     "id": "st3-09-07",
-     "level": 1,
-     "text": "30,0 % der Befragten sind rauchende Männer"
-    },
-    {
-     "id": "st3-09-08",
-     "level": 0,
-     "text": "Weil Geschlecht die uV ist, interpretiert man die Spaltenprozent: Männer rauchen hier deutlich häufiger"
-    }
-   ]
-  },
-  {
-   "id": "st3-e04",
-   "subject": "Einführung in die Statistik",
-   "title": "ST3 · Einfach erklärt: Warum Prozent in der Kreuztabelle?",
-   "status": "neu",
-   "lines": [
-    {
-     "id": "st3-e04-01",
-     "level": 0,
-     "text": "Absolut rauchen 12 Männer und 7 Frauen"
-    },
-    {
-     "id": "st3-e04-02",
-     "level": 1,
-     "text": "aber es gibt 18 Männer und 22 Frauen, die Gruppen sind verschieden groß"
-    },
-    {
-     "id": "st3-e04-03",
-     "level": 0,
-     "text": "Darum fair vergleichen: Anteil innerhalb jeder Gruppe"
-    },
-    {
-     "id": "st3-e04-04",
+     "id": "st3-v2-09-03",
      "level": 1,
      "text": "Gruppe | rauchen"
     },
     {
-     "id": "st3-e04-05",
+     "id": "st3-v2-09-04",
      "level": 1,
      "text": "Männer | ?12 von 18 = 66,7 %"
     },
     {
-     "id": "st3-e04-06",
+     "id": "st3-v2-09-05",
      "level": 1,
      "text": "Frauen | ?7 von 22 = 31,8 %"
     },
     {
-     "id": "st3-e04-07",
+     "id": "st3-v2-09-06",
+     "level": 0,
+     "text": "Zeilenprozent (% von Rauchen): Raucher:innen sind 63,2 % männlich, 36,8 % weiblich"
+    },
+    {
+     "id": "st3-v2-09-07",
+     "level": 0,
+     "text": "Gesamtprozent (% von Total): 30,0 % der Befragten sind rauchende Männer"
+    },
+    {
+     "id": "st3-v2-09-08",
      "level": 0,
      "text": "Regel: Prozent in Richtung der uV bilden, dann quer vergleichen"
     },
     {
-     "id": "st3-e04-08",
+     "id": "st3-v2-09-09",
      "level": 1,
-     "text": "uV Geschlecht steht in den Spalten, also Spaltenprozent"
+     "text": "uV Geschlecht steht in den Spalten, also Spaltenprozent: Männer rauchen hier deutlich häufiger"
     },
     {
-     "id": "st3-e04-09",
-     "level": 0,
-     "text": "Großer Unterschied zwischen den Gruppen = Hinweis auf einen Zusammenhang"
+     "id": "st3-v2-09-10",
+     "level": 1,
+     "text": "großer Unterschied zwischen den Gruppen = Hinweis auf einen Zusammenhang"
     }
    ]
   },
   {
-   "id": "st4-01",
+   "id": "st4-v2-01",
    "subject": "Einführung in die Statistik",
-   "title": "ST4 · Zusammenhangsmaße: Grundlagen",
+   "title": "ST4 · Was muss man über Zusammenhangsmaße grundsätzlich wissen?",
    "status": "neu",
    "lines": [
     {
-     "id": "st4-01-01",
+     "id": "st4-v2-01-01",
      "level": 0,
      "text": "Je einheitlicher die Unterschiede, desto größer die Assoziation bzw. Korrelation"
     },
     {
-     "id": "st4-01-02",
+     "id": "st4-v2-01-02",
      "level": 0,
      "text": "Vor der Wahl des Maßes: Skalenniveaus kritisch bestimmen!"
     },
     {
-     "id": "st4-01-03",
+     "id": "st4-v2-01-03",
      "level": 0,
      "text": "Vorteile"
     },
     {
-     "id": "st4-01-04",
+     "id": "st4-v2-01-04",
      "level": 1,
      "text": "Beziehung als eine Zahl beschreibbar"
     },
     {
-     "id": "st4-01-05",
+     "id": "st4-v2-01-05",
      "level": 1,
      "text": "Aussage über die Stärke"
     },
     {
-     "id": "st4-01-06",
+     "id": "st4-v2-01-06",
      "level": 1,
      "text": "Vergleich mit anderen Daten möglich"
     },
     {
-     "id": "st4-01-07",
+     "id": "st4-v2-01-07",
      "level": 0,
      "text": "Nachteile: manipulierbar"
     },
     {
-     "id": "st4-01-08",
+     "id": "st4-v2-01-08",
      "level": 1,
      "text": "durch Gruppierung der Daten"
     },
     {
-     "id": "st4-01-09",
+     "id": "st4-v2-01-09",
      "level": 1,
      "text": "durch nachträgliche Bildung von Kategorien"
     }
    ]
   },
   {
-   "id": "st4-02",
+   "id": "st4-v2-02",
    "subject": "Einführung in die Statistik",
-   "title": "ST4 · Chi²: beobachtete vs. erwartete Werte",
+   "title": "ST4 · Chi²: Was sind beobachtete und erwartete Werte?",
    "status": "neu",
    "lines": [
     {
-     "id": "st4-02-01",
+     "id": "st4-v2-02-01",
      "level": 0,
      "text": "Kontingenztabelle = beobachtete Werte"
     },
     {
-     "id": "st4-02-02",
+     "id": "st4-v2-02-02",
      "level": 0,
      "text": "Indifferenztabelle = erwartete Werte, wenn es keinen Zusammenhang gäbe"
     },
     {
-     "id": "st4-02-03",
+     "id": "st4-v2-02-03",
      "level": 1,
      "text": "berechnet aus den Randhäufigkeiten: Zeilensumme × Spaltensumme ÷ n"
     },
     {
-     "id": "st4-02-04",
-     "level": 0,
+     "id": "st4-v2-02-04",
+     "level": 1,
      "text": "Erwartet | männlich | weiblich"
     },
     {
-     "id": "st4-02-05",
-     "level": 0,
+     "id": "st4-v2-02-05",
+     "level": 1,
      "text": "Raucher:in | ?8,5 | ?10,5"
     },
     {
-     "id": "st4-02-06",
-     "level": 0,
+     "id": "st4-v2-02-06",
+     "level": 1,
      "text": "Nicht-Raucher:in | ?9,5 | ?11,5"
     },
     {
-     "id": "st4-02-07",
+     "id": "st4-v2-02-07",
      "level": 0,
      "text": "Beobachtet waren 12, 7, 6 und 15"
     },
     {
-     "id": "st4-02-08",
+     "id": "st4-v2-02-08",
+     "level": 0,
+     "text": "Idee: Wäre das Geschlecht egal, müssten auch etwa 47,5 % (19 von 40) der 18 Männer rauchen, also 8,5 – beobachtet sind 12"
+    },
+    {
+     "id": "st4-v2-02-09",
      "level": 0,
      "text": "Je größer die Abweichung zwischen beobachtet und erwartet, desto stärker beeinflusst eine Variable die andere"
     }
    ]
   },
   {
-   "id": "st4-e01",
+   "id": "st4-v2-03",
    "subject": "Einführung in die Statistik",
-   "title": "ST4 · Einfach erklärt: die Idee hinter Chi²",
+   "title": "ST4 · Wie berechnet man Chi²?",
    "status": "neu",
    "lines": [
     {
-     "id": "st4-e01-01",
-     "level": 0,
-     "text": "Frage: Was wäre, wenn das Geschlecht beim Rauchen egal wäre?"
-    },
-    {
-     "id": "st4-e01-02",
-     "level": 1,
-     "text": "Insgesamt rauchen 19 von 40 = 47,5 %"
-    },
-    {
-     "id": "st4-e01-03",
-     "level": 1,
-     "text": "Dann müssten auch etwa 47,5 % der 18 Männer rauchen, also etwa 8,5"
-    },
-    {
-     "id": "st4-e01-04",
-     "level": 1,
-     "text": "Das ist der erwartete Wert"
-    },
-    {
-     "id": "st4-e01-05",
-     "level": 0,
-     "text": "Beobachtet rauchen aber 12 Männer"
-    },
-    {
-     "id": "st4-e01-06",
-     "level": 1,
-     "text": "12 statt 8,5 = deutlich mehr als „egal\" erwarten lässt"
-    },
-    {
-     "id": "st4-e01-07",
-     "level": 0,
-     "text": "Chi² sammelt diese Abweichungen aus allen Zellen in einer Zahl"
-    },
-    {
-     "id": "st4-e01-08",
-     "level": 1,
-     "text": "kleine Abweichungen = kleines χ² = kaum Zusammenhang"
-    },
-    {
-     "id": "st4-e01-09",
-     "level": 1,
-     "text": "große Abweichungen = großes χ² = eher ein Zusammenhang"
-    }
-   ]
-  },
-  {
-   "id": "st4-03",
-   "subject": "Einführung in die Statistik",
-   "title": "ST4 · Chi² berechnen",
-   "status": "neu",
-   "lines": [
-    {
-     "id": "st4-03-01",
+     "id": "st4-v2-03-01",
      "level": 0,
      "text": "χ² = Summe über alle Zellen von (f_b − f_e)² ÷ f_e"
     },
     {
-     "id": "st4-03-02",
+     "id": "st4-v2-03-02",
      "level": 0,
      "text": "Rechenweg"
     },
     {
-     "id": "st4-03-03",
+     "id": "st4-v2-03-03",
      "level": 1,
      "text": "Differenz beobachtet − erwartet → quadrieren → durch den erwarteten Wert teilen → über alle Zellen summieren"
     },
     {
-     "id": "st4-03-04",
-     "level": 0,
+     "id": "st4-v2-03-04",
+     "level": 1,
      "text": "Warum quadrieren? Gleiche Vorzeichen, nur positive Werte, große Differenzen zählen stärker"
     },
     {
-     "id": "st4-03-05",
+     "id": "st4-v2-03-05",
      "level": 0,
      "text": "Beispiel Rauchen × Geschlecht"
     },
     {
-     "id": "st4-03-06",
+     "id": "st4-v2-03-06",
      "level": 1,
      "text": "Zellen | männlich | weiblich"
     },
     {
-     "id": "st4-03-07",
+     "id": "st4-v2-03-07",
      "level": 1,
      "text": "Raucher:in | 1,44 | 1,17"
     },
     {
-     "id": "st4-03-08",
+     "id": "st4-v2-03-08",
      "level": 1,
      "text": "Nicht-Raucher:in | 1,29 | 1,07"
     },
     {
-     "id": "st4-03-09",
+     "id": "st4-v2-03-09",
      "level": 1,
      "text": "Summe der vier Zellen: χ² = 4,97"
     },
     {
-     "id": "st4-03-10",
+     "id": "st4-v2-03-10",
      "level": 0,
+     "text": "Chi² sammelt die Abweichungen aller Zellen in einer Zahl"
+    },
+    {
+     "id": "st4-v2-03-11",
+     "level": 1,
+     "text": "kleine Abweichungen = kleines χ² = kaum Zusammenhang; große = großes χ² = eher ein Zusammenhang"
+    },
+    {
+     "id": "st4-v2-03-12",
+     "level": 1,
      "text": "χ² = 0: beobachtet = erwartet, kein Zusammenhang"
     },
     {
-     "id": "st4-03-11",
+     "id": "st4-v2-03-13",
      "level": 0,
      "text": "Maximum ist nicht standardisiert, daher braucht es standardisierte Maße (0–1) und einen Signifikanztest"
     }
    ]
   },
   {
-   "id": "st4-e02",
+   "id": "st4-v2-04",
    "subject": "Einführung in die Statistik",
-   "title": "ST4 · Einfach erklärt: Chi² für eine Zelle",
+   "title": "ST4 · Übung: Chi² für eine Zelle berechnen",
    "status": "neu",
    "lines": [
     {
-     "id": "st4-e02-01",
+     "id": "st4-v2-04-01",
      "level": 0,
      "text": "Zelle Raucher, männlich: beobachtet 12, erwartet 8,5"
     },
     {
-     "id": "st4-e02-02",
+     "id": "st4-v2-04-02",
      "level": 0,
      "text": "1. Differenz: 12 − 8,5 = 3,5"
     },
     {
-     "id": "st4-e02-03",
+     "id": "st4-v2-04-03",
      "level": 0,
      "text": "2. Quadrieren: 3,5² = 12,25"
     },
     {
-     "id": "st4-e02-04",
+     "id": "st4-v2-04-04",
      "level": 0,
      "text": "3. Durch den erwarteten Wert teilen: 12,25 ÷ 8,5 = 1,44"
     },
     {
-     "id": "st4-e02-05",
+     "id": "st4-v2-04-05",
      "level": 0,
      "text": "Genauso für die anderen drei Zellen, dann alles addieren"
     },
     {
-     "id": "st4-e02-06",
+     "id": "st4-v2-04-06",
      "level": 1,
      "text": "1,44 + 1,17 + 1,29 + 1,07 = 4,97"
     },
     {
-     "id": "st4-e02-07",
+     "id": "st4-v2-04-07",
      "level": 0,
      "text": "Bei einer 2×2-Tabelle ist die Differenz in jeder Zelle gleich groß (hier 3,5)"
     }
    ]
   },
   {
-   "id": "st4-04",
+   "id": "st4-v2-05",
    "subject": "Einführung in die Statistik",
-   "title": "ST4 · Signifikanz und Irrtumswahrscheinlichkeit",
+   "title": "ST4 · Was bedeuten Nullhypothese, Alternativhypothese und p-Wert?",
    "status": "neu",
    "lines": [
     {
-     "id": "st4-04-01",
+     "id": "st4-v2-05-01",
      "level": 0,
      "text": "Aus der Inferenzstatistik: Schluss von der Stichprobe auf die Grundgesamtheit"
     },
     {
-     "id": "st4-04-02",
-     "level": 0,
+     "id": "st4-v2-05-02",
+     "level": 1,
      "text": "Frage: Ist ein beobachteter Effekt Zufall, oder gilt er auch in der Grundgesamtheit?"
     },
     {
-     "id": "st4-04-03",
+     "id": "st4-v2-05-03",
      "level": 0,
      "text": "Nullhypothese H₀"
     },
     {
-     "id": "st4-04-04",
+     "id": "st4-v2-05-04",
      "level": 1,
-     "text": "Der Effekt ist durch Zufall erklärbar: in der Stichprobe ja, in der Grundgesamtheit nicht"
+     "text": "der Effekt ist durch Zufall erklärbar: in der Stichprobe ja, in der Grundgesamtheit nicht"
     },
     {
-     "id": "st4-04-05",
+     "id": "st4-v2-05-05",
      "level": 0,
      "text": "Alternativhypothese H₁"
     },
     {
-     "id": "st4-04-06",
+     "id": "st4-v2-05-06",
      "level": 1,
-     "text": "Der Effekt ist nicht durch Zufall erklärbar: in Stichprobe und Grundgesamtheit"
+     "text": "der Effekt ist nicht durch Zufall erklärbar: in Stichprobe und Grundgesamtheit"
     },
     {
-     "id": "st4-04-07",
+     "id": "st4-v2-05-07",
      "level": 0,
      "text": "Irrtumswahrscheinlichkeit (p-Wert)"
     },
     {
-     "id": "st4-04-08",
+     "id": "st4-v2-05-08",
      "level": 1,
      "text": "Wahrscheinlichkeit, einen Effekt anzunehmen, obwohl H₀ gilt"
+    },
+    {
+     "id": "st4-v2-05-09",
+     "level": 0,
+     "text": "Merkhilfe Gericht: H₀ = „unschuldig\" – man glaubt an H₀, bis die Beweise stark genug sind"
     }
    ]
   },
   {
-   "id": "st4-e03",
+   "id": "st4-v2-06",
    "subject": "Einführung in die Statistik",
-   "title": "ST4 · Einfach erklärt: Was sagt der p-Wert?",
+   "title": "ST4 · Was sagt der p-Wert konkret?",
    "status": "neu",
    "lines": [
     {
-     "id": "st4-e03-01",
-     "level": 0,
-     "text": "Bild: Gerichtsverfahren"
-    },
-    {
-     "id": "st4-e03-02",
-     "level": 1,
-     "text": "H₀ = „unschuldig\", kein Zusammenhang, alles nur Zufall"
-    },
-    {
-     "id": "st4-e03-03",
-     "level": 1,
-     "text": "Man glaubt an H₀, bis die Beweise stark genug sind"
-    },
-    {
-     "id": "st4-e03-04",
+     "id": "st4-v2-06-01",
      "level": 0,
      "text": "Der p-Wert fragt: „Wenn es wirklich nur Zufall wäre (H₀), wie wahrscheinlich wäre so ein Ergebnis?\""
     },
     {
-     "id": "st4-e03-05",
+     "id": "st4-v2-06-02",
      "level": 1,
      "text": "p klein (unter 0,05): Zufall ist unglaubwürdig, H₀ verwerfen, H₁ annehmen"
     },
     {
-     "id": "st4-e03-06",
+     "id": "st4-v2-06-03",
      "level": 1,
      "text": "p groß: Zufall könnte es erklären, H₀ beibehalten"
     },
     {
-     "id": "st4-e03-07",
+     "id": "st4-v2-06-04",
      "level": 0,
      "text": "Beispiel Münze: 10-mal werfen"
     },
     {
-     "id": "st4-e03-08",
+     "id": "st4-v2-06-05",
      "level": 1,
      "text": "6-mal Kopf: passiert oft zufällig, kein Verdacht"
     },
     {
-     "id": "st4-e03-09",
+     "id": "st4-v2-06-06",
      "level": 1,
      "text": "10-mal Kopf: zufällig sehr unwahrscheinlich, die Münze ist wohl gezinkt"
     },
     {
-     "id": "st4-e03-10",
+     "id": "st4-v2-06-07",
      "level": 0,
      "text": "Rauchen × Geschlecht: p = 0,0258"
     },
     {
-     "id": "st4-e03-11",
+     "id": "st4-v2-06-08",
      "level": 1,
-     "text": "nur 2,58 % Risiko, sich zu irren, das liegt unter 5 %, also signifikant"
+     "text": "nur 2,58 % Risiko, sich zu irren – liegt unter 5 %, also signifikant"
     }
    ]
   },
   {
-   "id": "st4-05",
+   "id": "st4-v2-07",
    "subject": "Einführung in die Statistik",
-   "title": "ST4 · Signifikanzniveaus",
+   "title": "ST4 · Welche Signifikanzniveaus gibt es?",
    "status": "neu",
    "lines": [
     {
-     "id": "st4-05-01",
+     "id": "st4-v2-07-01",
      "level": 0,
+     "text": "Bewertung des p-Werts"
+    },
+    {
+     "id": "st4-v2-07-02",
+     "level": 1,
      "text": "p-Wert | Bewertung"
     },
     {
-     "id": "st4-05-02",
-     "level": 0,
+     "id": "st4-v2-07-03",
+     "level": 1,
      "text": "p > 0,05 | ?nicht signifikant (n. s.)"
     },
     {
-     "id": "st4-05-03",
-     "level": 0,
+     "id": "st4-v2-07-04",
+     "level": 1,
      "text": "p < 0,10 | ?Trend (T)"
     },
     {
-     "id": "st4-05-04",
-     "level": 0,
+     "id": "st4-v2-07-05",
+     "level": 1,
      "text": "p < 0,05 | ?signifikant *"
     },
     {
-     "id": "st4-05-05",
-     "level": 0,
+     "id": "st4-v2-07-06",
+     "level": 1,
      "text": "p < 0,01 | ?hoch signifikant **"
     },
     {
-     "id": "st4-05-06",
-     "level": 0,
+     "id": "st4-v2-07-07",
+     "level": 1,
      "text": "p < 0,001 | ?höchst signifikant ***"
-    }
-   ]
-  },
-  {
-   "id": "st4-e04",
-   "subject": "Einführung in die Statistik",
-   "title": "ST4 · Übung: Wie signifikant ist …?",
-   "status": "neu",
-   "lines": [
-    {
-     "id": "st4-e04-01",
-     "level": 0,
-     "text": "p-Wert | Bewertung"
     },
     {
-     "id": "st4-e04-02",
-     "level": 0,
-     "text": "p = 0,20 | ?nicht signifikant (n. s.)"
-    },
-    {
-     "id": "st4-e04-03",
-     "level": 0,
-     "text": "p = 0,07 | ?Trend"
-    },
-    {
-     "id": "st4-e04-04",
-     "level": 0,
-     "text": "p = 0,03 | ?signifikant *"
-    },
-    {
-     "id": "st4-e04-05",
-     "level": 0,
-     "text": "p = 0,008 | ?hoch signifikant **"
-    },
-    {
-     "id": "st4-e04-06",
-     "level": 0,
-     "text": "p = 0,0004 | ?höchst signifikant ***"
-    },
-    {
-     "id": "st4-e04-07",
-     "level": 0,
-     "text": "Je kleiner p, desto mehr Sternchen"
-    },
-    {
-     "id": "st4-e04-08",
+     "id": "st4-v2-07-08",
      "level": 0,
      "text": "Eselsbrücke: 5 % – 1 % – 0,1 % = ein, zwei, drei Sternchen"
     }
    ]
   },
   {
-   "id": "st4-06",
+   "id": "st4-v2-08",
    "subject": "Einführung in die Statistik",
-   "title": "ST4 · Der Signifikanztest in 4 Schritten",
+   "title": "ST4 · Übung: Wie signifikant ist …?",
    "status": "neu",
    "lines": [
     {
-     "id": "st4-06-01",
+     "id": "st4-v2-08-01",
+     "level": 0,
+     "text": "Je kleiner p, desto mehr Sternchen"
+    },
+    {
+     "id": "st4-v2-08-02",
+     "level": 1,
+     "text": "p-Wert | Bewertung"
+    },
+    {
+     "id": "st4-v2-08-03",
+     "level": 1,
+     "text": "p = 0,20 | ?nicht signifikant (n. s.)"
+    },
+    {
+     "id": "st4-v2-08-04",
+     "level": 1,
+     "text": "p = 0,07 | ?Trend"
+    },
+    {
+     "id": "st4-v2-08-05",
+     "level": 1,
+     "text": "p = 0,03 | ?signifikant *"
+    },
+    {
+     "id": "st4-v2-08-06",
+     "level": 1,
+     "text": "p = 0,008 | ?hoch signifikant **"
+    },
+    {
+     "id": "st4-v2-08-07",
+     "level": 1,
+     "text": "p = 0,0004 | ?höchst signifikant ***"
+    }
+   ]
+  },
+  {
+   "id": "st4-v2-09",
+   "subject": "Einführung in die Statistik",
+   "title": "ST4 · Wie läuft ein Signifikanztest in 4 Schritten ab?",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "st4-v2-09-01",
      "level": 0,
      "text": "Effekt in der Stichprobe beobachten → Hypothesen H₀ und H₁ aufstellen → Irrtumswahrscheinlichkeit bestimmen (unter Annahme von H₀) → Entscheidung"
     },
     {
-     "id": "st4-06-02",
+     "id": "st4-v2-09-02",
      "level": 0,
      "text": "Entscheidung"
     },
     {
-     "id": "st4-06-03",
+     "id": "st4-v2-09-03",
      "level": 1,
      "text": "p relativ groß: H₀ annehmen"
     },
     {
-     "id": "st4-06-04",
+     "id": "st4-v2-09-04",
      "level": 1,
      "text": "p relativ klein: H₁ annehmen"
     },
     {
-     "id": "st4-06-05",
+     "id": "st4-v2-09-05",
      "level": 0,
      "text": "Signifikanz hängt ab von Stichprobengröße und Stärke des Zusammenhangs"
     },
     {
-     "id": "st4-06-06",
+     "id": "st4-v2-09-06",
      "level": 0,
      "text": "Achtung: Empirische Signifikanz ≠ praktische Relevanz!"
     }
    ]
   },
   {
-   "id": "st4-e05",
+   "id": "st4-v2-10",
    "subject": "Einführung in die Statistik",
-   "title": "ST4 · Einfach erklärt: signifikant heißt nicht wichtig",
+   "title": "ST4 · Warum heißt signifikant nicht wichtig?",
    "status": "neu",
    "lines": [
     {
-     "id": "st4-e05-01",
+     "id": "st4-v2-10-01",
      "level": 0,
      "text": "Signifikant heißt nur: „wahrscheinlich kein Zufall\""
     },
     {
-     "id": "st4-e05-02",
+     "id": "st4-v2-10-02",
      "level": 1,
      "text": "es sagt nicht, wie groß oder wichtig der Effekt ist"
     },
     {
-     "id": "st4-e05-03",
+     "id": "st4-v2-10-03",
      "level": 0,
      "text": "Große Stichprobe: schon winzige Effekte werden signifikant"
     },
     {
-     "id": "st4-e05-04",
+     "id": "st4-v2-10-04",
      "level": 1,
      "text": "z. B. ein Medikament senkt den Blutdruck um 1 mmHg, p < 0,001, praktisch aber bedeutungslos"
     },
     {
-     "id": "st4-e05-05",
+     "id": "st4-v2-10-05",
      "level": 0,
      "text": "Kleine Stichprobe: auch ein echter Effekt bleibt oft nicht signifikant"
     },
     {
-     "id": "st4-e05-06",
+     "id": "st4-v2-10-06",
      "level": 0,
      "text": "Darum immer beides anschauen"
     },
     {
-     "id": "st4-e05-07",
+     "id": "st4-v2-10-07",
      "level": 1,
      "text": "Stärke des Zusammenhangs (z. B. Phi, r)"
     },
     {
-     "id": "st4-e05-08",
+     "id": "st4-v2-10-08",
      "level": 1,
      "text": "Signifikanz (p-Wert)"
     }
    ]
   },
   {
-   "id": "st4-07",
+   "id": "st4-v2-11",
    "subject": "Einführung in die Statistik",
-   "title": "ST4 · Beispiel: Ist Rauchen × Geschlecht signifikant?",
+   "title": "ST4 · Beispiel: Ist Rauchen × Geschlecht signifikant – und wie stark?",
    "status": "neu",
    "lines": [
     {
-     "id": "st4-07-01",
+     "id": "st4-v2-11-01",
      "level": 0,
      "text": "χ² = 4,97"
     },
     {
-     "id": "st4-07-02",
+     "id": "st4-v2-11-02",
      "level": 0,
      "text": "p = 0,0258, also Irrtumswahrscheinlichkeit 2,58 %"
     },
     {
-     "id": "st4-07-03",
+     "id": "st4-v2-11-03",
      "level": 0,
      "text": "p < 0,05: H₀ verwerfen, H₁ annehmen"
     },
     {
-     "id": "st4-07-04",
-     "level": 0,
-     "text": "Der Effekt gilt als gesichert und tritt auch in der Grundgesamtheit auf"
+     "id": "st4-v2-11-04",
+     "level": 1,
+     "text": "der Effekt gilt als gesichert und tritt auch in der Grundgesamtheit auf"
     },
     {
-     "id": "st4-07-05",
+     "id": "st4-v2-11-05",
      "level": 0,
      "text": "Phi = √(χ² ÷ n) = √(4,97 ÷ 40) = 0,352"
     },
     {
-     "id": "st4-07-06",
+     "id": "st4-v2-11-06",
      "level": 1,
      "text": "also ein mittlerer Zusammenhang"
     }
    ]
   },
   {
-   "id": "st4-08",
+   "id": "st4-v2-12",
    "subject": "Einführung in die Statistik",
-   "title": "ST4 · Nominale Zusammenhangsmaße",
+   "title": "ST4 · Welche nominalen Zusammenhangsmaße gibt es?",
    "status": "neu",
    "lines": [
     {
-     "id": "st4-08-01",
+     "id": "st4-v2-12-01",
      "level": 0,
      "text": "Standardisiert (0 bis 1), symmetrisch, basieren auf χ²"
     },
     {
-     "id": "st4-08-02",
+     "id": "st4-v2-12-02",
      "level": 1,
-     "text": "Phi φ: für 2×2-Tabellen (Vierfeldertafel)"
+     "text": "Maß | wofür"
     },
     {
-     "id": "st4-08-03",
+     "id": "st4-v2-12-03",
      "level": 1,
-     "text": "Kontingenzkoeffizient C: quadratische Tabellen größer 2×2, schwer vergleichbar"
+     "text": "Phi φ | ?2×2-Tabellen (Vier­fel­derta­fel)"
     },
     {
-     "id": "st4-08-04",
+     "id": "st4-v2-12-04",
      "level": 1,
-     "text": "Cramer's V: für größere Tabellen, unabhängig von der Tabellengröße – das empfohlene Maß"
+     "text": "Kon­tin­genzkoeffizi­ent C | ?qua­drati­sche Tabellen größer 2×2, schwer ver­gleich­bar"
     },
     {
-     "id": "st4-08-05",
+     "id": "st4-v2-12-05",
+     "level": 1,
+     "text": "Cramer's V | ?größere Tabellen, unabhängig von der Tabel­len­größe – das empfohlene Maß"
+    },
+    {
+     "id": "st4-v2-12-06",
      "level": 0,
      "text": "Vorzeichenlos: keine Richtung des Zusammenhangs"
     },
     {
-     "id": "st4-08-06",
+     "id": "st4-v2-12-07",
      "level": 0,
      "text": "Asymmetrische Maße beruhen auf proportionaler Fehlerreduktion (PRE)"
     },
     {
-     "id": "st4-08-07",
+     "id": "st4-v2-12-08",
      "level": 1,
      "text": "Lambda, Goodman und Kruskal, Unsicherheitskoeffizient"
     }
    ]
   },
   {
-   "id": "st4-09",
+   "id": "st4-v2-13",
    "subject": "Einführung in die Statistik",
-   "title": "ST4 · Stärke eines Zusammenhangs (Konvention)",
+   "title": "ST4 · Wie stark ist ein Zusammenhang? (Konvention)",
    "status": "neu",
    "lines": [
     {
-     "id": "st4-09-01",
+     "id": "st4-v2-13-01",
      "level": 0,
-     "text": "Wert | Zusammenhang"
+     "text": "Einordnung des Werts"
     },
     {
-     "id": "st4-09-02",
-     "level": 0,
+     "id": "st4-v2-13-02",
+     "level": 1,
+     "text": "Wert | Zusam­men­hang"
+    },
+    {
+     "id": "st4-v2-13-03",
+     "level": 1,
      "text": "0,0 | ?kein"
     },
     {
-     "id": "st4-09-03",
-     "level": 0,
+     "id": "st4-v2-13-04",
+     "level": 1,
      "text": "0,0 – 0,1 | ?in praxi kein"
     },
     {
-     "id": "st4-09-04",
-     "level": 0,
+     "id": "st4-v2-13-05",
+     "level": 1,
      "text": "0,1 – 0,2 | ?sehr schwach"
     },
     {
-     "id": "st4-09-05",
-     "level": 0,
+     "id": "st4-v2-13-06",
+     "level": 1,
      "text": "0,2 – 0,3 | ?schwach"
     },
     {
-     "id": "st4-09-06",
-     "level": 0,
+     "id": "st4-v2-13-07",
+     "level": 1,
      "text": "0,3 – 0,5 | ?mittel"
     },
     {
-     "id": "st4-09-07",
-     "level": 0,
+     "id": "st4-v2-13-08",
+     "level": 1,
      "text": "0,5 – 0,6 | ?stark"
     },
     {
-     "id": "st4-09-08",
-     "level": 0,
+     "id": "st4-v2-13-09",
+     "level": 1,
      "text": "über 0,6 | ?sehr stark"
     },
     {
-     "id": "st4-09-09",
-     "level": 0,
+     "id": "st4-v2-13-10",
+     "level": 1,
      "text": "1,0 | ?perfekt"
+    },
+    {
+     "id": "st4-v2-13-11",
+     "level": 0,
+     "text": "Merkhilfe: bis 0,3 schwach, bis 0,5 mittel, darüber stark"
     }
    ]
   },
   {
-   "id": "st4-e06",
+   "id": "st4-v2-14",
    "subject": "Einführung in die Statistik",
    "title": "ST4 · Übung: Wie stark ist der Zusammenhang?",
    "status": "neu",
    "lines": [
     {
-     "id": "st4-e06-01",
+     "id": "st4-v2-14-01",
      "level": 0,
-     "text": "Wert | Zusammenhang"
+     "text": "Werte einordnen"
     },
     {
-     "id": "st4-e06-02",
-     "level": 0,
+     "id": "st4-v2-14-02",
+     "level": 1,
+     "text": "Wert | Zusam­men­hang"
+    },
+    {
+     "id": "st4-v2-14-03",
+     "level": 1,
      "text": "φ = 0,05 | ?in praxi kein"
     },
     {
-     "id": "st4-e06-03",
-     "level": 0,
+     "id": "st4-v2-14-04",
+     "level": 1,
      "text": "V = 0,15 | ?sehr schwach"
     },
     {
-     "id": "st4-e06-04",
-     "level": 0,
+     "id": "st4-v2-14-05",
+     "level": 1,
      "text": "V = 0,25 | ?schwach"
     },
     {
-     "id": "st4-e06-05",
-     "level": 0,
+     "id": "st4-v2-14-06",
+     "level": 1,
      "text": "φ = 0,352 | ?mittel"
     },
     {
-     "id": "st4-e06-06",
-     "level": 0,
+     "id": "st4-v2-14-07",
+     "level": 1,
      "text": "r = −0,45 | ?mittel (negativ)"
     },
     {
-     "id": "st4-e06-07",
-     "level": 0,
+     "id": "st4-v2-14-08",
+     "level": 1,
      "text": "r = 0,669 | ?sehr stark"
     },
     {
-     "id": "st4-e06-08",
+     "id": "st4-v2-14-09",
      "level": 0,
      "text": "Das Vorzeichen zeigt nur die Richtung"
     },
     {
-     "id": "st4-e06-09",
+     "id": "st4-v2-14-10",
      "level": 1,
      "text": "für die Stärke zählt die Zahl ohne Vorzeichen: −0,45 ist genauso stark wie +0,45"
     }
    ]
   },
   {
-   "id": "st4-10",
+   "id": "st4-v2-15",
    "subject": "Einführung in die Statistik",
-   "title": "ST4 · Ordinale Zusammenhangsmaße",
+   "title": "ST4 · Welche ordinalen Zusammenhangsmaße gibt es?",
    "status": "neu",
    "lines": [
     {
-     "id": "st4-10-01",
+     "id": "st4-v2-15-01",
      "level": 0,
      "text": "Basis: Paarvergleiche der Wertepaare (xᵢ, yᵢ)"
     },
     {
-     "id": "st4-10-02",
-     "level": 0,
-     "text": "Ab Ordinalskalenniveau, Rangkorrelationsmaße"
+     "id": "st4-v2-15-02",
+     "level": 1,
+     "text": "ab Ordinalskalenniveau, Rangkorrelationsmaße"
     },
     {
-     "id": "st4-10-03",
+     "id": "st4-v2-15-03",
      "level": 0,
      "text": "Zeigen Stärke UND Richtung (Proportionalität)"
     },
     {
-     "id": "st4-10-04",
+     "id": "st4-v2-15-04",
      "level": 1,
      "text": "direkt proportional (+): X steigt, Y steigt"
     },
     {
-     "id": "st4-10-05",
+     "id": "st4-v2-15-05",
      "level": 1,
      "text": "indirekt proportional (−): X steigt, Y sinkt"
     },
     {
-     "id": "st4-10-06",
+     "id": "st4-v2-15-06",
      "level": 0,
-     "text": "Symmetrische Beziehung (keine uV/aV): Kendall's Tau b"
+     "text": "Welches Maß?"
     },
     {
-     "id": "st4-10-07",
-     "level": 0,
-     "text": "Asymmetrische Beziehung (uV und aV): Somers' d"
+     "id": "st4-v2-15-07",
+     "level": 1,
+     "text": "symmetrische Beziehung (keine uV/aV): Kendall's Tau b"
     },
     {
-     "id": "st4-10-08",
+     "id": "st4-v2-15-08",
+     "level": 1,
+     "text": "asymmetrische Beziehung (uV und aV): Somers' d"
+    },
+    {
+     "id": "st4-v2-15-09",
      "level": 0,
      "text": "Beispiel: Zufriedenheit mit der Gesundheit × Befindlichkeit"
     },
     {
-     "id": "st4-10-09",
+     "id": "st4-v2-15-10",
      "level": 1,
      "text": "Somers' d symmetrisch = 0,312, p < 0,001: mittlerer, positiver, höchst signifikanter Zusammenhang"
     }
    ]
   },
   {
-   "id": "st4-e07",
+   "id": "st4-v2-16",
    "subject": "Einführung in die Statistik",
-   "title": "ST4 · Einfach erklärt: positiv und negativ",
+   "title": "ST4 · Was heißt positiver und negativer Zusammenhang?",
    "status": "neu",
    "lines": [
     {
-     "id": "st4-e07-01",
+     "id": "st4-v2-16-01",
      "level": 0,
-     "text": "Positiver Zusammenhang: „je mehr, desto mehr\""
+     "text": "Positiv: „je mehr, desto mehr\""
     },
     {
-     "id": "st4-e07-02",
+     "id": "st4-v2-16-02",
      "level": 1,
      "text": "höheres Alter, mehr Stürze"
     },
     {
-     "id": "st4-e07-03",
+     "id": "st4-v2-16-03",
      "level": 1,
      "text": "mehr Personen im Haushalt, größere Wohnung"
     },
     {
-     "id": "st4-e07-04",
+     "id": "st4-v2-16-04",
      "level": 0,
-     "text": "Negativer Zusammenhang: „je mehr, desto weniger\""
+     "text": "Negativ: „je mehr, desto weniger\""
     },
     {
-     "id": "st4-e07-05",
+     "id": "st4-v2-16-05",
      "level": 1,
      "text": "mehr Bewegung, niedrigerer Ruhepuls"
     },
     {
-     "id": "st4-e07-06",
+     "id": "st4-v2-16-06",
      "level": 1,
      "text": "bessere Schulung, weniger Fehler"
     },
     {
-     "id": "st4-e07-07",
+     "id": "st4-v2-16-07",
      "level": 0,
      "text": "Erst ab ordinal gibt es eine Richtung"
     },
     {
-     "id": "st4-e07-08",
+     "id": "st4-v2-16-08",
      "level": 1,
      "text": "bei nominalen Daten (z. B. Blutgruppe) gibt es kein „mehr\" oder „weniger\""
     },
     {
-     "id": "st4-e07-09",
+     "id": "st4-v2-16-09",
      "level": 1,
      "text": "deshalb haben Phi und Cramer's V kein Vorzeichen"
     }
    ]
   },
   {
-   "id": "st5-01",
+   "id": "st5-v2-01",
    "subject": "Einführung in die Statistik",
-   "title": "ST5 · Bivariate Grafiken",
+   "title": "ST5 · Welche bivariaten Grafiken gibt es?",
    "status": "neu",
    "lines": [
     {
-     "id": "st5-01-01",
+     "id": "st5-v2-01-01",
      "level": 0,
      "text": "Nominal und ordinal"
     },
     {
-     "id": "st5-01-02",
+     "id": "st5-v2-01-02",
      "level": 1,
      "text": "gruppierte (clustered) Balkendiagramme"
     },
     {
-     "id": "st5-01-03",
+     "id": "st5-v2-01-03",
      "level": 1,
      "text": "gestapelte (stacked) Balkendiagramme"
     },
     {
-     "id": "st5-01-04",
+     "id": "st5-v2-01-04",
      "level": 0,
      "text": "Metrisch"
     },
     {
-     "id": "st5-01-05",
+     "id": "st5-v2-01-05",
      "level": 1,
      "text": "Streudiagramm (Punktewolke, Scatterplot)"
     },
     {
-     "id": "st5-01-06",
+     "id": "st5-v2-01-06",
      "level": 1,
      "text": "X-Y-Koordinatensystem, jede Wertekombination = ein Punkt"
     },
     {
-     "id": "st5-01-07",
+     "id": "st5-v2-01-07",
      "level": 1,
      "text": "gibt einen Eindruck vom Zusammenhang, aber nicht verlässlich, dafür braucht es einen Kennwert"
     }
    ]
   },
   {
-   "id": "st5-02",
+   "id": "st5-v2-02",
    "subject": "Einführung in die Statistik",
-   "title": "ST5 · Kovarianz",
+   "title": "ST5 · Was ist die Kovarianz?",
    "status": "neu",
    "lines": [
     {
-     "id": "st5-02-01",
+     "id": "st5-v2-02-01",
      "level": 0,
      "text": "Grundlage metrischer Zusammenhangsmaße, ab Intervallskalenniveau"
     },
     {
-     "id": "st5-02-02",
-     "level": 0,
+     "id": "st5-v2-02-02",
+     "level": 1,
      "text": "Streuungsmaß, zeigt die Proportionalität"
     },
     {
-     "id": "st5-02-03",
+     "id": "st5-v2-02-03",
      "level": 0,
-     "text": "cov(x, y) = Summe von (xᵢ − x̄)(yᵢ − ȳ) geteilt durch (n − 1)"
+     "text": "Idee: „Bewegen sich beide Variablen gemeinsam?\""
     },
     {
-     "id": "st5-02-04",
-     "level": 0,
-     "text": "Rechenweg"
-    },
-    {
-     "id": "st5-02-05",
-     "level": 1,
-     "text": "Mittelwerte beider Variablen → Abstände jedes Werts zum Mittelwert → Abstände multiplizieren → Produkte summieren → durch (n − 1) teilen"
-    }
-   ]
-  },
-  {
-   "id": "st5-e01",
-   "subject": "Einführung in die Statistik",
-   "title": "ST5 · Einfach erklärt: Kovarianz und Korrelation",
-   "status": "neu",
-   "lines": [
-    {
-     "id": "st5-e01-01",
-     "level": 0,
-     "text": "Kovarianz fragt: „Bewegen sich beide Variablen gemeinsam?\""
-    },
-    {
-     "id": "st5-e01-02",
+     "id": "st5-v2-02-04",
      "level": 1,
      "text": "beide über ihrem Mittelwert oder beide darunter: Produkt positiv"
     },
     {
-     "id": "st5-e01-03",
+     "id": "st5-v2-02-05",
      "level": 1,
      "text": "einer drüber, einer drunter: Produkt negativ"
     },
     {
-     "id": "st5-e01-04",
+     "id": "st5-v2-02-06",
      "level": 1,
      "text": "Summe überwiegend positiv = positiver Zusammenhang"
     },
     {
-     "id": "st5-e01-05",
+     "id": "st5-v2-02-07",
      "level": 0,
-     "text": "Problem: Die Kovarianz hängt von der Einheit ab"
+     "text": "cov(x, y) = Summe von (xᵢ − x̄)(yᵢ − ȳ) geteilt durch (n − 1)"
     },
     {
-     "id": "st5-e01-06",
+     "id": "st5-v2-02-08",
      "level": 1,
-     "text": "Körpergröße in cm statt m ergibt eine viel größere Zahl, obwohl sich nichts geändert hat"
+     "text": "Mittelwerte beider Variablen → Abstände jedes Werts zum Mittelwert → Abstände multiplizieren → Produkte summieren → durch (n − 1) teilen"
     },
     {
-     "id": "st5-e01-07",
+     "id": "st5-v2-02-09",
      "level": 0,
-     "text": "Lösung: Pearson's r = standardisierte Kovarianz"
+     "text": "Problem: hängt von der Einheit ab (cm statt m ergibt eine viel größere Zahl)"
     },
     {
-     "id": "st5-e01-08",
+     "id": "st5-v2-02-10",
      "level": 1,
-     "text": "liegt immer zwischen −1 und +1 und ist dadurch vergleichbar"
+     "text": "Lösung: Pearson's r = standardisierte Kovarianz, immer zwischen −1 und +1"
     }
    ]
   },
   {
-   "id": "st5-03",
+   "id": "st5-v2-03",
    "subject": "Einführung in die Statistik",
-   "title": "ST5 · Pearson's r vs. Spearman's rho",
+   "title": "ST5 · Pearson's r oder Spearman's rho?",
    "status": "neu",
    "lines": [
     {
-     "id": "st5-03-01",
+     "id": "st5-v2-03-01",
      "level": 0,
      "text": "Pearson's r (Produkt-Moment-Korrelation)"
     },
     {
-     "id": "st5-03-02",
+     "id": "st5-v2-03-02",
      "level": 1,
      "text": "standardisierte Kovarianz, berücksichtigt alle Messwerte"
     },
     {
-     "id": "st5-03-03",
+     "id": "st5-v2-03-03",
      "level": 1,
      "text": "zeigt Stärke, Richtung, Signifikanz"
     },
     {
-     "id": "st5-03-04",
+     "id": "st5-v2-03-04",
      "level": 1,
      "text": "Voraussetzungen: mindestens intervallskaliert, kaum Extremwerte, beide Variablen normalverteilt"
     },
     {
-     "id": "st5-03-05",
+     "id": "st5-v2-03-05",
      "level": 0,
      "text": "Spearman's rho (ρ)"
     },
     {
-     "id": "st5-03-06",
+     "id": "st5-v2-03-06",
      "level": 1,
      "text": "Rangkorrelationskoeffizient: Messwerte werden in Ränge umgewandelt"
     },
     {
-     "id": "st5-03-07",
+     "id": "st5-v2-03-07",
      "level": 1,
-     "text": "reduziert das Skalenniveau, Alternative wenn Pearson-Voraussetzungen fehlen"
+     "text": "reduziert das Skalenniveau, Alternative wenn Pearson-Voraussetzungen fehlen (ordinal, Ausreißer, schief)"
     },
     {
-     "id": "st5-03-08",
-     "level": 0,
-     "text": "Beide gelten für symmetrische Beziehungen"
-    }
-   ]
-  },
-  {
-   "id": "st5-e02",
-   "subject": "Einführung in die Statistik",
-   "title": "ST5 · Einfach erklärt: Pearson oder Spearman?",
-   "status": "neu",
-   "lines": [
-    {
-     "id": "st5-e02-01",
-     "level": 0,
-     "text": "Pearson's r, wenn alles passt"
-    },
-    {
-     "id": "st5-e02-02",
-     "level": 1,
-     "text": "beide Variablen metrisch"
-    },
-    {
-     "id": "st5-e02-03",
-     "level": 1,
-     "text": "ungefähr normalverteilt"
-    },
-    {
-     "id": "st5-e02-04",
-     "level": 1,
-     "text": "kaum Ausreißer"
-    },
-    {
-     "id": "st5-e02-05",
-     "level": 0,
-     "text": "Spearman's rho, wenn etwas davon nicht passt"
-    },
-    {
-     "id": "st5-e02-06",
-     "level": 1,
-     "text": "ordinale Daten, starke Ausreißer oder schiefe Verteilung"
-    },
-    {
-     "id": "st5-e02-07",
-     "level": 1,
-     "text": "rechnet mit Rangplätzen (1., 2., 3. …) statt mit den echten Werten"
-    },
-    {
-     "id": "st5-e02-08",
+     "id": "st5-v2-03-08",
      "level": 1,
      "text": "ein Ausreißer ist dann einfach „der Letzte\", egal wie extrem er ist"
     },
     {
-     "id": "st5-e02-09",
+     "id": "st5-v2-03-09",
      "level": 0,
-     "text": "Beide: zwischen −1 und +1, symmetrisch"
+     "text": "Beide: zwischen −1 und +1, für symmetrische Beziehungen"
+    },
+    {
+     "id": "st5-v2-03-10",
+     "level": 0,
+     "text": "Merkhilfe: Pearson, wenn alles passt – Spearman, wenn etwas „spinnt\""
     }
    ]
   },
   {
-   "id": "st5-04",
+   "id": "st5-v2-04",
    "subject": "Einführung in die Statistik",
-   "title": "ST5 · Korrelation vs. Regression",
+   "title": "ST5 · Korrelation oder Regression?",
    "status": "neu",
    "lines": [
     {
-     "id": "st5-04-01",
+     "id": "st5-v2-04-01",
      "level": 0,
      "text": "Korrelation"
     },
     {
-     "id": "st5-04-02",
+     "id": "st5-v2-04-02",
      "level": 1,
      "text": "Wie stark ist der Zusammenhang zwischen X und Y, welche Richtung?"
     },
     {
-     "id": "st5-04-03",
+     "id": "st5-v2-04-03",
      "level": 1,
      "text": "symmetrisch"
     },
     {
-     "id": "st5-04-04",
+     "id": "st5-v2-04-04",
      "level": 0,
      "text": "Regression"
     },
     {
-     "id": "st5-04-05",
+     "id": "st5-v2-04-05",
      "level": 1,
      "text": "Kann man Y aus X vorhersagen?"
     },
     {
-     "id": "st5-04-06",
+     "id": "st5-v2-04-06",
      "level": 1,
      "text": "asymmetrisch, eignet sich für Prognosen"
     },
     {
-     "id": "st5-04-07",
+     "id": "st5-v2-04-07",
      "level": 0,
      "text": "Einfache lineare Regression: y = b₀ + b₁ · x"
     }
    ]
   },
   {
-   "id": "st5-e03",
+   "id": "st5-v2-05",
    "subject": "Einführung in die Statistik",
-   "title": "ST5 · Einfach erklärt: Korrelation ist nicht Kausalität",
+   "title": "ST5 · Warum ist Korrelation nicht Kausalität?",
    "status": "neu",
    "lines": [
     {
-     "id": "st5-e03-01",
+     "id": "st5-v2-05-01",
      "level": 0,
      "text": "Ein Zusammenhang beweist keine Ursache"
     },
     {
-     "id": "st5-e03-02",
+     "id": "st5-v2-05-02",
      "level": 0,
      "text": "Beispiel: Je mehr Eis verkauft wird, desto mehr Sonnenbrände"
     },
     {
-     "id": "st5-e03-03",
+     "id": "st5-v2-05-03",
      "level": 1,
      "text": "Eis verursacht keinen Sonnenbrand"
     },
     {
-     "id": "st5-e03-04",
+     "id": "st5-v2-05-04",
      "level": 1,
      "text": "beides hängt vom Sonnenschein ab (dritte Variable, Störvariable)"
     },
     {
-     "id": "st5-e03-05",
+     "id": "st5-v2-05-05",
      "level": 0,
      "text": "Darum muss die Richtung (uV und aV) immer inhaltlich begründet werden"
     },
     {
-     "id": "st5-e03-06",
+     "id": "st5-v2-05-06",
      "level": 1,
      "text": "die Statistik allein kann das nicht"
     }
    ]
   },
   {
-   "id": "st5-05",
+   "id": "st5-v2-06",
    "subject": "Einführung in die Statistik",
-   "title": "ST5 · Die Regressionsgerade",
+   "title": "ST5 · Was ist die Regressionsgerade?",
    "status": "neu",
    "lines": [
     {
-     "id": "st5-05-01",
+     "id": "st5-v2-06-01",
      "level": 0,
      "text": "Ausgangspunkt: Streudiagramm"
     },
     {
-     "id": "st5-05-02",
+     "id": "st5-v2-06-02",
      "level": 0,
      "text": "Punkte weichen von der Geraden ab: Residuum (Rest, Error)"
     },
     {
-     "id": "st5-05-03",
+     "id": "st5-v2-06-03",
      "level": 0,
      "text": "Optimale Gerade: Gesamtabstände minimal"
     },
     {
-     "id": "st5-05-04",
+     "id": "st5-v2-06-04",
      "level": 1,
      "text": "Methode der kleinsten Quadrate (Kleinste-Quadrate-Schätzung)"
     },
     {
-     "id": "st5-05-05",
+     "id": "st5-v2-06-05",
      "level": 0,
      "text": "Bestimmtheitsmaß r²"
     },
     {
-     "id": "st5-05-06",
+     "id": "st5-v2-06-06",
      "level": 1,
      "text": "Verhältnis der erklärten Abweichungsquadrate zur Gesamtabweichung"
     },
     {
-     "id": "st5-05-07",
+     "id": "st5-v2-06-07",
      "level": 1,
      "text": "Wie viel Prozent der Streuung der aV erklärt die uV?"
     },
     {
-     "id": "st5-05-08",
+     "id": "st5-v2-06-08",
      "level": 1,
      "text": "Maß für die Güte bzw. Verlässlichkeit der Schätzung"
     },
     {
-     "id": "st5-05-09",
+     "id": "st5-v2-06-09",
      "level": 0,
      "text": "Regression = erklärte, Residual = nicht erklärte, Total = gesamte Abweichungsquadrate"
     }
    ]
   },
   {
-   "id": "st5-06",
+   "id": "st5-v2-07",
    "subject": "Einführung in die Statistik",
-   "title": "ST5 · Beispiel: Wohnungsgröße und Haushaltsgröße",
+   "title": "ST5 · Was zeigt das Beispiel Wohnungsgröße und Haushaltsgröße?",
    "status": "neu",
    "lines": [
     {
-     "id": "st5-06-01",
+     "id": "st5-v2-07-01",
      "level": 0,
      "text": "aV: Größe der Wohnung, uV: Anzahl der Personen im Haushalt"
     },
     {
-     "id": "st5-06-02",
+     "id": "st5-v2-07-02",
      "level": 0,
      "text": "y = 47,045 + 10,166 · x"
     },
     {
-     "id": "st5-06-03",
+     "id": "st5-v2-07-03",
      "level": 1,
      "text": "Konstante b₀ = 47,045 m²"
     },
     {
-     "id": "st5-06-04",
+     "id": "st5-v2-07-04",
      "level": 1,
      "text": "jede zusätzliche Person: +10,166 m²"
     },
     {
-     "id": "st5-06-05",
+     "id": "st5-v2-07-05",
      "level": 0,
      "text": "r = 0,669: sehr starker positiver Zusammenhang"
     },
     {
-     "id": "st5-06-06",
+     "id": "st5-v2-07-06",
      "level": 0,
-     "text": "r² = 0,447: Die Haushaltsgröße erklärt 44,7 % der Streuung der Wohnungsgröße"
+     "text": "r² = 0,447: die Haushaltsgröße erklärt 44,7 % der Streuung der Wohnungsgröße"
     },
     {
-     "id": "st5-06-07",
+     "id": "st5-v2-07-07",
      "level": 0,
      "text": "p < 0,001: höchst signifikant"
     },
     {
-     "id": "st5-06-08",
+     "id": "st5-v2-07-08",
      "level": 0,
      "text": "Prüfreihenfolge: Stärke → Proportionalität → Güte (r²) → erklärte und unerklärte Abweichung → Signifikanz → Grafik → Prognose"
     }
    ]
   },
   {
-   "id": "st5-e04",
+   "id": "st5-v2-08",
    "subject": "Einführung in die Statistik",
-   "title": "ST5 · Einfach erklärt: die Regressionsgleichung",
+   "title": "ST5 · Übung: Wie liest und nutzt man die Regressionsgleichung?",
    "status": "neu",
    "lines": [
     {
-     "id": "st5-e04-01",
+     "id": "st5-v2-08-01",
      "level": 0,
      "text": "y = b₀ + b₁ · x heißt: Startwert + Steigung × x"
     },
     {
-     "id": "st5-e04-02",
+     "id": "st5-v2-08-02",
      "level": 1,
      "text": "b₀ (Konstante) = der Wert von y, wenn x = 0"
     },
     {
-     "id": "st5-e04-03",
+     "id": "st5-v2-08-03",
      "level": 1,
      "text": "b₁ (Steigung) = so viel ändert sich y, wenn x um 1 steigt"
     },
     {
-     "id": "st5-e04-04",
+     "id": "st5-v2-08-04",
      "level": 0,
      "text": "Wohnungs-Beispiel: y = 47,045 + 10,166 · x"
     },
     {
-     "id": "st5-e04-05",
+     "id": "st5-v2-08-05",
      "level": 1,
      "text": "Startwert 47 m², jede Person im Haushalt bringt etwa 10 m² dazu"
     },
     {
-     "id": "st5-e04-06",
+     "id": "st5-v2-08-06",
      "level": 0,
      "text": "Prognose: Wie groß ist die Wohnung bei …?"
     },
     {
-     "id": "st5-e04-07",
+     "id": "st5-v2-08-07",
      "level": 1,
-     "text": "Personen | erwartete Wohnungsgröße"
+     "text": "Personen | erwartete Woh­nungs­größe"
     },
     {
-     "id": "st5-e04-08",
+     "id": "st5-v2-08-08",
      "level": 1,
      "text": "1 | ?57,2 m²"
     },
     {
-     "id": "st5-e04-09",
+     "id": "st5-v2-08-09",
      "level": 1,
      "text": "3 | ?77,5 m²"
     },
     {
-     "id": "st5-e04-10",
+     "id": "st5-v2-08-10",
      "level": 1,
      "text": "4 | ?87,7 m²"
     },
     {
-     "id": "st5-e04-11",
+     "id": "st5-v2-08-11",
      "level": 0,
      "text": "Rechenweg für 3 Personen: 47,045 + 10,166 · 3 = 77,543"
     }
    ]
   },
   {
-   "id": "st5-e05",
+   "id": "st5-v2-09",
    "subject": "Einführung in die Statistik",
-   "title": "ST5 · Einfach erklärt: Residuum und r²",
+   "title": "ST5 · Was bedeuten Residuum und r²?",
    "status": "neu",
    "lines": [
     {
-     "id": "st5-e05-01",
+     "id": "st5-v2-09-01",
      "level": 0,
      "text": "Residuum = der Vorhersagefehler"
     },
     {
-     "id": "st5-e05-02",
+     "id": "st5-v2-09-02",
      "level": 1,
      "text": "Abstand zwischen einem echten Punkt und der Geraden"
     },
     {
-     "id": "st5-e05-03",
+     "id": "st5-v2-09-03",
      "level": 1,
      "text": "z. B. vorhergesagt 77,5 m², echte Wohnung 90 m²: Residuum 12,5 m²"
     },
     {
-     "id": "st5-e05-04",
+     "id": "st5-v2-09-04",
      "level": 0,
      "text": "Die beste Gerade macht diese Fehler insgesamt so klein wie möglich (kleinste Quadrate)"
     },
     {
-     "id": "st5-e05-05",
+     "id": "st5-v2-09-05",
      "level": 0,
      "text": "r² = r · r, also 0,669 · 0,669 ≈ 0,447"
     },
     {
-     "id": "st5-e05-06",
+     "id": "st5-v2-09-06",
      "level": 1,
      "text": "44,7 % der Unterschiede bei der Wohnungsgröße erklärt die Haushaltsgröße"
     },
     {
-     "id": "st5-e05-07",
+     "id": "st5-v2-09-07",
      "level": 1,
      "text": "die übrigen 55,3 % kommen von anderem (Einkommen, Wohnort …)"
     },
     {
-     "id": "st5-e05-08",
+     "id": "st5-v2-09-08",
      "level": 0,
-     "text": "r² nahe 1 = Punkte liegen fast auf der Geraden, die Prognose ist gut"
-    },
-    {
-     "id": "st5-e05-09",
-     "level": 0,
-     "text": "r² nahe 0 = Punkte liegen wild verstreut, die Prognose taugt wenig"
+     "text": "r² nahe 1 = Punkte liegen fast auf der Geraden, gute Prognose; nahe 0 = wild verstreut, Prognose taugt wenig"
     }
    ]
   },
   {
-   "id": "st5-07",
+   "id": "st5-v2-10",
    "subject": "Einführung in die Statistik",
-   "title": "ST5 · Unterschiedliche Skalenniveaus kombinieren",
+   "title": "ST5 · Was tun, wenn die Variablen unterschiedliche Skalenniveaus haben?",
    "status": "neu",
    "lines": [
     {
-     "id": "st5-07-01",
+     "id": "st5-v2-10-01",
      "level": 0,
      "text": "Regel: Maß des niedrigeren Skalenniveaus verwenden"
     },
     {
-     "id": "st5-07-02",
+     "id": "st5-v2-10-02",
      "level": 0,
      "text": "Ausnahme 1: Ordinalskala als Intervallskala behandeln"
     },
     {
-     "id": "st5-07-03",
+     "id": "st5-v2-10-03",
      "level": 1,
      "text": "wenn die Abstände etwa gleich sind"
     },
     {
-     "id": "st5-07-04",
+     "id": "st5-v2-10-04",
      "level": 1,
      "text": "mindestens 5 Ausprägungen, keine offenen Randklassen"
     },
     {
-     "id": "st5-07-05",
+     "id": "st5-v2-10-05",
      "level": 0,
      "text": "Ausnahme 2: dichotome Variablen als Intervallskala (Dummy-Variable)"
     },
     {
-     "id": "st5-07-06",
+     "id": "st5-v2-10-06",
      "level": 1,
      "text": "inhaltlich nominal, formal intervallskaliert"
     },
     {
-     "id": "st5-07-07",
+     "id": "st5-v2-10-07",
      "level": 1,
      "text": "Mittelwert = Anteil der höher codierten Ausprägung"
     },
     {
-     "id": "st5-07-08",
+     "id": "st5-v2-10-08",
      "level": 1,
      "text": "z. B. Geschlecht (m = 1, w = 2), Mittelwert 1,45: 45 % Frauen, 55 % Männer"
     }
    ]
   },
   {
-   "id": "st5-08",
+   "id": "st5-v2-11",
    "subject": "Einführung in die Statistik",
-   "title": "ST5 · Übersicht: welches Zusammenhangsmaß?",
+   "title": "ST5 · Welches Zusammenhangsmaß für welches Skalenniveau?",
    "status": "neu",
    "lines": [
     {
-     "id": "st5-08-01",
+     "id": "st5-v2-11-01",
      "level": 0,
-     "text": "Nominal"
+     "text": "Symmetrisch (keine uV und aV)"
     },
     {
-     "id": "st5-08-02",
+     "id": "st5-v2-11-02",
      "level": 1,
-     "text": "symmetrisch: Cramer's V, Phi, Kontingenzkoeffizient C (Basis Chi²)"
+     "text": "Niveau | Maße"
     },
     {
-     "id": "st5-08-03",
+     "id": "st5-v2-11-03",
      "level": 1,
-     "text": "asymmetrisch: Lambda, Goodman und Kruskal, Unsicherheitskoeffizient (Basis PRE)"
+     "text": "nominal | ?Cramer's V, Phi, Kon­tin­genzkoeffizi­ent C (Basis Chi²)"
     },
     {
-     "id": "st5-08-04",
+     "id": "st5-v2-11-04",
+     "level": 1,
+     "text": "ordinal | ?Kendall's Tau, Spearman's rho, Gamma (Basis Paar­ver­glei­che)"
+    },
+    {
+     "id": "st5-v2-11-05",
+     "level": 1,
+     "text": "metrisch | ?Pearson's r (Basis Kovarianz)"
+    },
+    {
+     "id": "st5-v2-11-06",
      "level": 0,
-     "text": "Ordinal"
+     "text": "Asymmetrisch (uV und aV)"
     },
     {
-     "id": "st5-08-05",
+     "id": "st5-v2-11-07",
      "level": 1,
-     "text": "symmetrisch: Kendall's Tau, Spearman's rho, Gamma (Basis Paarvergleiche)"
+     "text": "Niveau | Maße"
     },
     {
-     "id": "st5-08-06",
+     "id": "st5-v2-11-08",
      "level": 1,
-     "text": "asymmetrisch: Somers' d (Basis Paarvergleiche)"
+     "text": "nominal | ?Lambda, Goodman und Kruskal, Unsi­cher­heitskoeffizi­ent (Basis PRE)"
     },
     {
-     "id": "st5-08-07",
+     "id": "st5-v2-11-09",
+     "level": 1,
+     "text": "ordinal | ?Somers' d (Basis Paar­ver­glei­che)"
+    },
+    {
+     "id": "st5-v2-11-10",
+     "level": 1,
+     "text": "metrisch | ?lineare Regression (Näherung durch Regressi­onsge­rade)"
+    },
+    {
+     "id": "st5-v2-11-11",
      "level": 0,
-     "text": "Metrisch"
-    },
-    {
-     "id": "st5-08-08",
-     "level": 1,
-     "text": "symmetrisch: Pearson's r (Basis Kovarianz)"
-    },
-    {
-     "id": "st5-08-09",
-     "level": 1,
-     "text": "asymmetrisch: lineare Regression (Näherung durch Regressionsgerade)"
+     "text": "Erst das niedrigere Skalenniveau bestimmen, dann: gibt es eine Richtung (uV und aV)?"
     }
    ]
   },
   {
-   "id": "st5-e06",
+   "id": "st5-v2-12",
    "subject": "Einführung in die Statistik",
    "title": "ST5 · Übung: Welches Zusammenhangsmaß passt?",
    "status": "neu",
    "lines": [
     {
-     "id": "st5-e06-01",
+     "id": "st5-v2-12-01",
      "level": 0,
      "text": "Zuerst: Skalenniveau der niedrigeren Variable bestimmen"
     },
     {
-     "id": "st5-e06-02",
+     "id": "st5-v2-12-02",
      "level": 0,
      "text": "Dann: Gibt es eine uV und eine aV (asymmetrisch) oder nicht (symmetrisch)?"
     },
     {
-     "id": "st5-e06-03",
+     "id": "st5-v2-12-03",
      "level": 1,
      "text": "Variablen | Maß"
     },
     {
-     "id": "st5-e06-04",
+     "id": "st5-v2-12-04",
      "level": 1,
      "text": "Geschlecht × Rauchen (2×2) | ?Phi"
     },
     {
-     "id": "st5-e06-05",
+     "id": "st5-v2-12-05",
      "level": 1,
      "text": "Blutgruppe × Station | ?Cramer's V"
     },
     {
-     "id": "st5-e06-06",
+     "id": "st5-v2-12-06",
      "level": 1,
      "text": "Geschlecht × Schulnote | ?Cramer's V (nominal ist das niedrigere Niveau)"
     },
     {
-     "id": "st5-e06-07",
+     "id": "st5-v2-12-07",
      "level": 1,
-     "text": "Schulnote × Zufriedenheit (symmetrisch) | ?Kendall's Tau b oder Spearman's rho"
+     "text": "Schulnote × Zufrie­den­heit (symmetrisch) | ?Kendall's Tau b oder Spearman's rho"
     },
     {
-     "id": "st5-e06-08",
+     "id": "st5-v2-12-08",
      "level": 1,
-     "text": "Pflegestufe beeinflusst Zufriedenheit | ?Somers' d"
+     "text": "Pflegestufe beeinflusst Zufrie­den­heit | ?Somers' d"
     },
     {
-     "id": "st5-e06-09",
+     "id": "st5-v2-12-09",
      "level": 1,
-     "text": "Alter × Blutdruck (normalverteilt) | ?Pearson's r"
+     "text": "Alter × Blutdruck (normal­ver­teilt) | ?Pearson's r"
     },
     {
-     "id": "st5-e06-10",
+     "id": "st5-v2-12-10",
      "level": 1,
-     "text": "Wohnungsgröße aus Haushaltsgröße vorhersagen | ?lineare Regression"
+     "text": "Woh­nungs­größe aus Haus­halts­größe vorhersagen | ?lineare Regression"
     }
    ]
   }

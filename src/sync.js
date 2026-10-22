@@ -7,14 +7,15 @@
 //   tombstones     – { cardId: deletedAt }, so a deletion wins over an older copy
 //   subjectMeta    – { name: { at, deleted } }, same idea for decks
 //   subjectsAt     – when the deck order last changed
-//   settingsAt     – when examDate / pointByPoint last changed
+//   settingsAt     – when examDate / pointByPoint / newPerDay last changed
+//   card.seen      – day a card was first studied (counts toward the daily limit for new cards)
 // Title, lines, deck and progress merge separately: fix a card's title on the laptop while
 // editing its text or rating it on the phone, and every change survives.
 
 import { MAX_LEVEL } from "./data.js";
 
 const contentKey = c => JSON.stringify([c.subject, c.title, c.lines]);
-const srsKey = c => JSON.stringify([c.status, c.box, c.due]);
+const srsKey = c => JSON.stringify([c.status, c.box, c.due, c.seen || null]);
 const FIELDS = [["title", "tAt"], ["lines", "lAt"], ["subject", "sAt"]];
 const fieldAt = (c, key) => c[key] || c.at || 0;
 
@@ -44,7 +45,7 @@ export function stamp(prev, next, now = Date.now()) {
   for (const s of before) if (!after.has(s)) subjectMeta[s] = { at: now, deleted: true };
   const subjectsAt = JSON.stringify(prev.subjects) !== JSON.stringify(next.subjects) ? now : next.subjectsAt;
 
-  const settingsAt = prev.examDate !== next.examDate || prev.pointByPoint !== next.pointByPoint ? now : next.settingsAt;
+  const settingsAt = prev.examDate !== next.examDate || prev.pointByPoint !== next.pointByPoint || prev.newPerDay !== next.newPerDay ? now : next.settingsAt;
   return { ...next, cards, tombstones, subjectMeta, subjectsAt, settingsAt };
 }
 
@@ -56,11 +57,11 @@ export function toSyncState(d) {
     cards: d.cards.map(c => ({
       id: c.id, subject: c.subject, title: c.title,
       lines: c.lines.map(l => ({ id: l.id, level: l.level, text: l.text })),
-      status: c.status || "neu", box: c.box || 0, due: c.due || null, at: c.at || 0, srsAt: c.srsAt || 0,
+      status: c.status || "neu", box: c.box || 0, due: c.due || null, seen: c.seen || null, at: c.at || 0, srsAt: c.srsAt || 0,
       tAt: c.tAt || c.at || 0, lAt: c.lAt || c.at || 0, sAt: c.sAt || c.at || 0,
     })),
     tombstones: d.tombstones || {},
-    examDate: d.examDate ?? null, pointByPoint: d.pointByPoint ?? true, settingsAt: d.settingsAt || 0,
+    examDate: d.examDate ?? null, pointByPoint: d.pointByPoint ?? true, newPerDay: d.newPerDay ?? 20, settingsAt: d.settingsAt || 0,
   };
 }
 
@@ -83,7 +84,9 @@ export function mergeStates(a, b) {
       merged[f] = win[f]; merged[key] = Math.max(ta, tb);
     }
     const srs = (c.srsAt || 0) > (o.srsAt || 0) || ((c.srsAt || 0) === (o.srsAt || 0) && srsKey(c) > srsKey(o)) ? c : o;
-    Object.assign(merged, { status: srs.status, box: srs.box, due: srs.due, srsAt: srs.srsAt });
+    // The first day a card was studied: the earlier one if both devices know it.
+    const seen = [o.seen, c.seen].filter(Boolean).sort()[0] || null;
+    Object.assign(merged, { status: srs.status, box: srs.box, due: srs.due, srsAt: srs.srsAt, seen });
     byId.set(c.id, merged);
   }
   const cards = [...byId.values()].filter(c => !(tombstones[c.id] >= Math.max(c.at || 0, c.srsAt || 0)));
@@ -109,12 +112,12 @@ export function mergeStates(a, b) {
 
   const accents = { ...older.accents, ...newer.accents };
   const settings = (b.settingsAt || 0) > (a.settingsAt || 0)
-    || ((b.settingsAt || 0) === (a.settingsAt || 0) && JSON.stringify([b.examDate, b.pointByPoint]) > JSON.stringify([a.examDate, a.pointByPoint])) ? b : a;
+    || ((b.settingsAt || 0) === (a.settingsAt || 0) && JSON.stringify([b.examDate, b.pointByPoint, b.newPerDay]) > JSON.stringify([a.examDate, a.pointByPoint, a.newPerDay])) ? b : a;
 
   return {
     v: 1, subjects, subjectMeta, subjectsAt: Math.max(a.subjectsAt || 0, b.subjectsAt || 0), accents,
     cards, tombstones,
-    examDate: settings.examDate ?? null, pointByPoint: settings.pointByPoint ?? true,
+    examDate: settings.examDate ?? null, pointByPoint: settings.pointByPoint ?? true, newPerDay: settings.newPerDay ?? 20,
     settingsAt: Math.max(a.settingsAt || 0, b.settingsAt || 0),
   };
 }
@@ -142,11 +145,13 @@ export function sanitizeState(s) {
         id: str(l?.id, 64), level: Math.max(0, Math.min(MAX_LEVEL, Math.floor(num(l?.level)))), text: str(l?.text, 4000),
       })),
       status: ["neu", "unsicher", "sicher"].includes(c.status) ? c.status : "neu",
-      box: Math.max(0, Math.min(10, Math.floor(num(c.box)))), due: date(c.due),
+      box: Math.max(0, Math.min(10, Math.floor(num(c.box)))), due: date(c.due), seen: date(c.seen),
       at: num(c.at), srsAt: num(c.srsAt), tAt: num(c.tAt), lAt: num(c.lAt), sAt: num(c.sAt),
     })),
     tombstones: tomb,
-    examDate: date(s.examDate), pointByPoint: s.pointByPoint !== false, settingsAt: num(s.settingsAt),
+    examDate: date(s.examDate), pointByPoint: s.pointByPoint !== false,
+    newPerDay: Number.isFinite(s.newPerDay) && s.newPerDay >= 1 ? Math.min(200, Math.floor(s.newPerDay)) : 20,
+    settingsAt: num(s.settingsAt),
   };
 }
 
@@ -159,7 +164,7 @@ export function fingerprint(s) {
 }
 
 // ── Mapping to Firestore documents ─────────────────────────────
-const META_KEYS = ["subjects", "subjectMeta", "subjectsAt", "accents", "examDate", "pointByPoint", "settingsAt"];
+const META_KEYS = ["subjects", "subjectMeta", "subjectsAt", "accents", "examDate", "pointByPoint", "newPerDay", "settingsAt"];
 const cardFP = c => fingerprint({ cards: [c] });
 const metaOf = s => Object.fromEntries(META_KEYS.map(k => [k, s[k]]));
 const metaFP = m => (m ? JSON.stringify(sortKeys(metaOf(m))) : "");

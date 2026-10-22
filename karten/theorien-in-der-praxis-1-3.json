@@ -8,1271 +8,1377 @@
  ],
  "cards": [
   {
-   "id": "at1-01",
-   "subject": "Theorien und Modelle in der Praxis",
-   "title": "AT1 · Konzept, Modell, Theorie – kurz und knapp",
-   "status": "neu",
-   "lines": [
-    {
-     "id": "at1-01-01",
-     "level": 0,
-     "text": "Konzept: kleinster Baustein einer Theorie"
-    },
-    {
-     "id": "at1-01-02",
-     "level": 1,
-     "text": "beschreibt Phänomene, abstrakte Verallgemeinerung; Annahmen verbinden Konzepte"
-    },
-    {
-     "id": "at1-01-03",
-     "level": 0,
-     "text": "Modell: vereinfachte, modifizierte Darstellung eines Sachverhalts"
-    },
-    {
-     "id": "at1-01-04",
-     "level": 1,
-     "text": "gegenständlich/empirisch (z. B. Herzmodell) oder abstrakt/theoretisch (z. B. Organigramm)"
-    },
-    {
-     "id": "at1-01-05",
-     "level": 0,
-     "text": "Theorie: Bündel von Ideen oder erklärenden Vermutungen für einen speziellen Zweck"
-    },
-    {
-     "id": "at1-01-06",
-     "level": 1,
-     "text": "besteht aus Konzepten; Zweck: Beschreibung, Erklärung, Vorhersage"
-    },
-    {
-     "id": "at1-01-07",
-     "level": 0,
-     "text": "Modelle oder Theorien?"
-    },
-    {
-     "id": "at1-01-08",
-     "level": 1,
-     "text": "Begriffe werden unterschiedlich, teils synonym verwendet, Abgrenzung oft schwierig"
-    }
-   ]
-  },
-  {
-   "id": "at1-02",
+   "id": "at1-v2-01",
    "subject": "Theorien und Modelle in der Praxis",
    "title": "AT1 · Was ist eine Pflegetheorie?",
    "status": "neu",
    "lines": [
     {
-     "id": "at1-02-01",
+     "id": "at1-v2-01-01",
      "level": 0,
      "text": "Abstrakte (wissenschaftliche) Betrachtung von Pflege"
     },
     {
-     "id": "at1-02-02",
+     "id": "at1-v2-01-02",
      "level": 0,
      "text": "Antwort auf die Frage: Was ist Pflege?"
     },
     {
-     "id": "at1-02-03",
+     "id": "at1-v2-01-03",
      "level": 0,
      "text": "„Nursing is a practice discipline, but we must not be exclusively practice oriented.\" (Rinehard, 1978)"
     }
    ]
   },
   {
-   "id": "at1-03",
+   "id": "at1-v2-02",
    "subject": "Theorien und Modelle in der Praxis",
-   "title": "AT1 · Anforderungen an Theorien",
+   "title": "AT1 · Was müssen Theorien leisten?",
    "status": "neu",
    "lines": [
     {
-     "id": "at1-03-01",
+     "id": "at1-v2-02-01",
      "level": 0,
      "text": "Mitte der 1990er: Diskussion im deutschsprachigen Raum über die Bedeutung von Theorien für Praxis und Wissenschaft"
     },
     {
-     "id": "at1-03-02",
+     "id": "at1-v2-02-02",
      "level": 0,
-     "text": "Theorien müssen einen möglichst zuverlässigen Rahmen bieten"
+     "text": "Möglichst zuverlässiger Rahmen"
     },
     {
-     "id": "at1-03-03",
+     "id": "at1-v2-02-03",
      "level": 1,
      "text": "für Praxisausübung und Wissenschaft bzw. wissenschaftliche Praxisausübung"
     },
     {
-     "id": "at1-03-04",
+     "id": "at1-v2-02-04",
      "level": 0,
      "text": "Aufgabe der Theoriebildung: Produktion neuen Wissens"
     }
    ]
   },
   {
-   "id": "at1-04",
+   "id": "at1-v2-03",
    "subject": "Theorien und Modelle in der Praxis",
    "title": "AT1 · Welche Theorien braucht die Praxis?",
    "status": "neu",
    "lines": [
     {
-     "id": "at1-04-01",
+     "id": "at1-v2-03-01",
      "level": 0,
      "text": "Pflegetheorien werden entwickelt, um die Pflegepraxis zu verbessern"
     },
     {
-     "id": "at1-04-02",
+     "id": "at1-v2-03-02",
      "level": 0,
      "text": "Theorieentwicklung ist Teil des Wegs der Pflege zur wissenschaftlichen Disziplin"
     },
     {
-     "id": "at1-04-03",
+     "id": "at1-v2-03-03",
      "level": 0,
      "text": "Theorien geben dem pflegerischen Wissen Gestalt und weisen Forschung und Praxis die Richtung"
     },
     {
-     "id": "at1-04-04",
+     "id": "at1-v2-03-04",
      "level": 0,
      "text": "Pflegetheorien sollen Probleme lösen, die sich aus der Praxis stellen"
     }
    ]
   },
   {
-   "id": "at1-05",
+   "id": "at1-v2-04",
    "subject": "Theorien und Modelle in der Praxis",
-   "title": "AT1 · Walker & Avant: Ebenen der Theoriebildung",
+   "title": "AT1 · Welche Modelle anderer Disziplinen sind für die Pflege relevant?",
    "status": "neu",
    "lines": [
     {
-     "id": "at1-05-01",
-     "level": 0,
-     "text": "Metatheorien → Globale Theorien → Theorien mittlerer Reichweite → Praxisnahe Theorien"
-    },
-    {
-     "id": "at1-05-02",
-     "level": 0,
-     "text": "Nach unten: klärt, leitet, bestimmt"
-    },
-    {
-     "id": "at1-05-03",
-     "level": 0,
-     "text": "Nach oben: überprüft praktisch, klären und vervollständigen, liefert Material für"
-    },
-    {
-     "id": "at1-05-04",
-     "level": 0,
-     "text": "Empirisch überprüfbar erst ab Theorien mittlerer Reichweite"
-    },
-    {
-     "id": "at1-05-05",
-     "level": 0,
-     "text": "Praxisnahe Theorien: Handlungsanweisungen, direkt umsetzbar"
-    }
-   ]
-  },
-  {
-   "id": "at1-06",
-   "subject": "Theorien und Modelle in der Praxis",
-   "title": "AT1 · Modelle anderer Disziplinen mit Relevanz für die Pflege",
-   "status": "neu",
-   "lines": [
-    {
-     "id": "at1-06-01",
+     "id": "at1-v2-04-01",
      "level": 0,
      "text": "Aus Public Health: Salutogenese (Antonovsky)"
     },
     {
-     "id": "at1-06-02",
+     "id": "at1-v2-04-02",
      "level": 0,
      "text": "Aus der Gesundheitspsychologie: Health Belief Modell (Becker & Rosenstock)"
+    },
+    {
+     "id": "at1-v2-04-03",
+     "level": 0,
+     "text": "Die Modelle selbst lernst du in den Mappen Public Health und Gesundheitspsychologie"
     }
    ]
   },
   {
-   "id": "at1-07",
+   "id": "at1-v2-05",
    "subject": "Theorien und Modelle in der Praxis",
-   "title": "AT1 · Salutogenese in Kürze",
+   "title": "AT1 · Was bedeutet die Salutogenese für die Pflege?",
    "status": "neu",
    "lines": [
     {
-     "id": "at1-07-01",
+     "id": "at1-v2-05-01",
      "level": 0,
-     "text": "Aaron Antonovsky, amerikanisch-israelischer Soziologe"
+     "text": "Kurz zur Erinnerung: Kohärenzgefühl aus Verstehbarkeit, Bewältigbarkeit (Handhabbarkeit), Sinnhaftigkeit; Gesundheit als Kontinuum"
     },
     {
-     "id": "at1-07-02",
-     "level": 1,
-     "text": "Saluto = Heil, Glück, Unverletztheit; Genese = Entstehung"
-    },
-    {
-     "id": "at1-07-03",
-     "level": 0,
-     "text": "Stressoren sind ständig präsent, die meisten haben genug Widerstandsressourcen"
-    },
-    {
-     "id": "at1-07-04",
-     "level": 0,
-     "text": "Fokus: Bewältigung = Spannungsverarbeitung; Ergebnis gesund, neutral oder krank"
-    },
-    {
-     "id": "at1-07-05",
-     "level": 0,
-     "text": "Kohärenzgefühl (Sense of Coherence)"
-    },
-    {
-     "id": "at1-07-06",
-     "level": 1,
-     "text": "Verstehbarkeit, Bewältigbarkeit, Sinnhaftigkeit"
-    },
-    {
-     "id": "at1-07-07",
-     "level": 1,
-     "text": "Kindheitserfahrungen bestimmen seine Stärke"
-    },
-    {
-     "id": "at1-07-08",
-     "level": 0,
-     "text": "HEDE-Kontinuum: keine Dichotomie von gesund und krank, Bewusstsein der Sterblichkeit"
-    }
-   ]
-  },
-  {
-   "id": "at1-08",
-   "subject": "Theorien und Modelle in der Praxis",
-   "title": "AT1 · Pflegerische Relevanz der Salutogenese",
-   "status": "neu",
-   "lines": [
-    {
-     "id": "at1-08-01",
+     "id": "at1-v2-05-02",
      "level": 0,
      "text": "Das Gesundheits-Krankheits-Kontinuum ist für die Pflege hilfreicher als die Sicht „gesund oder krank\""
     },
     {
-     "id": "at1-08-02",
+     "id": "at1-v2-05-03",
      "level": 0,
      "text": "Pflege sollte die Stärkung des Kohärenzsinns in ihre Ziele aufnehmen"
     },
     {
-     "id": "at1-08-03",
+     "id": "at1-v2-05-04",
      "level": 0,
      "text": "Pflegende sollten die Überzeugung stärken, Schwierigkeiten lösen zu können und genug eigene Ressourcen zu haben"
     },
     {
-     "id": "at1-08-04",
+     "id": "at1-v2-05-05",
      "level": 0,
      "text": "Nach Brieskorn-Zinke (2000)"
     }
    ]
   },
   {
-   "id": "at1-09",
+   "id": "at1-v2-06",
    "subject": "Theorien und Modelle in der Praxis",
-   "title": "AT1 · Health Belief Modell in Kürze",
+   "title": "AT1 · Praxisbeispiel PICU: Kohärenzgefühl der Eltern stärken",
    "status": "neu",
    "lines": [
     {
-     "id": "at1-09-01",
+     "id": "at1-v2-06-01",
      "level": 0,
-     "text": "Modell gesundheitlicher Überzeugungen, Becker und Rosenstock (1950)"
+     "text": "Eigene Übertragung – kein Vorlesungsinhalt, hilft beim Verankern"
     },
     {
-     "id": "at1-09-02",
+     "id": "at1-v2-06-02",
      "level": 0,
-     "text": "Kernannahme: Menschliches Verhalten ist rational bestimmt"
+     "text": "Verstehbarkeit"
     },
     {
-     "id": "at1-09-03",
-     "level": 0,
-     "text": "Ziel: Faktoren finden, die das Gesundheitsverhalten vieler beeinflussen"
-    },
-    {
-     "id": "at1-09-04",
-     "level": 0,
-     "text": "Gesundheitsverhalten hängt ab von"
-    },
-    {
-     "id": "at1-09-05",
+     "id": "at1-v2-06-03",
      "level": 1,
-     "text": "Motivation, Hinweisreizen, unveränderlichen Faktoren"
+     "text": "Monitor, Alarme, Zugänge und Drainagen erklären; Tagesablauf vorhersehbar machen"
     },
     {
-     "id": "at1-09-06",
-     "level": 1,
-     "text": "Wirksamkeit der Verhaltensänderung: Nutzen und Kosten"
+     "id": "at1-v2-06-04",
+     "level": 0,
+     "text": "Bewältigbarkeit (Handhabbarkeit)"
     },
     {
-     "id": "at1-09-07",
+     "id": "at1-v2-06-05",
      "level": 1,
-     "text": "wahrgenommener Bedrohung: subjektive Vulnerabilität und Schweregrad"
+     "text": "Eltern in die Pflege einbeziehen: wickeln, Mundpflege, Känguruhen; Ansprechpartner benennen"
+    },
+    {
+     "id": "at1-v2-06-06",
+     "level": 0,
+     "text": "Sinnhaftigkeit"
+    },
+    {
+     "id": "at1-v2-06-07",
+     "level": 1,
+     "text": "Eltern bleiben Eltern, nicht Besuch: ihre Rolle am Bett hat Bedeutung"
     }
    ]
   },
   {
-   "id": "at1-10",
+   "id": "at1-v2-07",
    "subject": "Theorien und Modelle in der Praxis",
-   "title": "AT1 · Relevanz des Health Belief Modells für die Pflege",
+   "title": "AT1 · Was bedeutet das Health Belief Modell für die Pflege?",
    "status": "neu",
    "lines": [
     {
-     "id": "at1-10-01",
+     "id": "at1-v2-07-01",
+     "level": 0,
+     "text": "Kurz zur Erinnerung: Verhalten ist rational bestimmt – wahrgenommene Bedrohung und Nutzen-Kosten-Abwägung entscheiden"
+    },
+    {
+     "id": "at1-v2-07-02",
      "level": 0,
      "text": "Pflegende sollten den gesundheitlichen Überzeugungen ihrer Patient:innen auf den Grund gehen"
     },
     {
-     "id": "at1-10-02",
+     "id": "at1-v2-07-03",
      "level": 0,
      "text": "Das Modell hilft, das Vorsorgeverhalten von Patient:innen vorherzusagen"
     }
    ]
   },
   {
-   "id": "at2-01",
+   "id": "at2-v2-01",
    "subject": "Theorien und Modelle in der Praxis",
-   "title": "AT2 · Das Coping-Konzept (Lazarus)",
+   "title": "AT2 · Was ist das Coping-Konzept nach Lazarus?",
    "status": "neu",
    "lines": [
     {
-     "id": "at2-01-01",
+     "id": "at2-v2-01-01",
      "level": 0,
-     "text": "1966 von Richard Lazarus veröffentlicht, 1974 zum transaktionalen Stressmodell erweitert"
+     "text": "1966 veröffentlicht, 1974 zum transaktionalen Stressmodell erweitert"
     },
     {
-     "id": "at2-01-02",
+     "id": "at2-v2-01-02",
      "level": 0,
      "text": "Abgrenzung vom biomedizinischen Krankheitsmodell"
     },
     {
-     "id": "at2-01-03",
-     "level": 0,
+     "id": "at2-v2-01-03",
+     "level": 1,
      "text": "Interesse: individuelle KrankheitsVERarbeitung"
     },
     {
-     "id": "at2-01-04",
+     "id": "at2-v2-01-04",
      "level": 0,
      "text": "Krankheit entsteht durch pathophysiologische Prozesse UND Überbeanspruchung des Anpassungsvermögens bzw. Ressourcenmangel"
     },
     {
-     "id": "at2-01-05",
+     "id": "at2-v2-01-05",
      "level": 0,
      "text": "Coping = Stressbewältigung"
     },
     {
-     "id": "at2-01-06",
-     "level": 0,
+     "id": "at2-v2-01-06",
+     "level": 1,
      "text": "Stress = Ungleichgewicht zwischen Anforderungen und Anpassungsressourcen"
     },
     {
-     "id": "at2-01-07",
+     "id": "at2-v2-01-07",
      "level": 0,
+     "text": "Zwei Bewertungen"
+    },
+    {
+     "id": "at2-v2-01-08",
+     "level": 1,
      "text": "Primärbewertung: Einschätzung der Situation"
     },
     {
-     "id": "at2-01-08",
-     "level": 0,
+     "id": "at2-v2-01-09",
+     "level": 1,
      "text": "Sekundärbewertung: Einschätzung der verfügbaren Ressourcen"
     }
    ]
   },
   {
-   "id": "at2-02",
+   "id": "at2-v2-02",
    "subject": "Theorien und Modelle in der Praxis",
-   "title": "AT2 · Illness Trajectory Model (Trajektmodell)",
+   "title": "AT2 · Was ist das Illness Trajectory Model (Trajektmodell)?",
    "status": "neu",
    "lines": [
     {
-     "id": "at2-02-01",
+     "id": "at2-v2-02-01",
      "level": 0,
      "text": "Verlaufskurve: Verlauf einer chronischen Erkrankung in Phasen und Stadien"
     },
     {
-     "id": "at2-02-02",
+     "id": "at2-v2-02-02",
      "level": 0,
      "text": "Annahme: Eine chronische Erkrankung verändert sich im Lauf der Zeit"
     },
     {
-     "id": "at2-02-03",
+     "id": "at2-v2-02-03",
      "level": 0,
      "text": "Chronisch Kranke sind handelnde, einflussnehmende Akteur:innen"
     },
     {
-     "id": "at2-02-04",
+     "id": "at2-v2-02-04",
      "level": 1,
      "text": "Wie erleben, deuten und bewältigen sie ihre Situation?"
     },
     {
-     "id": "at2-02-05",
+     "id": "at2-v2-02-05",
      "level": 1,
      "text": "Wie meistern sie ihr Leben mit und trotz Krankheit?"
     },
     {
-     "id": "at2-02-06",
+     "id": "at2-v2-02-06",
      "level": 0,
      "text": "Im Fokus: subjektive Realität und KrankheitsBEarbeitung"
     },
     {
-     "id": "at2-02-07",
+     "id": "at2-v2-02-07",
      "level": 0,
      "text": "Nach Corbin & Strauss"
     }
    ]
   },
   {
-   "id": "at2-03",
+   "id": "at2-v2-03",
    "subject": "Theorien und Modelle in der Praxis",
-   "title": "AT2 · Die Phasen der Verlaufskurve",
+   "title": "AT2 · Welche Phasen hat die Verlaufskurve (Trajekt)?",
    "status": "neu",
    "lines": [
     {
-     "id": "at2-03-01",
+     "id": "at2-v2-03-01",
      "level": 0,
      "text": "Vortrajekt → Trajektbeginn → Krise → akut → (Re-)Stabilisierung → stabil → instabil → Abwärtsentwicklung → Sterben"
     },
     {
-     "id": "at2-03-02",
+     "id": "at2-v2-03-02",
      "level": 0,
      "text": "Phasen wechseln ständig"
     },
     {
-     "id": "at2-03-03",
+     "id": "at2-v2-03-03",
      "level": 0,
      "text": "Art und Dauer der Phasen sind nicht vorhersagbar, kalkulierbar oder kontrollierbar"
     },
     {
-     "id": "at2-03-04",
+     "id": "at2-v2-03-04",
      "level": 0,
      "text": "Alle Beteiligten nehmen die Verlaufskurve unterschiedlich wahr"
+    },
+    {
+     "id": "at2-v2-03-05",
+     "level": 0,
+     "text": "Merkhilfe: Anfang (vor, Beginn) – Sturm (Krise, akut) – Ruhe (Stabilisierung, stabil) – Wackeln (instabil) – Ende (abwärts, Sterben)"
     }
    ]
   },
   {
-   "id": "at2-04",
+   "id": "at2-v2-04",
    "subject": "Theorien und Modelle in der Praxis",
-   "title": "AT2 · Verlaufskurvenmanagement und Aufgaben Pflegender",
+   "title": "AT2 · Praxisbeispiel PICU: Trajekt bei einem Kind mit univentrikulärem Herzen",
    "status": "neu",
    "lines": [
     {
-     "id": "at2-04-01",
+     "id": "at2-v2-04-01",
+     "level": 0,
+     "text": "Eigene Übertragung – kein Vorlesungsinhalt, hilft beim Verankern"
+    },
+    {
+     "id": "at2-v2-04-02",
+     "level": 0,
+     "text": "Trajektbeginn: Diagnose, oft schon pränatal"
+    },
+    {
+     "id": "at2-v2-04-03",
+     "level": 0,
+     "text": "Krise und akut: nach der Geburt instabil, erste OP, PICU"
+    },
+    {
+     "id": "at2-v2-04-04",
+     "level": 0,
+     "text": "(Re-)Stabilisierung und stabil: zu Hause zwischen den Operationsschritten"
+    },
+    {
+     "id": "at2-v2-04-05",
+     "level": 0,
+     "text": "Instabil und Abwärtsentwicklung: Infekte, Re-Aufnahmen, Jahre später evtl. Versagen des Kreislaufs"
+    },
+    {
+     "id": "at2-v2-04-06",
+     "level": 0,
+     "text": "Phasen wechseln immer wieder – und Eltern, Kind und Team sehen dieselbe Phase oft unterschiedlich"
+    }
+   ]
+  },
+  {
+   "id": "at2-v2-05",
+   "subject": "Theorien und Modelle in der Praxis",
+   "title": "AT2 · Was gehört zum Verlaufskurvenmanagement und was sind Aufgaben Pflegender?",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "at2-v2-05-01",
      "level": 0,
      "text": "Verlaufskurvenmanagement"
     },
     {
-     "id": "at2-04-02",
+     "id": "at2-v2-05-02",
      "level": 1,
      "text": "Einschätzungen, Vorstellungen und Interventionen aller Beteiligten überprüfen"
     },
     {
-     "id": "at2-04-03",
+     "id": "at2-v2-05-03",
      "level": 1,
      "text": "Ziele aushandeln und aufeinander abstimmen"
     },
     {
-     "id": "at2-04-04",
+     "id": "at2-v2-05-04",
      "level": 0,
      "text": "Prozess der professionellen Unterstützung"
     },
     {
-     "id": "at2-04-05",
+     "id": "at2-v2-05-05",
      "level": 1,
      "text": "Informationssammlung → Probleme aufzeigen und Dringlichkeit bewerten → Interventionsplan und Verantwortlichkeit → Implementierung → Durchführung und Evaluation"
     },
     {
-     "id": "at2-04-06",
+     "id": "at2-v2-05-06",
      "level": 0,
      "text": "Aufgaben Pflegender"
     },
     {
-     "id": "at2-04-07",
+     "id": "at2-v2-05-07",
      "level": 1,
      "text": "passende Intervention je Phase"
     },
     {
-     "id": "at2-04-08",
+     "id": "at2-v2-05-08",
      "level": 1,
      "text": "Perspektive der Patient:innen im Mittelpunkt"
     }
    ]
   },
   {
-   "id": "at2-05",
+   "id": "at2-v2-06",
    "subject": "Theorien und Modelle in der Praxis",
-   "title": "AT2 · Bedeutung des Trajektkonzepts",
+   "title": "AT2 · Welche Bedeutung hat das Trajektkonzept?",
    "status": "neu",
    "lines": [
     {
-     "id": "at2-05-01",
+     "id": "at2-v2-06-01",
      "level": 0,
      "text": "Chronische Krankheit als neutrales, allgemeines soziales Phänomen"
     },
     {
-     "id": "at2-05-02",
+     "id": "at2-v2-06-02",
      "level": 0,
      "text": "Situation und Perspektive der Erkrankten im Fokus"
     },
     {
-     "id": "at2-05-03",
+     "id": "at2-v2-06-03",
      "level": 0,
      "text": "Betont den aktiven Part der erkrankten Person bei der Krankheitsbearbeitung"
     }
    ]
   },
   {
-   "id": "at2-06",
+   "id": "at2-v2-07",
    "subject": "Theorien und Modelle in der Praxis",
-   "title": "AT2 · Krankheitsverarbeitung vs. Krankheitsbearbeitung",
+   "title": "AT2 · KrankheitsVERarbeitung oder KrankheitsBEarbeitung – wer meint was?",
    "status": "neu",
    "lines": [
     {
-     "id": "at2-06-01",
+     "id": "at2-v2-07-01",
      "level": 0,
-     "text": "Coping-Konzept (Lazarus)"
+     "text": "Wer?"
     },
     {
-     "id": "at2-06-02",
+     "id": "at2-v2-07-02",
      "level": 1,
-     "text": "KrankheitsVERarbeitung"
+     "text": "Coping-Konzept | Tra­jektmo­dell"
     },
     {
-     "id": "at2-06-03",
+     "id": "at2-v2-07-03",
      "level": 1,
-     "text": "individuelle Stressbewältigung"
+     "text": "?Lazarus | ?Corbin & Strauss"
     },
     {
-     "id": "at2-06-04",
+     "id": "at2-v2-07-04",
      "level": 0,
-     "text": "Trajektmodell (Corbin & Strauss)"
+     "text": "Welcher Begriff – und was ist gemeint?"
     },
     {
-     "id": "at2-06-05",
+     "id": "at2-v2-07-05",
      "level": 1,
-     "text": "KrankheitsBEarbeitung"
+     "text": "Coping-Konzept | Tra­jektmo­dell"
     },
     {
-     "id": "at2-06-06",
+     "id": "at2-v2-07-06",
      "level": 1,
-     "text": "aktives Handeln im Krankheitsverlauf"
+     "text": "?Krankheits-VERar­bei­tung | ?Krankheits-BEarbeitung"
+    },
+    {
+     "id": "at2-v2-07-07",
+     "level": 1,
+     "text": "?individu­elle Stressbe­wälti­gung | ?aktives Handeln im Krank­heits­ver­lauf"
+    },
+    {
+     "id": "at2-v2-07-08",
+     "level": 0,
+     "text": "Merkhilfe: VER-arbeiten passiert im Kopf, BE-arbeiten heißt anpacken"
     }
    ]
   },
   {
-   "id": "at2-07",
+   "id": "at2-v2-08",
    "subject": "Theorien und Modelle in der Praxis",
-   "title": "AT2 · Illness Constellation Model (Morse & Johnson)",
+   "title": "AT2 · Was ist das Illness Constellation Model? (Morse & Johnson)",
    "status": "neu",
    "lines": [
     {
-     "id": "at2-07-01",
+     "id": "at2-v2-08-01",
      "level": 0,
      "text": "Erleben der Krankheit aus Sicht der Patient:innen UND ihrer Bezugspersonen"
     },
     {
-     "id": "at2-07-02",
+     "id": "at2-v2-08-02",
      "level": 0,
      "text": "Eine Erkrankung betrifft auch die Angehörigen"
     },
     {
-     "id": "at2-07-03",
+     "id": "at2-v2-08-03",
      "level": 0,
      "text": "Tiefe Veränderungen in Interaktion, Rollen und Verhältnis der Beteiligten"
     },
     {
-     "id": "at2-07-04",
+     "id": "at2-v2-08-04",
      "level": 0,
      "text": "Kompensatorisches Zusammenspiel von erkrankter Person, Familie und Freunden"
     }
    ]
   },
   {
-   "id": "at2-08",
+   "id": "at2-v2-09",
    "subject": "Theorien und Modelle in der Praxis",
-   "title": "AT2 · Die 4 Phasen des Illness Constellation Model",
+   "title": "AT2 · Welche 4 Phasen hat das Illness Constellation Model?",
    "status": "neu",
    "lines": [
     {
-     "id": "at2-08-01",
+     "id": "at2-v2-09-01",
      "level": 0,
-     "text": "Phase 1: Stage of Uncertainty"
+     "text": "Die Phasen"
     },
     {
-     "id": "at2-08-02",
+     "id": "at2-v2-09-02",
      "level": 1,
-     "text": "Selbst: Verdacht, Ahnung, den Körper „lesen\", überwältigt sein"
+     "text": "Phase | Name"
     },
     {
-     "id": "at2-08-03",
+     "id": "at2-v2-09-03",
      "level": 1,
-     "text": "Andere: Verdacht, Ahnung, beobachten, überwältigt sein"
+     "text": "1 | ?Stage of Uncertainty"
     },
     {
-     "id": "at2-08-04",
+     "id": "at2-v2-09-04",
+     "level": 1,
+     "text": "2 | ?Stage of Disruption"
+    },
+    {
+     "id": "at2-v2-09-05",
+     "level": 1,
+     "text": "3 | ?Striving to regain self"
+    },
+    {
+     "id": "at2-v2-09-06",
+     "level": 1,
+     "text": "4 | ?Regaining Wellness"
+    },
+    {
+     "id": "at2-v2-09-07",
      "level": 0,
-     "text": "Phase 2: Stage of Disruption"
-    },
-    {
-     "id": "at2-08-05",
-     "level": 1,
-     "text": "Selbst: Kontrollverlust, Abstand von sich selbst nehmen"
-    },
-    {
-     "id": "at2-08-06",
-     "level": 1,
-     "text": "Andere: Verantwortung akzeptieren, wachsam sein"
-    },
-    {
-     "id": "at2-08-07",
-     "level": 0,
-     "text": "Phase 3: Striving to regain self"
-    },
-    {
-     "id": "at2-08-08",
-     "level": 1,
-     "text": "Selbst: Sinn geben, das Selbst erhalten, Rollen neu aushandeln, Ziele setzen, Bestätigung suchen"
-    },
-    {
-     "id": "at2-08-09",
-     "level": 1,
-     "text": "Andere: sich zum „Kampf\" verpflichten, „puffern\", Rollen neu aushandeln, unterstützen"
-    },
-    {
-     "id": "at2-08-10",
-     "level": 0,
-     "text": "Phase 4: Regaining Wellness"
-    },
-    {
-     "id": "at2-08-11",
-     "level": 1,
-     "text": "Selbst: Verantwortung übernehmen, die Situation „meistern\", Anschluss suchen"
-    },
-    {
-     "id": "at2-08-12",
-     "level": 1,
-     "text": "Andere: Kontrolle abgeben, es durchstehen, Anschluss suchen"
+     "text": "Merkhilfe: ahnen – aus der Bahn geworfen – sich zurückkämpfen – wieder wohlfühlen"
     }
    ]
   },
   {
-   "id": "at2-09",
+   "id": "at2-v2-10",
    "subject": "Theorien und Modelle in der Praxis",
-   "title": "AT2 · Modell zur Pflege chronisch Kranker",
+   "title": "AT2 · Illness Constellation Phase 1 und 2: Was tun Selbst und Andere?",
    "status": "neu",
    "lines": [
     {
-     "id": "at2-09-01",
+     "id": "at2-v2-10-01",
      "level": 0,
-     "text": "Hauptaufgabe: dem chronisch kranken Menschen helfen, sein Leben über die Krankheit hinaus zu heben"
+     "text": "Phase 1: Stage of Uncertainty"
     },
     {
-     "id": "at2-09-02",
+     "id": "at2-v2-10-02",
+     "level": 1,
+     "text": "Selbst: Verdacht, Ahnung, den Körper „lesen\", überwältigt sein"
+    },
+    {
+     "id": "at2-v2-10-03",
+     "level": 1,
+     "text": "Andere: Verdacht, Ahnung, beobachten, überwältigt sein"
+    },
+    {
+     "id": "at2-v2-10-04",
+     "level": 0,
+     "text": "Phase 2: Stage of Disruption"
+    },
+    {
+     "id": "at2-v2-10-05",
+     "level": 1,
+     "text": "Selbst: Kontrollverlust, Abstand von sich selbst nehmen"
+    },
+    {
+     "id": "at2-v2-10-06",
+     "level": 1,
+     "text": "Andere: Verantwortung akzeptieren, wachsam sein"
+    }
+   ]
+  },
+  {
+   "id": "at2-v2-11",
+   "subject": "Theorien und Modelle in der Praxis",
+   "title": "AT2 · Illness Constellation Phase 3 und 4: Was tun Selbst und Andere?",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "at2-v2-11-01",
+     "level": 0,
+     "text": "Phase 3: Striving to regain self"
+    },
+    {
+     "id": "at2-v2-11-02",
+     "level": 1,
+     "text": "Selbst: Sinn geben, das Selbst erhalten, Rollen neu aushandeln, Ziele setzen, Bestätigung suchen"
+    },
+    {
+     "id": "at2-v2-11-03",
+     "level": 1,
+     "text": "Andere: sich zum „Kampf\" verpflichten, „puffern\", Rollen neu aushandeln, unterstützen"
+    },
+    {
+     "id": "at2-v2-11-04",
+     "level": 0,
+     "text": "Phase 4: Regaining Wellness"
+    },
+    {
+     "id": "at2-v2-11-05",
+     "level": 1,
+     "text": "Selbst: Verantwortung übernehmen, die Situation „meistern\", Anschluss suchen"
+    },
+    {
+     "id": "at2-v2-11-06",
+     "level": 1,
+     "text": "Andere: Kontrolle abgeben, es durchstehen, Anschluss suchen"
+    },
+    {
+     "id": "at2-v2-11-07",
+     "level": 0,
+     "text": "Merkhilfe: in Phase 2 übernehmen die Anderen Verantwortung – in Phase 4 geben sie sie wieder ab"
+    }
+   ]
+  },
+  {
+   "id": "at2-v2-12",
+   "subject": "Theorien und Modelle in der Praxis",
+   "title": "AT2 · Praxisbeispiel PICU: Illness Constellation bei einer Jugendlichen mit Myokarditis",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "at2-v2-12-01",
+     "level": 0,
+     "text": "Eigene Übertragung – kein Vorlesungsinhalt, hilft beim Verankern"
+    },
+    {
+     "id": "at2-v2-12-02",
+     "level": 0,
+     "text": "Phase 1: sie ist ständig müde und kurzatmig, die Eltern merken, dass etwas nicht stimmt"
+    },
+    {
+     "id": "at2-v2-12-03",
+     "level": 0,
+     "text": "Phase 2: PICU, Katecholamine – sie verliert die Kontrolle, die Eltern übernehmen Verantwortung und wachen am Bett"
+    },
+    {
+     "id": "at2-v2-12-04",
+     "level": 0,
+     "text": "Phase 3: sie will Schule und Freundschaften halten, die Eltern „puffern\" und verteilen Rollen in der Familie neu"
+    },
+    {
+     "id": "at2-v2-12-05",
+     "level": 0,
+     "text": "Phase 4: sie übernimmt Medikamente und Termine selbst, die Eltern geben Kontrolle ab"
+    }
+   ]
+  },
+  {
+   "id": "at2-v2-13",
+   "subject": "Theorien und Modelle in der Praxis",
+   "title": "AT2 · Was ist die Hauptaufgabe im Modell zur Pflege chronisch Kranker?",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "at2-v2-13-01",
+     "level": 0,
+     "text": "Dem chronisch kranken Menschen helfen, sein Leben über die Krankheit hinaus zu heben"
+    },
+    {
+     "id": "at2-v2-13-02",
      "level": 1,
      "text": "die Person soll größer sein als die Erkrankung, nicht umgekehrt"
     },
     {
-     "id": "at2-09-03",
+     "id": "at2-v2-13-03",
      "level": 0,
      "text": "Vier Aufgaben der Pflege"
     },
     {
-     "id": "at2-09-04",
+     "id": "at2-v2-13-04",
      "level": 1,
      "text": "helfen, die existenzielle Krise zu überwinden"
     },
     {
-     "id": "at2-09-05",
+     "id": "at2-v2-13-05",
      "level": 1,
      "text": "Unterstützung im Kampf des täglichen Lebens"
     },
     {
-     "id": "at2-09-06",
+     "id": "at2-v2-13-06",
      "level": 1,
      "text": "Unterstützung beim Management des therapeutischen Regimes"
     },
     {
-     "id": "at2-09-07",
+     "id": "at2-v2-13-07",
      "level": 1,
      "text": "Hilfe bei der Organisation der Pflege"
     }
    ]
   },
   {
-   "id": "at2-10",
+   "id": "at2-v2-14",
    "subject": "Theorien und Modelle in der Praxis",
-   "title": "AT2 · Überlebensstrategien (Schaeffer & Moers)",
+   "title": "AT2 · Was sind Überlebensstrategien nach Schaeffer & Moers?",
    "status": "neu",
    "lines": [
     {
-     "id": "at2-10-01",
+     "id": "at2-v2-14-01",
      "level": 0,
      "text": "Basieren auf Coping- und Trajektkonzept"
     },
     {
-     "id": "at2-10-02",
+     "id": "at2-v2-14-02",
      "level": 0,
      "text": "Zentrale Erkenntnis: Erkrankte interessieren sich primär nicht für die Krankheit, sondern für ihr durch sie irritiertes Leben"
     },
     {
-     "id": "at2-10-03",
+     "id": "at2-v2-14-03",
      "level": 0,
      "text": "Ziel der Erkrankten: das beschädigte Leben reparieren und wieder unter Kontrolle bringen"
     },
     {
-     "id": "at2-10-04",
+     "id": "at2-v2-14-04",
      "level": 0,
      "text": "Bewältigung = Anstrengungen, mit den biografischen, sozialen, alltagsweltlichen und krankheitsbezogenen Anforderungen umzugehen"
     }
    ]
   },
   {
-   "id": "at2-11",
+   "id": "at2-v2-15",
    "subject": "Theorien und Modelle in der Praxis",
-   "title": "AT2 · Die 6 Phasen des Bewältigungshandelns",
+   "title": "AT2 · Welche 6 Phasen des Bewältigungshandelns gibt es – und welche Patient:innenrolle?",
    "status": "neu",
    "lines": [
     {
-     "id": "at2-11-01",
+     "id": "at2-v2-15-01",
      "level": 0,
+     "text": "Phasen und Rollen"
+    },
+    {
+     "id": "at2-v2-15-02",
+     "level": 1,
      "text": "Phase | Patient:innenrolle"
     },
     {
-     "id": "at2-11-02",
-     "level": 0,
+     "id": "at2-v2-15-03",
+     "level": 1,
      "text": "1 Im Vorfeld der Diagnose | ?–"
     },
     {
-     "id": "at2-11-03",
-     "level": 0,
-     "text": "2 Manifestation | ?passiv"
+     "id": "at2-v2-15-04",
+     "level": 1,
+     "text": "2 Mani­festa­tion | ?passiv"
     },
     {
-     "id": "at2-11-04",
-     "level": 0,
-     "text": "3 Restabilisierung | ?vorbildlich und aktiv"
+     "id": "at2-v2-15-05",
+     "level": 1,
+     "text": "3 Restabili­sie­rung | ?vorbildlich und aktiv"
     },
     {
-     "id": "at2-11-05",
-     "level": 0,
+     "id": "at2-v2-15-06",
+     "level": 1,
      "text": "4 Leben im Auf und Ab | ?„normal\""
     },
     {
-     "id": "at2-11-06",
-     "level": 0,
-     "text": "5 Einsetzen der Abwärtsentwicklung | ?Wandel zum „kritischen\" Patienten"
+     "id": "at2-v2-15-07",
+     "level": 1,
+     "text": "5 Einsetzen der Abwärts­ent­wick­lung | ?Wandel zum „kritischen\" Patienten"
     },
     {
-     "id": "at2-11-07",
-     "level": 0,
-     "text": "6 Beschleunigte Abwärtsentwicklung, Sterben | ?leidend"
+     "id": "at2-v2-15-08",
+     "level": 1,
+     "text": "6 Beschleu­nigte Abwärts­ent­wick­lung, Sterben | ?leidend"
     },
     {
-     "id": "at2-11-08",
+     "id": "at2-v2-15-09",
      "level": 0,
-     "text": "Kurz: vorbildlich → normal → kritisch → leidend"
+     "text": "Kurz: passiv → vorbildlich → normal → kritisch → leidend"
     }
    ]
   },
   {
-   "id": "at2-12",
+   "id": "at2-v2-16",
    "subject": "Theorien und Modelle in der Praxis",
-   "title": "AT2 · Phasen des Bewältigungshandelns im Detail",
+   "title": "AT2 · Was passiert in den 6 Phasen des Bewältigungshandelns?",
    "status": "neu",
    "lines": [
     {
-     "id": "at2-12-01",
+     "id": "at2-v2-16-01",
      "level": 0,
      "text": "1 Im Vorfeld der Diagnose"
     },
     {
-     "id": "at2-12-02",
+     "id": "at2-v2-16-02",
      "level": 1,
      "text": "erste Symptome, Irritation, Normalisierung; Abwarten bzw. Vermeidung"
     },
     {
-     "id": "at2-12-03",
+     "id": "at2-v2-16-03",
      "level": 0,
      "text": "2 Manifestation"
     },
     {
-     "id": "at2-12-04",
+     "id": "at2-v2-16-04",
      "level": 1,
      "text": "Diagnose als biografische Zäsur, Schock, „Trudeln\", Orientierungslosigkeit"
     },
     {
-     "id": "at2-12-05",
+     "id": "at2-v2-16-05",
      "level": 0,
      "text": "3 Restabilisierung"
     },
     {
-     "id": "at2-12-06",
+     "id": "at2-v2-16-06",
      "level": 1,
      "text": "Erleichterung, Hoffnung auf Normalität, hohe Compliance (aber wie bei Akuterkrankung)"
     },
     {
-     "id": "at2-12-07",
+     "id": "at2-v2-16-07",
      "level": 0,
      "text": "4 Leben im Auf und Ab"
     },
     {
-     "id": "at2-12-08",
+     "id": "at2-v2-16-08",
      "level": 1,
      "text": "Krisen und Restabilisierung wechseln; die Chronizität wird erkannt; „großzügigere\" Compliance"
     },
     {
-     "id": "at2-12-09",
+     "id": "at2-v2-16-09",
      "level": 0,
      "text": "5 Einsetzen der Abwärtsentwicklung"
     },
     {
-     "id": "at2-12-10",
+     "id": "at2-v2-16-10",
      "level": 1,
      "text": "Überforderung, Kampf um Lebensperspektiven; wechselhafte Compliance"
     },
     {
-     "id": "at2-12-11",
+     "id": "at2-v2-16-11",
      "level": 0,
      "text": "6 Beschleunigte Abwärtsentwicklung und Sterben"
     },
     {
-     "id": "at2-12-12",
+     "id": "at2-v2-16-12",
      "level": 1,
      "text": "Angst, Verlust der Handlungsfähigkeit; Erdulden"
     }
    ]
   },
   {
-   "id": "at2-13",
+   "id": "at2-v2-17",
    "subject": "Theorien und Modelle in der Praxis",
-   "title": "AT2 · Überlebensstrategien: Kernaussagen",
+   "title": "AT2 · Was sind die Kernaussagen der Überlebensstrategien?",
    "status": "neu",
    "lines": [
     {
-     "id": "at2-13-01",
+     "id": "at2-v2-17-01",
      "level": 0,
      "text": "Erkrankte halten an ihrer einmal gewählten Bewältigungsstrategie fest"
     },
     {
-     "id": "at2-13-02",
+     "id": "at2-v2-17-02",
      "level": 0,
      "text": "Ihr Handeln bleibt dem Leben verpflichtet"
     },
     {
-     "id": "at2-13-03",
-     "level": 0,
-     "text": "Je mehr die Krankheit das Leben einnimmt und je näher das Ende, desto höher die Priorität des Lebens"
+     "id": "at2-v2-17-03",
+     "level": 1,
+     "text": "je mehr die Krankheit das Leben einnimmt und je näher das Ende, desto höher die Priorität des Lebens"
     },
     {
-     "id": "at2-13-04",
+     "id": "at2-v2-17-04",
      "level": 0,
      "text": "Die Patient:innenrolle verändert sich gegenläufig zu den Anforderungen"
     },
     {
-     "id": "at2-13-05",
+     "id": "at2-v2-17-05",
      "level": 0,
      "text": "Ziel: trotz schwindender Energie so viel Leben wie möglich „retten\""
     }
    ]
   },
   {
-   "id": "at3-01",
+   "id": "at2-v2-18",
    "subject": "Theorien und Modelle in der Praxis",
-   "title": "AT3 · Studie: Kinder und Jugendliche als pflegende Angehörige",
+   "title": "AT2 · Trajekt, Bewältigungshandeln, Illness Constellation – wie unterscheiden sich die Phasenmodelle?",
    "status": "neu",
    "lines": [
     {
-     "id": "at3-01-01",
+     "id": "at2-v2-18-01",
      "level": 0,
-     "text": "Hintergrund aus Großbritannien"
+     "text": "Wer und wie viele Phasen?"
     },
     {
-     "id": "at3-01-02",
+     "id": "at2-v2-18-02",
      "level": 1,
-     "text": "Prävalenz 2,1 %, etwa 175.000 „young carers\""
+     "text": "Modell | Autor:innen, Phasen"
     },
     {
-     "id": "at3-01-03",
+     "id": "at2-v2-18-03",
      "level": 1,
-     "text": "betroffene Kinder und Familien sind vulnerabel"
+     "text": "Tra­jektmo­dell | ?Corbin & Strauss, 9 Phasen"
     },
     {
-     "id": "at3-01-04",
+     "id": "at2-v2-18-04",
      "level": 1,
-     "text": "ohne Unterstützung Gefahr für die gesamte Entwicklung"
+     "text": "Bewälti­gungs­han­deln | ?Schaeffer & Moers, 6 Phasen"
     },
     {
-     "id": "at3-01-05",
+     "id": "at2-v2-18-05",
+     "level": 1,
+     "text": "Illness Con­stella­tion | ?Morse & Johnson, 4 Phasen"
+    },
+    {
+     "id": "at2-v2-18-06",
      "level": 0,
-     "text": "Ziel: Einblick in Familie und Situation, um ein lokales Unterstützungsangebot zu entwickeln"
+     "text": "Worauf schauen sie?"
     },
     {
-     "id": "at3-01-06",
+     "id": "at2-v2-18-07",
+     "level": 1,
+     "text": "Modell | Blick auf"
+    },
+    {
+     "id": "at2-v2-18-08",
+     "level": 1,
+     "text": "Tra­jektmo­dell | ?Verlauf und aktive Krank­heitsBEar­bei­tung"
+    },
+    {
+     "id": "at2-v2-18-09",
+     "level": 1,
+     "text": "Bewälti­gungs­han­deln | ?Patient:innenrolle, Leben „retten\""
+    },
+    {
+     "id": "at2-v2-18-10",
+     "level": 1,
+     "text": "Illness Con­stella­tion | ?Erkrankte UND Angehörige"
+    },
+    {
+     "id": "at2-v2-18-11",
      "level": 0,
-     "text": "Methodik"
-    },
-    {
-     "id": "at3-01-07",
-     "level": 1,
-     "text": "Grounded Theory"
-    },
-    {
-     "id": "at3-01-08",
-     "level": 1,
-     "text": "Kinder als Expert:innen ihrer Lebenswelt (moderne Kindheitsforschung)"
-    },
-    {
-     "id": "at3-01-09",
-     "level": 1,
-     "text": "81 Interviews mit Kindern, Jugendlichen und Eltern in 34 Familien"
-    },
-    {
-     "id": "at3-01-10",
-     "level": 0,
-     "text": "Metzing (2007)"
+     "text": "Merkhilfe: 9 – 6 – 4 Phasen; nur Illness Constellation stellt die Angehörigen gleichberechtigt daneben"
     }
    ]
   },
   {
-   "id": "at3-02",
+   "id": "at3-v2-01",
    "subject": "Theorien und Modelle in der Praxis",
-   "title": "AT3 · Young Carers: Beweggründe und Ziel",
+   "title": "AT3 · Was untersuchte Metzing (2007) zu Kindern als pflegenden Angehörigen?",
    "status": "neu",
    "lines": [
     {
-     "id": "at3-02-01",
+     "id": "at3-v2-01-01",
+     "level": 0,
+     "text": "Hintergrund aus Großbritannien"
+    },
+    {
+     "id": "at3-v2-01-02",
+     "level": 1,
+     "text": "Prävalenz 2,1 %, etwa 175.000 „young carers\""
+    },
+    {
+     "id": "at3-v2-01-03",
+     "level": 1,
+     "text": "betroffene Kinder und Familien sind vulnerabel; ohne Unterstützung Gefahr für die gesamte Entwicklung"
+    },
+    {
+     "id": "at3-v2-01-04",
+     "level": 0,
+     "text": "Ziel: Einblick in Familie und Situation, um ein lokales Unterstützungsangebot zu entwickeln"
+    },
+    {
+     "id": "at3-v2-01-05",
+     "level": 0,
+     "text": "Methodik"
+    },
+    {
+     "id": "at3-v2-01-06",
+     "level": 1,
+     "text": "Grounded Theory"
+    },
+    {
+     "id": "at3-v2-01-07",
+     "level": 1,
+     "text": "Kinder als Expert:innen ihrer Lebenswelt (moderne Kindheitsforschung)"
+    },
+    {
+     "id": "at3-v2-01-08",
+     "level": 1,
+     "text": "81 Interviews mit Kindern, Jugendlichen und Eltern in 34 Familien"
+    }
+   ]
+  },
+  {
+   "id": "at3-v2-02",
+   "subject": "Theorien und Modelle in der Praxis",
+   "title": "AT3 · Young Carers: Warum helfen sie, wie handeln sie, was ist das Ziel?",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "at3-v2-02-01",
      "level": 0,
      "text": "Beweggründe"
     },
     {
-     "id": "at3-02-02",
+     "id": "at3-v2-02-02",
      "level": 1,
      "text": "meistens: aus Liebe"
     },
     {
-     "id": "at3-02-03",
+     "id": "at3-v2-02-03",
      "level": 1,
      "text": "selten: es aufgetragen bekommen"
     },
     {
-     "id": "at3-02-04",
+     "id": "at3-v2-02-04",
      "level": 0,
      "text": "Typisches Handeln"
     },
     {
-     "id": "at3-02-05",
+     "id": "at3-v2-02-05",
      "level": 1,
      "text": "„die Lücken füllen und in Bereitschaft sein\""
     },
     {
-     "id": "at3-02-06",
+     "id": "at3-v2-02-06",
      "level": 1,
      "text": "„nicht darüber reden\""
     },
     {
-     "id": "at3-02-07",
+     "id": "at3-v2-02-07",
      "level": 0,
      "text": "Oberstes Ziel der Familie"
     },
     {
-     "id": "at3-02-08",
+     "id": "at3-v2-02-08",
      "level": 1,
      "text": "„Familie sein, Familie bleiben: so normal wie möglich weiterleben können\""
     }
    ]
   },
   {
-   "id": "at3-03",
+   "id": "at3-v2-03",
    "subject": "Theorien und Modelle in der Praxis",
-   "title": "AT3 · Young Carers: Auswirkungen",
+   "title": "AT3 · Young Carers: Welche Auswirkungen hat die Pflege für die Kinder?",
    "status": "neu",
    "lines": [
     {
-     "id": "at3-03-01",
+     "id": "at3-v2-03-01",
      "level": 0,
      "text": "Positiv"
     },
     {
-     "id": "at3-03-02",
+     "id": "at3-v2-03-02",
      "level": 1,
      "text": "Reife, Stolz, Anerkennung"
     },
     {
-     "id": "at3-03-03",
+     "id": "at3-v2-03-03",
      "level": 1,
      "text": "Zusammenbleiben, Zusammenhalt, mehr Zeit miteinander"
     },
     {
-     "id": "at3-03-04",
+     "id": "at3-v2-03-04",
      "level": 0,
      "text": "Negativ"
     },
     {
-     "id": "at3-03-05",
+     "id": "at3-v2-03-05",
      "level": 1,
-     "text": "im Verborgenen leben, niemanden zum Reden haben"
+     "text": "im Verborgenen leben, niemanden zum Reden haben, soziale Isolation"
     },
     {
-     "id": "at3-03-06",
-     "level": 1,
-     "text": "soziale Isolation"
-    },
-    {
-     "id": "at3-03-07",
+     "id": "at3-v2-03-06",
      "level": 1,
      "text": "Überforderung, Erschöpfung"
     },
     {
-     "id": "at3-03-08",
+     "id": "at3-v2-03-07",
      "level": 1,
      "text": "keine Zeit zum Lernen, Fehlzeiten in der Schule"
     },
     {
-     "id": "at3-03-09",
+     "id": "at3-v2-03-08",
      "level": 1,
      "text": "Verzicht auf Kindheit"
     }
    ]
   },
   {
-   "id": "at3-04",
+   "id": "at3-v2-04",
    "subject": "Theorien und Modelle in der Praxis",
-   "title": "AT3 · Young Carers: Hilfe und Implikationen",
+   "title": "AT3 · Young Carers: Welche Hilfe brauchen sie und was folgt für die Praxis?",
    "status": "neu",
    "lines": [
     {
-     "id": "at3-04-01",
+     "id": "at3-v2-04-01",
      "level": 0,
      "text": "Familienorientiertes Unterstützungsangebot"
     },
     {
-     "id": "at3-04-02",
+     "id": "at3-v2-04-02",
      "level": 1,
      "text": "jemanden zum Reden haben"
     },
     {
-     "id": "at3-04-03",
+     "id": "at3-v2-04-03",
      "level": 1,
      "text": "praktische Unterstützung für Kinder und Jugendliche"
     },
     {
-     "id": "at3-04-04",
+     "id": "at3-v2-04-04",
      "level": 1,
      "text": "praktische Unterstützung für Eltern und Familien"
     },
     {
-     "id": "at3-04-05",
+     "id": "at3-v2-04-05",
      "level": 0,
      "text": "Implikationen für die Praxis"
     },
     {
-     "id": "at3-04-06",
+     "id": "at3-v2-04-06",
      "level": 1,
-     "text": "Je dringender Familien Hilfe brauchen, desto unsichtbarer wird ihre Not"
+     "text": "je dringender Familien Hilfe brauchen, desto unsichtbarer wird ihre Not"
     },
     {
-     "id": "at3-04-07",
+     "id": "at3-v2-04-07",
      "level": 1,
      "text": "Bewältigung chronischer Krankheit betrifft die ganze Familie"
     },
     {
-     "id": "at3-04-08",
+     "id": "at3-v2-04-08",
      "level": 1,
      "text": "Hoffnung nicht nehmen, sondern aktiv unterstützen"
     },
     {
-     "id": "at3-04-09",
+     "id": "at3-v2-04-09",
      "level": 1,
-     "text": "Pflegende Kinder entlasten geht nur, wenn auch die Eltern entlastet werden"
+     "text": "pflegende Kinder entlasten geht nur, wenn auch die Eltern entlastet werden"
     }
    ]
   },
   {
-   "id": "at3-05",
+   "id": "at3-v2-05",
    "subject": "Theorien und Modelle in der Praxis",
-   "title": "AT3 · Studie: Der Prozess des Bettlägerigwerdens",
+   "title": "AT3 · Wie entsteht Bettlägerigkeit? (Zegelin, „Festgenagelt sein\")",
    "status": "neu",
    "lines": [
     {
-     "id": "at3-05-01",
+     "id": "at3-v2-05-01",
      "level": 0,
      "text": "Ziel: Einsicht in die Entstehung von Bettlägerigkeit"
     },
     {
-     "id": "at3-05-02",
+     "id": "at3-v2-05-02",
      "level": 0,
      "text": "Methodik: Grounded Theory, 32 Interviews mit „bettlägerigen\" Menschen in Heimen und häuslicher Pflege"
     },
     {
-     "id": "at3-05-03",
+     "id": "at3-v2-05-03",
      "level": 0,
+     "text": "Der Prozess"
+    },
+    {
+     "id": "at3-v2-05-04",
+     "level": 1,
      "text": "Instabilität → Ereignis → Immobilität im Raum → Ortsfixierung → Bettlägerigkeit"
     },
     {
-     "id": "at3-05-04",
+     "id": "at3-v2-05-05",
      "level": 0,
-     "text": "Zegelin („Festgenagelt sein\")"
+     "text": "Merkhilfe: der Radius wird immer kleiner – Wohnung, Zimmer, Stuhl, Bett"
     }
    ]
   },
   {
-   "id": "at3-06",
+   "id": "at3-v2-06",
    "subject": "Theorien und Modelle in der Praxis",
-   "title": "AT3 · Bettlägerigkeit: Implikationen für die Praxis",
+   "title": "AT3 · Was folgt aus Zegelins Studie für die Praxis?",
    "status": "neu",
    "lines": [
     {
-     "id": "at3-06-01",
+     "id": "at3-v2-06-01",
      "level": 0,
      "text": "Bettlägerigkeit ist kein Schicksal, sondern eine Komplikation!"
     },
     {
-     "id": "at3-06-02",
+     "id": "at3-v2-06-02",
      "level": 0,
+     "text": "Organisation"
+    },
+    {
+     "id": "at3-v2-06-03",
+     "level": 1,
      "text": "Fallbesprechungen und Casemanagement"
     },
     {
-     "id": "at3-06-03",
+     "id": "at3-v2-06-04",
      "level": 0,
-     "text": "Frühzeitige Anpassung der Wohnumgebung"
+     "text": "Umgebung"
     },
     {
-     "id": "at3-06-04",
-     "level": 0,
-     "text": "Passende und geeignete Hilfsmittel"
+     "id": "at3-v2-06-05",
+     "level": 1,
+     "text": "frühzeitige Anpassung der Wohnumgebung"
     },
     {
-     "id": "at3-06-05",
-     "level": 0,
-     "text": "Aktivierende Pflege ernst nehmen, an Fähigkeiten und Ressourcen orientieren"
+     "id": "at3-v2-06-06",
+     "level": 1,
+     "text": "passende und geeignete Hilfsmittel"
     },
     {
-     "id": "at3-06-06",
+     "id": "at3-v2-06-07",
+     "level": 1,
+     "text": "bedarfsorientierte Ausstattung mit Möbeln und Hilfsmitteln"
+    },
+    {
+     "id": "at3-v2-06-08",
      "level": 0,
+     "text": "Pflegehaltung"
+    },
+    {
+     "id": "at3-v2-06-09",
+     "level": 1,
+     "text": "aktivierende Pflege ernst nehmen, an Fähigkeiten und Ressourcen orientieren"
+    },
+    {
+     "id": "at3-v2-06-10",
+     "level": 1,
      "text": "Angebote zur Teilnahme am Alltag"
     },
     {
-     "id": "at3-06-07",
-     "level": 0,
+     "id": "at3-v2-06-11",
+     "level": 1,
      "text": "Sturzprophylaxe"
-    },
-    {
-     "id": "at3-06-08",
-     "level": 0,
-     "text": "Bedarfsorientierte Ausstattung mit Möbeln und Hilfsmitteln"
     }
    ]
   },
   {
-   "id": "at3-07",
+   "id": "at3-v2-07",
    "subject": "Theorien und Modelle in der Praxis",
-   "title": "AT3 · Studie: Vertrautheit bei Demenz",
+   "title": "AT3 · Was untersuchte Bosch (1998) zur Vertrautheit bei Demenz?",
    "status": "neu",
    "lines": [
     {
-     "id": "at3-07-01",
+     "id": "at3-v2-07-01",
      "level": 0,
      "text": "Ziel: Einsicht in das Wirklichkeitserleben dementierender alter Menschen"
     },
     {
-     "id": "at3-07-02",
+     "id": "at3-v2-07-02",
      "level": 0,
-     "text": "Methodik: Grounded Theory; 34 Bewohner:innen einer Station ein Jahr lang beobachtet, im Schnitt 3,5 Stunden"
+     "text": "Methodik: Grounded Theory"
     },
     {
-     "id": "at3-07-03",
-     "level": 0,
-     "text": "Bosch (1998)"
+     "id": "at3-v2-07-03",
+     "level": 1,
+     "text": "34 Bewohner:innen einer Station ein Jahr lang beobachtet, im Schnitt 3,5 Stunden"
     },
     {
-     "id": "at3-07-04",
+     "id": "at3-v2-07-04",
      "level": 0,
      "text": "Hauptaufgabe der Pflegenden: Vertrautheit schaffen"
     }
    ]
   },
   {
-   "id": "at3-08",
+   "id": "at3-v2-08",
    "subject": "Theorien und Modelle in der Praxis",
-   "title": "AT3 · Vertrautheit: Frauen, Männer, Ordensfrauen",
+   "title": "AT3 · Vertrautheit bei Demenz: Was ist Frauen, Männern und Ordensfrauen vertraut?",
    "status": "neu",
    "lines": [
     {
-     "id": "at3-08-01",
+     "id": "at3-v2-08-01",
      "level": 0,
      "text": "Frauen"
     },
     {
-     "id": "at3-08-02",
+     "id": "at3-v2-08-02",
      "level": 1,
      "text": "Vertrautheit: „Zuhause\", sich um andere kümmern, kleine vertraute Gruppen"
     },
     {
-     "id": "at3-08-03",
+     "id": "at3-v2-08-03",
      "level": 1,
      "text": "im Heim: verlieren ihr Zuhause, vermissen frühere Situationen"
     },
     {
-     "id": "at3-08-04",
+     "id": "at3-v2-08-04",
      "level": 1,
      "text": "in der Praxis: „Daheim\" und nach Hause wollen ist zentral"
     },
     {
-     "id": "at3-08-05",
+     "id": "at3-v2-08-05",
      "level": 0,
      "text": "Männer"
     },
     {
-     "id": "at3-08-06",
+     "id": "at3-v2-08-06",
      "level": 1,
      "text": "Vertrautheit: Arbeit, Familie, Freundschaft, Verein; Arbeit und Zuhause getrennt"
     },
     {
-     "id": "at3-08-07",
+     "id": "at3-v2-08-07",
      "level": 1,
      "text": "im Heim: verstehen die Einrichtung als Teil des Berufs oder Vereins"
     },
     {
-     "id": "at3-08-08",
+     "id": "at3-v2-08-08",
      "level": 1,
      "text": "in der Praxis: sind in der Demenz häufig in ihrem Beruf"
     },
     {
-     "id": "at3-08-09",
+     "id": "at3-v2-08-09",
      "level": 0,
      "text": "Ordensfrauen"
     },
     {
-     "id": "at3-08-10",
+     "id": "at3-v2-08-10",
      "level": 1,
      "text": "Vertrautheit: Klosterleben, strenge Regeln, keine Trennung von Leben und Arbeit"
     },
     {
-     "id": "at3-08-11",
+     "id": "at3-v2-08-11",
      "level": 1,
      "text": "im Heim: Einrichtung ähnelt dem Kloster, passen sich an, vermissen keine Güter"
     },
     {
-     "id": "at3-08-12",
+     "id": "at3-v2-08-12",
      "level": 1,
      "text": "in der Praxis: zufrieden, solange der Tag den Ordensregeln folgt"
     }
    ]
   },
   {
-   "id": "at3-09",
+   "id": "at3-v2-09",
    "subject": "Theorien und Modelle in der Praxis",
-   "title": "AT3 · Fazit: Forschung und Praxis",
+   "title": "AT3 · Was ist das Fazit zu Forschung und Praxis?",
    "status": "neu",
    "lines": [
     {
-     "id": "at3-09-01",
+     "id": "at3-v2-09-01",
      "level": 0,
      "text": "Pflegewissenschaftliche Studien greifen Probleme aus der Praxis auf"
     },
     {
-     "id": "at3-09-02",
+     "id": "at3-v2-09-02",
      "level": 0,
      "text": "Ergebnisse geben Anregungen für die Praxis"
     },
     {
-     "id": "at3-09-03",
+     "id": "at3-v2-09-03",
      "level": 0,
      "text": "Schnepp: Theorien sollen einen möglichst zuverlässigen Rahmen für Praxis und Wissenschaft bieten"
     },
     {
-     "id": "at3-09-04",
+     "id": "at3-v2-09-04",
      "level": 0,
      "text": "Schröck: Pflegetheorien sind nötig, um die Praxis durch eine rationale Basis zu verbessern"
     }

@@ -1,0 +1,1259 @@
+{
+ "app": "lernkarten",
+ "version": 1,
+ "pack": true,
+ "name": "Querverbindungen – was hängt mappenübergreifend zusammen?",
+ "subjects": [
+  "Querverbindungen"
+ ],
+ "cards": [
+  {
+   "id": "qv-v2-01",
+   "subject": "Querverbindungen",
+   "title": "QV · Induktion, Deduktion, Abduktion – wo begegnen sie dir?",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "qv-v2-01-01",
+     "level": 0,
+     "text": "Grundidee"
+    },
+    {
+     "id": "qv-v2-01-02",
+     "level": 1,
+     "text": "Induktion: vom Besonderen zum Allgemeinen"
+    },
+    {
+     "id": "qv-v2-01-03",
+     "level": 1,
+     "text": "Deduktion: vom Allgemeinen zum Besonderen"
+    },
+    {
+     "id": "qv-v2-01-04",
+     "level": 1,
+     "text": "Abduktion: offen Daten erheben, Neues entdecken, danach wieder testen (WT1)"
+    },
+    {
+     "id": "qv-v2-01-05",
+     "level": 0,
+     "text": "In den Mappen"
+    },
+    {
+     "id": "qv-v2-01-06",
+     "level": 1,
+     "text": "Mappe | Wo?"
+    },
+    {
+     "id": "qv-v2-01-07",
+     "level": 1,
+     "text": "WT1 | ?Logik als Grundbe­griff der Wis­sen­schafts­theo­rie"
+    },
+    {
+     "id": "qv-v2-01-08",
+     "level": 1,
+     "text": "WT2 | ?qualitativ schließt induktiv, quantitativ deduktiv"
+    },
+    {
+     "id": "qv-v2-01-09",
+     "level": 1,
+     "text": "WT2 | ?Popper: Induktion hat keinen Stellenwert in der Wahr­heits­frage"
+    },
+    {
+     "id": "qv-v2-01-10",
+     "level": 1,
+     "text": "WA1 | ?beides Formen des logischen Denkens (Mayer, 2022)"
+    },
+    {
+     "id": "qv-v2-01-11",
+     "level": 1,
+     "text": "WA3 | ?deduktive und induktive Methode der Gliederung"
+    },
+    {
+     "id": "qv-v2-01-12",
+     "level": 0,
+     "text": "Merkhilfe: wer misst, prüft eine Theorie (deduktiv) – wer zuhört, baut eine (induktiv)"
+    }
+   ]
+  },
+  {
+   "id": "qv-v2-02",
+   "subject": "Querverbindungen",
+   "title": "QV · Forschungsprozess in QF, ST und WA – was entspricht sich?",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "qv-v2-02-01",
+     "level": 0,
+     "text": "Fünf Schritte, zwei Benennungen"
+    },
+    {
+     "id": "qv-v2-02-02",
+     "level": 1,
+     "text": "WA (Atteslander) | QF (Polit, Beck & Hungler)"
+    },
+    {
+     "id": "qv-v2-02-03",
+     "level": 1,
+     "text": "1 Pro­blembe­nen­nung | ?kon­zeptio­nelle Phase"
+    },
+    {
+     "id": "qv-v2-02-04",
+     "level": 1,
+     "text": "2 Gegen­standsbe­nen­nung | ?Design- und Pla­nungs­phase"
+    },
+    {
+     "id": "qv-v2-02-05",
+     "level": 1,
+     "text": "3 Auswahl & Anwendung der For­schungsme­thode | ?empirische Phase"
+    },
+    {
+     "id": "qv-v2-02-06",
+     "level": 1,
+     "text": "4 Analyse & Auswertung | ?Analyse­phase"
+    },
+    {
+     "id": "qv-v2-02-07",
+     "level": 1,
+     "text": "5 Verwendung von Ergebnissen | ?Ver­brei­tungs­phase"
+    },
+    {
+     "id": "qv-v2-02-08",
+     "level": 0,
+     "text": "ST benutzt die WA-Begriffe – nur Schritt 3 heißt dort „Durchführung\" und Schritt 5 „Verwertung\""
+    },
+    {
+     "id": "qv-v2-02-09",
+     "level": 1,
+     "text": "in Schritt 4 (Analyse) sitzt die Statistik"
+    },
+    {
+     "id": "qv-v2-02-10",
+     "level": 0,
+     "text": "Merkhilfe: Frage – Plan – Daten – Auswertung – Ergebnisse raus"
+    },
+    {
+     "id": "qv-v2-02-11",
+     "level": 0,
+     "text": "Nicht verwechseln: die 7 Schritte wissenschaftlichen Arbeitens (WA1) beschreiben das Schreiben einer Arbeit"
+    }
+   ]
+  },
+  {
+   "id": "qv-v2-03",
+   "subject": "Querverbindungen",
+   "title": "QV · Gesundheit und Krankheit – welche Sichtweisen kennst du?",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "qv-v2-03-01",
+     "level": 0,
+     "text": "Fünf Sichtweisen"
+    },
+    {
+     "id": "qv-v2-03-02",
+     "level": 1,
+     "text": "Sichtweise | Kern"
+    },
+    {
+     "id": "qv-v2-03-03",
+     "level": 1,
+     "text": "WHO 1948 (PH1) | ?voll­ständi­ges kör­perli­ches, geistiges und soziales Wohlbe­fin­den"
+    },
+    {
+     "id": "qv-v2-03-04",
+     "level": 1,
+     "text": "Old vs. New Public Health (PH1) | ?Gesundheit als Fehlen von Krankheit vs. positiv definiert"
+    },
+    {
+     "id": "qv-v2-03-05",
+     "level": 1,
+     "text": "HEDE-Kontinuum: Antonovsky (PH3) | ?keine Dichotomie, Bewusstsein der Sterb­lich­keit"
+    },
+    {
+     "id": "qv-v2-03-06",
+     "level": 1,
+     "text": "Kontinuum: Franke, Hurrelmann (GPF1) | ?Normalität: grund­sätz­lich gesund, nur manchmal krank"
+    },
+    {
+     "id": "qv-v2-03-07",
+     "level": 1,
+     "text": "Metapara­digma: Fawcett (TG2) | ?Gesundheit als eines von vier Kern­kon­zep­ten der Pflege"
+    },
+    {
+     "id": "qv-v2-03-08",
+     "level": 0,
+     "text": "Beide Kontinuum-Modelle: völlige Gesundheit oder völlige Krankheit ist nicht möglich"
+    },
+    {
+     "id": "qv-v2-03-09",
+     "level": 0,
+     "text": "Für die Pflege ist das Kontinuum hilfreicher als „gesund oder krank\" (AT1, Brieskorn-Zinke)"
+    }
+   ]
+  },
+  {
+   "id": "qv-v2-04",
+   "subject": "Querverbindungen",
+   "title": "QV · Biopsychosoziales Modell – was sagen PH und GPF?",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "qv-v2-04-01",
+     "level": 0,
+     "text": "Herkunft"
+    },
+    {
+     "id": "qv-v2-04-02",
+     "level": 1,
+     "text": "PH1: Engel (1977), im Zusammenhang mit dem WHO-Gesundheitsbegriff"
+    },
+    {
+     "id": "qv-v2-04-03",
+     "level": 1,
+     "text": "GPF1: löst Mitte des 20. Jh. das biomedizinische Modell ab"
+    },
+    {
+     "id": "qv-v2-04-04",
+     "level": 0,
+     "text": "Beispiele in PH"
+    },
+    {
+     "id": "qv-v2-04-05",
+     "level": 1,
+     "text": "Ebene | PH"
+    },
+    {
+     "id": "qv-v2-04-06",
+     "level": 1,
+     "text": "bio | ?Alter, Geschlecht, Genetik"
+    },
+    {
+     "id": "qv-v2-04-07",
+     "level": 1,
+     "text": "psycho | ?emotionale und mentale Gesundheit, Über­zeu­gun­gen"
+    },
+    {
+     "id": "qv-v2-04-08",
+     "level": 1,
+     "text": "sozial | ?Beziehungen, Unter­stüt­zung, Sozio­ökono­mie"
+    },
+    {
+     "id": "qv-v2-04-09",
+     "level": 0,
+     "text": "Beispiele in GPF"
+    },
+    {
+     "id": "qv-v2-04-10",
+     "level": 1,
+     "text": "Ebene | GPF"
+    },
+    {
+     "id": "qv-v2-04-11",
+     "level": 1,
+     "text": "bio | ?Bakterien, Viren, Genetik"
+    },
+    {
+     "id": "qv-v2-04-12",
+     "level": 1,
+     "text": "psycho | ?Ein­stel­lun­gen, Verhalten, Stress, Coping, Schmerz"
+    },
+    {
+     "id": "qv-v2-04-13",
+     "level": 1,
+     "text": "sozial | ?Ver­hält­nisse, Ethnie, Sozial­ökono­mie"
+    },
+    {
+     "id": "qv-v2-04-14",
+     "level": 0,
+     "text": "GPF: Gesundheitspsychologie orientiert sich daran – das Subjekt steht im Vordergrund"
+    },
+    {
+     "id": "qv-v2-04-15",
+     "level": 0,
+     "text": "Auch AT2: Lazarus' Coping-Konzept grenzt sich vom biomedizinischen Krankheitsmodell ab"
+    }
+   ]
+  },
+  {
+   "id": "qv-v2-05",
+   "subject": "Querverbindungen",
+   "title": "QV · Salutogenese – wo taucht sie überall auf?",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "qv-v2-05-01",
+     "level": 0,
+     "text": "Leitfrage überall: Warum bleiben Menschen gesund?"
+    },
+    {
+     "id": "qv-v2-05-02",
+     "level": 0,
+     "text": "In den Mappen"
+    },
+    {
+     "id": "qv-v2-05-03",
+     "level": 1,
+     "text": "Mappe | Was dort?"
+    },
+    {
+     "id": "qv-v2-05-04",
+     "level": 1,
+     "text": "PH3 | ?Antonovsky, Kohä­renzge­fühl (Ver­steh­bar­keit, Bewäl­tig­bar­keit, Sinn­haf­tig­keit), HEDE-Kontinuum"
+    },
+    {
+     "id": "qv-v2-05-05",
+     "level": 1,
+     "text": "AT1 | ?Relevanz für die Pflege: Kohä­renz­sinn stärken, Kontinuum statt „gesund oder krank\""
+    },
+    {
+     "id": "qv-v2-05-06",
+     "level": 1,
+     "text": "GPF3 | ?Kohä­renz­sinn als persönliche Ressource; Resilienz mit salutogeneti­scher Leitfrage"
+    },
+    {
+     "id": "qv-v2-05-07",
+     "level": 1,
+     "text": "GPF4 | ?Gesund­heits­förde­rung und Ottawa-Charta beziehen sich auf die Salutoge­nese"
+    },
+    {
+     "id": "qv-v2-05-08",
+     "level": 0,
+     "text": "Merkhilfe: Pathogenese fragt nach dem Krankwerden, Salutogenese nach dem Gesundbleiben (PH3)"
+    }
+   ]
+  },
+  {
+   "id": "qv-v2-06",
+   "subject": "Querverbindungen",
+   "title": "QV · Lazarus in AT und GPF – was betont welche Mappe?",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "qv-v2-06-01",
+     "level": 0,
+     "text": "AT2: Coping-Konzept"
+    },
+    {
+     "id": "qv-v2-06-02",
+     "level": 1,
+     "text": "Aspekt | AT2"
+    },
+    {
+     "id": "qv-v2-06-03",
+     "level": 1,
+     "text": "Jahr | ?1966, 1974 zum transaktiona­len Stressmo­dell erweitert"
+    },
+    {
+     "id": "qv-v2-06-04",
+     "level": 1,
+     "text": "Fokus | ?individu­elle Krank­heits­VERar­bei­tung, Abgrenzung vom biomedizini­schen Modell"
+    },
+    {
+     "id": "qv-v2-06-05",
+     "level": 1,
+     "text": "Bewertung | ?primär: Situation; sekundär: Ressourcen"
+    },
+    {
+     "id": "qv-v2-06-06",
+     "level": 1,
+     "text": "Extra | ?Stress = Ungleichge­wicht zwischen Anforde­run­gen und Anpas­sungs­res­sour­cen"
+    },
+    {
+     "id": "qv-v2-06-07",
+     "level": 0,
+     "text": "GPF3: kognitiv-transaktionale Stresstheorie"
+    },
+    {
+     "id": "qv-v2-06-08",
+     "level": 1,
+     "text": "Aspekt | GPF3"
+    },
+    {
+     "id": "qv-v2-06-09",
+     "level": 1,
+     "text": "Jahr | ?1984"
+    },
+    {
+     "id": "qv-v2-06-10",
+     "level": 1,
+     "text": "Fokus | ?subjektive Ein­schät­zung; Individuum und Umwelt hängen zusammen"
+    },
+    {
+     "id": "qv-v2-06-11",
+     "level": 1,
+     "text": "Bewertung | ?primary und secondary appraisal, Reihenfolge kann sich umkehren"
+    },
+    {
+     "id": "qv-v2-06-12",
+     "level": 1,
+     "text": "Extra | ?Schaden, Gewinn, Gleich­gül­tig­keit vs. Her­aus­forde­rung, Bedrohung; problem- oder emoti­onsorien­tiert"
+    },
+    {
+     "id": "qv-v2-06-13",
+     "level": 0,
+     "text": "Lazarus taucht in GPF3 noch zweimal auf: Alltagsschwierigkeiten (1984) und „Stress als Prozess bei fehlenden Ressourcen\""
+    },
+    {
+     "id": "qv-v2-06-14",
+     "level": 0,
+     "text": "Merkhilfe: AT wendet Lazarus auf Krankheit an, GPF auf Stress allgemein"
+    }
+   ]
+  },
+  {
+   "id": "qv-v2-07",
+   "subject": "Querverbindungen",
+   "title": "QV · Stress und Ressourcen: Antonovsky, Lazarus, Hobfoll im Vergleich",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "qv-v2-07-01",
+     "level": 0,
+     "text": "Wie entsteht Stress?"
+    },
+    {
+     "id": "qv-v2-07-02",
+     "level": 1,
+     "text": "Wer | Stress"
+    },
+    {
+     "id": "qv-v2-07-03",
+     "level": 1,
+     "text": "Antonovsky (PH3) | ?Stressoren sind ständig präsent"
+    },
+    {
+     "id": "qv-v2-07-04",
+     "level": 1,
+     "text": "Lazarus (AT2, GPF3) | ?durch subjektive Bewertung"
+    },
+    {
+     "id": "qv-v2-07-05",
+     "level": 1,
+     "text": "Hobfoll (GPF3) | ?wenn Ressourcen fehlen, verloren gehen oder kein Gewinn möglich ist"
+    },
+    {
+     "id": "qv-v2-07-06",
+     "level": 0,
+     "text": "Welche Ressourcen zählen?"
+    },
+    {
+     "id": "qv-v2-07-07",
+     "level": 1,
+     "text": "Wer | Ressourcen"
+    },
+    {
+     "id": "qv-v2-07-08",
+     "level": 1,
+     "text": "Antonovsky | ?Wider­standsres­sour­cen, Kohä­renzge­fühl"
+    },
+    {
+     "id": "qv-v2-07-09",
+     "level": 1,
+     "text": "Lazarus | ?Sekundärbe­wer­tung der eigenen Ressourcen"
+    },
+    {
+     "id": "qv-v2-07-10",
+     "level": 1,
+     "text": "Hobfoll | ?Objekte, Bedingungen, personale und Ener­gieres­sour­cen"
+    },
+    {
+     "id": "qv-v2-07-11",
+     "level": 0,
+     "text": "Was kommt dabei heraus?"
+    },
+    {
+     "id": "qv-v2-07-12",
+     "level": 1,
+     "text": "Wer | Ergebnis"
+    },
+    {
+     "id": "qv-v2-07-13",
+     "level": 1,
+     "text": "Antonovsky | ?Span­nungs­verar­bei­tung bestimmt die Position auf dem HEDE-Kontinuum"
+    },
+    {
+     "id": "qv-v2-07-14",
+     "level": 1,
+     "text": "Lazarus | ?problem- oder emoti­onsorien­tierte Bewältigung"
+    },
+    {
+     "id": "qv-v2-07-15",
+     "level": 1,
+     "text": "Hobfoll | ?Verlust- und Gewinn­spira­len"
+    },
+    {
+     "id": "qv-v2-07-16",
+     "level": 0,
+     "text": "Kritik an Hobfoll (GPF3): nur eine modernere Version von Lazarus, aber leichter messbar"
+    }
+   ]
+  },
+  {
+   "id": "qv-v2-08",
+   "subject": "Querverbindungen",
+   "title": "QV · Ottawa-Charta in PH und GPF – was steht wo?",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "qv-v2-08-01",
+     "level": 0,
+     "text": "In beiden Mappen"
+    },
+    {
+     "id": "qv-v2-08-02",
+     "level": 1,
+     "text": "WHO 1986; Gesundheitsförderung als Prozess, Menschen zu mehr Selbstbestimmung über ihre Gesundheit zu befähigen"
+    },
+    {
+     "id": "qv-v2-08-03",
+     "level": 1,
+     "text": "Schlüsselpunkte: Empowerment und Intersektoralität"
+    },
+    {
+     "id": "qv-v2-08-04",
+     "level": 0,
+     "text": "Nur in PH"
+    },
+    {
+     "id": "qv-v2-08-05",
+     "level": 1,
+     "text": "Gesundheit erstmals als Prozess, Setting-Ansatz: Gesundheit entsteht im Alltag"
+    },
+    {
+     "id": "qv-v2-08-06",
+     "level": 1,
+     "text": "Grundvoraussetzungen: Frieden, Wohnen, Bildung, Ernährung, Einkommen, stabiles Ökosystem, Gerechtigkeit"
+    },
+    {
+     "id": "qv-v2-08-07",
+     "level": 1,
+     "text": "Sozialkapital: Gesundheit wird in der alltäglichen Umwelt geschaffen und gelebt"
+    },
+    {
+     "id": "qv-v2-08-08",
+     "level": 0,
+     "text": "Nur in GPF"
+    },
+    {
+     "id": "qv-v2-08-09",
+     "level": 1,
+     "text": "bezieht sich auf die Salutogenese"
+    },
+    {
+     "id": "qv-v2-08-10",
+     "level": 1,
+     "text": "Strategie hinter Empowerment: ressourcenorientierte Gesundheitsförderung, Schlüsselressource Selbstwirksamkeit"
+    }
+   ]
+  },
+  {
+   "id": "qv-v2-09",
+   "subject": "Querverbindungen",
+   "title": "QV · Was ist eine Theorie – je nach Mappe?",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "qv-v2-09-01",
+     "level": 0,
+     "text": "Definitionen"
+    },
+    {
+     "id": "qv-v2-09-02",
+     "level": 1,
+     "text": "Quelle | Theorie ist …"
+    },
+    {
+     "id": "qv-v2-09-03",
+     "level": 1,
+     "text": "Meleis (TG1) | ?Bündel von Ideen oder erklärenden Vermutungen für einen speziellen Zweck, aus Konzepten"
+    },
+    {
+     "id": "qv-v2-09-04",
+     "level": 1,
+     "text": "Walker & Avant (TG2) | ?in sich konsistente Gruppe relationa­ler Thesen"
+    },
+    {
+     "id": "qv-v2-09-05",
+     "level": 1,
+     "text": "QF1 | ?systemati­sche, abstrakte Erklärung eines Aspekts der Wirk­lich­keit, Grundlage für Vorhersagen"
+    },
+    {
+     "id": "qv-v2-09-06",
+     "level": 1,
+     "text": "Popper (WT2) | ?hat immer nur den Status einer Hypothese – gilt, bis sie falsifi­ziert ist"
+    },
+    {
+     "id": "qv-v2-09-07",
+     "level": 0,
+     "text": "Gemeinsam: Theorie ist nicht die Wirklichkeit selbst – sie beschreibt, erklärt, sagt vorher"
+    },
+    {
+     "id": "qv-v2-09-08",
+     "level": 0,
+     "text": "Modell oder Theorie? Begriffe teils synonym, Abgrenzung schwierig (TG1)"
+    }
+   ]
+  },
+  {
+   "id": "qv-v2-10",
+   "subject": "Querverbindungen",
+   "title": "QV · Hypothese – was bedeutet sie in WA, QF, ST und WT?",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "qv-v2-10-01",
+     "level": 0,
+     "text": "Bedeutungen"
+    },
+    {
+     "id": "qv-v2-10-02",
+     "level": 1,
+     "text": "Mappe | Hypothese …"
+    },
+    {
+     "id": "qv-v2-10-03",
+     "level": 1,
+     "text": "WA1 | ?wis­sen­schaftli­che Vermutung, an der Realität zu prüfen; Aussage, keine Frage"
+    },
+    {
+     "id": "qv-v2-10-04",
+     "level": 1,
+     "text": "QF1 | ?Voraussage über die Beziehung zwischen den Variablen der For­schungs­frage"
+    },
+    {
+     "id": "qv-v2-10-05",
+     "level": 1,
+     "text": "ST4 | ?H₀: Effekt durch Zufall erklärbar; H₁: nicht durch Zufall erklärbar"
+    },
+    {
+     "id": "qv-v2-10-06",
+     "level": 1,
+     "text": "WT2 | ?wis­sen­schaftli­che Theorien haben immer nur den Status von Hypothesen"
+    },
+    {
+     "id": "qv-v2-10-07",
+     "level": 0,
+     "text": "Qualitativ werden Hypothesen entwickelt, quantitativ geprüft (WA1, WT2)"
+    },
+    {
+     "id": "qv-v2-10-08",
+     "level": 0,
+     "text": "Nicht verwechseln: These (Walker & Avant, TG2) = Vorschlag, Behauptung, Aussage – Baustein einer Theorie"
+    }
+   ]
+  },
+  {
+   "id": "qv-v2-11",
+   "subject": "Querverbindungen",
+   "title": "QV · Ursache oder nur Zusammenhang? Kausalität in QF, PH und ST",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "qv-v2-11-01",
+     "level": 0,
+     "text": "Lazarsfeld (QF2): Ursache zeitlich vorher, empirische Beziehung, keine Drittvariable"
+    },
+    {
+     "id": "qv-v2-11-02",
+     "level": 0,
+     "text": "Dieselbe Falle mit drei Namen"
+    },
+    {
+     "id": "qv-v2-11-03",
+     "level": 1,
+     "text": "Name (Mappe) | Beispiel"
+    },
+    {
+     "id": "qv-v2-11-04",
+     "level": 1,
+     "text": "Confounder (PH2) | ?Alkohol und Lun­genkarzi­nom – eigentlich Rauchen"
+    },
+    {
+     "id": "qv-v2-11-05",
+     "level": 1,
+     "text": "Störvaria­ble (ST5) | ?Eis und Sonnenbrand – eigentlich Son­nen­schein"
+    },
+    {
+     "id": "qv-v2-11-06",
+     "level": 1,
+     "text": "dritte Variable (QF2) | ?3. Kriterium nach Lazarsfeld"
+    },
+    {
+     "id": "qv-v2-11-07",
+     "level": 0,
+     "text": "Was hilft?"
+    },
+    {
+     "id": "qv-v2-11-08",
+     "level": 1,
+     "text": "nur Experimente belegen Ursache und Wirkung wirklich; Randomisierung verteilt Einflussvariablen gleich (QF2)"
+    },
+    {
+     "id": "qv-v2-11-09",
+     "level": 1,
+     "text": "Längsschnitt ist essenzielles Kriterium für Kausalität (QF2)"
+    },
+    {
+     "id": "qv-v2-11-10",
+     "level": 1,
+     "text": "uV und aV inhaltlich begründen – die Statistik allein kann das nicht (ST3, ST5)"
+    }
+   ]
+  },
+  {
+   "id": "qv-v2-12",
+   "subject": "Querverbindungen",
+   "title": "QV · Kohorte, Panel, Trend, Follow-up – Längsschnitt in PH und QF",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "qv-v2-12-01",
+     "level": 0,
+     "text": "Studienarten"
+    },
+    {
+     "id": "qv-v2-12-02",
+     "level": 1,
+     "text": "Studie (Mappe) | Merkmal"
+    },
+    {
+     "id": "qv-v2-12-03",
+     "level": 1,
+     "text": "Kohorte (PH2) | ?Gruppe mit gleichen Eigen­schaf­ten, exponiert vs. nicht exponiert, meist prospektiv, über Jahre"
+    },
+    {
+     "id": "qv-v2-12-04",
+     "level": 1,
+     "text": "Panel (QF2) | ?dieselben Teil­neh­men­den zu mehreren Zeitpunkten"
+    },
+    {
+     "id": "qv-v2-12-05",
+     "level": 1,
+     "text": "Trend (QF2) | ?ver­schie­dene Stichproben aus derselben Population"
+    },
+    {
+     "id": "qv-v2-12-06",
+     "level": 1,
+     "text": "Follow-up (QF2) | ?Status nach Erkrankung oder Inter­ven­tion"
+    },
+    {
+     "id": "qv-v2-12-07",
+     "level": 0,
+     "text": "Gemeinsames Problem: Teilnehmende gehen verloren"
+    },
+    {
+     "id": "qv-v2-12-08",
+     "level": 1,
+     "text": "PH2: Loss-to-follow-up, die Kohorte wird „gesünder\""
+    },
+    {
+     "id": "qv-v2-12-09",
+     "level": 1,
+     "text": "QF2: schwächt die Verallgemeinerbarkeit"
+    },
+    {
+     "id": "qv-v2-12-10",
+     "level": 0,
+     "text": "Beispiel: Nurses' Health Study (PH2) – Kohorte, Befragung alle zwei Jahre"
+    }
+   ]
+  },
+  {
+   "id": "qv-v2-13",
+   "subject": "Querverbindungen",
+   "title": "QV · Prospektiv oder retrospektiv – wo kommt was vor?",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "qv-v2-13-01",
+     "level": 0,
+     "text": "Prospektiv"
+    },
+    {
+     "id": "qv-v2-13-02",
+     "level": 1,
+     "text": "Aspekt | prospektiv"
+    },
+    {
+     "id": "qv-v2-13-03",
+     "level": 1,
+     "text": "Blick­rich­tung | ?nach vorn, Follow-ups in die Zukunft"
+    },
+    {
+     "id": "qv-v2-13-04",
+     "level": 1,
+     "text": "QF2 | ?Längs­schnittde­sign"
+    },
+    {
+     "id": "qv-v2-13-05",
+     "level": 1,
+     "text": "PH2 | ?Kohor­ten­stu­die (meist)"
+    },
+    {
+     "id": "qv-v2-13-06",
+     "level": 1,
+     "text": "Problem | ?Loss-to-follow-up"
+    },
+    {
+     "id": "qv-v2-13-07",
+     "level": 0,
+     "text": "Retrospektiv"
+    },
+    {
+     "id": "qv-v2-13-08",
+     "level": 1,
+     "text": "Aspekt | retro­spek­tiv"
+    },
+    {
+     "id": "qv-v2-13-09",
+     "level": 1,
+     "text": "Blick­rich­tung | ?zurück von heute, oft Daten aus Dokumenten"
+    },
+    {
+     "id": "qv-v2-13-10",
+     "level": 1,
+     "text": "QF2 | ?meist Quer­schnittstu­dien"
+    },
+    {
+     "id": "qv-v2-13-11",
+     "level": 1,
+     "text": "PH2 | ?Fall-Kontroll-Studie"
+    },
+    {
+     "id": "qv-v2-13-12",
+     "level": 1,
+     "text": "Problem | ?unter­schiedli­che Erinnerung (Erinne­rungs­bias)"
+    }
+   ]
+  },
+  {
+   "id": "qv-v2-14",
+   "subject": "Querverbindungen",
+   "title": "QV · Was verzerrt Studienergebnisse?",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "qv-v2-14-01",
+     "level": 0,
+     "text": "Verzerrungen aus mehreren Mappen"
+    },
+    {
+     "id": "qv-v2-14-02",
+     "level": 1,
+     "text": "Problem (Mappe) | was passiert"
+    },
+    {
+     "id": "qv-v2-14-03",
+     "level": 1,
+     "text": "Selekti­ons­bias (PH2) | ?Stichprobe nicht reprä­senta­tiv"
+    },
+    {
+     "id": "qv-v2-14-04",
+     "level": 1,
+     "text": "Erinne­rungs­bias (PH2) | ?Personen(gruppen) erinnern sich unter­schied­lich"
+    },
+    {
+     "id": "qv-v2-14-05",
+     "level": 1,
+     "text": "Untersu­chungs­bias (PH2) | ?Exponierte werden genauer untersucht"
+    },
+    {
+     "id": "qv-v2-14-06",
+     "level": 1,
+     "text": "Confounding (PH2) | ?Drittvaria­ble erzeugt einen Scheinzu­sam­men­hang"
+    },
+    {
+     "id": "qv-v2-14-07",
+     "level": 1,
+     "text": "Hawthorne-Effekt (QF2) | ?Wissen um die Teilnahme verändert das Verhalten"
+    },
+    {
+     "id": "qv-v2-14-08",
+     "level": 1,
+     "text": "Loss-to-follow-up (PH2, QF2) | ?Ausfälle verändern die Gruppe"
+    },
+    {
+     "id": "qv-v2-14-09",
+     "level": 0,
+     "text": "Gegenmittel"
+    },
+    {
+     "id": "qv-v2-14-10",
+     "level": 1,
+     "text": "Randomisierung (QF2), Zufallsstichprobe (ST1)"
+    },
+    {
+     "id": "qv-v2-14-11",
+     "level": 1,
+     "text": "Gütekriterien Objektivität, Reliabilität, Validität (WA1)"
+    }
+   ]
+  },
+  {
+   "id": "qv-v2-15",
+   "subject": "Querverbindungen",
+   "title": "QV · Qualitativ und quantitativ – das große Bild über alle Mappen",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "qv-v2-15-01",
+     "level": 0,
+     "text": "Qualitativ"
+    },
+    {
+     "id": "qv-v2-15-02",
+     "level": 1,
+     "text": "Aspekt | qualitativ"
+    },
+    {
+     "id": "qv-v2-15-03",
+     "level": 1,
+     "text": "Wurzeln (WT) | ?Phänomenolo­gie, Hermeneutik"
+    },
+    {
+     "id": "qv-v2-15-04",
+     "level": 1,
+     "text": "Paradigma (WT2) | ?inter­preta­tiv, theo­riegene­rie­rend"
+    },
+    {
+     "id": "qv-v2-15-05",
+     "level": 1,
+     "text": "Schluss und Daten | ?induktiv, narrativ"
+    },
+    {
+     "id": "qv-v2-15-06",
+     "level": 1,
+     "text": "Hypothesen (WA1) | ?werden entwickelt"
+    },
+    {
+     "id": "qv-v2-15-07",
+     "level": 1,
+     "text": "Beispiele | ?AT3: Metzing, Zegelin, Bosch (Grounded Theory)"
+    },
+    {
+     "id": "qv-v2-15-08",
+     "level": 0,
+     "text": "Quantitativ"
+    },
+    {
+     "id": "qv-v2-15-09",
+     "level": 1,
+     "text": "Aspekt | quantitativ"
+    },
+    {
+     "id": "qv-v2-15-10",
+     "level": 1,
+     "text": "Wurzeln (WT) | ?Kritischer Rationa­lis­mus"
+    },
+    {
+     "id": "qv-v2-15-11",
+     "level": 1,
+     "text": "Paradigma (WT2) | ?positi­vis­tisch, hypo­the­sen­tes­tend"
+    },
+    {
+     "id": "qv-v2-15-12",
+     "level": 1,
+     "text": "Schluss und Daten | ?deduktiv, numerisch"
+    },
+    {
+     "id": "qv-v2-15-13",
+     "level": 1,
+     "text": "Hypothesen (WA1) | ?werden geprüft"
+    },
+    {
+     "id": "qv-v2-15-14",
+     "level": 1,
+     "text": "Beispiele | ?QF: Experiment, Korrelation; PH: Kohorte, Fall-Kontrolle"
+    },
+    {
+     "id": "qv-v2-15-15",
+     "level": 0,
+     "text": "Kombination beider Zugänge ist möglich (WA1)"
+    }
+   ]
+  },
+  {
+   "id": "qv-v2-16",
+   "subject": "Querverbindungen",
+   "title": "QV · Die AT3-Studien – Beispiele qualitativer Forschung",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "qv-v2-16-01",
+     "level": 0,
+     "text": "Alle drei nutzen Grounded Theory: theoriegenerierend, induktiv (WT2)"
+    },
+    {
+     "id": "qv-v2-16-02",
+     "level": 0,
+     "text": "Daten"
+    },
+    {
+     "id": "qv-v2-16-03",
+     "level": 1,
+     "text": "Studie | Daten"
+    },
+    {
+     "id": "qv-v2-16-04",
+     "level": 1,
+     "text": "Metzing 2007, Young Carers | ?81 Interviews in 34 Familien"
+    },
+    {
+     "id": "qv-v2-16-05",
+     "level": 1,
+     "text": "Zegelin, Bettläge­rig­keit | ?32 Interviews"
+    },
+    {
+     "id": "qv-v2-16-06",
+     "level": 1,
+     "text": "Bosch 1998, Demenz | ?34 Bewohner:innen ein Jahr lang beobachtet"
+    },
+    {
+     "id": "qv-v2-16-07",
+     "level": 0,
+     "text": "Kinder als Expert:innen ihrer Lebenswelt = subjektives Erleben im Mittelpunkt (WT1)"
+    },
+    {
+     "id": "qv-v2-16-08",
+     "level": 0,
+     "text": "Forschungsethik: „Kinder, die ihre Eltern versorgen\" nennt WT1 ausdrücklich als vulnerable Gruppe"
+    }
+   ]
+  },
+  {
+   "id": "qv-v2-17",
+   "subject": "Querverbindungen",
+   "title": "QV · Selbstwirksamkeit – der rote Faden der Gesundheitspsychologie",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "qv-v2-17-01",
+     "level": 0,
+     "text": "Wo sie überall auftaucht"
+    },
+    {
+     "id": "qv-v2-17-02",
+     "level": 1,
+     "text": "Stelle | Rolle"
+    },
+    {
+     "id": "qv-v2-17-03",
+     "level": 1,
+     "text": "Bandura (GPF1) | ?Kern der sozial-kognitiven Theorie, 4 Quellen"
+    },
+    {
+     "id": "qv-v2-17-04",
+     "level": 1,
+     "text": "Protection Motivation Theory (GPF2) | ?Teil der Bewälti­gungs­ein­schät­zung"
+    },
+    {
+     "id": "qv-v2-17-05",
+     "level": 1,
+     "text": "Kritik am HBM (GPF2) | ?fehlt dort – Kompe­tenzer­war­tung nicht berück­sich­tigt"
+    },
+    {
+     "id": "qv-v2-17-06",
+     "level": 1,
+     "text": "Kritik am TTM (GPF2) | ?unklar, ob sie mit den Stadien steigt"
+    },
+    {
+     "id": "qv-v2-17-07",
+     "level": 1,
+     "text": "Stress (GPF3) | ?Kompe­tenzer­war­tung als persönliche Ressource"
+    },
+    {
+     "id": "qv-v2-17-08",
+     "level": 1,
+     "text": "Res­sour­cen­förde­rung (GPF4) | ?Schlüs­selres­source"
+    },
+    {
+     "id": "qv-v2-17-09",
+     "level": 0,
+     "text": "Verwandte Ideen: Kontrollierbarkeit (Theory of Planned Behavior), Bewältigbarkeit (Antonovsky)"
+    }
+   ]
+  },
+  {
+   "id": "qv-v2-18",
+   "subject": "Querverbindungen",
+   "title": "QV · Paradigma, Metaparadigma, Denkschule – nicht verwechseln",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "qv-v2-18-01",
+     "level": 0,
+     "text": "Paradigma = Weltbild (Kuhn, WT1); auch ein Grundbegriff bei Meleis (TG1)"
+    },
+    {
+     "id": "qv-v2-18-02",
+     "level": 1,
+     "text": "Paradigmenwechsel braucht laut Kuhn oft eine neue Generation"
+    },
+    {
+     "id": "qv-v2-18-03",
+     "level": 0,
+     "text": "Zwei Paradigmen der Pflegeforschung (WT2): quantitativ positivistisch, qualitativ interpretativ"
+    },
+    {
+     "id": "qv-v2-18-04",
+     "level": 0,
+     "text": "Old vs. New Public Health (PH1): Krankheitsparadigma vs. Gesundheitsparadigma"
+    },
+    {
+     "id": "qv-v2-18-05",
+     "level": 0,
+     "text": "Metaparadigma (Fawcett, TG2): Person, Umwelt, Gesundheit, Pflege – Geltungsbereich der Disziplin Pflege"
+    },
+    {
+     "id": "qv-v2-18-06",
+     "level": 0,
+     "text": "Denkschulen (Meleis, TG3): Bedürfnis, Interaktion, Ergebnis – Gruppen von Pflegetheoretikerinnen 1950 bis 1970"
+    }
+   ]
+  },
+  {
+   "id": "qv-v2-19",
+   "subject": "Querverbindungen",
+   "title": "QV · Konzept, Begriff, Modell – was heißt was wo?",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "qv-v2-19-01",
+     "level": 0,
+     "text": "Konzept und Begriff"
+    },
+    {
+     "id": "qv-v2-19-02",
+     "level": 1,
+     "text": "Konzept (Meleis, TG1): kleinster Baustein einer Theorie, beschreibt Phänomene"
+    },
+    {
+     "id": "qv-v2-19-03",
+     "level": 1,
+     "text": "Begriff (Walker & Avant, TG2): elementarster Baustein, geistiges Bild eines Phänomens"
+    },
+    {
+     "id": "qv-v2-19-04",
+     "level": 1,
+     "text": "Begriff (WA1): Wort oder Konstrukt, Ordnung durch Sprache, Basis für Hypothesen"
+    },
+    {
+     "id": "qv-v2-19-05",
+     "level": 1,
+     "text": "englisch „concept\" = Begriff – deshalb meinen beide oft dasselbe"
+    },
+    {
+     "id": "qv-v2-19-06",
+     "level": 0,
+     "text": "Modell"
+    },
+    {
+     "id": "qv-v2-19-07",
+     "level": 1,
+     "text": "TG1: vereinfachte Darstellung; Reduktion, Perspektiven, Übersichtlichkeit"
+    },
+    {
+     "id": "qv-v2-19-08",
+     "level": 1,
+     "text": "GPF2: Gesundheitsverhaltensmodelle – Prädiktions- oder Stadienmodelle, sollen Verhalten erklären"
+    }
+   ]
+  },
+  {
+   "id": "qv-v2-20",
+   "subject": "Querverbindungen",
+   "title": "QV · Phasen und Stadien – welches Modell hat wie viele?",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "qv-v2-20-01",
+     "level": 0,
+     "text": "Überblick"
+    },
+    {
+     "id": "qv-v2-20-02",
+     "level": 1,
+     "text": "Modell (Mappe) | Phasen: worum?"
+    },
+    {
+     "id": "qv-v2-20-03",
+     "level": 1,
+     "text": "Action Cycle (PH1) | ?4, Kreislauf: Gesund­heits­pro­bleme angehen"
+    },
+    {
+     "id": "qv-v2-20-04",
+     "level": 1,
+     "text": "Trans­theoreti­sches Modell (GPF2) | ?6 Stadien: Verhalten ändern"
+    },
+    {
+     "id": "qv-v2-20-05",
+     "level": 1,
+     "text": "Selye (GPF3) | ?3: Stressreak­tion – Alarm, Widerstand, Erschöpfung"
+    },
+    {
+     "id": "qv-v2-20-06",
+     "level": 1,
+     "text": "Tra­jektmo­dell (AT2) | ?9: Verlauf chronischer Krankheit"
+    },
+    {
+     "id": "qv-v2-20-07",
+     "level": 1,
+     "text": "Bewälti­gungs­han­deln (AT2) | ?6: Patient:innenrolle"
+    },
+    {
+     "id": "qv-v2-20-08",
+     "level": 1,
+     "text": "Illness Con­stella­tion (AT2) | ?4: Erkrankte und Angehörige"
+    },
+    {
+     "id": "qv-v2-20-09",
+     "level": 0,
+     "text": "Gemeinsam: nicht immer linear – Rückfälle (TTM), ständige Wechsel (Trajekt)"
+    }
+   ]
+  },
+  {
+   "id": "qv-v2-21",
+   "subject": "Querverbindungen",
+   "title": "QV · Prävention und Verhaltensmodelle – wie greifen PH und GPF ineinander?",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "qv-v2-21-01",
+     "level": 0,
+     "text": "Eigene Verknüpfung – hilft beim Einordnen"
+    },
+    {
+     "id": "qv-v2-21-02",
+     "level": 0,
+     "text": "Verhaltensprävention (PH3) setzt am Verhalten an"
+    },
+    {
+     "id": "qv-v2-21-03",
+     "level": 1,
+     "text": "GPF-Modelle erklären, wann Menschen ihr Verhalten ändern: HBM, TPB, TTM, sozial-kognitive Theorie"
+    },
+    {
+     "id": "qv-v2-21-04",
+     "level": 0,
+     "text": "Verhältnisprävention (PH3) verändert die Umwelt"
+    },
+    {
+     "id": "qv-v2-21-05",
+     "level": 1,
+     "text": "passt zum Setting-Ansatz der Ottawa-Charta (PH3)"
+    },
+    {
+     "id": "qv-v2-21-06",
+     "level": 0,
+     "text": "Health Belief Modell sagt Vorsorgeverhalten vorher (AT1) – z. B. Sonnenschutz (GPF4)"
+    },
+    {
+     "id": "qv-v2-21-07",
+     "level": 0,
+     "text": "Gesundheitsförderung als Prozess (Ottawa) braucht Ressourcenförderung (GPF4)"
+    }
+   ]
+  }
+ ]
+}

@@ -8,4256 +8,3781 @@
  ],
  "cards": [
   {
-   "id": "wa1-01",
+   "id": "wa1-v2-01",
    "subject": "Wissenschaftliches Arbeiten",
    "title": "WA1 · Welche Wissensquellen gibt es?",
    "status": "neu",
    "lines": [
     {
-     "id": "wa1-01-01",
+     "id": "wa1-v2-01-01",
      "level": 0,
-     "text": "Unstrukturierte Wissensquellen = Alltagswissen"
+     "text": "Unstrukturiert = Alltagswissen"
     },
     {
-     "id": "wa1-01-02",
+     "id": "wa1-v2-01-02",
      "level": 1,
      "text": "Intuition"
     },
     {
-     "id": "wa1-01-03",
+     "id": "wa1-v2-01-03",
      "level": 1,
-     "text": "Persönliche Erfahrung"
+     "text": "persönliche Erfahrung"
     },
     {
-     "id": "wa1-01-04",
+     "id": "wa1-v2-01-04",
      "level": 1,
      "text": "Versuch und Irrtum"
     },
     {
-     "id": "wa1-01-05",
+     "id": "wa1-v2-01-05",
      "level": 1,
      "text": "Tradition"
     },
     {
-     "id": "wa1-01-06",
+     "id": "wa1-v2-01-06",
      "level": 1,
      "text": "Expertenwissen"
     },
     {
-     "id": "wa1-01-07",
+     "id": "wa1-v2-01-07",
      "level": 0,
-     "text": "Strukturierte Wissensquellen = wissenschaftliches Wissen"
+     "text": "Strukturiert = wissenschaftliches Wissen"
     },
     {
-     "id": "wa1-01-08",
+     "id": "wa1-v2-01-08",
      "level": 1,
-     "text": "Logisches Denken"
+     "text": "logisches Denken"
     },
     {
-     "id": "wa1-01-09",
+     "id": "wa1-v2-01-09",
      "level": 1,
-     "text": "Wissenschaftliches Erforschen"
+     "text": "wissenschaftliches Erforschen"
+    },
+    {
+     "id": "wa1-v2-01-10",
+     "level": 0,
+     "text": "Merkhilfe Alltagswissen: „Ich probiere viel, traue Experten\" (Intuition, persönliche Erfahrung, Versuch und Irrtum, Tradition, Expertenwissen)"
     }
    ]
   },
   {
-   "id": "wa1-02",
+   "id": "wa1-v2-02",
    "subject": "Wissenschaftliches Arbeiten",
-   "title": "WA1 · Induktion vs. Deduktion",
+   "title": "WA1 · Was unterscheidet Induktion und Deduktion?",
    "status": "neu",
    "lines": [
     {
-     "id": "wa1-02-01",
+     "id": "wa1-v2-02-01",
      "level": 0,
      "text": "Induktion: vom Besonderen zum Allgemeinen"
     },
     {
-     "id": "wa1-02-02",
+     "id": "wa1-v2-02-02",
      "level": 1,
      "text": "Besonderes (Einzelbeobachtung) → Allgemeines (Theorie, Prinzip)"
     },
     {
-     "id": "wa1-02-03",
+     "id": "wa1-v2-02-03",
      "level": 0,
      "text": "Deduktion: vom Allgemeinen zum Besonderen"
     },
     {
-     "id": "wa1-02-04",
+     "id": "wa1-v2-02-04",
      "level": 1,
      "text": "Allgemeines (Theorie, Prinzip) → Besonderes (Einzelbeobachtung)"
     },
     {
-     "id": "wa1-02-05",
+     "id": "wa1-v2-02-05",
      "level": 0,
      "text": "Beides sind Formen des logischen Denkens (Mayer, 2022)"
     }
    ]
   },
   {
-   "id": "wa1-03",
+   "id": "wa1-v2-03",
    "subject": "Wissenschaftliches Arbeiten",
-   "title": "WA1 · Was bedeutet „Wissenschaft\"? (zwei Seiten)",
+   "title": "WA1 · Was bedeutet „Wissenschaft\" – und was ist die Aufgabe der Forschung?",
    "status": "neu",
    "lines": [
     {
-     "id": "wa1-03-01",
+     "id": "wa1-v2-03-01",
      "level": 0,
-     "text": "Als Tätigkeit"
+     "text": "Wissenschaft als Tätigkeit"
     },
     {
-     "id": "wa1-03-02",
+     "id": "wa1-v2-03-02",
      "level": 1,
      "text": "Gesamtheit aller Aktivitäten, die auf den Gewinn wissenschaftlicher Erkenntnis ausgerichtet sind"
     },
     {
-     "id": "wa1-03-03",
+     "id": "wa1-v2-03-03",
      "level": 1,
      "text": "Forschen, Theoriebildung"
     },
     {
-     "id": "wa1-03-04",
+     "id": "wa1-v2-03-04",
      "level": 0,
-     "text": "Als Wissensbestand"
+     "text": "Wissenschaft als Wissensbestand"
     },
     {
-     "id": "wa1-03-05",
+     "id": "wa1-v2-03-05",
      "level": 1,
      "text": "Gesamtheit aller wissenschaftlichen Erkenntnisse, die durch Lehre an ein Fachpublikum weitergegeben werden"
-    }
-   ]
-  },
-  {
-   "id": "wa1-04",
-   "subject": "Wissenschaftliches Arbeiten",
-   "title": "WA1 · Die drei Säulen der Wissenschaft",
-   "status": "neu",
-   "lines": [
-    {
-     "id": "wa1-04-01",
-     "level": 0,
-     "text": "Forschung"
     },
     {
-     "id": "wa1-04-02",
+     "id": "wa1-v2-03-06",
      "level": 0,
-     "text": "Theoriebildung"
+     "text": "Drei Säulen: Forschung, Theoriebildung, Lehre"
     },
     {
-     "id": "wa1-04-03",
+     "id": "wa1-v2-03-07",
      "level": 0,
-     "text": "Lehre"
-    }
-   ]
-  },
-  {
-   "id": "wa1-05",
-   "subject": "Wissenschaftliches Arbeiten",
-   "title": "WA1 · Alltagswissen vs. wissenschaftliches Wissen",
-   "status": "neu",
-   "lines": [
-    {
-     "id": "wa1-05-01",
-     "level": 0,
-     "text": "Alltagswissen | Wissenschaftliches Wissen"
+     "text": "Zentrale Aufgabe der Forschung: Wissensvermehrung"
     },
     {
-     "id": "wa1-05-02",
-     "level": 0,
-     "text": "nicht systematisiert | ?systematisiert"
-    },
-    {
-     "id": "wa1-05-03",
-     "level": 0,
-     "text": "nicht organisierte Erkenntnis | ?organisierte Erkenntnis"
-    },
-    {
-     "id": "wa1-05-04",
-     "level": 0,
-     "text": "routiniertes Handeln | ?reflektiert-methodisches Handeln"
-    },
-    {
-     "id": "wa1-05-05",
-     "level": 0,
-     "text": "Vermeidung von Zweifel | ?Systematisierung des Zweifels"
-    },
-    {
-     "id": "wa1-05-06",
-     "level": 0,
-     "text": "Sicherung des Erkannten | ?Zweifel am Erkannten"
-    },
-    {
-     "id": "wa1-05-07",
-     "level": 0,
-     "text": "Vermeidung von Alternativen | ?Aufdecken von und Suche nach Alternativen"
-    },
-    {
-     "id": "wa1-05-08",
-     "level": 0,
-     "text": "Konzentration auf eine Deutung | ?selbstverständliche Annahme von Mehrdeutigkeiten"
-    },
-    {
-     "id": "wa1-05-09",
-     "level": 0,
-     "text": "vor allem mündlich weitergegeben | ?vor allem schriftlich weitergegeben"
-    },
-    {
-     "id": "wa1-05-10",
-     "level": 0,
-     "text": "erfahrungsnahe Sprache | ?erfahrungsferne, abstrakte Sprache"
-    }
-   ]
-  },
-  {
-   "id": "wa1-06",
-   "subject": "Wissenschaftliches Arbeiten",
-   "title": "WA1 · Zentrale Aufgabe der Forschung",
-   "status": "neu",
-   "lines": [
-    {
-     "id": "wa1-06-01",
-     "level": 0,
-     "text": "Wissensvermehrung"
-    },
-    {
-     "id": "wa1-06-02",
+     "id": "wa1-v2-03-08",
      "level": 1,
      "text": "Entdecken von neuen, noch unbekannten Fakten"
     },
     {
-     "id": "wa1-06-03",
+     "id": "wa1-v2-03-09",
      "level": 1,
      "text": "Entdecken von unbekannten Beziehungen zwischen bereits bekannten Fakten"
     }
    ]
   },
   {
-   "id": "wa1-07",
+   "id": "wa1-v2-04",
    "subject": "Wissenschaftliches Arbeiten",
-   "title": "WA1 · Die 5 Phasen des Forschungsprozesses",
+   "title": "WA1 · Was unterscheidet Alltagswissen von wissenschaftlichem Wissen?",
    "status": "neu",
    "lines": [
     {
-     "id": "wa1-07-01",
+     "id": "wa1-v2-04-01",
      "level": 0,
-     "text": "Atteslander: Problembenennung → Gegenstandsbenennung → Auswahl & Anwendung der Forschungsmethode → Analyse & Auswertung → Verwendung von Ergebnissen"
+     "text": "Gegenüberstellung"
+    },
+    {
+     "id": "wa1-v2-04-02",
+     "level": 1,
+     "text": "All­tags­wis­sen | Wis­sen­schaftli­ches Wissen"
+    },
+    {
+     "id": "wa1-v2-04-03",
+     "level": 1,
+     "text": "nicht systemati­siert | ?systemati­siert"
+    },
+    {
+     "id": "wa1-v2-04-04",
+     "level": 1,
+     "text": "nicht organi­sierte Erkenntnis | ?organi­sierte Erkenntnis"
+    },
+    {
+     "id": "wa1-v2-04-05",
+     "level": 1,
+     "text": "routi­nier­tes Handeln | ?reflektiert-methodi­sches Handeln"
+    },
+    {
+     "id": "wa1-v2-04-06",
+     "level": 1,
+     "text": "Vermeidung von Zweifel | ?Systemati­sie­rung des Zweifels"
+    },
+    {
+     "id": "wa1-v2-04-07",
+     "level": 1,
+     "text": "Sicherung des Erkannten | ?Zweifel am Erkannten"
+    },
+    {
+     "id": "wa1-v2-04-08",
+     "level": 1,
+     "text": "Vermeidung von Alternati­ven | ?Aufdecken von und Suche nach Alternati­ven"
+    },
+    {
+     "id": "wa1-v2-04-09",
+     "level": 1,
+     "text": "Kon­zen­tra­tion auf eine Deutung | ?selbst­ver­ständli­che Annahme von Mehr­deu­tig­kei­ten"
+    },
+    {
+     "id": "wa1-v2-04-10",
+     "level": 1,
+     "text": "vor allem mündlich wei­tergege­ben | ?vor allem schriftlich wei­tergege­ben"
+    },
+    {
+     "id": "wa1-v2-04-11",
+     "level": 1,
+     "text": "erfah­rungs­nahe Sprache | ?erfah­rungs­ferne, abstrakte Sprache"
+    },
+    {
+     "id": "wa1-v2-04-12",
+     "level": 0,
+     "text": "Merkhilfe: Alltag vermeidet Zweifel – Wissenschaft organisiert ihn"
     }
    ]
   },
   {
-   "id": "wa1-08",
+   "id": "wa1-v2-05",
    "subject": "Wissenschaftliches Arbeiten",
-   "title": "WA1 · Phase 1 – Problembenennung",
+   "title": "WA1 · Welche 5 Phasen hat der Forschungsprozess nach Atteslander?",
    "status": "neu",
    "lines": [
     {
-     "id": "wa1-08-01",
+     "id": "wa1-v2-05-01",
+     "level": 0,
+     "text": "Problembenennung → Gegenstandsbenennung → Auswahl & Anwendung der Forschungsmethode → Analyse & Auswertung → Verwendung von Ergebnissen"
+    },
+    {
+     "id": "wa1-v2-05-02",
+     "level": 0,
+     "text": "Merkhilfe: Problem – Gegenstand – Methode – Auswertung – Verwendung"
+    }
+   ]
+  },
+  {
+   "id": "wa1-v2-06",
+   "subject": "Wissenschaftliches Arbeiten",
+   "title": "WA1 · Phase 1: Was gehört zur Problembenennung?",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "wa1-v2-06-01",
      "level": 0,
      "text": "Forschungsproblem"
     },
     {
-     "id": "wa1-08-02",
+     "id": "wa1-v2-06-02",
      "level": 1,
-     "text": "Präzise Abgrenzung des Problems"
+     "text": "präzise Abgrenzung des Problems"
     },
     {
-     "id": "wa1-08-03",
+     "id": "wa1-v2-06-03",
      "level": 1,
      "text": "Nachweis der Erklärungsbedürftigkeit"
     },
     {
-     "id": "wa1-08-04",
+     "id": "wa1-v2-06-04",
      "level": 1,
      "text": "Bedarf einer empirischen Untersuchung"
     },
     {
-     "id": "wa1-08-05",
+     "id": "wa1-v2-06-05",
      "level": 0,
      "text": "Forschungsproblem → Forschungsfrage(n)"
     }
    ]
   },
   {
-   "id": "wa1-09",
+   "id": "wa1-v2-07",
    "subject": "Wissenschaftliches Arbeiten",
-   "title": "WA1 · Phase 2 – Gegenstandsbenennung",
+   "title": "WA1 · Phase 2: Was gehört zur Gegenstandsbenennung?",
    "status": "neu",
    "lines": [
     {
-     "id": "wa1-09-01",
+     "id": "wa1-v2-07-01",
      "level": 0,
      "text": "Systematische Erfassung"
     },
     {
-     "id": "wa1-09-02",
+     "id": "wa1-v2-07-02",
      "level": 1,
      "text": "Definition von Begriffen"
     },
     {
-     "id": "wa1-09-03",
+     "id": "wa1-v2-07-03",
      "level": 1,
      "text": "Ordnung (Klassifikationen, Typologien)"
     },
     {
-     "id": "wa1-09-04",
+     "id": "wa1-v2-07-04",
      "level": 1,
-     "text": "Theoretischer Bezug"
+     "text": "theoretischer Bezug"
     },
     {
-     "id": "wa1-09-05",
+     "id": "wa1-v2-07-05",
      "level": 0,
      "text": "Klare Eingrenzung"
     },
     {
-     "id": "wa1-09-06",
+     "id": "wa1-v2-07-06",
      "level": 1,
      "text": "Zeit"
     },
     {
-     "id": "wa1-09-07",
+     "id": "wa1-v2-07-07",
      "level": 1,
      "text": "Ressourcen"
     },
     {
-     "id": "wa1-09-08",
+     "id": "wa1-v2-07-08",
      "level": 1,
      "text": "Gegenstandsbereich"
     },
     {
-     "id": "wa1-09-09",
+     "id": "wa1-v2-07-09",
      "level": 1,
      "text": "Zugang zum Forschungsgegenstand"
     }
    ]
   },
   {
-   "id": "wa1-10",
+   "id": "wa1-v2-08",
    "subject": "Wissenschaftliches Arbeiten",
-   "title": "WA1 · Begriffsdefinitionen – was sollen Begriffe leisten?",
+   "title": "WA1 · Was sollen Begriffe in der Wissenschaft leisten?",
    "status": "neu",
    "lines": [
     {
-     "id": "wa1-10-01",
+     "id": "wa1-v2-08-01",
      "level": 0,
      "text": "Begriff = Wort oder ein aus Wörtern bestehendes Konstrukt"
     },
     {
-     "id": "wa1-10-02",
+     "id": "wa1-v2-08-02",
      "level": 0,
-     "text": "Begriffe …"
+     "text": "Ermöglichen Ordnung durch Sprache und prägen die Aussagen der Wissenschaft"
     },
     {
-     "id": "wa1-10-03",
-     "level": 1,
-     "text": "ermöglichen Ordnung durch Sprache"
+     "id": "wa1-v2-08-03",
+     "level": 0,
+     "text": "Sollen eindeutig nachvollziehbar sein"
     },
     {
-     "id": "wa1-10-04",
-     "level": 1,
-     "text": "sollen eindeutig nachvollziehbar sein"
+     "id": "wa1-v2-08-04",
+     "level": 0,
+     "text": "Sollen theoretisch sinnvoll und empirisch praktikabel sein"
     },
     {
-     "id": "wa1-10-05",
-     "level": 1,
-     "text": "prägen die Aussagen der Wissenschaft"
-    },
-    {
-     "id": "wa1-10-06",
-     "level": 1,
-     "text": "sollen theoretisch sinnvoll und empirisch praktikabel sein"
-    },
-    {
-     "id": "wa1-10-07",
-     "level": 1,
-     "text": "bilden die Basis für das Formulieren von Hypothesen"
+     "id": "wa1-v2-08-05",
+     "level": 0,
+     "text": "Bilden die Basis für das Formulieren von Hypothesen"
     }
    ]
   },
   {
-   "id": "wa1-11",
+   "id": "wa1-v2-09",
    "subject": "Wissenschaftliches Arbeiten",
-   "title": "WA1 · Was sind Forschungshypothesen?",
+   "title": "WA1 · Was ist eine Forschungshypothese – und was muss sie erfüllen?",
    "status": "neu",
    "lines": [
     {
-     "id": "wa1-11-01",
+     "id": "wa1-v2-09-01",
      "level": 0,
-     "text": "Wissenschaftliche Vermutungen über die Realität – mit dem Ziel, an ihr geprüft zu werden"
+     "text": "Wissenschaftliche Vermutung über die Realität – mit dem Ziel, an ihr geprüft zu werden"
     },
     {
-     "id": "wa1-11-02",
-     "level": 0,
-     "text": "Aussagen bzw. Prognosen über ein erwartetes Ergebnis"
-    },
-    {
-     "id": "wa1-11-03",
+     "id": "wa1-v2-09-02",
      "level": 1,
-     "text": "keine Fragen, keine Befehle"
+     "text": "Aussage bzw. Prognose über ein erwartetes Ergebnis, keine Frage, kein Befehl"
     },
     {
-     "id": "wa1-11-04",
+     "id": "wa1-v2-09-03",
      "level": 0,
-     "text": "Brauchen eine exakte Definition der verwendeten Begriffe"
+     "text": "Muss empirisch überprüfbar sein"
     },
     {
-     "id": "wa1-11-05",
+     "id": "wa1-v2-09-04",
      "level": 0,
-     "text": "Leiten sich ab aus"
+     "text": "Alle verwendeten Begriffe eindeutig definiert"
     },
     {
-     "id": "wa1-11-06",
+     "id": "wa1-v2-09-05",
+     "level": 1,
+     "text": "theoretisch sinnvoll"
+    },
+    {
+     "id": "wa1-v2-09-06",
+     "level": 1,
+     "text": "empirisch praktikabel"
+    },
+    {
+     "id": "wa1-v2-09-07",
+     "level": 0,
+     "text": "Leitet sich ab aus"
+    },
+    {
+     "id": "wa1-v2-09-08",
      "level": 1,
      "text": "Forschungsproblem"
     },
     {
-     "id": "wa1-11-07",
+     "id": "wa1-v2-09-09",
      "level": 1,
      "text": "Forschungsfrage"
     },
     {
-     "id": "wa1-11-08",
+     "id": "wa1-v2-09-10",
      "level": 1,
      "text": "Literaturrecherche"
     },
     {
-     "id": "wa1-11-09",
+     "id": "wa1-v2-09-11",
      "level": 1,
      "text": "theoretischem Bezugsrahmen"
     },
     {
-     "id": "wa1-11-10",
+     "id": "wa1-v2-09-12",
      "level": 0,
      "text": "Klar, einfach, prägnant und widerspruchsfrei"
     }
    ]
   },
   {
-   "id": "wa1-12",
+   "id": "wa1-v2-10",
    "subject": "Wissenschaftliches Arbeiten",
-   "title": "WA1 · Hypothesen in quantitativer vs. qualitativer Forschung",
+   "title": "WA1 · Welche Rolle spielen Hypothesen in quantitativer und qualitativer Forschung?",
    "status": "neu",
    "lines": [
     {
-     "id": "wa1-12-01",
+     "id": "wa1-v2-10-01",
      "level": 0,
-     "text": "Quantitative Forschung | Qualitative Forschung"
+     "text": "Gegenüberstellung"
     },
     {
-     "id": "wa1-12-02",
-     "level": 0,
-     "text": "Hypothesen nach der Problembenennung formulieren | ?keine Hypothesen nach der Problembenennung"
+     "id": "wa1-v2-10-02",
+     "level": 1,
+     "text": "Quantita­tive Forschung | Qualitative Forschung"
     },
     {
-     "id": "wa1-12-03",
-     "level": 0,
-     "text": "Hypothesenprüfung als Forschungsziel | ?Hypothesenentwicklung als Forschungsziel"
+     "id": "wa1-v2-10-03",
+     "level": 1,
+     "text": "Hypothesen nach der Pro­blembe­nen­nung formulieren | ?keine Hypothesen nach der Pro­blembe­nen­nung"
     },
     {
-     "id": "wa1-12-04",
+     "id": "wa1-v2-10-04",
+     "level": 1,
+     "text": "Hypo­the­sen­prü­fung als For­schungs­ziel | ?Hypo­the­sen­ent­wick­lung als For­schungs­ziel"
+    },
+    {
+     "id": "wa1-v2-10-05",
      "level": 0,
+     "text": "Abläufe"
+    },
+    {
+     "id": "wa1-v2-10-06",
+     "level": 1,
      "text": "Quantitativ: Forschungsproblem → Forschungsfrage(n) → Forschungshypothese(n)"
     },
     {
-     "id": "wa1-12-05",
-     "level": 0,
+     "id": "wa1-v2-10-07",
+     "level": 1,
      "text": "Qualitativ: Forschungsproblem → Forschungsfrage(n)"
     },
     {
-     "id": "wa1-12-06",
+     "id": "wa1-v2-10-08",
      "level": 0,
      "text": "Mögliche Forschungsziele"
     },
     {
-     "id": "wa1-12-07",
+     "id": "wa1-v2-10-09",
      "level": 1,
      "text": "Beantwortung von Forschungsfrage(n)"
     },
     {
-     "id": "wa1-12-08",
+     "id": "wa1-v2-10-10",
      "level": 1,
      "text": "Überprüfung von Hypothese(n)"
     },
     {
-     "id": "wa1-12-09",
+     "id": "wa1-v2-10-11",
      "level": 1,
      "text": "Hypothesengenerierung"
     }
    ]
   },
   {
-   "id": "wa1-13",
+   "id": "wa1-v2-11",
    "subject": "Wissenschaftliches Arbeiten",
-   "title": "WA1 · Phase 3 – Was bestimmt die Wahl der Forschungsmethode?",
+   "title": "WA1 · Phase 3: Was bestimmt die Wahl der Forschungsmethode?",
    "status": "neu",
    "lines": [
     {
-     "id": "wa1-13-01",
+     "id": "wa1-v2-11-01",
      "level": 0,
+     "text": "Inhalt"
+    },
+    {
+     "id": "wa1-v2-11-02",
+     "level": 1,
      "text": "Fragestellung"
     },
     {
-     "id": "wa1-13-02",
-     "level": 0,
+     "id": "wa1-v2-11-03",
+     "level": 1,
      "text": "Hypothese"
     },
     {
-     "id": "wa1-13-03",
-     "level": 0,
+     "id": "wa1-v2-11-04",
+     "level": 1,
      "text": "Forschungsziel"
     },
     {
-     "id": "wa1-13-04",
+     "id": "wa1-v2-11-05",
      "level": 0,
+     "text": "Rahmen"
+    },
+    {
+     "id": "wa1-v2-11-06",
+     "level": 1,
      "text": "Stichprobe"
     },
     {
-     "id": "wa1-13-05",
-     "level": 0,
+     "id": "wa1-v2-11-07",
+     "level": 1,
      "text": "Erlaubnisse"
     },
     {
-     "id": "wa1-13-06",
-     "level": 0,
-     "text": "Ethische Aspekte"
+     "id": "wa1-v2-11-08",
+     "level": 1,
+     "text": "ethische Aspekte"
     },
     {
-     "id": "wa1-13-07",
-     "level": 0,
-     "text": "Finanzielle und personelle Ressourcen"
+     "id": "wa1-v2-11-09",
+     "level": 1,
+     "text": "finanzielle und personelle Ressourcen"
     }
    ]
   },
   {
-   "id": "wa1-14",
+   "id": "wa1-v2-12",
    "subject": "Wissenschaftliches Arbeiten",
-   "title": "WA1 · Phase 3 – Forschungsmethoden",
+   "title": "WA1 · Phase 3: Welche Forschungsmethoden gibt es?",
    "status": "neu",
    "lines": [
     {
-     "id": "wa1-14-01",
+     "id": "wa1-v2-12-01",
      "level": 0,
      "text": "Drei Zugänge"
     },
     {
-     "id": "wa1-14-02",
+     "id": "wa1-v2-12-02",
      "level": 1,
-     "text": "Quantitative Forschungsmethode"
+     "text": "quantitative Forschungsmethode"
     },
     {
-     "id": "wa1-14-03",
+     "id": "wa1-v2-12-03",
      "level": 1,
-     "text": "Qualitative Forschungsmethode"
+     "text": "qualitative Forschungsmethode"
     },
     {
-     "id": "wa1-14-04",
+     "id": "wa1-v2-12-04",
      "level": 1,
      "text": "Kombination von quantitativer und qualitativer Methode"
     },
     {
-     "id": "wa1-14-05",
+     "id": "wa1-v2-12-05",
      "level": 0,
      "text": "Methoden (in allen drei Zugängen möglich)"
     },
     {
-     "id": "wa1-14-06",
+     "id": "wa1-v2-12-06",
      "level": 1,
      "text": "Beobachtung"
     },
     {
-     "id": "wa1-14-07",
+     "id": "wa1-v2-12-07",
      "level": 1,
      "text": "Befragung"
     },
     {
-     "id": "wa1-14-08",
+     "id": "wa1-v2-12-08",
      "level": 1,
      "text": "Artefaktanalyse"
     },
     {
-     "id": "wa1-14-09",
+     "id": "wa1-v2-12-09",
      "level": 1,
      "text": "Experiment"
     },
     {
-     "id": "wa1-14-10",
+     "id": "wa1-v2-12-10",
      "level": 1,
      "text": "Inhaltsanalyse"
     }
    ]
   },
   {
-   "id": "wa1-15",
+   "id": "wa1-v2-13",
    "subject": "Wissenschaftliches Arbeiten",
-   "title": "WA1 · Wissenschaftliches Arbeiten als Prozess",
+   "title": "WA1 · Wie läuft wissenschaftliches Arbeiten als Prozess ab?",
    "status": "neu",
    "lines": [
     {
-     "id": "wa1-15-01",
+     "id": "wa1-v2-13-01",
      "level": 0,
      "text": "Ausgangspunkt → Weg → Ergebnis"
     },
     {
-     "id": "wa1-15-02",
+     "id": "wa1-v2-13-02",
      "level": 0,
      "text": "Spezifisches Problem → Anwendung wissenschaftlicher Verfahren und Techniken → Lösung des Problems, festgehalten in einer wissenschaftlichen Arbeit"
     }
    ]
   },
   {
-   "id": "wa1-16",
+   "id": "wa1-v2-14",
    "subject": "Wissenschaftliches Arbeiten",
-   "title": "WA1 · Die 7 Schritte wissenschaftlichen Arbeitens",
+   "title": "WA1 · Welche 7 Schritte hat wissenschaftliches Arbeiten?",
    "status": "neu",
    "lines": [
     {
-     "id": "wa1-16-01",
+     "id": "wa1-v2-14-01",
      "level": 0,
-     "text": "1. Problembereich erfassen"
+     "text": "Die Schritte"
     },
     {
-     "id": "wa1-16-02",
-     "level": 0,
-     "text": "2. Forschungsfrage bzw. Hypothese formulieren"
+     "id": "wa1-v2-14-02",
+     "level": 1,
+     "text": "Nr. | Schritt"
     },
     {
-     "id": "wa1-16-03",
-     "level": 0,
-     "text": "3. Kritische Literaturrecherche"
+     "id": "wa1-v2-14-03",
+     "level": 1,
+     "text": "1 | ?Pro­blembe­reich erfassen"
     },
     {
-     "id": "wa1-16-04",
-     "level": 0,
-     "text": "4. Gliederung der Arbeit"
+     "id": "wa1-v2-14-04",
+     "level": 1,
+     "text": "2 | ?For­schungs­frage bzw. Hypothese formulieren"
     },
     {
-     "id": "wa1-16-05",
-     "level": 0,
-     "text": "5. Gegebenenfalls Anwendung empirischer Forschungsmethoden"
+     "id": "wa1-v2-14-05",
+     "level": 1,
+     "text": "3 | ?kritische Litera­turre­cher­che"
     },
     {
-     "id": "wa1-16-06",
-     "level": 0,
-     "text": "6. Schreiben der wissenschaftlichen Arbeit"
+     "id": "wa1-v2-14-06",
+     "level": 1,
+     "text": "4 | ?Gliederung der Arbeit"
     },
     {
-     "id": "wa1-16-07",
+     "id": "wa1-v2-14-07",
+     "level": 1,
+     "text": "5 | ?gegebe­nen­falls Anwendung empirischer For­schungsme­tho­den"
+    },
+    {
+     "id": "wa1-v2-14-08",
+     "level": 1,
+     "text": "6 | ?Schreiben der wis­sen­schaftli­chen Arbeit"
+    },
+    {
+     "id": "wa1-v2-14-09",
+     "level": 1,
+     "text": "7 | ?Überar­bei­tung und Endre­dak­tion"
+    },
+    {
+     "id": "wa1-v2-14-10",
      "level": 0,
-     "text": "7. Überarbeitung und Endredaktion"
+     "text": "Merkhilfe: Problem, Frage, Lesen, Gliedern, (Forschen), Schreiben, Überarbeiten"
     }
    ]
   },
   {
-   "id": "wa1-17",
+   "id": "wa1-v2-15",
    "subject": "Wissenschaftliches Arbeiten",
-   "title": "WA1 · Wissenschaftliche Anforderungskriterien",
+   "title": "WA1 · Welche wissenschaftlichen Anforderungskriterien gibt es?",
    "status": "neu",
    "lines": [
     {
-     "id": "wa1-17-01",
+     "id": "wa1-v2-15-01",
      "level": 0,
      "text": "Einhaltung wissenschaftlicher Richtlinien"
     },
     {
-     "id": "wa1-17-02",
+     "id": "wa1-v2-15-02",
      "level": 1,
      "text": "moralische Ansprüche"
     },
     {
-     "id": "wa1-17-03",
+     "id": "wa1-v2-15-03",
      "level": 1,
      "text": "formale Ansprüche"
     },
     {
-     "id": "wa1-17-04",
+     "id": "wa1-v2-15-04",
      "level": 0,
      "text": "Theoretisches Grundwissen"
     },
     {
-     "id": "wa1-17-05",
+     "id": "wa1-v2-15-05",
      "level": 0,
-     "text": "Kritische Literaturrecherche"
+     "text": "Kritische Literaturrecherche und korrekte Terminologie"
     },
     {
-     "id": "wa1-17-06",
-     "level": 0,
-     "text": "Verwendung korrekter Terminologie"
-    },
-    {
-     "id": "wa1-17-07",
+     "id": "wa1-v2-15-06",
      "level": 0,
      "text": "Richtiges Anwenden empirischer Forschungsmethoden"
     },
     {
-     "id": "wa1-17-08",
+     "id": "wa1-v2-15-07",
      "level": 1,
      "text": "Objektivität"
     },
     {
-     "id": "wa1-17-09",
+     "id": "wa1-v2-15-08",
      "level": 1,
      "text": "Reliabilität"
     },
     {
-     "id": "wa1-17-10",
+     "id": "wa1-v2-15-09",
      "level": 1,
      "text": "Validität"
+    },
+    {
+     "id": "wa1-v2-15-10",
+     "level": 0,
+     "text": "Merkhilfe Gütekriterien: „ORV\" – Objektivität, Reliabilität, Validität"
     }
    ]
   },
   {
-   "id": "wa1-18",
+   "id": "wa1-v2-16",
    "subject": "Wissenschaftliches Arbeiten",
-   "title": "WA1 · Arten wissenschaftlicher Arbeiten",
+   "title": "WA1 · Welche Arten wissenschaftlicher Arbeiten gibt es?",
    "status": "neu",
    "lines": [
     {
-     "id": "wa1-18-01",
+     "id": "wa1-v2-16-01",
      "level": 0,
+     "text": "Im Studium, aufsteigend"
+    },
+    {
+     "id": "wa1-v2-16-02",
+     "level": 1,
      "text": "Thesenpapier"
     },
     {
-     "id": "wa1-18-02",
-     "level": 0,
+     "id": "wa1-v2-16-03",
+     "level": 1,
      "text": "Haus- und Proseminararbeit / Essay"
     },
     {
-     "id": "wa1-18-03",
-     "level": 0,
+     "id": "wa1-v2-16-04",
+     "level": 1,
      "text": "Seminararbeit und Referat"
     },
     {
-     "id": "wa1-18-04",
-     "level": 0,
+     "id": "wa1-v2-16-05",
+     "level": 1,
      "text": "Bakkalaureatsarbeit"
     },
     {
-     "id": "wa1-18-05",
+     "id": "wa1-v2-16-06",
      "level": 0,
+     "text": "Abschlussarbeiten"
+    },
+    {
+     "id": "wa1-v2-16-07",
+     "level": 1,
      "text": "Diplom-, Magister-, Masterarbeit"
     },
     {
-     "id": "wa1-18-06",
-     "level": 0,
+     "id": "wa1-v2-16-08",
+     "level": 1,
      "text": "Doktorarbeit (Dissertation)"
     },
     {
-     "id": "wa1-18-07",
-     "level": 0,
+     "id": "wa1-v2-16-09",
+     "level": 1,
      "text": "Habilitationsschrift"
     },
     {
-     "id": "wa1-18-08",
+     "id": "wa1-v2-16-10",
      "level": 0,
      "text": "Weitere"
     },
     {
-     "id": "wa1-18-09",
+     "id": "wa1-v2-16-11",
      "level": 1,
      "text": "Monografien, wissenschaftliche Zeitschriftenartikel, Lehrbücher"
     },
     {
-     "id": "wa1-18-10",
+     "id": "wa1-v2-16-12",
      "level": 1,
      "text": "Förderanträge, Forschungsberichte, Gutachten"
     }
    ]
   },
   {
-   "id": "wa2-01",
+   "id": "wa2-v2-01",
    "subject": "Wissenschaftliches Arbeiten",
-   "title": "WA2 · Vorgegebene vs. selbstgewählte Themen",
+   "title": "WA2 · Vorgegebenes oder selbstgewähltes Thema – worauf achten?",
    "status": "neu",
    "lines": [
     {
-     "id": "wa2-01-01",
+     "id": "wa2-v2-01-01",
      "level": 0,
      "text": "Vorgegebene Themen"
     },
     {
-     "id": "wa2-01-02",
+     "id": "wa2-v2-01-02",
      "level": 1,
-     "text": "Eigene Interessen nur im Rahmen der Vorgabe"
+     "text": "eigene Interessen nur im Rahmen der Vorgabe"
     },
     {
-     "id": "wa2-01-03",
+     "id": "wa2-v2-01-03",
      "level": 1,
-     "text": "Genaue Analyse der Themenvorgabe"
+     "text": "genaue Analyse der Themenvorgabe"
     },
     {
-     "id": "wa2-01-04",
+     "id": "wa2-v2-01-04",
      "level": 0,
      "text": "Selbstgewählte Themen"
     },
     {
-     "id": "wa2-01-05",
+     "id": "wa2-v2-01-05",
      "level": 1,
-     "text": "Äußerste Sorgfalt bei Auswahl, Eingrenzung und Formulierung"
+     "text": "äußerste Sorgfalt bei Auswahl, Eingrenzung und Formulierung"
     }
    ]
   },
   {
-   "id": "wa2-02",
+   "id": "wa2-v2-02",
    "subject": "Wissenschaftliches Arbeiten",
    "title": "WA2 · Woher kommen Themenideen? (Ideenliste)",
    "status": "neu",
    "lines": [
     {
-     "id": "wa2-02-01",
+     "id": "wa2-v2-02-01",
      "level": 0,
-     "text": "Situationen in der Praxis"
+     "text": "Aus dem Studium"
     },
     {
-     "id": "wa2-02-02",
-     "level": 0,
+     "id": "wa2-v2-02-02",
+     "level": 1,
      "text": "Ideen aus Lehrveranstaltungen"
     },
     {
-     "id": "wa2-02-03",
-     "level": 0,
+     "id": "wa2-v2-02-03",
+     "level": 1,
      "text": "Gespräche mit Studienkolleg:innen"
     },
     {
-     "id": "wa2-02-04",
-     "level": 0,
-     "text": "Interessante Artikel aus der Fachliteratur"
+     "id": "wa2-v2-02-04",
+     "level": 1,
+     "text": "interessante Artikel aus der Fachliteratur"
     },
     {
-     "id": "wa2-02-05",
+     "id": "wa2-v2-02-05",
      "level": 0,
+     "text": "Aus Praxis und Alltag"
+    },
+    {
+     "id": "wa2-v2-02-06",
+     "level": 1,
+     "text": "Situationen in der Praxis"
+    },
+    {
+     "id": "wa2-v2-02-07",
+     "level": 1,
+     "text": "persönliche Interessensgebiete"
+    },
+    {
+     "id": "wa2-v2-02-08",
+     "level": 1,
      "text": "Beiträge aus Radio, Fernsehen, Internet"
     },
     {
-     "id": "wa2-02-06",
+     "id": "wa2-v2-02-09",
      "level": 0,
-     "text": "Persönliche Interessensgebiete"
+     "text": "Von außen"
     },
     {
-     "id": "wa2-02-07",
-     "level": 0,
+     "id": "wa2-v2-02-10",
+     "level": 1,
      "text": "Forschungsaufträge"
     },
     {
-     "id": "wa2-02-08",
-     "level": 0,
+     "id": "wa2-v2-02-11",
+     "level": 1,
      "text": "Angebote von Firmen und Organisationen"
     }
    ]
   },
   {
-   "id": "wa2-03",
+   "id": "wa2-v2-03",
    "subject": "Wissenschaftliches Arbeiten",
-   "title": "WA2 · Themenfindung: Free Writing & Brainstorming",
+   "title": "WA2 · Wie funktionieren Free Writing und Brainstorming?",
    "status": "neu",
    "lines": [
     {
-     "id": "wa2-03-01",
+     "id": "wa2-v2-03-01",
      "level": 0,
      "text": "Free Writing"
     },
     {
-     "id": "wa2-03-02",
+     "id": "wa2-v2-03-02",
      "level": 1,
-     "text": "An ein Thema denken und 5–10 Minuten alles aufschreiben, was in den Kopf kommt"
+     "text": "an ein Thema denken und 5–10 Minuten alles aufschreiben, was in den Kopf kommt"
     },
     {
-     "id": "wa2-03-03",
+     "id": "wa2-v2-03-03",
      "level": 1,
-     "text": "Erst aufhören, wenn die Zeit abgelaufen ist"
+     "text": "erst aufhören, wenn die Zeit abgelaufen ist"
     },
     {
-     "id": "wa2-03-04",
+     "id": "wa2-v2-03-04",
      "level": 1,
-     "text": "Danach: Geschriebenes analysieren und ordnen"
+     "text": "danach: Geschriebenes analysieren und ordnen"
     },
     {
-     "id": "wa2-03-05",
+     "id": "wa2-v2-03-05",
      "level": 0,
      "text": "Brainstorming (einzeln oder in der Gruppe)"
     },
     {
-     "id": "wa2-03-06",
+     "id": "wa2-v2-03-06",
      "level": 1,
      "text": "Gedanken unzensiert fließen lassen"
     },
     {
-     "id": "wa2-03-07",
+     "id": "wa2-v2-03-07",
      "level": 1,
      "text": "5–10 Minuten eine Liste aller Ideen, stichwortartig oder in Phrasen"
     },
     {
-     "id": "wa2-03-08",
+     "id": "wa2-v2-03-08",
      "level": 1,
-     "text": "Gruppe: Die individuellen Listen werden von den anderen Mitgliedern erweitert"
+     "text": "Gruppe: die individuellen Listen werden von den anderen Mitgliedern erweitert"
     }
    ]
   },
   {
-   "id": "wa2-04",
+   "id": "wa2-v2-04",
    "subject": "Wissenschaftliches Arbeiten",
-   "title": "WA2 · Themenfindung: Mind Mapping & Clustering",
+   "title": "WA2 · Wie funktionieren Mind Mapping und Clustering?",
    "status": "neu",
    "lines": [
     {
-     "id": "wa2-04-01",
+     "id": "wa2-v2-04-01",
      "level": 0,
      "text": "Mind Mapping"
     },
     {
-     "id": "wa2-04-02",
+     "id": "wa2-v2-04-02",
      "level": 1,
-     "text": "Freie Mindmap: ungeordnet platziert"
+     "text": "freie Mindmap: ungeordnet platziert"
     },
     {
-     "id": "wa2-04-03",
+     "id": "wa2-v2-04-03",
      "level": 1,
-     "text": "Systematische Mindmap: im Uhrzeigersinn rechts um das Thema herum geordnet"
+     "text": "systematische Mindmap: im Uhrzeigersinn rechts um das Thema herum geordnet"
     },
     {
-     "id": "wa2-04-04",
+     "id": "wa2-v2-04-04",
      "level": 0,
      "text": "Clustering in 6 Schritten"
     },
     {
-     "id": "wa2-04-05",
+     "id": "wa2-v2-04-05",
      "level": 1,
      "text": "Assoziationsanreiz durch Thema → Kernwortwahl → Clusterbildung → Umschalteffekt (Schreibidee wird spürbar) → Schriftliche Aussage → Kurztext"
     }
    ]
   },
   {
-   "id": "wa2-05",
+   "id": "wa2-v2-05",
    "subject": "Wissenschaftliches Arbeiten",
-   "title": "WA2 · Das Arbeitskonzept (Exposé)",
+   "title": "WA2 · Was steht in einem Arbeitskonzept (Exposé)?",
    "status": "neu",
    "lines": [
     {
-     "id": "wa2-05-01",
+     "id": "wa2-v2-05-01",
      "level": 0,
-     "text": "Andere Namen"
+     "text": "Andere Namen: Forschungsentwurf, Outline, Exposé, Dissertation Proposal"
     },
     {
-     "id": "wa2-05-02",
-     "level": 1,
-     "text": "Forschungsentwurf, Outline, Exposé, Dissertation Proposal"
-    },
-    {
-     "id": "wa2-05-03",
+     "id": "wa2-v2-05-02",
      "level": 0,
      "text": "Inhalt: thematisches Grundgerüst, Vorgangsweise und Planung"
     },
     {
-     "id": "wa2-05-04",
+     "id": "wa2-v2-05-03",
+     "level": 0,
+     "text": "Worum es geht"
+    },
+    {
+     "id": "wa2-v2-05-04",
      "level": 1,
      "text": "Einleitung, evtl. Reflexion der Themenwahl"
     },
     {
-     "id": "wa2-05-05",
+     "id": "wa2-v2-05-05",
      "level": 1,
      "text": "Forschungsproblem und seine Bedeutung für Pflegewissenschaft und/oder Pflegepraxis"
     },
     {
-     "id": "wa2-05-06",
+     "id": "wa2-v2-05-06",
      "level": 1,
-     "text": "Erste Begriffserklärungen, ggf. theoretischer Rahmen"
+     "text": "erste Begriffserklärungen, ggf. theoretischer Rahmen"
     },
     {
-     "id": "wa2-05-07",
+     "id": "wa2-v2-05-07",
      "level": 1,
      "text": "Fragestellungen, evtl. Forschungshypothesen"
     },
     {
-     "id": "wa2-05-08",
-     "level": 1,
-     "text": "Methodisches Vorgehen"
+     "id": "wa2-v2-05-08",
+     "level": 0,
+     "text": "Wie es gemacht wird"
     },
     {
-     "id": "wa2-05-09",
+     "id": "wa2-v2-05-09",
      "level": 1,
-     "text": "Gliederung, vorläufiges Inhaltsverzeichnis"
+     "text": "methodisches Vorgehen"
     },
     {
-     "id": "wa2-05-10",
+     "id": "wa2-v2-05-10",
      "level": 1,
-     "text": "Arbeitstitel"
+     "text": "Gliederung, vorläufiges Inhaltsverzeichnis, Arbeitstitel"
     },
     {
-     "id": "wa2-05-11",
+     "id": "wa2-v2-05-11",
      "level": 1,
      "text": "Prognose und Ausblick"
     },
     {
-     "id": "wa2-05-12",
+     "id": "wa2-v2-05-12",
      "level": 1,
      "text": "Literaturangaben"
     },
     {
-     "id": "wa2-05-13",
+     "id": "wa2-v2-05-13",
      "level": 1,
-     "text": "Evtl. zeitliche bzw. organisatorische Planung"
+     "text": "evtl. zeitliche bzw. organisatorische Planung"
     },
     {
-     "id": "wa2-05-14",
+     "id": "wa2-v2-05-14",
      "level": 0,
      "text": "Erste Gliederung: Forschungsfrage und Unterfragen → Kapitel und Unterkapitel"
     }
    ]
   },
   {
-   "id": "wa2-06",
+   "id": "wa2-v2-06",
    "subject": "Wissenschaftliches Arbeiten",
-   "title": "WA2 · Gute vs. schlechte Forschungsfrage",
+   "title": "WA2 · Was ist eine gute, was eine schlechte Forschungsfrage?",
    "status": "neu",
    "lines": [
     {
-     "id": "wa2-06-01",
+     "id": "wa2-v2-06-01",
      "level": 0,
      "text": "Gute Forschungsfrage"
     },
     {
-     "id": "wa2-06-02",
+     "id": "wa2-v2-06-02",
      "level": 1,
      "text": "präzise verfasst"
     },
     {
-     "id": "wa2-06-03",
+     "id": "wa2-v2-06-03",
      "level": 1,
      "text": "als „W-Frage\" formuliert"
     },
     {
-     "id": "wa2-06-04",
+     "id": "wa2-v2-06-04",
      "level": 1,
      "text": "erklärungsbedürftig"
     },
     {
-     "id": "wa2-06-05",
+     "id": "wa2-v2-06-05",
      "level": 1,
      "text": "unterscheidet sich von ähnlichen, bereits verfassten Arbeiten"
     },
     {
-     "id": "wa2-06-06",
+     "id": "wa2-v2-06-06",
      "level": 0,
      "text": "Schlechte Forschungsfrage"
     },
     {
-     "id": "wa2-06-07",
+     "id": "wa2-v2-06-07",
      "level": 1,
      "text": "unklar formuliert"
     },
     {
-     "id": "wa2-06-08",
+     "id": "wa2-v2-06-08",
      "level": 1,
      "text": "enthält unrichtige Vorannahmen"
     },
     {
-     "id": "wa2-06-09",
+     "id": "wa2-v2-06-09",
      "level": 1,
      "text": "in sich widersprüchlich"
     },
     {
-     "id": "wa2-06-10",
+     "id": "wa2-v2-06-10",
      "level": 1,
      "text": "stellt eine verkleidete Behauptung auf"
     },
     {
-     "id": "wa2-06-11",
+     "id": "wa2-v2-06-11",
      "level": 1,
      "text": "Scheinfrage"
     },
     {
-     "id": "wa2-06-12",
+     "id": "wa2-v2-06-12",
      "level": 1,
      "text": "beeinflusst / tendenziös"
     },
     {
-     "id": "wa2-06-13",
+     "id": "wa2-v2-06-13",
      "level": 1,
      "text": "unsinnige Worte bzw. unsinniges Konzept"
     }
    ]
   },
   {
-   "id": "wa2-07",
-   "subject": "Wissenschaftliches Arbeiten",
-   "title": "WA2 · Anforderungen an eine Forschungshypothese",
-   "status": "neu",
-   "lines": [
-    {
-     "id": "wa2-07-01",
-     "level": 0,
-     "text": "Muss empirisch überprüfbar sein"
-    },
-    {
-     "id": "wa2-07-02",
-     "level": 0,
-     "text": "Alle verwendeten Begriffe müssen eindeutig definiert sein"
-    },
-    {
-     "id": "wa2-07-03",
-     "level": 1,
-     "text": "theoretisch sinnvoll"
-    },
-    {
-     "id": "wa2-07-04",
-     "level": 1,
-     "text": "empirisch praktikabel"
-    },
-    {
-     "id": "wa2-07-05",
-     "level": 0,
-     "text": "Leitet sich ab aus"
-    },
-    {
-     "id": "wa2-07-06",
-     "level": 1,
-     "text": "Forschungsproblem"
-    },
-    {
-     "id": "wa2-07-07",
-     "level": 1,
-     "text": "Forschungsfrage"
-    },
-    {
-     "id": "wa2-07-08",
-     "level": 1,
-     "text": "Literaturrecherche"
-    },
-    {
-     "id": "wa2-07-09",
-     "level": 1,
-     "text": "theoretischem Bezugsrahmen"
-    }
-   ]
-  },
-  {
-   "id": "wa2-08",
+   "id": "wa2-v2-07",
    "subject": "Wissenschaftliches Arbeiten",
    "title": "WA2 · Woran erkennt man eine wissenschaftliche Arbeit?",
    "status": "neu",
    "lines": [
     {
-     "id": "wa2-08-01",
+     "id": "wa2-v2-07-01",
      "level": 0,
-     "text": "Korrekte Zitierweise"
+     "text": "Belege"
     },
     {
-     "id": "wa2-08-02",
-     "level": 0,
-     "text": "Umfassende und ausführliche Quellenangabe"
+     "id": "wa2-v2-07-02",
+     "level": 1,
+     "text": "korrekte Zitierweise"
     },
     {
-     "id": "wa2-08-03",
-     "level": 0,
-     "text": "Anerkannte Literatur und anerkannte Verlage"
+     "id": "wa2-v2-07-03",
+     "level": 1,
+     "text": "umfassende und ausführliche Quellenangabe"
     },
     {
-     "id": "wa2-08-04",
-     "level": 0,
-     "text": "Vorwort erklärt Entstehungsgeschichte und Vorgangsweise"
+     "id": "wa2-v2-07-04",
+     "level": 1,
+     "text": "anerkannte Literatur und anerkannte Verlage"
     },
     {
-     "id": "wa2-08-05",
-     "level": 0,
-     "text": "Geleitworte von renommierten Wissenschaftler:innen"
-    },
-    {
-     "id": "wa2-08-06",
-     "level": 0,
+     "id": "wa2-v2-07-05",
+     "level": 1,
      "text": "Artikel aus Sammelband oder Zeitschrift mit namhaftem Herausgeber"
     },
     {
-     "id": "wa2-08-07",
+     "id": "wa2-v2-07-06",
      "level": 0,
+     "text": "Rahmen"
+    },
+    {
+     "id": "wa2-v2-07-07",
+     "level": 1,
+     "text": "Vorwort erklärt Entstehungsgeschichte und Vorgangsweise"
+    },
+    {
+     "id": "wa2-v2-07-08",
+     "level": 1,
+     "text": "Geleitworte von renommierten Wissenschaftler:innen"
+    },
+    {
+     "id": "wa2-v2-07-09",
+     "level": 0,
+     "text": "Inhalt"
+    },
+    {
+     "id": "wa2-v2-07-10",
+     "level": 1,
      "text": "Wissenschaftlichkeit in der Argumentation"
     },
     {
-     "id": "wa2-08-08",
-     "level": 0,
-     "text": "Wissenschaftlich durchgeführte Empirie"
+     "id": "wa2-v2-07-11",
+     "level": 1,
+     "text": "wissenschaftlich durchgeführte Empirie"
     }
    ]
   },
   {
-   "id": "wa2-09",
+   "id": "wa2-v2-08",
    "subject": "Wissenschaftliches Arbeiten",
-   "title": "WA2 · Drei Kriterien zur Klassifizierung von Quellen",
+   "title": "WA2 · Nach welchen drei Kriterien klassifiziert man Quellen?",
    "status": "neu",
    "lines": [
     {
-     "id": "wa2-09-01",
+     "id": "wa2-v2-08-01",
      "level": 0,
-     "text": "Bindung zum eigenen Thema"
+     "text": "Überblick"
     },
     {
-     "id": "wa2-09-02",
+     "id": "wa2-v2-08-02",
      "level": 1,
-     "text": "Quellen 1., 2., 3. Ordnung"
+     "text": "Kriterium | Einteilung"
     },
     {
-     "id": "wa2-09-03",
+     "id": "wa2-v2-08-03",
+     "level": 1,
+     "text": "Bindung zum eigenen Thema | ?Quellen 1., 2., 3. Ordnung"
+    },
+    {
+     "id": "wa2-v2-08-04",
+     "level": 1,
+     "text": "Ursprung der Quelle | ?eigene vs. fremde Quellen (Primär-, Sekundär-, Tertiär­quel­len)"
+    },
+    {
+     "id": "wa2-v2-08-05",
+     "level": 1,
+     "text": "Art der Veröf­fentli­chung | ?Primärlitera­tur, Sekundärlitera­tur, graue Literatur"
+    },
+    {
+     "id": "wa2-v2-08-06",
      "level": 0,
-     "text": "Ursprung der Quelle"
-    },
-    {
-     "id": "wa2-09-04",
-     "level": 1,
-     "text": "eigene vs. fremde Quellen (Primär-, Sekundär-, Tertiärquellen)"
-    },
-    {
-     "id": "wa2-09-05",
-     "level": 0,
-     "text": "Art der Veröffentlichung"
-    },
-    {
-     "id": "wa2-09-06",
-     "level": 1,
-     "text": "Primärliteratur, Sekundärliteratur, graue Literatur"
+     "text": "Merkhilfe: Wie nah am Thema? – Woher? – Was für eine Publikation?"
     }
    ]
   },
   {
-   "id": "wa2-10",
+   "id": "wa2-v2-09",
    "subject": "Wissenschaftliches Arbeiten",
-   "title": "WA2 · Quellen nach Bindung zum eigenen Thema",
+   "title": "WA2 · Quellen nach Bindung zum eigenen Thema: 1., 2., 3. Ordnung?",
    "status": "neu",
    "lines": [
     {
-     "id": "wa2-10-01",
+     "id": "wa2-v2-09-01",
      "level": 0,
-     "text": "Quelle | Zusammenhang mit dem eigenen Thema"
+     "text": "Zusammenhang mit dem eigenen Thema"
     },
     {
-     "id": "wa2-10-02",
-     "level": 0,
+     "id": "wa2-v2-09-02",
+     "level": 1,
+     "text": "Quelle | Zusam­men­hang"
+    },
+    {
+     "id": "wa2-v2-09-03",
+     "level": 1,
      "text": "erster Ordnung | ?unmittelbar"
     },
     {
-     "id": "wa2-10-03",
-     "level": 0,
+     "id": "wa2-v2-09-04",
+     "level": 1,
      "text": "zweiter Ordnung | ?mittelbar"
     },
     {
-     "id": "wa2-10-04",
-     "level": 0,
+     "id": "wa2-v2-09-05",
+     "level": 1,
      "text": "dritter Ordnung | ?erkennbar"
     }
    ]
   },
   {
-   "id": "wa2-11",
+   "id": "wa2-v2-10",
    "subject": "Wissenschaftliches Arbeiten",
-   "title": "WA2 · Quellen nach Ursprung",
+   "title": "WA2 · Quellen nach Ursprung: eigene und fremde Quellen?",
    "status": "neu",
    "lines": [
     {
-     "id": "wa2-11-01",
+     "id": "wa2-v2-10-01",
      "level": 0,
      "text": "Eigene Quellen"
     },
     {
-     "id": "wa2-11-02",
+     "id": "wa2-v2-10-02",
      "level": 1,
      "text": "Expert:inneninterviews, Beobachtungen, Experimente, Befragungen"
     },
     {
-     "id": "wa2-11-03",
+     "id": "wa2-v2-10-03",
      "level": 1,
      "text": "eigene wissenschaftlich geprüfte Erkenntnisse"
     },
     {
-     "id": "wa2-11-04",
+     "id": "wa2-v2-10-04",
      "level": 0,
      "text": "Fremde Quellen"
     },
     {
-     "id": "wa2-11-05",
+     "id": "wa2-v2-10-05",
      "level": 1,
-     "text": "Primärquellen: „aus erster Hand\" – alle Originalquellen"
+     "text": "Quelle | Bedeutung"
     },
     {
-     "id": "wa2-11-06",
+     "id": "wa2-v2-10-06",
      "level": 1,
-     "text": "Sekundärquellen: „aus zweiter Hand\" – wörtliche und sinngemäße Zitate, Zusammenfassungen, Übersetzungen"
+     "text": "Primär­quel­len | ?„aus erster Hand\" – alle Original­quel­len"
     },
     {
-     "id": "wa2-11-07",
+     "id": "wa2-v2-10-07",
      "level": 1,
-     "text": "Tertiärquellen: „aus dritter Hand\" – Zitate aus Büchern, die ihrerseits auf Zitaten des Originals aufbauen"
+     "text": "Sekundär­quel­len | ?„aus zweiter Hand\" – wörtliche und sinngemäße Zitate, Zusam­men­fas­sun­gen, Über­set­zun­gen"
+    },
+    {
+     "id": "wa2-v2-10-08",
+     "level": 1,
+     "text": "Tertiär­quel­len | ?„aus dritter Hand\" – Zitate aus Büchern, die ihrerseits auf Zitaten des Originals aufbauen"
     }
    ]
   },
   {
-   "id": "wa2-12",
+   "id": "wa2-v2-11",
    "subject": "Wissenschaftliches Arbeiten",
-   "title": "WA2 · Primär-, Sekundär- und graue Literatur",
+   "title": "WA2 · Was sind Primär-, Sekundär- und graue Literatur?",
    "status": "neu",
    "lines": [
     {
-     "id": "wa2-12-01",
+     "id": "wa2-v2-11-01",
      "level": 0,
      "text": "Primärliteratur"
     },
     {
-     "id": "wa2-12-02",
+     "id": "wa2-v2-11-02",
      "level": 1,
      "text": "Monografien, Lehrbücher"
     },
     {
-     "id": "wa2-12-03",
+     "id": "wa2-v2-11-03",
      "level": 1,
-     "text": "Aufsätze in Fachjournalen"
+     "text": "Aufsätze in Fachjournalen und in Sammelbänden"
     },
     {
-     "id": "wa2-12-04",
-     "level": 1,
-     "text": "Aufsätze in Sammelbänden"
-    },
-    {
-     "id": "wa2-12-05",
+     "id": "wa2-v2-11-04",
      "level": 0,
      "text": "Sekundärliteratur"
     },
     {
-     "id": "wa2-12-06",
+     "id": "wa2-v2-11-05",
      "level": 1,
      "text": "Lexika und Enzyklopädien"
     },
     {
-     "id": "wa2-12-07",
+     "id": "wa2-v2-11-06",
      "level": 1,
      "text": "Zeitschriftenartikel ohne Aufsatzcharakter"
     },
     {
-     "id": "wa2-12-08",
+     "id": "wa2-v2-11-07",
      "level": 1,
      "text": "Kommentare zu Originalen"
     },
     {
-     "id": "wa2-12-09",
+     "id": "wa2-v2-11-08",
      "level": 0,
      "text": "Dissertationen und Habilitationen: zwischen Primär- und Sekundärliteratur"
     },
     {
-     "id": "wa2-12-10",
+     "id": "wa2-v2-11-09",
      "level": 0,
      "text": "Graue Literatur"
     },
     {
-     "id": "wa2-12-11",
+     "id": "wa2-v2-11-10",
      "level": 1,
      "text": "Skripten, Haus- und (Pro-)Seminararbeiten"
     },
     {
-     "id": "wa2-12-12",
+     "id": "wa2-v2-11-11",
      "level": 1,
-     "text": "Unveröffentlichte Manuskripte, Working Papers"
+     "text": "unveröffentlichte Manuskripte, Working Papers"
     },
     {
-     "id": "wa2-12-13",
+     "id": "wa2-v2-11-12",
      "level": 1,
      "text": "Broschüren, Flugblätter, Plakate"
     },
     {
-     "id": "wa2-12-14",
+     "id": "wa2-v2-11-13",
      "level": 1,
      "text": "Internetadressen, Funk und Fernsehen"
     }
    ]
   },
   {
-   "id": "wa2-13",
+   "id": "wa2-v2-12",
    "subject": "Wissenschaftliches Arbeiten",
-   "title": "WA2 · Fundorte wissenschaftlicher Literatur",
+   "title": "WA2 · Primärquelle oder Primärliteratur – was ist der Unterschied?",
    "status": "neu",
    "lines": [
     {
-     "id": "wa2-13-01",
+     "id": "wa2-v2-12-01",
+     "level": 0,
+     "text": "Nach welchem Kriterium?"
+    },
+    {
+     "id": "wa2-v2-12-02",
+     "level": 1,
+     "text": "Begriff | Kriterium"
+    },
+    {
+     "id": "wa2-v2-12-03",
+     "level": 1,
+     "text": "Primär­quelle | ?Ursprung"
+    },
+    {
+     "id": "wa2-v2-12-04",
+     "level": 1,
+     "text": "Primärlitera­tur | ?Art der Veröf­fentli­chung"
+    },
+    {
+     "id": "wa2-v2-12-05",
+     "level": 0,
+     "text": "Was ist gemeint?"
+    },
+    {
+     "id": "wa2-v2-12-06",
+     "level": 1,
+     "text": "Begriff | heißt"
+    },
+    {
+     "id": "wa2-v2-12-07",
+     "level": 1,
+     "text": "Primär­quelle | ?Original, „aus erster Hand\""
+    },
+    {
+     "id": "wa2-v2-12-08",
+     "level": 1,
+     "text": "Primärlitera­tur | ?Monografien, Lehrbücher, Aufsätze in Fachjourna­len und Sam­mel­bän­den"
+    },
+    {
+     "id": "wa2-v2-12-09",
+     "level": 0,
+     "text": "Merkhilfe: Quelle fragt „woher?\", Literatur fragt „was für ein Text?\""
+    }
+   ]
+  },
+  {
+   "id": "wa2-v2-13",
+   "subject": "Wissenschaftliches Arbeiten",
+   "title": "WA2 · Wo findet man wissenschaftliche Literatur?",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "wa2-v2-13-01",
      "level": 0,
      "text": "Bibliotheken"
     },
     {
-     "id": "wa2-13-02",
+     "id": "wa2-v2-13-02",
      "level": 0,
      "text": "Buchhandlungen"
     },
     {
-     "id": "wa2-13-03",
+     "id": "wa2-v2-13-03",
      "level": 0,
-     "text": "Internet"
+     "text": "Internet und elektronische Datenbanken"
     },
     {
-     "id": "wa2-13-04",
-     "level": 0,
-     "text": "Elektronische Datenbanken"
-    },
-    {
-     "id": "wa2-13-05",
+     "id": "wa2-v2-13-04",
      "level": 0,
      "text": "Archive und Dokumentationsstellen"
     },
     {
-     "id": "wa2-13-06",
+     "id": "wa2-v2-13-05",
      "level": 0,
      "text": "Expert:innen"
     }
    ]
   },
   {
-   "id": "wa2-14",
+   "id": "wa2-v2-14",
    "subject": "Wissenschaftliches Arbeiten",
-   "title": "WA2 · Bibliotheken",
+   "title": "WA2 · Welche Arten von Bibliotheken gibt es?",
    "status": "neu",
    "lines": [
     {
-     "id": "wa2-14-01",
+     "id": "wa2-v2-14-01",
      "level": 0,
-     "text": "Kriterium | Typ | Zugriff"
+     "text": "Nach Zugänglichkeit"
     },
     {
-     "id": "wa2-14-02",
-     "level": 0,
-     "text": "Zugänglichkeit | Präsenzbibliothek | ?direkt"
+     "id": "wa2-v2-14-02",
+     "level": 1,
+     "text": "Typ | Zugriff"
     },
     {
-     "id": "wa2-14-03",
-     "level": 0,
-     "text": "Zugänglichkeit | Ausleihbibliothek | ?nach Bestellung"
+     "id": "wa2-v2-14-03",
+     "level": 1,
+     "text": "Prä­senzbi­blio­thek | ?direkt"
     },
     {
-     "id": "wa2-14-04",
-     "level": 0,
-     "text": "Zugänglichkeit | Fernleihe | ?nach Bestellung und Lieferung"
+     "id": "wa2-v2-14-04",
+     "level": 1,
+     "text": "Aus­leihbi­blio­thek | ?nach Bestellung"
     },
     {
-     "id": "wa2-14-05",
-     "level": 0,
-     "text": "Angebot | Allgemein-, Spezial-, Fachbibliothek | –"
+     "id": "wa2-v2-14-05",
+     "level": 1,
+     "text": "Fernleihe | ?nach Bestellung und Lieferung"
     },
     {
-     "id": "wa2-14-06",
+     "id": "wa2-v2-14-06",
+     "level": 0,
+     "text": "Nach Angebot: Allgemein-, Spezial-, Fachbibliothek"
+    },
+    {
+     "id": "wa2-v2-14-07",
      "level": 0,
      "text": "Wissenschaftliche Bibliotheken"
     },
     {
-     "id": "wa2-14-07",
+     "id": "wa2-v2-14-08",
      "level": 1,
      "text": "Universitäts-, Fach- und Nationalbibliotheken, Fernleihe"
     },
     {
-     "id": "wa2-14-08",
+     "id": "wa2-v2-14-09",
      "level": 0,
      "text": "Kataloge"
     },
     {
-     "id": "wa2-14-09",
+     "id": "wa2-v2-14-10",
      "level": 1,
      "text": "OPAC: Online Public Access Catalogue"
     },
     {
-     "id": "wa2-14-10",
+     "id": "wa2-v2-14-11",
      "level": 1,
      "text": "KVK: Karlsruher Virtueller Katalog"
     }
    ]
   },
   {
-   "id": "wa2-15",
+   "id": "wa2-v2-15",
    "subject": "Wissenschaftliches Arbeiten",
-   "title": "WA2 · Internetquellen kritisch prüfen",
+   "title": "WA2 · Wie prüft man Internetquellen kritisch?",
    "status": "neu",
    "lines": [
     {
-     "id": "wa2-15-01",
+     "id": "wa2-v2-15-01",
      "level": 0,
      "text": "Drei Grundfragen"
     },
     {
-     "id": "wa2-15-02",
+     "id": "wa2-v2-15-02",
      "level": 1,
      "text": "Ist die Website zuverlässig?"
     },
     {
-     "id": "wa2-15-03",
+     "id": "wa2-v2-15-03",
      "level": 1,
      "text": "Passt die Information zum Thema der Arbeit?"
     },
     {
-     "id": "wa2-15-04",
+     "id": "wa2-v2-15-04",
      "level": 1,
      "text": "Genügt die Qualität wissenschaftlichen Ansprüchen?"
     },
     {
-     "id": "wa2-15-05",
+     "id": "wa2-v2-15-05",
      "level": 0,
      "text": "Bewertung einer Website (Boeglin)"
     },
     {
-     "id": "wa2-15-06",
+     "id": "wa2-v2-15-06",
      "level": 1,
      "text": "Website, Ziele, Werbung, Inhalt"
     },
     {
-     "id": "wa2-15-07",
+     "id": "wa2-v2-15-07",
      "level": 1,
      "text": "Aktualisierung, Links, verantwortliche Organisation, Verfasser"
     },
     {
-     "id": "wa2-15-08",
+     "id": "wa2-v2-15-08",
      "level": 0,
      "text": "Wikipedia"
     },
     {
-     "id": "wa2-15-09",
+     "id": "wa2-v2-15-09",
      "level": 1,
      "text": "ist keine wissenschaftliche Quelle"
     },
     {
-     "id": "wa2-15-10",
+     "id": "wa2-v2-15-10",
      "level": 1,
      "text": "Link zur Originalquelle prüfen und die Originalquelle zitieren"
     }
    ]
   },
   {
-   "id": "wa2-16",
+   "id": "wa2-v2-16",
    "subject": "Wissenschaftliches Arbeiten",
-   "title": "WA2 · Systematische Internetrecherche",
+   "title": "WA2 · Wie recherchiert man systematisch im Internet?",
    "status": "neu",
    "lines": [
     {
-     "id": "wa2-16-01",
+     "id": "wa2-v2-16-01",
      "level": 0,
      "text": "Vier Fragen"
     },
     {
-     "id": "wa2-16-02",
+     "id": "wa2-v2-16-02",
      "level": 1,
      "text": "Was weiß ich schon?"
     },
     {
-     "id": "wa2-16-03",
+     "id": "wa2-v2-16-03",
      "level": 1,
      "text": "Was suche ich konkret?"
     },
     {
-     "id": "wa2-16-04",
+     "id": "wa2-v2-16-04",
      "level": 1,
      "text": "Was habe ich bereits gefunden?"
     },
     {
-     "id": "wa2-16-05",
+     "id": "wa2-v2-16-05",
      "level": 1,
      "text": "Was möchte ich noch herausfinden?"
     },
     {
-     "id": "wa2-16-06",
+     "id": "wa2-v2-16-06",
      "level": 0,
      "text": "Typen von Suchmaschinen"
     },
     {
-     "id": "wa2-16-07",
+     "id": "wa2-v2-16-07",
      "level": 1,
      "text": "reine Suchmaschinen"
     },
     {
-     "id": "wa2-16-08",
+     "id": "wa2-v2-16-08",
      "level": 1,
      "text": "Meta-Suchmaschinen"
     },
     {
-     "id": "wa2-16-09",
+     "id": "wa2-v2-16-09",
      "level": 1,
      "text": "Spezial-Suchmaschinen"
     },
     {
-     "id": "wa2-16-10",
+     "id": "wa2-v2-16-10",
      "level": 0,
      "text": "Wissenschaftliche Suche"
     },
     {
-     "id": "wa2-16-11",
+     "id": "wa2-v2-16-11",
      "level": 1,
      "text": "Google Scholar: wissenschaftliche Literatur"
     },
     {
-     "id": "wa2-16-12",
+     "id": "wa2-v2-16-12",
      "level": 1,
      "text": "BASE: Bielefeld Academic Search Engine, Open-Access-Dokumente"
     },
     {
-     "id": "wa2-16-13",
+     "id": "wa2-v2-16-13",
      "level": 1,
      "text": "MetaGer: deutsche Metasuchmaschine"
     }
    ]
   },
   {
-   "id": "wa2-17",
+   "id": "wa2-v2-17",
    "subject": "Wissenschaftliches Arbeiten",
-   "title": "WA2 · Elektronische Datenbanken",
+   "title": "WA2 · Was sind elektronische Datenbanken und welche Arten gibt es?",
    "status": "neu",
    "lines": [
     {
-     "id": "wa2-17-01",
+     "id": "wa2-v2-17-01",
      "level": 0,
      "text": "Elektronisches System zur Speicherung und Verwaltung großer Datenmengen"
     },
     {
-     "id": "wa2-17-02",
+     "id": "wa2-v2-17-02",
      "level": 1,
      "text": "bibliografische Daten, Kurzzusammenfassungen, Volltexte, numerische Informationen"
     },
     {
-     "id": "wa2-17-03",
+     "id": "wa2-v2-17-03",
      "level": 0,
      "text": "Nach Inhalt"
     },
     {
-     "id": "wa2-17-04",
+     "id": "wa2-v2-17-04",
      "level": 1,
-     "text": "Bibliografisch: Bibliothekskataloge, Bibliografien, Buchhandelsverzeichnisse"
+     "text": "bibliografisch: Bibliothekskataloge, Bibliografien, Buchhandelsverzeichnisse"
     },
     {
-     "id": "wa2-17-05",
+     "id": "wa2-v2-17-05",
      "level": 1,
      "text": "Volltext: Bücher, Hochschulschriften, Zeitschriftenartikel"
     },
     {
-     "id": "wa2-17-06",
+     "id": "wa2-v2-17-06",
      "level": 1,
      "text": "Fakten: Lexika, Wörterbücher, Datensammlungen"
     },
     {
-     "id": "wa2-17-07",
+     "id": "wa2-v2-17-07",
      "level": 0,
      "text": "Nach Verfügbarkeit"
     },
     {
-     "id": "wa2-17-08",
+     "id": "wa2-v2-17-08",
      "level": 1,
      "text": "kostenlos im Internet"
     },
     {
-     "id": "wa2-17-09",
+     "id": "wa2-v2-17-09",
      "level": 1,
      "text": "lizenzpflichtig, aber frei im Netz der PMU"
     },
     {
-     "id": "wa2-17-10",
+     "id": "wa2-v2-17-10",
      "level": 1,
      "text": "gebührenpflichtig (z. B. Pay-Per-View)"
     }
    ]
   },
   {
-   "id": "wa2-18",
+   "id": "wa2-v2-18",
    "subject": "Wissenschaftliches Arbeiten",
-   "title": "WA2 · Medizinische Datenbanken: gratis oder kostenpflichtig?",
+   "title": "WA2 · Welche medizinischen Datenbanken sind gratis, welche kostenpflichtig?",
    "status": "neu",
    "lines": [
     {
-     "id": "wa2-18-01",
+     "id": "wa2-v2-18-01",
      "level": 0,
      "text": "Kostenfrei"
     },
     {
-     "id": "wa2-18-02",
+     "id": "wa2-v2-18-02",
      "level": 1,
-     "text": "Cochrane Library: Evidence Based Medicine"
+     "text": "Datenbank | Inhalt"
     },
     {
-     "id": "wa2-18-03",
+     "id": "wa2-v2-18-03",
      "level": 1,
-     "text": "PubMed: National Library of Medicine (NLM)"
+     "text": "Cochrane Library | ?Evidence Based Medicine"
     },
     {
-     "id": "wa2-18-04",
+     "id": "wa2-v2-18-04",
      "level": 1,
-     "text": "SmartSearch: DIMDI"
+     "text": "PubMed | ?National Library of Medicine (NLM)"
     },
     {
-     "id": "wa2-18-05",
+     "id": "wa2-v2-18-05",
+     "level": 1,
+     "text": "SmartSearch | ?DIMDI"
+    },
+    {
+     "id": "wa2-v2-18-06",
      "level": 0,
      "text": "Kostenpflichtig"
     },
     {
-     "id": "wa2-18-06",
+     "id": "wa2-v2-18-07",
      "level": 1,
-     "text": "Embase: Excerpta Medica Database (Elsevier)"
+     "text": "Datenbank | Inhalt"
     },
     {
-     "id": "wa2-18-07",
+     "id": "wa2-v2-18-08",
      "level": 1,
-     "text": "CINAHL: Pflege und Gesundheitsberufe, englischsprachig"
+     "text": "Embase | ?Excerpta Medica Database (Elsevier)"
     },
     {
-     "id": "wa2-18-08",
+     "id": "wa2-v2-18-09",
      "level": 1,
-     "text": "Ovid: Medizin, Psychologie, Public Health, englischsprachig"
+     "text": "CINAHL | ?Pflege und Gesund­heitsbe­rufe, eng­lisch­spra­chig"
     },
     {
-     "id": "wa2-18-09",
+     "id": "wa2-v2-18-10",
      "level": 1,
-     "text": "Carelit: deutschsprachig, Pflege und Gesundheitswesen"
+     "text": "Ovid | ?Medizin, Psychologie, Public Health, eng­lisch­spra­chig"
     },
     {
-     "id": "wa2-18-10",
+     "id": "wa2-v2-18-11",
+     "level": 1,
+     "text": "Carelit | ?deutsch­spra­chig, Pflege und Gesund­heitswe­sen"
+    },
+    {
+     "id": "wa2-v2-18-12",
      "level": 0,
      "text": "Online-Journale"
     },
     {
-     "id": "wa2-18-11",
+     "id": "wa2-v2-18-13",
      "level": 1,
      "text": "kostenfrei: DOAJ, PLOS, EZB Regensburg (Ampelsystem), Highwire, Free Medical Journals"
     },
     {
-     "id": "wa2-18-12",
+     "id": "wa2-v2-18-14",
      "level": 1,
      "text": "kostenpflichtig: SUBITO (Dokumentlieferdienst)"
+    },
+    {
+     "id": "wa2-v2-18-15",
+     "level": 0,
+     "text": "Merkhilfe: die Pflegedatenbanken (CINAHL englisch, Carelit deutsch) kosten Geld"
     }
    ]
   },
   {
-   "id": "wa3-01",
+   "id": "wa3-v2-01",
    "subject": "Wissenschaftliches Arbeiten",
-   "title": "WA3 · Lesegeschwindigkeiten",
+   "title": "WA3 · Wie schnell lesen verschiedene Leser:innen?",
    "status": "neu",
    "lines": [
     {
-     "id": "wa3-01-01",
+     "id": "wa3-v2-01-01",
      "level": 0,
+     "text": "Lesegeschwindigkeiten"
+    },
+    {
+     "id": "wa3-v2-01-02",
+     "level": 1,
      "text": "Leser:in | Wörter pro Minute | Niveau"
     },
     {
-     "id": "wa3-01-02",
-     "level": 0,
+     "id": "wa3-v2-01-03",
+     "level": 1,
      "text": "langsam | ?110–150 | Volksschule"
     },
     {
-     "id": "wa3-01-03",
-     "level": 0,
+     "id": "wa3-v2-01-04",
+     "level": 1,
      "text": "mittel | ?200–250 | Gymnasium"
     },
     {
-     "id": "wa3-01-04",
-     "level": 0,
+     "id": "wa3-v2-01-05",
+     "level": 1,
      "text": "gut | ?400 | Hochschule"
     },
     {
-     "id": "wa3-01-05",
-     "level": 0,
+     "id": "wa3-v2-01-06",
+     "level": 1,
      "text": "schnell | ?1000 | gut trainiert"
     },
     {
-     "id": "wa3-01-06",
+     "id": "wa3-v2-01-07",
      "level": 0,
      "text": "Lesetechniken: Lesehilfe, kreisende Bewegung, Slalomtechnik"
     }
    ]
   },
   {
-   "id": "wa3-02",
+   "id": "wa3-v2-02",
    "subject": "Wissenschaftliches Arbeiten",
-   "title": "WA3 · Die 5 Phasen des Lesens",
+   "title": "WA3 · Welche 5 Phasen des Lesens gibt es?",
    "status": "neu",
    "lines": [
     {
-     "id": "wa3-02-01",
+     "id": "wa3-v2-02-01",
      "level": 0,
      "text": "1. Anlesen"
     },
     {
-     "id": "wa3-02-02",
+     "id": "wa3-v2-02-02",
      "level": 1,
      "text": "Titel, Erscheinungsjahr, Auflage, Buchklappe, Inhalts- und Literaturverzeichnis"
     },
     {
-     "id": "wa3-02-03",
+     "id": "wa3-v2-02-03",
      "level": 1,
      "text": "Vorwort, Einleitung und Schluss bzw. Zusammenfassung"
     },
     {
-     "id": "wa3-02-04",
+     "id": "wa3-v2-02-04",
      "level": 0,
      "text": "2. Querlesen"
     },
     {
-     "id": "wa3-02-05",
+     "id": "wa3-v2-02-05",
      "level": 1,
      "text": "Text überfliegen, Zusammenhang mit eigenem Thema prüfen"
     },
     {
-     "id": "wa3-02-06",
+     "id": "wa3-v2-02-06",
      "level": 0,
      "text": "3. Systematisches Lesen"
     },
     {
-     "id": "wa3-02-07",
+     "id": "wa3-v2-02-07",
      "level": 1,
-     "text": "Zentrale Fragestellung erfassen, Schlüsselbegriffe erkennen"
+     "text": "zentrale Fragestellung erfassen, Schlüsselbegriffe erkennen"
     },
     {
-     "id": "wa3-02-08",
+     "id": "wa3-v2-02-08",
      "level": 0,
      "text": "4. Intensives Lesen"
     },
     {
-     "id": "wa3-02-09",
+     "id": "wa3-v2-02-09",
      "level": 1,
-     "text": "Genaue Analyse des Textes"
+     "text": "genaue Analyse des Textes"
     },
     {
-     "id": "wa3-02-10",
+     "id": "wa3-v2-02-10",
      "level": 0,
      "text": "5. Exzerpte erstellen"
     },
     {
-     "id": "wa3-02-11",
+     "id": "wa3-v2-02-11",
      "level": 1,
      "text": "Text mit eigenen Worten wiedergeben und kommentieren"
+    },
+    {
+     "id": "wa3-v2-02-12",
+     "level": 0,
+     "text": "Merkhilfe: immer tiefer – an, quer, systematisch, intensiv, dann in eigenen Worten"
     }
    ]
   },
   {
-   "id": "wa3-03",
+   "id": "wa3-v2-03",
    "subject": "Wissenschaftliches Arbeiten",
-   "title": "WA3 · Kurzkommentare am Textrand",
+   "title": "WA3 · Welche Kurzkommentare setzt man an den Textrand?",
    "status": "neu",
    "lines": [
     {
-     "id": "wa3-03-01",
+     "id": "wa3-v2-03-01",
      "level": 0,
+     "text": "Zeichen und Bedeutung"
+    },
+    {
+     "id": "wa3-v2-03-02",
+     "level": 1,
      "text": "Zeichen | Bedeutung"
     },
     {
-     "id": "wa3-03-02",
-     "level": 0,
+     "id": "wa3-v2-03-03",
+     "level": 1,
      "text": "! | ?wichtig"
     },
     {
-     "id": "wa3-03-03",
-     "level": 0,
+     "id": "wa3-v2-03-04",
+     "level": 1,
      "text": "? | ?unklar"
     },
     {
-     "id": "wa3-03-04",
-     "level": 0,
+     "id": "wa3-v2-03-05",
+     "level": 1,
      "text": "Pb | ?Problem"
     },
     {
-     "id": "wa3-03-05",
-     "level": 0,
+     "id": "wa3-v2-03-06",
+     "level": 1,
      "text": "Def | ?Definition"
     },
     {
-     "id": "wa3-03-06",
-     "level": 0,
+     "id": "wa3-v2-03-07",
+     "level": 1,
      "text": "Th | ?Hypothese"
     }
    ]
   },
   {
-   "id": "wa3-04",
+   "id": "wa3-v2-04",
    "subject": "Wissenschaftliches Arbeiten",
-   "title": "WA3 · Fragen an einen Text (kritische Analyse)",
+   "title": "WA3 · Welche Fragen stellt man an einen Text? (kritische Analyse)",
    "status": "neu",
    "lines": [
     {
-     "id": "wa3-04-01",
+     "id": "wa3-v2-04-01",
      "level": 0,
      "text": "Einordnen"
     },
     {
-     "id": "wa3-04-02",
+     "id": "wa3-v2-04-02",
      "level": 1,
      "text": "Wovon handelt das Thema?"
     },
     {
-     "id": "wa3-04-03",
+     "id": "wa3-v2-04-03",
      "level": 1,
      "text": "Wer ist die Autorin / der Autor, was weiß ich über sie / ihn?"
     },
     {
-     "id": "wa3-04-04",
+     "id": "wa3-v2-04-04",
      "level": 1,
      "text": "Was weiß ich bereits über das Thema?"
     },
     {
-     "id": "wa3-04-05",
+     "id": "wa3-v2-04-05",
      "level": 1,
      "text": "Welche Informationen erwarte ich von dem Text?"
     },
     {
-     "id": "wa3-04-06",
+     "id": "wa3-v2-04-06",
      "level": 0,
      "text": "Absicht und Argumentation"
     },
     {
-     "id": "wa3-04-07",
+     "id": "wa3-v2-04-07",
      "level": 1,
      "text": "Welches Problem und welches Ziel verfolgt die Autorin / der Autor?"
     },
     {
-     "id": "wa3-04-08",
+     "id": "wa3-v2-04-08",
      "level": 1,
      "text": "Wird eine Hypothese aufgestellt? Welche?"
     },
     {
-     "id": "wa3-04-09",
+     "id": "wa3-v2-04-09",
      "level": 1,
      "text": "Gegen was oder wen wird geschrieben?"
     },
     {
-     "id": "wa3-04-10",
+     "id": "wa3-v2-04-10",
      "level": 1,
      "text": "Wie ist der Argumentationsaufbau?"
     },
     {
-     "id": "wa3-04-11",
+     "id": "wa3-v2-04-11",
      "level": 1,
      "text": "Welche Schlussfolgerung wird gezogen?"
     },
     {
-     "id": "wa3-04-12",
+     "id": "wa3-v2-04-12",
      "level": 0,
      "text": "Bezug zu mir"
     },
     {
-     "id": "wa3-04-13",
+     "id": "wa3-v2-04-13",
      "level": 1,
      "text": "Welchen Bezug hat der Text zu meinem Thema?"
     },
     {
-     "id": "wa3-04-14",
+     "id": "wa3-v2-04-14",
      "level": 1,
      "text": "Welcher Aspekt ist für mich wichtig?"
     }
    ]
   },
   {
-   "id": "wa3-05",
+   "id": "wa3-v2-05",
    "subject": "Wissenschaftliches Arbeiten",
-   "title": "WA3 · Exzerpieren – was und wozu?",
+   "title": "WA3 · Exzerpieren – was gehört hinein und wozu?",
    "status": "neu",
    "lines": [
     {
-     "id": "wa3-05-01",
+     "id": "wa3-v2-05-01",
      "level": 0,
      "text": "Gelesenes in eigenen Worten wiedergeben, zusammenfassen und kommentieren"
     },
     {
-     "id": "wa3-05-02",
+     "id": "wa3-v2-05-02",
      "level": 0,
      "text": "Nutzen"
     },
     {
-     "id": "wa3-05-03",
+     "id": "wa3-v2-05-03",
      "level": 1,
      "text": "Abstand zum Text gewinnen, auf die eigene Arbeit konzentrieren"
     },
     {
-     "id": "wa3-05-04",
+     "id": "wa3-v2-05-04",
      "level": 1,
      "text": "Wesentliches schneller herausfiltern und merken"
     },
     {
-     "id": "wa3-05-05",
+     "id": "wa3-v2-05-05",
      "level": 0,
      "text": "Was gehört ins Exzerpt?"
     },
     {
-     "id": "wa3-05-06",
+     "id": "wa3-v2-05-06",
      "level": 1,
      "text": "Inhalte, die für die eigene Arbeit wichtig sind"
     },
     {
-     "id": "wa3-05-07",
+     "id": "wa3-v2-05-07",
      "level": 1,
      "text": "eigene Kommentare oder Kritik"
     },
     {
-     "id": "wa3-05-08",
+     "id": "wa3-v2-05-08",
      "level": 1,
      "text": "Angaben über die Autor:innen"
     },
     {
-     "id": "wa3-05-09",
+     "id": "wa3-v2-05-09",
      "level": 1,
      "text": "Zitate, die wörtlich verwendet werden sollen"
     },
     {
-     "id": "wa3-05-10",
+     "id": "wa3-v2-05-10",
      "level": 1,
      "text": "korrekte Literaturangabe mit Seitenzahl"
     }
    ]
   },
   {
-   "id": "wa3-06",
+   "id": "wa3-v2-06",
    "subject": "Wissenschaftliches Arbeiten",
-   "title": "WA3 · Aufbau und Archivierung eines Exzerpts",
+   "title": "WA3 · Wie ist ein Exzerpt aufgebaut und wie archiviert man es?",
    "status": "neu",
    "lines": [
     {
-     "id": "wa3-06-01",
+     "id": "wa3-v2-06-01",
      "level": 0,
      "text": "Felder eines Exzerpts (Boeglin)"
     },
     {
-     "id": "wa3-06-02",
+     "id": "wa3-v2-06-02",
      "level": 1,
      "text": "Schlagworte, Titel bzw. Kapitel, Thema"
     },
     {
-     "id": "wa3-06-03",
+     "id": "wa3-v2-06-03",
      "level": 1,
-     "text": "Bibliografische Angaben, Standort, Signatur, Lesedatum"
+     "text": "bibliografische Angaben, Standort, Signatur, Lesedatum"
     },
     {
-     "id": "wa3-06-04",
+     "id": "wa3-v2-06-04",
      "level": 1,
      "text": "Zusammenfassung"
     },
     {
-     "id": "wa3-06-05",
+     "id": "wa3-v2-06-05",
      "level": 1,
      "text": "Zitate mit genauer Seitenangabe"
     },
     {
-     "id": "wa3-06-06",
+     "id": "wa3-v2-06-06",
      "level": 1,
-     "text": "Mein Kommentar"
+     "text": "mein Kommentar"
     },
     {
-     "id": "wa3-06-07",
+     "id": "wa3-v2-06-07",
      "level": 1,
      "text": "Stellenwert für meine Arbeit, Zuordnung zu Abschnitten"
     },
     {
-     "id": "wa3-06-08",
+     "id": "wa3-v2-06-08",
      "level": 1,
      "text": "Verweise auf andere Texte oder Exzerpte"
     },
     {
-     "id": "wa3-06-09",
+     "id": "wa3-v2-06-09",
      "level": 0,
      "text": "Archivierung"
     },
     {
-     "id": "wa3-06-10",
+     "id": "wa3-v2-06-10",
      "level": 1,
      "text": "alphabetisch nach Personen oder Schlagwörtern, oder chronologisch nach der Gliederung"
     },
     {
-     "id": "wa3-06-11",
+     "id": "wa3-v2-06-11",
      "level": 1,
      "text": "Karteikasten, Heftordner, farbige Karteikarten"
     },
     {
-     "id": "wa3-06-12",
+     "id": "wa3-v2-06-12",
      "level": 1,
      "text": "Literaturverwaltung: EndNote, Reference Manager, Mendeley"
     }
    ]
   },
   {
-   "id": "wa3-07",
+   "id": "wa3-v2-07",
    "subject": "Wissenschaftliches Arbeiten",
-   "title": "WA3 · Formales Ordnungsschema (11 Teile)",
+   "title": "WA3 · Wie sieht das formale Ordnungsschema einer Arbeit aus? (11 Teile)",
    "status": "neu",
    "lines": [
     {
-     "id": "wa3-07-01",
+     "id": "wa3-v2-07-01",
      "level": 0,
+     "text": "Vor dem Text"
+    },
+    {
+     "id": "wa3-v2-07-02",
+     "level": 1,
      "text": "1. Titelblatt"
     },
     {
-     "id": "wa3-07-02",
-     "level": 0,
+     "id": "wa3-v2-07-03",
+     "level": 1,
      "text": "2. Abstract"
     },
     {
-     "id": "wa3-07-03",
-     "level": 0,
+     "id": "wa3-v2-07-04",
+     "level": 1,
      "text": "3. Vorwort"
     },
     {
-     "id": "wa3-07-04",
-     "level": 0,
+     "id": "wa3-v2-07-05",
+     "level": 1,
      "text": "4. Inhaltsverzeichnis"
     },
     {
-     "id": "wa3-07-05",
-     "level": 0,
+     "id": "wa3-v2-07-06",
+     "level": 1,
      "text": "5. Verzeichnis von Tabellen, Abbildungen und Abkürzungen"
     },
     {
-     "id": "wa3-07-06",
+     "id": "wa3-v2-07-07",
      "level": 0,
+     "text": "Der Text"
+    },
+    {
+     "id": "wa3-v2-07-08",
+     "level": 1,
      "text": "6. Einleitung"
     },
     {
-     "id": "wa3-07-07",
-     "level": 0,
+     "id": "wa3-v2-07-09",
+     "level": 1,
      "text": "7. Textteil"
     },
     {
-     "id": "wa3-07-08",
-     "level": 0,
+     "id": "wa3-v2-07-10",
+     "level": 1,
      "text": "8. Gesamtzusammenfassung, offene Fragen und Ausblick"
     },
     {
-     "id": "wa3-07-09",
+     "id": "wa3-v2-07-11",
      "level": 0,
+     "text": "Nach dem Text"
+    },
+    {
+     "id": "wa3-v2-07-12",
+     "level": 1,
      "text": "9. Literatur- und Quellenverzeichnis"
     },
     {
-     "id": "wa3-07-10",
-     "level": 0,
+     "id": "wa3-v2-07-13",
+     "level": 1,
      "text": "10. Anhang (Fragebögen, Tabellen)"
     },
     {
-     "id": "wa3-07-11",
-     "level": 0,
+     "id": "wa3-v2-07-14",
+     "level": 1,
      "text": "11. Schriftliche Versicherung der eigenständigen Verfassung"
     }
    ]
   },
   {
-   "id": "wa3-08",
+   "id": "wa3-v2-08",
    "subject": "Wissenschaftliches Arbeiten",
    "title": "WA3 · Was gehört in die Einleitung?",
    "status": "neu",
    "lines": [
     {
-     "id": "wa3-08-01",
+     "id": "wa3-v2-08-01",
      "level": 0,
-     "text": "Kurze Begründung der Themenwahl"
+     "text": "Warum dieses Thema?"
     },
     {
-     "id": "wa3-08-02",
-     "level": 0,
+     "id": "wa3-v2-08-02",
+     "level": 1,
+     "text": "kurze Begründung der Themenwahl"
+    },
+    {
+     "id": "wa3-v2-08-03",
+     "level": 1,
      "text": "Problembenennung und Begriffserklärung"
     },
     {
-     "id": "wa3-08-03",
-     "level": 0,
+     "id": "wa3-v2-08-04",
+     "level": 1,
      "text": "Signifikanz und Aktualität des Themas"
     },
     {
-     "id": "wa3-08-04",
+     "id": "wa3-v2-08-05",
      "level": 0,
-     "text": "Leitende Forschungsfrage und Ziel der Arbeit"
+     "text": "Was will die Arbeit?"
     },
     {
-     "id": "wa3-08-05",
-     "level": 0,
+     "id": "wa3-v2-08-06",
+     "level": 1,
+     "text": "leitende Forschungsfrage und Ziel der Arbeit"
+    },
+    {
+     "id": "wa3-v2-08-07",
+     "level": 1,
      "text": "Forschungshypothesen"
     },
     {
-     "id": "wa3-08-06",
+     "id": "wa3-v2-08-08",
      "level": 0,
+     "text": "Wie geht sie vor?"
+    },
+    {
+     "id": "wa3-v2-08-09",
+     "level": 1,
      "text": "Erfahrungen bei der Literaturrecherche"
     },
     {
-     "id": "wa3-08-07",
-     "level": 0,
-     "text": "Methodische Vorgehensweise"
+     "id": "wa3-v2-08-10",
+     "level": 1,
+     "text": "methodische Vorgehensweise"
     },
     {
-     "id": "wa3-08-08",
-     "level": 0,
+     "id": "wa3-v2-08-11",
+     "level": 1,
      "text": "Aufbau der Arbeit und Argumentationslinie"
     }
    ]
   },
   {
-   "id": "wa3-09",
+   "id": "wa3-v2-09",
    "subject": "Wissenschaftliches Arbeiten",
-   "title": "WA3 · Gliederung und Textteil",
+   "title": "WA3 · Wie werden Gliederung und Textteil aufgebaut?",
    "status": "neu",
    "lines": [
     {
-     "id": "wa3-09-01",
+     "id": "wa3-v2-09-01",
      "level": 0,
      "text": "Grobstruktur und Feinstruktur, verbunden durch den roten Faden"
     },
     {
-     "id": "wa3-09-02",
+     "id": "wa3-v2-09-02",
      "level": 0,
-     "text": "Textteil"
-    },
-    {
-     "id": "wa3-09-03",
-     "level": 1,
      "text": "Kapitel und Unterkapitel mit logischem Aufbau"
     },
     {
-     "id": "wa3-09-04",
-     "level": 1,
-     "text": "Jedes Kapitel beginnt mit einer Einführung"
+     "id": "wa3-v2-09-03",
+     "level": 0,
+     "text": "Jedes Kapitel beginnt mit einer Einführung …"
     },
     {
-     "id": "wa3-09-05",
+     "id": "wa3-v2-09-04",
      "level": 1,
      "text": "… und endet mit kurzer Zusammenfassung und Überleitung zum nächsten Kapitel"
     },
     {
-     "id": "wa3-09-06",
-     "level": 1,
+     "id": "wa3-v2-09-05",
+     "level": 0,
      "text": "Innerhalb der Kapitel: Absätze durch Leerzeilen und Erstzeileneinzüge"
     }
    ]
   },
   {
-   "id": "wa3-10",
+   "id": "wa3-v2-10",
    "subject": "Wissenschaftliches Arbeiten",
    "title": "WA3 · Was gehört in den Schluss?",
    "status": "neu",
    "lines": [
     {
-     "id": "wa3-10-01",
+     "id": "wa3-v2-10-01",
      "level": 0,
-     "text": "Schluss auf die Einleitung abstimmen"
+     "text": "Auf die Einleitung abstimmen und die Forschungsfrage beantworten"
     },
     {
-     "id": "wa3-10-02",
-     "level": 0,
-     "text": "Forschungsfrage beantworten"
-    },
-    {
-     "id": "wa3-10-03",
-     "level": 0,
+     "id": "wa3-v2-10-02",
+     "level": 1,
      "text": "ggf. Ergebnis der Hypothesenprüfung"
     },
     {
-     "id": "wa3-10-04",
+     "id": "wa3-v2-10-03",
      "level": 0,
-     "text": "Zentrale Punkte zusammenfassen"
+     "text": "Zentrale Punkte zusammenfassen und Ergebnisse kritisch diskutieren"
     },
     {
-     "id": "wa3-10-05",
-     "level": 0,
-     "text": "Ergebnisse kritisch diskutieren"
-    },
-    {
-     "id": "wa3-10-06",
-     "level": 0,
-     "text": "Auf keinen Fall neue Gedanken aufwerfen!"
-    },
-    {
-     "id": "wa3-10-07",
+     "id": "wa3-v2-10-04",
      "level": 0,
      "text": "Persönliche Bemerkungen zur Arbeit"
     },
     {
-     "id": "wa3-10-08",
+     "id": "wa3-v2-10-05",
      "level": 0,
      "text": "Offene Fragen und Ausblick auf weitere Forschung"
+    },
+    {
+     "id": "wa3-v2-10-06",
+     "level": 0,
+     "text": "Auf keinen Fall neue Gedanken aufwerfen!"
     }
    ]
   },
   {
-   "id": "wa3-11",
+   "id": "wa3-v2-11",
    "subject": "Wissenschaftliches Arbeiten",
-   "title": "WA3 · Aufbau einer Argumentation",
+   "title": "WA3 · Wie baut man eine Argumentation auf?",
    "status": "neu",
    "lines": [
     {
-     "id": "wa3-11-01",
+     "id": "wa3-v2-11-01",
      "level": 0,
      "text": "Einleitung"
     },
     {
-     "id": "wa3-11-02",
+     "id": "wa3-v2-11-02",
      "level": 1,
      "text": "Einleitung, Forschungsfrage, Hypothese"
     },
     {
-     "id": "wa3-11-03",
+     "id": "wa3-v2-11-03",
      "level": 0,
      "text": "Textteil"
     },
     {
-     "id": "wa3-11-04",
+     "id": "wa3-v2-11-04",
      "level": 1,
      "text": "Argument 1, Argument 2 (oder Gegenargument), Argument 3 (oder Gegenargument)"
     },
     {
-     "id": "wa3-11-05",
+     "id": "wa3-v2-11-05",
      "level": 1,
      "text": "Argument → Erklärung (Beispiele) → Schlussfolgerung"
     },
     {
-     "id": "wa3-11-06",
+     "id": "wa3-v2-11-06",
      "level": 0,
      "text": "Schluss"
     },
     {
-     "id": "wa3-11-07",
+     "id": "wa3-v2-11-07",
      "level": 1,
-     "text": "Allgemeine Schlussfolgerung: Beantwortung der Forschungsfrage, Prüfung der Hypothese"
+     "text": "allgemeine Schlussfolgerung: Beantwortung der Forschungsfrage, Prüfung der Hypothese"
     },
     {
-     "id": "wa3-11-08",
+     "id": "wa3-v2-11-08",
      "level": 0,
      "text": "Starke Argumente: faire Darstellung und Diskussion der Gegenposition"
     }
    ]
   },
   {
-   "id": "wa3-12",
+   "id": "wa3-v2-12",
    "subject": "Wissenschaftliches Arbeiten",
-   "title": "WA3 · Fragen zur Vorbereitung der Argumentation",
+   "title": "WA3 · Welche Fragen bereiten eine Argumentation vor?",
    "status": "neu",
    "lines": [
     {
-     "id": "wa3-12-01",
+     "id": "wa3-v2-12-01",
      "level": 0,
+     "text": "Meine Position"
+    },
+    {
+     "id": "wa3-v2-12-02",
+     "level": 1,
      "text": "Welches Ziel verfolge ich mit meiner Argumentation?"
     },
     {
-     "id": "wa3-12-02",
-     "level": 0,
+     "id": "wa3-v2-12-03",
+     "level": 1,
      "text": "Was sind die Ideen oder Aussagen meiner Argumentation?"
     },
     {
-     "id": "wa3-12-03",
-     "level": 0,
-     "text": "Welche Gegenargumente gibt es zu meinen Argumenten?"
-    },
-    {
-     "id": "wa3-12-04",
-     "level": 0,
+     "id": "wa3-v2-12-04",
+     "level": 1,
      "text": "Welche Beispiele untermauern meine Argumente?"
     },
     {
-     "id": "wa3-12-05",
-     "level": 0,
+     "id": "wa3-v2-12-05",
+     "level": 1,
      "text": "In welcher Reihenfolge? Welches Argument bedingt ein anderes?"
     },
     {
-     "id": "wa3-12-06",
+     "id": "wa3-v2-12-06",
      "level": 0,
+     "text": "Die Gegenseite"
+    },
+    {
+     "id": "wa3-v2-12-07",
+     "level": 1,
+     "text": "Welche Gegenargumente gibt es zu meinen Argumenten?"
+    },
+    {
+     "id": "wa3-v2-12-08",
+     "level": 1,
      "text": "Wer sind die fiktiven oder realen Kontrahent:innen meiner Position?"
     },
     {
-     "id": "wa3-12-07",
-     "level": 0,
+     "id": "wa3-v2-12-09",
+     "level": 1,
      "text": "Welche Einwände könnten sie haben?"
     }
    ]
   },
   {
-   "id": "wa3-13",
+   "id": "wa3-v2-13",
    "subject": "Wissenschaftliches Arbeiten",
-   "title": "WA3 · Die 5 Methoden der Gliederung",
+   "title": "WA3 · Welche 5 Methoden der Gliederung gibt es?",
    "status": "neu",
    "lines": [
     {
-     "id": "wa3-13-01",
+     "id": "wa3-v2-13-01",
      "level": 0,
-     "text": "1. Deduktive Methode"
+     "text": "Die Methoden"
     },
     {
-     "id": "wa3-13-02",
+     "id": "wa3-v2-13-02",
      "level": 1,
-     "text": "vom Allgemeinen (Theorie) zum Besonderen"
+     "text": "Methode | Prinzip"
     },
     {
-     "id": "wa3-13-03",
-     "level": 0,
-     "text": "2. Induktive Methode"
-    },
-    {
-     "id": "wa3-13-04",
+     "id": "wa3-v2-13-03",
      "level": 1,
-     "text": "vom Besonderen (Einzeltatsache) zum Allgemeinen"
+     "text": "deduktiv | ?vom Allgemeinen (Theorie) zum Besonderen"
     },
     {
-     "id": "wa3-13-05",
-     "level": 0,
-     "text": "3. Kausale Methode"
-    },
-    {
-     "id": "wa3-13-06",
+     "id": "wa3-v2-13-04",
      "level": 1,
-     "text": "Ursache ↔ Wirkung"
+     "text": "induktiv | ?vom Besonderen (Ein­zel­tatsa­che) zum Allgemeinen"
     },
     {
-     "id": "wa3-13-07",
+     "id": "wa3-v2-13-05",
+     "level": 1,
+     "text": "kausal | ?Ursache ↔ Wirkung"
+    },
+    {
+     "id": "wa3-v2-13-06",
+     "level": 1,
+     "text": "dialektisch | ?These und Antithese führen zur Synthese"
+    },
+    {
+     "id": "wa3-v2-13-07",
+     "level": 1,
+     "text": "ver­glei­chend | ?nach Objekten (erst alles zu A, dann zu B) oder nach Kriterien (pro Kriterium A und B)"
+    },
+    {
+     "id": "wa3-v2-13-08",
      "level": 0,
-     "text": "4. Dialektische Methode"
+     "text": "Beispiel vergleichend: österreichisches vs. kanadisches Gesundheitssystem"
     },
     {
-     "id": "wa3-13-08",
+     "id": "wa3-v2-13-09",
+     "level": 0,
+     "text": "Dialektisch als Bild"
+    },
+    {
+     "id": "wa3-v2-13-10",
      "level": 1,
      "text": "These → Synthese"
     },
     {
-     "id": "wa3-13-09",
+     "id": "wa3-v2-13-11",
      "level": 1,
      "text": "Antithese → Synthese"
-    },
-    {
-     "id": "wa3-13-10",
-     "level": 0,
-     "text": "5. Vergleichende Methode"
-    },
-    {
-     "id": "wa3-13-11",
-     "level": 1,
-     "text": "Vergleich nach Objekten: erst alles zu Objekt A, dann alles zu B"
-    },
-    {
-     "id": "wa3-13-12",
-     "level": 1,
-     "text": "Vergleich nach Kriterien: pro Kriterium jeweils A und B"
-    },
-    {
-     "id": "wa3-13-13",
-     "level": 1,
-     "text": "Beispiel: österreichisches vs. kanadisches Gesundheitssystem"
     }
    ]
   },
   {
-   "id": "wa3-14",
+   "id": "wa3-v2-14",
    "subject": "Wissenschaftliches Arbeiten",
-   "title": "WA3 · Die 5 Phasen des Schreibens",
+   "title": "WA3 · Welche 5 Phasen hat das Schreiben – und wie viel Zeit braucht jede?",
    "status": "neu",
    "lines": [
     {
-     "id": "wa3-14-01",
+     "id": "wa3-v2-14-01",
      "level": 0,
      "text": "Konzept erstellen → Erstentwurf schreiben → Inhaltliche Überarbeitung → Sprachlich-stilistische Überarbeitung → Grammatik, Rechtschreibung und Zeichensetzung prüfen"
     },
     {
-     "id": "wa3-14-02",
+     "id": "wa3-v2-14-02",
      "level": 0,
-     "text": "Kreisdiagramm: Zeitaufwand | Planen 30 % | Schreiben 30 % | Überarbeiten 40 %"
+     "text": "Zeitaufwand"
+    },
+    {
+     "id": "wa3-v2-14-03",
+     "level": 1,
+     "text": "Kreisdiagramm: Zeitaufwand | Planen ?30 % | Schreiben ?30 % | Überarbeiten ?40 %"
+    },
+    {
+     "id": "wa3-v2-14-04",
+     "level": 0,
+     "text": "Merkhilfe: Überarbeiten braucht am meisten Zeit"
     }
    ]
   },
   {
-   "id": "wa3-15",
+   "id": "wa3-v2-15",
    "subject": "Wissenschaftliches Arbeiten",
-   "title": "WA3 · Kriterien wissenschaftlicher Schreibweise I",
+   "title": "WA3 · Wissenschaftlich schreiben I: Wie schreibt man klar und sachlich?",
    "status": "neu",
    "lines": [
     {
-     "id": "wa3-15-01",
+     "id": "wa3-v2-15-01",
      "level": 0,
      "text": "Der rote Faden führt durch den Schreibprozess"
     },
     {
-     "id": "wa3-15-02",
+     "id": "wa3-v2-15-02",
      "level": 0,
      "text": "Präzise, anschaulich und klar nachvollziehbar schreiben"
     },
     {
-     "id": "wa3-15-03",
+     "id": "wa3-v2-15-03",
      "level": 0,
      "text": "Sachlich formulieren, nicht von Emotionen leiten lassen"
     },
     {
-     "id": "wa3-15-04",
-     "level": 0,
+     "id": "wa3-v2-15-04",
+     "level": 1,
      "text": "Ich-Form nur im Vorwort (persönliches Forschungsinteresse)"
     },
     {
-     "id": "wa3-15-05",
+     "id": "wa3-v2-15-05",
      "level": 0,
-     "text": "Alle Begriffe bei der ersten Verwendung definieren"
+     "text": "Begriffe und Abkürzungen"
     },
     {
-     "id": "wa3-15-06",
-     "level": 0,
+     "id": "wa3-v2-15-06",
+     "level": 1,
+     "text": "alle Begriffe bei der ersten Verwendung definieren"
+    },
+    {
+     "id": "wa3-v2-15-07",
+     "level": 1,
      "text": "Abkürzungen beim ersten Anführen ausschreiben"
     },
     {
-     "id": "wa3-15-07",
+     "id": "wa3-v2-15-08",
      "level": 0,
      "text": "Geschlechtergerechte Sprache"
     }
    ]
   },
   {
-   "id": "wa3-16",
+   "id": "wa3-v2-16",
    "subject": "Wissenschaftliches Arbeiten",
-   "title": "WA3 · Kriterien wissenschaftlicher Schreibweise II",
+   "title": "WA3 · Wissenschaftlich schreiben II: Wie belegt und begründet man?",
    "status": "neu",
    "lines": [
     {
-     "id": "wa3-16-01",
+     "id": "wa3-v2-16-01",
      "level": 0,
      "text": "Behauptungen genau belegen, möglichst Gegenargumente liefern"
     },
     {
-     "id": "wa3-16-02",
+     "id": "wa3-v2-16-02",
      "level": 0,
-     "text": "Aufeinanderfolgende Schritte begründen"
+     "text": "Aufeinanderfolgende Schritte begründen; begründen, warum wörtlich zitiert wird"
     },
     {
-     "id": "wa3-16-03",
-     "level": 0,
-     "text": "Erklärungen, die nicht zum Verständnis beitragen, weglassen"
-    },
-    {
-     "id": "wa3-16-04",
-     "level": 0,
-     "text": "Keine Wiederholungen"
-    },
-    {
-     "id": "wa3-16-05",
-     "level": 0,
-     "text": "Begründen, warum wörtlich zitiert wird"
-    },
-    {
-     "id": "wa3-16-06",
+     "id": "wa3-v2-16-03",
      "level": 0,
      "text": "Grafiken und Abbildungen im Text erklären"
     },
     {
-     "id": "wa3-16-07",
+     "id": "wa3-v2-16-04",
      "level": 0,
      "text": "Verbindung von Theorie und Empirie herstellen"
+    },
+    {
+     "id": "wa3-v2-16-05",
+     "level": 0,
+     "text": "Nichts Überflüssiges"
+    },
+    {
+     "id": "wa3-v2-16-06",
+     "level": 1,
+     "text": "Erklärungen, die nicht zum Verständnis beitragen, weglassen"
+    },
+    {
+     "id": "wa3-v2-16-07",
+     "level": 1,
+     "text": "keine Wiederholungen"
     }
    ]
   },
   {
-   "id": "wa3-17",
+   "id": "wa3-v2-17",
    "subject": "Wissenschaftliches Arbeiten",
-   "title": "WA3 · Kriterien wissenschaftlicher Schreibweise III",
+   "title": "WA3 · Wissenschaftlich schreiben III: Satzbau und Spannung?",
    "status": "neu",
    "lines": [
     {
-     "id": "wa3-17-01",
+     "id": "wa3-v2-17-01",
      "level": 0,
      "text": "Wichtige Aussagen in Hauptsätze, Details und Verknüpfungen in Nebensätze"
     },
     {
-     "id": "wa3-17-02",
+     "id": "wa3-v2-17-02",
      "level": 0,
      "text": "Textelemente verbinden Sätze und Absätze"
     },
     {
-     "id": "wa3-17-03",
+     "id": "wa3-v2-17-03",
      "level": 1,
      "text": "Konjunktionen"
     },
     {
-     "id": "wa3-17-04",
+     "id": "wa3-v2-17-04",
      "level": 1,
      "text": "beweisende Textelemente"
     },
     {
-     "id": "wa3-17-05",
+     "id": "wa3-v2-17-05",
      "level": 1,
      "text": "gegensätzliche Textelemente"
     },
     {
-     "id": "wa3-17-06",
+     "id": "wa3-v2-17-06",
      "level": 0,
      "text": "Spannung Schritt für Schritt aufbauen und am Schluss verstärken"
     },
     {
-     "id": "wa3-17-07",
+     "id": "wa3-v2-17-07",
      "level": 0,
      "text": "Schluss auf die Einleitung rückbeziehen"
     }
    ]
   },
   {
-   "id": "wa3-18",
+   "id": "wa3-v2-18",
    "subject": "Wissenschaftliches Arbeiten",
-   "title": "WA3 · Inadäquater Schreibstil – was vermeiden?",
+   "title": "WA3 · Welcher Schreibstil ist inadäquat?",
    "status": "neu",
    "lines": [
     {
-     "id": "wa3-18-01",
+     "id": "wa3-v2-18-01",
      "level": 0,
-     "text": "Übertreibungen: „immens\", „einzig\", „enorm\", „erheblich\""
+     "text": "Was vermeiden – mit Beispielen"
     },
     {
-     "id": "wa3-18-02",
-     "level": 0,
-     "text": "Verallgemeinerungen: „allein\", „ungefähr\", „es ist allgemein bekannt\""
+     "id": "wa3-v2-18-02",
+     "level": 1,
+     "text": "Fehler | Beispiele"
     },
     {
-     "id": "wa3-18-03",
-     "level": 0,
-     "text": "Normative Formulierungen: „soll\", „muss\""
+     "id": "wa3-v2-18-03",
+     "level": 1,
+     "text": "Über­trei­bun­gen | ?„immens\", „einzig\", „enorm\", „erheblich\""
     },
     {
-     "id": "wa3-18-04",
-     "level": 0,
-     "text": "Anklagende, moralisierende Formulierungen"
+     "id": "wa3-v2-18-04",
+     "level": 1,
+     "text": "Ver­allge­meine­run­gen | ?„allein\", „ungefähr\", „es ist allgemein bekannt\""
     },
     {
-     "id": "wa3-18-05",
-     "level": 0,
-     "text": "Füllwörter: „jetzt\", „nun\", „übrigens\""
+     "id": "wa3-v2-18-05",
+     "level": 1,
+     "text": "normative Formu­lie­run­gen | ?„soll\", „muss\""
     },
     {
-     "id": "wa3-18-06",
-     "level": 0,
-     "text": "Angstwörter: „irgendwie\", „wohl\", „gewissermaßen\""
+     "id": "wa3-v2-18-06",
+     "level": 1,
+     "text": "Füllwörter | ?„jetzt\", „nun\", „übrigens\""
     },
     {
-     "id": "wa3-18-07",
-     "level": 0,
-     "text": "„selbstverständlich ist …\", „natürlich\", „bekanntlich\""
+     "id": "wa3-v2-18-07",
+     "level": 1,
+     "text": "Angstwörter | ?„irgendwie\", „wohl\", „gewis­serma­ßen\""
     },
     {
-     "id": "wa3-18-08",
-     "level": 0,
-     "text": "Phrasenhafte Umschreibungen: „die optimalste Methode\""
+     "id": "wa3-v2-18-08",
+     "level": 1,
+     "text": "Selbst­ver­ständ­lich­kei­ten | ?„selbst­ver­ständ­lich ist …\", „natürlich\", „bekanntlich\""
     },
     {
-     "id": "wa3-18-09",
+     "id": "wa3-v2-18-09",
+     "level": 1,
+     "text": "phra­sen­hafte Umschrei­bun­gen | ?„die optimalste Methode\""
+    },
+    {
+     "id": "wa3-v2-18-10",
      "level": 0,
+     "text": "Außerdem vermeiden"
+    },
+    {
+     "id": "wa3-v2-18-11",
+     "level": 1,
+     "text": "anklagende, moralisierende Formulierungen"
+    },
+    {
+     "id": "wa3-v2-18-12",
+     "level": 1,
      "text": "Umgangssprache, salopper Ton, Witze und Ironie"
     },
     {
-     "id": "wa3-18-10",
-     "level": 0,
+     "id": "wa3-v2-18-13",
+     "level": 1,
      "text": "Bandwurm- und Schachtelsätze, zu viele „dass\"-Sätze"
     },
     {
-     "id": "wa3-18-11",
-     "level": 0,
-     "text": "Das Wörtchen „man\""
-    },
-    {
-     "id": "wa3-18-12",
-     "level": 0,
-     "text": "Mehrdeutige Ausdrücke"
+     "id": "wa3-v2-18-14",
+     "level": 1,
+     "text": "das Wörtchen „man\" und mehrdeutige Ausdrücke"
     }
    ]
   },
   {
-   "id": "wa3-19",
+   "id": "wa4-v2-01",
    "subject": "Wissenschaftliches Arbeiten",
-   "title": "WA3 · Zahlen: als Wort oder als Ziffer?",
+   "title": "WA4 · Wozu zitiert man, und nach welchen Grundsätzen?",
    "status": "neu",
    "lines": [
     {
-     "id": "wa3-19-01",
-     "level": 0,
-     "text": "Als Wort"
-    },
-    {
-     "id": "wa3-19-02",
-     "level": 1,
-     "text": "kleiner als 12 und ohne konkrete Einheit: drei Items"
-    },
-    {
-     "id": "wa3-19-03",
-     "level": 1,
-     "text": "am Satzanfang"
-    },
-    {
-     "id": "wa3-19-04",
-     "level": 1,
-     "text": "gebräuchliche Brüche: ein Achtel"
-    },
-    {
-     "id": "wa3-19-05",
-     "level": 0,
-     "text": "Als Ziffer, auch unter 12"
-    },
-    {
-     "id": "wa3-19-06",
-     "level": 1,
-     "text": "unmittelbar vor Messeinheiten: 2 cm"
-    },
-    {
-     "id": "wa3-19-07",
-     "level": 1,
-     "text": "bei mathematischen oder statistischen Funktionen"
-    },
-    {
-     "id": "wa3-19-08",
-     "level": 1,
-     "text": "bei Größen, bestimmten Werten, Bezifferungen: 6 Stunden"
-    },
-    {
-     "id": "wa3-19-09",
-     "level": 1,
-     "text": "an definierter Stelle einer nummerierten Folge: Abbildung 1"
-    }
-   ]
-  },
-  {
-   "id": "wa3-20",
-   "subject": "Wissenschaftliches Arbeiten",
-   "title": "WA3 · Einheiten, Uhrzeiten, Daten, Abkürzungen",
-   "status": "neu",
-   "lines": [
-    {
-     "id": "wa3-20-01",
-     "level": 0,
-     "text": "Dezimalkomma, Leerzeichen zwischen Zahl und Einheit"
-    },
-    {
-     "id": "wa3-20-02",
-     "level": 1,
-     "text": "499,99 EUR · 1,55 kg · 13,35 km"
-    },
-    {
-     "id": "wa3-20-03",
-     "level": 1,
-     "text": "bei ungefähren Angaben darf das Komma entfallen: ca. 3 km"
-    },
-    {
-     "id": "wa3-20-04",
-     "level": 0,
-     "text": "Uhrzeiten: 08:30 Uhr · 08:30:27 Uhr"
-    },
-    {
-     "id": "wa3-20-05",
-     "level": 0,
-     "text": "Kalenderdaten: 2009-11-11 · 11.11.2009 · 11. November 2009"
-    },
-    {
-     "id": "wa3-20-06",
-     "level": 0,
-     "text": "Vorzeichen direkt an der Zahl (-29 °C), alleinstehende Hochzeichen direkt dahinter (45°)"
-    },
-    {
-     "id": "wa3-20-07",
-     "level": 0,
-     "text": "Abkürzungen"
-    },
-    {
-     "id": "wa3-20-08",
-     "level": 1,
-     "text": "voll ausgesprochen, also mit Punkt: usw., z. B., bzw."
-    },
-    {
-     "id": "wa3-20-09",
-     "level": 1,
-     "text": "wie ein Wort gesprochen, also ohne Punkt: AG, GmbH, BGB"
-    },
-    {
-     "id": "wa3-20-10",
-     "level": 0,
-     "text": "Aneinanderreihungen"
-    },
-    {
-     "id": "wa3-20-11",
-     "level": 1,
-     "text": "mit Bindestrich: 2-seitig, A4-Format"
-    },
-    {
-     "id": "wa3-20-12",
-     "level": 1,
-     "text": "Ableitungen ohne Bindestrich: 2005er, 3fach, 100%ig"
-    }
-   ]
-  },
-  {
-   "id": "wa3-21",
-   "subject": "Wissenschaftliches Arbeiten",
-   "title": "WA3 · Tipps zum Schreiben",
-   "status": "neu",
-   "lines": [
-    {
-     "id": "wa3-21-01",
-     "level": 0,
-     "text": "Synonymwörterbuch"
-    },
-    {
-     "id": "wa3-21-02",
-     "level": 0,
-     "text": "Thesaurus im Textverarbeitungsprogramm"
-    },
-    {
-     "id": "wa3-21-03",
-     "level": 0,
-     "text": "Rechtschreibkorrektur"
-    },
-    {
-     "id": "wa3-21-04",
-     "level": 0,
-     "text": "Arbeit Korrektur lesen lassen"
-    }
-   ]
-  },
-  {
-   "id": "wa4-01",
-   "subject": "Wissenschaftliches Arbeiten",
-   "title": "WA4 · Wozu zitiert man, und wie?",
-   "status": "neu",
-   "lines": [
-    {
-     "id": "wa4-01-01",
+     "id": "wa4-v2-01-01",
      "level": 0,
      "text": "Zitate dienen dazu, Aussagen zu …"
     },
     {
-     "id": "wa4-01-02",
+     "id": "wa4-v2-01-02",
      "level": 1,
      "text": "belegen"
     },
     {
-     "id": "wa4-01-03",
+     "id": "wa4-v2-01-03",
      "level": 1,
      "text": "illustrieren"
     },
     {
-     "id": "wa4-01-04",
+     "id": "wa4-v2-01-04",
      "level": 1,
      "text": "bekräftigen"
     },
     {
-     "id": "wa4-01-05",
+     "id": "wa4-v2-01-05",
      "level": 1,
      "text": "in Frage zu stellen"
     },
     {
-     "id": "wa4-01-06",
+     "id": "wa4-v2-01-06",
      "level": 0,
      "text": "Grundsätze"
     },
     {
-     "id": "wa4-01-07",
+     "id": "wa4-v2-01-07",
      "level": 1,
      "text": "einheitliche Vorgangsweise"
     },
     {
-     "id": "wa4-01-08",
+     "id": "wa4-v2-01-08",
      "level": 1,
      "text": "Genauigkeit"
     },
     {
-     "id": "wa4-01-09",
+     "id": "wa4-v2-01-09",
      "level": 1,
      "text": "Trennung des „Eigenen\" vom „Anderen\""
     },
     {
-     "id": "wa4-01-10",
+     "id": "wa4-v2-01-10",
      "level": 0,
      "text": "„Abschreiben ist erlaubt (…) jedoch muss genau und redlich zitiert werden!\" (Karmasin & Ribing, 2019, S. 115)"
+    },
+    {
+     "id": "wa4-v2-01-11",
+     "level": 0,
+     "text": "Merkhilfe: „BIBI\" – belegen, illustrieren, bekräftigen, in Frage stellen"
     }
    ]
   },
   {
-   "id": "wa4-02",
+   "id": "wa4-v2-02",
    "subject": "Wissenschaftliches Arbeiten",
-   "title": "WA4 · Zitierstile",
+   "title": "WA4 · Welche Zitierstile gibt es und was regelt APA?",
    "status": "neu",
    "lines": [
     {
-     "id": "wa4-02-01",
+     "id": "wa4-v2-02-01",
      "level": 0,
      "text": "APA: American Psychological Association"
     },
     {
-     "id": "wa4-02-02",
+     "id": "wa4-v2-02-02",
      "level": 1,
      "text": "übliche Zitiertechnik am Institut für Pflegewissenschaft der PMU"
     },
     {
-     "id": "wa4-02-03",
+     "id": "wa4-v2-02-03",
      "level": 0,
-     "text": "Weitere Stile"
+     "text": "Weitere Stile: Harvard, MLA, AMA, Chicago, Turabian"
     },
     {
-     "id": "wa4-02-04",
-     "level": 1,
-     "text": "Harvard, MLA, AMA, Chicago, Turabian"
-    },
-    {
-     "id": "wa4-02-05",
+     "id": "wa4-v2-02-04",
      "level": 0,
      "text": "APA regelt drei Dinge"
     },
     {
-     "id": "wa4-02-06",
+     "id": "wa4-v2-02-05",
      "level": 1,
-     "text": "Formale Textgestaltung"
+     "text": "formale Textgestaltung"
     },
     {
-     "id": "wa4-02-07",
+     "id": "wa4-v2-02-06",
      "level": 1,
      "text": "Kurzbeleg im Fließtext: Nachname, Erscheinungsjahr, Seitenangabe"
     },
     {
-     "id": "wa4-02-08",
+     "id": "wa4-v2-02-07",
      "level": 1,
      "text": "Vollbeleg im Literaturverzeichnis: alphabetisch, dann chronologisch"
     },
     {
-     "id": "wa4-02-09",
+     "id": "wa4-v2-02-08",
      "level": 0,
      "text": "Software: EndNote, Reference Manager, Mendeley"
     }
    ]
   },
   {
-   "id": "wa4-03",
+   "id": "wa4-v2-03",
    "subject": "Wissenschaftliches Arbeiten",
-   "title": "WA4 · Direktes vs. indirektes Zitat",
+   "title": "WA4 · Direktes oder indirektes Zitat – was ist der Unterschied?",
    "status": "neu",
    "lines": [
     {
-     "id": "wa4-03-01",
+     "id": "wa4-v2-03-01",
      "level": 0,
-     "text": "| Direkt (wörtlich) | Indirekt (sinngemäß)"
+     "text": "Anführungszeichen und Quellenangabe"
     },
     {
-     "id": "wa4-03-02",
-     "level": 0,
-     "text": "Anführungszeichen | ?ja, und kursiv | ?nein"
+     "id": "wa4-v2-03-02",
+     "level": 1,
+     "text": "Direkt (wörtlich) | Indirekt (sinngemäß)"
     },
     {
-     "id": "wa4-03-03",
-     "level": 0,
-     "text": "Quellenangabe | ?Name, Jahr, Seite | ?Name, Jahr"
+     "id": "wa4-v2-03-03",
+     "level": 1,
+     "text": "?Anfüh­rungs­zei­chen, kursiv | ?keine Anfüh­rungs­zei­chen"
     },
     {
-     "id": "wa4-03-04",
+     "id": "wa4-v2-03-04",
+     "level": 1,
+     "text": "?Name, Jahr, Seite | ?Name, Jahr"
+    },
+    {
+     "id": "wa4-v2-03-05",
      "level": 0,
      "text": "Kurzes wörtliches Zitat (bis 2 Zeilen)"
     },
     {
-     "id": "wa4-03-05",
+     "id": "wa4-v2-03-06",
      "level": 1,
      "text": "direkt im Text, kursiv, in Anführungszeichen"
     },
     {
-     "id": "wa4-03-06",
+     "id": "wa4-v2-03-07",
      "level": 0,
      "text": "Blockzitat (ab 3 Zeilen bzw. 40 Wörtern)"
     },
     {
-     "id": "wa4-03-07",
+     "id": "wa4-v2-03-08",
      "level": 1,
      "text": "durch Leerzeile abgesetzt, eingerückt"
     },
     {
-     "id": "wa4-03-08",
+     "id": "wa4-v2-03-09",
      "level": 1,
      "text": "kleinere Schrift, geringerer Zeilenabstand"
     },
     {
-     "id": "wa4-03-09",
+     "id": "wa4-v2-03-10",
      "level": 1,
      "text": "NICHT kursiv, KEINE Anführungszeichen"
     }
    ]
   },
   {
-   "id": "wa4-04",
+   "id": "wa4-v2-04",
    "subject": "Wissenschaftliches Arbeiten",
-   "title": "WA4 · Indirektes Zitat: wie viele Autor:innen?",
+   "title": "WA4 · Indirektes Zitat: Wie gibt man eine, zwei oder mehr Autor:innen an?",
    "status": "neu",
    "lines": [
     {
-     "id": "wa4-04-01",
+     "id": "wa4-v2-04-01",
      "level": 0,
-     "text": "Autor:innen | in Klammer | im Satz"
+     "text": "In der Klammer"
     },
     {
-     "id": "wa4-04-02",
-     "level": 0,
-     "text": "eine | ?(Krause, 2008) | Krause (2008) konstatierte …"
+     "id": "wa4-v2-04-02",
+     "level": 1,
+     "text": "Autor:innen | Beleg"
     },
     {
-     "id": "wa4-04-03",
-     "level": 0,
-     "text": "zwei | ?(Richter & Braun, 2007) | Richter und Braun (2007) fanden …"
+     "id": "wa4-v2-04-03",
+     "level": 1,
+     "text": "eine | ?(Krause, 2008)"
     },
     {
-     "id": "wa4-04-04",
-     "level": 0,
-     "text": "drei und mehr | ?(Hunz et al., 2005) | Hunz et al. (2005) erforschten …"
+     "id": "wa4-v2-04-04",
+     "level": 1,
+     "text": "zwei | ?(Richter & Braun, 2007)"
     },
     {
-     "id": "wa4-04-05",
-     "level": 0,
-     "text": "mehrere Quellen | ?(Schmoller, 2000; Wurzer, 2003) | –"
+     "id": "wa4-v2-04-05",
+     "level": 1,
+     "text": "drei und mehr | ?(Hunz et al., 2005)"
     },
     {
-     "id": "wa4-04-06",
+     "id": "wa4-v2-04-06",
+     "level": 1,
+     "text": "mehrere Quellen | ?(Schmoller, 2000; Wurzer, 2003)"
+    },
+    {
+     "id": "wa4-v2-04-07",
+     "level": 0,
+     "text": "Im Satz"
+    },
+    {
+     "id": "wa4-v2-04-08",
+     "level": 1,
+     "text": "Autor:innen | Beleg"
+    },
+    {
+     "id": "wa4-v2-04-09",
+     "level": 1,
+     "text": "eine | Krause (2008) kon­sta­tierte …"
+    },
+    {
+     "id": "wa4-v2-04-10",
+     "level": 1,
+     "text": "zwei | Richter und Braun (2007) fanden …"
+    },
+    {
+     "id": "wa4-v2-04-11",
+     "level": 1,
+     "text": "drei und mehr | Hunz et al. (2005) erforschten …"
+    },
+    {
+     "id": "wa4-v2-04-12",
      "level": 0,
      "text": "In der Klammer „&\", im Fließtext „und\""
     }
    ]
   },
   {
-   "id": "wa4-05",
+   "id": "wa4-v2-05",
    "subject": "Wissenschaftliches Arbeiten",
-   "title": "WA4 · Sonderfälle der Quellenangabe",
+   "title": "WA4 · Welche Sonderfälle der Quellenangabe gibt es?",
    "status": "neu",
    "lines": [
     {
-     "id": "wa4-05-01",
+     "id": "wa4-v2-05-01",
      "level": 0,
      "text": "Institutionen"
     },
     {
-     "id": "wa4-05-02",
+     "id": "wa4-v2-05-02",
      "level": 1,
      "text": "(National Institute of Mental Health [NIMH], 2000)"
     },
     {
-     "id": "wa4-05-03",
+     "id": "wa4-v2-05-03",
      "level": 1,
      "text": "danach kurz: (NIMH, 2000)"
     },
     {
-     "id": "wa4-05-04",
+     "id": "wa4-v2-05-04",
      "level": 0,
      "text": "Keine Autor:in feststellbar"
     },
     {
-     "id": "wa4-05-05",
+     "id": "wa4-v2-05-05",
      "level": 1,
      "text": "erste zwei bis drei Wörter des Titels und Jahr: (Akademisierte Pflege, 2009)"
     },
     {
-     "id": "wa4-05-06",
+     "id": "wa4-v2-05-06",
      "level": 0,
      "text": "Autor:in will anonym bleiben"
     },
     {
-     "id": "wa4-05-07",
+     "id": "wa4-v2-05-07",
      "level": 1,
      "text": "(Anonymus, 2009)"
     },
     {
-     "id": "wa4-05-08",
+     "id": "wa4-v2-05-08",
      "level": 0,
      "text": "Sekundärzitat"
     },
     {
-     "id": "wa4-05-09",
+     "id": "wa4-v2-05-09",
      "level": 1,
      "text": "(Nightingale, 1858; zitiert nach Masters, 2011, S. 387)"
     }
    ]
   },
   {
-   "id": "wa4-06",
+   "id": "wa4-v2-06",
    "subject": "Wissenschaftliches Arbeiten",
-   "title": "WA4 · Kennzeichnungen im wörtlichen Zitat",
+   "title": "WA4 · Wie kennzeichnet man Änderungen im wörtlichen Zitat?",
    "status": "neu",
    "lines": [
     {
-     "id": "wa4-06-01",
+     "id": "wa4-v2-06-01",
      "level": 0,
-     "text": "Situation | Kennzeichnung"
+     "text": "Kennzeichnungen"
     },
     {
-     "id": "wa4-06-02",
-     "level": 0,
+     "id": "wa4-v2-06-02",
+     "level": 1,
+     "text": "Situation | Kenn­zeich­nung"
+    },
+    {
+     "id": "wa4-v2-06-03",
+     "level": 1,
      "text": "Fehler im Original | ?[sic] – kursiv, „wirklich so\""
     },
     {
-     "id": "wa4-06-03",
-     "level": 0,
-     "text": "Hervorhebung aus dem Original | ?Herv. i. O. (nach der Literaturangabe)"
+     "id": "wa4-v2-06-04",
+     "level": 1,
+     "text": "Her­vorhe­bung aus dem Original | ?Herv. i. O. (nach der Litera­turan­gabe)"
     },
     {
-     "id": "wa4-06-04",
-     "level": 0,
-     "text": "eigene Hervorhebung | ?[Herv. d. Verf.]"
+     "id": "wa4-v2-06-05",
+     "level": 1,
+     "text": "eigene Her­vorhe­bung | ?[Herv. d. Verf.]"
     },
     {
-     "id": "wa4-06-05",
-     "level": 0,
+     "id": "wa4-v2-06-06",
+     "level": 1,
      "text": "eigene Ergänzung | ?[in eckigen Klammern]"
     },
     {
-     "id": "wa4-06-06",
-     "level": 0,
+     "id": "wa4-v2-06-07",
+     "level": 1,
      "text": "eigene Übersetzung | ?[Übersetzung durch d. Verf.]"
     },
     {
-     "id": "wa4-06-07",
-     "level": 0,
-     "text": "Zitat im Zitat | ?‚einfache Anführungszeichen'"
+     "id": "wa4-v2-06-08",
+     "level": 1,
+     "text": "Zitat im Zitat | ?‚einfache Anfüh­rungs­zei­chen'"
     },
     {
-     "id": "wa4-06-08",
-     "level": 0,
+     "id": "wa4-v2-06-09",
+     "level": 1,
      "text": "Auslassung am Anfang oder Ende | ?…"
     },
     {
-     "id": "wa4-06-09",
-     "level": 0,
+     "id": "wa4-v2-06-10",
+     "level": 1,
      "text": "Auslassung in der Mitte | ?(…)"
+    },
+    {
+     "id": "wa4-v2-06-11",
+     "level": 0,
+     "text": "Merkhilfe: alles, was von mir kommt, steht in eckigen Klammern"
     }
    ]
   },
   {
-   "id": "wa4-07",
+   "id": "wa4-v2-07",
    "subject": "Wissenschaftliches Arbeiten",
-   "title": "WA4 · Literaturverzeichnis – Grundregeln",
+   "title": "WA4 · Welche Grundregeln gelten für das Literaturverzeichnis?",
    "status": "neu",
    "lines": [
     {
-     "id": "wa4-07-01",
+     "id": "wa4-v2-07-01",
      "level": 0,
      "text": "Vollbeleg aller zitierten Werke am Ende der Arbeit"
     },
     {
-     "id": "wa4-07-02",
+     "id": "wa4-v2-07-02",
      "level": 0,
      "text": "Alphabetisch nach Nachnamen, dann chronologisch"
     },
     {
-     "id": "wa4-07-03",
-     "level": 0,
-     "text": "Gleiche Autor:in, gleiches Jahr: 2007a, 2007b"
+     "id": "wa4-v2-07-03",
+     "level": 1,
+     "text": "gleiche Autor:in, gleiches Jahr: 2007a, 2007b"
     },
     {
-     "id": "wa4-07-04",
+     "id": "wa4-v2-07-04",
      "level": 0,
      "text": "Arten von Einträgen"
     },
     {
-     "id": "wa4-07-05",
+     "id": "wa4-v2-07-05",
      "level": 1,
      "text": "Monografien (eine, zwei oder mehrere Autor:innen)"
     },
     {
-     "id": "wa4-07-06",
+     "id": "wa4-v2-07-06",
      "level": 1,
      "text": "Monografien mit Herausgeber:innen"
     },
     {
-     "id": "wa4-07-07",
+     "id": "wa4-v2-07-07",
      "level": 1,
      "text": "Kapitel oder Artikel aus Sammelwerken"
     },
     {
-     "id": "wa4-07-08",
+     "id": "wa4-v2-07-08",
      "level": 1,
      "text": "Beiträge aus Lexika und Wörterbüchern"
     },
     {
-     "id": "wa4-07-09",
+     "id": "wa4-v2-07-09",
      "level": 1,
      "text": "Zeitschriften- und Zeitungsartikel"
     },
     {
-     "id": "wa4-07-10",
+     "id": "wa4-v2-07-10",
      "level": 1,
      "text": "Studienabschlussarbeiten"
     },
     {
-     "id": "wa4-07-11",
+     "id": "wa4-v2-07-11",
      "level": 1,
      "text": "Online- und E-Book-Angaben"
     }
    ]
   },
   {
-   "id": "wa4-08",
+   "id": "wa4-v2-08",
    "subject": "Wissenschaftliches Arbeiten",
-   "title": "WA4 · APA: Buch (Monografie) und Herausgeberwerk",
+   "title": "WA4 · APA: Wie zitiert man ein Buch (Monografie) und ein Herausgeberwerk?",
    "status": "neu",
    "lines": [
     {
-     "id": "wa4-08-01",
+     "id": "wa4-v2-08-01",
      "level": 0,
      "text": "Monografie"
     },
     {
-     "id": "wa4-08-02",
+     "id": "wa4-v2-08-02",
      "level": 1,
      "text": "Schema: Nachname, Initialen. (Jahr). Titel. Untertitel (Auflage). Verlag."
     },
     {
-     "id": "wa4-08-03",
+     "id": "wa4-v2-08-03",
      "level": 1,
      "text": "Beispiel: Waller, H. (2006). Gesundheitswissenschaft. Eine Einführung in Grundlagen und Praxis (4., überarb. und erweit. Aufl.). Kohlhammer."
     },
     {
-     "id": "wa4-08-04",
+     "id": "wa4-v2-08-04",
      "level": 1,
      "text": "Kursiv: Titel und Untertitel"
     },
     {
-     "id": "wa4-08-05",
+     "id": "wa4-v2-08-05",
      "level": 1,
      "text": "Mehrere Autor:innen: Glaser, B. G. & Strauss, A. L. (2005). …"
     },
     {
-     "id": "wa4-08-06",
+     "id": "wa4-v2-08-06",
      "level": 0,
      "text": "Herausgeberwerk"
     },
     {
-     "id": "wa4-08-07",
+     "id": "wa4-v2-08-07",
      "level": 1,
      "text": "Schema: Nachname, Initialen. (Hrsg.). (Jahr). Titel. Untertitel. Verlag."
     },
     {
-     "id": "wa4-08-08",
+     "id": "wa4-v2-08-08",
      "level": 1,
      "text": "Beispiel: Panfil, E.-M. (Hrsg.). (2004). Fokus: Klinische Pflegeforschung. Beispiele quantitativer Studien. Schlütersche."
     }
    ]
   },
   {
-   "id": "wa4-09",
+   "id": "wa4-v2-09",
    "subject": "Wissenschaftliches Arbeiten",
-   "title": "WA4 · APA: Kapitel aus Sammelwerk und Lexikonartikel",
+   "title": "WA4 · APA: Wie zitiert man ein Kapitel aus einem Sammelwerk oder einen Lexikonartikel?",
    "status": "neu",
    "lines": [
     {
-     "id": "wa4-09-01",
+     "id": "wa4-v2-09-01",
      "level": 0,
      "text": "Kapitel aus Sammelwerk"
     },
     {
-     "id": "wa4-09-02",
+     "id": "wa4-v2-09-02",
      "level": 1,
      "text": "Schema: Nachname, Initialen. (Jahr). Titel des Kapitels. In Initialen Nachname (Hrsg.), Titel des Werkes (Auflage, S. x-y). Verlag."
     },
     {
-     "id": "wa4-09-03",
+     "id": "wa4-v2-09-03",
      "level": 1,
      "text": "Beispiel: Kloster, W. (2008). Beatmung. In E. Knipfer & E. Kochs (Hrsg.), Klinikleitfaden Intensivpflege (4. Aufl., S. 257-300). Urban & Fischer."
     },
     {
-     "id": "wa4-09-04",
+     "id": "wa4-v2-09-04",
      "level": 1,
      "text": "Merke: Bei den Herausgeber:innen stehen die Initialen VOR dem Nachnamen"
     },
     {
-     "id": "wa4-09-05",
+     "id": "wa4-v2-09-05",
      "level": 0,
      "text": "Lexikon oder Wörterbuch"
     },
     {
-     "id": "wa4-09-06",
+     "id": "wa4-v2-09-06",
      "level": 1,
      "text": "Aufbau wie beim Sammelwerk, ggf. mit Band"
     },
     {
-     "id": "wa4-09-07",
+     "id": "wa4-v2-09-07",
      "level": 1,
      "text": "Beispiel: Haußer, K. (2002). Identität. In G. Endruweit & G. Trommsdorff (Hrsg.), Wörterbuch der Soziologie (2. Aufl., S. 218-220). Lucius & Lucius."
     }
    ]
   },
   {
-   "id": "wa4-10",
+   "id": "wa4-v2-10",
    "subject": "Wissenschaftliches Arbeiten",
-   "title": "WA4 · APA: Zeitschriften- und Zeitungsartikel",
+   "title": "WA4 · APA: Wie zitiert man Zeitschriften- und Zeitungsartikel?",
    "status": "neu",
    "lines": [
     {
-     "id": "wa4-10-01",
+     "id": "wa4-v2-10-01",
      "level": 0,
      "text": "Zeitschriftenartikel"
     },
     {
-     "id": "wa4-10-02",
+     "id": "wa4-v2-10-02",
      "level": 1,
      "text": "Schema: Nachname, Initialen. (Jahr). Titel des Artikels. Zeitschrift, Jahrgang(Ausgabe), Seiten."
     },
     {
-     "id": "wa4-10-03",
+     "id": "wa4-v2-10-03",
      "level": 1,
      "text": "Kursiv: Zeitschriftentitel und Jahrgang"
     },
     {
-     "id": "wa4-10-04",
+     "id": "wa4-v2-10-04",
      "level": 1,
      "text": "Online-Ausgabe: zusätzlich DOI (Digital Object Identifier)"
     },
     {
-     "id": "wa4-10-05",
+     "id": "wa4-v2-10-05",
      "level": 1,
      "text": "Beispiel: Goldmund, A. (2009). Themenzentrierte Interaktion in der Langzeitbetreuung. Österreichische Pflegezeitschrift, 62(6/7), 19-21."
     },
     {
-     "id": "wa4-10-06",
+     "id": "wa4-v2-10-06",
      "level": 0,
      "text": "Zeitungsartikel"
     },
     {
-     "id": "wa4-10-07",
+     "id": "wa4-v2-10-07",
      "level": 1,
      "text": "Schema: Nachname, Initialen. (Jahr, Tag. Monat). Titel. Zeitung, Seite."
     },
     {
-     "id": "wa4-10-08",
+     "id": "wa4-v2-10-08",
      "level": 1,
      "text": "Ohne Autor:in: Der Titel rückt nach vorne"
     },
     {
-     "id": "wa4-10-09",
+     "id": "wa4-v2-10-09",
      "level": 1,
      "text": "Beispiel: Roither, M. (2010, 13. Februar). Pflegewissenschaft als Onlinestudium. Salzburger Nachrichten, S. 40."
     }
    ]
   },
   {
-   "id": "wa4-11",
+   "id": "wa4-v2-11",
    "subject": "Wissenschaftliches Arbeiten",
-   "title": "WA4 · APA: Abschlussarbeiten und Online-Quellen",
+   "title": "WA4 · APA: Wie zitiert man Abschlussarbeiten und Online-Quellen?",
    "status": "neu",
    "lines": [
     {
-     "id": "wa4-11-01",
+     "id": "wa4-v2-11-01",
      "level": 0,
      "text": "Studienabschlussarbeit"
     },
     {
-     "id": "wa4-11-02",
+     "id": "wa4-v2-11-02",
      "level": 1,
      "text": "Schema: Nachname, Initialen. (Jahr). Titel. Untertitel. Unveröffentlichte Abschlussarbeit, Universität, Ort."
     },
     {
-     "id": "wa4-11-03",
+     "id": "wa4-v2-11-03",
      "level": 1,
      "text": "Beispiel: Staffa, M. (2006). Das Konzept der Animationspflege an der Christian-Doppler Klinik in Salzburg aus soziologischer Sicht. Unveröffentlichte Diplomarbeit, Universität Salzburg."
     },
     {
-     "id": "wa4-11-04",
+     "id": "wa4-v2-11-04",
      "level": 0,
      "text": "Online-Quelle"
     },
     {
-     "id": "wa4-11-05",
+     "id": "wa4-v2-11-05",
      "level": 1,
      "text": "Schema: Nachname, Initialen. (Jahr). Titel. Untertitel. Zugriff am Datum. Verfügbar unter URL"
     },
     {
-     "id": "wa4-11-06",
+     "id": "wa4-v2-11-06",
      "level": 1,
      "text": "Beispiel: Wenzler-Cremer, H. (2008). Die Grounded Theory als Auswertungsmethode. Zugriff am 30.10.2009. Verfügbar unter http://www.ph-freiburg.de/…"
     }
    ]
   },
   {
-   "id": "wa5-01",
+   "id": "wa5-v2-01",
    "subject": "Wissenschaftliches Arbeiten",
-   "title": "WA5 · Schrift: Art, Größe, Zeilenabstand",
+   "title": "WA5 · Was macht ein gutes Inhaltsverzeichnis aus?",
    "status": "neu",
    "lines": [
     {
-     "id": "wa5-01-01",
-     "level": 0,
-     "text": "Schriftarten"
-    },
-    {
-     "id": "wa5-01-02",
-     "level": 1,
-     "text": "Times New Roman, Calibri, Garamond (Arial, Verdana)"
-    },
-    {
-     "id": "wa5-01-03",
-     "level": 0,
-     "text": "Schriftgröße"
-    },
-    {
-     "id": "wa5-01-04",
-     "level": 1,
-     "text": "Fließtext: 12 pt (Arial und Verdana: 11 pt)"
-    },
-    {
-     "id": "wa5-01-05",
-     "level": 1,
-     "text": "Lange wörtliche Zitate (über 3 Zeilen): 10 pt, eingerückt, mit Leerzeile abgesetzt"
-    },
-    {
-     "id": "wa5-01-06",
-     "level": 0,
-     "text": "Zeilenabstand"
-    },
-    {
-     "id": "wa5-01-07",
-     "level": 1,
-     "text": "Fließtext: 1,5-zeilig"
-    },
-    {
-     "id": "wa5-01-08",
-     "level": 1,
-     "text": "Längere wörtliche Zitate: 1-zeilig"
-    },
-    {
-     "id": "wa5-01-09",
-     "level": 0,
-     "text": "Achtung: LV5 schreibt Blockzitate „kursiv\", LV4 (APA) „nicht kursiv\" – im Zweifel nachfragen"
-    }
-   ]
-  },
-  {
-   "id": "wa5-02",
-   "subject": "Wissenschaftliches Arbeiten",
-   "title": "WA5 · Hervorhebungen und ihre Shortcuts",
-   "status": "neu",
-   "lines": [
-    {
-     "id": "wa5-02-01",
-     "level": 0,
-     "text": "Hervorhebung | Shortcut"
-    },
-    {
-     "id": "wa5-02-02",
-     "level": 0,
-     "text": "Unterstreichung | ?Strg + Umsch + U"
-    },
-    {
-     "id": "wa5-02-03",
-     "level": 0,
-     "text": "Kursiv | ?Strg + Umsch + K"
-    },
-    {
-     "id": "wa5-02-04",
-     "level": 0,
-     "text": "Fett | ?Strg + Umsch + F"
-    },
-    {
-     "id": "wa5-02-05",
-     "level": 0,
-     "text": "Kapitälchen | ?Strg + Umsch + Q"
-    },
-    {
-     "id": "wa5-02-06",
-     "level": 0,
-     "text": "Hochstellung | ?Strg + +"
-    },
-    {
-     "id": "wa5-02-07",
-     "level": 0,
-     "text": "Tiefstellung | ?Strg + #"
-    },
-    {
-     "id": "wa5-02-08",
-     "level": 0,
-     "text": "Maximal zwei Hervorhebungsformen verwenden!"
-    }
-   ]
-  },
-  {
-   "id": "wa5-03",
-   "subject": "Wissenschaftliches Arbeiten",
-   "title": "WA5 · Seitenlayout",
-   "status": "neu",
-   "lines": [
-    {
-     "id": "wa5-03-01",
-     "level": 0,
-     "text": "Satzspiegel: hochformatig, einseitig (asymmetrisch)"
-    },
-    {
-     "id": "wa5-03-02",
-     "level": 0,
-     "text": "Seitenränder"
-    },
-    {
-     "id": "wa5-03-03",
-     "level": 1,
-     "text": "Rand | Breite"
-    },
-    {
-     "id": "wa5-03-04",
-     "level": 1,
-     "text": "oben | ?2,5 cm"
-    },
-    {
-     "id": "wa5-03-05",
-     "level": 1,
-     "text": "unten | ?2,5 cm"
-    },
-    {
-     "id": "wa5-03-06",
-     "level": 1,
-     "text": "links | ?3,0 cm"
-    },
-    {
-     "id": "wa5-03-07",
-     "level": 1,
-     "text": "rechts | ?2,5 cm"
-    },
-    {
-     "id": "wa5-03-08",
-     "level": 0,
-     "text": "Seitenzahlen"
-    },
-    {
-     "id": "wa5-03-09",
-     "level": 1,
-     "text": "rechts unten"
-    },
-    {
-     "id": "wa5-03-10",
-     "level": 1,
-     "text": "Titelblatt zählt als erste Seite, wird aber nicht nummeriert"
-    },
-    {
-     "id": "wa5-03-11",
-     "level": 0,
-     "text": "Textausrichtung: Blocksatz, und dann immer mit Silbentrennung"
-    },
-    {
-     "id": "wa5-03-12",
-     "level": 0,
-     "text": "Absätze: klar gegliedert durch Erstzeileneinzüge oder Absatzabstände"
-    }
-   ]
-  },
-  {
-   "id": "wa5-04",
-   "subject": "Wissenschaftliches Arbeiten",
-   "title": "WA5 · Überschriften und Formatvorlagen",
-   "status": "neu",
-   "lines": [
-    {
-     "id": "wa5-04-01",
-     "level": 0,
-     "text": "Vorlage | Schriftgröße | Sonst"
-    },
-    {
-     "id": "wa5-04-02",
-     "level": 0,
-     "text": "Standard | ?12 pt (11 pt) | Blocksatz, 1,5-zeilig"
-    },
-    {
-     "id": "wa5-04-03",
-     "level": 0,
-     "text": "Überschrift 1 | ?16 pt | fett, linksbündig, 12 pt Abstand vor und nach, 1,5-zeilig"
-    },
-    {
-     "id": "wa5-04-04",
-     "level": 0,
-     "text": "Überschrift 2 | ?14 pt | wie Überschrift 1"
-    },
-    {
-     "id": "wa5-04-05",
-     "level": 0,
-     "text": "Überschrift 3 | ?13 pt | wie Überschrift 1"
-    },
-    {
-     "id": "wa5-04-06",
-     "level": 0,
-     "text": "Shortcuts: Alt + 1, Alt + 2, Alt + 3"
-    },
-    {
-     "id": "wa5-04-07",
-     "level": 0,
-     "text": "Überschriften hervorheben durch größere, fette oder kursive Schrift, Kapitälchen, andere Schriftart"
-    },
-    {
-     "id": "wa5-04-08",
-     "level": 1,
-     "text": "Kombinationen sparsam einsetzen"
-    }
-   ]
-  },
-  {
-   "id": "wa5-05",
-   "subject": "Wissenschaftliches Arbeiten",
-   "title": "WA5 · Was steht auf dem Titelblatt?",
-   "status": "neu",
-   "lines": [
-    {
-     "id": "wa5-05-01",
-     "level": 0,
-     "text": "Thema der Arbeit"
-    },
-    {
-     "id": "wa5-05-02",
-     "level": 0,
-     "text": "Titel der Lehrveranstaltung"
-    },
-    {
-     "id": "wa5-05-03",
-     "level": 0,
-     "text": "Universität, Institut"
-    },
-    {
-     "id": "wa5-05-04",
-     "level": 0,
-     "text": "Semester, Jahr"
-    },
-    {
-     "id": "wa5-05-05",
-     "level": 0,
-     "text": "Name der LV-Leiter:in"
-    },
-    {
-     "id": "wa5-05-06",
-     "level": 0,
-     "text": "Name der Verfasser:in"
-    },
-    {
-     "id": "wa5-05-07",
-     "level": 0,
-     "text": "Matrikelnummer"
-    },
-    {
-     "id": "wa5-05-08",
-     "level": 0,
-     "text": "Keine Seitenzahl auf dem Titelblatt!"
-    }
-   ]
-  },
-  {
-   "id": "wa5-06",
-   "subject": "Wissenschaftliches Arbeiten",
-   "title": "WA5 · Regeln für das Inhaltsverzeichnis",
-   "status": "neu",
-   "lines": [
-    {
-     "id": "wa5-06-01",
+     "id": "wa5-v2-01-01",
      "level": 0,
      "text": "Logisch-systematisch, ausgewogen proportioniert, übersichtlich"
     },
     {
-     "id": "wa5-06-02",
-     "level": 0,
-     "text": "Kapitelnummerierung beginnt im Hauptteil"
+     "id": "wa5-v2-01-02",
+     "level": 1,
+     "text": "gleiche Ebene: ähnliches Gewicht, ähnliche Tiefe und Länge"
     },
     {
-     "id": "wa5-06-03",
+     "id": "wa5-v2-01-03",
      "level": 0,
-     "text": "Maximal vier Gliederungsebenen"
+     "text": "Ebenen"
     },
     {
-     "id": "wa5-06-04",
-     "level": 0,
-     "text": "Unterkapitel mit nur einem Unterpunkt vermeiden"
+     "id": "wa5-v2-01-04",
+     "level": 1,
+     "text": "Kapitelnummerierung beginnt im Hauptteil; nur Gliederungspunkte nummeriert, Vor- und Nachtexte nicht"
     },
     {
-     "id": "wa5-06-05",
+     "id": "wa5-v2-01-05",
+     "level": 1,
+     "text": "maximal drei bis vier Gliederungsebenen"
+    },
+    {
+     "id": "wa5-v2-01-06",
+     "level": 1,
+     "text": "jede Untergliederung hat mindestens zwei Unterpunkte"
+    },
+    {
+     "id": "wa5-v2-01-07",
      "level": 0,
+     "text": "Formulierung"
+    },
+    {
+     "id": "wa5-v2-01-08",
+     "level": 1,
+     "text": "knapp und aussagekräftig, keine Fragesätze, keine unüblichen Abkürzungen"
+    },
+    {
+     "id": "wa5-v2-01-09",
+     "level": 1,
      "text": "Unterpunkte nicht wortgetreu vom Oberpunkt übernehmen"
     },
     {
-     "id": "wa5-06-06",
+     "id": "wa5-v2-01-10",
      "level": 1,
-     "text": "Nicht: 2.1 Quantitative und qualitative Beobachtung"
+     "text": "nicht: 2.1 Quantitative und qualitative Beobachtung – sondern: 2.1 Formen der Beobachtung in der Sozialforschung"
     },
     {
-     "id": "wa5-06-07",
-     "level": 1,
-     "text": "Sondern: 2.1 Formen der Beobachtung in der Sozialforschung"
-    },
-    {
-     "id": "wa5-06-08",
+     "id": "wa5-v2-01-11",
      "level": 0,
      "text": "Exkurse gesondert ausweisen: 2.2 Exkurs: Street-Corner-Society"
     },
     {
-     "id": "wa5-06-09",
+     "id": "wa5-v2-01-12",
      "level": 0,
-     "text": "Automatisch erstellen: Überschriften laufend definieren → Seitenumbruch vor der Einleitung → Inhaltsverzeichnis erstellen → laufend aktualisieren"
-    },
-    {
-     "id": "wa5-06-10",
-     "level": 0,
-     "text": "Tabellen-, Abbildungs- und Abkürzungsverzeichnis: nach dem Inhaltsverzeichnis, ebenfalls automatisch"
+     "text": "Seitenzahlen angegeben; Ober- und Unterpunkte typografisch auf einen Blick unterscheidbar"
     }
    ]
   },
   {
-   "id": "wa5-07",
+   "id": "wa5-v2-02",
    "subject": "Wissenschaftliches Arbeiten",
-   "title": "WA5 · Schriftliche Erklärung der eigenständigen Verfassung",
+   "title": "WA5 · Was steht in der schriftlichen Erklärung der eigenständigen Verfassung?",
    "status": "neu",
    "lines": [
     {
-     "id": "wa5-07-01",
+     "id": "wa5-v2-02-01",
      "level": 0,
      "text": "Arbeit selbstständig verfasst"
     },
     {
-     "id": "wa5-07-02",
+     "id": "wa5-v2-02-02",
      "level": 0,
      "text": "Nur die angegebenen Quellen und Hilfsmittel benutzt, keine unerlaubte Hilfe"
     },
     {
-     "id": "wa5-07-03",
+     "id": "wa5-v2-02-03",
      "level": 0,
      "text": "Thema nirgends sonst als Prüfungsarbeit vorgelegt"
     },
     {
-     "id": "wa5-07-04",
+     "id": "wa5-v2-02-04",
      "level": 0,
      "text": "Arbeit stimmt mit der begutachteten Arbeit überein"
     },
     {
-     "id": "wa5-07-05",
+     "id": "wa5-v2-02-05",
      "level": 0,
      "text": "Datum und Unterschrift"
     }
    ]
   },
   {
-   "id": "wa5-08",
+   "id": "wa6-v2-01",
    "subject": "Wissenschaftliches Arbeiten",
-   "title": "WA5 · Datensicherung",
+   "title": "WA6 · Worauf achtet man bei der Textüberarbeitung?",
    "status": "neu",
    "lines": [
     {
-     "id": "wa5-08-01",
+     "id": "wa6-v2-01-01",
      "level": 0,
-     "text": "Häufig speichern"
+     "text": "Inhaltlich: Gliederung und Aufbau"
     },
     {
-     "id": "wa5-08-02",
-     "level": 0,
-     "text": "Regelmäßig Sicherungskopien machen"
-    },
-    {
-     "id": "wa5-08-03",
-     "level": 0,
-     "text": "Mindestens zwei verschiedene Datenspeicher"
-    },
-    {
-     "id": "wa5-08-04",
-     "level": 1,
-     "text": "Festplatte, USB-Stick, CD, E-Mail an die eigene Adresse"
-    },
-    {
-     "id": "wa5-08-05",
-     "level": 0,
-     "text": "Abschnittsweise ausdrucken"
-    }
-   ]
-  },
-  {
-   "id": "wa6-01",
-   "subject": "Wissenschaftliches Arbeiten",
-   "title": "WA6 · Textüberarbeitung – worauf achten?",
-   "status": "neu",
-   "lines": [
-    {
-     "id": "wa6-01-01",
-     "level": 0,
-     "text": "Inhaltliche Überarbeitung: Gliederung und Aufbau"
-    },
-    {
-     "id": "wa6-01-02",
+     "id": "wa6-v2-01-02",
      "level": 1,
      "text": "logische, folgerichtige Struktur"
     },
     {
-     "id": "wa6-01-03",
+     "id": "wa6-v2-01-03",
      "level": 1,
-     "text": "Inhalt und Umfang angemessen"
+     "text": "Inhalt und Umfang angemessen, ausgewogen proportioniert"
     },
     {
-     "id": "wa6-01-04",
-     "level": 1,
-     "text": "ausgewogen proportioniert"
-    },
-    {
-     "id": "wa6-01-05",
+     "id": "wa6-v2-01-04",
      "level": 1,
      "text": "prägnante inhaltliche Aussagen"
     },
     {
-     "id": "wa6-01-06",
+     "id": "wa6-v2-01-05",
      "level": 1,
      "text": "penible Literaturverwaltung"
     },
     {
-     "id": "wa6-01-07",
+     "id": "wa6-v2-01-06",
      "level": 0,
-     "text": "Inhaltliche Überarbeitung: inhaltliche Kriterien"
+     "text": "Inhaltlich: inhaltliche Kriterien"
     },
     {
-     "id": "wa6-01-08",
+     "id": "wa6-v2-01-07",
      "level": 1,
      "text": "folgerichtige und klare Argumentation"
     },
     {
-     "id": "wa6-01-09",
+     "id": "wa6-v2-01-08",
      "level": 1,
      "text": "adäquate Methodenwahl"
     },
     {
-     "id": "wa6-01-10",
+     "id": "wa6-v2-01-09",
      "level": 0,
-     "text": "Sprachlich-stilistische Überarbeitung"
+     "text": "Sprachlich-stilistisch"
     },
     {
-     "id": "wa6-01-11",
+     "id": "wa6-v2-01-10",
      "level": 1,
      "text": "Formulierung, Sprachstil"
     },
     {
-     "id": "wa6-01-12",
+     "id": "wa6-v2-01-11",
      "level": 1,
      "text": "typografische Gestaltung und Layout"
     },
     {
-     "id": "wa6-01-13",
+     "id": "wa6-v2-01-12",
      "level": 0,
      "text": "Grammatik, Rechtschreibung, Zeichensetzung"
     },
     {
-     "id": "wa6-01-14",
+     "id": "wa6-v2-01-13",
      "level": 1,
      "text": "Einhaltung der Sprachregeln"
-    },
-    {
-     "id": "wa6-01-15",
-     "level": 0,
-     "text": "Kreisdiagramm: Zeitaufwand | Planen 30 % | Schreiben 30 % | Überarbeiten 40 %"
     }
    ]
   },
   {
-   "id": "wa6-02",
+   "id": "wa6-v2-02",
    "subject": "Wissenschaftliches Arbeiten",
-   "title": "WA6 · Die 5 Checklisten der Endredaktion",
+   "title": "WA6 · Welche 5 Checklisten gibt es für die Endredaktion?",
    "status": "neu",
    "lines": [
     {
-     "id": "wa6-02-01",
+     "id": "wa6-v2-02-01",
      "level": 0,
      "text": "Text"
     },
     {
-     "id": "wa6-02-02",
+     "id": "wa6-v2-02-02",
      "level": 0,
      "text": "Inhaltsverzeichnis"
     },
     {
-     "id": "wa6-02-03",
+     "id": "wa6-v2-02-03",
      "level": 0,
      "text": "Quellenangaben im Text"
     },
     {
-     "id": "wa6-02-04",
+     "id": "wa6-v2-02-04",
      "level": 0,
      "text": "Literaturverzeichnis"
     },
     {
-     "id": "wa6-02-05",
+     "id": "wa6-v2-02-05",
      "level": 0,
      "text": "Endkontrolle"
+    },
+    {
+     "id": "wa6-v2-02-06",
+     "level": 0,
+     "text": "Die einzelnen Checklisten stehen im optionalen Formalia-Pack"
     }
    ]
   },
   {
-   "id": "wa6-03",
-   "subject": "Wissenschaftliches Arbeiten",
-   "title": "WA6 · Checkliste Text",
-   "status": "neu",
-   "lines": [
-    {
-     "id": "wa6-03-01",
-     "level": 0,
-     "text": "Überschriften identisch mit dem Inhaltsverzeichnis?"
-    },
-    {
-     "id": "wa6-03-02",
-     "level": 0,
-     "text": "Interne Verweise (Seiten, Kapitel) korrekt?"
-    },
-    {
-     "id": "wa6-03-03",
-     "level": 0,
-     "text": "Lange Sätze auf verständliche Länge gekürzt?"
-    },
-    {
-     "id": "wa6-03-04",
-     "level": 0,
-     "text": "Jeder neue Gedanke mit neuem Absatz oder Erstzeileneinzug?"
-    },
-    {
-     "id": "wa6-03-05",
-     "level": 0,
-     "text": "Rechtschreibprüfung gemacht, Tippfehler beseitigt?"
-    },
-    {
-     "id": "wa6-03-06",
-     "level": 0,
-     "text": "Grammatikfehler gesucht, die die Rechtschreibprüfung nicht findet?"
-    },
-    {
-     "id": "wa6-03-07",
-     "level": 0,
-     "text": "Zeichensetzung geprüft?"
-    },
-    {
-     "id": "wa6-03-08",
-     "level": 0,
-     "text": "Ich- und Wir-Aussagen eliminiert?"
-    },
-    {
-     "id": "wa6-03-09",
-     "level": 0,
-     "text": "Automatische Silbentrennung, kein Flatterrand?"
-    },
-    {
-     "id": "wa6-03-10",
-     "level": 0,
-     "text": "Keine einzelne Überschrift oder Absatzzeile allein am Seitenende bzw. -anfang?"
-    },
-    {
-     "id": "wa6-03-11",
-     "level": 0,
-     "text": "Alle Seiten richtig nummeriert?"
-    }
-   ]
-  },
-  {
-   "id": "wa6-04",
-   "subject": "Wissenschaftliches Arbeiten",
-   "title": "WA6 · Checkliste Inhaltsverzeichnis",
-   "status": "neu",
-   "lines": [
-    {
-     "id": "wa6-04-01",
-     "level": 0,
-     "text": "Maximal drei bis vier Gliederungsebenen"
-    },
-    {
-     "id": "wa6-04-02",
-     "level": 0,
-     "text": "Jede Untergliederung hat mindestens zwei Unterpunkte"
-    },
-    {
-     "id": "wa6-04-03",
-     "level": 0,
-     "text": "Ausgewogenheit: gleiche Ebene, ähnliches Gewicht, ähnliche Tiefe und Länge"
-    },
-    {
-     "id": "wa6-04-04",
-     "level": 0,
-     "text": "Seitenzahlen angegeben"
-    },
-    {
-     "id": "wa6-04-05",
-     "level": 0,
-     "text": "Knapp und aussagekräftig, keine Fragesätze, keine unüblichen Abkürzungen"
-    },
-    {
-     "id": "wa6-04-06",
-     "level": 0,
-     "text": "Nur Gliederungspunkte nummeriert, Vor- und Nachtexte nicht"
-    },
-    {
-     "id": "wa6-04-07",
-     "level": 0,
-     "text": "Ober- und Unterpunkte typografisch auf einen Blick unterscheidbar"
-    },
-    {
-     "id": "wa6-04-08",
-     "level": 0,
-     "text": "Einheitliche Schrift, max. zwei Hervorhebungen, keine Großbuchstaben, keine Unterstreichungen"
-    }
-   ]
-  },
-  {
-   "id": "wa6-05",
-   "subject": "Wissenschaftliches Arbeiten",
-   "title": "WA6 · Checkliste Quellenangaben und Literaturverzeichnis",
-   "status": "neu",
-   "lines": [
-    {
-     "id": "wa6-05-01",
-     "level": 0,
-     "text": "Quellenangaben im Text"
-    },
-    {
-     "id": "wa6-05-02",
-     "level": 1,
-     "text": "Zitierweise einheitlich, immer gleiches Schema"
-    },
-    {
-     "id": "wa6-05-03",
-     "level": 1,
-     "text": "direkte und indirekte Zitate exakt unterschieden"
-    },
-    {
-     "id": "wa6-05-04",
-     "level": 1,
-     "text": "Seitenangabe bei direkten Zitaten"
-    },
-    {
-     "id": "wa6-05-05",
-     "level": 1,
-     "text": "alle Angaben vollständig"
-    },
-    {
-     "id": "wa6-05-06",
-     "level": 0,
-     "text": "Literaturverzeichnis"
-    },
-    {
-     "id": "wa6-05-07",
-     "level": 1,
-     "text": "alle zitierten Quellen als Langbeleg erfasst"
-    },
-    {
-     "id": "wa6-05-08",
-     "level": 1,
-     "text": "Sammelwerk und Einzelbeitrag mit genauer Seitenangabe"
-    },
-    {
-     "id": "wa6-05-09",
-     "level": 1,
-     "text": "Erscheinungsort und -jahr angegeben"
-    },
-    {
-     "id": "wa6-05-10",
-     "level": 1,
-     "text": "Zeitungen, Zeitschriften, Sammelwerke mit Anfangs- und Endseite"
-    },
-    {
-     "id": "wa6-05-11",
-     "level": 1,
-     "text": "Autor:innen ohne Titel (Dr., Prof.)"
-    },
-    {
-     "id": "wa6-05-12",
-     "level": 1,
-     "text": "alphabetisch nach Nachnamen sortiert"
-    },
-    {
-     "id": "wa6-05-13",
-     "level": 1,
-     "text": "Namen herausgerückt (negativer Erstzeileneinzug)"
-    },
-    {
-     "id": "wa6-05-14",
-     "level": 1,
-     "text": "Abstand zwischen Einträgen größer als zwischen den Zeilen eines Eintrags"
-    }
-   ]
-  },
-  {
-   "id": "wa6-06",
-   "subject": "Wissenschaftliches Arbeiten",
-   "title": "WA6 · Checkliste Endkontrolle",
-   "status": "neu",
-   "lines": [
-    {
-     "id": "wa6-06-01",
-     "level": 0,
-     "text": "Beim Umwandeln in PDF Textteile verschoben?"
-    },
-    {
-     "id": "wa6-06-02",
-     "level": 0,
-     "text": "Seitenprüfung vor dem Binden"
-    },
-    {
-     "id": "wa6-06-03",
-     "level": 1,
-     "text": "fehlende, doppelte oder vertauschte Seiten?"
-    },
-    {
-     "id": "wa6-06-04",
-     "level": 1,
-     "text": "Querformatseiten mit dem Kopf zur Bindeseite?"
-    },
-    {
-     "id": "wa6-06-05",
-     "level": 0,
-     "text": "Genügend Exemplare?"
-    },
-    {
-     "id": "wa6-06-06",
-     "level": 0,
-     "text": "Digital gespeichert (CD, USB-Stick)?"
-    },
-    {
-     "id": "wa6-06-07",
-     "level": 0,
-     "text": "Erklärung der eigenständigen Verfassung im Original unterschrieben?"
-    }
-   ]
-  },
-  {
-   "id": "wa6-07",
+   "id": "wa6-v2-03",
    "subject": "Wissenschaftliches Arbeiten",
    "title": "WA6 · Was kommt ins Arbeitsjournal?",
    "status": "neu",
    "lines": [
     {
-     "id": "wa6-07-01",
+     "id": "wa6-v2-03-01",
      "level": 0,
+     "text": "Inhalt der Arbeit"
+    },
+    {
+     "id": "wa6-v2-03-02",
+     "level": 1,
      "text": "Problemstellung, Forschungsfragen, Hypothesen"
     },
     {
-     "id": "wa6-07-02",
-     "level": 0,
+     "id": "wa6-v2-03-03",
+     "level": 1,
      "text": "Begriffsdefinitionen"
     },
     {
-     "id": "wa6-07-03",
-     "level": 0,
-     "text": "Beobachtungen und Anregungen"
-    },
-    {
-     "id": "wa6-07-04",
-     "level": 0,
+     "id": "wa6-v2-03-04",
+     "level": 1,
      "text": "Gliederungs-, Titel- und Textentwürfe"
     },
     {
-     "id": "wa6-07-05",
+     "id": "wa6-v2-03-05",
      "level": 0,
+     "text": "Prozess"
+    },
+    {
+     "id": "wa6-v2-03-06",
+     "level": 1,
+     "text": "Beobachtungen und Anregungen"
+    },
+    {
+     "id": "wa6-v2-03-07",
+     "level": 1,
      "text": "Reflexion und Probleme beim Schreiben"
     },
     {
-     "id": "wa6-07-06",
-     "level": 0,
+     "id": "wa6-v2-03-08",
+     "level": 1,
      "text": "Zeitmanagement"
     }
    ]
   },
   {
-   "id": "wa6-08",
+   "id": "wa6-v2-04",
    "subject": "Wissenschaftliches Arbeiten",
-   "title": "WA6 · Zeitmanagement in 5 Schritten",
+   "title": "WA6 · Wie gelingt Zeitmanagement in 5 Schritten?",
    "status": "neu",
    "lines": [
     {
-     "id": "wa6-08-01",
+     "id": "wa6-v2-04-01",
      "level": 0,
      "text": "1. Eigene Konzentrationskurve kennen und berücksichtigen"
     },
     {
-     "id": "wa6-08-02",
+     "id": "wa6-v2-04-02",
      "level": 0,
      "text": "2. Zeitfresser identifizieren"
     },
     {
-     "id": "wa6-08-03",
+     "id": "wa6-v2-04-03",
      "level": 0,
      "text": "3. Arbeitsplan erstellen"
     },
     {
-     "id": "wa6-08-04",
+     "id": "wa6-v2-04-04",
      "level": 1,
      "text": "Arbeitsschritte auf Wochen verteilen, z. B. Konzept, Materialsuche, Erstentwurf, Überarbeitung, Formatierung"
     },
     {
-     "id": "wa6-08-05",
+     "id": "wa6-v2-04-05",
      "level": 0,
      "text": "4. Regelmäßige Arbeitszeit, unterstützt die Konzentration"
     },
     {
-     "id": "wa6-08-06",
+     "id": "wa6-v2-04-06",
      "level": 0,
      "text": "5. Belohnung nach erledigter Arbeit"
     }
    ]
   },
   {
-   "id": "wa6-09",
+   "id": "wa6-v2-05",
    "subject": "Wissenschaftliches Arbeiten",
    "title": "WA6 · Was hemmt die Motivation?",
    "status": "neu",
    "lines": [
     {
-     "id": "wa6-09-01",
+     "id": "wa6-v2-05-01",
      "level": 0,
      "text": "Zu großer Workload"
     },
     {
-     "id": "wa6-09-02",
+     "id": "wa6-v2-05-02",
      "level": 0,
      "text": "„Innerer Zensor\""
     },
     {
-     "id": "wa6-09-03",
+     "id": "wa6-v2-05-03",
      "level": 0,
      "text": "An Detailfragen haftenbleiben"
     },
     {
-     "id": "wa6-09-04",
+     "id": "wa6-v2-05-04",
      "level": 0,
      "text": "Müdigkeit, Überforderung"
     },
     {
-     "id": "wa6-09-05",
+     "id": "wa6-v2-05-05",
      "level": 0,
      "text": "Aufgaben aufschieben"
     },
     {
-     "id": "wa6-09-06",
+     "id": "wa6-v2-05-06",
      "level": 0,
      "text": "Perfektionismus, Größenwahn"
     }
    ]
   },
   {
-   "id": "wa6-10",
+   "id": "wa6-v2-06",
    "subject": "Wissenschaftliches Arbeiten",
-   "title": "WA6 · Motivationstechniken",
+   "title": "WA6 · Welche Motivationstechniken helfen?",
    "status": "neu",
    "lines": [
     {
-     "id": "wa6-10-01",
+     "id": "wa6-v2-06-01",
      "level": 0,
      "text": "Anfangsstimmung im Arbeitsjournal festhalten"
     },
     {
-     "id": "wa6-10-02",
+     "id": "wa6-v2-06-02",
      "level": 1,
-     "text": "Die Erinnerung daran gibt später Kraft"
+     "text": "die Erinnerung daran gibt später Kraft"
     },
     {
-     "id": "wa6-10-03",
+     "id": "wa6-v2-06-03",
      "level": 0,
      "text": "Mit dem Einfachsten, Interessantesten oder Vertrautesten beginnen"
     },
     {
-     "id": "wa6-10-04",
+     "id": "wa6-v2-06-04",
      "level": 0,
      "text": "Persönliche Bezüge zum Thema herstellen"
     },
     {
-     "id": "wa6-10-05",
-     "level": 0,
+     "id": "wa6-v2-06-05",
+     "level": 1,
      "text": "„Was weiß ich schon?\" – per Brainstorming oder Assoziogramm"
     },
     {
-     "id": "wa6-10-06",
+     "id": "wa6-v2-06-06",
      "level": 0,
      "text": "Bei Langeweile: Ursachen im Arbeitsjournal suchen, dann Lösungen"
     },
     {
-     "id": "wa6-10-07",
+     "id": "wa6-v2-06-07",
      "level": 0,
      "text": "Regelmäßig arbeiten – lange Pausen kosten Energie, weil man sich neu einarbeiten muss"
     }
    ]
   },
   {
-   "id": "wa6-11",
+   "id": "wa6-v2-07",
    "subject": "Wissenschaftliches Arbeiten",
-   "title": "WA6 · Schreibblockade – was hilft?",
+   "title": "WA6 · Was hilft bei einer Schreibblockade?",
    "status": "neu",
    "lines": [
     {
-     "id": "wa6-11-01",
+     "id": "wa6-v2-07-01",
      "level": 0,
      "text": "„Angst vor dem leeren Blatt\", an Unis weit verbreitet"
     },
     {
-     "id": "wa6-11-02",
+     "id": "wa6-v2-07-02",
      "level": 0,
      "text": "Jemandem erzählen, worüber man gerade nicht schreiben kann"
     },
     {
-     "id": "wa6-11-03",
+     "id": "wa6-v2-07-03",
      "level": 0,
      "text": "Sich selbst erzählen, worüber man schreiben will, und es aufnehmen"
     },
     {
-     "id": "wa6-11-04",
+     "id": "wa6-v2-07-04",
      "level": 0,
      "text": "Regelmäßig schreiben, um es zu trainieren"
     },
     {
-     "id": "wa6-11-05",
+     "id": "wa6-v2-07-05",
      "level": 0,
      "text": "Die Zeit nutzen, um den bisherigen Text zu überarbeiten"
     }
