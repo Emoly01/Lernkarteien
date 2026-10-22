@@ -1,0 +1,720 @@
+{
+ "app": "lernkarten",
+ "version": 1,
+ "pack": true,
+ "name": "Wissenschaftliches Arbeiten – Formalia (optional)",
+ "subjects": [
+  "Wissenschaftliches Arbeiten – Formalia"
+ ],
+ "cards": [
+  {
+   "id": "waf3-v2-01",
+   "subject": "Wissenschaftliches Arbeiten – Formalia",
+   "title": "WA3 · Zahlen: als Wort oder als Ziffer?",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "waf3-v2-01-01",
+     "level": 0,
+     "text": "Als Wort"
+    },
+    {
+     "id": "waf3-v2-01-02",
+     "level": 1,
+     "text": "kleiner als 12 und ohne konkrete Einheit: drei Items"
+    },
+    {
+     "id": "waf3-v2-01-03",
+     "level": 1,
+     "text": "am Satzanfang"
+    },
+    {
+     "id": "waf3-v2-01-04",
+     "level": 1,
+     "text": "gebräuchliche Brüche: ein Achtel"
+    },
+    {
+     "id": "waf3-v2-01-05",
+     "level": 0,
+     "text": "Als Ziffer, auch unter 12"
+    },
+    {
+     "id": "waf3-v2-01-06",
+     "level": 1,
+     "text": "unmittelbar vor Messeinheiten: 2 cm"
+    },
+    {
+     "id": "waf3-v2-01-07",
+     "level": 1,
+     "text": "bei mathematischen oder statistischen Funktionen"
+    },
+    {
+     "id": "waf3-v2-01-08",
+     "level": 1,
+     "text": "bei Größen, bestimmten Werten, Bezifferungen: 6 Stunden"
+    },
+    {
+     "id": "waf3-v2-01-09",
+     "level": 1,
+     "text": "an definierter Stelle einer nummerierten Folge: Abbildung 1"
+    },
+    {
+     "id": "waf3-v2-01-10",
+     "level": 0,
+     "text": "Merkhilfe (grob): kleine Anzahl ohne Einheit = Wort; alles mit Einheit, Wert oder Nummer = Ziffer"
+    }
+   ]
+  },
+  {
+   "id": "waf3-v2-02",
+   "subject": "Wissenschaftliches Arbeiten – Formalia",
+   "title": "WA3 · Wie schreibt man Einheiten, Uhrzeiten, Daten und Abkürzungen?",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "waf3-v2-02-01",
+     "level": 0,
+     "text": "Dezimalkomma, Leerzeichen zwischen Zahl und Einheit"
+    },
+    {
+     "id": "waf3-v2-02-02",
+     "level": 1,
+     "text": "499,99 EUR · 1,55 kg · 13,35 km"
+    },
+    {
+     "id": "waf3-v2-02-03",
+     "level": 1,
+     "text": "bei ungefähren Angaben darf das Komma entfallen: ca. 3 km"
+    },
+    {
+     "id": "waf3-v2-02-04",
+     "level": 0,
+     "text": "Uhrzeiten: 08:30 Uhr · 08:30:27 Uhr"
+    },
+    {
+     "id": "waf3-v2-02-05",
+     "level": 0,
+     "text": "Kalenderdaten: 2009-11-11 · 11.11.2009 · 11. November 2009"
+    },
+    {
+     "id": "waf3-v2-02-06",
+     "level": 0,
+     "text": "Vorzeichen direkt an der Zahl (-29 °C), alleinstehende Hochzeichen direkt dahinter (45°)"
+    },
+    {
+     "id": "waf3-v2-02-07",
+     "level": 0,
+     "text": "Abkürzungen"
+    },
+    {
+     "id": "waf3-v2-02-08",
+     "level": 1,
+     "text": "voll ausgesprochen, also mit Punkt: usw., z. B., bzw."
+    },
+    {
+     "id": "waf3-v2-02-09",
+     "level": 1,
+     "text": "wie ein Wort gesprochen, also ohne Punkt: AG, GmbH, BGB"
+    },
+    {
+     "id": "waf3-v2-02-10",
+     "level": 0,
+     "text": "Aneinanderreihungen"
+    },
+    {
+     "id": "waf3-v2-02-11",
+     "level": 1,
+     "text": "mit Bindestrich: 2-seitig, A4-Format"
+    },
+    {
+     "id": "waf3-v2-02-12",
+     "level": 1,
+     "text": "Ableitungen ohne Bindestrich: 2005er, 3fach, 100%ig"
+    }
+   ]
+  },
+  {
+   "id": "waf3-v2-03",
+   "subject": "Wissenschaftliches Arbeiten – Formalia",
+   "title": "WA3 · Welche Hilfsmittel erleichtern das Schreiben?",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "waf3-v2-03-01",
+     "level": 0,
+     "text": "Synonymwörterbuch"
+    },
+    {
+     "id": "waf3-v2-03-02",
+     "level": 0,
+     "text": "Thesaurus im Textverarbeitungsprogramm"
+    },
+    {
+     "id": "waf3-v2-03-03",
+     "level": 0,
+     "text": "Rechtschreibkorrektur"
+    },
+    {
+     "id": "waf3-v2-03-04",
+     "level": 0,
+     "text": "Arbeit Korrektur lesen lassen"
+    }
+   ]
+  },
+  {
+   "id": "waf5-v2-01",
+   "subject": "Wissenschaftliches Arbeiten – Formalia",
+   "title": "WA5 · Welche Schrift, Schriftgröße und welcher Zeilenabstand?",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "waf5-v2-01-01",
+     "level": 0,
+     "text": "Schriftarten"
+    },
+    {
+     "id": "waf5-v2-01-02",
+     "level": 1,
+     "text": "Times New Roman, Calibri, Garamond (Arial, Verdana)"
+    },
+    {
+     "id": "waf5-v2-01-03",
+     "level": 0,
+     "text": "Schriftgröße"
+    },
+    {
+     "id": "waf5-v2-01-04",
+     "level": 1,
+     "text": "Fließtext: 12 pt (Arial und Verdana: 11 pt)"
+    },
+    {
+     "id": "waf5-v2-01-05",
+     "level": 1,
+     "text": "lange wörtliche Zitate (über 3 Zeilen): 10 pt, eingerückt, mit Leerzeile abgesetzt"
+    },
+    {
+     "id": "waf5-v2-01-06",
+     "level": 0,
+     "text": "Zeilenabstand"
+    },
+    {
+     "id": "waf5-v2-01-07",
+     "level": 1,
+     "text": "Fließtext: 1,5-zeilig"
+    },
+    {
+     "id": "waf5-v2-01-08",
+     "level": 1,
+     "text": "längere wörtliche Zitate: 1-zeilig"
+    },
+    {
+     "id": "waf5-v2-01-09",
+     "level": 0,
+     "text": "Achtung: LV5 schreibt Blockzitate „kursiv\", LV4 (APA) „nicht kursiv\" – im Zweifel nachfragen"
+    }
+   ]
+  },
+  {
+   "id": "waf5-v2-02",
+   "subject": "Wissenschaftliches Arbeiten – Formalia",
+   "title": "WA5 · Welche Hervorhebungen gibt es – und ihre Shortcuts?",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "waf5-v2-02-01",
+     "level": 0,
+     "text": "Shortcuts in Word"
+    },
+    {
+     "id": "waf5-v2-02-02",
+     "level": 1,
+     "text": "Her­vorhe­bung | Shortcut"
+    },
+    {
+     "id": "waf5-v2-02-03",
+     "level": 1,
+     "text": "Unter­strei­chung | ?Strg + Umsch + U"
+    },
+    {
+     "id": "waf5-v2-02-04",
+     "level": 1,
+     "text": "Kursiv | ?Strg + Umsch + K"
+    },
+    {
+     "id": "waf5-v2-02-05",
+     "level": 1,
+     "text": "Fett | ?Strg + Umsch + F"
+    },
+    {
+     "id": "waf5-v2-02-06",
+     "level": 1,
+     "text": "Kapitälchen | ?Strg + Umsch + Q"
+    },
+    {
+     "id": "waf5-v2-02-07",
+     "level": 1,
+     "text": "Hoch­stel­lung | ?Strg + +"
+    },
+    {
+     "id": "waf5-v2-02-08",
+     "level": 1,
+     "text": "Tief­stel­lung | ?Strg + #"
+    },
+    {
+     "id": "waf5-v2-02-09",
+     "level": 0,
+     "text": "Maximal zwei Hervorhebungsformen verwenden!"
+    }
+   ]
+  },
+  {
+   "id": "waf5-v2-03",
+   "subject": "Wissenschaftliches Arbeiten – Formalia",
+   "title": "WA5 · Wie sieht das Seitenlayout aus?",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "waf5-v2-03-01",
+     "level": 0,
+     "text": "Satzspiegel: hochformatig, einseitig (asymmetrisch)"
+    },
+    {
+     "id": "waf5-v2-03-02",
+     "level": 0,
+     "text": "Seitenränder"
+    },
+    {
+     "id": "waf5-v2-03-03",
+     "level": 1,
+     "text": "Rand | Breite"
+    },
+    {
+     "id": "waf5-v2-03-04",
+     "level": 1,
+     "text": "oben | ?2,5 cm"
+    },
+    {
+     "id": "waf5-v2-03-05",
+     "level": 1,
+     "text": "unten | ?2,5 cm"
+    },
+    {
+     "id": "waf5-v2-03-06",
+     "level": 1,
+     "text": "links | ?3,0 cm"
+    },
+    {
+     "id": "waf5-v2-03-07",
+     "level": 1,
+     "text": "rechts | ?2,5 cm"
+    },
+    {
+     "id": "waf5-v2-03-08",
+     "level": 0,
+     "text": "Seitenzahlen"
+    },
+    {
+     "id": "waf5-v2-03-09",
+     "level": 1,
+     "text": "rechts unten"
+    },
+    {
+     "id": "waf5-v2-03-10",
+     "level": 1,
+     "text": "Titelblatt zählt als erste Seite, wird aber nicht nummeriert"
+    },
+    {
+     "id": "waf5-v2-03-11",
+     "level": 0,
+     "text": "Textausrichtung: Blocksatz, und dann immer mit Silbentrennung"
+    },
+    {
+     "id": "waf5-v2-03-12",
+     "level": 0,
+     "text": "Absätze: klar gegliedert durch Erstzeileneinzüge oder Absatzabstände"
+    }
+   ]
+  },
+  {
+   "id": "waf5-v2-04",
+   "subject": "Wissenschaftliches Arbeiten – Formalia",
+   "title": "WA5 · Wie formatiert man Überschriften?",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "waf5-v2-04-01",
+     "level": 0,
+     "text": "Formatvorlagen"
+    },
+    {
+     "id": "waf5-v2-04-02",
+     "level": 1,
+     "text": "Vorlage | Schrift­größe | Sonst"
+    },
+    {
+     "id": "waf5-v2-04-03",
+     "level": 1,
+     "text": "Standard | ?12 pt (11 pt) | Blocksatz, 1,5-zeilig"
+    },
+    {
+     "id": "waf5-v2-04-04",
+     "level": 1,
+     "text": "Überschrift 1 | ?16 pt | fett, linksbündig, 12 pt Abstand vor und nach, 1,5-zeilig"
+    },
+    {
+     "id": "waf5-v2-04-05",
+     "level": 1,
+     "text": "Überschrift 2 | ?14 pt | wie Überschrift 1"
+    },
+    {
+     "id": "waf5-v2-04-06",
+     "level": 1,
+     "text": "Überschrift 3 | ?13 pt | wie Überschrift 1"
+    },
+    {
+     "id": "waf5-v2-04-07",
+     "level": 0,
+     "text": "Shortcuts: Alt + 1, Alt + 2, Alt + 3"
+    },
+    {
+     "id": "waf5-v2-04-08",
+     "level": 0,
+     "text": "Überschriften hervorheben durch größere, fette oder kursive Schrift, Kapitälchen, andere Schriftart"
+    },
+    {
+     "id": "waf5-v2-04-09",
+     "level": 1,
+     "text": "Kombinationen sparsam einsetzen"
+    }
+   ]
+  },
+  {
+   "id": "waf5-v2-05",
+   "subject": "Wissenschaftliches Arbeiten – Formalia",
+   "title": "WA5 · Was steht auf dem Titelblatt?",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "waf5-v2-05-01",
+     "level": 0,
+     "text": "Zur Arbeit"
+    },
+    {
+     "id": "waf5-v2-05-02",
+     "level": 1,
+     "text": "Thema der Arbeit"
+    },
+    {
+     "id": "waf5-v2-05-03",
+     "level": 1,
+     "text": "Titel der Lehrveranstaltung"
+    },
+    {
+     "id": "waf5-v2-05-04",
+     "level": 1,
+     "text": "Name der LV-Leiter:in"
+    },
+    {
+     "id": "waf5-v2-05-05",
+     "level": 0,
+     "text": "Zur Hochschule"
+    },
+    {
+     "id": "waf5-v2-05-06",
+     "level": 1,
+     "text": "Universität, Institut"
+    },
+    {
+     "id": "waf5-v2-05-07",
+     "level": 1,
+     "text": "Semester, Jahr"
+    },
+    {
+     "id": "waf5-v2-05-08",
+     "level": 0,
+     "text": "Zu mir"
+    },
+    {
+     "id": "waf5-v2-05-09",
+     "level": 1,
+     "text": "Name der Verfasser:in"
+    },
+    {
+     "id": "waf5-v2-05-10",
+     "level": 1,
+     "text": "Matrikelnummer"
+    },
+    {
+     "id": "waf5-v2-05-11",
+     "level": 0,
+     "text": "Keine Seitenzahl auf dem Titelblatt!"
+    }
+   ]
+  },
+  {
+   "id": "waf5-v2-06",
+   "subject": "Wissenschaftliches Arbeiten – Formalia",
+   "title": "WA5 · Wie erstellt man Verzeichnisse automatisch?",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "waf5-v2-06-01",
+     "level": 0,
+     "text": "Inhaltsverzeichnis: Überschriften laufend definieren → Seitenumbruch vor der Einleitung → Inhaltsverzeichnis erstellen → laufend aktualisieren"
+    },
+    {
+     "id": "waf5-v2-06-02",
+     "level": 0,
+     "text": "Tabellen-, Abbildungs- und Abkürzungsverzeichnis: nach dem Inhaltsverzeichnis, ebenfalls automatisch"
+    }
+   ]
+  },
+  {
+   "id": "waf5-v2-07",
+   "subject": "Wissenschaftliches Arbeiten – Formalia",
+   "title": "WA5 · Wie sichert man seine Daten?",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "waf5-v2-07-01",
+     "level": 0,
+     "text": "Häufig speichern"
+    },
+    {
+     "id": "waf5-v2-07-02",
+     "level": 0,
+     "text": "Regelmäßig Sicherungskopien machen"
+    },
+    {
+     "id": "waf5-v2-07-03",
+     "level": 0,
+     "text": "Mindestens zwei verschiedene Datenspeicher"
+    },
+    {
+     "id": "waf5-v2-07-04",
+     "level": 1,
+     "text": "Festplatte, USB-Stick, CD, E-Mail an die eigene Adresse"
+    },
+    {
+     "id": "waf5-v2-07-05",
+     "level": 0,
+     "text": "Abschnittsweise ausdrucken"
+    }
+   ]
+  },
+  {
+   "id": "waf6-v2-01",
+   "subject": "Wissenschaftliches Arbeiten – Formalia",
+   "title": "WA6 · Was steht auf der Checkliste Text?",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "waf6-v2-01-01",
+     "level": 0,
+     "text": "Abgleich und Verweise"
+    },
+    {
+     "id": "waf6-v2-01-02",
+     "level": 1,
+     "text": "Überschriften identisch mit dem Inhaltsverzeichnis?"
+    },
+    {
+     "id": "waf6-v2-01-03",
+     "level": 1,
+     "text": "interne Verweise (Seiten, Kapitel) korrekt?"
+    },
+    {
+     "id": "waf6-v2-01-04",
+     "level": 1,
+     "text": "alle Seiten richtig nummeriert?"
+    },
+    {
+     "id": "waf6-v2-01-05",
+     "level": 0,
+     "text": "Sprache"
+    },
+    {
+     "id": "waf6-v2-01-06",
+     "level": 1,
+     "text": "lange Sätze auf verständliche Länge gekürzt?"
+    },
+    {
+     "id": "waf6-v2-01-07",
+     "level": 1,
+     "text": "jeder neue Gedanke mit neuem Absatz oder Erstzeileneinzug?"
+    },
+    {
+     "id": "waf6-v2-01-08",
+     "level": 1,
+     "text": "Ich- und Wir-Aussagen eliminiert?"
+    },
+    {
+     "id": "waf6-v2-01-09",
+     "level": 0,
+     "text": "Fehler"
+    },
+    {
+     "id": "waf6-v2-01-10",
+     "level": 1,
+     "text": "Rechtschreibprüfung gemacht, Tippfehler beseitigt?"
+    },
+    {
+     "id": "waf6-v2-01-11",
+     "level": 1,
+     "text": "Grammatikfehler gesucht, die die Rechtschreibprüfung nicht findet?"
+    },
+    {
+     "id": "waf6-v2-01-12",
+     "level": 1,
+     "text": "Zeichensetzung geprüft?"
+    },
+    {
+     "id": "waf6-v2-01-13",
+     "level": 0,
+     "text": "Layout"
+    },
+    {
+     "id": "waf6-v2-01-14",
+     "level": 1,
+     "text": "automatische Silbentrennung, kein Flatterrand?"
+    },
+    {
+     "id": "waf6-v2-01-15",
+     "level": 1,
+     "text": "keine einzelne Überschrift oder Absatzzeile allein am Seitenende bzw. -anfang?"
+    }
+   ]
+  },
+  {
+   "id": "waf6-v2-02",
+   "subject": "Wissenschaftliches Arbeiten – Formalia",
+   "title": "WA6 · Was steht auf den Checklisten Inhaltsverzeichnis, Quellenangaben und Literaturverzeichnis?",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "waf6-v2-02-01",
+     "level": 0,
+     "text": "Inhaltsverzeichnis: einheitliche Schrift, max. zwei Hervorhebungen, keine Großbuchstaben, keine Unterstreichungen"
+    },
+    {
+     "id": "waf6-v2-02-02",
+     "level": 0,
+     "text": "Quellenangaben im Text"
+    },
+    {
+     "id": "waf6-v2-02-03",
+     "level": 1,
+     "text": "Zitierweise einheitlich, immer gleiches Schema"
+    },
+    {
+     "id": "waf6-v2-02-04",
+     "level": 1,
+     "text": "direkte und indirekte Zitate exakt unterschieden"
+    },
+    {
+     "id": "waf6-v2-02-05",
+     "level": 1,
+     "text": "Seitenangabe bei direkten Zitaten"
+    },
+    {
+     "id": "waf6-v2-02-06",
+     "level": 1,
+     "text": "alle Angaben vollständig"
+    },
+    {
+     "id": "waf6-v2-02-07",
+     "level": 0,
+     "text": "Literaturverzeichnis: Inhalt"
+    },
+    {
+     "id": "waf6-v2-02-08",
+     "level": 1,
+     "text": "alle zitierten Quellen als Langbeleg erfasst"
+    },
+    {
+     "id": "waf6-v2-02-09",
+     "level": 1,
+     "text": "Sammelwerk und Einzelbeitrag mit genauer Seitenangabe"
+    },
+    {
+     "id": "waf6-v2-02-10",
+     "level": 1,
+     "text": "Erscheinungsort und -jahr angegeben"
+    },
+    {
+     "id": "waf6-v2-02-11",
+     "level": 1,
+     "text": "Zeitungen, Zeitschriften, Sammelwerke mit Anfangs- und Endseite"
+    },
+    {
+     "id": "waf6-v2-02-12",
+     "level": 1,
+     "text": "Autor:innen ohne Titel (Dr., Prof.)"
+    },
+    {
+     "id": "waf6-v2-02-13",
+     "level": 0,
+     "text": "Literaturverzeichnis: Form"
+    },
+    {
+     "id": "waf6-v2-02-14",
+     "level": 1,
+     "text": "alphabetisch nach Nachnamen sortiert"
+    },
+    {
+     "id": "waf6-v2-02-15",
+     "level": 1,
+     "text": "Namen herausgerückt (negativer Erstzeileneinzug)"
+    },
+    {
+     "id": "waf6-v2-02-16",
+     "level": 1,
+     "text": "Abstand zwischen Einträgen größer als zwischen den Zeilen eines Eintrags"
+    }
+   ]
+  },
+  {
+   "id": "waf6-v2-03",
+   "subject": "Wissenschaftliches Arbeiten – Formalia",
+   "title": "WA6 · Was steht auf der Checkliste Endkontrolle?",
+   "status": "neu",
+   "lines": [
+    {
+     "id": "waf6-v2-03-01",
+     "level": 0,
+     "text": "Beim Umwandeln in PDF Textteile verschoben?"
+    },
+    {
+     "id": "waf6-v2-03-02",
+     "level": 0,
+     "text": "Seitenprüfung vor dem Binden"
+    },
+    {
+     "id": "waf6-v2-03-03",
+     "level": 1,
+     "text": "fehlende, doppelte oder vertauschte Seiten?"
+    },
+    {
+     "id": "waf6-v2-03-04",
+     "level": 1,
+     "text": "Querformatseiten mit dem Kopf zur Bindeseite?"
+    },
+    {
+     "id": "waf6-v2-03-05",
+     "level": 0,
+     "text": "Genügend Exemplare?"
+    },
+    {
+     "id": "waf6-v2-03-06",
+     "level": 0,
+     "text": "Digital gespeichert (CD, USB-Stick)?"
+    },
+    {
+     "id": "waf6-v2-03-07",
+     "level": 0,
+     "text": "Erklärung der eigenständigen Verfassung im Original unterschrieben?"
+    }
+   ]
+  }
+ ]
+}
