@@ -1,5 +1,5 @@
 import { useState, useEffect, useLayoutEffect, useMemo, useRef, useCallback } from "react";
-import { ACC, STATUS, LEVELS, MARKS, MAX_LEVEL, parseChart, parseFlow, parseTable, flowConnects, flowCycle, flowGraph, parsePasted, mid, L, plural, load, persist, mapLines, speechLines, schedule, isDue, today, daysBetween, formatDate, exportBackup, parseBackup, addPack, nextAccent, setAccent, renameSubject, deleteSubject, searchCards } from "./data.js";
+import { ACC, STATUS, LEVELS, MARKS, MAX_LEVEL, parseChart, parseFlow, parseTable, flowConnects, flowCycle, flowGraph, parsePasted, mid, L, plural, load, persist, mapLines, speechLines, schedule, todayCards, studyOrder, NEW_STEPS, today, daysBetween, formatDate, exportBackup, parseBackup, addPack, nextAccent, setAccent, renameSubject, deleteSubject, searchCards } from "./data.js";
 import { stamp } from "./sync.js";
 import { useCloudSync } from "./useCloudSync.js";
 import { Chart, Dist } from "./charts.jsx";
@@ -504,7 +504,7 @@ export default function App() {
   const startStudy = (ids, scope = deck) => {
     if (!ids.length) return;
     setStudyScope(scope);
-    if (SHUFFLE) ids = [...ids].sort(() => Math.random() - 0.5);
+    ids = studyOrder(cards, ids, SHUFFLE); // reviews shuffled, new cards in pack order
     setQueue(ids); setQPos(0); setFlipped(false); setReveal(0);
     setTally({ sicher: 0, unsicher: 0, nochmal: 0 });
     setView("study");
@@ -874,6 +874,13 @@ export default function App() {
     return () => window.removeEventListener("popstate", onPop);
   }, []);
 
+  // ── New cards per day ──
+  const stepNew = dir => update(d => {
+    const n = d.newPerDay;
+    const next = dir > 0 ? NEW_STEPS.find(s => s > n) : [...NEW_STEPS].reverse().find(s => s < n);
+    return next ? { ...d, newPerDay: next } : d;
+  });
+
   // ── Backup ──
   const doExport = () => { exportBackup(data); update(d => ({ ...d, lastBackup: today() })); };
   const doImport = async (e) => {
@@ -956,8 +963,12 @@ export default function App() {
 
   if (view === "home") {
     const total = cards.length, unsure = cards.filter(c => c.status === "unsicher").length;
-    const due = cards.filter(isDue);
+    const td = todayCards(cards, data.newPerDay);
+    const due = [...td.reviews, ...td.fresh];
     const daysLeft = examDate ? daysBetween(today(), examDate) : null;
+    // How long until every new card has been started, at the current pace.
+    const newDays = Math.ceil(td.newLeft / data.newPerDay);
+    const tooSlow = examDate && daysLeft >= 0 && td.newLeft > 0 && newDays > daysLeft;
     const backupAge = data.lastBackup ? daysBetween(data.lastBackup, today()) : null;
     const nudgeBackup = total > 0 && !sync.user && (backupAge == null || backupAge >= 7);
     const results = searchCards(cards, query);
@@ -988,6 +999,7 @@ export default function App() {
                   <span className="today-num">{due.length}</span>
                   <span className="today-unit">{due.length ? (due.length === 1 ? "Karte" : "Karten") : "Alles erledigt"}</span>
                 </span>
+                {td.fresh.length > 0 && <span className="today-split">{td.reviews.length ? `${td.reviews.length} wiederholen · ` : ""}{td.fresh.length} neu</span>}
               </div>
               {due.length > 0
                 ? <button className="today-btn" onClick={() => startStudy(due.map(c => c.id), null)}>Jetzt lernen <span aria-hidden="true">→</span></button>
@@ -1011,6 +1023,20 @@ export default function App() {
                 <button className="link-btn" onClick={() => setEditingExam(true)}>{examDate ? "Prüfung vorbei – neuen Termin festlegen" : "+ Prüfungstermin festlegen"}</button>
               )}
             </div>
+            {td.newLeft > 0 && (
+              <div className="exam-row new-row">
+                <span className="exam-text">
+                  {td.room === 0 ? "Heutige neue Karten geschafft · " : ""}
+                  noch {plural(td.newLeft, "neue Karte", "neue Karten")}, ca. {plural(newDays, "Tag", "Tage")}
+                  {tooSlow && <b className="new-warn"> – länger als bis zur Prüfung</b>}
+                </span>
+                <div className="stepper" role="group" aria-label="Neue Karten pro Tag">
+                  <button className="stepper-btn" aria-label="Weniger neue Karten pro Tag" disabled={data.newPerDay <= NEW_STEPS[0]} onClick={() => stepNew(-1)}>−</button>
+                  <span className="stepper-val" aria-live="polite">{data.newPerDay}<small>neu / Tag</small></span>
+                  <button className="stepper-btn" aria-label="Mehr neue Karten pro Tag" disabled={data.newPerDay >= NEW_STEPS[NEW_STEPS.length - 1]} onClick={() => stepNew(1)}>+</button>
+                </div>
+              </div>
+            )}
           </div>
         )}
         {total > 0 && (
@@ -1046,7 +1072,8 @@ export default function App() {
           {subjects.map((name) => {
             const cs = cards.filter(c => c.subject === name), n = cs.length;
             const sure = cs.filter(c => c.status === "sicher").length, uns = cs.filter(c => c.status === "unsicher").length;
-            const dueIds = cs.filter(isDue).map(c => c.id);
+            const tdk = todayCards(cards, data.newPerDay, name);
+            const dueIds = [...tdk.reviews, ...tdk.fresh].map(c => c.id);
             return (
               <div key={name} className="deck-tile">
                 <button className="deck-open" onClick={() => { setDeck(name); setView("deck"); }}>
@@ -1141,8 +1168,8 @@ export default function App() {
 
   if (view === "deck") {
     const sure = dCards.filter(c => c.status === "sicher").length;
-    const dueCards = dCards.filter(isDue);
-    const fresh = dCards.filter(c => (c.status || "neu") === "neu");
+    const td = todayCards(cards, data.newPerDay, deck);
+    const dueCards = [...td.reviews, ...td.fresh];
     const t = today();
     screen = (
       <div className="screen deck">
@@ -1183,14 +1210,15 @@ export default function App() {
             <div className="stack10">
               {dueCards.length > 0
                 ? <button className="learn-all" onClick={() => startStudy(dueCards.map(c => c.id), deck)}>
-                    <span>Fällige lernen</span><span className="learn-all-n">{plural(dueCards.length, "Karte", "Karten")} →</span>
+                    <span>Fällige lernen</span>
+                    <span className="learn-all-n">{td.fresh.length && td.reviews.length ? `${td.reviews.length} + ${td.fresh.length} neu` : td.fresh.length ? `${td.fresh.length} neu` : plural(dueCards.length, "Karte", "Karten")} →</span>
                   </button>
-                : <p className="all-done">Für heute alles wiederholt. Stark.</p>}
+                : <p className="all-done">Für heute alles wiederholt. Stark.{td.newLeft > 0 && td.room === 0 ? " Neue Karten gibt's morgen wieder – oder stell auf der Startseite mehr pro Tag ein." : ""}</p>}
               <div className="deck-actions">
                 <button className="btn-secondary h50" onClick={() => startStudy(dCards.map(c => c.id), deck)}>Alle üben ({dCards.length})</button>
                 {weak.length > 0 && <button className="btn-secondary h50" onClick={() => startStudy(weak.map(c => c.id), deck)}>Unsichere ({weak.length})</button>}
                 <button className="btn-secondary h50" onClick={() => startRead(dCards.map(c => c.id))}>Durchlesen ({dCards.length})</button>
-                {fresh.length > 0 && fresh.length < dCards.length && <button className="btn-secondary h50" onClick={() => startRead(fresh.map(c => c.id))}>Neue lesen ({fresh.length})</button>}
+                {td.fresh.length > 0 && <button className="btn-secondary h50" onClick={() => startRead(td.fresh.map(c => c.id))}>Neue von heute lesen ({td.fresh.length})</button>}
                 {canSpeak && <button className="btn-secondary h50 listen-start" onClick={() => startRead(dCards.map(c => c.id), true)}>{speakerIcon}Vorlesen lassen ({dCards.length})</button>}
               </div>
             </div>

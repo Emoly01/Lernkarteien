@@ -67,13 +67,41 @@ export const formatDate = s => parse(s).toLocaleDateString("de-DE", { day: "nume
 
 // Before an exam, never schedule further out than half the remaining time,
 // so reviews get denser as the date approaches and nothing lands after it.
+// `seen` is the day a card was studied for the first time; it counts toward the daily limit.
 export function schedule(card, kind, examDate) {
   const box = kind === "sicher" ? Math.min(INTERVALS.length - 1, (card.box || 0) + 1)
     : kind === "unsicher" ? Math.max(1, (card.box || 0) - 1) : 1;
   let days = kind === "nochmal" ? 0 : INTERVALS[box];
   const t = today();
   if (examDate && examDate > t) days = Math.min(days, Math.max(1, Math.floor(daysBetween(t, examDate) / 2)));
-  return { ...card, box, due: addDays(t, days), status: kind === "sicher" ? "sicher" : "unsicher" };
+  const seen = card.seen || (!card.box ? t : null);
+  return { ...card, box, due: addDays(t, days), status: kind === "sicher" ? "sicher" : "unsicher", seen };
+}
+
+// ── New cards per day ────────────────────────────────────────
+// A new card (box 0) only becomes due once there's room in today's limit, so importing a big pack
+// doesn't put hundreds of cards on today's list. The limit is shared by all decks: whichever deck
+// you learn from first uses it up. New cards come in the order they were added (pack order), so
+// what belongs together is learned together; reviews are shuffled.
+export const NEW_PER_DAY = 20;
+export const NEW_STEPS = [5, 10, 15, 20, 25, 30, 40, 50];
+export const isNew = c => !c.box;
+export const startedToday = cards => { const t = today(); return cards.filter(c => c.seen === t).length; };
+export function todayCards(cards, newPerDay = NEW_PER_DAY, subject = null) {
+  const t = today();
+  const scope = subject ? cards.filter(c => c.subject === subject) : cards;
+  const reviews = scope.filter(c => !isNew(c) && (!c.due || c.due <= t));
+  const allNew = scope.filter(isNew);
+  const room = Math.max(0, newPerDay - startedToday(cards));
+  return { reviews, fresh: allNew.slice(0, room), newLeft: allNew.length, room };
+}
+
+// Study order: reviews shuffled, then new cards in the order given.
+export function studyOrder(cards, ids, shuffle = true) {
+  const byId = new Map(cards.map(c => [c.id, c]));
+  const known = ids.filter(id => byId.has(id) && !isNew(byId.get(id)));
+  const fresh = ids.filter(id => byId.has(id) && isNew(byId.get(id)));
+  return [...(shuffle ? [...known].sort(() => Math.random() - 0.5) : known), ...fresh];
 }
 
 // Each deck keeps its own colour, so deleting or renaming one never recolours the others.
@@ -110,8 +138,9 @@ export function deleteSubject(d, name) {
   return { ...d, subjects: d.subjects.filter(s => s !== name), cards: d.cards.filter(c => c.subject !== name), accents };
 }
 
-// Case- and accent-insensitive: "anasth" finds "Anästhesiologie".
-export const fold = s => s.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/ß/g, "ss");
+// Case- and accent-insensitive: "anasth" finds "Anästhesiologie". Soft hyphens (U+00AD, used in card
+// packs so long words can break inside narrow table cells) are invisible and ignored.
+export const fold = s => s.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f\u00ad]/g, "").replace(/ß/g, "ss");
 
 export function searchCards(cards, query) {
   const q = fold(query.trim());
@@ -129,9 +158,10 @@ function normalize(d) {
   return {
     subjects,
     accents: withAccents(subjects, d.accents),
-    cards: (d.cards || []).map(c => ({ ...c, status: c.status || "neu", box: c.box ?? box0[c.status || "neu"], due: c.due || null })),
+    cards: (d.cards || []).map(c => ({ ...c, status: c.status || "neu", box: c.box ?? box0[c.status || "neu"], due: c.due || null, seen: c.seen || null })),
     examDate: d.examDate || null,
     pointByPoint: d.pointByPoint ?? true,
+    newPerDay: Number.isFinite(d.newPerDay) && d.newPerDay > 0 ? d.newPerDay : NEW_PER_DAY,
     lastBackup: d.lastBackup || null,
     // Sync bookkeeping (see sync.js); older saves simply start at 0.
     tombstones: d.tombstones || {},
@@ -422,7 +452,7 @@ export function mapLines(lines, reveal) {
 // What the Vorlesemodus says for a card, one phrase per line: arrows become "dann", "|" and ";"
 // short pauses, gap marks are dropped (the answer is read out). Tables are read row by row with
 // their header: "ledig: Häufigkeit 12, Prozent 16,0".
-const sayable = s => s.replace(/\s*(?:→|->|=>)\s*/g, ", dann ").replace(/\s*[|;]\s*/g, ", ").replace(/(^|[\s:(])\?(?=\S)/g, "$1").replace(/^[,\s]+|[,\s]+$/g, "").replace(/\s+/g, " ");
+const sayable = s => s.replace(/\u00ad/g, "").replace(/\s*(?:→|->|=>)\s*/g, ", dann ").replace(/\s*[|;]\s*/g, ", ").replace(/(^|[\s:(])\?(?=\S)/g, "$1").replace(/^[,\s]+|[,\s]+$/g, "").replace(/\s+/g, " ");
 export function speechLines(card) {
   const out = [];
   let head = null, headLevel = -1;
