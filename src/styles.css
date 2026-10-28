@@ -288,6 +288,7 @@ input::placeholder { color: var(--faint); }
 /* ── Read ── */
 .read { gap: 16px; flex: 1; overflow-x: clip; }
 .read-stage { flex: 1; touch-action: pan-y; user-select: none; -webkit-user-select: none; -webkit-tap-highlight-color: transparent; }
+.read-flip { perspective: 1600px; cursor: pointer; }
 .read .paper-body > * { transition: filter .3s ease; }
 .read .paper-body.thinking > * { filter: blur(7px); }
 .read .bottom-bar { display: flex; flex-direction: column; gap: 10px; }
