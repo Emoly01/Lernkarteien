@@ -93,6 +93,11 @@ const utter = (text, rate) => new Promise(resolve => {
 // iOS only lets a page speak after it first spoke inside a tap, so every play button calls this.
 const primeSpeech = () => { try { speechSynthesis.cancel(); speechSynthesis.speak(new SpeechSynthesisUtterance(" ")); } catch (e) {} };
 
+// Card titles shrink until their longest word fits on one line (styles.css reads --word), so long
+// German compounds aren't chopped mid-word where the browser has no hyphenation for German.
+// A word may still break after a hyphen, so "Public-Health-Akteure" counts as its longest part.
+const fitTitle = title => ({ "--word": Math.max(1, ...title.replace(/-/g, "- ").split(/\s+/).map(w => [...w].length)) });
+
 // ── Swipes (studying and reading) ────────────────────────────
 // How far and how fast the finger went is read from the pointer events themselves: React state
 // can still be a few moves behind on a fast flick. A long drag or a quick flick counts, so short
@@ -1272,7 +1277,7 @@ export default function App() {
         <div className="paper" style={{ "--accent": titleColor(c.subject) }}>
           <div className="paper-head" style={{ background: titleColor(c.subject) }}>
             <span className="paper-subject">{c.subject}</span>
-            <span className="paper-title">{c.title}</span>
+            <span className="paper-title" style={fitTitle(c.title)}>{c.title}</span>
           </div>
           <div className="paper-body" style={{ minHeight: 220 }}><Lines lines={mapLines(c.lines)} /></div>
         </div>
@@ -1305,13 +1310,13 @@ export default function App() {
               <div className="face-strip" style={{ background: acc }} />
               <div className="face-main">
                 <span className="face-subject">{c.subject}</span>
-                <span className="face-title">{c.title}</span>
+                <span className="face-title" style={fitTitle(c.title)}>{c.title}</span>
                 <span className="face-hint">{plural(g, "Hauptpunkt", "Hauptpunkte")} — {POINT_BY_POINT ? "erinnere dich an jeden einzeln." : "was weißt du dazu?"}</span>
               </div>
               <div className="face-foot">Tippen oder Leertaste zum Umdrehen</div>
             </div>
             <div className="face face-back" aria-hidden={!flipped} style={{ "--accent": acc }}>
-              <div className="paper-head" style={{ background: acc }}><span className="paper-title">{c.title}</span></div>
+              <div className="paper-head" style={{ background: acc }}><span className="paper-title" style={fitTitle(c.title)}>{c.title}</span></div>
               <div className="paper-body" key={qPos}><Lines lines={mapLines(c.lines, POINT_BY_POINT ? reveal : null)} quiz /></div>
             </div>
           </div>
@@ -1341,7 +1346,7 @@ export default function App() {
     const head = (
       <div className="paper-head" style={{ background: acc }}>
         <span className="paper-subject">{listenPhase === "title" ? "Liest Titel …" : listenPhase === "think" ? "Denkpause" : listenPhase === "lines" ? "Liest vor …" : c.subject}</span>
-        <span className="paper-title">{c.title}</span>
+        <span className="paper-title" style={fitTitle(c.title)}>{c.title}</span>
       </div>
     );
     const body = <div className={"paper-body" + (listenPhase === "think" ? " thinking" : "")} style={{ minHeight: 220 }}><Lines lines={mapLines(c.lines)} /></div>;
@@ -1363,7 +1368,7 @@ export default function App() {
                     <div className="face-strip" style={{ background: acc }} />
                     <div className="face-main">
                       <span className="face-subject">{c.subject}</span>
-                      <span className="face-title">{c.title}</span>
+                      <span className="face-title" style={fitTitle(c.title)}>{c.title}</span>
                       <span className="face-hint">{plural(groups(c), "Hauptpunkt", "Hauptpunkte")} — was weißt du dazu?</span>
                     </div>
                     <div className="face-foot">Tippen oder Leertaste zum Umdrehen</div>
