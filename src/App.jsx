@@ -64,6 +64,11 @@ const THINK_MS = 5000;
 const LISTEN_KEY = "lernkarten-vorlesen";
 const readListenPrefs = () => { try { return { rate: 1, think: false, ...JSON.parse(localStorage.getItem(LISTEN_KEY)) }; } catch (e) { return { rate: 1, think: false }; } };
 const writeListenPrefs = v => { try { localStorage.setItem(LISTEN_KEY, JSON.stringify(v)); } catch (e) {} };
+// Reading mode shows each card's front first and turns it with a tap ("Zum Umdrehen"), or shows
+// it open right away ("Offen"). Kept per device, like the Vorlesen settings.
+const READ_FLIP_KEY = "lernkarten-lesen-umdrehen";
+const readFlipPref = () => { try { return localStorage.getItem(READ_FLIP_KEY) !== "0"; } catch (e) { return true; } };
+const writeFlipPref = v => { try { localStorage.setItem(READ_FLIP_KEY, v ? "1" : "0"); } catch (e) {} };
 let germanVoice = null;
 const pickVoice = () => {
   const vs = speechSynthesis.getVoices().filter(v => /^de([-_]|$)/i.test(v.lang));
@@ -87,6 +92,11 @@ const utter = (text, rate) => new Promise(resolve => {
 });
 // iOS only lets a page speak after it first spoke inside a tap, so every play button calls this.
 const primeSpeech = () => { try { speechSynthesis.cancel(); speechSynthesis.speak(new SpeechSynthesisUtterance(" ")); } catch (e) {} };
+
+// Card titles shrink until their longest word fits on one line (styles.css reads --word), so long
+// German compounds aren't chopped mid-word where the browser has no hyphenation for German.
+// A word may still break after a hyphen, so "Public-Health-Akteure" counts as its longest part.
+const fitTitle = title => ({ "--word": Math.max(1, ...title.replace(/-/g, "- ").split(/\s+/).map(w => [...w].length)) });
 
 // ── Swipes (studying and reading) ────────────────────────────
 // How far and how fast the finger went is read from the pointer events themselves: React state
@@ -431,6 +441,8 @@ export default function App() {
   const [tally, setTally] = useState({ sicher: 0, unsicher: 0, nochmal: 0 });
   const [readIds, setReadIds] = useState([]);
   const [readPos, setReadPos] = useState(0);
+  const [readFlip, setReadFlipState] = useState(readFlipPref); // cards start face down in reading mode
+  const [readFlipped, setReadFlipped] = useState(false);       // the current card has been turned over
   const turning = useRef(null); // timer while a card slides out and the next one in
   const queued = useRef(0);      // a swipe made while the previous card is still sliding: done right after
   const [listening, setListening] = useState(false); // Vorlesen: reading the cards aloud, one after the other
@@ -537,7 +549,8 @@ export default function App() {
     const onKey = (e) => {
       const h = handlers.current;
       if (h.view === "read") {
-        if (e.key === "ArrowRight" || e.key === " " || e.key === "Enter") { e.preventDefault(); h.turn(1); }
+        if ((e.key === " " || e.key === "Enter") && h.readFlip && !h.readFlipped) { e.preventDefault(); h.flipRead(); }
+        else if (e.key === "ArrowRight" || e.key === " " || e.key === "Enter") { e.preventDefault(); h.turn(1); }
         else if (e.key === "ArrowLeft") { e.preventDefault(); h.turn(-1); }
         else if (e.key.toLowerCase() === "p" && h.toggleListen) { e.preventDefault(); h.toggleListen(); }
         return;
@@ -586,7 +599,7 @@ export default function App() {
   const startRead = (ids, listen = false) => {
     if (!ids.length) return;
     if (listen) primeSpeech();
-    setReadIds(ids); setReadPos(0); setHeard(false); setListening(listen); setView("read");
+    setReadIds(ids); setReadPos(0); setReadFlipped(false); setHeard(false); setListening(listen); setView("read");
   };
   // Refs, not state: a turn finishes in a timer and a swipe can end before React re-renders.
   const readAt = useRef({ pos: 0, len: 0 });
@@ -601,7 +614,7 @@ export default function App() {
     setDragging(false); setDx(out * 480);
     turning.current = setTimeout(() => {
       readAt.current = { pos: next, len };
-      setDragging(true); setReadPos(next); setDx(-out * 480);
+      setDragging(true); setReadPos(next); setReadFlipped(false); setDx(-out * 480);
       turning.current = setTimeout(() => {
         turning.current = null; setDragging(false); setDx(0);
         const q = queued.current; queued.current = 0;
@@ -609,11 +622,16 @@ export default function App() {
       }, 30);
     }, 160);
   };
+  const flipRead = () => setReadFlipped(f => !f);
+  const setReadFlip = v => { writeFlipPref(v); setReadFlipState(v); setReadFlipped(false); };
   handlers.current.turn = turn;
+  handlers.current.flipRead = flipRead;
+  handlers.current.readFlip = readFlip;
+  handlers.current.readFlipped = readFlipped;
   handlers.current.toggleListen = canSpeak ? () => toggleListen() : null;
   // Only sideways drags turn the page; up and down still scroll a long card. A long drag or a
-  // quick flick turns it, so short flicks on a phone count too.
-  const rDown = (e) => { afterCancel.current(); drag.current = swipeStart(e); };
+  // quick flick turns it, so short flicks on a phone count too. A tap on the card turns it over.
+  const rDown = (e) => { afterCancel.current(); drag.current = { ...swipeStart(e), onCard: !!e.target.closest?.(".flipper") }; };
   const rMove = (e) => {
     const d = drag.current; if (!d) return;
     const x = swipeMove(d, e);
@@ -626,6 +644,7 @@ export default function App() {
   const rUp = (e) => {
     const d = drag.current; drag.current = null;
     if (d?.side) rSwiped(swipeEnd(d, e));
+    else if (d && readFlip && d.onCard && !d.onButton && !turning.current) flipRead();
   };
   const rCancel = (e) => {
     const d = drag.current; drag.current = null;
@@ -653,7 +672,7 @@ export default function App() {
       setListenPhase("title");
       await utter(card.title, rate); if (!alive) return;
       if (think) { setListenPhase("think"); await wait(THINK_MS); if (!alive) return; }
-      setListenPhase("lines");
+      setListenPhase("lines"); setReadFlipped(true);
       for (const line of speechLines(card)) {
         await utter(line, rate); if (!alive) return;
         await wait(300); if (!alive) return;
@@ -680,7 +699,7 @@ export default function App() {
   // A card being read can disappear if another device deletes it; just skip it.
   useEffect(() => {
     if (view !== "read" || readCard || !readIds.length) return;
-    if (readPos + 1 < readIds.length) setReadPos(readPos + 1); else setView("readDone");
+    if (readPos + 1 < readIds.length) { setReadPos(readPos + 1); setReadFlipped(false); } else setView("readDone");
   }, [view, readCard, readPos, readIds.length]);
 
   // ── Editor ──
@@ -1258,7 +1277,7 @@ export default function App() {
         <div className="paper" style={{ "--accent": titleColor(c.subject) }}>
           <div className="paper-head" style={{ background: titleColor(c.subject) }}>
             <span className="paper-subject">{c.subject}</span>
-            <span className="paper-title">{c.title}</span>
+            <span className="paper-title" style={fitTitle(c.title)}>{c.title}</span>
           </div>
           <div className="paper-body" style={{ minHeight: 220 }}><Lines lines={mapLines(c.lines)} /></div>
         </div>
@@ -1291,13 +1310,13 @@ export default function App() {
               <div className="face-strip" style={{ background: acc }} />
               <div className="face-main">
                 <span className="face-subject">{c.subject}</span>
-                <span className="face-title">{c.title}</span>
+                <span className="face-title" style={fitTitle(c.title)}>{c.title}</span>
                 <span className="face-hint">{plural(g, "Hauptpunkt", "Hauptpunkte")} — {POINT_BY_POINT ? "erinnere dich an jeden einzeln." : "was weißt du dazu?"}</span>
               </div>
               <div className="face-foot">Tippen oder Leertaste zum Umdrehen</div>
             </div>
             <div className="face face-back" aria-hidden={!flipped} style={{ "--accent": acc }}>
-              <div className="paper-head" style={{ background: acc }}><span className="paper-title">{c.title}</span></div>
+              <div className="paper-head" style={{ background: acc }}><span className="paper-title" style={fitTitle(c.title)}>{c.title}</span></div>
               <div className="paper-body" key={qPos}><Lines lines={mapLines(c.lines, POINT_BY_POINT ? reveal : null)} quiz /></div>
             </div>
           </div>
@@ -1323,20 +1342,43 @@ export default function App() {
 
   if (view === "read" && readCard) {
     const c = readCard, acc = titleColor(c.subject), last = readPos === readIds.length - 1;
+    const faceDown = readFlip && !readFlipped;
+    const head = (
+      <div className="paper-head" style={{ background: acc }}>
+        <span className="paper-subject">{listenPhase === "title" ? "Liest Titel …" : listenPhase === "think" ? "Denkpause" : listenPhase === "lines" ? "Liest vor …" : c.subject}</span>
+        <span className="paper-title" style={fitTitle(c.title)}>{c.title}</span>
+      </div>
+    );
+    const body = <div className={"paper-body" + (listenPhase === "think" ? " thinking" : "")} style={{ minHeight: 220 }}><Lines lines={mapLines(c.lines)} /></div>;
     screen = (
       <div className="screen read">
-        <p className="sr-only" aria-live="polite">Karte {readPos + 1} von {readIds.length}: {c.title}</p>
+        <div className="mode-toggle" role="group" aria-label="Karten beim Lesen">
+          <button className={!readFlip ? "on" : ""} aria-pressed={!readFlip} onClick={() => setReadFlip(false)}>Offen</button>
+          <button className={readFlip ? "on" : ""} aria-pressed={readFlip} onClick={() => setReadFlip(true)}>Zum Umdrehen</button>
+        </div>
+        <p className="sr-only" aria-live="polite">Karte {readPos + 1} von {readIds.length}: {c.title}{readFlip ? (faceDown ? ". Vorderseite, Leertaste zum Umdrehen." : ". Rückseite.") : ""}</p>
         {/* The whole area above the buttons takes swipes, also where the card has just slid away from. */}
         <div className="read-stage" onPointerDown={rDown} onPointerMove={rMove} onPointerUp={rUp} onPointerCancel={rCancel}>
           <div className="read-wrap"
             style={{ transition: dragging ? "none" : "transform .18s ease, opacity .18s ease", transform: `translateX(${dx}px) rotate(${dx / 50}deg)`, opacity: 1 - Math.min(0.6, Math.abs(dx) / 800) }}>
-            <div className="paper" style={{ "--accent": acc }}>
-              <div className="paper-head" style={{ background: acc }}>
-                <span className="paper-subject">{listenPhase === "title" ? "Liest Titel …" : listenPhase === "think" ? "Denkpause" : listenPhase === "lines" ? "Liest vor …" : c.subject}</span>
-                <span className="paper-title">{c.title}</span>
+            {readFlip ? (
+              <div className="read-flip">
+                <div className="flipper" style={{ transition: dragging ? "none" : "transform .55s cubic-bezier(.2,.7,.2,1)", transform: readFlipped ? "rotateY(180deg)" : "rotateY(0deg)" }}>
+                  <div className="face face-front" aria-hidden={readFlipped}>
+                    <div className="face-strip" style={{ background: acc }} />
+                    <div className="face-main">
+                      <span className="face-subject">{c.subject}</span>
+                      <span className="face-title" style={fitTitle(c.title)}>{c.title}</span>
+                      <span className="face-hint">{plural(groups(c), "Hauptpunkt", "Hauptpunkte")} — was weißt du dazu?</span>
+                    </div>
+                    <div className="face-foot">Tippen oder Leertaste zum Umdrehen</div>
+                  </div>
+                  <div className="face face-back" aria-hidden={!readFlipped} style={{ "--accent": acc }}>{head}{body}</div>
+                </div>
               </div>
-              <div className={"paper-body" + (listenPhase === "think" ? " thinking" : "")} style={{ minHeight: 220 }}><Lines lines={mapLines(c.lines)} /></div>
-            </div>
+            ) : (
+              <div className="paper" style={{ "--accent": acc }}>{head}{body}</div>
+            )}
           </div>
         </div>
         <div className="bottom-bar">
@@ -1356,9 +1398,11 @@ export default function App() {
           )}
           <div className="bottom-row">
             <button className="btn-secondary nav-arrow" aria-label="Vorherige Karte" disabled={readPos === 0} onClick={() => turn(-1)}>‹</button>
-            <button className="btn-primary h54 spacer" onClick={() => turn(1)}>{last ? "Fertig gelesen" : "Weiter ›"}</button>
+            {faceDown
+              ? <button className="btn-primary h54 spacer" onClick={flipRead}>Umdrehen</button>
+              : <button className="btn-primary h54 spacer" onClick={() => turn(1)}>{last ? "Fertig gelesen" : "Weiter ›"}</button>}
           </div>
-          <p className="swipe-hint" aria-live="polite">{!listening ? "oder wischen: nach links weiter · nach rechts zurück"
+          <p className="swipe-hint" aria-live="polite">{!listening ? (faceDown ? "Karte antippen zum Umdrehen · wischen blättert weiter" : "oder wischen: nach links weiter · nach rechts zurück")
             : listenPhase === "think" ? "Denkpause – was weißt du dazu?" : "Liest vor · der Bildschirm bleibt an"}</p>
         </div>
       </div>
