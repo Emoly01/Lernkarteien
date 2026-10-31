@@ -537,7 +537,8 @@ export default function App() {
     setView(next >= q.length ? "done" : "study");
     setTimeout(() => setNoAnim(false), 40);
   };
-  handlers.current = { view, tap, rate, canRate };
+  const canTap = !flipped || (POINT_BY_POINT && studyCard && reveal < groups(studyCard));
+  handlers.current = { view, tap, rate, canRate, canTap };
 
   // A card in the study queue can disappear if another device deletes it; just skip it.
   useEffect(() => {
@@ -549,7 +550,7 @@ export default function App() {
     const onKey = (e) => {
       const h = handlers.current;
       if (h.view === "read") {
-        if ((e.key === " " || e.key === "Enter") && h.readFlip && !h.readFlipped) { e.preventDefault(); h.flipRead(); }
+        if ((e.key === " " || e.key === "Enter" || e.key === "ArrowDown") && h.readFlip && !h.readFlipped) { e.preventDefault(); h.flipRead(); }
         else if (e.key === "ArrowRight" || e.key === " " || e.key === "Enter") { e.preventDefault(); h.turn(1); }
         else if (e.key === "ArrowLeft") { e.preventDefault(); h.turn(-1); }
         else if (e.key.toLowerCase() === "p" && h.toggleListen) { e.preventDefault(); h.toggleListen(); }
@@ -558,6 +559,7 @@ export default function App() {
       if (h.view !== "study") return;
       if (e.target.closest?.(".gap-q")) return; // Space/Enter on a gap opens just that gap
       if (e.key === " " || e.key === "Enter") { e.preventDefault(); h.tap(); }
+      else if (e.key === "ArrowDown" && h.canTap) { e.preventDefault(); h.tap(); } // once turned, ↓ scrolls again
       else if (h.canRate) { if (e.key === "1") h.rate("nochmal"); if (e.key === "2") h.rate("unsicher"); if (e.key === "3") h.rate("sicher"); }
     };
     window.addEventListener("keydown", onKey);
